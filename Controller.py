@@ -16,7 +16,7 @@ import os
 import sys
 from pubsub import pub
 import wx
-import pickle
+#import pickle
 import json
 import numpy as np
 
@@ -96,24 +96,32 @@ class Controller():
         # Pull the selected channels from the saved placementMap.
         self.extractSelectedThermocouples()
         self.extractSelectedPressure()
+        self.defaultSavePath = self.machineSettings.defaultSavePath
+        self.savePath = self.machineSettings.defaultSavePath
 
 
     def saveSettings(self):
-        # try:
+        try:
             # with open("settings.cfg", "wb") as f:
             #     pickle.dump([self.defaultSavePath, self.machineSettings], f)
 
-        self.machineSettings.saveProfiles()
-        pub.sendMessage("status.flash", msg="Settings saved.")
+            self.machineSettings.saveSettings()
+            self.machineSettings.saveProfiles()
+            pub.sendMessage("status.flash", msg="Settings saved.")
 
-        # except:
-        #     warnDialog(self.parent, "Unable to save settings.")
+        except:
+            warnDialog(self.parent, "Unable to save settings.")
 
 
     def setDefaultSavePath(self, path): # TODO Check what happens if the folder is missing.
-        self.defaultSavePath = path # TODO validate this
-        self.savePath = self.defaultSavePath
-        self.saveSettings()
+        try:
+            self.defaultSavePath = path # TODO validate this
+            self.savePath = self.defaultSavePath # TODO Check where this is used? Can't we just use the defaultSavePath?
+            # TODO Make all places that look for the controller.defaultSavePath get from the machine settings
+            self.machineSettings.defaultSavePath = path
+            self.saveSettings()
+        except:
+            warnDialog(self.parent, "Unable to save settings.")
 
 
 
@@ -206,7 +214,7 @@ class Controller():
         
         # Is it time to save yet?
         #self.saveTick += 1
-        isRowWritten = False # This is a flage to make sure we write the final entry into the log.
+        isRowWritten = False # This is a flag to make sure we write the final entry into the log.
         if round(self.elapsedTime) % self.testSettings.saveRate == 0: #self.saveTick >= self.testSettings.saveRate:
             # TODO Save the accumulated rows to file
             # Log the currentRow into the test .csv file
@@ -269,9 +277,9 @@ class Controller():
                                                      avgData=self.testData.unexposedAvgData, 
                                                      rawData=self.testData.unexposedRawData)
             pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
-                                                    low=self.testData.lowPressureData, 
-                                                    mid=self.testData.midPressureData, 
-                                                    up=self.testData.upPressureData)
+                                                    ch3=self.testData.ch3PressureData, 
+                                                    ch2=self.testData.ch2PressureData, 
+                                                    ch1=self.testData.ch1PressureData)
 
 
     def grabLatestData(self):
@@ -390,6 +398,9 @@ class Controller():
         h, m, s = parseTime(self.elapsedTime)
         #timeString = "%d:%02d:%02.3f" % (h, m, s)
         s = round(s)
+        if s == 60:
+            s = 0
+            m += 1
         timeString = "%d:%02d:%02d" % (h, m, s)
 
         # Build the standard front material
@@ -400,9 +411,7 @@ class Controller():
         self.currentRow.append("{0:.2f}".format(round(self.testData.avgAUC, 2)))
 
         # Seperate out the values for the graph data and the grid
-        
 
-        # TODO: make this point to the testData objet directly. no need to pass the dictionary
         # Process all the furnace data
         #-----------------------------------------------------------------------
         for value in self.testData.furnaceValues.values():

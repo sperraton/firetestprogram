@@ -34,7 +34,7 @@ class TestData():
 
         # Load the pressure channels
         for channelNum in range(self.numPres):
-            placement = self.getPressurePlacement(channelNum)
+            placement = self.machineSettings.getPressurePlacement(channelNum)
 
             if placement != "DISABLED":
                 self.pressureValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
@@ -69,9 +69,9 @@ class TestData():
         self.unexposedAvgData = None # The historical list of averages. 
 
         # TODO these can be rolled up into one list.
-        self.upPressureData = []
-        self.midPressureData = []
-        self.lowPressureData = []
+        self.ch1PressureData = []
+        self.ch2PressureData = []
+        self.ch3PressureData = []
 
         pub.subscribe(self.onValueChange, "channel.valueChange")
 
@@ -241,7 +241,7 @@ class TestData():
 
         # NOTE: When this was created it was populated in channel order
         # so the values should be appended in channel order.
-        for value in unexposedValues.values():
+        for value in self.unexposedValues.values():
             rawUnexposedNumeric.append(value["numeric"])
 
         # Check if this hadn't been initialised yet.
@@ -255,17 +255,17 @@ class TestData():
     #============================================================
 
     def setPressure(self):
-        if self.pressureValues is not EMPTY #None:
+        if self.pressureValues: #None:
             for key, value in self.pressureValues.items():
-                placement = self.getPressurePlacement(key)
+                placement = self.machineSettings.getPressurePlacement(key)
 
                 # Match this up to the label
-                if placement == pressurePlacements.UPR_PRESS:
-                    self.upPressureData.append(value["numeric"])
-                elif placement == pressurePlacements.MID_PRESS:
-                    self.midPressureData.append(value["numeric"])
-                elif placement == pressurePlacements.LOW_PRESS:
-                    self.lowPressureData.append(value["numeric"])
+                if placement == pressurePlacements.CH_1:
+                    self.ch1PressureData.append(value["numeric"])
+                elif placement == pressurePlacements.CH_2:
+                    self.ch2PressureData.append(value["numeric"])
+                elif placement == pressurePlacements.CH_3:
+                    self.ch3PressureData.append(value["numeric"])
 
     # Functions concerning outliers
     #============================================================

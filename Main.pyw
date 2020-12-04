@@ -6,7 +6,10 @@ readings for a  fire test furnace.
 
 AUTHOR: Stephen Perraton
 EMAIL: perraton@gmail.com
-LAST MODIFIED: 2020-JUN-28
+LAST MODIFIED: 2020-DEC-03
+
+2020-DEC-3
+* So many things - I'll have to list them at another time
 
 2020-SEP-16
 * Housekeeping - Moved serials numbers to own module
@@ -57,7 +60,6 @@ from Enumerations import *
 from TestSettings import TestSettings
 
 from DialogStartTest import StartTestDialog
-#from PretestDialog import PretestDialog
 from DialogViewSensors import ViewSensorsDialog
 from DialogProfileManager import ProfileManagerDialog
 from DialogTimeCorrection import TimeCorrectionDialog
@@ -93,7 +95,7 @@ class MainFrame(wx.Frame):
         super(MainFrame, self).__init__(*args, **kw)
 
    
-        bitmap = wx.Bitmap('logo.jpg')
+        bitmap = wx.Bitmap('splash.jpg')
         splash = wx.adv.SplashScreen(
                      bitmap, 
                      wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT, 

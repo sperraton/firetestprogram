@@ -204,8 +204,6 @@ class FurnaceGraph(BaseGraph):
 
         for i in range(numSelected):
             channelIndex = self.frame.controller.selectedFurnaceChannels[i]
-            #labelIndex = int(self.frame.controller.getThermocouplePlacement(channelIndex))
-            #chnlLabel = thermocouplePlacementLabels[labelIndex]
             chnlLabel = self.frame.controller.getThermocoupleLabel(channelIndex)
             columnVector = [0]
             self.plotFurnRaw.append(self.graphAxes.plot(
@@ -288,22 +286,22 @@ class PressureGraph(BaseGraph):
         # TODO make these objects unique. In fact, maybe make an array to hold the graphing objects.
         #self.graphAxes.autoscale(enable=True, axis="y")
 
-        self.plotPressUp = self.graphAxes.plot(
-            [0], #self.frame.controller.upPressureData,
+        self.plotPresCh1 = self.graphAxes.plot(
+            [0],
             linewidth=1,
             label=pressurePlacementLabels[1],
             color=UIcolours.GRAPH_PRESS_UP_SERIES
             )[0]
 
-        self.plotPressMid = self.graphAxes.plot(
-            [0], #self.frame.controller.midPressureData,
+        self.plotPresCh2 = self.graphAxes.plot(
+            [0],
             linewidth=1,
             label=pressurePlacementLabels[2],
             color=UIcolours.GRAPH_PRESS_MID_SERIES
             )[0]
 
-        self.plotPressLow = self.graphAxes.plot(
-            [0], #self.frame.controller.lowPressureData,
+        self.plotPresCh3 = self.graphAxes.plot(
+            [0],
             linewidth=1,
             label=pressurePlacementLabels[3],
             color=UIcolours.GRAPH_PRESS_LOW_SERIES
@@ -320,14 +318,14 @@ class PressureGraph(BaseGraph):
         self.createLegend(numCols=1)
 
 
-    def updatePressureData(self, timeData, lowData, midData, upData):
+    def updatePressureData(self, timeData, ch3Data, ch2Data, ch1Data):
         # Are there no pressure sensors being used?
-        if not lowData and not midData and not upData:
+        if not ch3Data and not ch2Data and not ch1Data:
            return
 
-        self.plotPressLow.set_data(timeData, lowData)
-        self.plotPressMid.set_data(timeData, midData)
-        self.plotPressUp.set_data(timeData, upData)
+        self.plotPresCh3.set_data(timeData, ch3Data)
+        self.plotPresCh2.set_data(timeData, ch2Data)
+        self.plotPresCh1.set_data(timeData, ch1Data)
 
         if len(timeData) == 1: # Only do on first point. TODO Need a better way to do this.
             if self.frame.controller.testSettings.pressureUnits == "inH2O":
@@ -335,19 +333,26 @@ class PressureGraph(BaseGraph):
             else:
                 padding = 5
 
-            topLim = max(lowData + midData + upData) + padding #BUG I think when the pressure sensor give ERR data that this goes bad.
-            botLim = min(lowData + midData + upData) - padding
+            # Strip out our bad value placeholder
+            if -9999 in ch3Data:
+                ch3Data = []
+            if ch2Data:
+                ch2Data = []
+            if ch1Data:
+                ch1Data = []
+
+            topLim = max(ch3Data + ch2Data + ch1Data) + padding
+            botLim = min(ch3Data + ch2Data + ch1Data) - padding
 
             self.graphAxes.set_ylim(bottom=botLim, top=topLim)
-
             self.graphAxes.relim()
 
         #self.graphAxes.autoscale(enable=True, axis="y")
 
         # self.graphAxes.draw_artist(self.graphAxes.patch)
-        # self.graphAxes.draw_artist(self.plotPressLow)
-        # self.graphAxes.draw_artist(self.plotPressMid)
-        # self.graphAxes.draw_artist(self.plotPressUp)
+        # self.graphAxes.draw_artist(self.plotPresCh3)
+        # self.graphAxes.draw_artist(self.plotPresCh2)
+        # self.graphAxes.draw_artist(self.plotPresCh1)
         # self.graphFigure.canvas.update()
         # self.graphFigure.canvas.flush_events()
         #self.graphCanvas.blit(self.graphAxes.bbox)
@@ -359,29 +364,29 @@ class PressureGraph(BaseGraph):
         handles, labels = self.graphAxes.get_legend_handles_labels()
 
         if self.frame.controller.isLabelInSelectedPressure(pressurePlacementLabels[1]):
-            self.plotPressUp.set_visible(True)
+            self.plotPresCh1.set_visible(True)
             labels[0] = pressurePlacementLabels[1]
             handles[0].set_linestyle("-")
         else:
-            self.plotPressUp.set_visible(False)
+            self.plotPresCh1.set_visible(False)
             labels[0] = "" # None
             # handles[0] = None #.set_linestyle("")
 
         if self.frame.controller.isLabelInSelectedPressure(pressurePlacementLabels[2]):
-            self.plotPressMid.set_visible(True)
+            self.plotPresCh2.set_visible(True)
             labels[1] = pressurePlacementLabels[2]
             handles[1].set_linestyle("-")
         else:
-            self.plotPressMid.set_visible(False)
+            self.plotPresCh2.set_visible(False)
             labels[1] = "" #None
             # handles[1] = None #.set_linestyle("")
 
         if self.frame.controller.isLabelInSelectedPressure(pressurePlacementLabels[3]):
-            self.plotPressLow.set_visible(True)
+            self.plotPresCh3.set_visible(True)
             labels[2] = pressurePlacementLabels[3]
             handles[2].set_linestyle("-")
         else:
-            self.plotPressLow.set_visible(False)
+            self.plotPresCh3.set_visible(False)
             labels[2] = "" #None
             # handles[2] = None #.set_linestyle("")
 

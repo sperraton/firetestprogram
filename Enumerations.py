@@ -58,9 +58,9 @@ class thermocouplePlacements(Enum):
 
 class pressurePlacements(Enum):
     DISABLED = 0
-    UPR_PRESS = 1
-    MID_PRESS = 2
-    LOW_PRESS = 3
+    CH_1 = 1
+    CH_2 = 2
+    CH_3 = 3
 
     def __new__(cls, value):
         member = object.__new__(cls)

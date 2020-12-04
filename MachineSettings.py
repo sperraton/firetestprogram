@@ -1,6 +1,6 @@
 from Enumerations import *
 from Profile import Profile
-from HelperFunctions import infoDialog
+from HelperFunctions import infoDialog, warnDialog # TODO Right now we let the error bubble up because I don't want to pass a reference to the frame to the dialog boxes. Should rethink how submodules are going to desplay these dialogs. Perhaps pubsub
 import json
 
 # TODO A lot of these getter/setters can be @params
@@ -43,20 +43,37 @@ class MachineSettings():
         try:
 
             with open("settings.json") as f:
-                data = json.load(f, object_hook=as_enum)
+                self.settingsData = json.load(f, object_hook=as_enum)
 
-            self.thermocoupleSerialNums = data["machineSetup"]["serialNums"]["thermocouple"] #thermocoupleSerialNums
-            self.pressureSerialNums = data["machineSetup"]["serialNums"]["pressure"] #pressureSerialNums
+            self.thermocoupleSerialNums = self.settingsData["machineSetup"]["serialNums"]["thermocouple"] #thermocoupleSerialNums
+            self.pressureSerialNums = self.settingsData["machineSetup"]["serialNums"]["pressure"] #pressureSerialNums
 
-            self.pressureSenseIsVoltage = data["machineSetup"]["pressureIsVoltage"] # Is this channel wired for current or voltage input
+            self.pressureSenseIsVoltage = self.settingsData["machineSetup"]["pressureIsVoltage"] # Is this channel wired for current or voltage input
 
-            self.thermocoupleConfig = data["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
-            self.pressureConfig = data["defaultProfile"]["pressureConfig"]
-            self.currentProfile = data["machineSetup"]["currentProfile"]
+            self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
+            self.pressureConfig = self.settingsData["defaultProfile"]["pressureConfig"]
+            self.currentProfile = self.settingsData["machineSetup"]["currentProfile"]
+            self.defaultSavePath = self.settingsData["machineSetup"]["defaultSavePath"]
 
         except:
-            infoDialog(self.parent, "No previously saved settings.")
+            #infoDialog(self.parent, "No previously saved settings.")
+            pass
 
+    def saveSettings(self):
+        """
+        Save the current state of the machine settings to a .json file.
+        """
+        try:
+            # Poke the data that the user would be able to change
+            self.settingsData["machineSetup"]["currentProfile"] = self.currentProfile
+            self.settingsData["machineSetup"]["defaultSavePath"] = self.defaultSavePath
+
+            with open("settings.json", "w") as f:
+                json.dump(self.settingsData, f, cls=EnumEncoder, indent=4)
+
+        except:
+             #warnDialog(self, "Unable to save settings.")
+             pass
 
     def loadProfiles(self):
         """
@@ -86,7 +103,8 @@ class MachineSettings():
             with open("profiles.json", "w") as f:
                 json.dump(temp, f, cls=EnumEncoder, indent=4)
         except:
-            warnDialog(self.parent, "Unable to save settings.")
+            #warnDialog(self.parent, "Unable to save settings.")
+            pass #
 
 
     def updateSerialNumber(self):

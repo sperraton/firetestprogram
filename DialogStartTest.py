@@ -84,7 +84,7 @@ class StartTestDialog(wx.Dialog):
         #self.scUpdateRate.Bind(wx.EVT_SPINCTRL, self.onUpdateRateChange)
         #self.scSaveRate.Bind(wx.EVT_SPINCTRL, self.onSaveRateChange)
         self.cmbTargetCurve.Bind(wx.EVT_COMBOBOX, self.onTestChoice)
-        #self.cmbTargetCurve.SetSelection(0)
+        
 
         # Do Layout
         topSizer = wx.BoxSizer(wx.VERTICAL)
@@ -139,6 +139,9 @@ class StartTestDialog(wx.Dialog):
 
         self.panel.SetSizer(topSizer)
         topSizer.Fit(self)
+
+        self.cmbTargetCurve.SetSelection(0)
+        self.onTestChoice(None) # Make up for the fact that SetSelection() doesn't fire an event
 
         self.Show()
 

@@ -190,11 +190,11 @@ class MainGraphPanel(wx.Panel):
         self.unexposedTempGraph.updateUnexposedThreshold(thresh)
 
 
-    def updatePressureGraph(self, timeData, low, mid, up):
+    def updatePressureGraph(self, timeData, ch3, ch2, ch1):
         """
         Draws on the graph the new data for the pressure sensors
         """
-        self.pressureGraph.updatePressureData(timeData, low, mid, up)
+        self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
 
     def initGraphForTest(self, testTime):
 

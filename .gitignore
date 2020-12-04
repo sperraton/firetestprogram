@@ -1,0 +1,4 @@
+Old Code/
+__pycache__/
+*.json
+*.pyc

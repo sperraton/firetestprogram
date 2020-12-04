@@ -29,14 +29,20 @@ class CustomNavToolbar(NavigationToolbar):
         if hasToggle:
             # Create the toggle
             chkRawVisibility = wx.CheckBox(self, label="Hide raw data")
+            chkLegendVisibiliy = wx.CheckBox(self, label="Hide legend")
             self.AddStretchableSpace()
             tool = self.AddControl(chkRawVisibility)
+            tool2 = self.AddControl(chkLegendVisibiliy)
 
             #chkRawVisibility.SetValue = self.graph.rawDataVisible # Set to whatever the default is in the graph
             self.Bind(wx.EVT_CHECKBOX, self.onToggleRaw, id=chkRawVisibility.GetId())
+            self.Bind(wx.EVT_CHECKBOX, self.onToggleLegend, id=chkLegendVisibiliy.GetId())
 
     def onToggleRaw(self, event):
         self.graph.toggleRawVisibility()
+
+    def onToggleLegend(self, event):
+        self.graph.toggleLegendVisibility()
 
 
 class BaseGraph(wx.Panel):
@@ -50,6 +56,7 @@ class BaseGraph(wx.Panel):
         self.Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick) # Ugly. use pubsub for this
 
         self.rawDataVisible = True # Start with the raw data visible.
+        self.legendVisible = True # Start with the legend visible
         self.testTimeMinutes = 60 # Default on startup. This gets set again when test is started.
 
         # Make the graph objects
@@ -231,6 +238,18 @@ class BaseGraph(wx.Panel):
         #self.graphAxes.autoscale(enable=True, axis="both")
         self.graphCanvas.draw()
   
+
+    def toggleLegendVisibility(self):
+        if self.legendVisible:
+            self.legendVisible = False
+            self.graphAxes.get_legend().set_visible(False)
+        else:
+            self.legendVisible = True
+            self.graphAxes.get_legend().set_visible(True)
+
+        self.graphCanvas.draw()
+
+
     def toggleRawVisibility(self):
         """
         TODO Yes this is quick and dirty, but when I make this class more generic I will clean this up
@@ -245,6 +264,9 @@ class BaseGraph(wx.Panel):
         elif self.panelID == 2:
             self.toggleFurnaceRawVisibility(self.rawDataVisible)
 
+        # Keep the legend visibility in sync, because toggling raw makes new legend that defaults to being visible
+        self.graphAxes.get_legend().set_visible(self.legendVisible)
+
         self.graphCanvas.draw()
 
 
@@ -256,17 +278,17 @@ class BaseGraph(wx.Panel):
         #self.graphAxes.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.9, chartBox.height])
 
         if isVisible:
-            for line in self.plotTCsRaw:
+            for line in self.plotFurnRaw:
                 line.set_visible(True)
 
             # Using list comprehension to make full list of artists to include in legend
-            self.graphAxes.legend(handles=[self.plotTarget, self.plotFurnAvg]+[i for i in self.plotTCsRaw],
+            self.graphAxes.legend(handles=[self.plotTarget, self.plotFurnAvg]+[i for i in self.plotFurnRaw],
                                   loc='upper left',
                                   fontsize="x-small",
                                   #bbox_to_anchor=(1.01, 1.),
                                   ncol=2)
         else:
-            for line in self.plotTCsRaw:
+            for line in self.plotFurnRaw:
                 line.set_visible(False)
 
             self.graphAxes.legend(handles=[self.plotTarget, self.plotFurnAvg],
