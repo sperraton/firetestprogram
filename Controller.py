@@ -33,7 +33,7 @@ class Controller():
         self.startTime = 0
         self.elapsedTime = 0
         self.currentRow = []
-        #self.updateTick = 0
+
         self.saveTick = 0
         self.logger = None
 
@@ -128,7 +128,6 @@ class Controller():
 
         self.startTime = 0
         self.elapsedTime = 0
-        #self.updateTick = 0
         #self.saveTick = 0
 
         self.testData = TestData(self.testSettings, 
@@ -165,7 +164,6 @@ class Controller():
             self.unexposedThresh = self.testData.avgUnexposed + self.getUnexposedThresh(self.testSettings.temperatureUnits)
             pub.sendMessage("unexposedGraph.threshold", thresh=self.unexposedThresh)
 
-        #self.updateTick = 0
         #self.saveTick = 0
         self.timer.StartOnce(1000) # 1 second event firing
 
@@ -400,17 +398,17 @@ class Controller():
         # Seperate out the values for the graph data and the grid
 
         # Process all the furnace data
-        #-----------------------------------------------------------------------
+        #============================================================
         for value in self.testData.furnaceValues.values():
             self.currentRow.append(value["formatted"]) # Add the sensor value part to a new cell in the row
 
         # Process all the unexposed
-        #-----------------------------------------------------------------------
+        #============================================================
         for value in self.testData.unexposedValues.values():
             self.currentRow.append(value["formatted"]) # Add the sensor value part to a new cell in the row
 
         # Process all the pressure
-        #-----------------------------------------------------------------------
+        #============================================================
         if self.testData.pressureValues is not None:
 
             for key, value in self.testData.pressureValues.items():
@@ -419,7 +417,10 @@ class Controller():
 
                 self.currentRow.append(value["formatted"])
 
-        # TODO Add Afterburner data
+        # Add Afterburner data
+        #============================================================
+        for value in self.testData.afterburnerValues.values():
+            self.currentRow.append(values["formatted"])
 
 
     def makeTableHeader(self):
@@ -454,6 +455,12 @@ class Controller():
             if index in placementList:
                 # Add it to the table header
                 self.tableHeader.append(label)
+
+        # Do the afterburners
+        #============================================================
+        for channelIndex in self.selectedAfterburnerChannels:
+            chnlLabel = self.getThermocoupleLabel(channelIndex)
+            self.tableHeader.append(chnlLabel+" (AFTR.BURN)")
 
 
     def setTemperatureUnits(self, units):
