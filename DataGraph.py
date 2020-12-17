@@ -214,7 +214,7 @@ class FurnaceGraph(BaseGraph):
                 zorder=2)[0])
 
         # Make the axis title, labels, and legend
-        self.initGraphAxes("Interior Temperature", 
+        self.initGraphAxes("Furnace Temperature", 
                            "Time (Min.)", 
                            "Temp. (Deg. C)", 
                            0, 

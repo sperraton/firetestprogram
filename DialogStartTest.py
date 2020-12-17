@@ -14,7 +14,7 @@ class StartTestDialog(wx.Dialog):
         self.parent = parent
 
         # Create controls
-        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, "Fill out all fields to enable test start button.")
+        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, "Fill out all fields to enable 'Finalize Parameters' button.")
         self.lblProjectNum = wx.StaticText(self.panel, wx.ID_ANY, "Project #")
         self.txtProjectNum = wx.TextCtrl(self.panel, wx.ID_ANY, "")
         self.lblClient = wx.StaticText(self.panel, wx.ID_ANY, "Client")
@@ -68,7 +68,7 @@ class StartTestDialog(wx.Dialog):
 
         #self.btnViewChannelSelection = wx.Button(self.panel, wx.ID_ANY, "View/Change DAQ Channel Map ... ")
 
-        self.btnStart = wx.Button(self.panel, wx.ID_ANY, "Start Test")
+        self.btnStart = wx.Button(self.panel, wx.ID_ANY, "Finalize Parameters")
         self.btnStart.Disable()
         self.btnCancel = wx.Button(self.panel, wx.ID_ANY, "Cancel")
 

@@ -199,12 +199,12 @@ class TestData():
         #targetTempCurveAUC2 = np.trapz(targetTempCurveArr, dx=1/60) # TODO save this for outside the function
 
 
-    def captureThreeQuarter():
+    def captureThreeQuarter(self):
         """
         Capture the AUC's at the 3/4 of the test
         """
         self.threeQuarterAvgAUC = self.avgAUC
-        self.threeQuarterTargetAUC = self.lastTargetAUC
+        self.threeQuarterTargetAUC = self.targetAUC
 
 
     def getPercentAUC(self):

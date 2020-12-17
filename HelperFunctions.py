@@ -4,8 +4,6 @@ import numpy as np
 from Phidget22.PhidgetException import *
 from Phidget22.Phidget import *
 
-#INVALID_VALUE = 1e300
-
 
 def averageTemperatures(values):
     # From the given TC values get only the ones we want to average
@@ -92,37 +90,9 @@ def warnDialog(parent, message, caption='Warning!'):
     dlg.ShowModal()
     dlg.Destroy()
 
+
 def applyGainOffset(value, gain=1, offset=0):
     return (gain*value)+offset
-
-# def formatTemperatureData(value, units="C", gain=1, offset=0):
-#     if value == INVALID_VALUE:
-#         return "SAT.", 0.0 
-#     if value == -9999:
-#         return "-9999", -9999
-
-#     numeric = applyGainOffset(value, gain, offset)
-
-#     if units == "F": #The value given by the daq is in celsius by default
-#         numeric = celsiusToFahrenheit(numeric)
-
-#     return "{0:4.1f}".format(numeric), numeric
-
-
-# def formatPressureData(value, units="inH2O", gain=1, offset=0):
-#     if value == INVALID_VALUE:
-#         return "SAT.", 0.0
-#     if value < 0.001: # Nothing attached. Avoid low level noise on unattached channels
-#         return "ERR.", 0.0
-#     if value == -9999:
-#         return "-9999", -9999
-
-#     numeric = applyGainOffset(value, gain, offset)
-
-#     if units == "Pascal": # Default to inH2O because that is what it will have been calibrated in.
-#         numeric = inH20ToPascal(numeric)
-
-#     return "{0:2.3f}".format(numeric), numeric
 
 
 def printPhidgetInfo(ph, msg=None):
@@ -145,6 +115,7 @@ def printPhidgetInfo(ph, msg=None):
         sys.stderr.write("Desc: " + e.details + "\n")
         traceback.print_exc()
         return
+
 
 def changeComboboxBgColour(cmbBox, colour):
     if "wxMac" in wx.PlatformInfo or "wxMSW" in wx.PlatformInfo:

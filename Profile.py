@@ -18,7 +18,7 @@ class Profile():
 
             # These are the index of the list of saved pressure sensors for each of the channels
             self.currentPressuresSerial = ["DISABLED", "DISABLED", "DISABLED"]
-            self.afterburnerThreshold = [100.0, 100.0] # Currently only two dedicated afterburners
+            self.afterburnerThreshold = [1600.0, 1600.0] # Currently only two dedicated afterburners
             self.unexposedFailureThreshold = 180.0
 
         else:

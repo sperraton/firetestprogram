@@ -223,6 +223,20 @@ class DataAcquisition():
             data.append([channelIndex, valueFormatted])
         return data
 
+    def getPressure(self, channelIndex):
+        """
+        Return the last read pressure value of the given channel.
+        """
+        return self.channelPressure[channelIndex].getValue()
+
+
+    def getPressureGainOffset(self, channelIndex):
+        """
+        Return the currently used gain and offset of the given channel
+        """
+        return self.channelPressure[channelIndex].gain, self.channelPressure[channelIndex].offset
+        
+
 
     def initThermocoupleAddresses(self):
         for serialNum in self.thermocoupleSerialNums:

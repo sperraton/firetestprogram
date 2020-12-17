@@ -30,24 +30,24 @@ class GraphNotebook(wx.Notebook):
         self.AddPage(self.dataGridTab, "Data Table")
         
         
-        self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.OnPageChanged)
-        self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGING, self.OnPageChanging)
+        # self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.OnPageChanged)
+        # self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGING, self.OnPageChanging)
 
         pub.subscribe(self.addDataRow, "dataGrid.addRow")
         
-    def OnPageChanged(self, event):
-        # old = event.GetOldSelection()
-        # new = event.GetSelection()
-        # sel = self.GetSelection()
-        # print('OnPageChanged,  old:%d, new:%d, sel:%d\n' % (old, new, sel))
-        event.Skip()
+    # def OnPageChanged(self, event):
+    #     # old = event.GetOldSelection()
+    #     # new = event.GetSelection()
+    #     # sel = self.GetSelection()
+    #     # print('OnPageChanged,  old:%d, new:%d, sel:%d\n' % (old, new, sel))
+    #     event.Skip()
 
-    def OnPageChanging(self, event):
-        # old = event.GetOldSelection()
-        # new = event.GetSelection()
-        # sel = self.GetSelection()
-        # print('OnPageChanging, old:%d, new:%d, sel:%d\n' % (old, new, sel))
-        event.Skip()
+    # def OnPageChanging(self, event):
+    #     # old = event.GetOldSelection()
+    #     # new = event.GetSelection()
+    #     # sel = self.GetSelection()
+    #     # print('OnPageChanging, old:%d, new:%d, sel:%d\n' % (old, new, sel))
+    #     event.Skip()
 
     def initGrid(self):
         """

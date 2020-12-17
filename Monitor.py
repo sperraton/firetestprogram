@@ -101,10 +101,10 @@ class MonitorList(wx.ListCtrl):#, listmix.CheckListCtrlMixin):
                 row = self.indexForRow.index(channelIndex)
                 # Don't write over the excluded state with the normal bg
                 if self.hasCheck and self.IsItemChecked(row):
-                    altBG = UIcolours.CTRL_WARN_BG
+                    altBG = UIcolours.CTRL_WARN_BG_LIGHTx
                 else:
                     altBG = UIcolours.CTRL_NORMAL_BG
-                self.SetItemBackgroundColour(row, UIcolours.CTRL_ERROR_BG if isWarn else altBG)
+                self.SetItemBackgroundColour(row, UIcolours.CTRL_ERROR_BG_LIGHT if isWarn else altBG)
 
         except:
             return
@@ -389,10 +389,16 @@ class Monitor(wx.Panel):
         Create the monitor view based on the selected sensors for this particular test.
         """
         
-        self.afterburnerList.addSelected(selectedAfterburner)# = AfterburnerList(self.afterburnerMonitorPanel, self.frame, selectedAfterburner)
-        self.furnaceList.addSelected(selectedFurnace)# = ThermocoupleList(self.furnaceMonitorPanel, self.frame, selectedFurnace, thermocouplePlacements.FURNACE)
-        self.unexposedList.addSelected(selectedUnexposed)# = ThermocoupleList(self.unexposedMonitorPanel, self.frame, selectedUnexposed, thermocouplePlacements.UNEXPOSED)
-        self.pressureList.addSelected(selectedPressure)# = PressureList(self.pressureMonitorPanel, self.frame, selectedPressure, None)
+        self.afterburnerList.addSelected(selectedAfterburner)
+        self.furnaceList.addSelected(selectedFurnace)
+        self.unexposedList.addSelected(selectedUnexposed)
+        self.pressureList.addSelected(selectedPressure)
+
+        # Add in units to the static boxes.
+        self.pressureStaticBox.SetLabel("Pressure Monitor ("+self.frame.controller.testSettings.pressureUnits+")")
+        self.unexposedStaticBox.SetLabel("Unexposed TC Monitor (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
+        self.furnaceStaticBox.SetLabel("Furnace TC Monitor (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
+        self.afterburnerStaticBox.SetLabel("Afterburner TC Monitor (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
 
         # Make the monitor visible
         self.topSizer.Fit(self)
@@ -413,10 +419,15 @@ class Monitor(wx.Panel):
         #topSizer.AddGrowableRow(0, 1)
         self.topSizer.AddGrowableRow(1)#, 4)
 
-        self.pressureMonitorSizer = wx.StaticBoxSizer(wx.StaticBox(self.pressureMonitorPanel, wx.ID_ANY, "Pressure Monitor"), wx.VERTICAL)
-        self.unexposedMonitorSizer = wx.StaticBoxSizer(wx.StaticBox(self.unexposedMonitorPanel, wx.ID_ANY, "Unexposed TC Monitor"), wx.VERTICAL)
-        self.furnaceMonitorSizer = wx.StaticBoxSizer(wx.StaticBox(self.furnaceMonitorPanel, wx.ID_ANY, "Furnace TC Monitor"), wx.VERTICAL)
-        self.afterburnerMonitorSizer = wx.StaticBoxSizer(wx.StaticBox(self.afterburnerMonitorPanel, wx.ID_ANY, "Afterburner TC Monitor"), wx.VERTICAL)
+        self.pressureStaticBox = wx.StaticBox(self.pressureMonitorPanel, wx.ID_ANY, "Pressure Monitor")
+        self.unexposedStaticBox = wx.StaticBox(self.unexposedMonitorPanel, wx.ID_ANY, "Unexposed TC Monitor")
+        self.furnaceStaticBox = wx.StaticBox(self.furnaceMonitorPanel, wx.ID_ANY, "Furnace TC Monitor")
+        self.afterburnerStaticBox = wx.StaticBox(self.afterburnerMonitorPanel, wx.ID_ANY, "Afterburner TC Monitor")
+
+        self.pressureMonitorSizer = wx.StaticBoxSizer(self.pressureStaticBox, wx.VERTICAL)
+        self.unexposedMonitorSizer = wx.StaticBoxSizer(self.unexposedStaticBox, wx.VERTICAL)
+        self.furnaceMonitorSizer = wx.StaticBoxSizer(self.furnaceStaticBox, wx.VERTICAL)
+        self.afterburnerMonitorSizer = wx.StaticBoxSizer(self.afterburnerStaticBox, wx.VERTICAL)
 
 
         # Add the widgets to their immediate sizers

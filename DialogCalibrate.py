@@ -46,8 +46,11 @@ class CalibrateDialog(wx.Dialog):
         self.txtGain = wx.TextCtrl(self.panel, wx.ID_ANY, str(self.origGain))
         self.lblOffset = wx.StaticText(self.panel, wx.ID_ANY, "Offset")
         self.txtOffset = wx.TextCtrl(self.panel, wx.ID_ANY, str(self.origOffset))
-
-        self.lblReading = wx.StaticText(self.panel, wx.ID_ANY, "Current Raw Reading:")
+        if self.sensorType == "TC":
+            self.lblReading = wx.StaticText(self.panel, wx.ID_ANY, "Current Raw Reading (deg. C):")
+        elif self.sensorType == "PRESS":
+            units = ("V" if self.parent.parent.controller.getPressureSensorIsVoltage(self.channelIndex) else "A")
+            self.lblReading = wx.StaticText(self.panel, wx.ID_ANY, "Current Raw Reading ("+units+"):")
         self.txtRawValue = wx.TextCtrl(self.panel, wx.ID_ANY, "------", style=wx.TE_READONLY|wx.TE_CENTER)
 
         self.btnSet1 = wx.Button(self.panel, wx.ID_ANY, "Set Point 1")

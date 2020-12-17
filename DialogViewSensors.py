@@ -195,6 +195,7 @@ class ViewSensorsDialog(wx.Dialog):
             self.btnPressureRemove.append(wx.Button(self.panel, wx.ID_ANY, "Remove Sensor"))
             self.btnPressureRemove[index].Bind(wx.EVT_BUTTON, self.onRemove)
             self.btnPressureRemove[index].channel = index
+            self.btnPressureRemove[index].Disable()
 
             # Add them to the sizer.
             pressureGridSizer.Add(self.txtPressureStatuses[index], 1, wx.EXPAND, 5)
@@ -260,6 +261,11 @@ class ViewSensorsDialog(wx.Dialog):
             changeComboboxBgColour(cmb, UIcolours.CTRL_DISABLED_BG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_BG)
             changeComboboxFgColour(cmb, UIcolours.CTRL_DISABLED_FG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_FG)
 
+            if cmb.GetSelection() == 0:
+                self.btnPressureRemove[channelIndex].Disable()
+            else:
+                self.btnPressureRemove[channelIndex].Enable()
+    
 
     def onOK(self, event):
         # Close the channels you opened
@@ -355,6 +361,11 @@ class ViewSensorsDialog(wx.Dialog):
         changeComboboxBgColour(cmb, UIcolours.CTRL_DISABLED_BG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_BG)
         changeComboboxFgColour(cmb, UIcolours.CTRL_DISABLED_FG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_FG)
 
+        if cmb.GetSelection() == 0:
+            self.btnPressureRemove[channelIndex].Disable()
+        else:
+            self.btnPressureRemove[channelIndex].Enable()
+
 
     def onThermocoupleSelect(self, event):
         cmb = event.GetEventObject()
@@ -429,8 +440,8 @@ class ViewSensorsDialog(wx.Dialog):
 
         # Nope, they really want to remove it.
         # Remove it from the machine settings
-        if selectedIndex == 0: # Not the DISABLED entry though
-            event.Skip()
+        # if selectedIndex == 0: # Not the DISABLED entry though
+        #     event.Skip()
 
         self.parent.controller.removePressureSensorFromChannel(channelIndex, serialNumber) # Adding the one because we stripped off the 0th index in the init
         self.cmbPressureChannels[channelIndex].Delete(selectedIndex) # Take it out of the combobox

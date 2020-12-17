@@ -65,6 +65,7 @@ from DialogProfileManager import ProfileManagerDialog
 from DialogTimeCorrection import TimeCorrectionDialog
 from DialogTimeExtension import TimeExtensionDialog
 from DialogWarningThreshold import WarningThresholdDialog
+from DialogZeroPressure import ZeroPressureDialog
 
 from Monitor import Monitor
 from GraphNotebook import GraphNotebook
@@ -362,6 +363,13 @@ class MainFrame(wx.Frame):
         # if result == wx.ID_CANCEL:
         #     return
 
+        # Ask the user to zero the presure sensors
+        # For now just testing that the zeroing works
+        dlg = ZeroPressureDialog(parent=self)
+        dlg.ShowModal()
+        dlg.Destroy()
+
+        # Ok, they zeroed the pressure sensors, do they want to start now?
         dlg = wx.MessageDialog(self,"Would you like to begin test now?", "Starting Test", wx.OK|wx.CANCEL|wx.ICON_QUESTION)
         result = dlg.ShowModal()
         dlg.Destroy()
@@ -402,6 +410,11 @@ class MainFrame(wx.Frame):
         if result == wx.ID_CANCEL:
             return
         self.controller.stopTest()
+
+        if testExtendDialog:
+            testExtendDialog.Destroy()
+
+        # TODO Dump the datagrid to a backup file
 
 
     def testThreeQuarterMark(self, factor):

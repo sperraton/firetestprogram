@@ -1,14 +1,9 @@
-# TODO This class is getting pretty big. May want to subdivide it into subclasses
-# for dealing with seperate areas, test settings, machine settings, daq control.
-
-# import csv
 from HelperFunctions import *
 from DataAcquisition import DataAcquisition
 from Enumerations import *
 from TestSettings import TestSettings
 from MachineSettings import MachineSettings
 from Logger import Logger
-#from Profile import Profile
 from TestData import TestData
 
 import time
@@ -16,7 +11,6 @@ import os
 import sys
 from pubsub import pub
 import wx
-#import pickle
 import json
 import numpy as np
 
@@ -82,14 +76,6 @@ class Controller():
         # We will generate a new config file with those.
         # TODO Test this out with missing or corrupted files, might need to put an else: in there
         # to catch corrupted files.
-        # try:
-        #     with open("settings.cfg", "rb") as f:
-        #         self.defaultSavePath, self.machineSettings = pickle.load(f)
-
-        # except:
-        #     infoDialog(self.parent, "No previously saved settings. Loading default settings")
-        #     self.machineSettings = MachineSettings() # This is the first time that machine was set up.
-        #     self.saveSettings()
 
         self.machineSettings = MachineSettings()
 
@@ -102,9 +88,6 @@ class Controller():
 
     def saveSettings(self):
         try:
-            # with open("settings.cfg", "wb") as f:
-            #     pickle.dump([self.defaultSavePath, self.machineSettings], f)
-
             self.machineSettings.saveSettings()
             self.machineSettings.saveProfiles()
             pub.sendMessage("status.flash", msg="Settings saved.")
@@ -221,6 +204,10 @@ class Controller():
             self.logger.writeDataRow(self.currentRow)
             isRowWritten = True
             #self.saveTick = 0
+            self.lastWritten = self.elapsedTime # Keep track of if we've missed a save.
+
+            # TODO, need to dynamically reduce the update rate if it is taking more than a second to fire.
+            # change it to some even division of the save rate so the save rate can be preserved.
 
         # Does this test include time correction?
         if self.testSettings.canExtend: self.calcTimeCorrection()
@@ -432,6 +419,7 @@ class Controller():
 
                 self.currentRow.append(value["formatted"])
 
+        # TODO Add Afterburner data
 
 
     def makeTableHeader(self):
@@ -590,6 +578,8 @@ class Controller():
 ################################################################################
 # Channel Wrangling
 ################################################################################
+
+
     def openThermocoupleChannels(self):
         self.daq.setSelectedThermocouples(self.selectedFurnaceChannels + self.selectedUnexposedChannels)
         self.daq.attachSelectedThermocouples()
@@ -771,6 +761,23 @@ class Controller():
         self.daq.channelPressure[channelIndex].offset = offset
 
 
+    def zeroPressureSensor(self, channelIndex):
+        """
+        Tare the pressure sensor
+        """
+        valueRaw, valueFormatted = self.daq.getPressure(channelIndex)
+        if valueRaw == -9999:
+            return
+
+        # Having to work on raw data because the numeric and formatted data
+        # may be in Pascals, when it is calibrated in inH2O
+        gain, offset = self.daq.getPressureGainOffset(channelIndex)
+        y = (valueRaw*gain) + offset
+        # Make the offset equal to the negative of the currently read value
+        new_offset = offset - y
+        self.daq.channelPressure[channelIndex].offset = new_offset
+
+
     def isLabelInSelectedThermocouples(self, label):
         #turn the label into enum
         labelIndex = thermocouplePlacementLabels.index(label)
@@ -813,3 +820,10 @@ class Controller():
 
     def getCurrentPressureChannelSerial(self, channelIndex):
         return self.machineSettings.getCurrentPressureChannelSerial(channelIndex)
+
+
+    def getPressureSensorIsVoltage(self, channelIndex):
+        """
+        Returns whether the pressure sensor on the given channel is a voltage type
+        """
+        self.machineSettings.getPressureSensorIsVoltage(channelIndex)

@@ -47,5 +47,6 @@ class PressureSensor(BaseSensor):
 
         if units == "Pascal": # Default to inH2O because that is what it will have been calibrated in.
             numeric = inH20ToPascal(numeric)
-
-        return "{0:2.3f}".format(numeric), numeric
+            return "{0:2.1f}".format(numeric), numeric
+        else:
+            return "{0:2.3f}".format(numeric), numeric
