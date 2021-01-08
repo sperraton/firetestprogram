@@ -78,9 +78,9 @@ class Logger():
             lines = [
                 "Was correction applied?,"+str(wasExtended),
                 "I  Indicated fire resistance period = ,"+str(indicatedPeriod),
-                "A  Area under 3/4 of Average curve= ,"+str(threeQuarterAvgAUC),
-                "As Area under 3/4 Required Curve= ,"+str(threeQuarterTargetAUC),
-                "L  Lag correction= ,"+str(lagCorrection),
+                "A  Area under 3/4 of Average curve = ,"+str(threeQuarterAvgAUC),
+                "As Area under 3/4 Required Curve = ,"+str(threeQuarterTargetAUC),
+                "L  Lag correction = ,"+str(lagCorrection),
                 "C  Correction in minutes = ,"+str(correctionMinutes)]
 
             f.writelines("%s\n" % l for l in lines)

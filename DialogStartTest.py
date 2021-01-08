@@ -59,7 +59,7 @@ class StartTestDialog(wx.Dialog):
 #        #self.scUpdateRate.SetMinSize((width+height+20, height))
         self.lblSaveRate = wx.StaticText(self.panel, wx.ID_ANY, "Rate to save data to log file (sec.)")
         self.scSaveRate = wx.SpinCtrl(self.panel, wx.ID_ANY, "")
-        self.scSaveRate.SetRange(1, 60)
+        self.scSaveRate.SetRange(5, 60)
         self.scSaveRate.SetValue(15)
 
         self.savePath = self.parent.controller.defaultSavePath # Show what the save path is

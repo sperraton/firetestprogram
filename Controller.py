@@ -121,13 +121,14 @@ class Controller():
         self.makeTableHeader()
         self.isTestRunning = False
         self.isCorrectionCalculated = False
-
+        self.graphUpdate = 0 # The round robin flag
         self.correctionMinutes = 0
         
         self.unexposedThresh = 0.0
 
         self.startTime = 0
         self.elapsedTime = 0
+        self.updateRate = 1 # Seconds between each data gather
         #self.saveTick = 0
 
         self.testData = TestData(self.testSettings, 
@@ -165,7 +166,8 @@ class Controller():
             pub.sendMessage("unexposedGraph.threshold", thresh=self.unexposedThresh)
 
         #self.saveTick = 0
-        self.timer.StartOnce(1000) # 1 second event firing
+        self.lastWritten = self.elapsedTime 
+        self.timer.StartOnce(self.updateRate*1000)
 
 
     def stopTest(self):
@@ -196,7 +198,8 @@ class Controller():
         # Is it time to save yet?
         #self.saveTick += 1
         isRowWritten = False # This is a flag to make sure we write the final entry into the log.
-        if round(self.elapsedTime) % self.testSettings.saveRate == 0: #self.saveTick >= self.testSettings.saveRate:
+        if round(self.elapsedTime) % self.testSettings.saveRate == 0 or \
+           round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate:
             # TODO Save the accumulated rows to file
             # Log the currentRow into the test .csv file
             self.logger.writeDataRow(self.currentRow)
@@ -213,7 +216,7 @@ class Controller():
         # Set the timer up for the next firing
         # This adjusts the next firing so we get closer to a true 1 second interval and there is no cumulative drift.
         delta = time.time()-self.startTime
-        self.timer.StartOnce(int(1000-((delta%1)*1000)))
+        self.timer.StartOnce(int((self.updateRate*1000)-((delta%self.updateRate)*1000)))
 
         # Is the test to be over?
         if self.elapsedTime/60.0 >= self.testSettings.testTimeMinutes:
@@ -252,19 +255,40 @@ class Controller():
         Get the latest data from the Phidgets and send to the UI
         """
 
-        if self.grabLatestData():
-            
-            pub.sendMessage("dataGrid.addRow", row=self.currentRow)
-            pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData, 
-                                                   avgData=self.testData.furnaceAvgData, 
-                                                   rawData=self.testData.furnaceRawData)
-            pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData, 
-                                                     avgData=self.testData.unexposedAvgData, 
-                                                     rawData=self.testData.unexposedRawData)
-            pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
-                                                    ch3=self.testData.ch3PressureData, 
-                                                    ch2=self.testData.ch2PressureData, 
-                                                    ch1=self.testData.ch1PressureData)
+        self.grabLatestData()
+
+
+        pub.sendMessage("dataGrid.addRow", row=self.currentRow)
+
+        # Doing a round robin of updating of graphs because it is time consuming and may lead to drift.
+        # if self.graphUpdate == 0:
+        #     pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData, 
+        #                                            avgData=self.testData.furnaceAvgData, 
+        #                                            rawData=self.testData.furnaceRawData)
+        #     self.graphUpdate += 1
+        # elif self.graphUpdate == 1:
+        #     pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
+        #                                             ch3=self.testData.ch3PressureData, 
+        #                                             ch2=self.testData.ch2PressureData, 
+        #                                             ch1=self.testData.ch1PressureData)
+        #     self.graphUpdate += 1
+        # else:
+        #     pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData, 
+        #                                              avgData=self.testData.unexposedAvgData, 
+        #                                              rawData=self.testData.unexposedRawData)
+        #     self.graphUpdate = 0
+
+
+        pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData, 
+                                               avgData=self.testData.furnaceAvgData, 
+                                               rawData=self.testData.furnaceRawData)
+        pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
+                                                ch3=self.testData.ch3PressureData, 
+                                                ch2=self.testData.ch2PressureData, 
+                                                ch1=self.testData.ch1PressureData)
+        pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData, 
+                                                 avgData=self.testData.unexposedAvgData, 
+                                                 rawData=self.testData.unexposedRawData)
 
 
     def grabLatestData(self):
@@ -333,8 +357,6 @@ class Controller():
 
         self.updateIndicators()
 
-        return True
-
 
     def updateIndicators(self):
         """
@@ -386,6 +408,11 @@ class Controller():
         if s == 60:
             s = 0
             m += 1
+
+        if m == 60:
+            m = 0
+            h += 1
+
         timeString = "%d:%02d:%02d" % (h, m, s)
 
         # Build the standard front material
@@ -420,7 +447,7 @@ class Controller():
         # Add Afterburner data
         #============================================================
         for value in self.testData.afterburnerValues.values():
-            self.currentRow.append(values["formatted"])
+            self.currentRow.append(value["formatted"])
 
 
     def makeTableHeader(self):
@@ -631,6 +658,7 @@ class Controller():
 
     def updatePressureMap(self, placementMap):
         self.machineSettings.updatePressureMap(placementMap)
+
         self.saveSettings()
         self.extractSelectedPressure()
 

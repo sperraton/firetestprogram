@@ -319,7 +319,7 @@ class MachineSettings():
 
     def getSelectedPressure(self):
         """
-        Returns a list of pressure channels that are not set to DISABLED
+        Returns a list of pressure channel indices that are not set to DISABLED
         """
 
         selectedPressureChannels = []

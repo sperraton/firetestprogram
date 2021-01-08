@@ -78,7 +78,8 @@ class ZeroPressureDialog(wx.Dialog):
 
 
     def onDone(self, event):
-        self.EndModal(wx.ID_OK)
+        #self.EndModal(wx.ID_OK)
+        self.Destroy()
 
 
     def onZero(self, event):

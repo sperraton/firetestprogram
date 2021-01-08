@@ -6,42 +6,8 @@ readings for a  fire test furnace.
 
 AUTHOR: Stephen Perraton
 EMAIL: perraton@gmail.com
-LAST MODIFIED: 2020-DEC-03
+LAST MODIFIED: 2021-JAN-06
 
-2020-DEC-3
-* So many things - I'll have to list them at another time
-
-2020-SEP-16
-* Housekeeping - Moved serials numbers to own module
-* Feature Add - Expanded max TC channels to 80 from 40
-* Feature Add - Seperate furnace/unexposed raw data visibility toggles
-
-2020-JUN-28
-* Feature Add - Added ability to turn off or on the autoexclude for the TC's
-* Feature Change - Do not autoscale unexposed graph y axis above the average by more than 5% of average. (Padding changeable in Enumerations.py)
-* Bug Fix - Rescale limits on graphs before save.
-* Bug Fix - Have test setup with no unexposed TC's.
-
-2020-FEB-27
-* Housekeeping - Reorganised the controls into seperate objects.
-* Feature Add - Added ability to ignore TC's in averaging during a test through channel monitor.
-* Feature Add - Can now toggle the visibility of the raw data on the graphs.
-* Feature Add - Automatically disable channels that are flagged as outliers.
-
-2019-OCT-22
-* Bug Fix - TC's connected in reverse give negative values. Ignore them in the averaging function.
-* Feature Add - Added panel which shows active channel readings.
-
-2019-SEP-17
-* Bug Fix - Don't include TC's that are reading negative in the average temperature.
-
-2019-MAY-05
-* Bug Fix - Invert polarity of minutes added in 3/4 calculation.
-* Feature Add - Add arbitrary time to test.
-
-Previous Changes
-* Bug Fix - Fixed AUC calculation.
-* Feature Add - 3/4 time correction.
 """
 
 # Refactoring TODO's

@@ -257,14 +257,16 @@ class ViewSensorsDialog(wx.Dialog):
 
         # Load the pressure channel serials that were saved for each of the channels
         for index, cmb in enumerate(self.cmbPressureChannels):
-            cmb.SetValue(self.parent.controller.getCurrentPressureChannelSerial(index))
+            serialNumber = self.parent.controller.getCurrentPressureChannelSerial(index)
+            cmb.SetValue(serialNumber)
+            cmb.SetSelection(self.parent.controller.getPressureChannelSerials(index).index(serialNumber))
             changeComboboxBgColour(cmb, UIcolours.CTRL_DISABLED_BG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_BG)
             changeComboboxFgColour(cmb, UIcolours.CTRL_DISABLED_FG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_FG)
 
             if cmb.GetSelection() == 0:
-                self.btnPressureRemove[channelIndex].Disable()
+                self.btnPressureRemove[index].Disable()
             else:
-                self.btnPressureRemove[channelIndex].Enable()
+                self.btnPressureRemove[index].Enable()
     
 
     def onOK(self, event):
@@ -284,8 +286,8 @@ class ViewSensorsDialog(wx.Dialog):
 #            self.resultPressureMap.append(cmb.GetSelection()) # The index of the pressureChannelXConfigs. It would look something like [3, 0, 6] (ch1, ch2, ch3) These should be used as the currentPresChnlXConfig indices.
             self.resultPressureMap.append(cmb.GetStringSelection())
 
-        self.EndModal(wx.ID_OK)
-
+        #self.EndModal(wx.ID_OK)
+        self.Destroy()
 
     def onQuit(self, event):
         self.resultThermocoupleMap = None

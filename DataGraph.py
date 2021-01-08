@@ -121,6 +121,7 @@ class UnexposedGraph(BaseGraph):
             # self.graphFigure.canvas.flush_events()
             #self.graphCanvas.blit(self.graphAxes.bbox)
             self.graphCanvas.draw()
+            self.graphCanvas.flush_events()
 
 
         except Exception as e:
@@ -147,6 +148,7 @@ class UnexposedGraph(BaseGraph):
         topLim = max(thresholdData) + (GRAPH_VERT_PADDING*max(thresholdData))
         self.graphAxes.set_ylim(top=topLim)
         self.graphCanvas.draw()
+        self.graphCanvas.flush_events()
 
 
     # Override this to extend our predrawn lines
@@ -224,6 +226,7 @@ class FurnaceGraph(BaseGraph):
 
         self.createLegend(numCols=2)
         self.graphCanvas.draw()
+        self.graphCanvas.flush_events()
 
 
 
@@ -250,6 +253,7 @@ class FurnaceGraph(BaseGraph):
             # self.graphFigure.canvas.flush_events()
             #self.graphCanvas.blit(self.graphAxes.bbox)
             self.graphCanvas.draw()
+            self.graphCanvas.flush_events()
 
         except Exception as e:
             #raise e
@@ -268,6 +272,7 @@ class FurnaceGraph(BaseGraph):
         topLim = max(targetData) + (GRAPH_VERT_PADDING*max(targetData))
         self.graphAxes.set_ylim(top=topLim)
         self.graphCanvas.draw()
+        self.graphCanvas.flush_events()
 
 
 
@@ -347,8 +352,6 @@ class PressureGraph(BaseGraph):
             self.graphAxes.set_ylim(bottom=botLim, top=topLim)
             self.graphAxes.relim()
 
-        #self.graphAxes.autoscale(enable=True, axis="y")
-
         # self.graphAxes.draw_artist(self.graphAxes.patch)
         # self.graphAxes.draw_artist(self.plotPresCh3)
         # self.graphAxes.draw_artist(self.plotPresCh2)
@@ -356,7 +359,12 @@ class PressureGraph(BaseGraph):
         # self.graphFigure.canvas.update()
         # self.graphFigure.canvas.flush_events()
         #self.graphCanvas.blit(self.graphAxes.bbox)
+
+        # Draw and flush
         self.graphCanvas.draw()
+        self.graphCanvas.flush_events()
+
+        #print(self.graphToolbar.mode) #"zoom rect" "pan/zoom"
 
 
     def hideUnusedPressureSensors(self):
@@ -392,3 +400,4 @@ class PressureGraph(BaseGraph):
 
         self.graphAxes.legend(handles, labels, loc='upper left', fontsize="x-small", ncol=2)
         self.graphCanvas.draw()
+        self.graphCanvas.flush_events()
