@@ -9,6 +9,7 @@ pip install matplotlib
 pip install wxPython
 pip install Pypubsub
 pip install numpy
+pip python-dateutil
 pip install Phidget22
 
 echo ===================
