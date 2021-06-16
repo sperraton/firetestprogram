@@ -1,5 +1,11 @@
 Location of Python file: C:/Users/RYANFIRE 1/AppData/Local/TesPro
 
+2021-JUN-15
+* Feature Add - Toggle average visibility on TC graphs
+
+2021-MAY-11
+* Fixed bug in calculating limits on pressure graph.
+
 2020-DEC-3
 * So many things - I'll have to list them at another time
 

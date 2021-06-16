@@ -338,19 +338,23 @@ class PressureGraph(BaseGraph):
             else:
                 padding = 5
 
+            # TODO: just loop through the allData and remove any bad values
             # Strip out our bad value placeholder
             if -9999 in ch3Data:
                 ch3Data = []
-            if ch2Data:
+            if -9999 in ch2Data:
                 ch2Data = []
-            if ch1Data:
+            if -9999 in ch1Data:
                 ch1Data = []
 
-            topLim = max(ch3Data + ch2Data + ch1Data) + padding
-            botLim = min(ch3Data + ch2Data + ch1Data) - padding
+            allData = ch3Data + ch2Data + ch1Data
 
-            self.graphAxes.set_ylim(bottom=botLim, top=topLim)
-            self.graphAxes.relim()
+            if allData: # Avoid throwing an error by checking that we have data left
+                topLim = max(allData) + padding
+                botLim = min(allData) - padding
+
+                self.graphAxes.set_ylim(bottom=botLim, top=topLim)
+                self.graphAxes.relim()
 
         # self.graphAxes.draw_artist(self.graphAxes.patch)
         # self.graphAxes.draw_artist(self.plotPresCh3)

@@ -28,15 +28,21 @@ class CustomNavToolbar(NavigationToolbar):
 
         if hasToggle:
             # Create the toggle
+            chkAvgVisibility = wx.CheckBox(self, label="Hide average")
             chkRawVisibility = wx.CheckBox(self, label="Hide raw data")
             chkLegendVisibiliy = wx.CheckBox(self, label="Hide legend")
             self.AddStretchableSpace()
-            tool = self.AddControl(chkRawVisibility)
+            tool0 = self.AddControl(chkAvgVisibility)
+            tool1 = self.AddControl(chkRawVisibility)
             tool2 = self.AddControl(chkLegendVisibiliy)
 
             #chkRawVisibility.SetValue = self.graph.rawDataVisible # Set to whatever the default is in the graph
+            self.Bind(wx.EVT_CHECKBOX, self.onToggleAvg, id=chkAvgVisibility.GetId())
             self.Bind(wx.EVT_CHECKBOX, self.onToggleRaw, id=chkRawVisibility.GetId())
             self.Bind(wx.EVT_CHECKBOX, self.onToggleLegend, id=chkLegendVisibiliy.GetId())
+
+    def onToggleAvg(self, event):
+        self.graph.toggleAvgVisibility()
 
     def onToggleRaw(self, event):
         self.graph.toggleRawVisibility()
@@ -55,6 +61,7 @@ class BaseGraph(wx.Panel):
         self.isExpanded = False # Adding this attribute to keep track of state
         self.Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick) # Ugly. use pubsub for this
 
+        self.avgDataVisible = True # Start with the average data visible
         self.rawDataVisible = True # Start with the raw data visible.
         self.legendVisible = True # Start with the legend visible
         self.testTimeMinutes = 60 # Default on startup. This gets set again when test is started.
@@ -250,6 +257,22 @@ class BaseGraph(wx.Panel):
         self.graphCanvas.draw()
 
 
+    def toggleAvgVisibility(self):
+        if self.avgDataVisible:
+            self.avgDataVisible = False
+        else:
+            self.avgDataVisible = True
+
+        if self.panelID == 1:
+            self.toggleUnexposedAvgVisibility(self.avgDataVisible)
+        elif self.panelID == 2:
+            self.toggleFurnaceAvgVisibility(self.avgDataVisible)
+
+        self.graphAxes.get_legend().set_visible(self.legendVisible)
+
+        self.graphCanvas.draw()
+
+
     def toggleRawVisibility(self):
         """
         TODO Yes this is quick and dirty, but when I make this class more generic I will clean this up
@@ -270,6 +293,32 @@ class BaseGraph(wx.Panel):
         self.graphCanvas.draw()
 
 
+    def toggleFurnaceAvgVisibility(self, isVisible):
+        """
+        Turn the visibility of the average data trace on or off
+        """
+
+        if isVisible:
+            self.plotFurnAvg.set_visible(True)
+        else:
+            self.plotFurnAvg.set_visible(False)
+
+        self.legendUpdate(True)
+
+
+    def toggleUnexposedAvgVisibility(self, isVisible):
+        """
+        Turn the visibility of the average data trace on or off
+        """
+
+        if isVisible:
+            self.plotUnexpAvg.set_visible(True)
+        else:
+            self.plotUnexpAvg.set_visible(False)
+
+        self.legendUpdate(False)
+
+
     def toggleFurnaceRawVisibility(self, isVisible):
         """
         Turn the visibility of the raw data traces on or off
@@ -281,21 +330,11 @@ class BaseGraph(wx.Panel):
             for line in self.plotFurnRaw:
                 line.set_visible(True)
 
-            # Using list comprehension to make full list of artists to include in legend
-            self.graphAxes.legend(handles=[self.plotTarget, self.plotFurnAvg]+[i for i in self.plotFurnRaw],
-                                  loc='upper left',
-                                  fontsize="x-small",
-                                  #bbox_to_anchor=(1.01, 1.),
-                                  ncol=2)
         else:
             for line in self.plotFurnRaw:
                 line.set_visible(False)
 
-            self.graphAxes.legend(handles=[self.plotTarget, self.plotFurnAvg],
-                                  loc='upper left',
-                                  fontsize="x-small")
-                                  #bbox_to_anchor=(1.01, 1.))
-
+        self.legendUpdate(True)
 
     def toggleUnexposedRawVisibility(self, isVisible):
         """
@@ -308,18 +347,50 @@ class BaseGraph(wx.Panel):
             for line in self.plotUnexpRaw:
                 line.set_visible(True)
 
-            # Using list comprehension to make full list of artists to include in legend
-            self.graphAxes.legend(handles=[self.plotUnexpAvg, self.plotFailureThresh] + [i for i in self.plotUnexpRaw],
-                                  loc='upper left',
-                                  fontsize="x-small",
-                                  #bbox_to_anchor=(1.01, 1.),
-                                  ncol=2)            
+            # # Using list comprehension to make full list of artists to include in legend
+            # self.graphAxes.legend(handles=[self.plotUnexpAvg, self.plotFailureThresh] + [i for i in self.plotUnexpRaw],
+            #                       loc='upper left',
+            #                       fontsize="x-small",
+            #                       #bbox_to_anchor=(1.01, 1.),
+            #                       ncol=2)            
+
 
         else:
             for line in self.plotUnexpRaw:
                 line.set_visible(False)
 
-            self.graphAxes.legend(handles=[self.plotUnexpAvg, self.plotFailureThresh],
-                                  loc='upper left',
-                                  fontsize="x-small")
-                                  #bbox_to_anchor=(1.01, 1.))
+            # self.graphAxes.legend(handles=[self.plotUnexpAvg, self.plotFailureThresh],
+            #                       loc='upper left',
+            #                       fontsize="x-small")
+            #                       #bbox_to_anchor=(1.01, 1.))
+
+        self.legendUpdate(False)
+
+    def legendUpdate(self, isFurnace):
+
+        if isFurnace:
+            avgVisibile = self.plotFurnAvg.get_visible()
+            rawVisible = self.plotFurnRaw[0].get_visible() # If the first line isn't visible, none of them are
+
+            handles = [self.plotTarget]
+            if avgVisibile: handles.append(self.plotFurnAvg)
+            if rawVisible: handles += [i for i in self.plotFurnRaw]
+        else:
+            avgVisibile = self.plotUnexpAvg.get_visible()
+            rawVisible = self.plotUnexpRaw[0].get_visible() # If the first line isn't visible, none of them are
+
+            if avgVisibile:
+                handles = [self.plotUnexpAvg, self.plotFailureThresh]
+            else:
+                handles = [self.plotFailureThresh]
+
+            if rawVisible: handles += [i for i in self.plotUnexpRaw]            
+
+
+
+        # Using list comprehension to make full list of artists to include in legend
+        self.graphAxes.legend(handles=handles,
+                              loc='upper left',
+                              fontsize="x-small",
+                              #bbox_to_anchor=(1.01, 1.),
+                              ncol=2)
