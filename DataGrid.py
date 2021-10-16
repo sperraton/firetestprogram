@@ -66,9 +66,11 @@ class DataGrid(wx.Panel):
         
         self.gridView.AppendRows() # Grow the table
         rowIdx = self.gridView.GetNumberRows() - 1
-        # Load up the row with the. data
+        
+        # Load up the row with the data
         for index, dataPoint in enumerate(row):
             self.gridView.SetCellValue(rowIdx, index, str(dataPoint))
+            #self.gridView.GetTable().SetValue(rowIdx, index, str(dataPoint))
         self.gridView.AutoSizeColumns()
 
         # Make last added point visible in window

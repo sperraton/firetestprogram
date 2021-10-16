@@ -1,4 +1,5 @@
 # Write test data to .csv file
+from HelperFunctions import warnDialog
 
 class Logger():
 
@@ -19,6 +20,7 @@ class Logger():
             # Create the data table header
             headerString = ",".join([item for item in tableHeader])
             f.write(headerString+"\n")
+            
             f.close()
 
             return False

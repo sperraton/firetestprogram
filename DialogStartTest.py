@@ -68,6 +68,9 @@ class StartTestDialog(wx.Dialog):
 
         #self.btnViewChannelSelection = wx.Button(self.panel, wx.ID_ANY, "View/Change DAQ Channel Map ... ")
 
+        self.cbIsCalibrated = wx.CheckBox(self.panel, label = "I confirm that the sensors have been calibrated.") 
+		
+
         self.btnStart = wx.Button(self.panel, wx.ID_ANY, "Finalize Parameters")
         self.btnStart.Disable()
         self.btnCancel = wx.Button(self.panel, wx.ID_ANY, "Cancel")
@@ -85,6 +88,7 @@ class StartTestDialog(wx.Dialog):
         #self.scSaveRate.Bind(wx.EVT_SPINCTRL, self.onSaveRateChange)
         self.cmbTargetCurve.Bind(wx.EVT_COMBOBOX, self.onTestChoice)
         
+        self.Bind(wx.EVT_CHECKBOX,self.onChecked)
 
         # Do Layout
         topSizer = wx.BoxSizer(wx.VERTICAL)
@@ -124,6 +128,7 @@ class StartTestDialog(wx.Dialog):
         row6Sizer.Add(self.lblFilePath, 0, wx.ALL, 5)
         #row7Sizer.Add(self.btnViewChannelSelection, 0, wx.ALL, 5)
 
+        btnSizer.Add(self.cbIsCalibrated, 0, wx.ALL, 5)
         btnSizer.Add(self.btnStart, 0, wx.ALL, 5)
         btnSizer.Add(self.btnCancel, 0, wx.ALL, 5)
 
@@ -212,6 +217,11 @@ class StartTestDialog(wx.Dialog):
             self.btnStart.Disable()
             return
 
+        if not self.cbIsCalibrated.IsChecked():
+            infoDialog(self, "Please confirm that the sensors have been calibrated.", caption="Confirm Calibration")
+            self.btnStart.Disable()
+            return
+
         # Save all the filled in information to start the test
         self.resultClient = self.txtClient.GetValue().strip()
         self.resultProjectNum = self.txtProjectNum.GetValue().strip()
@@ -224,7 +234,19 @@ class StartTestDialog(wx.Dialog):
         self.resultSavePath = self.savePath
         self.Destroy()
 
+    def onChecked(self, event):
 
+        a = self.txtClient.GetValue()
+        b = self.txtProjectNum.GetValue()
+        c = self.txtTestNum.GetValue()
+        
+        # Scan for empties
+        if (a and a.strip()) and (b and b.strip()) and (c and c.strip()): # Are they all filled?
+            if self.cbIsCalibrated.IsChecked():
+                self.btnStart.Enable()
+        else:
+            self.btnStart.Disable() 
+ 
     def onTextChange(self, event):
         # Reset the text control colors
         self.txtClient.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
@@ -241,7 +263,8 @@ class StartTestDialog(wx.Dialog):
 
         # Scan for empties
         if (a and a.strip()) and (b and b.strip()) and (c and c.strip()): # Are they all filled?
-            self.btnStart.Enable()
+            if self.cbIsCalibrated.IsChecked():
+                self.btnStart.Enable()
         else:
             self.btnStart.Disable()
 

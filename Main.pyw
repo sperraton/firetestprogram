@@ -1,14 +1,21 @@
-"""
-Fire test furnace DAQ software
+# """
+# Fire test furnace DAQ software
 
-This program records and displays temperature and pressure
-readings for a  fire test furnace.
+# This program records and displays temperature and pressure
+# readings for a  fire test furnace.
 
-AUTHOR: Stephen Perraton
-EMAIL: perraton@gmail.com
-LAST MODIFIED: 2021-JAN-06
+# AUTHOR: Stephen Perraton
+# EMAIL: perraton@gmail.com
+# LAST MODIFIED: 2021-SEP-23
 
-"""
+# + Added warning on sensor detached
+# + Max. amount of legend rows before wrapping
+# + Added calibration confirmation
+# + Fixed drift bug - Grid row addition seemed to be the culprit.
+
+# Use the following for compiling with Nuitka
+# python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file=C:\Users\freya\Documents\TesPro\splash.jpg=images Main.pyw
+# """
 
 # Refactoring TODO's
 # All strings, and choice labels need to be brought into the Enumeration module
@@ -19,6 +26,11 @@ LAST MODIFIED: 2021-JAN-06
 # Gracefully deal with non-responsive/connecting channels or phidgets.
 # All the functions with options should use the = None pattern
 # Change remaining channel to channelIndex symbols.
+from Phidget22.Phidget import *
+from Phidget22.Devices.Log import *
+from Phidget22.LogLevel import *
+
+import logging
 
 from Controller import Controller
 from HelperFunctions import *
@@ -54,15 +66,17 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
+        self.noConnect = False # Set the DAQ to not connect. For debugging purposes
         self.testTimeMinutes = 60 # Default
         self.targetTempCurve = []
         self.warnToggle = True
+        self.detachedWarn = False # Stop additional triggers of the warn dialog
 
         # ensure the parent's __init__ is called
         super(MainFrame, self).__init__(*args, **kw)
 
    
-        bitmap = wx.Bitmap('splash.jpg')
+        bitmap = wx.Bitmap('./images/splash.jpg')
         splash = wx.adv.SplashScreen(
                      bitmap, 
                      wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT, 
@@ -123,6 +137,8 @@ class MainFrame(wx.Frame):
         """
         Open the channels of the DAQ
         """
+        if self.noConnect: return
+
         self.controller.openAllChannels()
 
 ################################################################################
@@ -474,6 +490,7 @@ class MainFrame(wx.Frame):
         pub.subscribe(self.testStoppedCleanup, "test.stopped") # do cleanup when the test is stopped by not the time running out
         pub.subscribe(self.testThreeQuarterMark, "test.correction")
         pub.subscribe(self.testExtend, "test.extend")
+        #pub.subscribe(self.lostChannelWarning, "channel.detached")
 
 
     def removeAllListeners(self):
@@ -488,6 +505,7 @@ class MainFrame(wx.Frame):
         pub.unsubscribe(self.testStoppedCleanup, "test.stopped")
         pub.unsubscribe(self.testThreeQuarterMark, "test.correction")
         pub.unsubscribe(self.testExtend, "test.extend")
+        #pub.unsubscribe(self.lostChannelWarning, "channel.detached")
 
     # TODO move this into the graph object
     def createTargetCurveArray(self, testLengthMinutes):
@@ -564,10 +582,25 @@ class MainFrame(wx.Frame):
         self.createTargetCurveArray(self.controller.testSettings.testTimeMinutes)
 
 
+    def lostChannelWarning(self, sensorType, channel):
+        """
+        Warn the user that channels have detached.
+        """
+        if self.detachedWarn: return # Don't fire a bunch of dialogs in response to several detach events
+
+        self.detachedWarn = True
+        self.dlg = wx.MessageDialog(self, "The computer has lost connection with one or more of the sensor channels.", "Warning!", wx.OK | wx.ICON_WARNING)
+        self.dlg.ShowModal()
+        self.dlg.Destroy()
+        self.detachedWarn = False
+
+
 ###############################################################################
 #  Program Entry
 ###############################################################################
 if __name__ == '__main__':
+    #Log.enable(LogLevel.PHIDGET_LOG_INFO, "file.log")
+    #logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
     # TODO Should I pass the app object to dialogs that need to talk to the controller
     # rather than having it them use the parent view. I should structure this better.

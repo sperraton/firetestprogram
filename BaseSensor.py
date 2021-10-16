@@ -7,7 +7,8 @@ from Phidget22.Phidget import *
 
 from pubsub import pub
 from HelperFunctions import printPhidgetInfo
-from Enumerations import DEFAULT_ATTACH_WAIT, INVALID_VALUE
+from Enumerations import CHANGE_TRIGGER, DEFAULT_ATTACH_WAIT, INVALID_VALUE
+import logging
 
 class BaseSensor():
 
@@ -64,7 +65,7 @@ class BaseSensor():
 
         # Set the channel handlers
         self.setAttachHandler()
-        #self.setDetachHandler()
+        self.setDetachHandler()
         self.setErrorHandler()
         self.setChangeHandler()
 
@@ -79,7 +80,7 @@ class BaseSensor():
     def setChangeHandler(self):
 
         def onChangeHandler(channelObject, value):
-
+            #logging.info(f"onChangeHandler({channelObject}, {value}")
             self.valueRaw = value    # Save the passed datum to the channel object for reading elsewhere
             self.valueFormatted, self.valueNumeric = self.formatData(value, 
                                                                 #sensorType=self.sensorType,
@@ -110,20 +111,19 @@ class BaseSensor():
         def onAttachHandler(channelObject):
             if self.attached: return
 
-            changeTrigger = 0.0
             try:
                 # Set properties
                 channelObject.setDataInterval(self.dataInterval) # Define minimum time between Events in msec (Max for Thermocouple is 60000, min is 100)
                 
                 # Init depending on sensor type
                 if self.sensorType == "TC":
-                    channelObject.setTemperatureChangeTrigger(changeTrigger) # Set min change before event triggered
+                    channelObject.setTemperatureChangeTrigger(CHANGE_TRIGGER) # Set min change before event triggered
                     channelObject.setThermocoupleType (self.tcType)
                 elif self.sensorType == "PRESS":
                     if self.isVoltage:
-                        channelObject.setVoltageChangeTrigger(changeTrigger) # Set min change before event triggered
+                        channelObject.setVoltageChangeTrigger(CHANGE_TRIGGER) # Set min change before event triggered
                     else:
-                        channelObject.setCurrentChangeTrigger(changeTrigger) # Set min change before event triggered
+                        channelObject.setCurrentChangeTrigger(CHANGE_TRIGGER) # Set min change before event triggered
 
                 self.attached = True
                 printPhidgetInfo(channelObject, " >>> ATTACHED")
@@ -142,7 +142,7 @@ class BaseSensor():
             try:
                 self.attached = False # TODO Check that this is set when detaching. It may be that when multiple phidgets are open only the last one fires the detached handler. Or maybe the print statements are missed. It appears as though I can close them and reopen them.
                 printPhidgetInfo(channelObject, " >>> DETACHED")
-                #pub.sendMessage("channel.detached", sensorType=self.sensorType, channel=self.channelIndex)
+                pub.sendMessage("channel.detached", sensorType=self.sensorType, channel=self.channelIndex)
             except PhidgetException as e:
                 print("\nError in Detach Event:")
                 sys.stderr.write("Desc: " + e.details + "\n")

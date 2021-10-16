@@ -42,6 +42,8 @@ class Controller():
         self.selectedUnexposedChannels = []
         self.selectedPressureChannels = []
         self.selectedAfterburnerChannels = []
+        self.selectedAmbientChannels = []
+
         # TODO: This only assumes the TC channels.
         self.ignoredChannels = [] # Channel indices that have been disabled mid-test
 
@@ -157,6 +159,7 @@ class Controller():
 
         #NOTE Check the return code. wrap in try as well
         self.updateData() # NOTE Perhaps put this before the isTestRunning is set and then test in the grabLatestData to do a first point init
+        pub.sendMessage("dataGrid.addRow", row=self.currentRow)
         self.logger.writeDataRow(self.currentRow) # Log the first data point
 
         # Set the unexposed TC max limit based on the current average.
@@ -202,6 +205,7 @@ class Controller():
            round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate:
             # TODO Save the accumulated rows to file
             # Log the currentRow into the test .csv file
+            pub.sendMessage("dataGrid.addRow", row=self.currentRow)
             self.logger.writeDataRow(self.currentRow)
             isRowWritten = True
             #self.saveTick = 0
@@ -221,6 +225,7 @@ class Controller():
         # Is the test to be over?
         if self.elapsedTime/60.0 >= self.testSettings.testTimeMinutes:
             if not isRowWritten:
+                pub.sendMessage("dataGrid.addRow", row=self.currentRow)
                 self.logger.writeDataRow(self.currentRow) # Get the last datapoint
 
             if self.testSettings.canExtend: 
@@ -258,7 +263,7 @@ class Controller():
         self.grabLatestData()
 
 
-        pub.sendMessage("dataGrid.addRow", row=self.currentRow)
+        #pub.sendMessage("dataGrid.addRow", row=self.currentRow)
 
         # Doing a round robin of updating of graphs because it is time consuming and may lead to drift.
         # if self.graphUpdate == 0:
@@ -277,7 +282,6 @@ class Controller():
         #                                              avgData=self.testData.unexposedAvgData, 
         #                                              rawData=self.testData.unexposedRawData)
         #     self.graphUpdate = 0
-
 
         pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData, 
                                                avgData=self.testData.furnaceAvgData, 
@@ -379,7 +383,7 @@ class Controller():
 
         # Show the current cabinet temperature
         cabinetTemp = self.daq.getInternalTemperature()
-
+        value = "Cab. Temp.: " + cabinetTemp + " deg. C"
         if float(cabinetTemp) >= WARN_THRES2:
             shouldWarn = 2
         elif float(cabinetTemp) >= WARN_THRES1:
@@ -387,9 +391,23 @@ class Controller():
         else:
             shouldWarn = None
 
+
+        # TODO on next revision make space for the Ambient in the indicator panel.
+        # Right now we are overriding the cabinent temperature if an ambient TC is specified.
+        if self.selectedAmbientChannels:
+
+            # Grab the first recorded value
+            for value in self.testData.ambientValues.values():
+                ambTemp = value["formatted"]
+                break
+
+            value = "Amb. Temp.: " + ambTemp + " deg." + self.testSettings.temperatureUnits
+            shouldWarn = None
+
+
         pub.sendMessage("indicator.update", 
                         indicator="CAB", 
-                        lblValue="Cab. Temp.: " + cabinetTemp + " deg. C", 
+                        lblValue=value,
                         warn=shouldWarn)
 
 
@@ -405,6 +423,8 @@ class Controller():
         h, m, s = parseTime(self.elapsedTime)
         #timeString = "%d:%02d:%02.3f" % (h, m, s)
         s = round(s)
+
+        # Make sure there are no rounding errors that would make minutes or seconds show as 60
         if s == 60:
             s = 0
             m += 1
@@ -412,6 +432,10 @@ class Controller():
         if m == 60:
             m = 0
             h += 1
+
+        # Snap the seconds to modulo of save rate to correct drift error in timestamp
+        # Can't do this here because the grid gets this data too.
+        #s -= s % self.testSettings.saveRate
 
         timeString = "%d:%02d:%02d" % (h, m, s)
 
@@ -449,6 +473,12 @@ class Controller():
         for value in self.testData.afterburnerValues.values():
             self.currentRow.append(value["formatted"])
 
+        # Add Ambient data
+        #============================================================
+        for value in self.testData.ambientValues.values():
+            self.currentRow.append(value["formatted"])
+
+
 
     def makeTableHeader(self):
         """
@@ -472,7 +502,7 @@ class Controller():
         #============================================================
         for channelIndex in self.selectedUnexposedChannels:
             chnlLabel = self.getThermocoupleLabel(channelIndex)
-            self.tableHeader.append(chnlLabel+ " (UNEXP.)")
+            self.tableHeader.append(chnlLabel+" (UNEXP.)")
 
         # Do the pressure labels no 
         #============================================================
@@ -488,6 +518,13 @@ class Controller():
         for channelIndex in self.selectedAfterburnerChannels:
             chnlLabel = self.getThermocoupleLabel(channelIndex)
             self.tableHeader.append(chnlLabel+" (AFTR.BURN)")
+
+        # Do the ambient
+        #============================================================
+        for channelIndex in self.selectedAmbientChannels:
+            chnlLabel = self.getThermocoupleLabel(channelIndex)
+            self.tableHeader.append(chnlLabel+" (AMBIENT)")
+
 
 
     def setTemperatureUnits(self, units):
@@ -665,6 +702,7 @@ class Controller():
 
     def extractSelectedThermocouples(self):
         # Do this whenever the placementMap is changed
+        self.selectedAmbientChannels = self.machineSettings.getSelectedAmbient()
         self.selectedAfterburnerChannels = self.machineSettings.getSelectedAfterburner()
         self.selectedFurnaceChannels = self.machineSettings.getSelectedFurnace()
         self.selectedUnexposedChannels = self.machineSettings.getSelectedUnexposed()

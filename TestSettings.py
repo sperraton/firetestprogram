@@ -60,6 +60,7 @@ class TestSettings:
         self.date = date
         self.temperatureUnits = None
         self.pressureUnits = None
+        self.isCalibrated = "Yes" # TODO right now it is assumed that this is true because you couldn't start the test otherwise
 
 
         # Put in the defaults
@@ -124,6 +125,7 @@ class TestSettings:
         self.fileHeader += "REQUIRED CURVE:," + self.targetCurve + "\n"
         self.fileHeader += "TEMPERATURE UNITS:, " + self.temperatureUnits + "\n"
         self.fileHeader += "PRESSURE UNITS:, " + self.pressureUnits + "\n"
+        self.fileHeader += "SENSOR CALIBRATION CONFIRMED:," + self.isCalibrated + "\n"
 
 
     def createFileName(self):

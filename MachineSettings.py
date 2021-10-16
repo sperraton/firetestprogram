@@ -241,7 +241,7 @@ class MachineSettings():
 
     def getPressureSensorIsVoltage(self, channelIndex):
             
-            return self.pressureSenseIsVoltage[channelIndex] #self.profiles[self.currentProfile].getPressureConfig()[channelIndex][3]
+        return self.pressureSenseIsVoltage[channelIndex] #self.profiles[self.currentProfile].getPressureConfig()[channelIndex][3]
 
 
     def getThermocoupleLabel(self, channelIndex):
@@ -290,31 +290,48 @@ class MachineSettings():
         return self.profiles[self.currentProfile].getCurrentPressureChannelSerial(channelIndex)
 
 
+# TODO: in all the places it calls the below functions, use getSelectedTC instead
+
+    def getSelectedAmbient(self):
+        return self.getSelectedTC(thermocouplePlacements.AMBIENT)
+
+
     def getSelectedAfterburner(self):
         """
         Returns a list of channel indices that are given the AFTERBURNER placement
         """
-        selectedAfterburnerChannels = []
-        for channelIndex, row in enumerate(self.profiles[self.currentProfile].thermocoupleConfig):
-            if row["placement"] == thermocouplePlacements.AFTERBURNER:
-                selectedAfterburnerChannels.append(channelIndex)
-        return selectedAfterburnerChannels
+        # selectedAfterburnerChannels = []
+        # for channelIndex, row in enumerate(self.profiles[self.currentProfile].thermocoupleConfig):
+        #     if row["placement"] == thermocouplePlacements.AFTERBURNER:
+        #         selectedAfterburnerChannels.append(channelIndex)
+        # return selectedAfterburnerChannels
+        return self.getSelectedTC(thermocouplePlacements.AFTERBURNER)
 
 
     def getSelectedFurnace(self):
-        selectedFurnaceChannels = []
-        for channelIndex, row in enumerate(self.profiles[self.currentProfile].thermocoupleConfig):
-            if row["placement"] == thermocouplePlacements.FURNACE:
-                selectedFurnaceChannels.append(channelIndex)
-        return selectedFurnaceChannels
+        # selectedFurnaceChannels = []
+        # for channelIndex, row in enumerate(self.profiles[self.currentProfile].thermocoupleConfig):
+        #     if row["placement"] == thermocouplePlacements.FURNACE:
+        #         selectedFurnaceChannels.append(channelIndex)
+        # return selectedFurnaceChannels
+        return self.getSelectedTC(thermocouplePlacements.FURNACE)
 
 
     def getSelectedUnexposed(self):
-        selectedUnexposedChannels = []
+        # selectedUnexposedChannels = []
+        # for channelIndex, row in enumerate(self.profiles[self.currentProfile].thermocoupleConfig):
+        #     if row["placement"] == thermocouplePlacements.UNEXPOSED:
+        #         selectedUnexposedChannels.append(channelIndex)
+        # return selectedUnexposedChannels
+        return self.getSelectedTC(thermocouplePlacements.UNEXPOSED)
+
+
+    def getSelectedTC(self, placement):
+        selectedChannels = []
         for channelIndex, row in enumerate(self.profiles[self.currentProfile].thermocoupleConfig):
-            if row["placement"] == thermocouplePlacements.UNEXPOSED:
-                selectedUnexposedChannels.append(channelIndex)
-        return selectedUnexposedChannels
+            if row["placement"] == placement:
+                selectedChannels.append(channelIndex)
+        return selectedChannels
 
 
     def getSelectedPressure(self):

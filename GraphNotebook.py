@@ -62,7 +62,7 @@ class GraphNotebook(wx.Notebook):
         Given the raw data from the controller, update the data grid and the
         channel monitor.
         """
-
+        
         self.dataGridTab.addDataRow(row)
 
     def OnDestroy(self):
@@ -174,7 +174,7 @@ class MainGraphPanel(wx.Panel):
         """
         # Give the data to the graph
         self.furnaceTempGraph.updateFurnaceData(timeData, avgData, rawData)
-
+        
 
     def updateUnexposedTempGraph(self, timeData, avgData, rawData):
         """
@@ -182,7 +182,8 @@ class MainGraphPanel(wx.Panel):
         """
         # Give the data to the graph
         self.unexposedTempGraph.updateUnexposedData(timeData, avgData, rawData)
-
+        
+        
     def updateUnexposedThreshold(self, thresh):
         """
         Draws the threshold line on the Unexposed graph
@@ -195,6 +196,7 @@ class MainGraphPanel(wx.Panel):
         Draws on the graph the new data for the pressure sensors
         """
         self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
+        
 
     def initGraphForTest(self, testTime):
 

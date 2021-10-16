@@ -19,6 +19,7 @@ class TestData():
         self.furnaceValues = {}
         self.unexposedValues = {}
         self.afterburnerValues = {}
+        self.ambientValues = {}
         self.pressureValues = {}
 
         # Load the thermocouple channels
@@ -31,6 +32,8 @@ class TestData():
                 self.unexposedValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
             elif placement == thermocouplePlacements.AFTERBURNER:
                 self.afterburnerValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
+            elif placement == thermocouplePlacements.AMBIENT:
+                self.ambientValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
 
         # Load the pressure channels
         for channelNum in range(self.numPres):
@@ -98,6 +101,8 @@ class TestData():
                 self.unexposedValues.update([(channel, newValues)])
             elif channel in self.afterburnerValues:
                 self.afterburnerValues.update([(channel, newValues)])
+            elif channel in self.ambientValues:
+                self.ambientValues.update([(channel, newValues)])
 
 
         elif sensorType == "PRESS":

@@ -1,7 +1,7 @@
 from enum import Enum
 from matplotlib import cm
 
-VERSION_NUM_STRING = "1.1"
+VERSION_NUM_STRING = "1.2"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
@@ -47,6 +47,7 @@ class thermocouplePlacements(Enum):
     UNEXPOSED = 1
     FURNACE = 2
     AFTERBURNER = 3
+    AMBIENT = 4
 
     def __new__(cls, value):
         member = object.__new__(cls)
@@ -78,7 +79,8 @@ thermocouplePlacementLabels = [ # match the enumeration
     "DISABLED",
     "UNEXPOSED",
     "FURNACE",
-    "AFTERBURNER"]
+    "AFTERBURNER",
+    "AMBIENT"]
 
 pressurePlacementLabels = [
     "DISABLED",
@@ -132,4 +134,6 @@ MAX_UNEXPOSED_WARN_THRESH = 5000.0
 MIN_UNEXPOSED_WARN_THRESH = 0.0
 MAX_TEST_TIME_MINUTES = 480
 DATA_INTERVAL_MS = 500
+CHANGE_TRIGGER = 0.0
 INVALID_VALUE = 1e300
+LEGEND_NUM_ROWS = 8

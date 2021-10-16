@@ -1,5 +1,6 @@
 import wx
-import numpy as np
+#import numpy as np
+from numpy import mean, median, percentile
 
 from Phidget22.PhidgetException import *
 from Phidget22.Phidget import *
@@ -10,8 +11,8 @@ def averageTemperatures(values):
     data = cleanValues(values)
     if not data:
         return -9999
-    mean = np.mean(data)
-    return mean
+    return mean(data)
+
 
 def cleanValues(values):
     """
@@ -42,16 +43,16 @@ def getOutlierLimits(dataIn, factor):
     if not dataIn:  # Check we got some data to work with
         return 0,0
 
-    quant75, quant25 = np.percentile(dataIn, [75 ,25])
+    quant75, quant25 = percentile(dataIn, [75 ,25])
     iqr = quant75 - quant25
     cutOff = iqr*factor
     lower, upper = quant25 - cutOff, quant75 + cutOff
 
     # Make sure there is a minimum spread
     if (upper - lower) < 20:
-        median = np.median(dataIn)
-        lower = median - 10
-        upper = median + 10
+        med = median(dataIn)
+        lower = med - 10
+        upper = med + 10
 
     if lower < 0:
         lower = 0

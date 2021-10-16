@@ -1,6 +1,6 @@
 import wx
 from math import ceil
-from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, thermocouplePlacementLabels, pressurePlacementLabels
+from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, LEGEND_NUM_ROWS, thermocouplePlacementLabels, pressurePlacementLabels
 from BaseGraph import BaseGraph
 
 import matplotlib       # Provides the graph figures
@@ -77,11 +77,8 @@ class UnexposedGraph(BaseGraph):
                            0, 
                            GRAPH_VERT_PADDING*1000)
 
-        # self.graphAxes.legend(handles=[self.plotUnexpAvg, self.plotFailureThresh, self.plotUnexpRaw],#(self.plotUnexpAvg, self.plotFailureThresh, self.plotUnexpRaw[0]), 
-        #                       #("Average", "Failure Threshold", "Raw"), 
-        #                       loc='upper left', 
-        #                       fontsize="x-small")
-        self.createLegend(numCols=2)
+        self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
+        self.createLegend(numCols=self.numCols)
         
 
     def updateUnexposedData(self, timeData, avgData, rawData):
@@ -224,7 +221,8 @@ class FurnaceGraph(BaseGraph):
                            0, 
                            1200)
 
-        self.createLegend(numCols=2)
+        self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
+        self.createLegend(numCols=self.numCols)
         self.graphCanvas.draw()
         self.graphCanvas.flush_events()
 
@@ -320,7 +318,12 @@ class PressureGraph(BaseGraph):
                            -0.25, 
                            0.25)
 
-        self.createLegend(numCols=1)
+        self.numCols = 1
+        self.createLegend(numCols=self.numCols)
+
+        #Autoscale on unknown axis and known lims on the other
+        #self.graphAxes.set_autoscaley_on(True)
+        #self.graphAxes.set_xlim(self.min_x, self.max_x)
 
 
     def updatePressureData(self, timeData, ch3Data, ch2Data, ch1Data):
@@ -355,6 +358,13 @@ class PressureGraph(BaseGraph):
 
                 self.graphAxes.set_ylim(bottom=botLim, top=topLim)
                 self.graphAxes.relim()
+        
+        #Need both of these in order to rescale
+        # TODO Try the following out for autoscaling.
+        #self.graphAxes.relim()
+        #self.graphAxes.autoscale_view()
+
+
 
         # self.graphAxes.draw_artist(self.graphAxes.patch)
         # self.graphAxes.draw_artist(self.plotPresCh3)
@@ -402,6 +412,6 @@ class PressureGraph(BaseGraph):
             labels[2] = "" #None
             # handles[2] = None #.set_linestyle("")
 
-        self.graphAxes.legend(handles, labels, loc='upper left', fontsize="x-small", ncol=2)
+        self.graphAxes.legend(handles, labels, loc='upper left', fontsize="x-small", labelspacing=0.2, ncol=2)
         self.graphCanvas.draw()
         self.graphCanvas.flush_events()

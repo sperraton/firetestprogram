@@ -24,7 +24,7 @@ class ZeroPressureDialog(wx.Dialog):
         channelsSizer = wx.BoxSizer(wx.HORIZONTAL)
         topSizer = wx.BoxSizer(wx.VERTICAL)
 
-        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, "Zero the pressure channels\nbefore commencing with test.")
+        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, "You can zero the pressure channels\nbefore commencing with test.")
 
         # Make the pressure sensor lists
         #======================================================================

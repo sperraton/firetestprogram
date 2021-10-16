@@ -6,7 +6,7 @@ matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
 #matplotlib.interactive(True)
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigCanvas
-from matplotlib.ticker import (MultipleLocator, FormatStrFormatter, AutoMinorLocator)
+from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLocator
 from matplotlib.backends.backend_wxagg import NavigationToolbar2WxAgg as NavigationToolbar
 
 
@@ -65,9 +65,10 @@ class BaseGraph(wx.Panel):
         self.rawDataVisible = True # Start with the raw data visible.
         self.legendVisible = True # Start with the legend visible
         self.testTimeMinutes = 60 # Default on startup. This gets set again when test is started.
+        self.numCols = 1 # Keep track for the legend when toggling visibility
 
         # Make the graph objects
-        self.graphFigure = Figure(figsize=(2,1), tight_layout=True)#, constrained_layout=True # Outermost object
+        self.graphFigure = Figure(figsize=(2,1), tight_layout=True)#, constrained_layout=True # Outermost object !!! See if using false will get me speed gains
         self.graphAxes = self.graphFigure.add_subplot(111) # Area where data is plotted
          
         # Add the graph to the panel
@@ -106,7 +107,7 @@ class BaseGraph(wx.Panel):
         Make the legend for this graph.
         """
 
-        self.graphAxes.legend(loc="upper left", fontsize="x-small", ncol=numCols)
+        self.graphAxes.legend(loc="upper left", fontsize="x-small", labelspacing=0.2, ncol=numCols)
 
         # Set legend outside and to the right
         #chartBox = self.graphAxes.get_position()
@@ -392,5 +393,6 @@ class BaseGraph(wx.Panel):
         self.graphAxes.legend(handles=handles,
                               loc='upper left',
                               fontsize="x-small",
+                              labelspacing = 0.2,
                               #bbox_to_anchor=(1.01, 1.),
-                              ncol=2)
+                              ncol=self.numCols)
