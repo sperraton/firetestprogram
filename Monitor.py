@@ -101,7 +101,7 @@ class MonitorList(wx.ListCtrl):#, listmix.CheckListCtrlMixin):
                 row = self.indexForRow.index(channelIndex)
                 # Don't write over the excluded state with the normal bg
                 if self.hasCheck and self.IsItemChecked(row):
-                    altBG = UIcolours.CTRL_WARN_BG_LIGHTx
+                    altBG = UIcolours.CTRL_WARN_BG_LIGHT
                 else:
                     altBG = UIcolours.CTRL_NORMAL_BG
                 self.SetItemBackgroundColour(row, UIcolours.CTRL_ERROR_BG_LIGHT if isWarn else altBG)
