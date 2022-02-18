@@ -103,7 +103,7 @@ class MainFrame(wx.Frame):
         self.mainPanel = wx.Panel(self)
         self.monPanel = Monitor(self.mainPanel, self, -1)
         self.graphNotebook = GraphNotebook(self.mainPanel, self)
-
+        self.testExtendDialog = None
 
         # Do the layout
         #======================================================================
@@ -230,7 +230,7 @@ class MainFrame(wx.Frame):
 
     def onTestTimeExtend(self, event):
         # TODO: Test how it deals with extreme multiple extensions
-        testExtendDialog = TimeExtensionDialog(self).Show()
+        self.testExtendDialog = TimeExtensionDialog(self).Show()
 
 
     def onExit(self, event):
@@ -393,8 +393,8 @@ class MainFrame(wx.Frame):
             return
         self.controller.stopTest()
 
-        if testExtendDialog:
-            testExtendDialog.Destroy()
+        if self.testExtendDialog:
+            self.testExtendDialog.Destroy()
 
         # TODO Dump the datagrid to a backup file
 

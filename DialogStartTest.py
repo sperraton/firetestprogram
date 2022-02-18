@@ -1,6 +1,6 @@
 import time
 import wx
-from pubsub import pub
+#from pubsub import pub
 from datetime import datetime
 #from SensorSelectionDialog import *
 from Enumerations import *
