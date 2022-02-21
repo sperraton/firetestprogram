@@ -4,9 +4,9 @@ from Phidget22.PhidgetException import *
 from Phidget22.Phidget import *
 from Phidget22.Net import *
 
-from Address import Address
-from TempSensor import ThermocoupleSensor
-from PressureSensor import PressureSensor
+from DAQ.Address import Address
+from DAQ.TempSensor import ThermocoupleSensor
+from DAQ.PressureSensor import PressureSensor
 from HelperFunctions import *
 from Enumerations import DATA_INTERVAL_MS
 

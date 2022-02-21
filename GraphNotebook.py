@@ -2,7 +2,7 @@ import wx
 from pubsub import pub
 import os
 
-from DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph
+from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph
 from DataGrid import DataGrid
 from Controller import Controller
       

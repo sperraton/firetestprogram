@@ -1,5 +1,5 @@
 from HelperFunctions import *
-from DataAcquisition import DataAcquisition
+from DAQ.DataAcquisition import DataAcquisition
 from Enumerations import *
 from TestSettings import TestSettings
 from MachineSettings import MachineSettings
