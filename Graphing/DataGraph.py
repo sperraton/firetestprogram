@@ -1,7 +1,7 @@
 import wx
 from math import ceil
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, LEGEND_NUM_ROWS, thermocouplePlacementLabels, pressurePlacementLabels
-from BaseGraph import BaseGraph
+from Graphing.BaseGraph import BaseGraph
 
 import matplotlib       # Provides the graph figures
 matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
