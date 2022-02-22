@@ -1,6 +1,6 @@
 from HelperFunctions import applyGainOffset, inH20ToPascal
 from Enumerations import DEFAULT_ATTACH_WAIT, INVALID_VALUE
-from BaseSensor import BaseSensor
+from DAQ.BaseSensor import BaseSensor
 
 class PressureSensor(BaseSensor):
     """

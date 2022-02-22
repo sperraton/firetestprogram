@@ -1,7 +1,7 @@
 from Phidget22.ThermocoupleType import ThermocoupleType
 from HelperFunctions import applyGainOffset, celsiusToFahrenheit
 from Enumerations import DEFAULT_ATTACH_WAIT, INVALID_VALUE
-from BaseSensor import BaseSensor
+from DAQ.BaseSensor import BaseSensor
 
 class ThermocoupleSensor(BaseSensor):
     """
