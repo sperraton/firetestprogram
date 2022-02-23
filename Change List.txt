@@ -3,6 +3,12 @@ Location of Python file: C:/Users/RYANFIRE 1/AppData/Local/TesPro
 2022-FEB-15
 * Housekeeping - Made class variable fot testExtendDialog
 
+2021-SEP-23
+* Added warning on sensor detached
+* Max. amount of legend rows before wrapping
+* Added calibration confirmation
+* Fixed drift bug - Grid row addition seemed to be the culprit.
+
 2021-JUN-15
 * Feature Add - Toggle average visibility on TC graphs
 

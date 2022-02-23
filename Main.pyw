@@ -6,12 +6,7 @@
 
 # AUTHOR: Stephen Perraton
 # EMAIL: perraton@gmail.com
-# LAST MODIFIED: 2021-SEP-23
-
-# + Added warning on sensor detached
-# + Max. amount of legend rows before wrapping
-# + Added calibration confirmation
-# + Fixed drift bug - Grid row addition seemed to be the culprit.
+# LAST MODIFIED: 2022-FEB-22
 
 # Use the following for compiling with Nuitka
 # python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file=C:\Users\freya\Documents\TesPro\splash.jpg=images Main.pyw
@@ -37,13 +32,13 @@ from HelperFunctions import *
 from Enumerations import *
 from TestSettings import TestSettings
 
-from DialogStartTest import StartTestDialog
-from DialogViewSensors import ViewSensorsDialog
-from DialogProfileManager import ProfileManagerDialog
-from DialogTimeCorrection import TimeCorrectionDialog
-from DialogTimeExtension import TimeExtensionDialog
-from DialogWarningThreshold import WarningThresholdDialog
-from DialogZeroPressure import ZeroPressureDialog
+from Dialogs.DialogStartTest import StartTestDialog
+from Dialogs.DialogViewSensors import ViewSensorsDialog
+from Dialogs.DialogProfileManager import ProfileManagerDialog
+from Dialogs.DialogTimeCorrection import TimeCorrectionDialog
+from Dialogs.DialogTimeExtension import TimeExtensionDialog
+from Dialogs.DialogWarningThreshold import WarningThresholdDialog
+from Dialogs.DialogZeroPressure import ZeroPressureDialog
 
 from Monitor import Monitor
 from GraphNotebook import GraphNotebook

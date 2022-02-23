@@ -1,8 +1,8 @@
 import wx
 from pubsub import pub
 from Enumerations import *
-from DialogCalibrate import CalibrateDialog
-from DialogProfileManager import NamingDialog
+from Dialogs.DialogCalibrate import CalibrateDialog
+from Dialogs.DialogProfileManager import NamingDialog
 from HelperFunctions import infoDialog
 from HelperFunctions import changeComboboxBgColour, changeComboboxFgColour
 
