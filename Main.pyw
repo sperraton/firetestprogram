@@ -61,7 +61,7 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
-        self.noConnect = True # Set the DAQ to not connect. For debugging purposes
+        self.noConnect = False # Set the DAQ to not connect. For debugging purposes
         self.testTimeMinutes = 60 # Default
         self.targetTempCurve = []
         self.warnToggle = True
