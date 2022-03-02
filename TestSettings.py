@@ -1,42 +1,5 @@
-import math
-import numpy as np
 import os
-
-from E119Curve import *
-
-# Test standard constants and curve function
-# TODO: place these in an external .json so that the program may be extended on the fly
-
-standards = {
-  "E119" : {
-    "temperatureUnits" : "F",
-    "pressureUnits" : "inH2O",
-    "temperatureOffset" : 68,
-    "lagCorrection" : 3240,
-    "curveFunction" : lambda timeSeconds: np.interp((timeSeconds/60.0), x_vals, E119F_vals)
-  },
-  "IMO" : {
-    "temperatureUnits" : "C",
-    "pressureUnits" : "Pascal",
-    "temperatureOffset" : 20,
-    "lagCorrection" : 1800,
-    "curveFunction" : lambda timeSeconds: 345*math.log10((8*(timeSeconds/60.0))+1.0)+20.0
-  },
-  "CAN/ULC S101" : {
-    "temperatureUnits" : "C",
-    "pressureUnits" : "Pascal",
-    "temperatureOffset" : 20,
-    "lagCorrection" : 1800,
-    "curveFunction" : lambda timeSeconds: np.interp((timeSeconds/60.0), x_vals, E119C_vals)
-  },
-  "AS 1530.4" : {
-    "temperatureUnits" : "C",
-    "pressureUnits" : "Pascal",
-    "temperatureOffset" : 20,
-    "lagCorrection" : 0,
-    "curveFunction" : lambda timeSeconds: 345*math.log10((8*(timeSeconds/60.0))+1.0)+20.0 
-  }
-}
+from TestStandards import Standards
 
 
 class TestSettings:
@@ -53,7 +16,6 @@ class TestSettings:
                  targetCurve=None,
                  savePath=None):
 
-        self.standards = standards
         self.client = client
         self.projectNum = projectNum
         self.testNum = testNum
@@ -93,6 +55,8 @@ class TestSettings:
         else:
             self.savePath = savePath
 
+        self.standard = Standards[self.targetCurve]
+
         self.chooseUnits()
         self.createFileHeader()
         self.createFileName()
@@ -100,17 +64,18 @@ class TestSettings:
         self.fullFileName = os.path.join(self.savePath, self.fileName)
 
         # Does this test include time correction?
-        if self.standards[self.targetCurve]["lagCorrection"] > 0:
+        if self.standard["lagCorrection"] > 0:
             self.canExtend = True
         else:
             self.canExtend = False
+
 
     def chooseUnits(self):
         """
         Get the units associated with this test.
         """
-        self.temperatureUnits = self.standards[self.targetCurve]["temperatureUnits"]
-        self.pressureUnits = self.standards[self.targetCurve]["pressureUnits"]
+        self.temperatureUnits = self.standard["temperatureUnits"]
+        self.pressureUnits = self.standard["pressureUnits"]
 
 
     def createFileHeader(self):
@@ -139,21 +104,21 @@ class TestSettings:
         """
         Return the y value given the time into the test in seconds.
         """
-        return self.standards[self.targetCurve]["curveFunction"](timeSeconds)
+        return self.standard["curveFunction"](timeSeconds)
 
 
     def getTargetTempOffset(self):
         """
         Return the target curve tempature offset.
         """
-        return self.standards[self.targetCurve]["temperatureOffset"]
+        return self.standard["temperatureOffset"]
 
 
     def getLagCorrection(self):
         """
         Return the lag correction constant in degrees(F or C) * minute
         """
-        return self.standards[self.targetCurve]["lagCorrection"]
+        return self.standard["lagCorrection"]
 
 
     def calculateCorrectionFactor(self, threeQuarterAvgAUC, threeQuarterTargetAUC):
@@ -162,7 +127,7 @@ class TestSettings:
         C = I + { [2I*(A-As)] / [3*(As+L)] }
         """
         term1 = (2*self.indicatedPeriod) * (threeQuarterAvgAUC-threeQuarterTargetAUC)
-        term2 = 3 * (threeQuarterTargetAUC + self.standards[self.targetCurve]["lagCorrection"])
+        term2 = 3 * (threeQuarterTargetAUC + self.standard["lagCorrection"])
        
         return (term1/term2) * -1.0
 

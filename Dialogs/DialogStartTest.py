@@ -5,7 +5,7 @@ from datetime import datetime
 #from SensorSelectionDialog import *
 from Enumerations import *
 from HelperFunctions import infoDialog
-from TestSettings import standards
+from TestStandards import Standards
 
 class StartTestDialog(wx.Dialog):
     def __init__(self, parent):
@@ -38,7 +38,7 @@ class StartTestDialog(wx.Dialog):
         self.cmbTestTime.SetMinSize((width+height+50, height)) # Size the combobox to be just right
 
         # BUG need to ensure that a choice has been made before starting test.
-        targetCurveStrings = list(standards.keys()) #["CAN/ULC S101", "E119", "IMO", "AS 1530.4"]
+        targetCurveStrings = list(Standards.keys()) #["CAN/ULC S101", "E119", "IMO", "AS 1530.4"]
         self.lblTargetCurve = wx.StaticText(self.panel, wx.ID_ANY, "Required Temperature Curve")
         self.cmbTargetCurve = wx.ComboBox(self.panel, choices=targetCurveStrings, style=wx.CB_READONLY)
         
@@ -153,12 +153,12 @@ class StartTestDialog(wx.Dialog):
 
     def onTestChoice(self, event):
         choice = self.cmbTargetCurve.GetValue()
-        info = "Temperature Units: " + standards[choice]["temperatureUnits"] + "\n"
-        info += "Pressure Units: " + standards[choice]["pressureUnits"] + "\n"
+        info = "Temperature Units: " + Standards[choice]["temperatureUnits"] + "\n"
+        info += "Pressure Units: " + Standards[choice]["pressureUnits"] + "\n"
         # Does this test include time correction?
-        if standards[choice]["lagCorrection"] > 0:
+        if Standards[choice]["lagCorrection"] > 0:
             info += "This test curve includes time correction." + "\n"
-            info += "Lag Correction: " + str(standards[choice]["lagCorrection"]/60) + " deg" + standards[choice]["temperatureUnits"] + "*h" # The standards dictionary holds it in Deg*minutes. Convert it to Deg*hours
+            info += "Lag Correction: " + str(Standards[choice]["lagCorrection"]/60) + " deg" + Standards[choice]["temperatureUnits"] + "*h" # The standards dictionary holds it in Deg*minutes. Convert it to Deg*hours
         else:
             info += "This test curve does not include time correction."
 
