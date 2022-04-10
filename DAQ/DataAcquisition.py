@@ -16,38 +16,43 @@ class DataAcquisition():
     # Functions
     ################################################################################
     def __init__(self, 
-                 parent, 
-                 thermocoupleSerialNums, 
-                 pressureSerialNums, 
-                 numTC, 
-                 numPres, 
+                 parent,
                  machineSettings):
 
         self.parent = parent
+        self.machineSettings = machineSettings
 
+        print("Initializing the DAQ ...")
         # TODO We need to check that the serial numbers passed from the machineSettings
         # match with the serial numbers reported by the attached Phidgets and float up an
         # error to the user if they do not.
-        self.thermocoupleSerialNums = thermocoupleSerialNums
-        self.pressureSerialNums = pressureSerialNums
+        self.thermocoupleSerialNums = self.machineSettings.thermocoupleSerialNums
+        self.pressureSerialNums = self.machineSettings.pressureSerialNums
 
-        self.thermocoupleAddress = []
-        self.pressureAddress = []
         self.selectedTCchannels = []
         self.selectedPressureChannels = []
 
-        self.initThermocoupleAddresses()
+        # Was a full list of addresses passed?
+        if machineSettings.thermocoupleAddresses is None:
+            self.thermocoupleAddresses = []
+            self.initThermocoupleAddresses()
+        else:
+            self.thermocoupleAddresses = machineSettings.thermocoupleAddresses
+
+        self.pressureAddress = []
         self.initPressureAddresses()
 
         try:
-
+            
             # Init an array of all the thermocouple  channels
+            print(f"    Initializing {machineSettings.numTC} TC channels ...")
             self.channelThermocouple = []
-            for i in range(0, numTC):
-                self.channelThermocouple.append(ThermocoupleSensor(self.thermocoupleAddress[i].serialNumber,
-                                                                   self.thermocoupleAddress[i].hubPort,
-                                                                   self.thermocoupleAddress[i].channel,
-                                                                   self.thermocoupleAddress[i].isHubPort,
+            for i in range(0, machineSettings.numTC):
+                print(f"        Channel {i}")
+                self.channelThermocouple.append(ThermocoupleSensor(self.thermocoupleAddresses[i].serialNumber,
+                                                                   self.thermocoupleAddresses[i].hubPort,
+                                                                   self.thermocoupleAddresses[i].channel,
+                                                                   self.thermocoupleAddresses[i].isHubPort,
                                                                    DATA_INTERVAL_MS,
                                                                    channelIndex=i,
                                                                    gain=self.parent.getThermocoupleCalibration(i)[0],
@@ -55,19 +60,21 @@ class DataAcquisition():
                                                                    units="C"))
 
             # Init the internal thermocouple channel
-            self.internalThermocouple = ThermocoupleSensor(self.thermocoupleAddress[0].serialNumber,
-                                                                   4,
-                                                                   4,
-                                                                   self.thermocoupleAddress[0].isHubPort,
-                                                                   DATA_INTERVAL_MS,
-                                                                   channelIndex=numTC,
-                                                                   gain=1.0,
-                                                                   offset=0.0,
-                                                                   units="C")
+            self.internalThermocouple = ThermocoupleSensor(self.thermocoupleAddresses[0].serialNumber,
+                                                            4,
+                                                            4,
+                                                            self.thermocoupleAddresses[0].isHubPort,
+                                                            DATA_INTERVAL_MS,
+                                                            channelIndex=machineSettings.numTC,
+                                                            gain=1.0,
+                                                            offset=0.0,
+                                                            units="C")
 
             # Init an array of all the pressure channels
+            print("    Initializing Pressure channels ...")
             self.channelPressure = []
-            for i in range(0, numPres):
+            for i in range(0, machineSettings.numPres):
+                print(f"         Channel {i}")
                 self.channelPressure.append(PressureSensor(self.pressureAddress[i].serialNumber,
                                                            self.pressureAddress[i].hubPort,
                                                            self.pressureAddress[i].channel,
@@ -237,33 +244,35 @@ class DataAcquisition():
         return self.channelPressure[channelIndex].gain, self.channelPressure[channelIndex].offset
         
 
-
+    # BUG BUG BUG The initial range of only 5 VINT ports used was from the
+    #             previous machines. New ones may be wired with any number
+    #             of the 6 ports used. This init func. needs to be more robust.
     def initThermocoupleAddresses(self):
-        for serialNum in self.thermocoupleSerialNums:
-            for hubIndex in range(4, -1, -1): # Hub Port counts down 4, 3, 2, 1, 0
-                for channelIndex in range(4): # Channel counts up  0, 1, 2, 3
-                    #print("TC Address - %d, %d, %d" % (serialNum, hubIndex, channelIndex))
-                    self.thermocoupleAddress.append(Address(serialNum,
-                                                       hubIndex,
-                                                       channelIndex,
-                                                       False))
+        for VINThubSerialNum in self.thermocoupleSerialNums:
+            for VINThubPortIndex in range(4, -1, -1): # Hub Port counts down 4, 3, 2, 1, 0
+                for thermocoupleChannelIndex in range(4): # Channel counts up  0, 1, 2, 3
+                    #print("TC Address - %d, %d, %d" % (VINThubSerialNum, VINThubPortIndex, thermocoupleChannelIndex))
+                    self.thermocoupleAddresses.append(Address(VINThubSerialNum,
+                                                            VINThubPortIndex,
+                                                            thermocoupleChannelIndex,
+                                                            isHubPort=False))
 
 
     def initThermocoupleAddressesReverse(self):
-        for serialNum in self.thermocoupleSerialNums:
-            for hubIndex in range(5): # Hub Port counts up 0, 1, 2, 3, 4
-                for channelIndex in range(3, -1, -1): # Count down 3, 2, 1, 0
-                    #print("%d, %d, %d" % (serialNum, hubIndex, channelIndex))
-                    self.thermocoupleAddress.append(Address(serialNum,
-                                                       hubIndex,
-                                                       channelIndex,
-                                                       False))
+        for VINThubSerialNum in self.thermocoupleSerialNums:
+            for VINThubPortIndex in range(5): # Hub Port counts up 0, 1, 2, 3, 4
+                for thermocoupleChannelIndex in range(3, -1, -1): # Count down 3, 2, 1, 0
+                    #print("%d, %d, %d" % (VINThubSerialNum, VINThubPortIndex, thermocoupleChannelIndex))
+                    self.thermocoupleAddresses.append(Address(VINThubSerialNum,
+                                                            VINThubPortIndex,
+                                                            thermocoupleChannelIndex,
+                                                            isHubPort=False))
 
 
     def initPressureAddresses(self):
-        for hubIndex in range(3):
+        for VINThubPortIndex in range(3):
             self.pressureAddress.append(Address(self.pressureSerialNums[0],
-                                           hubIndex,
-                                           0,
-                                           False))
-            #print("Pressure Address - %d, %d, %d" % (self.pressureSerialNums[0], hubIndex, 0))
+                                                VINThubPortIndex,
+                                                channel=0,
+                                                isHubPort=False))
+            #print("Pressure Address - %d, %d, %d" % (self.pressureSerialNums[0], VINThubPortIndex, 0))

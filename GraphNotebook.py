@@ -201,24 +201,24 @@ class MainGraphPanel(wx.Panel):
     def initGraphForTest(self, testTime):
 
         # Reset the lines of the raw data on the graphs
-        self.furnaceTempGraph.clearGraph()
+        self.furnaceTempGraph.graphCanvas.clearGraph()
         self.furnaceTempGraph.initFurnaceTemperaturePlot()
 
-        self.unexposedTempGraph.clearGraph()
+        self.unexposedTempGraph.graphCanvas.clearGraph()
         self.unexposedTempGraph.initUnexposedTemperaturePlot()
 
-        self.pressureGraph.clearGraph()
+        self.pressureGraph.graphCanvas.clearGraph()
         self.pressureGraph.initPressurePlot()
 
         # Scale the x-axis for the test time.
         # TODO: make this a function that also gets called in testExtend()
-        self.furnaceTempGraph.scaleGraphXaxis(0, testTime)
+        self.furnaceTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.furnaceTempGraph.setTestTimeMinutes(testTime)
 
-        self.unexposedTempGraph.scaleGraphXaxis(0, testTime)
+        self.unexposedTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.unexposedTempGraph.setTestTimeMinutes(testTime)
 
-        self.pressureGraph.scaleGraphXaxis(0, testTime)
+        self.pressureGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.pressureGraph.setTestTimeMinutes(testTime)
 
         # Draw the new target curve
@@ -226,9 +226,9 @@ class MainGraphPanel(wx.Panel):
         self.frame.createTargetCurveArray(testTime) # Recalc the target to fill up new time
 
         # Set the y-axis labels to the correct units
-        self.furnaceTempGraph.setYlabel("Temp. (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
-        self.unexposedTempGraph.setYlabel("Temp. (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
-        self.pressureGraph.setYlabel("Press. ("+self.frame.controller.testSettings.pressureUnits+")")
+        self.furnaceTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
+        self.unexposedTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
+        self.pressureGraph.graphCanvas.setYlabel("Press. ("+self.frame.controller.testSettings.pressureUnits+")")
 
         self.pressureGraph.hideUnusedPressureSensors()
 
@@ -240,18 +240,18 @@ class MainGraphPanel(wx.Panel):
         # Also this saves it the size it is on screen. can we just set a default?
         parentPath, ext = os.path.splitext(path)
 
-        self.furnaceTempGraph.homeGraph()
+        self.furnaceTempGraph.graphCanvas.homeGraph()
         #self.splitter.SetExpanded(2)
         #Reset the limits
         #self.furnaceTempGraph.setLimitsTo() # If the graph is zoomed in, un-zoom it
         self.furnaceTempGraph.saveImage(parentPath+"_furnace"+ext)
 
-        self.unexposedTempGraph.homeGraph()
+        self.unexposedTempGraph.graphCanvas.homeGraph()
         #self.splitter.SetExpanded(1)
         #self.unexposedTempGraph.setLimitsTo()
         self.unexposedTempGraph.saveImage(parentPath+"_unexposed"+ext)
 
-        self.pressureGraph.homeGraph()
+        self.pressureGraph.graphCanvas.homeGraph()
         #self.splitter.SetExpanded(3)
         #self.pressureGraph.setLimitsTo(isLowerZero=False)
         self.pressureGraph.saveImage(parentPath+"_pressure"+ext)

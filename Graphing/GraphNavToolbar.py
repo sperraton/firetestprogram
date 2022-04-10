@@ -33,10 +33,10 @@ class CustomNavToolbar(NavigationToolbar):
             self.Bind(wx.EVT_CHECKBOX, self.onToggleLegend, id=chkLegendVisibiliy.GetId())
 
     def onToggleAvg(self, event):
-        self.graph.toggleAvgVisibility()
+        self.graphCanvas.toggleAvgVisibility()
 
     def onToggleRaw(self, event):
-        self.graph.toggleRawVisibility()
+        self.graphCanvas.toggleRawVisibility()
 
     def onToggleLegend(self, event):
-        self.graph.toggleLegendVisibility()
+        self.graphCanvas.toggleLegendVisibility()

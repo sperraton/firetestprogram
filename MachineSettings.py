@@ -2,6 +2,7 @@ from Enumerations import *
 from Profile import Profile
 from HelperFunctions import infoDialog, warnDialog # TODO Right now we let the error bubble up because I don't want to pass a reference to the frame to the dialog boxes. Should rethink how submodules are going to desplay these dialogs. Perhaps pubsub
 import json
+from DAQ.Address import Address
 
 # TODO A lot of these getter/setters can be @params
 
@@ -41,23 +42,55 @@ class MachineSettings():
         Load the serial numbers from the config
         """
         try:
+            print("Loading settings ,,,")
 
             with open("settings.json") as f:
                 self.settingsData = json.load(f, object_hook=as_enum)
 
+            print("    Loading serials ...")
             self.thermocoupleSerialNums = self.settingsData["machineSetup"]["serialNums"]["thermocouple"] #thermocoupleSerialNums
             self.pressureSerialNums = self.settingsData["machineSetup"]["serialNums"]["pressure"] #pressureSerialNums
 
+            # Determine the number of TC channels based on number of hubs
+            # BUG BUG BUG This relies on the number of TC channels per hub is constant per machine.
+            #             The machine may break this assumption in the future.
+            #self.numTC = NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums)
+            self.numTC = self.settingsData["machineSetup"]["numTC"]
+            self.numPres = self.settingsData["machineSetup"]["numPres"]
+
             self.pressureSenseIsVoltage = self.settingsData["machineSetup"]["pressureIsVoltage"] # Is this channel wired for current or voltage input
 
+            print("    Loading sensor configuration ...")
             self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
             self.pressureConfig = self.settingsData["defaultProfile"]["pressureConfig"]
+
+            print("    Loading profile ...")
             self.currentProfile = self.settingsData["machineSetup"]["currentProfile"]
             self.defaultSavePath = self.settingsData["machineSetup"]["defaultSavePath"]
 
+            #Load up the map of how the Phidgets are wired up
+            print("    Loading addresses ...")
+            self.thermocoupleAddresses = []
+
+            chNum = 0
+            for row in self.settingsData["thermocoupleAddresses"]:
+                print(f"    Getting address ({chNum}) ... {row}")
+                self.thermocoupleAddresses.append(Address(row["serial"],
+                                                          row["VINTport"],
+                                                          row["channel"],
+                                                          row["isHubPort"]))
+                chNum += 1
+
+            print(f"{len(self.thermocoupleAddresses)} TCs address were found")
+
         except:
+            # TODO, Don't swallow errors. Although I think that this is caught in the calling func.
             #infoDialog(self.parent, "No previously saved settings.")
             pass
+
+    def __str__(self):
+        return f"numTC: {self.numTC}/nnumPres: {self.numPres}/ncurrentProfile: {self.currentProfile}"
+
 
     def saveSettings(self):
         """

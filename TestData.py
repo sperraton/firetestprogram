@@ -6,14 +6,10 @@ from pubsub import pub
 class TestData():
     def __init__(self, 
                  testSettings, 
-                 machineSettings,
-                 numTC, 
-                 numPres):
+                 machineSettings):
 
         self.testSettings = testSettings
         self.machineSettings = machineSettings
-        self.numTC = numTC
-        self.numPres = numPres
 
         # The values captured from the value change listener
         self.furnaceValues = {}
@@ -23,7 +19,7 @@ class TestData():
         self.pressureValues = {}
 
         # Load the thermocouple channels
-        for channelNum in range(self.numTC):
+        for channelNum in range(self.machineSettings.numTC):
             placement = self.machineSettings.getThermocouplePlacement(channelNum)
 
             if placement == thermocouplePlacements.FURNACE:
@@ -36,7 +32,7 @@ class TestData():
                 self.ambientValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
 
         # Load the pressure channels
-        for channelNum in range(self.numPres):
+        for channelNum in range(self.machineSettings.numPres):
             placement = self.machineSettings.getPressurePlacement(channelNum)
 
             if placement != "DISABLED":
@@ -90,7 +86,7 @@ class TestData():
 
         if sensorType == "TC":
 
-            if channel >= self.numTC:
+            if channel >= self.machineSettings.numTC:
                 return # These are the internal TC, or a mistake. Do not regard them
 
             newValues = {"formatted" : valueFormatted, "numeric" : valueNumeric}
@@ -107,7 +103,7 @@ class TestData():
 
         elif sensorType == "PRESS":
 
-            if channel >= self.numPres:
+            if channel >= self.machineSettings.numPres:
                 return
 
             if channel in self.pressureValues:
