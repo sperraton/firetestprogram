@@ -61,7 +61,7 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
-        self.noConnect = True #False # Set the DAQ to not connect. For debugging purposes
+        self.noConnect = False # Used to set the DAQ to not connect. For debugging purposes
         self.testTimeMinutes = 60 # Default
         self.targetTempCurve = []
         self.warnToggle = True
@@ -70,7 +70,6 @@ class MainFrame(wx.Frame):
         # ensure the parent's __init__ is called
         super(MainFrame, self).__init__(*args, **kw)
 
-   
         bitmap = wx.Bitmap('./images/splash.jpg')
         splash = wx.adv.SplashScreen(
                      bitmap, 
@@ -594,6 +593,9 @@ class MainFrame(wx.Frame):
 #  Program Entry
 ###############################################################################
 if __name__ == '__main__':
+    print("##########################################")
+    print("Starting Main ...")
+    print("##########################################")
     #Log.enable(LogLevel.PHIDGET_LOG_INFO, "file.log")
     #logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
@@ -604,3 +606,5 @@ if __name__ == '__main__':
     frame = MainFrame(None, wx.ID_ANY, "Fire Test Data Aquisition", size=(1100, 700)) # A Frame is a top-level window.
 
     app.MainLoop()
+
+    var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.

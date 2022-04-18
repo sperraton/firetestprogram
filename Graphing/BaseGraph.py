@@ -1,4 +1,3 @@
-from tkinter import N
 import wx
 from math import ceil
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, DEFAULT_TEST_TIME, LEGEND_NUM_ROWS
@@ -32,6 +31,10 @@ class AxisSettings():
         self.ymin = ymin
         self.ymax = ymax
 
+    def __str__(self):
+        return f"title: {self.title}/nxlabel: {self.xlabel}/nylabel: {self.ylabel}"
+
+
 """
 The base graph should only be concerned with handling the matplotlib graph.
 We should be able to substitute a different graphing package easily.
@@ -43,7 +46,7 @@ class GraphCanvas(FigCanvas):
     """
     The Matplotlib figure
     """
-    def __init__(self, parent, frame, panelID):
+    def __init__(self, parent, frame, panelID, graphAxesSettings=None):
         self.parent = parent
         self.frame = frame
         self.panelID = panelID
@@ -66,14 +69,19 @@ class GraphCanvas(FigCanvas):
 
         # Make the graph objects
         self.graphFigure = Figure(figsize=(2,1), tight_layout=True)#, constrained_layout=True # Outermost object !!! See if using false will get me speed gains
-        #self.graphAxesSetting = None # TODO come up with default for this
-        self.graphAxesSetting = AxisSettings("UNINIT.", 
-                                    "Time (minutes)", 
-                                    "Y", 
-                                    0, 
-                                    100, 
-                                    0, 
-                                    100)
+        
+        # Check if this wasn't setup by a containing object
+        if graphAxesSettings is None:
+            self.graphAxesSettings = AxisSettings("UNINIT.", 
+                                        "X", 
+                                        "Y", 
+                                        0, 
+                                        100, 
+                                        0, 
+                                        100)
+        else:
+            self.graphAxesSettings = graphAxesSettings
+
         self.graphAxes = self.graphFigure.add_subplot(111) # Area where data is plotted
          
         # Add the graph to the canvas
@@ -112,13 +120,13 @@ class GraphCanvas(FigCanvas):
         self.plotFurnRaw = self.graphPlots[2:]
 
         # Make the axis title, labels, and legend
-        self.initGraphAxes(self.graphAxesSetting.title, 
-                           self.graphAxesSetting.xlabel,
-                           self.graphAxesSetting.ylabel,
-                           self.graphAxesSetting.xmin,
-                           self.graphAxesSetting.xmax, 
-                           self.graphAxesSetting.ymin,
-                           self.graphAxesSetting.ymax)
+        self.initGraphAxes(self.graphAxesSettings.title, 
+                           self.graphAxesSettings.xlabel,
+                           self.graphAxesSettings.ylabel,
+                           self.graphAxesSettings.xmin,
+                           self.graphAxesSettings.xmax, 
+                           self.graphAxesSettings.ymin,
+                           self.graphAxesSettings.ymax)
 
         numSelected = len(self.frame.controller.selectedFurnaceChannels)
         self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
@@ -275,7 +283,7 @@ class GraphCanvas(FigCanvas):
         """
         Resets the graph view.
         """
-        self.graphToolbar.home()
+        self.parent.graphToolbar.home()
         #self.graphAxes.autoscale(enable=True, axis="both")
         self.draw()
 
@@ -468,7 +476,10 @@ class BaseGraph(wx.Panel):
         # self.graphCanvas = FigCanvas(self, self.panelID, self.graphFigure) #ID is set here
         # self.graphCanvas.SetMinSize(wx.Size(0, 0))
         # self.graphCanvas.Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick) # Ugly. use pubsub for this
-        self.graphCanvas = GraphCanvas(self, self.frame, self.panelID)
+
+        # This is the graph object within the panel. End goal is to make it switchable easily
+        # with another graphing package, and really self is a higher level co-ordinating object
+        self.graphCanvas = GraphCanvas(self, self.frame, self.panelID, self.graphAxesSettings)
         self.createToolbar()
 
         # Add to sizer and layout
@@ -516,3 +527,4 @@ class BaseGraph(wx.Panel):
         Set the test length.
         """
         self.testTimeMinutes = minutes
+        self.graphCanvas.scaleGraphXaxis(0, minutes)

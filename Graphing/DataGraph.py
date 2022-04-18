@@ -1,10 +1,10 @@
-import wx
+#import wx
 from math import ceil
-from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, LEGEND_NUM_ROWS, thermocouplePlacementLabels, pressurePlacementLabels, DEFAULT_TEST_TIME
+from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, pressurePlacementLabels, DEFAULT_TEST_TIME
 from Graphing.BaseGraph import BaseGraph, PlotSettings, AxisSettings
 
-import matplotlib       # Provides the graph figures
-matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
+#import matplotlib       # Provides the graph figures
+#matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
 
 
 
@@ -131,7 +131,7 @@ class FurnaceGraph(BaseGraph):
         Prepare the graph plots for the furnace data
         """
         # Make the axis title, labels, and legend
-        self.graphAxesSetting = AxisSettings("Furnace Temperature", 
+        self.graphAxesSettings = AxisSettings("Furnace Temperature", 
                                             "Time (Min.)", 
                                             "Temp. (Deg. C)", 
                                             0, 
@@ -223,7 +223,7 @@ class PressureGraph(BaseGraph):
     def __init__(self, parent, frame, panelID):
 
         # Make the axis title, labels, and legend
-        self.graphAxesSetting = AxisSettings("Furnace Pressure", 
+        self.graphAxesSettings = AxisSettings("Furnace Pressure", 
                                             "Time (Min.)", 
                                             "Press. (in H2O)", 
                                             0, 

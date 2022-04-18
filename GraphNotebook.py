@@ -244,17 +244,17 @@ class MainGraphPanel(wx.Panel):
         #self.splitter.SetExpanded(2)
         #Reset the limits
         #self.furnaceTempGraph.setLimitsTo() # If the graph is zoomed in, un-zoom it
-        self.furnaceTempGraph.saveImage(parentPath+"_furnace"+ext)
+        self.furnaceTempGraph.graphCanvas.saveImage(parentPath+"_furnace"+ext)
 
         self.unexposedTempGraph.graphCanvas.homeGraph()
         #self.splitter.SetExpanded(1)
         #self.unexposedTempGraph.setLimitsTo()
-        self.unexposedTempGraph.saveImage(parentPath+"_unexposed"+ext)
+        self.unexposedTempGraph.graphCanvas.saveImage(parentPath+"_unexposed"+ext)
 
         self.pressureGraph.graphCanvas.homeGraph()
         #self.splitter.SetExpanded(3)
         #self.pressureGraph.setLimitsTo(isLowerZero=False)
-        self.pressureGraph.saveImage(parentPath+"_pressure"+ext)
+        self.pressureGraph.graphCanvas.saveImage(parentPath+"_pressure"+ext)
         
         #self.splitter.SetExpanded(-1)
         #self.flashStatusMessage("Saved to %s" % path)
@@ -270,11 +270,11 @@ class MainGraphPanel(wx.Panel):
         Set the specified amount of minutes to the graphs.
         """
 
-        self.furnaceTempGraph.scaleGraphXaxis(0, amtMinutes)
+        #self.furnaceTempGraph.scaleGraphXaxis(0, amtMinutes)
         self.furnaceTempGraph.setTestTimeMinutes(amtMinutes)
 
-        self.unexposedTempGraph.scaleGraphXaxis(0, amtMinutes)
+        #self.unexposedTempGraph.scaleGraphXaxis(0, amtMinutes)
         self.unexposedTempGraph.setTestTimeMinutes(amtMinutes)
 
-        self.pressureGraph.scaleGraphXaxis(0, amtMinutes)
+        #self.pressureGraph.scaleGraphXaxis(0, amtMinutes)
         self.pressureGraph.setTestTimeMinutes(amtMinutes)
