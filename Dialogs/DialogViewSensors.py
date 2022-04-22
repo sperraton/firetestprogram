@@ -221,9 +221,10 @@ class ViewSensorsDialog(wx.Dialog):
         topSizer.Add(instructionsSizer, 0, wx.ALL|wx.RIGHT, 5)
         topSizer.Add(channelsSizer, 0, wx.ALL|wx.EXPAND, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT, 5)
+        
         self.panel.SetSizer(topSizer)
         topSizer.Fit(self)
-        self.Fit()
+        #self.Fit()
         self.Show()
 
 

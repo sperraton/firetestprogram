@@ -97,7 +97,7 @@ class CalibrateDialog(wx.Dialog):
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT,5)
         self.panel.SetSizer(topSizer)
         topSizer.Fit(self)
-        self.Fit()
+        #self.Fit()
         self.Show()
 
         pub.subscribe(self.onValueChange, "channel.valueChange")
