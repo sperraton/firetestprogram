@@ -33,22 +33,23 @@ class DataAcquisition():
         self.selectedPressureChannels = []
 
         # Was a full list of addresses passed?
-        if machineSettings.thermocoupleAddresses is None:
-            self.thermocoupleAddresses = []
-            self.initThermocoupleAddresses()
-        else:
-            self.thermocoupleAddresses = machineSettings.thermocoupleAddresses
+        #if machineSettings.thermocoupleAddresses is None:
+        #    self.thermocoupleAddresses = []
+        #    self.initThermocoupleAddresses()
+        #else:
+        self.thermocoupleAddresses = machineSettings.thermocoupleAddresses
 
+        # TODO Move this stuff to the Machine Settings.
         self.pressureAddress = []
         self.initPressureAddresses()
 
         try:
             
             # Init an array of all the thermocouple  channels
-            print(f"    Initializing {machineSettings.numTC} TC channels ...")
+            print(f"  Initializing {machineSettings.numTC} TC channel sensors ...")
             self.channelThermocouple = []
             for i in range(0, machineSettings.numTC):
-                print(f"        Channel {i}")
+                print(f"    |___Channel {i}")
                 self.channelThermocouple.append(ThermocoupleSensor(self.thermocoupleAddresses[i].serialNumber,
                                                                    self.thermocoupleAddresses[i].hubPort,
                                                                    self.thermocoupleAddresses[i].channel,
@@ -61,7 +62,7 @@ class DataAcquisition():
 
             # Init the internal thermocouple channel
             self.internalThermocouple = ThermocoupleSensor(self.thermocoupleAddresses[0].serialNumber,
-                                                            4,
+                                                            self.thermocoupleAddresses[0].hubPort,
                                                             4,
                                                             self.thermocoupleAddresses[0].isHubPort,
                                                             DATA_INTERVAL_MS,
@@ -71,10 +72,10 @@ class DataAcquisition():
                                                             units="C")
 
             # Init an array of all the pressure channels
-            print("    Initializing Pressure channels ...")
+            print("  Initializing Pressure channels ...")
             self.channelPressure = []
             for i in range(0, machineSettings.numPres):
-                print(f"         Channel {i}")
+                print(f"    |___Channel {i}")
                 self.channelPressure.append(PressureSensor(self.pressureAddress[i].serialNumber,
                                                            self.pressureAddress[i].hubPort,
                                                            self.pressureAddress[i].channel,

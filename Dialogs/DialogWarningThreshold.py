@@ -5,7 +5,7 @@ from HelperFunctions import warnDialog
 
 class WarningThresholdDialog(wx.Dialog):
     def __init__(self, parent):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Warning Threshold Settings")
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Warning Threshold Settings", style=wx.RESIZE_BORDER)
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.parent = parent
 

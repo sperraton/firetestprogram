@@ -14,7 +14,7 @@ class CalibrateDialog(wx.Dialog):
             sensor = ""
 
         title = "Calibrate " + sensor + "channel: " + str(channelIndex+1)
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, title)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, title, style=wx.RESIZE_BORDER)
         self.panel = wx.Panel(self)
         self.parent = parent
         self.channelIndex = channelIndex

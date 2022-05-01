@@ -55,8 +55,15 @@ class MachineSettings():
             # BUG BUG BUG This relies on the number of TC channels per hub is constant per machine.
             #             The machine may break this assumption in the future.
             #self.numTC = NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums)
-            self.numTC = self.settingsData["machineSetup"]["numTC"]
-            self.numPres = self.settingsData["machineSetup"]["numPres"]
+            try:
+                self.numTC = self.settingsData["machineSetup"]["numTC"]
+            except: #Fall back on some default
+                self.numTC = NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums)
+
+            try:    
+                self.numPres = self.settingsData["machineSetup"]["numPres"]
+            except:
+                self.numPres = 3
 
             self.pressureSenseIsVoltage = self.settingsData["machineSetup"]["pressureIsVoltage"] # Is this channel wired for current or voltage input
 
@@ -67,29 +74,59 @@ class MachineSettings():
             print("    Loading profile ...")
             self.currentProfile = self.settingsData["machineSetup"]["currentProfile"]
             self.defaultSavePath = self.settingsData["machineSetup"]["defaultSavePath"]
+            self.defaultBackupPath = self.settingsData["machineSetup"]["defaultBackupPath"]
 
             #Load up the map of how the Phidgets are wired up
             print("    Loading addresses ...")
             self.thermocoupleAddresses = []
 
             chNum = 0
-            for row in self.settingsData["thermocoupleAddresses"]:
-                print(f"    Getting address ({chNum}) ... {row}")
-                self.thermocoupleAddresses.append(Address(row["serial"],
-                                                          row["VINTport"],
-                                                          row["channel"],
-                                                          row["isHubPort"]))
-                chNum += 1
 
+            try:
+                for row in self.settingsData["machineSetup"]["thermocoupleAddresses"]:
+                    print(f"    Getting address ({chNum}) ... {row}")
+                    self.thermocoupleAddresses.append(Address(row["serial"],
+                                                            row["VINTport"],
+                                                            row["channel"],
+                                                            row["isHubPort"]))
+                    chNum += 1
+            except:
+                self.initThermocoupleAddresses()
+                
+            #print(f"Here are the addresses: {self.thermocoupleAddresses}")
             print(f"{len(self.thermocoupleAddresses)} TCs address were found")
 
         except:
             # TODO, Don't swallow errors. Although I think that this is caught in the calling func.
             #infoDialog(self.parent, "No previously saved settings.")
+            print("!!! There was an error loading settings !!!")
             pass
 
+    def initThermocoupleAddresses(self):
+        for serialNum in self.thermocoupleSerialNums:
+            for hubIndex in range(4, -1, -1): # Hub Port counts down 4, 3, 2, 1, 0
+                for channelIndex in range(4): # Channel counts up  0, 1, 2, 3
+                    #print("TC Address - %d, %d, %d" % (serialNum, hubIndex, channelIndex))
+                    self.thermocoupleAddresses.append(Address(serialNum,
+                                                       hubIndex,
+                                                       channelIndex,
+                                                       False))
+
+
+    def initThermocoupleAddressesReverse(self):
+        for serialNum in self.thermocoupleSerialNums:
+            for hubIndex in range(5): # Hub Port counts up 0, 1, 2, 3, 4
+                for channelIndex in range(3, -1, -1): # Count down 3, 2, 1, 0
+                    #print("%d, %d, %d" % (serialNum, hubIndex, channelIndex))
+                    self.thermocoupleAddresses.append(Address(serialNum,
+                                                       hubIndex,
+                                                       channelIndex,
+                                                       False))
     def __str__(self):
-        return f"numTC: {self.numTC}/nnumPres: {self.numPres}/ncurrentProfile: {self.currentProfile}"
+
+        return f"{self.thermocoupleSerialNums}\n{self.pressureSerialNums}\n{self.numTC}\n{self.numPres}\n{self.pressureSenseIsVoltage}\n{self.thermocoupleConfig}\n{self.pressureConfig}\n{self.currentProfile}\n{self.defaultSavePath}\n{self.defaultBackupPath}\n{self.thermocoupleAddresses}"
+
+        #return f"numTC: {self.numTC}/numPres: {self.numPres}/ncurrentProfile: {self.currentProfile}"
 
 
     def saveSettings(self):
@@ -100,6 +137,7 @@ class MachineSettings():
             # Poke the data that the user would be able to change
             self.settingsData["machineSetup"]["currentProfile"] = self.currentProfile
             self.settingsData["machineSetup"]["defaultSavePath"] = self.defaultSavePath
+            self.settingsData["machineSetup"]["defaultBackupPath"] = self.defaultBackupPath
 
             with open("settings.json", "w") as f:
                 json.dump(self.settingsData, f, cls=EnumEncoder, indent=4)

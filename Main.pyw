@@ -96,6 +96,7 @@ class MainFrame(wx.Frame):
         # Create the main view of the notebook and the channel monitor.
         self.mainPanel = wx.Panel(self)
         self.monPanel = Monitor(self.mainPanel, self, -1)
+
         self.graphNotebook = GraphNotebook(self.mainPanel, self)
         self.testExtendDialog = None
 
@@ -179,6 +180,8 @@ class MainFrame(wx.Frame):
         #------------------------------------------------------------
         self.settingsMenu = wx.Menu()
         self.savePathItem = self.settingsMenu.Append(-1, "Default Save Path", "Choose the default folder to save data")
+        self.backupPathItem = self.settingsMenu.Append(-1, "Backup Save Path", "Choose the default folder to save data")
+
         self.settingsMenu.AppendSeparator()
         #self.channelMapItem = self.settingsMenu.Append(-1, "Channel Map", "View/Change DAQ Channel Map of the current profile")
 
@@ -211,6 +214,8 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_MENU, self.onExit, exitItem)
         #self.Bind(wx.EVT_MENU, self.onChannelMap, self.channelMapItem)
         self.Bind(wx.EVT_MENU, self.onChoosePath, self.savePathItem)
+        self.Bind(wx.EVT_MENU, self.onChoosePath, self.backupPathItem)
+
         self.Bind(wx.EVT_MENU, self.onViewSensors, self.viewSensorsItem)
         self.Bind(wx.EVT_MENU, self.onProfileManager, self.profileManagerItem)
         self.Bind(wx.EVT_MENU, self.onThresholdSettings, self.thresholdSettingsItem)
@@ -285,7 +290,10 @@ class MainFrame(wx.Frame):
                        #| wx.DD_CHANGE_DIR
                        )
         if dlg.ShowModal() == wx.ID_OK:
-            self.controller.setDefaultSavePath(dlg.GetPath())
+            if event.parentObject is self.savePathItem:
+                self.controller.setDefaultSavePath(dlg.GetPath(), False)
+            elif event.parentObject is self.saveBackupPathItem:
+                self.controller.setDefaultSavePath(dlg.GetPath(), True)
         dlg.Destroy()
 
 
@@ -328,16 +336,7 @@ class MainFrame(wx.Frame):
 
         self.graphNotebook.initGrid() # Must be called after the initTestSettings because we use controller. TODO rather than reinit everything maybe make a new function to resize and relabel columns.
         self.graphNotebook.graphTab.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
-        self.initChannelMon() #Fill out the channel monitor labels
-
-        # Now we call the pretest dialog so the user can verify the sensors are
-        # connected and reading correctly before continuing
-        # dlg = PretestDialog(parent=self)
-        # result = dlg.ShowModal()
-        # dlg.Destroy()
-
-        # if result == wx.ID_CANCEL:
-        #     return
+        self.initChannelMon() # Fill out the channel monitor labels
 
         # Ask the user to zero the presure sensors
         # For now just testing that the zeroing works
@@ -351,7 +350,7 @@ class MainFrame(wx.Frame):
         dlg.Destroy()
 
         if result == wx.ID_CANCEL:
-            self.monPanel.hideMonitor()
+        #DEBUGGING     self.monPanel.hideMonitor()
             # TODO Destroy any init'ed member variables in controller
             self.controller.testData.stopListening()
             self.controller.logger = None
@@ -365,6 +364,7 @@ class MainFrame(wx.Frame):
         self.extendItem.Enable(True)
         #self.menuBar.EnableTop(1, False) # The Settings item
         self.savePathItem.Enable(False)
+        self.backupPathItem.Enable(False)
         #self.channelMapItem.Enable(False)
         self.viewSensorsItem.Enable(False)
         self.thresholdSettingsItem.Enable(False)
@@ -411,7 +411,7 @@ class MainFrame(wx.Frame):
         dlg = wx.FileDialog(
             self,
             message="Save plot as...",
-            defaultDir=self.controller.savePath,
+            defaultDir=self.controller.machineSettings.defaultSavePath,
             defaultFile="Test_plots.png",
             wildcard=fileChoices,
             style=wx.FD_SAVE)
@@ -551,6 +551,7 @@ class MainFrame(wx.Frame):
         self.extendItem.Enable(False)
 #        self.menuBar.EnableTop(1, True)
         self.savePathItem.Enable(True)
+        self.backupPathItem.Enable(True)
         #self.channelMapItem.Enable(True)
         self.viewSensorsItem.Enable(True)
         self.thresholdSettingsItem.Enable(True)
@@ -559,7 +560,7 @@ class MainFrame(wx.Frame):
         parentPath, ext = os.path.splitext(self.controller.testSettings.fullFileName) # Yes, ugly I know
         self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save plots automatically
 
-        self.monPanel.hideMonitor()
+        #DEBUGGING self.monPanel.hideMonitor()
 
 
     def testExtend(self, amtMinutes):

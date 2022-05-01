@@ -401,9 +401,9 @@ class Monitor(wx.Panel):
         self.afterburnerStaticBox.SetLabel("Afterburner TC Monitor (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
 
         # Make the monitor visible
-        self.topSizer.Fit(self)
-        self.Layout()
-        self.Show()
+        #self.topSizer.Fit(self)
+        #self.Layout()
+        #self.Show()
 
     def onDestroy(self):
         pass

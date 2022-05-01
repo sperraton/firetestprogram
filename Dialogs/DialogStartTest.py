@@ -9,7 +9,7 @@ from TestStandards import Standards
 
 class StartTestDialog(wx.Dialog):
     def __init__(self, parent):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Test Settings")
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Test Settings", style=wx.RESIZE_BORDER)
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.parent = parent
 

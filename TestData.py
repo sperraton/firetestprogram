@@ -3,6 +3,7 @@ from HelperFunctions import getOutlierLimits, averageTemperatures, cleanValues
 from Enumerations import thermocouplePlacements, pressurePlacements
 from pubsub import pub
 
+
 class TestData():
     def __init__(self, 
                  testSettings, 
@@ -12,6 +13,9 @@ class TestData():
         self.machineSettings = machineSettings
 
         # The values captured from the value change listener
+        # All the currently captured values are posted here in a dict, so that each 
+        # current value can be accessed by passing the channel # (i.e. self.furnaceValues[1]
+        # returns a dict of the formatted and numeric values)
         self.furnaceValues = {}
         self.unexposedValues = {}
         self.afterburnerValues = {}
@@ -60,7 +64,7 @@ class TestData():
         #======================================================================
         # Hold the numeric values sorted into specific arrays based on role
         # To be used by the DataGraph object for plotting purposes
-
+        # NOTE: These will be appended to and so hold the entirety of the recorded data
         self.timeData = None # Elapsed time (x-axis)
         self.furnaceRawData = None # Values for TC's in furnace
         self.unexposedRawData = None # Values for TC's in unexposed
@@ -82,8 +86,9 @@ class TestData():
         """
         Update the channel values.
         """
-        newValues = {"formatted" : valueFormatted, "numeric" : valueNumeric}
 
+        
+        # Sort incoming data value to either TC or Pressure
         if sensorType == "TC":
 
             if channel >= self.machineSettings.numTC:
@@ -107,11 +112,14 @@ class TestData():
                 return
 
             if channel in self.pressureValues:
+                newValues = {"formatted" : valueFormatted, "numeric" : valueNumeric}
                 self.pressureValues.update([(channel, newValues)])
 
         else:
             # Do nothin
             return
+
+
 
 
     # Functions concerning the time stamping of data (x-axis)
@@ -122,6 +130,8 @@ class TestData():
             self.timeData = [time]
         else:
             self.timeData.append(time)
+
+
 
 
     # Functions concerning furnace averages and AUC's
@@ -144,6 +154,7 @@ class TestData():
 
         self.setTargetTempCurve(self.testSettings.calculateTargetCurve(elapsedTime))
         self.targetDelta = self.avgFurnace - self.getTargetTempCurve()
+
 
     def setRawFurnace(self):
         """
@@ -215,6 +226,8 @@ class TestData():
         return ((self.avgAUC - self.targetAUC) / self.targetAUC) * 100.0
 
 
+
+
     # Functions concerning unexposed averages and raw
     #============================================================
 
@@ -234,22 +247,60 @@ class TestData():
         else:
             self.unexposedAvgData.append(self.avgUnexposed)  # Save the datum to the list.
 
+
     def setRawUnexposed(self):
         """
         Keeps historical record of raw data to be used by graphs
         """
-        rawUnexposedNumeric = []
+        # rawUnexposedNumeric = [] # This is just a list in the created channel order of the current numeric values.
 
+        # # Translate the dict into a list of ints to be used by graph
+        # # NOTE: When this was created it was populated in channel order
+        # # so the values should be appended in channel order.
+        # for value in self.unexposedValues.values():
+        #     rawUnexposedNumeric.append(value["numeric"])
+
+        # # Check if this hadn't been initialised yet.
+        # if self.unexposedRawData is None:
+        #     self.unexposedRawData = [rawUnexposedNumeric]
+        # else:
+        #     self.unexposedRawData.append(rawUnexposedNumeric) # Pass the individual TC's
+
+        # Each row corresponds to a channel and all the data it has recorded.
+        if self.unexposedRawData is None:
+            self.unexposedRawData = []
+            for value in self.unexposedValues.values():
+                self.unexposedRawData.append([value["numeric"]])
+        else:
+            for i, value in enumerate(self.unexposedValues.values()):
+                self.unexposedRawData[i].append(value["numeric"]) # Add to channel's list of historical captures
+
+
+    # TODO If this works out we will go from here
+    def getLatestTCData(self, placement):
+
+        temp = [] # This is just a list in the created channel order of the current numeric values.
+
+        if placement == thermocouplePlacements.FURNACE:
+            source = self.furnaceValues.values()
+        elif placement == thermocouplePlacements.UNEXPOSED:
+            source = self.unexposedValues.values()
+        elif placement == thermocouplePlacements.AFTERBURNER:
+            source = self.afterburnerValues.values()
+        elif placement == thermocouplePlacements.AMBIENT:
+            source = self.ambientValues.values()
+
+
+        # Translate the dict into a list of ints to be used by graph
         # NOTE: When this was created it was populated in channel order
         # so the values should be appended in channel order.
-        for value in self.unexposedValues.values():
-            rawUnexposedNumeric.append(value["numeric"])
+        # Capture the latest values that were posted by the DAQ Channels
+        for value in source:
+            temp.append(value["numeric"])
 
-        # Check if this hadn't been initialised yet.
-        if self.unexposedRawData is None:
-            self.unexposedRawData = [rawUnexposedNumeric]
-        else:
-            self.unexposedRawData.append(rawUnexposedNumeric) # Pass the individual TC's
+        return self.timeData[-1], temp
+
+
 
 
     # Functions concerning pressure sensors
@@ -267,6 +318,9 @@ class TestData():
                     self.ch2PressureData.append(value["numeric"])
                 elif placement == pressurePlacements.CH_3:
                     self.ch3PressureData.append(value["numeric"])
+
+
+
 
     # Functions concerning outliers
     #============================================================

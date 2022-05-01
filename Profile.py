@@ -9,6 +9,7 @@ class Profile():
         """
         self.name = name
 
+        #print(f"Here are the machine settings that were passed {machineSettings}")
         if dict is None:
             self.machineSettings = machineSettings # Keep a reference to the settings to get some info needed for defaults
 

@@ -2,6 +2,7 @@
 from math import ceil
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, pressurePlacementLabels, DEFAULT_TEST_TIME
 from Graphing.BaseGraph import BaseGraph, PlotSettings, AxisSettings
+from matplotlib.animation import FuncAnimation
 
 #import matplotlib       # Provides the graph figures
 #matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
@@ -32,6 +33,8 @@ class UnexposedGraph(BaseGraph):
 
 
     def initUnexposedTemperaturePlot(self):
+
+        self.graphCanvas.clearGraph()
 
         # The averaged temperature
         self.unexpAvgSettings = PlotSettings(
@@ -77,20 +80,29 @@ class UnexposedGraph(BaseGraph):
         self.graphCanvas.graphPlotSettings += self.unexpRawSettings
         self.graphCanvas.initPlot(isAutoscale=False)
 
+        self.animator = FuncAnimation(self.graphCanvas.graphFigure, self.updateUnexposedData, self.emitter, interval=100, blit=True)
+
+    def emitter(self):
+        return self.frame.getLatestUnexpData() # Grab only the latest posted data
 
     def updateUnexposedData(self, timeData, avgData, rawData):
         """
         Draws the latest unexposed data.
         """
         # Do the Unexposed average data
-        self.graphCanvas.updateData(timeData, avgData, self.graphCanvas.plotUnexpAvg)
+        return self.graphCanvas.updateData(timeData, avgData, self.graphCanvas.plotUnexpAvg)
         
-        for i in range(len(self.frame.controller.selectedUnexposedChannels)):
-            columnVector = [row[i] for row in rawData] #rawData[:, i]
-            try:
-                self.graphCanvas.updateData(timeData, columnVector, self.graphCanvas.plotUnexpRaw[i]) # Give the plot the updated data
-            except IndexError: # Swallowing errors. Naughty, naughty.
-                continue
+        # Trying out just the avg for now until I get the update sorted.
+        # for i in range(len(self.frame.controller.selectedUnexposedChannels)):
+        #     #columnVector = rawData[:][i] #[row[i] for row in rawData] #rawData[:, i]
+        #     try:
+        #         self.graphCanvas.updateData(timeData, rawData[i], self.graphCanvas.plotUnexpRaw[i]) # Give the plot the updated data
+        #     except IndexError: # Swallowing errors. Naughty, naughty.
+        #         continue
+
+        #self.graphSizer.Layout()
+        #self.Layout()
+        #self.Refresh()
 
 
     def updateUnexposedThreshold(self, threshold):
@@ -121,6 +133,45 @@ class UnexposedGraph(BaseGraph):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ################################################################################
 # Furnace Specific
 ################################################################################
@@ -144,6 +195,8 @@ class FurnaceGraph(BaseGraph):
         self.initFurnaceTemperaturePlot()
 
     def initFurnaceTemperaturePlot(self):
+
+        self.graphCanvas.clearGraph()
 
         # The target temperature
         self.targetSettings = PlotSettings(
@@ -214,6 +267,33 @@ class FurnaceGraph(BaseGraph):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ################################################################################
 # Pressure Specific
 ################################################################################
@@ -237,6 +317,8 @@ class PressureGraph(BaseGraph):
 
 
     def initPressurePlot(self):
+
+        self.graphCanvas.clearGraph()
 
         self.presCh1Settings = PlotSettings(
             [0],

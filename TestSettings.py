@@ -12,9 +12,10 @@ class TestSettings:
                  date,
                  testTimeMinutes=None,
                  updateRate_ms=None,
-                 saveRate=None,
+                 saveRate_sec=None,
                  targetCurve=None,
-                 savePath=None):
+                 savePath=None,
+                 backupPath=None):
 
         self.client = client
         self.projectNum = projectNum
@@ -35,15 +36,16 @@ class TestSettings:
 
         self.threeQuarterMarkSeconds = self.testTimeMinutes*45 # 45/60
 
+        # Not currently using this. May get rid of it.
         if updateRate_ms is None:
             self.updateRate_ms = 1000
         else:
             self.updateRate_ms = updateRate_ms
 
-        if saveRate is None:
-            self.saveRate = 5
+        if saveRate_sec is None:
+            self.saveRate_sec = 5
         else:
-            self.saveRate = saveRate
+            self.saveRate_sec = saveRate_sec
 
         if targetCurve is None:
             self.targetCurve = "E119"
@@ -55,6 +57,11 @@ class TestSettings:
         else:
             self.savePath = savePath
 
+        if backupPath is None:
+            self.backupPath = None
+        else:
+            self.backupPath = backupPath
+
         self.standard = Standards[self.targetCurve]
 
         self.chooseUnits()
@@ -62,6 +69,10 @@ class TestSettings:
         self.createFileName()
 
         self.fullFileName = os.path.join(self.savePath, self.fileName)
+        if self.backupPath is not None:
+            self.fullBackupFileName = os.path.join(self.backupPath, self.fileName)
+        else:
+            self.fullBackupFileName = None
 
         # Does this test include time correction?
         if self.standard["lagCorrection"] > 0:

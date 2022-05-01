@@ -201,14 +201,15 @@ class MainGraphPanel(wx.Panel):
     def initGraphForTest(self, testTime):
 
         # Reset the lines of the raw data on the graphs
-        self.furnaceTempGraph.graphCanvas.clearGraph()
+        #self.furnaceTempGraph.graphCanvas.clearGraph()
         self.furnaceTempGraph.initFurnaceTemperaturePlot()
 
-        self.unexposedTempGraph.graphCanvas.clearGraph()
+        #self.unexposedTempGraph.graphCanvas.clearGraph()
         self.unexposedTempGraph.initUnexposedTemperaturePlot()
 
-        self.pressureGraph.graphCanvas.clearGraph()
+        #self.pressureGraph.graphCanvas.clearGraph()
         self.pressureGraph.initPressurePlot()
+
 
         # Scale the x-axis for the test time.
         # TODO: make this a function that also gets called in testExtend()

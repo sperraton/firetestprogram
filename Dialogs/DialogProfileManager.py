@@ -8,7 +8,7 @@ class ProfileManagerDialog(wx.Dialog):
 
     def __init__(self, parent):
 
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Manage Machine Profiles")
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Manage Machine Profiles", style=wx.RESIZE_BORDER)
         self.panel = wx.Panel(self)
         self.parent = parent
 
@@ -155,7 +155,7 @@ class NamingDialog(wx.Dialog):
 
     def __init__(self, parent, title):
 
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, title)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, title, style=wx.RESIZE_BORDER)
         self.panel = wx.Panel(self)
         self.parent = parent
 

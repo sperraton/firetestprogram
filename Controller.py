@@ -13,6 +13,7 @@ from pubsub import pub
 import wx
 #import json
 #import numpy as np
+import random
 
 # TODO create a test class that actually runs the test. That's what the controller originally was, but has grown beyond that scope.
 
@@ -49,7 +50,7 @@ class Controller():
         self.ignoredChannels = []  # Channel indices that have been disabled mid-test
 
         self.defaultSavePath = os.getcwd() # Current working directory
-        self.loadSavedSettings()  # Load the machine settings, or use the defaults
+        self.loadSavedMachineSettings()  # Load the machine settings, or use the defaults
 
         # Here is where we need to poll the Phidget and check if it has less than the number of hubs
         # We can then load a profile that is correct for it.
@@ -60,12 +61,14 @@ class Controller():
         # Make a timer to add data
         self.timer = wx.Timer(self.parent, -1)
         self.parent.Bind(wx.EVT_TIMER, self.onTimer, self.timer)
+        #self.timer = wx.Timer(self, -1)
+        #self.Bind(wx.EVT_TIMER, self.onTimer, self.timer)
 
 ################################################################################
 # Machine Settings Management
 ################################################################################
 
-    def loadSavedSettings(self):
+    def loadSavedMachineSettings(self):
         # If the config file does not exist, it will fall back to the defaults that are hard-coded.
         # We will generate a new config file with those.
         # TODO Test this out with missing or corrupted files, might need to put an else: in there
@@ -89,17 +92,29 @@ class Controller():
             warnDialog(self.parent, "Unable to save settings.")
 
     # TODO Check what happens if the folder is missing.
-    def setDefaultSavePath(self, path):
+    def setDefaultSavePath(self, path, isBackup):
+        try:
+            if isBackup:
+                self.machineSettings.defaultBackupPath = path
+            else:
+                self.defaultSavePath = path  # TODO validate this
+
+                # TODO Make all places that look for the controller.defaultSavePath get from the machine settings
+                self.machineSettings.defaultSavePath = path
+            
+            self.saveSettings()
+        except:
+            warnDialog(self.parent, "Unable to save settings.")
+
+    def setBackupSavePath(self, path):
         try:
             self.defaultSavePath = path  # TODO validate this
-            # TODO Check where this is used? Can't we just use the defaultSavePath?
-            self.savePath = self.defaultSavePath
+
             # TODO Make all places that look for the controller.defaultSavePath get from the machine settings
             self.machineSettings.defaultSavePath = path
             self.saveSettings()
         except:
             warnDialog(self.parent, "Unable to save settings.")
-
 
 ################################################################################
 # Test Management
@@ -114,7 +129,7 @@ class Controller():
     def initTestSettings(self, testSettings):
         self.testSettings = testSettings
         # Make the object to write the data
-        self.logger = Logger(self.testSettings.fullFileName)
+        self.logger = Logger(self.testSettings.fullFileName, fullBackupFileName=self.testSettings.fullBackupFileName)
         self.setTemperatureUnits(self.testSettings.temperatureUnits)
         self.setPressureUnits(self.testSettings.pressureUnits)
 
@@ -128,7 +143,7 @@ class Controller():
 
         self.startTime = 0
         self.elapsedTime = 0
-        self.updateRate = 1  # Seconds between each data gather
+        self.updateRate = 0.5  # Seconds between each data gather
         #self.saveTick = 0
 
         self.testData = TestData(self.testSettings, self.machineSettings)  # Holds the data that is recorded and calculated thoughout the test
@@ -139,6 +154,8 @@ class Controller():
         # TODO Perhaps just move this to Main.py where initTestSettings is called.
         pub.sendMessage("indicator.update", indicator="CURVE",
                         lblValue="Required Curve: "+self.testSettings.targetCurve)
+
+
 
     def startTest(self):
         """
@@ -168,7 +185,7 @@ class Controller():
 
         #self.saveTick = 0
         self.lastWritten = self.elapsedTime
-        self.timer.StartOnce(self.updateRate*1000)
+        self.timer.StartOnce(self.updateRate*1000) # BUGBUGBUG 
 
     def stopTest(self):
         pub.sendMessage("status.update", msg="Test stopped.")
@@ -188,6 +205,19 @@ class Controller():
         - Checks if the test time has run out
         """
 
+        # DEBUGGING Making fake data
+        if self.parent.noConnect:
+            for channelIdx in self.selectedUnexposedChannels:
+                num = random.uniform(10,90)
+                
+                pub.sendMessage("channel.valueChange",
+                                    sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
+                                    channel=channelIdx,
+                                    valueRaw=num,
+                                    valueNumeric=num,
+                                    valueFormatted="{0:2.3f}".format(num))
+
+
         # Capture the time
         self.elapsedTime = time.time() - self.startTime
 
@@ -198,8 +228,8 @@ class Controller():
         #self.saveTick += 1
         # This is a flag to make sure we write the final entry into the log.
         isRowWritten = False
-        if round(self.elapsedTime) % self.testSettings.saveRate == 0 or \
-           round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate:
+        if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0 or \
+           round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate_sec:
             # TODO Save the accumulated rows to file
             # Log the currentRow into the test .csv file
             pub.sendMessage("dataGrid.addRow", row=self.currentRow)
@@ -288,6 +318,7 @@ class Controller():
                         ch3=self.testData.ch3PressureData,
                         ch2=self.testData.ch2PressureData,
                         ch1=self.testData.ch1PressureData)
+        #print("In Controller - ", self.testData.timeData) #DEBUGGING
         pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData,
                         avgData=self.testData.unexposedAvgData,
                         rawData=self.testData.unexposedRawData)
@@ -352,7 +383,7 @@ class Controller():
         # ============================================================
         self.buildCurrentRow()
 
-        # Fill out the data arrays for the graph views. Ea. row is an array of cols.
+        # Fill out the data arrays for the graph views.
         # ============================================================
         # Converted to minutes for the graph axis
         self.testData.setTimeData(float(self.elapsedTime)/60.0)
@@ -695,7 +726,7 @@ class Controller():
         self.extractSelectedPressure()
 
     def extractSelectedThermocouples(self):
-        # Do this whenever the placementMap is changed
+        # Do this whenever the placementMap (Profile) is changed
         self.selectedAmbientChannels = self.machineSettings.getSelectedAmbient()
         self.selectedAfterburnerChannels = self.machineSettings.getSelectedAfterburner()
         self.selectedFurnaceChannels = self.machineSettings.getSelectedFurnace()

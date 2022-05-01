@@ -171,12 +171,18 @@ class GraphCanvas(FigCanvas):
 
             # Adjust the vertical zoom to keep all the data in view
             # Give some padding at the top
-            topLim = max(yData) + (GRAPH_VERT_PADDING*max(yData))
-            self.graphAxes.set_ylim(top=topLim)
+            # BUG need to check if yData is empty
+            #topLim = max(yData) + (GRAPH_VERT_PADDING*max(yData))
+            #botLim = min(yData) - (GRAPH_VERT_PADDING*max(yData))
+            #self.graphAxes.set_ylim(top=topLim)
+            
+            #self.graphAxes.relim()
+            #self.graphAxes.autoscale_view(True, True, True)
 
-            # Refresh the view
-            self.draw()
-            self.flush_events()
+            # Refresh the view. We may want to control the timing of this so the graph isn't refreshed until all the plot's data are given
+            #self.draw()
+            #self.flush_events()
+            return plot
 
         except Exception as e:
             #raise e
@@ -497,13 +503,6 @@ class BaseGraph(wx.Panel):
 ################################################################################
 # General Methods
 ################################################################################
-
-    def setPlotData(self, plotObject, data):
-        """
-        Gives a plot object data
-        """
-        pass
-
 
     def createToolbar(self):
         """

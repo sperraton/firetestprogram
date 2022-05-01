@@ -1,8 +1,10 @@
 Location of Python file: C:/Users/RYANFIRE 1/AppData/Local/TesPro
 
-2022-APR-10
+2022-APR-22
 * Made settings more robust when setting up machine VINT addresses
 * Pulled graphing buisness logic to seperate object
+* Bug Fix - Internal temp sensor hubport no longer hardcoded
+* Feature add. Optional backup path
 
 2022-FEB-15
 * Housekeeping - Made class variable fot testExtendDialog

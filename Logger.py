@@ -3,8 +3,9 @@ from HelperFunctions import warnDialog
 
 class Logger():
 
-    def __init__(self, fullFileName):
+    def __init__(self, fullFileName, fullBackupFileName=None):
         self.fullFileName = fullFileName
+        self.fullBackupFileName = fullBackupFileName # TODO Got to double up all the file writes now sucker. Get to work.
 
     def writeHeaders(self, fileHeader, tableHeader):
         """

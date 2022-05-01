@@ -5,7 +5,7 @@ class ZeroPressureDialog(wx.Dialog):
 
     def __init__(self, parent):
 
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Zero the active pressure sensor")
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Zero the active pressure sensor")#, style=wx.RESIZE_BORDER)
         self.panel = wx.Panel(self)
         self.parent = parent
 

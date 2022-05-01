@@ -4,7 +4,7 @@ from pubsub import pub
 class TimeCorrectionDialog(wx.Dialog):
 
     def __init__(self, parent, factor=None):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Extend test?")
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Extend test?", style=wx.RESIZE_BORDER)
         self.panel = wx.Panel(self, wx.ID_ANY)
         self.parent = parent
 
