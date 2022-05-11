@@ -224,8 +224,11 @@ class ViewSensorsDialog(wx.Dialog):
         
         self.panel.SetSizer(topSizer)
         topSizer.Fit(self)
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
         #self.Fit()
-        self.Show()
+        #self.Show()
 
 
 
