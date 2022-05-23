@@ -4,8 +4,8 @@ from pubsub import pub
 class TimeCorrectionDialog(wx.Dialog):
 
     def __init__(self, parent, factor=None):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Extend test?", style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self, wx.ID_ANY)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Extend test?")
+    
         self.parent = parent
 
         if factor is None:
@@ -14,9 +14,9 @@ class TimeCorrectionDialog(wx.Dialog):
             self.factor = factor
 
            # Createcontrols
-        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, "Would you like to extend the test by {0:.2f} minutes?".format(factor))
-        self.btnYes = wx.Button(self.panel, wx.ID_OK, label="Yes")
-        self.btnCancel = wx.Button(self.panel, wx.ID_CANCEL, label="No")
+        self.lblInstructions = wx.StaticText(self, wx.ID_ANY, "Would you like to extend the test by {0:.2f} minutes?".format(factor))
+        self.btnYes = wx.Button(self, wx.ID_OK, label="Yes")
+        self.btnCancel = wx.Button(self, wx.ID_CANCEL, label="No")
         # Bind events
         self.btnYes.Bind(wx.EVT_BUTTON, self.onYes)
         #self.btnCancel.Bind(wx.EVT_BUTTON, self.onCancel)
@@ -34,11 +34,14 @@ class TimeCorrectionDialog(wx.Dialog):
         btnSizer.Add(self.btnCancel, 0, wx.ALL, 5)
 
         topSizer.Add(instructionsSizer, 0, wx.ALL|wx.RIGHT, 5)
-        topSizer.Add(wx.StaticLine(self.panel), 0, wx.ALL|wx.CENTER, 5)
+        topSizer.Add(wx.StaticLine(self), 0, wx.ALL|wx.CENTER, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT, 5)
 
-        self.panel.SetSizer(topSizer)
+        self.SetSizer(topSizer)
         topSizer.Fit(self)
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
 
         # Subscribe to the test.stopped message to close yourself.
         pub.subscribe(self.testOver, "test.finished")

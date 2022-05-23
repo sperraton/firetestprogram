@@ -10,9 +10,9 @@ from HelperFunctions import changeComboboxBgColour, changeComboboxFgColour
 class ViewSensorsDialog(wx.Dialog):
 
     def __init__(self, parent):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "View Channels", style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self)
-        self.nb = wx.Notebook(self.panel)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "View Channels")
+        
+        self.nb = wx.Notebook(self)
         self.parent = parent
 
 
@@ -39,9 +39,9 @@ class ViewSensorsDialog(wx.Dialog):
 
         # Make the sizers
         #======================================================================
-        thermocoupleGroup = wx.StaticBox(self.panel, wx.ID_ANY, "Thermocouples (deg. C)")
+        thermocoupleGroup = wx.StaticBox(self, wx.ID_ANY, "Thermocouples (deg. C)")
         thermocoupleSizer = wx.StaticBoxSizer(thermocoupleGroup, wx.VERTICAL) # wx.HORIZONTAL)
-        pressureGroup = wx.StaticBox(self.panel, wx.ID_ANY, "Pressure Sensors (in H2O)")
+        pressureGroup = wx.StaticBox(self, wx.ID_ANY, "Pressure Sensors (in H2O)")
         pressureSizer = wx.StaticBoxSizer(pressureGroup, wx.HORIZONTAL)
 
         instructionsSizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -52,7 +52,7 @@ class ViewSensorsDialog(wx.Dialog):
         topSizer = wx.BoxSizer(wx.VERTICAL)
 
         instructionsString = "Check the status of all the sensor channels.\nCalibrations and TC role set here will be saved in the currently selected profile.\nYou may also give the channels a unique label by entering it in the box on the right."
-        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, instructionsString)
+        self.lblInstructions = wx.StaticText(self, wx.ID_ANY, instructionsString)
         instructionsSizer.Add(self.lblInstructions, 0, wx.ALL, 5)
 
         # Make the thermocouple lists
@@ -154,7 +154,7 @@ class ViewSensorsDialog(wx.Dialog):
             # Make the dropdown list of serials for this channel
             # Get the list of serial numbers associated with this channel
             serialList = self.parent.controller.getPressureChannelSerials(index)#[1:] # Slice off the DISABLED entry as it isn't needed in this context.
-            self.cmbPressureChannels.append(wx.ComboBox(self.panel,
+            self.cmbPressureChannels.append(wx.ComboBox(self,
                                                         id=wx.ID_ANY,
                                                         choices=serialList, #pressurePlacementLabels,
                                                         value=pressurePlacementLabels[0], # Default to DISABLED
@@ -168,14 +168,14 @@ class ViewSensorsDialog(wx.Dialog):
             self.cmbPressureChannels[index].Bind(wx.EVT_COMBOBOX, self.onSerialSelect)
             self.cmbPressureChannels[index].channel = index
 
-            self.txtPressureValues.append(wx.TextCtrl(self.panel,
+            self.txtPressureValues.append(wx.TextCtrl(self,
                                                       wx.ID_ANY,
                                                       "------",
                                                       style=wx.TE_READONLY|wx.TE_CENTER))
 
             # The label string and connection status
             labelString = "CH. " + str(index+1) + " (" + pressurePlacementLabels[index+1] + ") CLOSED"
-            self.txtPressureStatuses.append(wx.TextCtrl(self.panel,
+            self.txtPressureStatuses.append(wx.TextCtrl(self,
                                                         wx.ID_ANY,
                                                         labelString,
                                                         style=wx.TE_READONLY|wx.TE_CENTER,
@@ -183,16 +183,16 @@ class ViewSensorsDialog(wx.Dialog):
             self.txtPressureStatuses[index].SetForegroundColour(UIcolours.CTRL_ERROR_FG)
             self.txtPressureStatuses[index].SetBackgroundColour(UIcolours.CTRL_ERROR_BG)
 
-            self.btnPressureCalibrate.append(wx.Button(self.panel, wx.ID_ANY, "Calibrate"))
+            self.btnPressureCalibrate.append(wx.Button(self, wx.ID_ANY, "Calibrate"))
             self.btnPressureCalibrate[index].Bind(wx.EVT_BUTTON, self.onCalibrate)
             self.btnPressureCalibrate[index].channel = index
             self.btnPressureCalibrate[index].sensorType = "PRESS"
 
-            self.btnPressureAdd.append(wx.Button(self.panel, wx.ID_ANY, "Add Sensor"))
+            self.btnPressureAdd.append(wx.Button(self, wx.ID_ANY, "Add Sensor"))
             self.btnPressureAdd[index].Bind(wx.EVT_BUTTON, self.onAdd)
             self.btnPressureAdd[index].channel = index
 
-            self.btnPressureRemove.append(wx.Button(self.panel, wx.ID_ANY, "Remove Sensor"))
+            self.btnPressureRemove.append(wx.Button(self, wx.ID_ANY, "Remove Sensor"))
             self.btnPressureRemove[index].Bind(wx.EVT_BUTTON, self.onRemove)
             self.btnPressureRemove[index].channel = index
             self.btnPressureRemove[index].Disable()
@@ -209,7 +209,7 @@ class ViewSensorsDialog(wx.Dialog):
 
         # The buttons
         #======================================================================
-        self.btnOK = wx.Button(self.panel, wx.ID_OK, "OK")
+        self.btnOK = wx.Button(self, wx.ID_OK, "OK")
         self.btnOK.Bind(wx.EVT_BUTTON, self.onOK)
         self.Bind(wx.EVT_CLOSE, self.onQuit)
         btnSizer.Add(self.btnOK, 0, wx.ALL, 5)
@@ -222,14 +222,12 @@ class ViewSensorsDialog(wx.Dialog):
         topSizer.Add(channelsSizer, 0, wx.ALL|wx.EXPAND, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT, 5)
         
-        self.panel.SetSizer(topSizer)
+        self.SetSizer(topSizer)
         topSizer.Fit(self)
         topSizer.SetSizeHints(self)
         self.Layout()
         self.Centre()
-        #self.Fit()
-        #self.Show()
-
+    
 
 
         # Subscribe to message sent out by the attach handlers

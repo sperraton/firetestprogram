@@ -67,10 +67,12 @@ class TestSettings:
         self.chooseUnits()
         self.createFileHeader()
         self.createFileName()
+        self.createBackupFileName()
 
         self.fullFileName = os.path.join(self.savePath, self.fileName)
+
         if self.backupPath is not None:
-            self.fullBackupFileName = os.path.join(self.backupPath, self.fileName)
+            self.fullBackupFileName = os.path.join(self.backupPath, self.backupFileName)
         else:
             self.fullBackupFileName = None
 
@@ -109,6 +111,13 @@ class TestSettings:
         Construct a unique filename to save the data to.
         """
         self.fileName = self.client + "_" + self.projectNum + "_" + self.testNum + "_(" + self.date.replace(":", "-") + ").csv"
+
+
+    def createBackupFileName(self):
+        """
+        Construct a unique filename different than the default filename in case they are  saved to the same dir.
+        """
+        self.backupFileName = self.client + "_" + self.projectNum + "_" + self.testNum + "_(" + self.date.replace(":", "-") + ")_BACKUP.csv"
 
 
     def calculateTargetCurve(self, timeSeconds):

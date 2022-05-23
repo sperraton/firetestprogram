@@ -3,6 +3,7 @@ from Profile import Profile
 from HelperFunctions import infoDialog, warnDialog # TODO Right now we let the error bubble up because I don't want to pass a reference to the frame to the dialog boxes. Should rethink how submodules are going to desplay these dialogs. Perhaps pubsub
 import json
 from DAQ.Address import Address
+import os
 
 # TODO A lot of these getter/setters can be @params
 
@@ -47,60 +48,77 @@ class MachineSettings():
             with open("settings.json") as f:
                 self.settingsData = json.load(f, object_hook=as_enum)
 
-            print("    Loading serials ...")
-            self.thermocoupleSerialNums = self.settingsData["machineSetup"]["serialNums"]["thermocouple"] #thermocoupleSerialNums
-            self.pressureSerialNums = self.settingsData["machineSetup"]["serialNums"]["pressure"] #pressureSerialNums
-
-            # Determine the number of TC channels based on number of hubs
-            # BUG BUG BUG This relies on the number of TC channels per hub is constant per machine.
-            #             The machine may break this assumption in the future.
-            #self.numTC = NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums)
-            try:
-                self.numTC = self.settingsData["machineSetup"]["numTC"]
-            except: #Fall back on some default
-                self.numTC = NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums)
-
-            try:    
-                self.numPres = self.settingsData["machineSetup"]["numPres"]
-            except:
-                self.numPres = 3
-
-            self.pressureSenseIsVoltage = self.settingsData["machineSetup"]["pressureIsVoltage"] # Is this channel wired for current or voltage input
-
-            print("    Loading sensor configuration ...")
-            self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
-            self.pressureConfig = self.settingsData["defaultProfile"]["pressureConfig"]
-
-            print("    Loading profile ...")
-            self.currentProfile = self.settingsData["machineSetup"]["currentProfile"]
-            self.defaultSavePath = self.settingsData["machineSetup"]["defaultSavePath"]
-            self.defaultBackupPath = self.settingsData["machineSetup"]["defaultBackupPath"]
-
-            #Load up the map of how the Phidgets are wired up
-            print("    Loading addresses ...")
-            self.thermocoupleAddresses = []
-
-            chNum = 0
-
-            try:
-                for row in self.settingsData["machineSetup"]["thermocoupleAddresses"]:
-                    print(f"    Getting address ({chNum}) ... {row}")
-                    self.thermocoupleAddresses.append(Address(row["serial"],
-                                                            row["VINTport"],
-                                                            row["channel"],
-                                                            row["isHubPort"]))
-                    chNum += 1
-            except:
-                self.initThermocoupleAddresses()
+            self.parseSettingsDict() # All the settings need to be checked and loaded
                 
-            #print(f"Here are the addresses: {self.thermocoupleAddresses}")
-            print(f"{len(self.thermocoupleAddresses)} TCs address were found")
-
         except:
             # TODO, Don't swallow errors. Although I think that this is caught in the calling func.
             #infoDialog(self.parent, "No previously saved settings.")
             print("!!! There was an error loading settings !!!")
+            print("!!! Could not open the settings.json file !!!")
             pass
+
+
+    def parseSettingsDict(self):
+        """
+        Put all the settings into the right places and use defaults if we have to.
+        """
+
+        if "machineSetup" not in self.settingsData:
+            print("Machine Setup not found in settings. Loading defaults")
+            return # TODO Fill out this stub
+
+        if "serialNums" in self.settingsData["machineSetup"]:
+
+            print("    Loading serials ...")
+            self.thermocoupleSerialNums = self.settingsData["machineSetup"]["serialNums"]["thermocouple"] #thermocoupleSerialNums
+            print(f"        Thermocouple Serials: {self.thermocoupleSerialNums}")
+            self.pressureSerialNums = self.settingsData["machineSetup"]["serialNums"]["pressure"] #pressureSerialNums        
+            print(f"        Pressure Serials: {self.pressureSerialNums}")
+
+        # Determine the number of TC channels based on number of hubs
+        # BUG BUG BUG This relies on the number of TC channels per hub is constant per machine.
+        #             The machine may break this assumption in the future.
+        self.numTC = self.settingsData["machineSetup"].get("numTC", NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums))
+        self.numPres = self.settingsData["machineSetup"].get("numPres", 3)
+        self.pressureSenseIsVoltage = self.settingsData["machineSetup"].get("pressureIsVoltage", []) # Is this channel wired for current or voltage input
+        
+        print(f"        Num TCs: {self.numTC}")
+        print(f"        Pres. Sens. isVoltage: {self.pressureSenseIsVoltage}")
+
+        # TODO make a default profile
+        print("    Loading sensor configuration ...")
+        self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
+        self.pressureConfig = self.settingsData["defaultProfile"]["pressureConfig"]
+
+        #Load up the map of how the Phidgets are wired up
+        print("    Loading addresses ...")
+        self.thermocoupleAddresses = []
+
+        chNum = 0
+
+        try:
+            for row in self.settingsData["thermocoupleAddresses"]:
+                print(f"    Getting address ({chNum}) ... {row}")
+                self.thermocoupleAddresses.append(Address(row["serial"],
+                                                        row["VINTport"],
+                                                        row["channel"],
+                                                        row["isHubPort"]))
+                chNum += 1
+
+        except:
+            print("No addresses in settings. Attempting to build addresses ...")
+            self.initThermocoupleAddresses()
+
+
+        print("    Loading profile ...")
+        self.currentProfile = self.settingsData["machineSetup"].get("currentProfile", 0) # Default to 0
+        self.defaultSavePath = self.settingsData["machineSetup"].get("defaultSavePath", os.getcwd())
+        self.defaultBackupPath = self.settingsData["machineSetup"].get("defaultBackupPath", os.getcwd())
+
+        print(f"        Current Profile: {self.currentProfile}")
+        print(f"        Default Save Path: {self.defaultSavePath}")
+        print(f"        Backup Save Path: {self.defaultBackupPath}")
+
 
     def initThermocoupleAddresses(self):
         for serialNum in self.thermocoupleSerialNums:

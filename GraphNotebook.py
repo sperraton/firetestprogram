@@ -62,7 +62,7 @@ class GraphNotebook(wx.Notebook):
         Given the raw data from the controller, update the data grid and the
         channel monitor.
         """
-        
+
         self.dataGridTab.addDataRow(row)
 
     def OnDestroy(self):
@@ -95,7 +95,7 @@ class MainGraphPanel(wx.Panel):
         self.panelList.append(self.pressureGraph)
         self.panelList.append(self.furnaceTempGraph)
 
-        self.layout(self.panelList[0], self.panelList[1], self.panelList[2])
+        self.layoutPanels(self.panelList[0], self.panelList[1], self.panelList[2])
 
         sizer = wx.BoxSizer(wx.VERTICAL)
         sizer.Add(self.topSplitter, 1, wx.EXPAND)
@@ -107,7 +107,7 @@ class MainGraphPanel(wx.Panel):
         pub.subscribe(self.updatePressureGraph, "pressureGraph.update")
 
 
-    def layout(self, a, b, c):
+    def layoutPanels(self, a, b, c):
 
         self.subSplitter.SplitVertically(a, b)
         self.subSplitter.SetSashGravity(0.5)
@@ -168,13 +168,18 @@ class MainGraphPanel(wx.Panel):
         pub.unsubscribe(self.updatePressureGraph, "pressureGraph.update")
 
 
+################################################################################
+# Update functions
+################################################################################
+
     def updateFurnaceTempGraph(self, timeData, avgData, rawData):
         """
         Draws on the graph the new data for the Avg and the Raw furnace TC's
         """
         # Give the data to the graph
         self.furnaceTempGraph.updateFurnaceData(timeData, avgData, rawData)
-        
+        self.furnaceTempGraph.Update()#Layout()
+        self.Refresh()
 
     def updateUnexposedTempGraph(self, timeData, avgData, rawData):
         """
@@ -182,21 +187,66 @@ class MainGraphPanel(wx.Panel):
         """
         # Give the data to the graph
         self.unexposedTempGraph.updateUnexposedData(timeData, avgData, rawData)
+        self.unexposedTempGraph.graphCanvas.drawGraph()
+        self.unexposedTempGraph.graphCanvas.OnSize(None)
+        self.unexposedTempGraph.graphCanvas.Layout()
+        self.unexposedTempGraph.graphCanvas.Refresh()
+        self.unexposedTempGraph.graphCanvas.Update()
+
+        # self.unexposedTempGraph.Layout()
+        # self.unexposedTempGraph.Refresh()
+        # self.unexposedTempGraph.Update()
+
+        # self.subSplitter.Refresh()
+        # self.subSplitter.Update()
+
+        #self.Layout()
+        #self.Refresh()
+        #self.Update()
+
+        # self.parent.Layout()
+        # self.parent.Refresh()
+        # self.parent.Update()
+
+        # #self.topSplitter.SendSizeEvent()
+        #self.unexposedTempGraph.graphCanvas.SendSizeEvent()
         
-        
+        # pos = self.topSplitter.GetSashPosition()-1
+        # self.topSplitter.SetSashPosition(pos)
+        # pos = self.topSplitter.GetSashPosition()+1
+        # self.topSplitter.SetSashPosition(pos)
+
+
+        # size = self.subSplitter.Window1.GetSize()
+        # size.width += 1
+        # self.subSplitter.Window1.SetSize(size)
+
+        self.subSplitter.Window1.onPaint(None)
+        self.subSplitter.Window2.onPaint(None)
+        self.topSplitter.Window1.onPaint(None)
+
+        # self.subSplitter.Window1.SendSizeEvent()
+        # self.subSplitter.Window1.Refresh()
+        # self.subSplitter.Window1.Update()
+
     def updateUnexposedThreshold(self, thresh):
         """
         Draws the threshold line on the Unexposed graph
         """
         self.unexposedTempGraph.updateUnexposedThreshold(thresh)
-
+        self.unexposedTempGraph.Layout()
+        self.Refresh()
 
     def updatePressureGraph(self, timeData, ch3, ch2, ch1):
         """
         Draws on the graph the new data for the pressure sensors
         """
         self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
-        
+        self.pressureGraph.Layout()
+        self.Refresh()
+
+
+
 
     def initGraphForTest(self, testTime):
 
@@ -213,13 +263,13 @@ class MainGraphPanel(wx.Panel):
 
         # Scale the x-axis for the test time.
         # TODO: make this a function that also gets called in testExtend()
-        self.furnaceTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
+        #DEBUGGING self.furnaceTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.furnaceTempGraph.setTestTimeMinutes(testTime)
 
-        self.unexposedTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
+        #DEBUGGING self.unexposedTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.unexposedTempGraph.setTestTimeMinutes(testTime)
 
-        self.pressureGraph.graphCanvas.scaleGraphXaxis(0, testTime)
+        #DEBUGGING self.pressureGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.pressureGraph.setTestTimeMinutes(testTime)
 
         # Draw the new target curve

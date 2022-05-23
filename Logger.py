@@ -1,11 +1,44 @@
 # Write test data to .csv file
 from HelperFunctions import warnDialog
+import os
+import csv
 
+# Can save up rows into a buffer for burst writing
+# that happens at a slower rate than the data Capture
+# In the rare case that you want to open a variable number of files all at the same time, you can use contextlib.ExitStack, starting from Python version 3.3:
+# with ExitStack() as stack:
+#     files = [stack.enter_context(open(fname)) for fname in filenames]
+#     # Do something with "files"
 class Logger():
 
-    def __init__(self, fullFileName, fullBackupFileName=None):
+    def __init__(self, fullFileName, fullBackupFileName=None): #TODO should we just pass the test settings here and let the object sort things out.
         self.fullFileName = fullFileName
-        self.fullBackupFileName = fullBackupFileName # TODO Got to double up all the file writes now sucker. Get to work.
+        self.fullBackupFileName = fullBackupFileName
+
+# BUGBUGBUG The csvWriter takes lines to be a list of items to be seperated by commas and all written to one line.
+# I adapted this from writing out single lines to a txt file. Each of these lines needs to be written on an individual line. Fix this. Have the data passed in a way that we aren't doing a bunch of wrapping up the data, and then unwrapping it just to write is.
+    def writeLinesToFile(self, lines, mode="w+"):
+        """
+        Writes lines that are passed to the log files
+        """
+        if self.fullBackupFileName is None:
+
+            with open(self.fullFileName, mode) as f1:
+                #f1.writelines(os.linesep.join(lines))
+                csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                csvWriter.writerow(lines)
+        else:
+
+            with open(self.fullFileName, mode) as f1, \
+                open(self.fullBackupFileName, mode) as f2:
+
+                # f1.writelines(os.linesep.join(lines)+os.linesep)
+                # f2.writelines(os.linesep.join(lines)+os.linesep)
+                csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                csvWriter.writerow(lines)
+                csvWriter = csv.writer(f2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                csvWriter.writerow(lines)
+
 
     def writeHeaders(self, fileHeader, tableHeader):
         """
@@ -13,25 +46,17 @@ class Logger():
         """
 
         try:
-            f=open(self.fullFileName, "w")
-
-            # Write the preamble
-            f.write(fileHeader)
-
             # Create the data table header
             headerString = ",".join([item for item in tableHeader])
-            f.write(headerString+"\n")
-            
-            f.close()
-
+            self.writeLinesToFile([fileHeader, headerString], "w+")
             return False
 
-        except:
-            # Warn the user we couldn't write to the log file.
-            warnDialog(self, "There was an error creating the log file.\nIs the disk full?\nDo you have correct permissions?\nTest will be aborted now.")
+        except IOError as e:
+            print(f"Log header write operation failed: {e.strerror}")
+            # Warn the user we couldn't write to the log file. #BUGBUGBUG the dialog needs a wx object as parent
+            #warnDialog(self, "There was an error creating the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
             # Abort the test
             #self.stopTest()
-
             return True
 
 
@@ -39,29 +64,25 @@ class Logger():
         """
         Record the numerical data in the table.
         """
-
         try:
-            f=open(self.fullFileName, "a") # Append to the .csv file
 
             # Make list into string
             rowString = ""
             for cell in dataRow[:-1]:
                 rowString += str(cell) + ","
-            rowString += str(dataRow[-1]) + "\n" # Do the final data point
-            f.write(rowString)
-            f.close()
-        except:
-         # Warn the user we couldn't write to the log file.
-            warnDialog(self, "There was an error writing data to the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
+            rowString += str(dataRow[-1])# + "\n" # Do the final data point
+
+            self.writeLinesToFile([rowString], "a")
+
+
+        except IOError as e:
+            print(f"Log data write operation failed: {e.strerror}")
+            # See above bug
+            # Warn the user we couldn't write to the log file.
+            #warnDialog(self, "There was an error writing data to the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
             # Abort the test
             #self.stopTest() Actually don't. The data is still captured onscreen.
-
-            # Can save up rows into a buffer for burst writing
-            # that happens at a slower rate than the data Capture
-            #fh = open(“hello.txt”,”w”)
-            #lines_of_text = [“One line of text here”, “and another line here”, “and yet another here”, “and so on and so forth”]
-            #fh.writelines(lines_of_text)
-            #fh.close()
+            return True
 
 
     def writeCorrectionInfo(self, 
@@ -76,7 +97,6 @@ class Logger():
         """
 
         try:
-            f=open(self.fullFileName, "a")
 
             lines = [
                 "Was correction applied?,"+str(wasExtended),
@@ -86,9 +106,11 @@ class Logger():
                 "L  Lag correction = ,"+str(lagCorrection),
                 "C  Correction in minutes = ,"+str(correctionMinutes)]
 
-            f.writelines("%s\n" % l for l in lines)
-            f.close()
+            self.writeLinesToFile(lines, "a")
 
-        except:
-         # Warn the user we couldn't write to the log file.
-            warnDialog(self, "There was an error writing data to the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
+        except IOError as e:
+            print(f"Log correction write operation failed: {e.strerror}")
+            # See above bug
+            # Warn the user we couldn't write to the log file.
+            #warnDialog(self, "There was an error writing data to the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
+            return True

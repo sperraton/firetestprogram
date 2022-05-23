@@ -1,4 +1,3 @@
-# """
 # Fire test furnace DAQ software
 
 # This program records and displays temperature and pressure
@@ -6,11 +5,12 @@
 
 # AUTHOR: Stephen Perraton
 # EMAIL: perraton@gmail.com
-# LAST MODIFIED: 2022-FEB-22
+# LAST MODIFIED: 2022-MAY-03
 
 # Use the following for compiling with Nuitka
-# python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file=C:\Users\freya\Documents\TesPro\splash.jpg=images Main.pyw
-# """
+# python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file="C:\Users\E119 PILOT SCALE\AppData\Local\TesPro\FireTestProgram\src\splash.jpg"=images Main.pyw
+# C:\Users\E119 PILOT SCALE\AppData\Local\TesPro\FireTestProgram\src
+
 
 # Refactoring TODO's
 # All strings, and choice labels need to be brought into the Enumeration module
@@ -61,7 +61,7 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
-        self.noConnect = False # Used to set the DAQ to not connect. For debugging purposes
+        self.noConnect = True # Used to set the DAQ to not connect. Random data generated. For debugging purposes
         self.testTimeMinutes = 60 # Default
         self.targetTempCurve = []
         self.warnToggle = True
@@ -70,12 +70,13 @@ class MainFrame(wx.Frame):
         # ensure the parent's __init__ is called
         super(MainFrame, self).__init__(*args, **kw)
 
-        bitmap = wx.Bitmap('./images/splash.jpg')
-        splash = wx.adv.SplashScreen(
-                     bitmap, 
-                     wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT, 
-                     5000, self)
-        splash.Show()
+        if not self.noConnect:
+            bitmap = wx.Bitmap('./images/splash.jpg')
+            splash = wx.adv.SplashScreen(
+                        bitmap, 
+                        wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT, 
+                        5000, self)
+            splash.Show()
 
         
         self.controller = Controller(self) # Manage the DAQ and test control business
@@ -105,6 +106,7 @@ class MainFrame(wx.Frame):
         self.mainSizer = wx.BoxSizer(wx.HORIZONTAL)
         self.mainSizer.Add(self.monPanel, 0, wx.EXPAND|wx.ALL, 5)
         self.mainSizer.Add(self.graphNotebook, 1, wx.EXPAND|wx.ALL, 5)
+        self.mainSizer.Add(wx.Panel(self, wx.ID_ANY))
         self.mainPanel.SetSizer(self.mainSizer)
         self.mainSizer.Layout()
 
@@ -290,10 +292,10 @@ class MainFrame(wx.Frame):
                        #| wx.DD_CHANGE_DIR
                        )
         if dlg.ShowModal() == wx.ID_OK:
-            if event.parentObject is self.savePathItem:
-                self.controller.setDefaultSavePath(dlg.GetPath(), False)
-            elif event.parentObject is self.saveBackupPathItem:
-                self.controller.setDefaultSavePath(dlg.GetPath(), True)
+            if event.GetEventObject() is self.savePathItem:
+                self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=False)
+            elif event.GetEventObject() is self.backupPathItem:
+                self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=True)
         dlg.Destroy()
 
 
@@ -302,6 +304,7 @@ class MainFrame(wx.Frame):
         Begin the test.
         """
 
+        # Check that we are not already doing a test
         if self.controller.isTestRunning:
             warnDialog(self, "A test is already running.\nPlease stop test from file menu before trying to create a new one.", caption="Cannot create new test.")
             return
@@ -323,7 +326,8 @@ class MainFrame(wx.Frame):
                                     dlg.resultUpdateRate,
                                     dlg.resultSaveRate,
                                     dlg.resultTargetCurve,
-                                    dlg.resultSavePath)
+                                    dlg.resultSavePath,
+                                    self.controller.machineSettings.defaultBackupPath) # TODO have the backup path visible in the start dialog
 
         dlg.Destroy()
    
@@ -335,7 +339,7 @@ class MainFrame(wx.Frame):
         self.controller.initTestSettings(testSettings)
 
         self.graphNotebook.initGrid() # Must be called after the initTestSettings because we use controller. TODO rather than reinit everything maybe make a new function to resize and relabel columns.
-        self.graphNotebook.graphTab.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
+        #DEBUGGING self.graphNotebook.graphTab.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
         self.initChannelMon() # Fill out the channel monitor labels
 
         # Ask the user to zero the presure sensors
@@ -350,7 +354,7 @@ class MainFrame(wx.Frame):
         dlg.Destroy()
 
         if result == wx.ID_CANCEL:
-        #DEBUGGING     self.monPanel.hideMonitor()
+            self.monPanel.hideMonitor()
             # TODO Destroy any init'ed member variables in controller
             self.controller.testData.stopListening()
             self.controller.logger = None
@@ -359,6 +363,7 @@ class MainFrame(wx.Frame):
 
         # Ok, they didn't cancel yet, start the test
 
+        # Disable certain menubar items
         self.stopItem.Enable(True)
         self.startItem.Enable(False)
         self.extendItem.Enable(True)
@@ -370,6 +375,7 @@ class MainFrame(wx.Frame):
         self.thresholdSettingsItem.Enable(False)
         self.profileManagerItem.Enable(False)
 
+        # Start'er up
         self.controller.startTest()
 
     def onStopTestRecording(self, event):
@@ -484,7 +490,7 @@ class MainFrame(wx.Frame):
         pub.subscribe(self.testStoppedCleanup, "test.stopped") # do cleanup when the test is stopped by not the time running out
         pub.subscribe(self.testThreeQuarterMark, "test.correction")
         pub.subscribe(self.testExtend, "test.extend")
-        #pub.subscribe(self.lostChannelWarning, "channel.detached")
+        pub.subscribe(self.lostChannelWarning, "channel.detached")
 
 
     def removeAllListeners(self):
@@ -499,7 +505,7 @@ class MainFrame(wx.Frame):
         pub.unsubscribe(self.testStoppedCleanup, "test.stopped")
         pub.unsubscribe(self.testThreeQuarterMark, "test.correction")
         pub.unsubscribe(self.testExtend, "test.extend")
-        #pub.unsubscribe(self.lostChannelWarning, "channel.detached")
+        pub.unsubscribe(self.lostChannelWarning, "channel.detached")
 
     # TODO move this into the graph object
     def createTargetCurveArray(self, testLengthMinutes):
@@ -514,7 +520,7 @@ class MainFrame(wx.Frame):
             self.targetTempCurve.append(self.controller.testSettings.calculateTargetCurve(seconds))
         
         # Give the data to the graph
-        self.graphNotebook.graphTab.furnaceTempGraph.updateFurnaceTarget(timeData, self.targetTempCurve)
+        #DEBUGGING self.graphNotebook.graphTab.furnaceTempGraph.updateFurnaceTarget(timeData, self.targetTempCurve)
 
 
     def setStatusMessage(self, msg):
@@ -558,9 +564,9 @@ class MainFrame(wx.Frame):
         self.profileManagerItem.Enable(True)
 
         parentPath, ext = os.path.splitext(self.controller.testSettings.fullFileName) # Yes, ugly I know
-        self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save plots automatically
+        #DEBUGGING self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save plots automatically
 
-        #DEBUGGING self.monPanel.hideMonitor()
+        self.monPanel.hideMonitor()
 
 
     def testExtend(self, amtMinutes):
@@ -583,6 +589,7 @@ class MainFrame(wx.Frame):
         """
         if self.detachedWarn: return # Don't fire a bunch of dialogs in response to several detach events
 
+        # TODO replace this with a notify component and not a dialog.
         self.detachedWarn = True
         self.dlg = wx.MessageDialog(self, "The computer has lost connection with one or more of the sensor channels.", "Warning!", wx.OK | wx.ICON_WARNING)
         self.dlg.ShowModal()
@@ -608,4 +615,4 @@ if __name__ == '__main__':
 
     app.MainLoop()
 
-    var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
+    #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.

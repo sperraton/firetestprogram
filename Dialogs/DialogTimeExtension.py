@@ -4,18 +4,18 @@ from pubsub import pub
 class TimeExtensionDialog(wx.Dialog):
 
     def __init__(self, parent):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Extend test?", style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self, wx.ID_ANY)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Extend test?")
+
         self.parent = parent
 
         # Createcontrols
-        self.lblExtendAmt = wx.StaticText(self.panel, wx.ID_ANY, "Extend test amount (1 - 240 min.)")
-        self.extendAmt = wx.SpinCtrl(self.panel, wx.ID_ANY, "")
+        self.lblExtendAmt = wx.StaticText(self, wx.ID_ANY, "Extend test amount (1 - 240 min.)")
+        self.extendAmt = wx.SpinCtrl(self, wx.ID_ANY, "")
         self.extendAmt.SetRange(1, 240)
         self.extendAmt.SetValue(10)
 
-        self.btnYes = wx.Button(self.panel, wx.ID_OK, label="Yes")
-        self.btnCancel = wx.Button(self.panel, wx.ID_CANCEL, label="No")
+        self.btnYes = wx.Button(self, wx.ID_OK, label="Yes")
+        self.btnCancel = wx.Button(self, wx.ID_CANCEL, label="No")
         # Bind events
         self.btnYes.Bind(wx.EVT_BUTTON, self.onYes)
         #self.btnCancel.Bind(wx.EVT_BUTTON, self.onCancel)
@@ -34,11 +34,14 @@ class TimeExtensionDialog(wx.Dialog):
         btnSizer.Add(self.btnCancel, 0, wx.ALL, 5)
 
         topSizer.Add(controlSizer, 0, wx.ALL|wx.RIGHT, 5)
-        topSizer.Add(wx.StaticLine(self.panel), 0, wx.ALL|wx.CENTER, 5)
+        topSizer.Add(wx.StaticLine(self), 0, wx.ALL|wx.CENTER, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT, 5)
 
-        self.panel.SetSizer(topSizer)
+        self.SetSizer(topSizer)
         topSizer.Fit(self)
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
 
         # Subscribe to the test.stopped message to close yourself.
         pub.subscribe(self.testOver, "test.finished")

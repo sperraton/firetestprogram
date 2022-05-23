@@ -5,8 +5,8 @@ class ZeroPressureDialog(wx.Dialog):
 
     def __init__(self, parent):
 
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Zero the active pressure sensor")#, style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Zero the active pressure sensor")
+   
         self.parent = parent
 
         # Arrays to hold the channel widgets
@@ -16,7 +16,7 @@ class ZeroPressureDialog(wx.Dialog):
 
         # Make the sizers
         #======================================================================
-        pressureGroup = wx.StaticBox(self.panel, wx.ID_ANY, "Pressure Sensors")
+        pressureGroup = wx.StaticBox(self, wx.ID_ANY, "Pressure Sensors")
         pressureSizer = wx.StaticBoxSizer(pressureGroup, wx.HORIZONTAL)
 
         pressureGridSizer = wx.FlexGridSizer(3, 3, 5, 5)
@@ -24,22 +24,22 @@ class ZeroPressureDialog(wx.Dialog):
         channelsSizer = wx.BoxSizer(wx.HORIZONTAL)
         topSizer = wx.BoxSizer(wx.VERTICAL)
 
-        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, "You can zero the pressure channels\nbefore commencing with test.")
+        self.lblInstructions = wx.StaticText(self, wx.ID_ANY, "You can zero the pressure channels\nbefore commencing with test.")
 
         # Make the pressure sensor lists
         #======================================================================
         for index, label in enumerate(pressurePlacementLabels[1:]): # Slice out the disables label
             # Make the controls
-            lblPressureLabels.append(wx.StaticText(self.panel, wx.ID_ANY, label, style=wx.ALIGN_CENTRE))
-            self.btnPressureZero.append(wx.Button(self.panel, wx.ID_ANY, "Zero"))
+            lblPressureLabels.append(wx.StaticText(self, wx.ID_ANY, label, style=wx.ALIGN_CENTRE))
+            self.btnPressureZero.append(wx.Button(self, wx.ID_ANY, "Zero"))
 
             if self.parent.controller.isLabelInSelectedPressure(label):
                 serialLabel = self.parent.controller.getCurrentPressureChannelSerial(index)
-                self.txtPressureStatuses.append(wx.TextCtrl(self.panel, wx.ID_ANY, serialLabel, style=wx.TE_READONLY|wx.TE_CENTER))
+                self.txtPressureStatuses.append(wx.TextCtrl(self, wx.ID_ANY, serialLabel, style=wx.TE_READONLY|wx.TE_CENTER))
                 self.txtPressureStatuses[index].SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
                 self.txtPressureStatuses[index].SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
             else:
-                self.txtPressureStatuses.append(wx.TextCtrl(self.panel, wx.ID_ANY, "DISABLED", style=wx.TE_READONLY|wx.TE_CENTER))
+                self.txtPressureStatuses.append(wx.TextCtrl(self, wx.ID_ANY, "DISABLED", style=wx.TE_READONLY|wx.TE_CENTER))
                 self.txtPressureStatuses[index].SetForegroundColour(UIcolours.CTRL_DISABLED_FG)
                 self.txtPressureStatuses[index].SetBackgroundColour(UIcolours.CTRL_DISABLED_BG)
 
@@ -59,7 +59,7 @@ class ZeroPressureDialog(wx.Dialog):
 
         # The buttons
         #======================================================================
-        self.btnStart = wx.Button(self.panel, wx.ID_OK, "Done")
+        self.btnStart = wx.Button(self, wx.ID_OK, "Done")
         self.btnStart.Bind(wx.EVT_BUTTON, self.onDone)
         self.Bind(wx.EVT_CLOSE, self.onDone)
 
@@ -71,10 +71,12 @@ class ZeroPressureDialog(wx.Dialog):
         topSizer.Add(self.lblInstructions, 0, wx.ALL|wx.ALIGN_LEFT, 5)
         topSizer.Add(channelsSizer, 0, wx.ALL|wx.EXPAND, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT,5)
-        self.panel.SetSizer(topSizer)
+
+        self.SetSizer(topSizer)
         topSizer.Fit(self)
-        #self.Fit()
-        self.Show()
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
 
 
     def onDone(self, event):

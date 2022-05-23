@@ -5,8 +5,8 @@ from HelperFunctions import warnDialog
 
 class WarningThresholdDialog(wx.Dialog):
     def __init__(self, parent):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Warning Threshold Settings", style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self, wx.ID_ANY)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Warning Threshold Settings")
+
         self.parent = parent
 
 
@@ -20,18 +20,17 @@ class WarningThresholdDialog(wx.Dialog):
         #======================================================================
 
         instructionsString = "Set the thresholds for which warnings occur.\nAll thresholds are set in degrees Celsius."
-        self.lblInstructions = wx.StaticText(self.panel, wx.ID_ANY, instructionsString)
+        self.lblInstructions = wx.StaticText(self, wx.ID_ANY, instructionsString)
 
 
-        self.lblAfterburner = wx.StaticText(self.panel, wx.ID_ANY, "Afterburner Warning Threshold")
-        self.txtAfterburner = wx.TextCtrl(self.panel, wx.ID_ANY, "{0:2.1f}".format(self.parent.controller.getAfterburnerThresh(0)), style=wx.TE_PROCESS_ENTER)
+        self.lblAfterburner = wx.StaticText(self, wx.ID_ANY, "Afterburner Warning Threshold")
+        self.txtAfterburner = wx.TextCtrl(self, wx.ID_ANY, "{0:2.1f}".format(self.parent.controller.getAfterburnerThresh(0)), style=wx.TE_PROCESS_ENTER)
 
-        self.lblUnexposed = wx.StaticText(self.panel, wx.ID_ANY, "Unexposed Failure Threshold \n(amount to be added to unexposed average at begining of test)")
-        self.txtUnexposed = wx.TextCtrl(self.panel, wx.ID_ANY, "{0:2.1f}".format(self.parent.controller.getUnexposedThresh("C")), style=wx.TE_PROCESS_ENTER)
+        self.lblUnexposed = wx.StaticText(self, wx.ID_ANY, "Unexposed Failure Threshold \n(amount to be added to unexposed average at begining of test)")
+        self.txtUnexposed = wx.TextCtrl(self, wx.ID_ANY, "{0:2.1f}".format(self.parent.controller.getUnexposedThresh("C")), style=wx.TE_PROCESS_ENTER)
 
-
-        self.btnSave = wx.Button(self.panel, wx.ID_ANY, "Save Values")
-        self.btnCancel = wx.Button(self.panel, wx.ID_ANY, "Cancel")
+        self.btnSave = wx.Button(self, wx.ID_ANY, "Save Values")
+        self.btnCancel = wx.Button(self, wx.ID_ANY, "Cancel")
 
         # Bind the handlers
         #======================================================================
@@ -56,13 +55,14 @@ class WarningThresholdDialog(wx.Dialog):
 
         topSizer.Add(self.lblInstructions, 0, wx.ALL|wx.EXPAND|wx.ALIGN_LEFT, border=10)
         topSizer.Add(thresholdsSizer, 0, wx.ALL|wx.EXPAND, border=5)
-        topSizer.Add(wx.StaticLine(self.panel), 0, wx.ALL|wx.CENTER, border=5)
+        topSizer.Add(wx.StaticLine(self), 0, wx.ALL|wx.CENTER, border=5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT,border=5)
-        self.panel.SetSizer(topSizer)
+        
+        self.SetSizer(topSizer)
         topSizer.Fit(self)
-        #self.Fit()
-        self.Show()
-
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
 
     def onThreshChanged(self, event):
         """

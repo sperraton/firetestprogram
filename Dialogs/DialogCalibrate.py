@@ -14,8 +14,8 @@ class CalibrateDialog(wx.Dialog):
             sensor = ""
 
         title = "Calibrate " + sensor + "channel: " + str(channelIndex+1)
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, title, style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, title)
+   
         self.parent = parent
         self.channelIndex = channelIndex
         self.sensorType = sensorType
@@ -42,25 +42,25 @@ class CalibrateDialog(wx.Dialog):
 
         # Create the controls
         #======================================================================
-        self.lblGain = wx.StaticText(self.panel, wx.ID_ANY, "Gain")
-        self.txtGain = wx.TextCtrl(self.panel, wx.ID_ANY, str(self.origGain))
-        self.lblOffset = wx.StaticText(self.panel, wx.ID_ANY, "Offset")
-        self.txtOffset = wx.TextCtrl(self.panel, wx.ID_ANY, str(self.origOffset))
+        self.lblGain = wx.StaticText(self, wx.ID_ANY, "Gain")
+        self.txtGain = wx.TextCtrl(self, wx.ID_ANY, str(self.origGain))
+        self.lblOffset = wx.StaticText(self, wx.ID_ANY, "Offset")
+        self.txtOffset = wx.TextCtrl(self, wx.ID_ANY, str(self.origOffset))
         if self.sensorType == "TC":
-            self.lblReading = wx.StaticText(self.panel, wx.ID_ANY, "Current Raw Reading (deg. C):")
+            self.lblReading = wx.StaticText(self, wx.ID_ANY, "Current Raw Reading (deg. C):")
         elif self.sensorType == "PRESS":
             units = ("V" if self.parent.parent.controller.getPressureSensorIsVoltage(self.channelIndex) else "A")
-            self.lblReading = wx.StaticText(self.panel, wx.ID_ANY, "Current Raw Reading ("+units+"):")
-        self.txtRawValue = wx.TextCtrl(self.panel, wx.ID_ANY, "------", style=wx.TE_READONLY|wx.TE_CENTER)
+            self.lblReading = wx.StaticText(self, wx.ID_ANY, "Current Raw Reading ("+units+"):")
+        self.txtRawValue = wx.TextCtrl(self, wx.ID_ANY, "------", style=wx.TE_READONLY|wx.TE_CENTER)
 
-        self.btnSet1 = wx.Button(self.panel, wx.ID_ANY, "Set Point 1")
-        self.lblSet1Status = wx.StaticText(self.panel, wx.ID_ANY, "Point not set",  style=wx.TE_READONLY|wx.TE_CENTER)
-        self.btnSet2 = wx.Button(self.panel, wx.ID_ANY, "Set Point 2")
-        self.lblSet2Status = wx.StaticText(self.panel, wx.ID_ANY, "Point not set",  style=wx.TE_READONLY|wx.TE_CENTER)
+        self.btnSet1 = wx.Button(self, wx.ID_ANY, "Set Point 1")
+        self.lblSet1Status = wx.StaticText(self, wx.ID_ANY, "Point not set",  style=wx.TE_READONLY|wx.TE_CENTER)
+        self.btnSet2 = wx.Button(self, wx.ID_ANY, "Set Point 2")
+        self.lblSet2Status = wx.StaticText(self, wx.ID_ANY, "Point not set",  style=wx.TE_READONLY|wx.TE_CENTER)
         self.setButtonLabels()
 
-        self.btnSave = wx.Button(self.panel, wx.ID_ANY, "Save Values")
-        self.btnCancel = wx.Button(self.panel, wx.ID_ANY, "Cancel")
+        self.btnSave = wx.Button(self, wx.ID_ANY, "Save Values")
+        self.btnCancel = wx.Button(self, wx.ID_ANY, "Cancel")
 
         # Bind the handlers
         #======================================================================
@@ -90,15 +90,17 @@ class CalibrateDialog(wx.Dialog):
 
         topSizer.Add(constantsSizer, 0, wx.ALL|wx.EXPAND, 5)
         topSizer.Add(valueSizer, 0, wx.ALL|wx.EXPAND, 5)
-        topSizer.Add(wx.StaticLine(self.panel), 0, wx.ALL|wx.CENTER, 5)
+        topSizer.Add(wx.StaticLine(self), 0, wx.ALL|wx.CENTER, 5)
         topSizer.Add(btnSet1Sizer, 0, wx.ALL|wx.EXPAND,5)
         topSizer.Add(btnSet2Sizer, 0, wx.ALL|wx.EXPAND,5)
-        topSizer.Add(wx.StaticLine(self.panel), 0, wx.ALL|wx.CENTER, 5)
+        topSizer.Add(wx.StaticLine(self), 0, wx.ALL|wx.CENTER, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT,5)
-        self.panel.SetSizer(topSizer)
+
+        self.SetSizer(topSizer)
         topSizer.Fit(self)
-        #self.Fit()
-        self.Show()
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
 
         pub.subscribe(self.onValueChange, "channel.valueChange")
 

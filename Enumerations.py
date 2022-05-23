@@ -6,6 +6,9 @@ VERSION_NUM_STRING = "1.2"
 def enum(**named_values):
     return type("Enum", (), named_values)
 
+testTimeStrings = ["3 min", "20 min.", "30 min.", "45 min.", "60 min.", "90 min.", "2 hrs.", "3 hrs.", "4 hrs."]
+testTimeValues = [3, 20, 30, 45, 60, 90, 120, 180, 240]
+
 UIcolours = enum(GRAPH_TARGET_TEMP_SERIES="#A40000",
                  GRAPH_AVERAGE_SERIES="#204A87",
                  GRAPH_RAW_TC_SERIES="#E8AB79",
@@ -138,3 +141,6 @@ CHANGE_TRIGGER = 0.0
 INVALID_VALUE = 1e300
 LEGEND_NUM_ROWS = 8
 DEFAULT_TEST_TIME = 60
+SAVE_RATE_LWR = 1
+SAVE_RATE_UPR = 60
+SAVE_RATE_DEFAULT = 15

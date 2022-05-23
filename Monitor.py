@@ -360,7 +360,6 @@ class Monitor(wx.Panel):
         self.frame = frame
         self.panelID = panelID
 
-        #self.panel = wx.Panel(self.parent)
         self.afterburnerMonitorPanel = wx.Panel(self, wx.ID_ANY)
         self.furnaceMonitorPanel = wx.Panel(self, wx.ID_ANY)
         self.unexposedMonitorPanel = wx.Panel(self, wx.ID_ANY)
@@ -401,9 +400,9 @@ class Monitor(wx.Panel):
         self.afterburnerStaticBox.SetLabel("Afterburner TC Monitor (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
 
         # Make the monitor visible
-        #self.topSizer.Fit(self)
-        #self.Layout()
-        #self.Show()
+        self.topSizer.Fit(self)
+        self.Layout()
+        self.Show()
 
     def onDestroy(self):
         pass
@@ -415,7 +414,7 @@ class Monitor(wx.Panel):
         """
 
         # Create the sizers to contain the widgets
-        self.topSizer = wx.FlexGridSizer(rows=2, cols=2, vgap=5, hgap=5) #wx.BoxSizer(wx.VERTICAL)
+        self.topSizer = wx.FlexGridSizer(rows=2, cols=2, vgap=5, hgap=5)
         #topSizer.AddGrowableRow(0, 1)
         self.topSizer.AddGrowableRow(1)#, 4)
 

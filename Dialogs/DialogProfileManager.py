@@ -8,28 +8,28 @@ class ProfileManagerDialog(wx.Dialog):
 
     def __init__(self, parent):
 
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Manage Machine Profiles", style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Manage Machine Profiles")
+
         self.parent = parent
 
         # Create the controls
         #======================================================================
-        self.lblProfileList = wx.StaticText(self.panel, wx.ID_ANY, "Machine Profiles")
+        self.lblProfileList = wx.StaticText(self, wx.ID_ANY, "Machine Profiles")
         profileNames = self.parent.controller.getProfileNames() #["Profile 1", "Profile 2"]
-        self.lstProfiles = wx.ListBox(self.panel,
+        self.lstProfiles = wx.ListBox(self,
                                       wx.ID_ANY,
                                       choices=profileNames,
                                       style=wx.LB_SINGLE|wx.LB_NEEDED_SB,
                                       size=wx.Size(-1,200))
 
-        self.btnAdd = wx.Button(self.panel, wx.ID_ANY, "Add New")
-        self.btnRename = wx.Button(self.panel, wx.ID_ANY, "Rename")
-        self.btnDelete = wx.Button(self.panel, wx.ID_ANY, "Delete")
-        self.btnSelect = wx.Button(self.panel, wx.ID_ANY, "Select")
+        self.btnAdd = wx.Button(self, wx.ID_ANY, "Add New")
+        self.btnRename = wx.Button(self, wx.ID_ANY, "Rename")
+        self.btnDelete = wx.Button(self, wx.ID_ANY, "Delete")
+        self.btnSelect = wx.Button(self, wx.ID_ANY, "Select")
         self.currentProfileName = self.parent.controller.machineSettings.getCurrentProfileName()
-        self.lblCurrentProfile = wx.StaticText(self.panel, wx.ID_ANY, "Currently Selected: " + self.currentProfileName)
+        self.lblCurrentProfile = wx.StaticText(self, wx.ID_ANY, "Currently Selected: " + self.currentProfileName)
 
-        self.btnDone = wx.Button(self.panel, wx.ID_ANY, "Done")
+        self.btnDone = wx.Button(self, wx.ID_ANY, "Done")
 
         # Bind the handlers
         #======================================================================
@@ -61,12 +61,15 @@ class ProfileManagerDialog(wx.Dialog):
 
         topSizer.Add(listSizer, 0, wx.ALL|wx.EXPAND, 5)
         topSizer.Add(btnListSizer, 0, wx.ALL|wx.EXPAND,5)
-        topSizer.Add(wx.StaticLine(self.panel), 0, wx.ALL|wx.CENTER, 5)
+        topSizer.Add(wx.StaticLine(self), 0, wx.ALL|wx.CENTER, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT,5)
-        self.panel.SetSizer(topSizer)
+
+        self.SetSizer(topSizer)
         topSizer.Fit(self)
-        #self.Fit()
-        self.Show()
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
+
 
 
     def onDone(self, event):
@@ -150,19 +153,19 @@ class ProfileManagerDialog(wx.Dialog):
 # The name enter dialog
 #
 #===============================================================================
-
+# TODO Make this have it's own file since we import it elsewhere.
 class NamingDialog(wx.Dialog):
 
     def __init__(self, parent, title):
 
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, title, style=wx.RESIZE_BORDER)
-        self.panel = wx.Panel(self)
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, title)
+
         self.parent = parent
 
-        self.txtName = wx.TextCtrl(self.panel, wx.ID_ANY, "")
-        self.btnSave = wx.Button(self.panel, wx.ID_ANY, "Save")
+        self.txtName = wx.TextCtrl(self, wx.ID_ANY, "")
+        self.btnSave = wx.Button(self, wx.ID_ANY, "Save")
         self.btnSave.Disable()
-        self.btnCancel = wx.Button(self.panel, wx.ID_ANY, "Cancel")
+        self.btnCancel = wx.Button(self, wx.ID_ANY, "Cancel")
 
         # Bind the handlers
         #======================================================================
@@ -184,13 +187,14 @@ class NamingDialog(wx.Dialog):
         btnSizer.Add(self.btnCancel, 0, wx.ALL, 5)
 
         topSizer.Add(txtSizer, 0, wx.ALL|wx.EXPAND,5)
-        topSizer.Add(wx.StaticLine(self.panel), 0, wx.ALL|wx.CENTER, 5)
+        topSizer.Add(wx.StaticLine(self), 0, wx.ALL|wx.CENTER, 5)
         topSizer.Add(btnSizer, 0, wx.ALL|wx.ALIGN_RIGHT,5)
-        self.panel.SetSizer(topSizer)
-        topSizer.Fit(self)
-        self.Fit()
-        self.Show()
 
+        self.SetSizer(topSizer)
+        topSizer.Fit(self)
+        topSizer.SetSizeHints(self)
+        self.Layout()
+        self.Centre()
 
     def onSave(self, event):
 

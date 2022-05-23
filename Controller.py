@@ -8,11 +8,8 @@ from TestData import TestData
 
 import time
 import os
-#import sys
 from pubsub import pub
 import wx
-#import json
-#import numpy as np
 import random
 
 # TODO create a test class that actually runs the test. That's what the controller originally was, but has grown beyond that scope.
@@ -52,6 +49,7 @@ class Controller():
         self.defaultSavePath = os.getcwd() # Current working directory
         self.loadSavedMachineSettings()  # Load the machine settings, or use the defaults
 
+        # For expandable machines (ones with seperate TC case)
         # Here is where we need to poll the Phidget and check if it has less than the number of hubs
         # We can then load a profile that is correct for it.
 
@@ -61,8 +59,7 @@ class Controller():
         # Make a timer to add data
         self.timer = wx.Timer(self.parent, -1)
         self.parent.Bind(wx.EVT_TIMER, self.onTimer, self.timer)
-        #self.timer = wx.Timer(self, -1)
-        #self.Bind(wx.EVT_TIMER, self.onTimer, self.timer)
+
 
 ################################################################################
 # Machine Settings Management
@@ -82,6 +79,7 @@ class Controller():
         self.defaultSavePath = self.machineSettings.defaultSavePath
         self.savePath = self.machineSettings.defaultSavePath
 
+
     def saveSettings(self):
         try:
             self.machineSettings.saveSettings()
@@ -90,6 +88,7 @@ class Controller():
 
         except:
             warnDialog(self.parent, "Unable to save settings.")
+
 
     # TODO Check what happens if the folder is missing.
     def setDefaultSavePath(self, path, isBackup):
@@ -106,15 +105,15 @@ class Controller():
         except:
             warnDialog(self.parent, "Unable to save settings.")
 
-    def setBackupSavePath(self, path):
-        try:
-            self.defaultSavePath = path  # TODO validate this
 
-            # TODO Make all places that look for the controller.defaultSavePath get from the machine settings
-            self.machineSettings.defaultSavePath = path
-            self.saveSettings()
-        except:
-            warnDialog(self.parent, "Unable to save settings.")
+    # def setBackupSavePath(self, path):
+    #     try:
+    #         self.defaultSavePath = path
+    #         self.machineSettings.defaultSavePath = path
+    #         self.saveSettings()
+    #     except:
+    #         warnDialog(self.parent, "Unable to save settings.")
+
 
 ################################################################################
 # Test Management
@@ -143,7 +142,7 @@ class Controller():
 
         self.startTime = 0
         self.elapsedTime = 0
-        self.updateRate = 0.5  # Seconds between each data gather
+        self.updateRate = 1  # Seconds between each data gather
         #self.saveTick = 0
 
         self.testData = TestData(self.testSettings, self.machineSettings)  # Holds the data that is recorded and calculated thoughout the test
@@ -163,6 +162,7 @@ class Controller():
         """
         if self.logger.writeHeaders(self.testSettings.fileHeader, self.tableHeader):  # Create the test log and write the header data in.
             self.stopTest()  # Failed to create log file.
+            warnDialog(self.parent, "There was an error creating the log file.\nIs the disk full?\nDo you have correct permissions?\nTest will be aborted now.")
             return
 
         pub.sendMessage("status.flash", msg="Starting test.")
@@ -187,12 +187,17 @@ class Controller():
         self.lastWritten = self.elapsedTime
         self.timer.StartOnce(self.updateRate*1000) # BUGBUGBUG 
 
+
     def stopTest(self):
+        """
+        Let the UI know that the test has stopped. Do some cleanup.
+        """
         pub.sendMessage("status.update", msg="Test stopped.")
         self.timer.Stop()
         self.isTestRunning = False
         self.testData.stopListening()
         pub.sendMessage("test.stopped")
+
 
     def onTimer(self, event):
         """
@@ -205,11 +210,18 @@ class Controller():
         - Checks if the test time has run out
         """
 
-        # DEBUGGING Making fake data
+        # # DEBUGGING Making fake data
         if self.parent.noConnect:
             for channelIdx in self.selectedUnexposedChannels:
                 num = random.uniform(10,90)
-                
+                pub.sendMessage("channel.valueChange",
+                                    sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
+                                    channel=channelIdx,
+                                    valueRaw=num,
+                                    valueNumeric=num,
+                                    valueFormatted="{0:2.3f}".format(num))
+            for channelIdx in self.selectedFurnaceChannels:
+                num = random.uniform(10,90)
                 pub.sendMessage("channel.valueChange",
                                     sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                     channel=channelIdx,
@@ -270,6 +282,7 @@ class Controller():
             # Let the view know we're done here.
             pub.sendMessage("test.finished")
 
+
     def calcTimeCorrection(self):
         """
         If the test 3/4's through? Is the test >= 30 minutes? If so calculate the correction factor.
@@ -283,6 +296,7 @@ class Controller():
             self.isCorrectionCalculated = True
 
             pub.sendMessage("test.correction", factor=self.correctionMinutes)
+
 
     def updateData(self):
         """
@@ -318,7 +332,6 @@ class Controller():
                         ch3=self.testData.ch3PressureData,
                         ch2=self.testData.ch2PressureData,
                         ch1=self.testData.ch1PressureData)
-        #print("In Controller - ", self.testData.timeData) #DEBUGGING
         pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData,
                         avgData=self.testData.unexposedAvgData,
                         rawData=self.testData.unexposedRawData)
@@ -393,6 +406,7 @@ class Controller():
 
         self.updateIndicators()
 
+
     def updateIndicators(self):
         """
         Fill out the indicators for the users
@@ -439,6 +453,7 @@ class Controller():
                         lblValue=value,
                         warn=shouldWarn)
 
+
     def buildCurrentRow(self):
         """
         Creates the row of data in formatted strings that is to be passed to the grid and the logger.
@@ -450,7 +465,6 @@ class Controller():
 
         # Make a timestamp
         h, m, s = parseTime(self.elapsedTime)
-        #timeString = "%d:%02d:%02.3f" % (h, m, s)
         s = round(s)
 
         # Make sure there are no rounding errors that would make minutes or seconds show as 60
