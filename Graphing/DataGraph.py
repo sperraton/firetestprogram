@@ -1,12 +1,7 @@
 import wx
 from math import ceil
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, pressurePlacementLabels, DEFAULT_TEST_TIME
-from Graphing.BaseGraph import BaseGraph, PlotSettings, AxisSettings
-from matplotlib.animation import FuncAnimation
-
-#import matplotlib       # Provides the graph figures
-#matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
-
+from Graphing.BaseGraph import BaseGraph, PlotSettings, AxesSettings
 
 
 ################################################################################
@@ -14,21 +9,12 @@ from matplotlib.animation import FuncAnimation
 ################################################################################
 
 class UnexposedGraph(BaseGraph):
-    def __init__(self, parent, frame, panelID):
+    def __init__(self, parent, frame, panelID, axesSettings=None):
         """
         Prepare the graph plots for the unexposed data
         """
 
-        self.graphAxesSettings = AxisSettings("Unexposed Temperature", 
-                                    "Time (Min.)", 
-                                    "Temp. (Deg. C)", 
-                                    0, 
-                                    DEFAULT_TEST_TIME, 
-                                    0, 
-                                    GRAPH_VERT_PADDING*1000)
-
-        BaseGraph.__init__(self, parent, frame, panelID)
-
+        BaseGraph.__init__(self, parent, frame, panelID, axesSettings)
         self.initUnexposedTemperaturePlot()
 
 
@@ -46,11 +32,11 @@ class UnexposedGraph(BaseGraph):
         self.failureThreshSettings = PlotSettings(
             [],#self.frame.controller.unexposedAvgData,
             #linewidth=1.5,
+            linestyle=wx.PENSTYLE_SHORT_DASH,
             label="Failure Threshold",
             colour=UIcolours.GRAPH_THRESH_SERIES,
             zorder=0)
 
-        # The Raw TC's a list 2Dlines object
         # BUG BUG BUG The labels don't get changed when they are set in the sensor settings.
         # They only get set when the graph is initialised at the start of the program.
         # Going to have to call the legend making when the test is started.
@@ -70,18 +56,9 @@ class UnexposedGraph(BaseGraph):
                 colour=colours[i],
                 zorder=2))
 
+        
+        self.initPlotLines([self.unexpAvgSettings, self.failureThreshSettings]+self.unexpRawSettings)
 
-        # Get them all squared away in a list.
-        self.graphCanvas.graphPlotSettings.clear()
-        self.graphCanvas.graphPlotSettings.append(self.unexpAvgSettings)
-        self.graphCanvas.graphPlotSettings.append(self.failureThreshSettings)
-        self.graphCanvas.graphPlotSettings += self.unexpRawSettings
-        self.graphCanvas.initPlot(isAutoscale=False)
-
-        #self.animator = FuncAnimation(self.graphCanvas.graphFigure, self.updateUnexposedData, self.emitter, interval=100, blit=True)
-
-    #def emitter(self):
-    #    return self.frame.getLatestUnexpData() # Grab only the latest posted data
 
     def updateUnexposedData(self, timeData, avgData, rawData):
         """
@@ -100,7 +77,7 @@ class UnexposedGraph(BaseGraph):
                 continue
         
         # All the plots got their new data. Time to draw to screen.
-        self.graphCanvas.drawGraph()
+        #self.graphCanvas.drawGraph()
        
 
 
@@ -126,9 +103,30 @@ class UnexposedGraph(BaseGraph):
         """
         super().setTestTimeMinutes(minutes)
         # TODO update this for the new graph
-        threshold = self.graphCanvas.graphPlots[1].get_ydata()[0]
+        if self.graphCanvas.graphPlots[1].points:
+            threshold = self.graphCanvas.graphPlots[1].points[0][1] # .get_ydata()[0]
+        else:
+            threshold = 20
+
         if threshold > 0:
             self.updateUnexposedThreshold(threshold) # Continue on the threshold line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ################################################################################
@@ -136,24 +134,18 @@ class UnexposedGraph(BaseGraph):
 ################################################################################
 
 class FurnaceGraph(BaseGraph):
-    def __init__(self, parent, frame, panelID):
+    def __init__(self, parent, frame, panelID, axesSettings=None):
         """
         Prepare the graph plots for the furnace data
         """
-        # Make the axis title, labels, and legend
-        self.graphAxesSettings = AxisSettings("Furnace Temperature", 
-                                            "Time (Min.)", 
-                                            "Temp. (Deg. C)", 
-                                            0, 
-                                            DEFAULT_TEST_TIME, 
-                                            0, 
-                                            1200)
-
-        BaseGraph.__init__(self, parent, frame, panelID)
-
+        BaseGraph.__init__(self, parent, frame, panelID, axesSettings)
         self.initFurnaceTemperaturePlot()
 
     def initFurnaceTemperaturePlot(self):
+        """
+        Creates all the graph line settings and calls the graph plot init function
+        """
+
         # The target temperature
         self.targetSettings = PlotSettings(
                     [],
@@ -188,12 +180,7 @@ class FurnaceGraph(BaseGraph):
                 colour=colours[i],
                 zorder=2))
 
-        # Get them all squared away in a list.
-        self.graphCanvas.graphPlotSettings.clear()
-        self.graphCanvas.graphPlotSettings.append(self.targetSettings)
-        self.graphCanvas.graphPlotSettings.append(self.furnAvgSettings)
-        self.graphCanvas.graphPlotSettings += self.furnRawSettings
-        self.graphCanvas.initPlot(isAutoscale=False)
+        self.initPlotLines([self.targetSettings, self.furnAvgSettings]+self.furnRawSettings)
 
 
     def updateFurnaceData(self, timeData, avgData, rawData):
@@ -213,14 +200,19 @@ class FurnaceGraph(BaseGraph):
             self.graphCanvas.updateData(timeData, columnVector, plotIndex=i+2) # Give the plot the updated data
         
 
-    def updateFurnaceTarget(self, timeData, targetData):
+    def createTargetCurveArray(self, testLengthMinutes):
         """
-        Draws the furnace target curve on the graph
+        Recalculates the current test's target curve given a set test length.
         """
+        self.targetTempCurve = [] # blank the old data
+        timeData = [] # NOTE We can make this to match the refresh rate
 
-        self.graphCanvas.updateData(timeData, targetData, plotIndex=0) # Give the plot the updated data
-
-
+        for seconds in range(0, int(ceil(testLengthMinutes))*60):
+            timeData.append(seconds/60) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
+            self.targetTempCurve.append(self.frame.controller.testSettings.calculateTargetCurve(seconds))
+        
+        # Give the data to the graph for drawing
+        self.graphCanvas.updateData(timeData, self.targetTempCurve, plotIndex=0) # Give the plot the updated data
 
 
 
@@ -237,19 +229,10 @@ class FurnaceGraph(BaseGraph):
 
 
 class PressureGraph(BaseGraph):
-    def __init__(self, parent, frame, panelID):
+    def __init__(self, parent, frame, panelID, axesSettings=None):
 
-        # Make the axis title, labels, and legend
-        self.graphAxesSettings = AxisSettings("Furnace Pressure", 
-                                            "Time (Min.)", 
-                                            "Press. (in H2O)", 
-                                            0, 
-                                            DEFAULT_TEST_TIME, 
-                                            -0.25, 
-                                            0.25)
 
-        BaseGraph.__init__(self, parent, frame, panelID)
-
+        BaseGraph.__init__(self, parent, frame, panelID, axesSettings)
         self.initPressurePlot()
 
 
@@ -276,13 +259,7 @@ class PressureGraph(BaseGraph):
             colour=UIcolours.GRAPH_PRESS_LOW_SERIES
             )
 
-        # Get them all squared away in a list.
-        self.graphCanvas.graphPlotSettings.clear()
-        self.graphCanvas.graphPlotSettings.append(self.presCh1Settings)
-        self.graphCanvas.graphPlotSettings.append(self.presCh2Settings)
-        self.graphCanvas.graphPlotSettings.append(self.presCh3Settings)
-        self.graphCanvas.initPlot(isAutoscale=True)
-
+        self.initPlotLines([self.presCh1Settings, self.presCh2Settings, self.presCh3Settings])
 
     def updatePressureData(self, timeData, ch3Data, ch2Data, ch1Data):
         """
@@ -297,56 +274,57 @@ class PressureGraph(BaseGraph):
         self.graphCanvas.updateData(timeData, ch3Data, plotIndex=2)
 
 
-    # TODO Autoscaling belongs in the GraphCanvas object. One should just tell the graph to autoscale and
-    #      let the graph figure that out.
-    def autoScale(self, timeData, ch3Data, ch2Data, ch1Data):
+    # # TODO Autoscaling belongs in the GraphCanvas object. One should just tell the graph to autoscale and
+    # #      let the graph figure that out.
+    # def autoScale(self, timeData, ch3Data, ch2Data, ch1Data):
 
-        if len(timeData) == 1: # Only do on first point. TODO Need a better way to do this.
-            if self.frame.controller.testSettings.pressureUnits == "inH2O":
-                padding = 0.1
-            else:
-                padding = 5
+    #     if len(timeData) == 1: # Only do on first point. TODO Need a better way to do this.
+    #         if self.frame.controller.testSettings.pressureUnits == "inH2O":
+    #             padding = 0.1
+    #         else:
+    #             padding = 5
 
-            # TODO: just loop through the allData and remove any bad values
-            # Strip out our bad value placeholder
-            if -9999 in ch3Data:
-                ch3Data = []
-            if -9999 in ch2Data:
-                ch2Data = []
-            if -9999 in ch1Data:
-                ch1Data = []
+    #         # TODO: just loop through the allData and remove any bad values
+    #         # Strip out our bad value placeholder
+    #         if -9999 in ch3Data:
+    #             ch3Data = []
+    #         if -9999 in ch2Data:
+    #             ch2Data = []
+    #         if -9999 in ch1Data:
+    #             ch1Data = []
 
-            allData = ch3Data + ch2Data + ch1Data
+    #         allData = ch3Data + ch2Data + ch1Data
 
-            if allData: # Avoid throwing an error by checking that we have data left
-                topLim = max(allData) + padding
-                botLim = min(allData) - padding
+    #         if allData: # Avoid throwing an error by checking that we have data left
+    #             topLim = max(allData) + padding
+    #             botLim = min(allData) - padding
 
-                self.graphCanvas.graphAxes.set_ylim(bottom=botLim, top=topLim)
-                self.graphCanvas.graphAxes.relim()
+    #             self.graphCanvas.graphAxes.set_ylim(bottom=botLim, top=topLim)
+    #             self.graphCanvas.graphAxes.relim()
         
-        #Need both of these in order to rescale
-        # TODO Try the following out for autoscaling.
-        #self.graphCanvas.graphAxes.relim()
-        #self.graphCanvas.graphAxes.autoscale_view()
+    #     #Need both of these in order to rescale
+    #     # TODO Try the following out for autoscaling.
+    #     #self.graphCanvas.graphAxes.relim()
+    #     #self.graphCanvas.graphAxes.autoscale_view()
 
 
 
     def hideUnusedPressureSensors(self):
-        # Hide the pressure sensors we aren't using.
-        handles, labels = self.graphCanvas.graphAxes.get_legend_handles_labels()
+        pass # DEBUGGING
+        # # Hide the pressure sensors we aren't using.
+        # handles, labels = self.graphCanvas.graphAxes.get_legend_handles_labels()
 
-        for i in range(3):
-            if self.frame.controller.isLabelInSelectedPressure(pressurePlacementLabels[i+1]):
-                self.graphCanvas.graphPlots[i].set_visible(True)
-                labels[i] = pressurePlacementLabels[i+1]
-                handles[i].set_linestyle(wx.PENSTYLE_SOLID)
-            else:
-                self.graphCanvas.graphPlots[i].set_visible(False)
-                labels[i] = "" # None
-                # handles[i] = None #.set_linestyle("")
+        # for i in range(3):
+        #     if self.frame.controller.isLabelInSelectedPressure(pressurePlacementLabels[i+1]):
+        #         self.graphCanvas.graphPlots[i].set_visible(True)
+        #         labels[i] = pressurePlacementLabels[i+1]
+        #         handles[i].set_linestyle(wx.PENSTYLE_SOLID)
+        #     else:
+        #         self.graphCanvas.graphPlots[i].set_visible(False)
+        #         labels[i] = "" # None
+        #         # handles[i] = None #.set_linestyle("")
 
 
-        self.graphCanvas.graphAxes.legend(handles, labels, loc='upper left', fontsize="x-small", labelspacing=0.2, ncol=2)
-        self.graphCanvas.draw()
-        self.graphCanvas.flush_events()
+        # self.graphCanvas.graphAxes.legend(handles, labels, loc='upper left', fontsize="x-small", labelspacing=0.2, ncol=2)
+        # self.graphCanvas.draw()
+        # self.graphCanvas.flush_events()

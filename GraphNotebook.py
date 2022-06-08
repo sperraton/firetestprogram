@@ -2,9 +2,10 @@ import wx
 from pubsub import pub
 import os
 
-from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph
+from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph, AxesSettings
 from DataGrid import DataGrid
 from Controller import Controller
+from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, pressurePlacementLabels, DEFAULT_TEST_TIME
       
 
 class GraphNotebook(wx.Notebook):
@@ -63,7 +64,7 @@ class GraphNotebook(wx.Notebook):
         channel monitor.
         """
 
-        self.dataGridTab.addDataRow(row)
+        # DEBUGGING self.dataGridTab.addDataRow(row)
 
     def OnDestroy(self):
         pub.unsubscribe(self.addDataRow, "dataGrid.addRow")
@@ -87,9 +88,35 @@ class MainGraphPanel(wx.Panel):
         # Create the graph panels
         self.panelList = []
 
-        self.unexposedTempGraph = UnexposedGraph(self.subSplitter, self, 1) # id=1
-        self.pressureGraph = PressureGraph(self.subSplitter, self, 3) # id=3
-        self.furnaceTempGraph = FurnaceGraph(self.topSplitter, self, 2) # id=2
+        # Make the axis title, labels, and legend
+        graphAxesSettings = AxesSettings("Unexposed Temperature", 
+                                        "Time (Min.)", 
+                                        "Temp. (Deg. C)", 
+                                        0, 
+                                        DEFAULT_TEST_TIME, 
+                                        0, 
+                                        GRAPH_VERT_PADDING*1000)
+        self.unexposedTempGraph = UnexposedGraph(self.subSplitter, self, 1, graphAxesSettings) # id=1
+        
+                
+        graphAxesSettings = AxesSettings("Furnace Temperature", 
+                                        "Time (Min.)", 
+                                        "Temp. (Deg. C)", 
+                                        0, 
+                                        DEFAULT_TEST_TIME, 
+                                        0, 
+                                        1200)
+        self.furnaceTempGraph = FurnaceGraph(self.topSplitter, self, 2, graphAxesSettings) # id=2
+        
+                # Make the axis title, labels, and legend
+        graphAxesSettings = AxesSettings("Furnace Pressure", 
+                                        "Time (Min.)", 
+                                        "Press. (in H2O)", 
+                                        0, 
+                                        DEFAULT_TEST_TIME, 
+                                        -0.25, 
+                                        0.25)
+        self.pressureGraph = PressureGraph(self.subSplitter, self, 3, graphAxesSettings) # id=3
 
         self.panelList.append(self.unexposedTempGraph)
         self.panelList.append(self.pressureGraph)
@@ -101,6 +128,7 @@ class MainGraphPanel(wx.Panel):
         sizer.Add(self.topSplitter, 1, wx.EXPAND)
         self.SetSizer(sizer)
 
+        self.isDirty = False # track if graph needs redrawing
         pub.subscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
         pub.subscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
         pub.subscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
@@ -178,8 +206,8 @@ class MainGraphPanel(wx.Panel):
         """
         # Give the data to the graph
         self.furnaceTempGraph.updateFurnaceData(timeData, avgData, rawData)
-        self.furnaceTempGraph.Update()#Layout()
-        self.Refresh()
+        #self.Fit() # Trigger redraw
+        
 
     def updateUnexposedTempGraph(self, timeData, avgData, rawData):
         """
@@ -187,94 +215,59 @@ class MainGraphPanel(wx.Panel):
         """
         # Give the data to the graph
         self.unexposedTempGraph.updateUnexposedData(timeData, avgData, rawData)
-        self.unexposedTempGraph.graphCanvas.drawGraph()
-        self.unexposedTempGraph.graphCanvas.OnSize(None)
-        self.unexposedTempGraph.graphCanvas.Layout()
-        self.unexposedTempGraph.graphCanvas.Refresh()
-        self.unexposedTempGraph.graphCanvas.Update()
-
-        # self.unexposedTempGraph.Layout()
-        # self.unexposedTempGraph.Refresh()
-        # self.unexposedTempGraph.Update()
-
-        # self.subSplitter.Refresh()
-        # self.subSplitter.Update()
-
-        #self.Layout()
-        #self.Refresh()
-        #self.Update()
-
-        # self.parent.Layout()
-        # self.parent.Refresh()
-        # self.parent.Update()
-
-        # #self.topSplitter.SendSizeEvent()
-        #self.unexposedTempGraph.graphCanvas.SendSizeEvent()
+        # self.unexposedTempGraph.graphCanvas.drawGraph()
+        #self.Fit() # Trigger redraw
         
-        # pos = self.topSplitter.GetSashPosition()-1
-        # self.topSplitter.SetSashPosition(pos)
-        # pos = self.topSplitter.GetSashPosition()+1
-        # self.topSplitter.SetSashPosition(pos)
-
-
-        # size = self.subSplitter.Window1.GetSize()
-        # size.width += 1
-        # self.subSplitter.Window1.SetSize(size)
-
-        self.subSplitter.Window1.onPaint(None)
-        self.subSplitter.Window2.onPaint(None)
-        self.topSplitter.Window1.onPaint(None)
-
-        # self.subSplitter.Window1.SendSizeEvent()
-        # self.subSplitter.Window1.Refresh()
-        # self.subSplitter.Window1.Update()
 
     def updateUnexposedThreshold(self, thresh):
         """
-        Draws the threshold line on the Unexposed graph
+        Draws the old line on the Unexposed graph
         """
         self.unexposedTempGraph.updateUnexposedThreshold(thresh)
-        self.unexposedTempGraph.Layout()
-        self.Refresh()
+        #self.Fit() # Trigger redraw
+        
 
     def updatePressureGraph(self, timeData, ch3, ch2, ch1):
         """
         Draws on the graph the new data for the pressure sensors
         """
         self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
-        self.pressureGraph.Layout()
-        self.Refresh()
+        #self.Fit() # Trigger redraw
+        self.redrawAllGraphs()
+        
 
+    def redrawAllGraphs(self):
+        self.furnaceTempGraph.refreshGraph()
+        self.unexposedTempGraph.refreshGraph()
+        self.pressureGraph.refreshGraph()
+        self.Fit() # Figure ths all out
 
 
 
     def initGraphForTest(self, testTime):
 
         # Reset the lines of the raw data on the graphs
-        #self.furnaceTempGraph.graphCanvas.clearGraph()
-        self.furnaceTempGraph.initFurnaceTemperaturePlot()
+        # Inits the plot settings for each of the lines 
+        # #and creates the line objects in the graph canvas
 
-        #self.unexposedTempGraph.graphCanvas.clearGraph()
+        self.furnaceTempGraph.graphCanvas.clearGraph()
+        self.furnaceTempGraph.initFurnaceTemperaturePlot() 
+
+        self.unexposedTempGraph.graphCanvas.clearGraph()
         self.unexposedTempGraph.initUnexposedTemperaturePlot()
 
-        #self.pressureGraph.graphCanvas.clearGraph()
+        self.pressureGraph.graphCanvas.clearGraph()
         self.pressureGraph.initPressurePlot()
 
 
         # Scale the x-axis for the test time.
         # TODO: make this a function that also gets called in testExtend()
-        #DEBUGGING self.furnaceTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.furnaceTempGraph.setTestTimeMinutes(testTime)
-
-        #DEBUGGING self.unexposedTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.unexposedTempGraph.setTestTimeMinutes(testTime)
-
-        #DEBUGGING self.pressureGraph.graphCanvas.scaleGraphXaxis(0, testTime)
         self.pressureGraph.setTestTimeMinutes(testTime)
 
         # Draw the new target curve
-        # TODO Remeber that this is to be moved to the graph object.
-        self.frame.createTargetCurveArray(testTime) # Recalc the target to fill up new time
+        self.furnaceTempGraph.createTargetCurveArray(testTime) # Recalc the target to fill up new time
 
         # Set the y-axis labels to the correct units
         self.furnaceTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
@@ -321,11 +314,6 @@ class MainGraphPanel(wx.Panel):
         Set the specified amount of minutes to the graphs.
         """
 
-        #self.furnaceTempGraph.scaleGraphXaxis(0, amtMinutes)
         self.furnaceTempGraph.setTestTimeMinutes(amtMinutes)
-
-        #self.unexposedTempGraph.scaleGraphXaxis(0, amtMinutes)
         self.unexposedTempGraph.setTestTimeMinutes(amtMinutes)
-
-        #self.pressureGraph.scaleGraphXaxis(0, amtMinutes)
         self.pressureGraph.setTestTimeMinutes(amtMinutes)

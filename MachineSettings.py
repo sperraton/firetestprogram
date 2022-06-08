@@ -54,7 +54,7 @@ class MachineSettings():
             # TODO, Don't swallow errors. Although I think that this is caught in the calling func.
             #infoDialog(self.parent, "No previously saved settings.")
             print("!!! There was an error loading settings !!!")
-            print("!!! Could not open the settings.json file !!!")
+            print("!!! Could not parse the settings.json file !!!")
             pass
 
 
@@ -78,7 +78,7 @@ class MachineSettings():
         # Determine the number of TC channels based on number of hubs
         # BUG BUG BUG This relies on the number of TC channels per hub is constant per machine.
         #             The machine may break this assumption in the future.
-        self.numTC = self.settingsData["machineSetup"].get("numTC", NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums))
+        self.numTC = self.settingsData["machineSetup"].get("numTC",)# (NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums)))
         self.numPres = self.settingsData["machineSetup"].get("numPres", 3)
         self.pressureSenseIsVoltage = self.settingsData["machineSetup"].get("pressureIsVoltage", []) # Is this channel wired for current or voltage input
         

@@ -67,7 +67,7 @@ class Main(wx.Frame):
         self.unexposedTempGraph.initUnexposedTemperaturePlot()
 
         # Scale the x-axis for the test time.
-        self.unexposedTempGraph.graphCanvas.scaleGraphXaxis(0, testTime)
+        self.unexposedTempGraph.graphCanvas.scaleGraphXaxis(testTime)
         self.unexposedTempGraph.setTestTimeMinutes(testTime)
 
         # Draw the new target curve

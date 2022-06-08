@@ -15,6 +15,7 @@ from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigCanvas
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLocator
 #from matplotlib.backends.backend_wxagg import NavigationToolbar2WxAgg as NavigationToolbar
 import numpy as np
+import colorsys
 
 class PlotSettings():
 
@@ -47,7 +48,7 @@ class PlotSettings():
         # wx.PENSTYLE_LAST_HATCH Last of the hatch styles (inclusive).
 
 
-class AxisSettings():
+class AxesSettings():
     def __init__(self, title, xlabel, ylabel, xmin, xmax, ymin, ymax): 
         self.title = title
         self.xlabel = xlabel
@@ -73,25 +74,19 @@ class GraphCanvas(PlotCanvas):
     The graphing object
     """
     def __init__(self, parent, frame, panelID, graphAxesSettings=None):
+        
         self.parent = parent
         self.frame = frame
         self.panelID = panelID
 
-        #self.enablePointLabel = False
+        PlotCanvas.__init__(self, self.parent)
 
-        self.avgDataVisible = True # Start with the average data visible
-        self.rawDataVisible = True # Start with the raw data visible.
-
-        self.legendVisible = True # Start with the legend visible
-        self.numCols = 1 # Keep track for the legend when toggling visibility
-        
         self.graphPlotSettings = [] # List of setting for each plot
-        self.graphPlots = [] # List of plots heald in this graph
-
+        self.graphPlots = [] # List of plots held in this graph
 
         # Check if this wasn't setup by a containing object
         if graphAxesSettings is None:
-            self.graphAxesSettings = AxisSettings("UNINIT.", 
+            self.graphAxesSettings = AxesSettings("UNINIT.", 
                                         "X", 
                                         "Y", 
                                         0, 
@@ -101,33 +96,28 @@ class GraphCanvas(PlotCanvas):
         else:
             self.graphAxesSettings = graphAxesSettings
         
-        self.initGraphObjects()
         self.SetMinSize(wx.Size(0, 0))
-        self.Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick) # Ugly. use pubsub for this
 
+        self.canvas.Id = self.panelID # For keeping track in the swap
+        #self.canvas.Bind(wx.EVT_LEFT_DCLICK, self.OnMouseDoubleClick)
+        #self.Bind(wx.EVT_LEFT_DCLICK, self.onMouseDoubleClick) 
+        
     ###########################################################################
     # Handlers
     ###########################################################################
-    def initGraphObjects(self):
-        """
-        Make the graph objects
-        """
-
-        PlotCanvas.__init__(self, self.parent)
+    def OnMouseDoubleClick(self, event):
         
-        # define the function for drawing pointLabels
-        #self.pointLabelFunc = self.DrawPointLabel
-        # Create mouse event for showing cursor coords in status bar
-        #self.Bind(wx.EVT_LEFT_DOWN, self.OnMouseLeftDown)
-        # Show closest point when enabled
-        #self.Bind(wx.EVT_MOTION, self.OnMotion)
- 
+        self.frame.panelDblClick(event) # Ugly. use pubsub for this
+        super().OnMouseDoubleClick(event)
 
     def initPlot(self, isAutoscale):
         """
         Prepare the graph lines and legends with appropriate styles for 
         the type of data we will be graphing
+
+        This is called from the containing parent when wanting to init the graph for the test 
         """
+        self.graphPlots.clear() # Don't make twice. Clear out old plotline objects
 
         # Create all the plot objects for this graph
         # Plot objects hold the data and style for each thing to be plotted
@@ -148,116 +138,45 @@ class GraphCanvas(PlotCanvas):
                                     title=self.graphAxesSettings.title,
                                     xLabel=self.graphAxesSettings.xlabel,
                                     yLabel=self.graphAxesSettings.ylabel)
-
-        numSelected = len(self.frame.controller.selectedFurnaceChannels)
-        self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
-        self.createLegend(numCols=self.numCols)
+        
+        # numSelected = len(self.frame.controller.selectedFurnaceChannels)
+        # self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
+        # self.createLegend(numCols=self.numCols)
 
         self.drawGraph()
-
+        
 
     def initGraphAxes(self):#, title, xlabel, ylabel, xmin, xmax, ymin, ymax):
         """
         Sets the look of the graph.
         """
-
+        #self.SetDoubleBuffered(True)
         # TODO comb through the wxplot settings I can add here
 
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.enableLegend = True
+        self.enableLegend = False
         self.fontSizeTitle = 12
         self.fontSizeLegend = 6
         self.fontSizeAxis = 8
         #self.xSpec = "none"
         #self.ySpec = "none"
-        self.enableAntiAliasing = True
-        self.enableZoom = True
-        self.enableDrag = True
-
-        # self.graphAxes.set_facecolor(UIcolours.GRAPH_FACE)
-        # self.graphAxes.set_title(title, size=14)
-        # self.graphAxes.set_xlabel(xlabel, size=10)
-        # self.graphAxes.set_ylabel(ylabel, size=10)
-        # self.graphAxes.set_xbound(lower=xmin, upper=xmax)
-        # self.graphAxes.set_ybound(lower=ymin, upper=ymax)
-        # self.graphAxes.grid(True, which="major", color=UIcolours.GRAPH_GRID_MAJOR, linestyle="--", linewidth=1.05, zorder=0)
-        # self.graphAxes.grid(True, which="minor", color=UIcolours.GRAPH_GRID_MINOR, linestyle=":", linewidth=1, zorder=0)
-        # self.graphAxes.minorticks_on()
-
-        # self.scaleTickMarks(xmax)
-
-        # self.graphAxes.tick_params(which='minor', length=4, color=UIcolours.GRAPH_GRID_MINOR)
-        # self.graphAxes.tick_params(which='major', length=7, color=UIcolours.GRAPH_GRID_MAJOR)
-
-        #self.graphFigure.tight_layout()
-        #self.graphFigure.subplots_adjust(bottom=0.2, left=0.1)
+        #self.enableAntiAliasing = True
+        #self.enableZoom = True
+        #self.enableDrag = True # Only zoom or drag enabled
 
 
     ###########################################################################
     # Handlers
     ###########################################################################
 
-#
-    def DrawPointLabel(self, dc, mDataDict):
-        """
-        This is the fuction that defines how the pointLabels are plotted
-
-        :param dc: DC that will be passed
-        :param mDataDict: Dictionary of data that you want to use
-                          for the pointLabel
-
-        As an example I have decided I want a box at the curve point
-        with some text information about the curve plotted below.
-        Any wxDC method can be used.
-
-        """
-        dc.SetPen(wx.Pen(wx.BLACK))
-        dc.SetBrush(wx.Brush(wx.BLACK, wx.BRUSHSTYLE_SOLID))
-
-        sx, sy = mDataDict["scaledXY"]  # scaled x,y of closest point
-        # 10by10 square centered on point
-        dc.DrawRectangle(sx - 5, sy - 5, 10, 10)
-        px, py = mDataDict["pointXY"]
-        cNum = mDataDict["curveNum"]
-        pntIn = mDataDict["pIndex"]
-        legend = mDataDict["legend"]
-        # make a string to display
-        s = "Crv# %i, '%s', Pt. (%.2f,%.2f), PtInd %i" % (
-            cNum, legend, px, py, pntIn)
-        dc.DrawText(s, sx, sy + 1)
-
-#
-    # def OnMouseLeftDown(self, event):
-    #     s = "Left Mouse Down at Point: (%.4f, %.4f)" % self.GetXY(event)
-    #     self.SetStatusText(s) # TODO Pub this info to the main UI
-    #     event.Skip()  # allows plotCanvas OnMouseLeftDown to be called
-
-#
-    def OnMotion(self, event):
-        # show closest point (when enbled)
-        if self.enablePointLabel:
-            # make up dict with info for the pointLabel
-            # I've decided to mark the closest point on the closest curve
-            dlst = self.GetClosestPoint(
-                self.GetXY(event),
-                pointScaled=True,
-            )
-            if dlst != []:  # returns [] if none
-                curveNum, legend, pIndex, pointXY, scaledXY, distance = dlst
-                # make up dictionary to pass to my user function (see
-                # DrawPointLabel)
-                mDataDict = {"curveNum": curveNum,
-                             "legend": legend,
-                             "pIndex": pIndex,
-                             "pointXY": pointXY,
-                             "scaledXY": scaledXY}
-                # pass dict to update the pointLabel
-                self.UpdatePointLabel(mDataDict)
-        event.Skip()  # go to next handler
-
-
-
+    def addToGraphPlotSettings(self, settings):
+        self.graphPlotSettings += settings
+        
+    def replaceGraphPlotSettings(self, settings):
+        self.graphPlotSettings.clear()
+        self.addToGraphPlotSettings(settings)
+        
 
     def updateData(self, timeData, yData, plotIndex): # TODO Later this may be a dict where you pass the label as key
         """
@@ -265,6 +184,14 @@ class GraphCanvas(PlotCanvas):
         """
         
         try:
+            if yData is None: return
+            # Autoscale the vertical
+            #maxYvalue = max(yData)
+            maxYvalue = yData[-1] # Since we are keeping a running track of the max, let's use the last incoming.
+            if maxYvalue > self.graphAxesSettings.ymax:
+                self.graphAxesSettings.ymax = maxYvalue + (GRAPH_VERT_PADDING*maxYvalue)
+                self.drawGraph() # Update the drawn plot
+
             temp = list(zip(timeData, yData))
             self.graphPlots[plotIndex].points = temp #np.append(plot.points, [(timeData[-1], yData[-1])])
         except Exception as e:
@@ -273,6 +200,46 @@ class GraphCanvas(PlotCanvas):
             print(e)
             # we need to get back on track. Check the sizes of all the arrays. 
 
+
+    #
+    def drawGraph(self):
+        """
+        Redraw all the graph objects
+        """
+        
+        # Now redraw, or do the draw at a predetermined time, not just when the data for one object is done.# maybe trigger once all the lines get updated data
+        self.Draw(self.gc, 
+                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
+                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+
+
+    #
+    def clearGraph(self):
+        """
+        Remove all graph data.
+        """
+        self.Clear()
+
+    #
+    def setYlabel(self, label):
+        """
+        Set the text for the Y-axis label.
+        """
+        #self.gc.setYLabel(label) #Depreciated
+        self.gc._yLabel = label
+
+        #self.graphAxes.set_ylabel(label)
+
+    def scaleGraphXaxis(self, xmax):
+        """
+        Adjust the time scale of the graph.
+        """
+
+        #self.graphAxes.set_xbound(lower=xmin, upper=xmax)
+        self.graphAxesSettings.xmax = xmax
+        #self.scaleTickMarks(xmax) # This was Matplotlib specific
+        self.drawGraph()
+    
 
     def scaleTickMarks(self, xmax):
         """
@@ -301,82 +268,28 @@ class GraphCanvas(PlotCanvas):
         # for the minor ticks, use no labels; default NullFormatter
         self.graphAxes.xaxis.set_minor_locator(minorLocator)
 
-    #
-    def drawGraph(self):
-        """
-        Redraw all the graph objects
-        """
-        # Now redraw, or do the draw at a predetermined time, not just when the data for one object is done.# maybe trigger once all the lines get updated data
-        self.Draw(self.gc, xAxis=(0,self.parent.testTimeMinutes), yAxis=(0,100)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
-
 
     #
-    def clearGraph(self):
+    def setLegendVisibility(self, state):
         """
-        Remove all graph data.
+        Toggles the legend visibility
         """
-        self.Clear()
+        self.enableLegend = state
+        self.drawGraph()
 
-    #
-    def setYlabel(self, label):
+    def setZoomState(self, state):
         """
-        Set the text for the Y-axis label.
+        Toggles the Zoom state
         """
-        self.gc.yLabel(label)
+        self.enableZoom = state
 
-        #self.graphAxes.set_ylabel(label)
 
-    def scaleGraphXaxis(self, xmin, xmax):
+    def setDragState(self, state):
         """
-        Adjust the time scale of the graph.
+        Sets the drag state
         """
+        self.enableDrag = state
 
-        self.graphAxes.set_xbound(lower=xmin, upper=xmax)
-        self.scaleTickMarks(xmax)
-
-        # self.graphCanvas.draw() # may need to do this
-
-#
-    # TODO: Make this accept plot objects and labels
-    def createLegend(self, numCols):
-        """
-        Make the legend for this graph.
-        """
-        self.enableLegend = True
-        
-
-    # TODO Check if this is actualy getting called anywhere.
-    def setLimitsTo(self, isLowerZero=True):
-        """
-        Sets the limits to the max of the data given.
-        """
-   
-        self.graphAxes.set_ymargin(0.001)
-        #self.graphAxes.relim()
-        self.graphAxes.autoscale(enable=True, axis="y")
-        
-        #topLim = max(data) + (GRAPH_VERT_PADDING*max(data))
-        #self.graphAxes.set_ylim(bottom=0, top=topLim)
-
-        self.scaleGraphXaxis(0, self.testTimeMinutes)
-        self.graphAxes.set_xlim(left=0, right=self.testTimeMinutes) # Rescale the x-axis
-
-        if isLowerZero:
-            self.graphAxes.set_ylim(bottom=0)
-        self.draw()
-
-    #
-    def toggleLegendVisibility(self):
-        if self.legendVisible:
-            self.legendVisible = False
-            self.enableLegend(False)
-        else:
-            self.legendVisible = True
-            self.enableLegend(True)
-
-        self.draw()
-
-    #
     def homeGraph(self):
         """
         Resets the graph view.
@@ -393,150 +306,6 @@ class GraphCanvas(PlotCanvas):
         self.SaveFile(filename)
 
 
-    def toggleAvgVisibility(self):
-        """
-        Toggles visibility of the AVG data on the graph
-        """
-        if self.avgDataVisible:
-            self.avgDataVisible = False
-        else:
-            self.avgDataVisible = True
-
-        if self.panelID == 1:
-            self.toggleUnexposedAvgVisibility(self.avgDataVisible)
-        elif self.panelID == 2:
-            self.toggleFurnaceAvgVisibility(self.avgDataVisible)
-
-        self.graphAxes.get_legend().set_visible(self.legendVisible)
-
-        self.draw()
-
-
-    def toggleRawVisibility(self):
-        """
-        Toggles visibility ofthe RAW data on the graph
-        TODO Yes this is quick and dirty, but when I make this class more generic I will clean this up
-        """
-        if self.rawDataVisible:
-            self.rawDataVisible = False
-        else:
-            self.rawDataVisible = True
-
-        if self.panelID == 1:
-            self.toggleUnexposedRawVisibility(self.rawDataVisible)
-        elif self.panelID == 2:
-            self.toggleFurnaceRawVisibility(self.rawDataVisible)
-
-        # Keep the legend visibility in sync, because toggling raw makes new legend that defaults to being visible
-        self.graphAxes.get_legend().set_visible(self.legendVisible)
-
-        self.draw()
-
-
-    def toggleFurnaceAvgVisibility(self, isVisible):
-        """
-        Turn the visibility of the average data trace on or off
-        """
-
-        if isVisible:
-            self.plotFurnAvg.set_visible(True)
-        else:
-            self.plotFurnAvg.set_visible(False)
-
-        self.legendUpdate(True)
-
-
-    def toggleUnexposedAvgVisibility(self, isVisible):
-        """
-        Turn the visibility of the average data trace on or off
-        """
-
-        if isVisible:
-            self.plotUnexpAvg.set_visible(True)
-        else:
-            self.plotUnexpAvg.set_visible(False)
-
-        self.legendUpdate(False)
-
-
-    def toggleFurnaceRawVisibility(self, isVisible):
-        """
-        Turn the visibility of the raw data traces on or off
-        """
-        #chartBox = self.graphAxes.get_position()
-        #self.graphAxes.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.9, chartBox.height])
-
-        if isVisible:
-            for line in self.plotFurnRaw:
-                line.set_visible(True)
-
-        else:
-            for line in self.plotFurnRaw:
-                line.set_visible(False)
-
-        self.legendUpdate(True)
-
-    def toggleUnexposedRawVisibility(self, isVisible):
-        """
-        Turn the visibility of the raw data traces on or off
-        """
-        #chartBox = self.graphAxes.get_position()
-        #self.graphAxes.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.9, chartBox.height])
-
-        if isVisible:
-            for line in self.plotUnexpRaw:
-                line.set_visible(True)
-
-            # # Using list comprehension to make full list of artists to include in legend
-            # self.graphAxes.legend(handles=[self.plotUnexpAvg, self.plotFailureThresh] + [i for i in self.plotUnexpRaw],
-            #                       loc='upper left',
-            #                       fontsize="x-small",
-            #                       #bbox_to_anchor=(1.01, 1.),
-            #                       ncol=2)            
-
-
-        else:
-            for line in self.plotUnexpRaw:
-                line.set_visible(False)
-
-            # self.graphAxes.legend(handles=[self.plotUnexpAvg, self.plotFailureThresh],
-            #                       loc='upper left',
-            #                       fontsize="x-small")
-            #                       #bbox_to_anchor=(1.01, 1.))
-
-        self.legendUpdate(False)
-
-    def legendUpdate(self, isFurnace):
-
-        if isFurnace:
-            avgVisibile = self.plotFurnAvg.get_visible()
-            rawVisible = self.plotFurnRaw[0].get_visible() # If the first line isn't visible, none of them are
-
-            handles = [self.plotTarget]
-            if avgVisibile: handles.append(self.plotFurnAvg)
-            if rawVisible: handles += [i for i in self.plotFurnRaw]
-        else:
-            avgVisibile = self.plotUnexpAvg.get_visible()
-            rawVisible = self.plotUnexpRaw[0].get_visible() # If the first line isn't visible, none of them are
-
-            if avgVisibile:
-                handles = [self.plotUnexpAvg, self.plotFailureThresh]
-            else:
-                handles = [self.plotFailureThresh]
-
-            if rawVisible: handles += [i for i in self.plotUnexpRaw]            
-
-
-
-        # Using list comprehension to make full list of artists to include in legend
-        self.graphAxes.legend(handles=handles,
-                              loc='upper left',
-                              fontsize="x-small",
-                              labelspacing = 0.2,
-                              #bbox_to_anchor=(1.01, 1.),
-                              ncol=self.numCols)
-
-
 
 
 ###############################################################################
@@ -549,35 +318,41 @@ class BaseGraph(wx.Panel):
     """
     A wxWidget Panel that displays the graph
     """
-    def __init__(self, parent, frame, panelID):
+    def __init__(self, parent, frame, panelID, axesSettings=None):
+
         wx.Panel.__init__(self, parent, id=panelID)
         self.parent = parent
         self.frame = frame
         self.panelID = panelID
-
+        self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.isExpanded = False # Adding this attribute to keep track of state
         self.Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick) # Ugly. use pubsub for this
 
         self.testTimeMinutes = DEFAULT_TEST_TIME # Default on startup. This gets set again when test is started.
  
+
         # Add the graph to the panel
         # This is the graph object within the panel. End goal is to make it switchable easily
         # with another graphing package, and really self is a higher level co-ordinating object
-        self.graphCanvas = GraphCanvas(self, self.frame, self.panelID, self.graphAxesSettings)
-        #self.createToolbar() # Comment out for now until the base graph works again.
+        self.graphCanvas = GraphCanvas(self, self.frame, self.panelID, axesSettings)
+        self.createToolbar() # Comment out for now until the base graph works again.
         self.graphCanvas.clearGraph()
 
         # Add to sizer and layout
         self.graphSizer = wx.BoxSizer(wx.VERTICAL)
-        self.graphSizer.Add(self.graphCanvas, 1, wx.ALL | wx.EXPAND)
-        #self.graphSizer.Add(self.graphToolbar, 0, wx.LEFT | wx.EXPAND)
+        self.graphSizer.Add(self.graphCanvas, 1, wx.ALL | wx.EXPAND, 5)
+        self.graphSizer.Add(self.graphToolbar, 0, wx.LEFT | wx.EXPAND)
 
         self.SetSizer(self.graphSizer)
         self.Fit()
 
-        #self.Layout()
-        #self.graphSizer.Layout()
+        self.graphSizer.Layout()
+        self.Layout()
   
+    def initPlotLines(self, plotSettings):
+        
+        self.graphCanvas.replaceGraphPlotSettings(plotSettings)
+        self.graphCanvas.initPlot(isAutoscale=True)
 
 ################################################################################
 # General Methods
@@ -588,7 +363,7 @@ class BaseGraph(wx.Panel):
         Add a toolbar UI to the graph.
         """
 
-        self.graphToolbar = CustomNavToolbar(self, False if self.panelID == 3 else True) # Pressure graph doesn't have a toggle
+        self.graphToolbar = CustomNavToolbar(self) # Pressure graph doesn't have a toggle
 
         #tw, th = self.furnaceGraphToolbar.GetSize()
         #fw, fh = self.furnaceGraphCanvas.GetSize()
@@ -596,8 +371,8 @@ class BaseGraph(wx.Panel):
 
         self.graphToolbar.Realize()
 
-        # update the axes menu on the toolbar
-        self.graphToolbar.update()
+        # update the axes menu on the toolbar (Matplotlib)
+        #self.graphToolbar.update()
 
 
     def setTestTimeMinutes(self, minutes):
@@ -605,10 +380,22 @@ class BaseGraph(wx.Panel):
         Set the test length.
         """
         self.testTimeMinutes = minutes
-        self.graphCanvas.scaleGraphXaxis(0, minutes)
+        self.graphCanvas.scaleGraphXaxis(minutes)
+        
+        
 
     def createColourList(self, numColours):
         #colours = [GRAPH_COLOURMAP(x/(numSelected-1)) for x in range(numSelected)]
+        if numColours <= 1: return
         
-        return [f"#22{x*2}{x}0" for x in range(numColours)] #Hack figure something better
+        colourList = []
 
+        for i in range(numColours):
+            temp = colorsys.hls_to_rgb(i/(numColours-1), 0.5, 1.0)
+            colour = tuple(col * 255 for col in temp)
+            colourList.append(wx.Colour(colour))
+
+        return  colourList
+
+    def refreshGraph(self):
+        self.graphCanvas.Redraw()

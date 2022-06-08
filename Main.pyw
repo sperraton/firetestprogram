@@ -63,7 +63,7 @@ class MainFrame(wx.Frame):
 
         self.noConnect = True # Used to set the DAQ to not connect. Random data generated. For debugging purposes
         self.testTimeMinutes = 60 # Default
-        self.targetTempCurve = []
+
         self.warnToggle = True
         self.detachedWarn = False # Stop additional triggers of the warn dialog
 
@@ -339,7 +339,7 @@ class MainFrame(wx.Frame):
         self.controller.initTestSettings(testSettings)
 
         self.graphNotebook.initGrid() # Must be called after the initTestSettings because we use controller. TODO rather than reinit everything maybe make a new function to resize and relabel columns.
-        #DEBUGGING self.graphNotebook.graphTab.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
+        self.graphNotebook.graphTab.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
         self.initChannelMon() # Fill out the channel monitor labels
 
         # Ask the user to zero the presure sensors
@@ -506,21 +506,6 @@ class MainFrame(wx.Frame):
         pub.unsubscribe(self.testThreeQuarterMark, "test.correction")
         pub.unsubscribe(self.testExtend, "test.extend")
         pub.unsubscribe(self.lostChannelWarning, "channel.detached")
-
-    # TODO move this into the graph object
-    def createTargetCurveArray(self, testLengthMinutes):
-        """
-        Recalculates the current test's target curve given a set test length.
-        """
-        self.targetTempCurve = [] # blank the old data
-        timeData = [] # NOTE We can make this to match the refresh rate
-
-        for seconds in range(0, int(ceil(testLengthMinutes))*60):
-            timeData.append(seconds/60) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
-            self.targetTempCurve.append(self.controller.testSettings.calculateTargetCurve(seconds))
-        
-        # Give the data to the graph
-        #DEBUGGING self.graphNotebook.graphTab.furnaceTempGraph.updateFurnaceTarget(timeData, self.targetTempCurve)
 
 
     def setStatusMessage(self, msg):

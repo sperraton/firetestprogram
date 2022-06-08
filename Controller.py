@@ -228,7 +228,14 @@ class Controller():
                                     valueRaw=num,
                                     valueNumeric=num,
                                     valueFormatted="{0:2.3f}".format(num))
-
+            for channelIdx in self.selectedPressureChannels:
+                num = random.uniform(10,90)
+                pub.sendMessage("channel.valueChange",
+                                    sensorType="PRESS",    # For God's sake just use an enumeration like you do everywhere else.
+                                    channel=channelIdx,
+                                    valueRaw=num,
+                                    valueNumeric=num,
+                                    valueFormatted="{0:2.3f}".format(num))
 
         # Capture the time
         self.elapsedTime = time.time() - self.startTime
