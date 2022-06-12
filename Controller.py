@@ -332,16 +332,18 @@ class Controller():
         #                                              rawData=self.testData.unexposedRawData)
         #     self.graphUpdate = 0
 
-        pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData,
-                        avgData=self.testData.furnaceAvgData,
-                        rawData=self.testData.furnaceRawData)
-        pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
-                        ch3=self.testData.ch3PressureData,
-                        ch2=self.testData.ch2PressureData,
-                        ch1=self.testData.ch1PressureData)
-        pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData,
-                        avgData=self.testData.unexposedAvgData,
-                        rawData=self.testData.unexposedRawData)
+        # pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData,
+        #                 avgData=self.testData.furnaceAvgData,
+        #                 rawData=self.testData.furnaceRawData)
+        # pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
+        #                 ch3=self.testData.ch3PressureData,
+        #                 ch2=self.testData.ch2PressureData,
+        #                 ch1=self.testData.ch1PressureData)
+        # pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData,
+        #                 avgData=self.testData.unexposedAvgData,
+        #                 rawData=self.testData.unexposedRawData)
+
+        pub.sendMessage("graphData.update", testData=self.testData)
 
     def grabLatestData(self):
         """

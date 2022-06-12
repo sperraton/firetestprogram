@@ -17,7 +17,7 @@ class Logger():
 
 # BUGBUGBUG The csvWriter takes lines to be a list of items to be seperated by commas and all written to one line.
 # I adapted this from writing out single lines to a txt file. Each of these lines needs to be written on an individual line. Fix this. Have the data passed in a way that we aren't doing a bunch of wrapping up the data, and then unwrapping it just to write is.
-    def writeLinesToFile(self, lines, mode="w+"):
+    def writeLineToFile(self, line, mode="w+"):
         """
         Writes lines that are passed to the log files
         """
@@ -26,7 +26,7 @@ class Logger():
             with open(self.fullFileName, mode) as f1:
                 #f1.writelines(os.linesep.join(lines))
                 csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                csvWriter.writerow(lines)
+                csvWriter.writerow(line)
         else:
 
             with open(self.fullFileName, mode) as f1, \
@@ -35,9 +35,9 @@ class Logger():
                 # f1.writelines(os.linesep.join(lines)+os.linesep)
                 # f2.writelines(os.linesep.join(lines)+os.linesep)
                 csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                csvWriter.writerow(lines)
+                csvWriter.writerow(line)
                 csvWriter = csv.writer(f2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                csvWriter.writerow(lines)
+                csvWriter.writerow(line)
 
 
     def writeHeaders(self, fileHeader, tableHeader):
@@ -47,8 +47,10 @@ class Logger():
 
         try:
             # Create the data table header
-            headerString = ",".join([item for item in tableHeader])
-            self.writeLinesToFile([fileHeader, headerString], "w+")
+            #headerString = ",".join([item for item in tableHeader])
+            for line in fileHeader:
+                self.writeLineToFile(line, "a+")
+            self.writeLineToFile(tableHeader, "a")
             return False
 
         except IOError as e:
@@ -67,12 +69,12 @@ class Logger():
         try:
 
             # Make list into string
-            rowString = ""
-            for cell in dataRow[:-1]:
-                rowString += str(cell) + ","
-            rowString += str(dataRow[-1])# + "\n" # Do the final data point
+            # rowString = ""
+            # for cell in dataRow[:-1]:
+            #     rowString += str(cell) + ","
+            # rowString += str(dataRow[-1])# + "\n" # Do the final data point
 
-            self.writeLinesToFile([rowString], "a")
+            self.writeLineToFile(dataRow, "a") #([rowString], "a")
 
 
         except IOError as e:
@@ -99,14 +101,15 @@ class Logger():
         try:
 
             lines = [
-                "Was correction applied?,"+str(wasExtended),
-                "I  Indicated fire resistance period = ,"+str(indicatedPeriod),
-                "A  Area under 3/4 of Average curve = ,"+str(threeQuarterAvgAUC),
-                "As Area under 3/4 Required Curve = ,"+str(threeQuarterTargetAUC),
-                "L  Lag correction = ,"+str(lagCorrection),
-                "C  Correction in minutes = ,"+str(correctionMinutes)]
+                ["Was correction applied? ", str(wasExtended)],
+                ["I  Indicated fire resistance period = ", str(indicatedPeriod)],
+                ["A  Area under 3/4 of Average curve = ", str(threeQuarterAvgAUC)],
+                ["As Area under 3/4 Required Curve = ", str(threeQuarterTargetAUC)],
+                ["L  Lag correction = ", str(lagCorrection)],
+                ["C  Correction in minutes = ", str(correctionMinutes)]]
 
-            self.writeLinesToFile(lines, "a")
+            for line in lines:
+                self.writeLineToFile(line, "a")
 
         except IOError as e:
             print(f"Log correction write operation failed: {e.strerror}")

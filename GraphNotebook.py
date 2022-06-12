@@ -64,7 +64,7 @@ class GraphNotebook(wx.Notebook):
         channel monitor.
         """
 
-        # DEBUGGING self.dataGridTab.addDataRow(row)
+        self.dataGridTab.addDataRow(row)
 
     def OnDestroy(self):
         pub.unsubscribe(self.addDataRow, "dataGrid.addRow")
@@ -124,16 +124,16 @@ class MainGraphPanel(wx.Panel):
 
         self.layoutPanels(self.panelList[0], self.panelList[1], self.panelList[2])
 
-        sizer = wx.BoxSizer(wx.VERTICAL)
-        sizer.Add(self.topSplitter, 1, wx.EXPAND)
-        self.SetSizer(sizer)
+        self.sizer = wx.BoxSizer(wx.VERTICAL)
+        self.sizer.Add(self.topSplitter, 1, wx.EXPAND)
+        self.SetSizer(self.sizer)
 
         self.isDirty = False # track if graph needs redrawing
-        pub.subscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
-        pub.subscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
+        #pub.subscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
+        #pub.subscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
         pub.subscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
-        pub.subscribe(self.updatePressureGraph, "pressureGraph.update")
-
+        #pub.subscribe(self.updatePressureGraph, "pressureGraph.update")
+        pub.subscribe(self.updateGraphData, "graphData.update")
 
     def layoutPanels(self, a, b, c):
 
@@ -190,15 +190,29 @@ class MainGraphPanel(wx.Panel):
 
 
     def OnDestroy(self):
-        pub.unsubscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
-        pub.unsubscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
+        #pub.unsubscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
+        #pub.unsubscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
         pub.unsubscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
-        pub.unsubscribe(self.updatePressureGraph, "pressureGraph.update")
+        #pub.unsubscribe(self.updatePressureGraph, "pressureGraph.update")
+        pub.unsubscribe(self.updateGraphData, "graphData.update")
+
 
 
 ################################################################################
 # Update functions
 ################################################################################
+
+    def updateGraphData(self, testData):
+        self.updateFurnaceTempGraph(timeData=testData.timeData,
+                        avgData=testData.furnaceAvgData,
+                        rawData=testData.furnaceRawData)
+        self.updatePressureGraph(timeData=testData.timeData,
+                        ch3=testData.ch3PressureData,
+                        ch2=testData.ch2PressureData,
+                        ch1=testData.ch1PressureData)
+        self.updateUnexposedTempGraph(timeData=testData.timeData,
+                        avgData=testData.unexposedAvgData,
+                        rawData=testData.unexposedRawData)
 
     def updateFurnaceTempGraph(self, timeData, avgData, rawData):
         """
@@ -240,6 +254,10 @@ class MainGraphPanel(wx.Panel):
         self.furnaceTempGraph.refreshGraph()
         self.unexposedTempGraph.refreshGraph()
         self.pressureGraph.refreshGraph()
+
+        #self.Layout() #This didn't work
+        self.Refresh() #Try this
+        
         self.Fit() # Figure ths all out
 
 

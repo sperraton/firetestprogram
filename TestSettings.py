@@ -95,15 +95,25 @@ class TestSettings:
         """
         Build the preamble info to write into the output .csv
         """
-        self.fileHeader = "CLIENT:," + self.client + "\n"
-        self.fileHeader += "PROJECT #:," + self.projectNum + "\n"
-        self.fileHeader += "TEST #:," + self.testNum + "\n"
-        self.fileHeader += "DATE:," + self.date + "\n"
-        self.fileHeader += "TEST DURATION:," + str(self.testTimeMinutes) + " minutes\n"
-        self.fileHeader += "REQUIRED CURVE:," + self.targetCurve + "\n"
-        self.fileHeader += "TEMPERATURE UNITS:, " + self.temperatureUnits + "\n"
-        self.fileHeader += "PRESSURE UNITS:, " + self.pressureUnits + "\n"
-        self.fileHeader += "SENSOR CALIBRATION CONFIRMED:," + self.isCalibrated + "\n"
+        # self.fileHeader = "CLIENT:," + self.client + "\n"
+        # self.fileHeader += "PROJECT #:," + self.projectNum + "\n"
+        # self.fileHeader += "TEST #:," + self.testNum + "\n"
+        # self.fileHeader += "DATE:," + self.date + "\n"
+        # self.fileHeader += "TEST DURATION:," + str(self.testTimeMinutes) + " minutes\n"
+        # self.fileHeader += "REQUIRED CURVE:," + self.targetCurve + "\n"
+        # self.fileHeader += "TEMPERATURE UNITS:, " + self.temperatureUnits + "\n"
+        # self.fileHeader += "PRESSURE UNITS:, " + self.pressureUnits + "\n"
+        # self.fileHeader += "SENSOR CALIBRATION CONFIRMED:," + self.isCalibrated + "\n"
+        self.fileHeader = []
+        self.fileHeader.append(["CLIENT:", self.client])
+        self.fileHeader.append(["PROJECT #:", self.projectNum])
+        self.fileHeader.append(["TEST #:", self.testNum])
+        self.fileHeader.append(["DATE:", self.date])
+        self.fileHeader.append(["TEST DURATION:", str(self.testTimeMinutes) + " minutes"])
+        self.fileHeader.append(["REQUIRED CURVE:", self.targetCurve])
+        self.fileHeader.append(["TEMPERATURE UNITS:,", self.temperatureUnits])
+        self.fileHeader.append(["PRESSURE UNITS:,", self.pressureUnits])
+        self.fileHeader.append(["SENSOR CALIBRATION CONFIRMED:,", self.isCalibrated])
 
 
     def createFileName(self):
