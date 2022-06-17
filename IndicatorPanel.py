@@ -4,7 +4,7 @@ from Enumerations import UIcolours
 
 class IndicatorPanel(wx.Panel):
     def __init__(self, parent, panelID):
-        wx.Panel.__init__(self, parent, id=panelID, size=wx.Size(-1, 55))
+        wx.Panel.__init__(self, parent, id=panelID, size=wx.Size(-1, 55), name="Indicator Panel")
         self.parent = parent
         self.panelID = panelID
 

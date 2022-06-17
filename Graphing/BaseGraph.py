@@ -76,7 +76,7 @@ class GraphCanvas(PlotCanvas):
     def __init__(self, parent, frame, panelID, graphAxesSettings=None):
         
         self.parent = parent
-        self.frame = frame
+        #self.frame = frame # TODO Remove this
         self.panelID = panelID
 
         PlotCanvas.__init__(self, self.parent)
@@ -96,7 +96,9 @@ class GraphCanvas(PlotCanvas):
         else:
             self.graphAxesSettings = graphAxesSettings
         
-        self.SetMinSize(wx.Size(0, 0))
+        minSize = (440, 300) #self.parent.GetClientSize()
+        self.SetMinSize(minSize)
+        
 
         self.canvas.Id = self.panelID # For keeping track in the swap
         #self.canvas.Bind(wx.EVT_LEFT_DCLICK, self.OnMouseDoubleClick)
@@ -150,7 +152,7 @@ class GraphCanvas(PlotCanvas):
         """
         Sets the look of the graph.
         """
-        #self.SetDoubleBuffered(True)
+        self.SetDoubleBuffered(True)
         # TODO comb through the wxplot settings I can add here
 
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
@@ -196,7 +198,7 @@ class GraphCanvas(PlotCanvas):
             self.graphPlots[plotIndex].points = temp #np.append(plot.points, [(timeData[-1], yData[-1])])
         except Exception as e:
 
-            print("updateData failed.")
+            print(f"{self.GetLabel()} channel {plotIndex} updateData failed.")
             print(e)
             # we need to get back on track. Check the sizes of all the arrays. 
 
@@ -337,7 +339,7 @@ class BaseGraph(wx.Panel):
         self.graphCanvas = GraphCanvas(self, self.frame, self.panelID, axesSettings)
         self.createToolbar() # Comment out for now until the base graph works again.
         self.graphCanvas.clearGraph()
-
+        
         # Add to sizer and layout
         self.graphSizer = wx.BoxSizer(wx.VERTICAL)
         self.graphSizer.Add(self.graphCanvas, 1, wx.ALL | wx.EXPAND, 5)

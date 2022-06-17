@@ -1,3 +1,4 @@
+from re import T
 import wx
 from pubsub import pub
 import os
@@ -21,10 +22,10 @@ class GraphNotebook(wx.Notebook):
         
         self.parent = parent
         self.frame = frame
-
+        
         # Create the tab panels
         self.graphTab = MainGraphPanel(self, self.frame)
-        self.dataGridTab = DataGrid(self, self.frame, 0) #, id=0)
+        self.dataGridTab = DataGrid(self, self.frame)
 
         # Add them to the notebook
         self.AddPage(self.graphTab, "Graphs")
@@ -35,6 +36,7 @@ class GraphNotebook(wx.Notebook):
         # self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGING, self.OnPageChanging)
 
         pub.subscribe(self.addDataRow, "dataGrid.addRow")
+
         
     # def OnPageChanged(self, event):
     #     # old = event.GetOldSelection()
@@ -84,7 +86,7 @@ class MainGraphPanel(wx.Panel):
         # Create splitter widgets
         self.topSplitter = wx.SplitterWindow(self)
         self.subSplitter = wx.SplitterWindow(self.topSplitter) # Child of topSplitter
-        
+
         # Create the graph panels
         self.panelList = []
 
@@ -127,6 +129,8 @@ class MainGraphPanel(wx.Panel):
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.sizer.Add(self.topSplitter, 1, wx.EXPAND)
         self.SetSizer(self.sizer)
+        self.Layout()
+
 
         self.isDirty = False # track if graph needs redrawing
         #pub.subscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
@@ -213,6 +217,7 @@ class MainGraphPanel(wx.Panel):
         self.updateUnexposedTempGraph(timeData=testData.timeData,
                         avgData=testData.unexposedAvgData,
                         rawData=testData.unexposedRawData)
+        self.redrawAllGraphs()
 
     def updateFurnaceTempGraph(self, timeData, avgData, rawData):
         """
@@ -247,7 +252,7 @@ class MainGraphPanel(wx.Panel):
         """
         self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
         #self.Fit() # Trigger redraw
-        self.redrawAllGraphs()
+        
         
 
     def redrawAllGraphs(self):
@@ -255,11 +260,28 @@ class MainGraphPanel(wx.Panel):
         self.unexposedTempGraph.refreshGraph()
         self.pressureGraph.refreshGraph()
 
-        #self.Layout() #This didn't work
-        self.Refresh() #Try this
-        
-        self.Fit() # Figure ths all out
+        #wx.PostEvent(self.topSplitter.GetEventHandler(), wx.PyCommandEvent(wx.EVT_SPLITTER_SASH_POS_CHANGED.typeId, self.topSplitter.GetId()))
+        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()+1)
+        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()-1)
 
+        #self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition(), redraw=True)
+        
+        #self.Layout() #This didn't work
+        #self.Refresh() #Neither this
+        #self.Update()
+
+        #self.FitInside()
+        #self.Fit() # Figure ths all out. Once I add this in the layout goes haywire.
+        #self.parent.Layout() # But if I do only this then the graph doesn't update
+        #self.parent.Fit()
+
+        # Steps into OnSize in wx.plotcanvas
+        # Where it gets a too small rectangle from self.canvas.GetClientSize()
+        # the canvas is a subwindow set in init
+        # self.canvas = wx.Window(self, -1)
+        # plotcanvas is a panel
+        # Eventually calls this: self. _Draw(graphics, xSpec, ySpec)
+        # Which draws to the mis-sized self._Buffer
 
 
     def initGraphForTest(self, testTime):

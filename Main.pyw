@@ -46,7 +46,8 @@ from IndicatorPanel import IndicatorPanel
 
 import wx
 import wx.adv
-locale = wx.Locale.GetSystemLanguage()
+import wx.lib.mixins.inspection
+
 
 from pubsub import pub
 import os
@@ -59,9 +60,12 @@ from math import ceil
 ################################################################################
 class MainFrame(wx.Frame):
 
+    SAVEPATH_ID=201 #wx.NewId()
+    BACKUPPATH_ID=202
+
     def __init__(self, *args, **kw):
 
-        self.noConnect = False # Used to set the DAQ to not connect. Random data generated. For debugging purposes
+        self.noConnect = True # Used to set the DAQ to not connect. Random data generated. For debugging purposes
         self.testTimeMinutes = 60 # Default
 
         self.warnToggle = True
@@ -95,7 +99,7 @@ class MainFrame(wx.Frame):
         self.SetStatusText("PROFILE: "+currentProfileName, 1)
 
         # Create the main view of the notebook and the channel monitor.
-        self.mainPanel = wx.Panel(self)
+        self.mainPanel = wx.Panel(self, name="Main Panel")
         self.monPanel = Monitor(self.mainPanel, self, -1)
 
         self.graphNotebook = GraphNotebook(self.mainPanel, self)
@@ -106,7 +110,7 @@ class MainFrame(wx.Frame):
         self.mainSizer = wx.BoxSizer(wx.HORIZONTAL)
         self.mainSizer.Add(self.monPanel, 0, wx.EXPAND|wx.ALL, 5)
         self.mainSizer.Add(self.graphNotebook, 1, wx.EXPAND|wx.ALL, 5)
-        self.mainSizer.Add(wx.Panel(self, wx.ID_ANY))
+        #self.mainSizer.Add(wx.Panel(self, wx.ID_ANY))
         self.mainPanel.SetSizer(self.mainSizer)
         self.mainSizer.Layout()
 
@@ -181,8 +185,8 @@ class MainFrame(wx.Frame):
         # Settings
         #------------------------------------------------------------
         self.settingsMenu = wx.Menu()
-        self.savePathItem = self.settingsMenu.Append(-1, "Default Save Path", "Choose the default folder to save data")
-        self.backupPathItem = self.settingsMenu.Append(-1, "Backup Save Path", "Choose the default folder to save data")
+        self.savePathItem = self.settingsMenu.Append(self.SAVEPATH_ID, f"Default Save Path ({self.controller.machineSettings.defaultSavePath})", "Choose the default folder to save data")
+        self.backupPathItem = self.settingsMenu.Append(self.BACKUPPATH_ID, f"Backup Save Path ({self.controller.machineSettings.defaultBackupPath})", "Choose the default folder to save data")
 
         self.settingsMenu.AppendSeparator()
         #self.channelMapItem = self.settingsMenu.Append(-1, "Channel Map", "View/Change DAQ Channel Map of the current profile")
@@ -292,10 +296,14 @@ class MainFrame(wx.Frame):
                        #| wx.DD_CHANGE_DIR
                        )
         if dlg.ShowModal() == wx.ID_OK:
-            if event.GetEventObject() is self.savePathItem:
+            ### BUGBUGBUG these if's aren't triggering
+            evtID = event.GetId()
+            if evtID == self.SAVEPATH_ID:# GetEventObject() is self.savePathItem:
                 self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=False)
-            elif event.GetEventObject() is self.backupPathItem:
+                self.savePathItem.SetItemLabel(f"Default Save Path ({self.controller.machineSettings.defaultSavePath})")
+            elif evtID == self.BACKUPPATH_ID:#GetEventObject() is self.backupPathItem:
                 self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=True)
+                self.backupPathItem.SetItemLabel(f"Default Save Path ({self.controller.machineSettings.defaultBackupPath})")
         dlg.Destroy()
 
 
@@ -581,6 +589,20 @@ class MainFrame(wx.Frame):
         self.dlg.Destroy()
         self.detachedWarn = False
 
+class MainApp(wx.App, wx.lib.mixins.inspection.InspectionMixin):
+    def OnInit(self):
+        locale = wx.Locale.GetSystemLanguage()
+        self.locale = wx.Locale(locale)
+        self.Init() #Init the inspection tool. CTRL-ALT-I to summon inspector
+
+        # TODO Init controller and do the spashscreen here
+
+        frame = MainFrame(None, wx.ID_ANY, "Fire Test Data Aquisition", size=(1100, 700)) # A Frame is a top-level window.
+
+        return True
+
+
+
 
 ###############################################################################
 #  Program Entry
@@ -594,10 +616,7 @@ if __name__ == '__main__':
 
     # TODO Should I pass the app object to dialogs that need to talk to the controller
     # rather than having it them use the parent view. I should structure this better.
-    app = wx.App(False)  # Create a new app, don't redirect stdout/stderr to a window.
-    app.locale = wx.Locale(locale)
-    frame = MainFrame(None, wx.ID_ANY, "Fire Test Data Aquisition", size=(1100, 700)) # A Frame is a top-level window.
-
+    app = MainApp(redirect=False) #wx.App(redirect=False)  # Create a new app, don't redirect stdout/stderr to a window.
     app.MainLoop()
 
     #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.

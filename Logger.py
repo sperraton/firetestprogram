@@ -15,22 +15,20 @@ class Logger():
         self.fullFileName = fullFileName
         self.fullBackupFileName = fullBackupFileName
 
-# BUGBUGBUG The csvWriter takes lines to be a list of items to be seperated by commas and all written to one line.
-# I adapted this from writing out single lines to a txt file. Each of these lines needs to be written on an individual line. Fix this. Have the data passed in a way that we aren't doing a bunch of wrapping up the data, and then unwrapping it just to write is.
     def writeLineToFile(self, line, mode="w+"):
         """
         Writes lines that are passed to the log files
         """
         if self.fullBackupFileName is None:
 
-            with open(self.fullFileName, mode) as f1:
+            with open(self.fullFileName, mode, newline="") as f1:
                 #f1.writelines(os.linesep.join(lines))
                 csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 csvWriter.writerow(line)
         else:
 
-            with open(self.fullFileName, mode) as f1, \
-                open(self.fullBackupFileName, mode) as f2:
+            with open(self.fullFileName, mode, newline="") as f1, \
+                open(self.fullBackupFileName, mode, newline="") as f2:
 
                 # f1.writelines(os.linesep.join(lines)+os.linesep)
                 # f2.writelines(os.linesep.join(lines)+os.linesep)
@@ -48,8 +46,9 @@ class Logger():
         try:
             # Create the data table header
             #headerString = ",".join([item for item in tableHeader])
+            self.writeLineToFile(["Saved Data"], "w+") # Make the file
             for line in fileHeader:
-                self.writeLineToFile(line, "a+")
+                self.writeLineToFile(line, "a")
             self.writeLineToFile(tableHeader, "a")
             return False
 

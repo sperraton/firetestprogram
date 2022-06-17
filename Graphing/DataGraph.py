@@ -261,6 +261,7 @@ class PressureGraph(BaseGraph):
 
         self.initPlotLines([self.presCh1Settings, self.presCh2Settings, self.presCh3Settings])
 
+
     def updatePressureData(self, timeData, ch3Data, ch2Data, ch1Data):
         """
         Draws the lates pressure sensor data
@@ -272,41 +273,6 @@ class PressureGraph(BaseGraph):
         self.graphCanvas.updateData(timeData, ch1Data, plotIndex=0)
         self.graphCanvas.updateData(timeData, ch2Data, plotIndex=1)
         self.graphCanvas.updateData(timeData, ch3Data, plotIndex=2)
-
-
-    # # TODO Autoscaling belongs in the GraphCanvas object. One should just tell the graph to autoscale and
-    # #      let the graph figure that out.
-    # def autoScale(self, timeData, ch3Data, ch2Data, ch1Data):
-
-    #     if len(timeData) == 1: # Only do on first point. TODO Need a better way to do this.
-    #         if self.frame.controller.testSettings.pressureUnits == "inH2O":
-    #             padding = 0.1
-    #         else:
-    #             padding = 5
-
-    #         # TODO: just loop through the allData and remove any bad values
-    #         # Strip out our bad value placeholder
-    #         if -9999 in ch3Data:
-    #             ch3Data = []
-    #         if -9999 in ch2Data:
-    #             ch2Data = []
-    #         if -9999 in ch1Data:
-    #             ch1Data = []
-
-    #         allData = ch3Data + ch2Data + ch1Data
-
-    #         if allData: # Avoid throwing an error by checking that we have data left
-    #             topLim = max(allData) + padding
-    #             botLim = min(allData) - padding
-
-    #             self.graphCanvas.graphAxes.set_ylim(bottom=botLim, top=topLim)
-    #             self.graphCanvas.graphAxes.relim()
-        
-    #     #Need both of these in order to rescale
-    #     # TODO Try the following out for autoscaling.
-    #     #self.graphCanvas.graphAxes.relim()
-    #     #self.graphCanvas.graphAxes.autoscale_view()
-
 
 
     def hideUnusedPressureSensors(self):

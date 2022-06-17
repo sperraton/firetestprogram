@@ -2,13 +2,12 @@ import wx
 import wx.grid
 
 class DataGrid(wx.Panel):
-    def __init__(self, parent, frame, panelID):
-        wx.Panel.__init__(self, parent, id=panelID)
+    def __init__(self, parent, frame):
+        wx.Panel.__init__(self, parent)
         self.parent = parent
         self.frame = frame
-        self.panelID = panelID
         self.isExpanded = False # Adding this attribute to keep track of state
-        #self.Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick)
+
 
     def makeGrid(self, numRow, numCol, headers):
         if numCol < len(headers):
@@ -17,8 +16,7 @@ class DataGrid(wx.Panel):
         # Create a wxGrid object
         self.gridView = wx.grid.Grid(self, -1)
         self.gridView.CreateGrid(numRow,numCol)
-        self.gridView.GetGridWindow().SetId(self.panelID) # Need to do this for the double clicking panel expansion
-        #self.gridView.GetGridWindow().Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick)
+
 
         # Set up the columns
         self.makeColumnLabels(headers)
@@ -28,6 +26,7 @@ class DataGrid(wx.Panel):
         self.gridViewSizer.Add(self.gridView, 1, wx.EXPAND)
         self.SetSizer(self.gridViewSizer)
         self.gridViewSizer.Layout()
+
 
     # Change the colums based on the selected channels
     def makeColumnLabels(self, headers):
@@ -59,6 +58,7 @@ class DataGrid(wx.Panel):
             if "PRESS" in label: #self.colLabels[col]:
                 self.gridView.SetColFormatFloat(col, 2, 4)
 
+
     def addDataRow(self, row=None):
         """
         Takes the new row data from the controller and adds it to the bottom of the grid
@@ -81,6 +81,7 @@ class DataGrid(wx.Panel):
         # Make sure the grid updates the view
         self.gridViewSizer.Layout()
         self.Layout()
+
 
     def clearGrid(self):
         self.gridView.Clear() # Bye bye old data.

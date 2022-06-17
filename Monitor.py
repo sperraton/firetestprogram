@@ -354,7 +354,7 @@ class PressureList(MonitorList):
 ################################################################################
 
 class Monitor(wx.Panel):
-    def __init__(self, parent, frame, panelID):
+    def __init__(self, parent, frame, panelID, name="Monitor Panel"):
         wx.Panel.__init__(self, parent, id=panelID)
         self.parent = parent
         self.frame = frame
