@@ -9,6 +9,7 @@
 
 # Use the following for compiling with Nuitka
 # python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file="C:\Users\E119 PILOT SCALE\AppData\Local\TesPro\FireTestProgram\src\splash.jpg"=images Main.pyw
+# python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file="C:\Users\freya\Documents\TesPro\src\firetestprogram\splash.jpg"=images Main.pyw
 # C:\Users\E119 PILOT SCALE\AppData\Local\TesPro\FireTestProgram\src
 
 
@@ -60,7 +61,7 @@ from math import ceil
 ################################################################################
 class MainFrame(wx.Frame):
 
-    SAVEPATH_ID=201 #wx.NewId()
+    SAVEPATH_ID=201 #wx.ANYID
     BACKUPPATH_ID=202
 
     def __init__(self, *args, **kw):
@@ -189,7 +190,6 @@ class MainFrame(wx.Frame):
         self.backupPathItem = self.settingsMenu.Append(self.BACKUPPATH_ID, f"Backup Save Path ({self.controller.machineSettings.defaultBackupPath})", "Choose the default folder to save data")
 
         self.settingsMenu.AppendSeparator()
-        #self.channelMapItem = self.settingsMenu.Append(-1, "Channel Map", "View/Change DAQ Channel Map of the current profile")
 
         self.viewSensorsItem = self.settingsMenu.Append(-1, "Sensor Settings", "Change sensor channel settings for the current profile")
         #self.settingsMenu.AppendSeparator()
@@ -218,7 +218,6 @@ class MainFrame(wx.Frame):
         #self.Bind(wx.EVT_MENU, self.onSavePlot, saveItem)
         self.Bind(wx.EVT_MENU, self.onTestTimeExtend, self.extendItem)
         self.Bind(wx.EVT_MENU, self.onExit, exitItem)
-        #self.Bind(wx.EVT_MENU, self.onChannelMap, self.channelMapItem)
         self.Bind(wx.EVT_MENU, self.onChoosePath, self.savePathItem)
         self.Bind(wx.EVT_MENU, self.onChoosePath, self.backupPathItem)
 
@@ -378,7 +377,6 @@ class MainFrame(wx.Frame):
         #self.menuBar.EnableTop(1, False) # The Settings item
         self.savePathItem.Enable(False)
         self.backupPathItem.Enable(False)
-        #self.channelMapItem.Enable(False)
         self.viewSensorsItem.Enable(False)
         self.thresholdSettingsItem.Enable(False)
         self.profileManagerItem.Enable(False)
@@ -551,13 +549,12 @@ class MainFrame(wx.Frame):
 #        self.menuBar.EnableTop(1, True)
         self.savePathItem.Enable(True)
         self.backupPathItem.Enable(True)
-        #self.channelMapItem.Enable(True)
         self.viewSensorsItem.Enable(True)
         self.thresholdSettingsItem.Enable(True)
         self.profileManagerItem.Enable(True)
 
         parentPath, ext = os.path.splitext(self.controller.testSettings.fullFileName) # Yes, ugly I know
-        #DEBUGGING self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save plots automatically
+        self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save plots automatically
 
         self.monPanel.hideMonitor()
 
@@ -590,10 +587,11 @@ class MainFrame(wx.Frame):
         self.detachedWarn = False
 
 class MainApp(wx.App, wx.lib.mixins.inspection.InspectionMixin):
+    
     def OnInit(self):
         locale = wx.Locale.GetSystemLanguage()
         self.locale = wx.Locale(locale)
-        self.Init() #Init the inspection tool. CTRL-ALT-I to summon inspector
+        #self.Init() #Init the inspection tool. CTRL-ALT-I to summon inspector
 
         # TODO Init controller and do the spashscreen here
 

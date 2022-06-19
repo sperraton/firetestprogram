@@ -9,19 +9,20 @@ from Graphing.BaseGraph import BaseGraph, PlotSettings, AxesSettings
 ################################################################################
 
 class UnexposedGraph(BaseGraph):
-    def __init__(self, parent, frame, panelID, axesSettings=None):
+    def __init__(self, parent, panelID, controller, axesSettings=None):
         """
         Prepare the graph plots for the unexposed data
         """
 
-        BaseGraph.__init__(self, parent, frame, panelID, axesSettings)
+        BaseGraph.__init__(self, parent, panelID, axesSettings)
+        self.controller = controller
         self.initUnexposedTemperaturePlot()
 
 
     def initUnexposedTemperaturePlot(self):
         # The averaged temperature
         self.unexpAvgSettings = PlotSettings(
-            [],#self.frame.controller.unexposedAvgData,
+            [],
             #linewidth=3,
             linestyle=wx.PENSTYLE_SOLID,
             label="Average",
@@ -30,7 +31,7 @@ class UnexposedGraph(BaseGraph):
 
         # The TC failure line (Starting temp + 180degC)
         self.failureThreshSettings = PlotSettings(
-            [],#self.frame.controller.unexposedAvgData,
+            [],
             #linewidth=1.5,
             linestyle=wx.PENSTYLE_SHORT_DASH,
             label="Failure Threshold",
@@ -41,13 +42,13 @@ class UnexposedGraph(BaseGraph):
         # They only get set when the graph is initialised at the start of the program.
         # Going to have to call the legend making when the test is started.
         self.unexpRawSettings = []
-        numSelected = len(self.frame.controller.selectedUnexposedChannels)
+        numSelected = len(self.controller.selectedUnexposedChannels)
         colours = self.createColourList(numSelected)
 
         for i in range(numSelected):
-            channelIndex = self.frame.controller.selectedUnexposedChannels[i]
-            chnlLabel = self.frame.controller.getThermocoupleLabel(channelIndex)
-            columnVector = [] #np.array(self.frame.controller.unexposedRawData)[:, i]
+            channelIndex = self.controller.selectedUnexposedChannels[i]
+            chnlLabel = self.controller.getThermocoupleLabel(channelIndex)
+            columnVector = [] #np.array(self.controller.unexposedRawData)[:, i]
 
             self.unexpRawSettings.append(PlotSettings(
                 columnVector,
@@ -69,7 +70,7 @@ class UnexposedGraph(BaseGraph):
         self.graphCanvas.updateData(timeData, avgData, plotIndex=0)
         
         # Trying out just the avg for now until I get the update sorted.
-        for i in range(len(self.frame.controller.selectedUnexposedChannels)):
+        for i in range(len(self.controller.selectedUnexposedChannels)):
             #columnVector = rawData[:][i] #[row[i] for row in rawData] #rawData[:, i]
             try:
                 self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2) # Give the plot the updated data
@@ -134,11 +135,12 @@ class UnexposedGraph(BaseGraph):
 ################################################################################
 
 class FurnaceGraph(BaseGraph):
-    def __init__(self, parent, frame, panelID, axesSettings=None):
+    def __init__(self, parent, panelID, controller, axesSettings=None):
         """
         Prepare the graph plots for the furnace data
         """
-        BaseGraph.__init__(self, parent, frame, panelID, axesSettings)
+        BaseGraph.__init__(self, parent, panelID, axesSettings)
+        self.controller = controller
         self.initFurnaceTemperaturePlot()
 
     def initFurnaceTemperaturePlot(self):
@@ -165,12 +167,12 @@ class FurnaceGraph(BaseGraph):
                     
         # The Raw TC's a list 2Dlines object
         self.furnRawSettings = []
-        numSelected = len(self.frame.controller.selectedFurnaceChannels)
+        numSelected = len(self.controller.selectedFurnaceChannels)
         colours = self.createColourList(numSelected)
 
         for i in range(numSelected):
-            channelIndex = self.frame.controller.selectedFurnaceChannels[i]
-            chnlLabel = self.frame.controller.getThermocoupleLabel(channelIndex)
+            channelIndex = self.controller.selectedFurnaceChannels[i]
+            chnlLabel = self.controller.getThermocoupleLabel(channelIndex)
             columnVector = []
 
             self.furnRawSettings.append(PlotSettings(
@@ -194,7 +196,7 @@ class FurnaceGraph(BaseGraph):
         # Do all the raw thermocouple readings
         # TODO This likely doesn't need to be a for loop or at least look at the number of columns rather than referencing the controller.
 
-        for i in range(len(self.frame.controller.selectedFurnaceChannels)):
+        for i in range(len(self.controller.selectedFurnaceChannels)):
 
             columnVector = [row[i] for row in rawData] #rawData[:, i] # BUG TODO Sometimes get error "IndexError: too many indices for array" I think sometimes not enough. Seems to happen when restarting after a crash because of no communication with phidget
             self.graphCanvas.updateData(timeData, columnVector, plotIndex=i+2) # Give the plot the updated data
@@ -209,7 +211,7 @@ class FurnaceGraph(BaseGraph):
 
         for seconds in range(0, int(ceil(testLengthMinutes))*60):
             timeData.append(seconds/60) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
-            self.targetTempCurve.append(self.frame.controller.testSettings.calculateTargetCurve(seconds))
+            self.targetTempCurve.append(self.controller.testSettings.calculateTargetCurve(seconds))
         
         # Give the data to the graph for drawing
         self.graphCanvas.updateData(timeData, self.targetTempCurve, plotIndex=0) # Give the plot the updated data
@@ -229,10 +231,11 @@ class FurnaceGraph(BaseGraph):
 
 
 class PressureGraph(BaseGraph):
-    def __init__(self, parent, frame, panelID, axesSettings=None):
+    def __init__(self, parent, panelID, controller, axesSettings=None):
 
 
-        BaseGraph.__init__(self, parent, frame, panelID, axesSettings)
+        BaseGraph.__init__(self, parent, panelID, axesSettings)
+        self.controller = controller
         self.initPressurePlot()
 
 
@@ -281,7 +284,7 @@ class PressureGraph(BaseGraph):
         # handles, labels = self.graphCanvas.graphAxes.get_legend_handles_labels()
 
         # for i in range(3):
-        #     if self.frame.controller.isLabelInSelectedPressure(pressurePlacementLabels[i+1]):
+        #     if self.controller.isLabelInSelectedPressure(pressurePlacementLabels[i+1]):
         #         self.graphCanvas.graphPlots[i].set_visible(True)
         #         labels[i] = pressurePlacementLabels[i+1]
         #         handles[i].set_linestyle(wx.PENSTYLE_SOLID)

@@ -23,6 +23,7 @@ class StartTestDialog(wx.Dialog):
         wx.Dialog.__init__(self, parent, wx.ID_ANY)
         self.parent = parent
         self.savePath = self.parent.controller.defaultSavePath # Show what the save path is
+        self.backupPath = self.parent.controller.defaultBackupPath # Show what the backup path is
 
 
         self.lblInstructions = wx.StaticText(self, wx.ID_ANY, "Fill out all fields to enable 'Finalize Parameters' button.")
@@ -56,6 +57,9 @@ class StartTestDialog(wx.Dialog):
                 
         self.btnFilePath = wx.Button(self, wx.ID_ANY, "Choose save path ...")
         self.lblFilePath = wx.StaticText(self, wx.ID_ANY, self.savePath)
+
+        self.btnBackupFilePath = wx.Button(self, wx.ID_ANY, "Choose backup path ...")
+        self.lblBackupFilePath = wx.StaticText(self, wx.ID_ANY, self.backupPath)
         
         self.cbIsCalibrated = wx.CheckBox(self, wx.ID_ANY, "I confirm that the sensors have been calibrated.")
         self.btnStart = wx.Button(self, wx.ID_ANY, "Finalize Parameters")
@@ -69,6 +73,7 @@ class StartTestDialog(wx.Dialog):
         self.Bind(wx.EVT_TEXT, self.onTextChange, self.txtTestNum)
         self.Bind(wx.EVT_COMBOBOX, self.onTestChoice, self.cmbTargetCurve)
         self.Bind(wx.EVT_BUTTON, self.onChoosePath, self.btnFilePath)
+        self.Bind(wx.EVT_BUTTON, self.onChoosePath, self.btnBackupFilePath)
         self.Bind(wx.EVT_CHECKBOX, self.onChecked, self.cbIsCalibrated)
         self.Bind(wx.EVT_BUTTON, self.onStart, self.btnStart)
         self.Bind(wx.EVT_BUTTON, self.onQuit, self.btnCancel)
@@ -96,6 +101,7 @@ class StartTestDialog(wx.Dialog):
         # begin wxGlade: CustomDialog.__do_layout
         gridSizer = wx.GridBagSizer(0, 0)
         buttonSizer = wx.BoxSizer(wx.HORIZONTAL)
+        # Make this a loop next time
         gridSizer.Add(self.lblInstructions, (0, 0), (1, 2), wx.ALIGN_CENTER_VERTICAL | wx.ALL | wx.EXPAND, 5)
         gridSizer.Add(self.lblProjectNum, (1, 0), (1, 1), wx.ALIGN_CENTER_VERTICAL | wx.ALIGN_RIGHT | wx.ALL, 5)
         gridSizer.Add(self.txtProjectNum, (1, 1), (1, 1), wx.ALL | wx.EXPAND, 5)
@@ -113,12 +119,17 @@ class StartTestDialog(wx.Dialog):
         gridSizer.Add(self.txtTestInfo, (7, 1), (1, 1), wx.ALL | wx.EXPAND, 5)
         gridSizer.Add(self.lblSaveRate, (8, 0), (1, 1), wx.ALIGN_CENTER_VERTICAL | wx.ALIGN_RIGHT | wx.ALL, 5)
         gridSizer.Add(self.scSaveRate, (8, 1), (1, 1), wx.ALL, 5)
+        
         gridSizer.Add(self.btnFilePath, (9, 0), (1, 1), wx.ALL, 5)
         gridSizer.Add(self.lblFilePath, (9, 1), (1, 1), wx.ALL, 5)
+
+        gridSizer.Add(self.btnBackupFilePath, (10, 0), (1, 1), wx.ALL, 5)
+        gridSizer.Add(self.lblBackupFilePath, (10, 1), (1, 1), wx.ALL, 5)
+
         buttonSizer.Add(self.cbIsCalibrated, 0, wx.ALL, 5)
         buttonSizer.Add(self.btnStart, 0, wx.ALL | wx.FIXED_MINSIZE, 5)
         buttonSizer.Add(self.btnCancel, 0, wx.ALL | wx.FIXED_MINSIZE, 5)
-        gridSizer.Add(buttonSizer, (10, 0), (1, 2), wx.ALL | wx.EXPAND, 0)
+        gridSizer.Add(buttonSizer, (11, 0), (1, 2), wx.ALL | wx.EXPAND, 0)
 
         self.SetSizer(gridSizer)
         gridSizer.Fit(self)
@@ -148,6 +159,8 @@ class StartTestDialog(wx.Dialog):
                 self.btnStart.Enable()
         else:
             self.btnStart.Disable()
+
+
     def onTestChoice(self, event):
         choice = self.cmbTargetCurve.GetValue()
         info = "Temperature Units: " + Standards[choice]["temperatureUnits"] + "\n"
@@ -163,13 +176,24 @@ class StartTestDialog(wx.Dialog):
 
 
     def onChoosePath(self, event):
+
+        obj = event.GetEventObject()
+
         dlg = wx.DirDialog(self, "Choose a directory:",
                            style=wx.DD_DEFAULT_STYLE,
                            defaultPath=self.parent.controller.defaultSavePath)
         if dlg.ShowModal() == wx.ID_OK:
-            self.savePath = dlg.GetPath()
-            self.lblFilePath.SetLabel(self.savePath)
-            self.lblFilePath.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
+            if obj is self.btnBackupFilePath:   
+                self.backupPath = dlg.GetPath()
+                self.lblBackupFilePath.SetLabel(self.backupPath)
+                self.lblBackupFilePath.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
+            else:
+                self.savePath = dlg.GetPath()
+
+                self.lblFilePath.SetLabel(self.savePath)
+                self.lblFilePath.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
+
+            
         dlg.Destroy()
 
 

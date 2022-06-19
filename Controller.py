@@ -46,7 +46,6 @@ class Controller():
         # TODO: This only assumes the TC channels.
         self.ignoredChannels = []  # Channel indices that have been disabled mid-test
 
-        self.defaultSavePath = os.getcwd() # Current working directory
         self.loadSavedMachineSettings()  # Load the machine settings, or use the defaults
 
         # For expandable machines (ones with seperate TC case)
@@ -76,8 +75,10 @@ class Controller():
         # Pull the selected channels from the saved placementMap.
         self.extractSelectedThermocouples()
         self.extractSelectedPressure()
-        self.defaultSavePath = self.machineSettings.defaultSavePath
-        self.savePath = self.machineSettings.defaultSavePath
+        # BUGBUGBUG We need to validate the exisitence of the selected folders before trying to save to them the first time after the operator has started the test.
+        self.defaultSavePath = self.machineSettings.defaultSavePath # TODO Make all places that look for the controller.defaultSavePath get from the machine settings object instead
+        self.defaultBackupPath = self.machineSettings.defaultBackupPath
+        self.savePath = self.machineSettings.defaultSavePath # TODO Check if this is used anywhere. ???
 
 
     def saveSettings(self):

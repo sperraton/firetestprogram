@@ -38,12 +38,12 @@ class Main(wx.Frame):
         self.targetTempCurve = []
 
         self.controller = Controller(self) # Manage the DAQ and test control business
-        self.connectToDAQ()
+        #self.connectToDAQ()
 
         self.addAllListeners() # Add the listeners to pub messages
 
 
-        self.unexposedTempGraph = UnexposedGraph(self, self, 1) # id=1
+        self.unexposedTempGraph = UnexposedGraph(self, 1, self.controller) # id=1
 
         sizer = wx.BoxSizer(wx.VERTICAL)
         sizer.Add(self.unexposedTempGraph, 1, wx.EXPAND)

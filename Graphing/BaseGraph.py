@@ -1,5 +1,6 @@
 import wx
 from wx.lib import plot as wxplot
+from pubsub import pub
 
 from math import ceil
 
@@ -73,10 +74,9 @@ class GraphCanvas(PlotCanvas):
     """
     The graphing object
     """
-    def __init__(self, parent, frame, panelID, graphAxesSettings=None):
+    def __init__(self, parent, panelID, graphAxesSettings=None):
         
         self.parent = parent
-        #self.frame = frame # TODO Remove this
         self.panelID = panelID
 
         PlotCanvas.__init__(self, self.parent)
@@ -96,8 +96,8 @@ class GraphCanvas(PlotCanvas):
         else:
             self.graphAxesSettings = graphAxesSettings
         
-        minSize = (440, 300) #self.parent.GetClientSize()
-        self.SetMinSize(minSize)
+        #minSize = (440, 300) #self.parent.GetClientSize()
+        #self.SetMinSize(minSize)
         
 
         self.canvas.Id = self.panelID # For keeping track in the swap
@@ -109,7 +109,7 @@ class GraphCanvas(PlotCanvas):
     ###########################################################################
     def OnMouseDoubleClick(self, event):
         
-        self.frame.panelDblClick(event) # Ugly. use pubsub for this
+        self.parent.callDblClick(event) # Ugly. use pubsub for thisor have the event bubble up to the notebook graph panel
         super().OnMouseDoubleClick(event)
 
     def initPlot(self, isAutoscale):
@@ -316,19 +316,19 @@ class GraphCanvas(PlotCanvas):
 #
 ###############################################################################
 
+        
 class BaseGraph(wx.Panel):
     """
     A wxWidget Panel that displays the graph
     """
-    def __init__(self, parent, frame, panelID, axesSettings=None):
-
+    def __init__(self, parent, panelID, axesSettings=None):
         wx.Panel.__init__(self, parent, id=panelID)
         self.parent = parent
-        self.frame = frame
         self.panelID = panelID
+
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.isExpanded = False # Adding this attribute to keep track of state
-        self.Bind(wx.EVT_LEFT_DCLICK, self.frame.panelDblClick) # Ugly. use pubsub for this
+        self.Bind(wx.EVT_LEFT_DCLICK, self.callDblClick) # Ugly. use pubsub for this
 
         self.testTimeMinutes = DEFAULT_TEST_TIME # Default on startup. This gets set again when test is started.
  
@@ -336,9 +336,9 @@ class BaseGraph(wx.Panel):
         # Add the graph to the panel
         # This is the graph object within the panel. End goal is to make it switchable easily
         # with another graphing package, and really self is a higher level co-ordinating object
-        self.graphCanvas = GraphCanvas(self, self.frame, self.panelID, axesSettings)
+        self.graphCanvas = GraphCanvas(parent=self, panelID=self.panelID, graphAxesSettings=axesSettings)
         self.createToolbar() # Comment out for now until the base graph works again.
-        self.graphCanvas.clearGraph()
+        #self.graphCanvas.clearGraph()
         
         # Add to sizer and layout
         self.graphSizer = wx.BoxSizer(wx.VERTICAL)
@@ -401,3 +401,8 @@ class BaseGraph(wx.Panel):
 
     def refreshGraph(self):
         self.graphCanvas.Redraw()
+
+
+    def callDblClick(self, event):
+        pub.sendMessage("graphs.dblClick", panelID=self.panelID)
+        #self.parent.Parent.Parent.panelDblClick(event) # Ugly as all sin.

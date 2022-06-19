@@ -31,7 +31,7 @@ class GraphNotebook(wx.Notebook):
         self.AddPage(self.graphTab, "Graphs")
         self.AddPage(self.dataGridTab, "Data Table")
         
-        
+        # TODO Future expansion, stop updating one tab if it is not visible. Backfill all the saved data once it becomes visible again.
         # self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.OnPageChanged)
         # self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGING, self.OnPageChanging)
 
@@ -98,7 +98,7 @@ class MainGraphPanel(wx.Panel):
                                         DEFAULT_TEST_TIME, 
                                         0, 
                                         GRAPH_VERT_PADDING*1000)
-        self.unexposedTempGraph = UnexposedGraph(self.subSplitter, self, 1, graphAxesSettings) # id=1
+        self.unexposedTempGraph = UnexposedGraph(self.subSplitter, 1, self.controller, graphAxesSettings) # id=1
         
                 
         graphAxesSettings = AxesSettings("Furnace Temperature", 
@@ -108,7 +108,7 @@ class MainGraphPanel(wx.Panel):
                                         DEFAULT_TEST_TIME, 
                                         0, 
                                         1200)
-        self.furnaceTempGraph = FurnaceGraph(self.topSplitter, self, 2, graphAxesSettings) # id=2
+        self.furnaceTempGraph = FurnaceGraph(self.topSplitter, 2, self.controller, graphAxesSettings) # id=2
         
                 # Make the axis title, labels, and legend
         graphAxesSettings = AxesSettings("Furnace Pressure", 
@@ -118,7 +118,7 @@ class MainGraphPanel(wx.Panel):
                                         DEFAULT_TEST_TIME, 
                                         -0.25, 
                                         0.25)
-        self.pressureGraph = PressureGraph(self.subSplitter, self, 3, graphAxesSettings) # id=3
+        self.pressureGraph = PressureGraph(self.subSplitter, 3, self.controller, graphAxesSettings) # id=3
 
         self.panelList.append(self.unexposedTempGraph)
         self.panelList.append(self.pressureGraph)
@@ -138,6 +138,7 @@ class MainGraphPanel(wx.Panel):
         pub.subscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
         #pub.subscribe(self.updatePressureGraph, "pressureGraph.update")
         pub.subscribe(self.updateGraphData, "graphData.update")
+        pub.subscribe(self.panelDblClick, "graphs.dblClick")
 
     def layoutPanels(self, a, b, c):
 
@@ -162,14 +163,24 @@ class MainGraphPanel(wx.Panel):
         self.topSplitter.ReplaceWindow(c_old, c)
 
 
-    def panelDblClick(self, event):
-        id = event.GetId()
+
+    def panelDblClick(self, panelID):
+
         for panel in self.panelList:
-            #print(panel.GetId())
-            if panel.GetId() == id:
+            if panel.GetId() == panelID:
                 panelClicked = panel
 
         self.moveToBig(panelClicked)
+
+
+    # def panelDblClick(self, event):
+    #     id = event.GetId()
+    #     for panel in self.panelList:
+    #         #print(panel.GetId())
+    #         if panel.GetId() == id:
+    #             panelClicked = panel
+
+    #     self.moveToBig(panelClicked)
 
 
     def swap(self, list, a, b):
@@ -199,7 +210,7 @@ class MainGraphPanel(wx.Panel):
         pub.unsubscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
         #pub.unsubscribe(self.updatePressureGraph, "pressureGraph.update")
         pub.unsubscribe(self.updateGraphData, "graphData.update")
-
+        pub.subscribe(self.panelDblClick, "graphs.dblClick")
 
 
 ################################################################################
@@ -310,9 +321,9 @@ class MainGraphPanel(wx.Panel):
         self.furnaceTempGraph.createTargetCurveArray(testTime) # Recalc the target to fill up new time
 
         # Set the y-axis labels to the correct units
-        self.furnaceTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
-        self.unexposedTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
-        self.pressureGraph.graphCanvas.setYlabel("Press. ("+self.frame.controller.testSettings.pressureUnits+")")
+        self.furnaceTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.controller.testSettings.temperatureUnits+")")
+        self.unexposedTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.controller.testSettings.temperatureUnits+")")
+        self.pressureGraph.graphCanvas.setYlabel("Press. ("+self.controller.testSettings.pressureUnits+")")
 
         self.pressureGraph.hideUnusedPressureSensors()
 
