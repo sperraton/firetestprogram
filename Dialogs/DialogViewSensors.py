@@ -10,7 +10,7 @@ from HelperFunctions import changeComboboxBgColour, changeComboboxFgColour
 class ViewSensorsDialog(wx.Dialog):
 
     def __init__(self, parent):
-        wx.Dialog.__init__(self, parent, wx.ID_ANY, "View Channels")
+        wx.Dialog.__init__(self, parent, wx.ID_ANY, "Sensor Settings")
         
         self.nb = wx.Notebook(self)
         self.parent = parent

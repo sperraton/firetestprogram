@@ -1,7 +1,7 @@
 from enum import Enum
 from matplotlib import cm
 
-VERSION_NUM_STRING = "1.3"
+VERSION_NUM_STRING = "1.4"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
@@ -93,6 +93,7 @@ pressurePlacementLabels = [
 
 standardTableLabelsUnitsF = [
     "TIMESTAMP",
+    "TIMESTAMP (dec.)",
     "RQD. F",
     "AVG. F",
     "AUC RQD.",
@@ -100,6 +101,7 @@ standardTableLabelsUnitsF = [
 
 standardTableLabelsUnitsC = [
     "TIMESTAMP",
+    "TIMESTAMP (dec.)",
     "RQD. C",
     "AVG. C",
     "AUC RQD.",
@@ -143,4 +145,4 @@ LEGEND_NUM_ROWS = 8
 DEFAULT_TEST_TIME = 60
 SAVE_RATE_LWR = 1
 SAVE_RATE_UPR = 60
-SAVE_RATE_DEFAULT = 15
+SAVE_RATE_DEFAULT = 30

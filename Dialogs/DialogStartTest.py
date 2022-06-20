@@ -247,7 +247,6 @@ class StartTestDialog(wx.Dialog):
         self.resultTestNum = self.txtTestNum.GetValue().strip()
         self.resultDate = self.txtDate.GetValue()
         self.resultTestTime = testTimeValues[self.cmbTestTime.GetCurrentSelection()]
-        self.resultUpdateRate = 1000 # We're going to lock it to 1 second now #self.scUpdateRate.GetValue() * 1000 # Turn into milliseconds
         self.resultSaveRate = self.scSaveRate.GetValue()
         self.resultTargetCurve = self.cmbTargetCurve.GetStringSelection()
         self.resultSavePath = self.savePath

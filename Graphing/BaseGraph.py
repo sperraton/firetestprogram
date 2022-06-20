@@ -100,9 +100,7 @@ class GraphCanvas(PlotCanvas):
         #self.SetMinSize(minSize)
         
 
-        self.canvas.Id = self.panelID # For keeping track in the swap
-        #self.canvas.Bind(wx.EVT_LEFT_DCLICK, self.OnMouseDoubleClick)
-        #self.Bind(wx.EVT_LEFT_DCLICK, self.onMouseDoubleClick) 
+        #self.canvas.Id = self.panelID # For keeping track in the swap
         
     ###########################################################################
     # Handlers
@@ -154,7 +152,7 @@ class GraphCanvas(PlotCanvas):
         """
         self.SetDoubleBuffered(True)
         # TODO comb through the wxplot settings I can add here
-
+        
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
         self.enableLegend = False
@@ -174,6 +172,7 @@ class GraphCanvas(PlotCanvas):
 
     def addToGraphPlotSettings(self, settings):
         self.graphPlotSettings += settings
+
         
     def replaceGraphPlotSettings(self, settings):
         self.graphPlotSettings.clear()
@@ -203,7 +202,6 @@ class GraphCanvas(PlotCanvas):
             # we need to get back on track. Check the sizes of all the arrays. 
 
 
-    #
     def drawGraph(self):
         """
         Redraw all the graph objects
@@ -215,69 +213,35 @@ class GraphCanvas(PlotCanvas):
                   yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
 
 
-    #
     def clearGraph(self):
         """
         Remove all graph data.
         """
         self.Clear()
 
-    #
+
     def setYlabel(self, label):
         """
         Set the text for the Y-axis label.
         """
-        #self.gc.setYLabel(label) #Depreciated
         self.gc._yLabel = label
 
-        #self.graphAxes.set_ylabel(label)
 
     def scaleGraphXaxis(self, xmax):
         """
         Adjust the time scale of the graph.
         """
-
-        #self.graphAxes.set_xbound(lower=xmin, upper=xmax)
         self.graphAxesSettings.xmax = xmax
-        #self.scaleTickMarks(xmax) # This was Matplotlib specific
         self.drawGraph()
     
 
-    def scaleTickMarks(self, xmax):
-        """
-        Adjusts the tick marks based on the test length.
-        Assumes that xmax is test time minutes.
-        """
-
-        # TODO Maybe make it more dynamic to draw a good fit of
-        # ticks for the amount of x-axis shown
-        if xmax >= 240:
-            majorLocator = MultipleLocator(20)
-            minorLocator = MultipleLocator(5)
-        elif xmax <= 10:
-            majorLocator = MultipleLocator(2)
-            minorLocator = MultipleLocator(0.5)
-        elif xmax <= 90:
-            majorLocator = MultipleLocator(5)
-            minorLocator = MultipleLocator(1)
-        else:
-            majorLocator = MultipleLocator(10)
-            minorLocator = MultipleLocator(2)
-
-        majorFormatter = FormatStrFormatter('%d')
-        self.graphAxes.xaxis.set_major_locator(majorLocator)
-        self.graphAxes.xaxis.set_major_formatter(majorFormatter)
-        # for the minor ticks, use no labels; default NullFormatter
-        self.graphAxes.xaxis.set_minor_locator(minorLocator)
-
-
-    #
     def setLegendVisibility(self, state):
         """
         Toggles the legend visibility
         """
         self.enableLegend = state
         self.drawGraph()
+
 
     def setZoomState(self, state):
         """
@@ -299,14 +263,41 @@ class GraphCanvas(PlotCanvas):
         self.Reset()
 
 
-    #
     def saveImage(self, filename):
         """
         Saves a picture of the graph.
         """
+        originalSize = self.GetSizeTuple()  # Size up to a standard output size
+        
+        # sets new dc and clears it
 
-        self.SaveFile(filename)
+        bitmap = wx.Bitmap(1500, 800)
+        dc = wx.MemoryDC(bitmap)
 
+        bbr = wx.Brush(self.GetBackgroundColour(), wx.BRUSHSTYLE_SOLID)
+        dc.SetBackground(bbr)
+        dc.SetBackgroundMode(wx.SOLID)
+        dc.Clear()
+
+        if self._antiAliasingEnabled:
+            if not isinstance(dc, wx.GCDC):
+                try:
+                    dc = wx.GCDC(dc)
+                except Exception:               # XXX: Yucky.
+                    pass
+        #p1, p2 = self.gc.boundingBox() # min, max points of graphics
+        self._setSize(1500, 800)
+        self.Draw(self.gc, 
+                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
+                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+        self._printDraw(dc)
+        self._setSize() #Return to normal
+        del dc
+
+        # May need to redraw this. Check out the print functions too. They have some good parts about drawing to different sizes.
+        #self.SaveFile(filename) # Save the graph image
+        bitmap.SaveFile(filename, wx.BITMAP_TYPE_PNG)
+        
 
 
 

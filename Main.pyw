@@ -66,7 +66,7 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
-        self.noConnect = True # Used to set the DAQ to not connect. Random data generated. For debugging purposes
+        self.noConnect = False # Used to set the DAQ to not connect. Random data generated. For debugging purposes
         self.testTimeMinutes = 60 # Default
 
         self.warnToggle = True
@@ -295,7 +295,6 @@ class MainFrame(wx.Frame):
                        #| wx.DD_CHANGE_DIR
                        )
         if dlg.ShowModal() == wx.ID_OK:
-            ### BUGBUGBUG these if's aren't triggering
             evtID = event.GetId()
             if evtID == self.SAVEPATH_ID:# GetEventObject() is self.savePathItem:
                 self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=False)
@@ -330,7 +329,6 @@ class MainFrame(wx.Frame):
                                     dlg.resultTestNum,
                                     dlg.resultDate,
                                     dlg.resultTestTime,
-                                    dlg.resultUpdateRate,
                                     dlg.resultSaveRate,
                                     dlg.resultTargetCurve,
                                     dlg.resultSavePath,
@@ -350,7 +348,6 @@ class MainFrame(wx.Frame):
         self.initChannelMon() # Fill out the channel monitor labels
 
         # Ask the user to zero the presure sensors
-        # For now just testing that the zeroing works
         dlg = ZeroPressureDialog(parent=self)
         dlg.ShowModal()
         dlg.Destroy()
@@ -587,7 +584,7 @@ class MainFrame(wx.Frame):
         self.detachedWarn = False
 
 class MainApp(wx.App, wx.lib.mixins.inspection.InspectionMixin):
-    
+
     def OnInit(self):
         locale = wx.Locale.GetSystemLanguage()
         self.locale = wx.Locale(locale)

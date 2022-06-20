@@ -113,6 +113,7 @@ class Main(wx.Frame):
         # NOTE, if you add any more, don't forget to unsubscribe them on exit
         pub.subscribe(self.addDataRow, "dataGrid.addRow")
         #pub.subscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
+        pub.subscribe(self.updateGraphData, "graphData.update")
 
     def removeAllListeners(self):
         """
@@ -120,6 +121,7 @@ class Main(wx.Frame):
         """
         pub.unsubscribe(self.addDataRow, "dataGrid.addRow")
         #pub.unsubscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
+        pub.unsubscribe(self.updateGraphData, "graphData.update")
 
 
 ###############################################################################
@@ -208,6 +210,57 @@ class Main(wx.Frame):
         # Give the data to the graph
         self.furnaceTempGraph.updateFurnaceTarget(timeData, self.targetTempCurve)
 
+################################################################################
+# Update functions
+################################################################################
+
+    def updateGraphData(self, testData):
+
+        self.updateUnexposedTempGraph(timeData=testData.timeData,
+                        avgData=testData.unexposedAvgData,
+                        rawData=testData.unexposedRawData)
+        self.redrawAllGraphs()
+
+
+    def updateUnexposedTempGraph(self, timeData, avgData, rawData):
+        """
+        Draws on the graph the new data for the Avg and the Raw unexposed TC's
+        """
+        # Give the data to the graph
+        self.unexposedTempGraph.updateUnexposedData(timeData, avgData, rawData)
+        # self.unexposedTempGraph.graphCanvas.drawGraph()
+        #self.Fit() # Trigger redraw
+        
+
+    def updateUnexposedThreshold(self, thresh):
+        """
+        Draws the old line on the Unexposed graph
+        """
+        self.unexposedTempGraph.updateUnexposedThreshold(thresh)
+        #self.Fit() # Trigger redraw
+        
+ 
+
+    def redrawAllGraphs(self):
+        self.unexposedTempGraph.refreshGraph()
+        
+        #self.Layout() #This didn't work
+        #self.Refresh() #Neither this
+        #self.Update()
+
+        #self.FitInside()
+        #self.Fit() # Figure ths all out. Once I add this in the layout goes haywire.
+        #self.parent.Layout() # But if I do only this then the graph doesn't update
+        #self.parent.Fit()
+
+        # Steps into OnSize in wx.plotcanvas
+        # Where it gets a too small rectangle from self.canvas.GetClientSize()
+        # the canvas is a subwindow set in init
+        # self.canvas = wx.Window(self, -1)
+        # plotcanvas is a panel
+        # Eventually calls this: self. _Draw(graphics, xSpec, ySpec)
+        # Which draws to the mis-sized self._Buffer
+
 
 
 ###############################################################################
@@ -233,7 +286,6 @@ if __name__ == '__main__':
                             testNum="Test #",
                             date="Date",
                             testTimeMinutes=1,
-                            updateRate_ms=1000, # May get rid of.
                             saveRate_sec=1,
                             targetCurve="E119", 
                             savePath=app.controller.defaultSavePath,
@@ -246,6 +298,6 @@ if __name__ == '__main__':
     app.Center()
     app.Show()
     wxApp.MainLoop()
-    var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
+    #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
     print("Exiting now.")
     app.exit()

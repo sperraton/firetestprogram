@@ -107,14 +107,6 @@ class Controller():
             warnDialog(self.parent, "Unable to save settings.")
 
 
-    # def setBackupSavePath(self, path):
-    #     try:
-    #         self.defaultSavePath = path
-    #         self.machineSettings.defaultSavePath = path
-    #         self.saveSettings()
-    #     except:
-    #         warnDialog(self.parent, "Unable to save settings.")
-
 
 ################################################################################
 # Test Management
@@ -186,7 +178,7 @@ class Controller():
 
         #self.saveTick = 0
         self.lastWritten = self.elapsedTime
-        self.timer.StartOnce(self.updateRate*1000) # BUGBUGBUG 
+        self.timer.StartOnce(1000)
 
 
     def stopTest(self):
@@ -314,36 +306,6 @@ class Controller():
         self.grabLatestData()
 
         #pub.sendMessage("dataGrid.addRow", row=self.currentRow)
-
-        # Doing a round robin of updating of graphs because it is time consuming and may lead to drift.
-        # if self.graphUpdate == 0:
-        #     pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData,
-        #                                            avgData=self.testData.furnaceAvgData,
-        #                                            rawData=self.testData.furnaceRawData)
-        #     self.graphUpdate += 1
-        # elif self.graphUpdate == 1:
-        #     pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
-        #                                             ch3=self.testData.ch3PressureData,
-        #                                             ch2=self.testData.ch2PressureData,
-        #                                             ch1=self.testData.ch1PressureData)
-        #     self.graphUpdate += 1
-        # else:
-        #     pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData,
-        #                                              avgData=self.testData.unexposedAvgData,
-        #                                              rawData=self.testData.unexposedRawData)
-        #     self.graphUpdate = 0
-
-        # pub.sendMessage("furnaceGraph.update", timeData=self.testData.timeData,
-        #                 avgData=self.testData.furnaceAvgData,
-        #                 rawData=self.testData.furnaceRawData)
-        # pub.sendMessage("pressureGraph.update", timeData=self.testData.timeData,
-        #                 ch3=self.testData.ch3PressureData,
-        #                 ch2=self.testData.ch2PressureData,
-        #                 ch1=self.testData.ch1PressureData)
-        # pub.sendMessage("unexposedGraph.update", timeData=self.testData.timeData,
-        #                 avgData=self.testData.unexposedAvgData,
-        #                 rawData=self.testData.unexposedRawData)
-
         pub.sendMessage("graphData.update", testData=self.testData)
 
     def grabLatestData(self):
@@ -409,7 +371,7 @@ class Controller():
         # Fill out the data arrays for the graph views.
         # ============================================================
         # Converted to minutes for the graph axis
-        self.testData.setTimeData(float(self.elapsedTime)/60.0)
+        self.testData.setTimeData(float(self.elapsedTime)/60.0) # Converts to minutes
         self.testData.setRawFurnace()
         self.testData.setRawUnexposed()
         self.testData.setPressure()
@@ -473,6 +435,7 @@ class Controller():
         # Reset the current row TODO Perhaps this should be a dictionary so we can easily sort it for the grid
         self.currentRow.clear()
 
+        # TODO move the time format to the test data object and then it will hold the two different time formata for the graph/grid data
         # Make a timestamp
         h, m, s = parseTime(self.elapsedTime)
         s = round(s)
@@ -486,14 +449,11 @@ class Controller():
             m = 0
             h += 1
 
-        # Snap the seconds to modulo of save rate to correct drift error in timestamp
-        # Can't do this here because the grid gets this data too.
-        #s -= s % self.testSettings.saveRate
-
         timeString = "%d:%02d:%02d" % (h, m, s)
 
         # Build the standard front material
         self.currentRow.append(timeString)
+        self.currentRow.append(str(self.elapsedTime))
         self.currentRow.append("{0:.1f}".format(
             self.testData.getTargetTempCurve()))
         self.currentRow.append("{0:.1f}".format(self.testData.avgFurnace))

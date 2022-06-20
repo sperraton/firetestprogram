@@ -137,3 +137,9 @@ def parseTime(seconds):
     m, s = divmod(seconds, 60)
     h, m = divmod(m, 60)
     return h, m, s
+
+def findFrame():
+    # search up tree to find frame instance
+    frameInst = self
+    while not isinstance(frameInst, wx.Frame):
+        frameInst = frameInst.GetParent()

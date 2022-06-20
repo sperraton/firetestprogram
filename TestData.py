@@ -125,7 +125,7 @@ class TestData():
     # Functions concerning the time stamping of data (x-axis)
     #============================================================
     def setTimeData(self, time):
-
+        # time should be in minutes, decimal format
         if self.timeData is None:
             self.timeData = [time]
         else:
@@ -174,17 +174,6 @@ class TestData():
             self.furnaceRawData.append(rawFurnaceNumeric) # Pass the individual TC's
 
 
-    def calcAverageAUC(self, avgFurnace):
-        """
-        Calculates the average AUC
-        """
-        self.avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.furnaceAvgData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) / 60.0) + self.avgAUC
-
-        #avgFurnaceArr = np.array(self.furnaceAvgData)
-        #avgFurnaceAUC = np.trapz(avgFurnaceArr, dx=1/60)
-
-
     def setTargetTempCurve(self, value):
         """
         Appends the latest target temperature to the curve
@@ -200,12 +189,24 @@ class TestData():
         return self.targetTempCurveData[-1]
 
 
+    def calcAverageAUC(self, avgFurnace):
+        """
+        Calculates the average AUC
+        """
+        # BUGBUGBUG This assumes that the time delta is constant. Need to not do that.
+        self.avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
+                                (self.furnaceAvgData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) / 60.0) + self.avgAUC
+
+        #avgFurnaceArr = np.array(self.furnaceAvgData)
+        #avgFurnaceAUC = np.trapz(avgFurnaceArr, dx=1/60)
+
+
     def calcTargetAUC(self):
         """
         Calculate the target Area Under Curve
         """
         self.targetAUC = ((((self.targetTempCurveData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.targetTempCurveData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) / 60.0) + self.targetAUC
+                                (self.targetTempCurveData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) / 60.0) + self.targetAUC # the 60 is the culprit.
         
         #targetTempCurveArr = np.array(self.targetTempCurveData)
         #targetTempCurveAUC2 = np.trapz(targetTempCurveArr, dx=1/60) # TODO save this for outside the function

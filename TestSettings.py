@@ -11,7 +11,6 @@ class TestSettings:
                  testNum,
                  date,
                  testTimeMinutes=None,
-                 updateRate_ms=None,
                  saveRate_sec=None,
                  targetCurve=None,
                  savePath=None,
@@ -35,12 +34,6 @@ class TestSettings:
         self.indicatedPeriod = self.testTimeMinutes # Save this for reporting the time correction variables (I) as the testTimeMinutes may be changed
 
         self.threeQuarterMarkSeconds = self.testTimeMinutes*45 # 45/60
-
-        # Not currently using this. May get rid of it.
-        if updateRate_ms is None:
-            self.updateRate_ms = 1000
-        else:
-            self.updateRate_ms = updateRate_ms
 
         if saveRate_sec is None:
             self.saveRate_sec = 5
