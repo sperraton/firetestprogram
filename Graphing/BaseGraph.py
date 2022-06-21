@@ -5,7 +5,7 @@ from pubsub import pub
 from math import ceil
 
 from wx.lib.plot.plotcanvas import PlotCanvas
-from Enumerations import UIcolours, GRAPH_VERT_PADDING, DEFAULT_TEST_TIME, LEGEND_NUM_ROWS
+from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_SAVE_W, GRAPH_SAVE_H, DEFAULT_TEST_TIME, LEGEND_NUM_ROWS
 from Graphing.GraphNavToolbar import CustomNavToolbar
 
 import matplotlib       # Provides the graph figures
@@ -266,12 +266,10 @@ class GraphCanvas(PlotCanvas):
     def saveImage(self, filename):
         """
         Saves a picture of the graph.
-        """
-        originalSize = self.GetSizeTuple()  # Size up to a standard output size
-        
-        # sets new dc and clears it
+        """ 
 
-        bitmap = wx.Bitmap(1500, 800)
+        # Make a new bitmap of the size that we want to output and draw to it
+        bitmap = wx.Bitmap(GRAPH_SAVE_W, GRAPH_SAVE_H)
         dc = wx.MemoryDC(bitmap)
 
         bbr = wx.Brush(self.GetBackgroundColour(), wx.BRUSHSTYLE_SOLID)
@@ -286,7 +284,7 @@ class GraphCanvas(PlotCanvas):
                 except Exception:               # XXX: Yucky.
                     pass
         #p1, p2 = self.gc.boundingBox() # min, max points of graphics
-        self._setSize(1500, 800)
+        self._setSize(GRAPH_SAVE_W, GRAPH_SAVE_H)
         self.Draw(self.gc, 
                   xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
                   yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
@@ -355,17 +353,8 @@ class BaseGraph(wx.Panel):
         """
         Add a toolbar UI to the graph.
         """
-
         self.graphToolbar = CustomNavToolbar(self) # Pressure graph doesn't have a toggle
-
-        #tw, th = self.furnaceGraphToolbar.GetSize()
-        #fw, fh = self.furnaceGraphCanvas.GetSize()
-        #self.GraphToolbar.SetSize(wx.Size(fw, th))
-
         self.graphToolbar.Realize()
-
-        # update the axes menu on the toolbar (Matplotlib)
-        #self.graphToolbar.update()
 
 
     def setTestTimeMinutes(self, minutes):
@@ -380,7 +369,6 @@ class BaseGraph(wx.Panel):
     def createColourList(self, numColours):
         #colours = [GRAPH_COLOURMAP(x/(numSelected-1)) for x in range(numSelected)]
         if numColours <= 1: return
-        
         colourList = []
 
         for i in range(numColours):

@@ -65,7 +65,6 @@ class GraphNotebook(wx.Notebook):
         Given the raw data from the controller, update the data grid and the
         channel monitor.
         """
-
         self.dataGridTab.addDataRow(row)
 
     def OnDestroy(self):
@@ -100,7 +99,6 @@ class MainGraphPanel(wx.Panel):
                                         GRAPH_VERT_PADDING*1000)
         self.unexposedTempGraph = UnexposedGraph(self.subSplitter, 1, self.controller, graphAxesSettings) # id=1
         
-                
         graphAxesSettings = AxesSettings("Furnace Temperature", 
                                         "Time (Min.)", 
                                         "Temp. (Deg. C)", 
@@ -109,8 +107,7 @@ class MainGraphPanel(wx.Panel):
                                         0, 
                                         1200)
         self.furnaceTempGraph = FurnaceGraph(self.topSplitter, 2, self.controller, graphAxesSettings) # id=2
-        
-                # Make the axis title, labels, and legend
+
         graphAxesSettings = AxesSettings("Furnace Pressure", 
                                         "Time (Min.)", 
                                         "Press. (in H2O)", 
@@ -131,12 +128,7 @@ class MainGraphPanel(wx.Panel):
         self.SetSizer(self.sizer)
         self.Layout()
 
-
-        self.isDirty = False # track if graph needs redrawing
-        #pub.subscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
-        #pub.subscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
         pub.subscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
-        #pub.subscribe(self.updatePressureGraph, "pressureGraph.update")
         pub.subscribe(self.updateGraphData, "graphData.update")
         pub.subscribe(self.panelDblClick, "graphs.dblClick")
 
@@ -173,16 +165,6 @@ class MainGraphPanel(wx.Panel):
         self.moveToBig(panelClicked)
 
 
-    # def panelDblClick(self, event):
-    #     id = event.GetId()
-    #     for panel in self.panelList:
-    #         #print(panel.GetId())
-    #         if panel.GetId() == id:
-    #             panelClicked = panel
-
-    #     self.moveToBig(panelClicked)
-
-
     def swap(self, list, a, b):
         """
         Switch two items in a list.
@@ -205,10 +187,7 @@ class MainGraphPanel(wx.Panel):
 
 
     def OnDestroy(self):
-        #pub.unsubscribe(self.updateFurnaceTempGraph, "furnaceGraph.update")
-        #pub.unsubscribe(self.updateUnexposedTempGraph, "unexposedGraph.update")
         pub.unsubscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
-        #pub.unsubscribe(self.updatePressureGraph, "pressureGraph.update")
         pub.unsubscribe(self.updateGraphData, "graphData.update")
         pub.subscribe(self.panelDblClick, "graphs.dblClick")
 
@@ -236,7 +215,6 @@ class MainGraphPanel(wx.Panel):
         """
         # Give the data to the graph
         self.furnaceTempGraph.updateFurnaceData(timeData, avgData, rawData)
-        #self.Fit() # Trigger redraw
         
 
     def updateUnexposedTempGraph(self, timeData, avgData, rawData):
@@ -245,8 +223,6 @@ class MainGraphPanel(wx.Panel):
         """
         # Give the data to the graph
         self.unexposedTempGraph.updateUnexposedData(timeData, avgData, rawData)
-        # self.unexposedTempGraph.graphCanvas.drawGraph()
-        #self.Fit() # Trigger redraw
         
 
     def updateUnexposedThreshold(self, thresh):
@@ -254,7 +230,6 @@ class MainGraphPanel(wx.Panel):
         Draws the old line on the Unexposed graph
         """
         self.unexposedTempGraph.updateUnexposedThreshold(thresh)
-        #self.Fit() # Trigger redraw
         
 
     def updatePressureGraph(self, timeData, ch3, ch2, ch1):
@@ -262,8 +237,6 @@ class MainGraphPanel(wx.Panel):
         Draws on the graph the new data for the pressure sensors
         """
         self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
-        #self.Fit() # Trigger redraw
-        
         
 
     def redrawAllGraphs(self):
@@ -336,29 +309,15 @@ class MainGraphPanel(wx.Panel):
         parentPath, ext = os.path.splitext(path)
 
         self.furnaceTempGraph.graphCanvas.homeGraph()
-        #self.splitter.SetExpanded(2)
-        #Reset the limits
-        #self.furnaceTempGraph.setLimitsTo() # If the graph is zoomed in, un-zoom it
         self.furnaceTempGraph.graphCanvas.saveImage(parentPath+"_furnace"+ext)
 
         self.unexposedTempGraph.graphCanvas.homeGraph()
-        #self.splitter.SetExpanded(1)
-        #self.unexposedTempGraph.setLimitsTo()
         self.unexposedTempGraph.graphCanvas.saveImage(parentPath+"_unexposed"+ext)
 
         self.pressureGraph.graphCanvas.homeGraph()
-        #self.splitter.SetExpanded(3)
-        #self.pressureGraph.setLimitsTo(isLowerZero=False)
         self.pressureGraph.graphCanvas.saveImage(parentPath+"_pressure"+ext)
         
-        #self.splitter.SetExpanded(-1)
         #self.flashStatusMessage("Saved to %s" % path)
-
-        # Reset the view flags
-        #self.splitter.GetWindow(0).isExpanded = False
-        #self.splitter.GetWindow(1).isExpanded = False
-        #self.splitter.GetWindow(2).isExpanded = False
-        #self.splitter.GetWindow(3).isExpanded = False
 
     def setTimeAxis(self, amtMinutes):
         """

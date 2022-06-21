@@ -1,3 +1,4 @@
+from tracemalloc import start
 import wx
 #import numpy as np
 from numpy import mean, median, percentile
@@ -138,8 +139,10 @@ def parseTime(seconds):
     h, m = divmod(m, 60)
     return h, m, s
 
-def findFrame():
-    # search up tree to find frame instance
-    frameInst = self
+def findFrame(startingObject):
+    # search up tree to find first frame instance
+    frameInst = startingObject # The calling object should pass self
     while not isinstance(frameInst, wx.Frame):
         frameInst = frameInst.GetParent()
+
+    return frameInst

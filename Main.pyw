@@ -540,6 +540,7 @@ class MainFrame(wx.Frame):
         Re-enable the menu items and save the plots
         """
 
+        # Reset the UI state
         self.startItem.Enable(True)
         self.stopItem.Enable(False)
         self.extendItem.Enable(False)
@@ -550,8 +551,13 @@ class MainFrame(wx.Frame):
         self.thresholdSettingsItem.Enable(True)
         self.profileManagerItem.Enable(True)
 
-        parentPath, ext = os.path.splitext(self.controller.testSettings.fullFileName) # Yes, ugly I know
+        # Save the graphs to a png file
+        parentPath, ext = os.path.splitext(self.controller.testSettings.fullFileName) # Get the filename only
         self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save plots automatically
+
+        if self.controller.testSettings.fullBackupFileName is not None:
+            parentPath, ext = os.path.splitext(self.controller.testSettings.fullBackupFileName)
+            self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save Backup plot if the path exists
 
         self.monPanel.hideMonitor()
 
