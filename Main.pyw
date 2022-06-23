@@ -69,8 +69,9 @@ class MainFrame(wx.Frame):
         self.noConnect = False # Used to set the DAQ to not connect. Random data generated. For debugging purposes
         self.testTimeMinutes = 60 # Default
 
-        self.warnToggle = True
+        # self.warnToggle = True
         self.detachedWarn = False # Stop additional triggers of the warn dialog
+        self.channelErrorWarn = False # Stop additional triggers of the warn dialog
 
         # ensure the parent's __init__ is called
         super(MainFrame, self).__init__(*args, **kw)
@@ -494,6 +495,7 @@ class MainFrame(wx.Frame):
         pub.subscribe(self.testThreeQuarterMark, "test.correction")
         pub.subscribe(self.testExtend, "test.extend")
         pub.subscribe(self.lostChannelWarning, "channel.detached")
+        pub.subscribe(self.channelErrorWarning, "channel.error")
 
 
     def removeAllListeners(self):
@@ -509,6 +511,7 @@ class MainFrame(wx.Frame):
         pub.unsubscribe(self.testThreeQuarterMark, "test.correction")
         pub.unsubscribe(self.testExtend, "test.extend")
         pub.unsubscribe(self.lostChannelWarning, "channel.detached")
+        pub.unsubscribe(self.channelErrorWarning, "channel.error")
 
 
     def setStatusMessage(self, msg):
@@ -588,6 +591,26 @@ class MainFrame(wx.Frame):
         self.dlg.ShowModal()
         self.dlg.Destroy()
         self.detachedWarn = False
+
+
+    def channelErrorWarning(self, sensorType, channel):
+        """
+        Warn the user that channels have detached.
+        """
+        if self.channelErrorWarn: return # Don't fire a bunch of dialogs in response to several error events
+
+        # TODO replace this with a notify component and not a dialog.
+        if sensorType == "TC":
+            sensType = "thermocouple"
+        else:
+            sensType = "pressure sensor"
+
+        self.channelErrorWarn = True
+        self.dlg = wx.MessageDialog(self, f"The {sensType} channel {channel} measurement is out of range. Check the senor wiring.", "Warning!", wx.OK | wx.ICON_WARNING)
+        self.dlg.ShowModal()
+        self.dlg.Destroy()
+        self.channelErrorWarn = False
+
 
 class MainApp(wx.App, wx.lib.mixins.inspection.InspectionMixin):
 

@@ -464,3 +464,5 @@ class ViewSensorsDialog(wx.Dialog):
         label = txt.GetValue()
 
         self.parent.controller.setThermocoupleLabel(label, channelIndex)
+
+        event.Skip()

@@ -158,6 +158,7 @@ class BaseSensor():
                 or errorCode == ErrorEventCode.EEPHIDGET_OUTOFRANGE):
                 self.value = INVALID_VALUE
                 self.isReady = True
+                pub.sendMessage("channel.error", sensorType=self.sensorType, channel=self.channelIndex)
             else:
                 print("Error: %s (%d)\n", errorString, errorCode);
 
