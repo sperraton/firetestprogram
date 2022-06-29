@@ -1,5 +1,5 @@
 /* Generated code for Python module 'wx.lib.embeddedimage'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_wx$lib$embeddedimage;
 PyDictObject *moduledict_wx$lib$embeddedimage;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[61];
+static PyObject *mod_consts[60];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[60];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("wx.lib.embeddedimage"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 60; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_wx$lib$embeddedimage(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "wx.lib.embeddedimage");
+    for (int i = 0; i < 60; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -75,14 +87,14 @@ static PyCodeObject *codeobj_9623f9f418474eb3fbc250ec9fd68743;
 static PyCodeObject *codeobj_0e774bbe03b58d9f9415f7dc68730c38;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[53]); CHECK_OBJECT(module_filename_obj);
-    codeobj_8594e91fb1a8730e2451a911bce85f62 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[54], NULL, NULL, 0, 0, 0);
-    codeobj_3b62368b6886a0c8b1dc9a2808265bd4 = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[9], mod_consts[55], NULL, 1, 0, 0);
-    codeobj_9518763dd01ea5b8d2f1b6e7a2e2bf99 = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[12], mod_consts[56], NULL, 1, 0, 0);
-    codeobj_d23af0d7965ff1c7e548b55308f1e14c = MAKE_CODEOBJECT(module_filename_obj, 57, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[42], mod_consts[57], NULL, 1, 0, 0);
-    codeobj_d9a6f52989529a1d51fec8a773d63c04 = MAKE_CODEOBJECT(module_filename_obj, 62, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[4], mod_consts[58], NULL, 1, 0, 0);
-    codeobj_9623f9f418474eb3fbc250ec9fd68743 = MAKE_CODEOBJECT(module_filename_obj, 26, CO_NOFREE, mod_consts[28], mod_consts[59], NULL, 0, 0, 0);
-    codeobj_0e774bbe03b58d9f9415f7dc68730c38 = MAKE_CODEOBJECT(module_filename_obj, 44, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[38], mod_consts[60], NULL, 3, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[51]); CHECK_OBJECT(module_filename_obj);
+    codeobj_8594e91fb1a8730e2451a911bce85f62 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[52], NULL, NULL, 0, 0, 0);
+    codeobj_3b62368b6886a0c8b1dc9a2808265bd4 = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[8], mod_consts[53], NULL, 1, 0, 0);
+    codeobj_9518763dd01ea5b8d2f1b6e7a2e2bf99 = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[10], mod_consts[54], NULL, 1, 0, 0);
+    codeobj_d23af0d7965ff1c7e548b55308f1e14c = MAKE_CODEOBJECT(module_filename_obj, 57, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[40], mod_consts[55], NULL, 1, 0, 0);
+    codeobj_d9a6f52989529a1d51fec8a773d63c04 = MAKE_CODEOBJECT(module_filename_obj, 62, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[4], mod_consts[56], NULL, 1, 0, 0);
+    codeobj_9623f9f418474eb3fbc250ec9fd68743 = MAKE_CODEOBJECT(module_filename_obj, 26, CO_NOFREE, mod_consts[26], mod_consts[57], NULL, 0, 0, 0);
+    codeobj_0e774bbe03b58d9f9415f7dc68730c38 = MAKE_CODEOBJECT(module_filename_obj, 44, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[36], mod_consts[58], NULL, 3, 0, 0);
 }
 
 // The module function declarations.
@@ -124,13 +136,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__1___init__(struct Nuitka_
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_0e774bbe03b58d9f9415f7dc68730c38 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_0e774bbe03b58d9f9415f7dc68730c38)) {
         Py_XDECREF(cache_frame_0e774bbe03b58d9f9415f7dc68730c38);
 
@@ -159,13 +166,13 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__1___init__(struct Nuitka_
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_data);
-        tmp_assattr_name_1 = par_data;
+        tmp_assattr_value_1 = par_data;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[0], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[0], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -178,13 +185,13 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__1___init__(struct Nuitka_
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_isBase64);
-        tmp_assattr_name_2 = par_isBase64;
+        tmp_assattr_value_2 = par_isBase64;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[1], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[1], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -245,67 +252,35 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__1___init__(struct Nuitka_
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_data);
-    Py_DECREF(par_data);
-    par_data = NULL;
-    CHECK_OBJECT(par_isBase64);
-    Py_DECREF(par_isBase64);
-    par_isBase64 = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_data);
-    Py_DECREF(par_data);
-    par_data = NULL;
-    CHECK_OBJECT(par_isBase64);
-    Py_DECREF(par_isBase64);
-    par_isBase64 = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_data);
+    Py_DECREF(par_data);
+    CHECK_OBJECT(par_isBase64);
+    Py_DECREF(par_isBase64);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_data);
+    Py_DECREF(par_data);
+    CHECK_OBJECT(par_isBase64);
+    Py_DECREF(par_isBase64);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -331,13 +306,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__2_GetBitmap(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_3b62368b6886a0c8b1dc9a2808265bd4 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_3b62368b6886a0c8b1dc9a2808265bd4)) {
         Py_XDECREF(cache_frame_3b62368b6886a0c8b1dc9a2808265bd4);
 
@@ -366,17 +336,17 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__2_GetBitmap(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -386,8 +356,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__2_GetBitmap(struct Nuitka
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[3]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[3]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -400,21 +370,21 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__2_GetBitmap(struct Nuitka
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_3b62368b6886a0c8b1dc9a2808265bd4->m_frame.f_lineno = 49;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[4]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[4]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 49;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
         frame_3b62368b6886a0c8b1dc9a2808265bd4->m_frame.f_lineno = 49;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -445,7 +415,7 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__2_GetBitmap(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -484,50 +454,24 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__2_GetBitmap(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -590,10 +534,10 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[0]);
+        tmp_expression_value_1 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[0]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -609,23 +553,12 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 53;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[1]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[1]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -658,16 +591,16 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_3;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_3;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -677,21 +610,10 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 54;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_self;
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[0]);
-        if (tmp_args_element_name_1 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[0]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -702,8 +624,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_9518763dd01ea5b8d2f1b6e7a2e2bf99->m_frame.f_lineno = 54;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -782,8 +704,6 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     CHECK_OBJECT(var_data);
     Py_DECREF(var_data);
     var_data = NULL;
@@ -799,8 +719,6 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_data);
     var_data = NULL;
     // Re-raise.
@@ -816,14 +734,16 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__3_GetData(struct Nuitka_F
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -849,8 +769,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_d23af0d7965ff1c7e548b55308f1e14c = NULL;
+    PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -905,7 +825,7 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_d23af0d7965ff1c7e548b55308f1e14c->m_frame.f_lineno = 58;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[7]);
+        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[6]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -920,15 +840,15 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
         var_icon = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_2;
         CHECK_OBJECT(var_icon);
-        tmp_expression_name_1 = var_icon;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = var_icon;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -941,21 +861,21 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         frame_d23af0d7965ff1c7e548b55308f1e14c->m_frame.f_lineno = 59;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[9]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[8]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 59;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_d23af0d7965ff1c7e548b55308f1e14c->m_frame.f_lineno = 59;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -968,21 +888,6 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
         }
         Py_DECREF(tmp_call_result_1);
     }
-    if (var_icon == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 60;
-        type_description_1 = "oo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_icon;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_d23af0d7965ff1c7e548b55308f1e14c);
@@ -992,16 +897,6 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_d23af0d7965ff1c7e548b55308f1e14c);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -1044,13 +939,16 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_icon);
+    tmp_return_value = var_icon;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(var_icon);
+    CHECK_OBJECT(var_icon);
+    Py_DECREF(var_icon);
     var_icon = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -1064,8 +962,6 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_icon);
     var_icon = NULL;
     // Re-raise.
@@ -1081,14 +977,16 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__4_GetIcon(struct Nuitka_F
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1151,16 +1049,16 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[11]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[9]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[9]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1173,8 +1071,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_d9a6f52989529a1d51fec8a773d63c04->m_frame.f_lineno = 63;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[12]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[10]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1185,8 +1083,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
             goto frame_exception_exit_1;
         }
         frame_d9a6f52989529a1d51fec8a773d63c04->m_frame.f_lineno = 63;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1202,7 +1100,7 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
     }
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
@@ -1220,9 +1118,9 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_stream);
-        tmp_args_element_name_2 = var_stream;
+        tmp_args_element_value_2 = var_stream;
         frame_d9a6f52989529a1d51fec8a773d63c04->m_frame.f_lineno = 64;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[13], tmp_args_element_name_2);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[11], tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1300,9 +1198,8 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(var_stream);
+    CHECK_OBJECT(var_stream);
+    Py_DECREF(var_stream);
     var_stream = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -1316,8 +1213,6 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_stream);
     var_stream = NULL;
     // Re-raise.
@@ -1333,14 +1228,16 @@ static PyObject *impl_wx$lib$embeddedimage$$$function__5_GetImage(struct Nuitka_
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1354,9 +1251,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__1___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$embeddedimage$$$function__1___init__,
-        mod_consts[38],
+        mod_consts[36],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[39],
+        mod_consts[37],
 #endif
         codeobj_0e774bbe03b58d9f9415f7dc68730c38,
         defaults,
@@ -1379,9 +1276,9 @@ static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__1___init__(PyObj
 static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__2_GetBitmap() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$embeddedimage$$$function__2_GetBitmap,
-        mod_consts[9],
+        mod_consts[8],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[40],
+        mod_consts[38],
 #endif
         codeobj_3b62368b6886a0c8b1dc9a2808265bd4,
         NULL,
@@ -1404,9 +1301,9 @@ static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__2_GetBitmap() {
 static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__3_GetData() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$embeddedimage$$$function__3_GetData,
-        mod_consts[12],
+        mod_consts[10],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[41],
+        mod_consts[39],
 #endif
         codeobj_9518763dd01ea5b8d2f1b6e7a2e2bf99,
         NULL,
@@ -1429,9 +1326,9 @@ static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__3_GetData() {
 static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__4_GetIcon() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$embeddedimage$$$function__4_GetIcon,
-        mod_consts[42],
+        mod_consts[40],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[43],
+        mod_consts[41],
 #endif
         codeobj_d23af0d7965ff1c7e548b55308f1e14c,
         NULL,
@@ -1456,7 +1353,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$embeddedimage$$$function__5_GetImage() {
         impl_wx$lib$embeddedimage$$$function__5_GetImage,
         mod_consts[4],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[44],
+        mod_consts[42],
 #endif
         codeobj_d9a6f52989529a1d51fec8a773d63c04,
         NULL,
@@ -1646,71 +1543,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("wx.lib.embeddedimage");
+
+    // Store the module for future use.
     module_wx$lib$embeddedimage = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.embeddedimage: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("wx.lib.embeddedimage: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.embeddedimage: Calling createModuleConstants().\n");
+        PRINT_STRING("wx.lib.embeddedimage: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.embeddedimage: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("wx.lib.embeddedimage: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initwx$lib$embeddedimage\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_wx$lib$embeddedimage = MODULE_DICT(module_wx$lib$embeddedimage);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -1726,7 +1625,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         UPDATE_STRING_DICT0(
             moduledict_wx$lib$embeddedimage,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[59]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)const_str_plain___name__);
@@ -1776,7 +1675,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -1870,12 +1769,12 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_8594e91fb1a8730e2451a911bce85f62 = MAKE_MODULE_FRAME(codeobj_8594e91fb1a8730e2451a911bce85f62, module_wx$lib$embeddedimage);
@@ -1887,17 +1786,17 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[16]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[14]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[17], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[15], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1910,17 +1809,17 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[16]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[14]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[18], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[16], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1935,22 +1834,22 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[19], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[20];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_wx$lib$embeddedimage;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[21];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[18];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_wx$lib$embeddedimage;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[19];
         frame_8594e91fb1a8730e2451a911bce85f62->m_frame.f_lineno = 15;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1961,22 +1860,22 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[2];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_wx$lib$embeddedimage;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[21];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[2];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_wx$lib$embeddedimage;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[19];
         frame_8594e91fb1a8730e2451a911bce85f62->m_frame.f_lineno = 17;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1992,18 +1891,18 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[22];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_wx$lib$embeddedimage;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[23];
-        tmp_level_name_3 = mod_consts[21];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[20];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_wx$lib$embeddedimage;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[21];
+        tmp_level_value_3 = mod_consts[19];
         frame_8594e91fb1a8730e2451a911bce85f62->m_frame.f_lineno = 18;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2018,11 +1917,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_wx$lib$embeddedimage,
-                mod_consts[11],
-                mod_consts[21]
+                mod_consts[9],
+                mod_consts[19]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[11]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[9]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -2036,19 +1935,19 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[9], tmp_assign_source_6);
     }
     // Tried code:
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[20]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2058,7 +1957,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_1;
         }
-        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[6]);
+        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[5]);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2069,7 +1968,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_7);
     }
     goto try_end_1;
     // Exception handler code:
@@ -2098,11 +1997,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_AttributeError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_AttributeError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_1 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -2114,14 +2013,14 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[20]);
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2131,7 +2030,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_2;
         }
-        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[24]);
+        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[22]);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2142,7 +2041,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_8);
     }
     goto branch_end_1;
     branch_no_1:;
@@ -2191,7 +2090,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_dircall_arg1_1;
-        tmp_dircall_arg1_1 = mod_consts[25];
+        tmp_dircall_arg1_1 = mod_consts[23];
         Py_INCREF(tmp_dircall_arg1_1);
 
         {
@@ -2219,44 +2118,39 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_3;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[26];
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[24];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[26];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 26;
-
-            goto try_except_handler_3;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[24];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -2279,9 +2173,9 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_3 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[21];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_1, 0);
+        tmp_expression_value_3 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[19];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2292,9 +2186,9 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_3;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2306,14 +2200,14 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_11 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_11 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2328,16 +2222,16 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         tmp_class_creation_1__metaclass = tmp_assign_source_11;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[26];
+        bool tmp_condition_result_4;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[24];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_4 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -2346,7 +2240,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     branch_yes_2:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[26];
+    tmp_dictdel_key = mod_consts[24];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -2361,10 +2255,10 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_4 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[27]);
+        tmp_expression_value_4 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[25]);
         tmp_condition_result_5 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
@@ -2375,15 +2269,15 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_5 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[27]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_5 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[25]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2393,18 +2287,18 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_3;
         }
-        tmp_tuple_element_1 = mod_consts[28];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = mod_consts[26];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_1 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_8594e91fb1a8730e2451a911bce85f62->m_frame.f_lineno = 26;
-        tmp_assign_source_12 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_12 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2419,14 +2313,14 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         tmp_class_creation_1__prepared = tmp_assign_source_12;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_6;
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_6 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_6, mod_consts[29]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_6 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_6, mod_consts[27]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2437,8 +2331,8 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_3;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -2448,18 +2342,18 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_2;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[30];
+        tmp_left_value_1 = mod_consts[28];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[31];
-        tmp_getattr_default_1 = mod_consts[32];
+        tmp_getattr_attr_1 = mod_consts[29];
+        tmp_getattr_default_1 = mod_consts[30];
         tmp_tuple_element_2 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2471,17 +2365,17 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
             goto try_except_handler_3;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_7;
+            PyObject *tmp_expression_value_7;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_7 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_7 == NULL));
-            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[31]);
-            Py_DECREF(tmp_expression_name_7);
+            tmp_expression_value_7 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_7 == NULL));
+            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[29]);
+            Py_DECREF(tmp_expression_value_7);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2492,17 +2386,17 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_2);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_3;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2542,32 +2436,32 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
         // Tried code:
         // Tried code:
+        tmp_dictset_value = mod_consts[31];
+        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[32], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 26;
+
+            goto try_except_handler_5;
+        }
         tmp_dictset_value = mod_consts[33];
+        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[12], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 26;
+
+            goto try_except_handler_5;
+        }
+        tmp_dictset_value = mod_consts[26];
         tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[34], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 26;
-
-            goto try_except_handler_5;
-        }
-        tmp_dictset_value = mod_consts[35];
-        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[14], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 26;
-
-            goto try_except_handler_5;
-        }
-        tmp_dictset_value = mod_consts[28];
-        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[36], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -2607,13 +2501,13 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         // Framed code:
         {
             PyObject *tmp_defaults_1;
-            tmp_defaults_1 = mod_consts[37];
+            tmp_defaults_1 = mod_consts[35];
             Py_INCREF(tmp_defaults_1);
 
 
             tmp_dictset_value = MAKE_FUNCTION_wx$lib$embeddedimage$$$function__1___init__(tmp_defaults_1);
 
-            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[38], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[36], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -2630,7 +2524,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
         tmp_dictset_value = MAKE_FUNCTION_wx$lib$embeddedimage$$$function__2_GetBitmap();
 
-        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[9], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[8], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -2646,7 +2540,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
         tmp_dictset_value = MAKE_FUNCTION_wx$lib$embeddedimage$$$function__3_GetData();
 
-        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[12], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[10], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -2662,7 +2556,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
         tmp_dictset_value = MAKE_FUNCTION_wx$lib$embeddedimage$$$function__4_GetIcon();
 
-        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[42], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[40], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -2691,20 +2585,20 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
             goto frame_exception_exit_2;
         }
         {
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_expression_name_8;
-            PyObject *tmp_args_element_name_1;
-            tmp_expression_name_8 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_expression_value_8;
+            PyObject *tmp_args_element_value_1;
+            tmp_expression_value_8 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
 
-            if (tmp_expression_name_8 == NULL) {
+            if (tmp_expression_value_8 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
+                    tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
 
-                    if (unlikely(tmp_expression_name_8 == NULL)) {
-                        tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+                    if (unlikely(tmp_expression_value_8 == NULL)) {
+                        tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
                     }
 
-                    if (tmp_expression_name_8 == NULL) {
+                    if (tmp_expression_value_8 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2714,13 +2608,15 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_8);
+                    Py_INCREF(tmp_expression_value_8);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
-            tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[45]);
-            Py_DECREF(tmp_expression_name_8);
-            if (tmp_called_name_2 == NULL) {
+            tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[43]);
+            Py_DECREF(tmp_expression_value_8);
+            if (tmp_called_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2730,11 +2626,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_1 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[9]);
+            tmp_args_element_value_1 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[8]);
 
-            if (unlikely(tmp_args_element_name_1 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_2);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[9]);
+            if (unlikely(tmp_args_element_value_1 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_2);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[8]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -2743,20 +2639,20 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_1 == NULL) {
+            if (tmp_args_element_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_2);
+                Py_DECREF(tmp_called_value_2);
 
                 exception_lineno = 67;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 67;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_1);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_1);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2764,6 +2660,190 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
 
 
                 exception_lineno = 67;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[44], tmp_dictset_value);
+            Py_DECREF(tmp_dictset_value);
+            if (tmp_res != 0) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 67;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+        }
+        {
+            PyObject *tmp_called_value_3;
+            PyObject *tmp_expression_value_9;
+            PyObject *tmp_args_element_value_2;
+            tmp_expression_value_9 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
+
+            if (tmp_expression_value_9 == NULL) {
+                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
+                    tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
+
+                    if (unlikely(tmp_expression_value_9 == NULL)) {
+                        tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+                    }
+
+                    if (tmp_expression_value_9 == NULL) {
+                        assert(ERROR_OCCURRED());
+
+                        FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                        exception_lineno = 68;
+                        type_description_2 = "o";
+                        goto frame_exception_exit_2;
+                    }
+                    Py_INCREF(tmp_expression_value_9);
+                } else {
+                    goto frame_exception_exit_2;
+                }
+            }
+
+            tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[43]);
+            Py_DECREF(tmp_expression_value_9);
+            if (tmp_called_value_3 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 68;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_args_element_value_2 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[10]);
+
+            if (unlikely(tmp_args_element_value_2 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_3);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[10]);
+                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+                CHAIN_EXCEPTION(exception_value);
+
+                exception_lineno = 68;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+
+            if (tmp_args_element_value_2 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_called_value_3);
+
+                exception_lineno = 68;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 68;
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_2);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_2);
+            if (tmp_dictset_value == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 68;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[45], tmp_dictset_value);
+            Py_DECREF(tmp_dictset_value);
+            if (tmp_res != 0) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 68;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+        }
+        {
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_expression_value_10;
+            PyObject *tmp_args_element_value_3;
+            tmp_expression_value_10 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
+
+            if (tmp_expression_value_10 == NULL) {
+                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
+                    tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
+
+                    if (unlikely(tmp_expression_value_10 == NULL)) {
+                        tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+                    }
+
+                    if (tmp_expression_value_10 == NULL) {
+                        assert(ERROR_OCCURRED());
+
+                        FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                        exception_lineno = 69;
+                        type_description_2 = "o";
+                        goto frame_exception_exit_2;
+                    }
+                    Py_INCREF(tmp_expression_value_10);
+                } else {
+                    goto frame_exception_exit_2;
+                }
+            }
+
+            tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[43]);
+            Py_DECREF(tmp_expression_value_10);
+            if (tmp_called_value_4 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 69;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_args_element_value_3 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[40]);
+
+            if (unlikely(tmp_args_element_value_3 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_4);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[40]);
+                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+                CHAIN_EXCEPTION(exception_value);
+
+                exception_lineno = 69;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+
+            if (tmp_args_element_value_3 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_called_value_4);
+
+                exception_lineno = 69;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 69;
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_3);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_3);
+            if (tmp_dictset_value == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 69;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
@@ -2775,206 +2855,26 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 67;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-        }
-        {
-            PyObject *tmp_called_name_3;
-            PyObject *tmp_expression_name_9;
-            PyObject *tmp_args_element_name_2;
-            tmp_expression_name_9 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
-
-            if (tmp_expression_name_9 == NULL) {
-                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
-
-                    if (unlikely(tmp_expression_name_9 == NULL)) {
-                        tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
-                    }
-
-                    if (tmp_expression_name_9 == NULL) {
-                        assert(ERROR_OCCURRED());
-
-                        FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                        exception_lineno = 68;
-                        type_description_2 = "o";
-                        goto frame_exception_exit_2;
-                    }
-                    Py_INCREF(tmp_expression_name_9);
-                }
-            }
-
-            tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[45]);
-            Py_DECREF(tmp_expression_name_9);
-            if (tmp_called_name_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 68;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_args_element_name_2 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[12]);
-
-            if (unlikely(tmp_args_element_name_2 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_3);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[12]);
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 68;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-
-            if (tmp_args_element_name_2 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_3);
-
-                exception_lineno = 68;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 68;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_2);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_2);
-            if (tmp_dictset_value == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 68;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[47], tmp_dictset_value);
-            Py_DECREF(tmp_dictset_value);
-            if (tmp_res != 0) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 68;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-        }
-        {
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_expression_name_10;
-            PyObject *tmp_args_element_name_3;
-            tmp_expression_name_10 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
-
-            if (tmp_expression_name_10 == NULL) {
-                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
-
-                    if (unlikely(tmp_expression_name_10 == NULL)) {
-                        tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
-                    }
-
-                    if (tmp_expression_name_10 == NULL) {
-                        assert(ERROR_OCCURRED());
-
-                        FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                        exception_lineno = 69;
-                        type_description_2 = "o";
-                        goto frame_exception_exit_2;
-                    }
-                    Py_INCREF(tmp_expression_name_10);
-                }
-            }
-
-            tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[45]);
-            Py_DECREF(tmp_expression_name_10);
-            if (tmp_called_name_4 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 69;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_args_element_name_3 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[42]);
-
-            if (unlikely(tmp_args_element_name_3 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_4);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[42]);
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 69;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-
-            if (tmp_args_element_name_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_4);
-
-                exception_lineno = 69;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 69;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_3);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_3);
-            if (tmp_dictset_value == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 69;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48], tmp_dictset_value);
-            Py_DECREF(tmp_dictset_value);
-            if (tmp_res != 0) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
                 exception_lineno = 69;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
         }
         {
-            PyObject *tmp_called_name_5;
-            PyObject *tmp_expression_name_11;
-            PyObject *tmp_args_element_name_4;
-            tmp_expression_name_11 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
+            PyObject *tmp_called_value_5;
+            PyObject *tmp_expression_value_11;
+            PyObject *tmp_args_element_value_4;
+            tmp_expression_value_11 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[2]);
 
-            if (tmp_expression_name_11 == NULL) {
+            if (tmp_expression_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
+                    tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[2]);
 
-                    if (unlikely(tmp_expression_name_11 == NULL)) {
-                        tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+                    if (unlikely(tmp_expression_value_11 == NULL)) {
+                        tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
                     }
 
-                    if (tmp_expression_name_11 == NULL) {
+                    if (tmp_expression_value_11 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2984,13 +2884,15 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_11);
+                    Py_INCREF(tmp_expression_value_11);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
-            tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[45]);
-            Py_DECREF(tmp_expression_name_11);
-            if (tmp_called_name_5 == NULL) {
+            tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[43]);
+            Py_DECREF(tmp_expression_value_11);
+            if (tmp_called_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3000,10 +2902,10 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_4 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[4]);
+            tmp_args_element_value_4 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[4]);
 
-            if (unlikely(tmp_args_element_name_4 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_5);
+            if (unlikely(tmp_args_element_value_4 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_5);
                 FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[4]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
@@ -3013,20 +2915,20 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_4 == NULL) {
+            if (tmp_args_element_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_5);
+                Py_DECREF(tmp_called_value_5);
 
                 exception_lineno = 70;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 70;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_4);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_4);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_4);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_4);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3037,7 +2939,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[49], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[47], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -3052,11 +2954,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
         {
             nuitka_bool tmp_condition_result_7;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_element_name_5;
-            PyObject *tmp_called_name_7;
-            PyObject *tmp_args_element_name_6;
-            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_element_value_5;
+            PyObject *tmp_called_value_7;
+            PyObject *tmp_args_element_value_6;
+            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -3075,11 +2977,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto condexpr_false_3;
             }
             condexpr_true_3:;
-            tmp_called_name_6 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            tmp_called_value_6 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
-            if (unlikely(tmp_called_name_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[50]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[48]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3088,7 +2990,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_6 == NULL) {
+            if (tmp_called_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3098,11 +3000,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_5 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[9]);
+            tmp_args_element_value_5 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[8]);
 
-            if (unlikely(tmp_args_element_name_5 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_6);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[9]);
+            if (unlikely(tmp_args_element_value_5 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_6);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[8]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3111,20 +3013,20 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_5 == NULL) {
+            if (tmp_args_element_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_6);
+                Py_DECREF(tmp_called_value_6);
 
                 exception_lineno = 73;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 73;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_5);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_5);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_5);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_args_element_value_5);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3137,12 +3039,12 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
             }
             goto condexpr_end_3;
             condexpr_false_3:;
-            tmp_called_name_7 = (PyObject *)&PyProperty_Type;
-            tmp_args_element_name_6 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[9]);
+            tmp_called_value_7 = (PyObject *)&PyProperty_Type;
+            tmp_args_element_value_6 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[8]);
 
-            if (unlikely(tmp_args_element_name_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_args_element_value_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[9]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[8]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3151,7 +3053,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_6 == NULL) {
+            if (tmp_args_element_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3162,8 +3064,8 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 73;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_6);
-            Py_DECREF(tmp_args_element_name_6);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_6);
+            Py_DECREF(tmp_args_element_value_6);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3190,11 +3092,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
         {
             nuitka_bool tmp_condition_result_8;
-            PyObject *tmp_called_name_8;
-            PyObject *tmp_args_element_name_7;
-            PyObject *tmp_called_name_9;
-            PyObject *tmp_args_element_name_8;
-            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            PyObject *tmp_called_value_8;
+            PyObject *tmp_args_element_value_7;
+            PyObject *tmp_called_value_9;
+            PyObject *tmp_args_element_value_8;
+            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -3213,11 +3115,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto condexpr_false_4;
             }
             condexpr_true_4:;
-            tmp_called_name_8 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            tmp_called_value_8 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
-            if (unlikely(tmp_called_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[50]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[48]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3226,7 +3128,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_8 == NULL) {
+            if (tmp_called_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3236,11 +3138,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_7 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[12]);
+            tmp_args_element_value_7 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[10]);
 
-            if (unlikely(tmp_args_element_name_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_8);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[12]);
+            if (unlikely(tmp_args_element_value_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_8);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[10]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3249,20 +3151,20 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_7 == NULL) {
+            if (tmp_args_element_value_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_8);
+                Py_DECREF(tmp_called_value_8);
 
                 exception_lineno = 74;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 74;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_7);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_7);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_7);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_7);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3275,12 +3177,12 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
             }
             goto condexpr_end_4;
             condexpr_false_4:;
-            tmp_called_name_9 = (PyObject *)&PyProperty_Type;
-            tmp_args_element_name_8 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[12]);
+            tmp_called_value_9 = (PyObject *)&PyProperty_Type;
+            tmp_args_element_value_8 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[10]);
 
-            if (unlikely(tmp_args_element_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_args_element_value_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[12]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[10]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3289,7 +3191,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_8 == NULL) {
+            if (tmp_args_element_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3300,8 +3202,8 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 74;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_8);
-            Py_DECREF(tmp_args_element_name_8);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_8);
+            Py_DECREF(tmp_args_element_value_8);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3313,7 +3215,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
             condexpr_end_4:;
-            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[51], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[49], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -3328,11 +3230,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
         {
             nuitka_bool tmp_condition_result_9;
-            PyObject *tmp_called_name_10;
-            PyObject *tmp_args_element_name_9;
-            PyObject *tmp_called_name_11;
-            PyObject *tmp_args_element_name_10;
-            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            PyObject *tmp_called_value_10;
+            PyObject *tmp_args_element_value_9;
+            PyObject *tmp_called_value_11;
+            PyObject *tmp_args_element_value_10;
+            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -3351,11 +3253,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto condexpr_false_5;
             }
             condexpr_true_5:;
-            tmp_called_name_10 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            tmp_called_value_10 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
-            if (unlikely(tmp_called_name_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[50]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[48]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3364,7 +3266,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_10 == NULL) {
+            if (tmp_called_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3374,11 +3276,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_9 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[42]);
+            tmp_args_element_value_9 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[40]);
 
-            if (unlikely(tmp_args_element_name_9 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_10);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[42]);
+            if (unlikely(tmp_args_element_value_9 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_10);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[40]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3387,20 +3289,20 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_9 == NULL) {
+            if (tmp_args_element_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_10);
+                Py_DECREF(tmp_called_value_10);
 
                 exception_lineno = 75;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 75;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_9);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_args_element_name_9);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_9);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_args_element_value_9);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3413,12 +3315,12 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
             }
             goto condexpr_end_5;
             condexpr_false_5:;
-            tmp_called_name_11 = (PyObject *)&PyProperty_Type;
-            tmp_args_element_name_10 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[42]);
+            tmp_called_value_11 = (PyObject *)&PyProperty_Type;
+            tmp_args_element_value_10 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[40]);
 
-            if (unlikely(tmp_args_element_name_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_args_element_value_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[42]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[40]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3427,7 +3329,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_10 == NULL) {
+            if (tmp_args_element_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3438,8 +3340,8 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 75;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_10);
-            Py_DECREF(tmp_args_element_name_10);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_10);
+            Py_DECREF(tmp_args_element_value_10);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3451,7 +3353,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
             condexpr_end_5:;
-            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[7], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[6], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -3466,11 +3368,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         }
         {
             nuitka_bool tmp_condition_result_10;
-            PyObject *tmp_called_name_12;
-            PyObject *tmp_args_element_name_11;
-            PyObject *tmp_called_name_13;
-            PyObject *tmp_args_element_name_12;
-            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            PyObject *tmp_called_value_12;
+            PyObject *tmp_args_element_value_11;
+            PyObject *tmp_called_value_13;
+            PyObject *tmp_args_element_value_12;
+            tmp_res = MAPPING_HAS_ITEM(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -3489,11 +3391,11 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto condexpr_false_6;
             }
             condexpr_true_6:;
-            tmp_called_name_12 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50]);
+            tmp_called_value_12 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[48]);
 
-            if (unlikely(tmp_called_name_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[50]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[48]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -3502,7 +3404,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_12 == NULL) {
+            if (tmp_called_value_12 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3512,10 +3414,10 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_11 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[4]);
+            tmp_args_element_value_11 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[4]);
 
-            if (unlikely(tmp_args_element_name_11 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-                Py_DECREF(tmp_called_name_12);
+            if (unlikely(tmp_args_element_value_11 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+                Py_DECREF(tmp_called_value_12);
                 FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[4]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
@@ -3525,20 +3427,20 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_11 == NULL) {
+            if (tmp_args_element_value_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_12);
+                Py_DECREF(tmp_called_value_12);
 
                 exception_lineno = 76;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 76;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_11);
-            Py_DECREF(tmp_called_name_12);
-            Py_DECREF(tmp_args_element_name_11);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_11);
+            Py_DECREF(tmp_called_value_12);
+            Py_DECREF(tmp_args_element_value_11);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3551,10 +3453,10 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
             }
             goto condexpr_end_6;
             condexpr_false_6:;
-            tmp_called_name_13 = (PyObject *)&PyProperty_Type;
-            tmp_args_element_name_12 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[4]);
+            tmp_called_value_13 = (PyObject *)&PyProperty_Type;
+            tmp_args_element_value_12 = PyObject_GetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[4]);
 
-            if (unlikely(tmp_args_element_name_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_args_element_value_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
                 FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[4]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -3565,7 +3467,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_args_element_name_12 == NULL) {
+            if (tmp_args_element_value_12 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3576,8 +3478,8 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
             frame_9623f9f418474eb3fbc250ec9fd68743_2->m_frame.f_lineno = 76;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, tmp_args_element_name_12);
-            Py_DECREF(tmp_args_element_name_12);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_12);
+            Py_DECREF(tmp_args_element_value_12);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3589,7 +3491,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
                 goto frame_exception_exit_2;
             }
             condexpr_end_6:;
-            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[13], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[11], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -3659,12 +3561,12 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_11;
-            PyObject *tmp_compexpr_left_2;
-            PyObject *tmp_compexpr_right_2;
+            PyObject *tmp_cmp_expr_left_2;
+            PyObject *tmp_cmp_expr_right_2;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_2 = tmp_class_creation_1__bases;
-            tmp_compexpr_right_2 = mod_consts[25];
-            tmp_condition_result_11 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
+            tmp_cmp_expr_left_2 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_right_2 = mod_consts[23];
+            tmp_condition_result_11 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
             if (tmp_condition_result_11 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -3683,8 +3585,8 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
             assert(tmp_condition_result_11 != NUITKA_BOOL_UNASSIGNED);
         }
         branch_yes_5:;
-        tmp_dictset_value = mod_consts[25];
-        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[52], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[23];
+        tmp_res = PyObject_SetItem(locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26, mod_consts[50], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -3698,25 +3600,25 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         branch_no_5:;
         {
             PyObject *tmp_assign_source_15;
-            PyObject *tmp_called_name_14;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_14;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_3;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_14 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_3 = mod_consts[28];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
+            tmp_called_value_14 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_3 = mod_consts[26];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_3 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_3);
             tmp_tuple_element_3 = locals_wx$lib$embeddedimage$$$class__1_PyEmbeddedImage_26;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_8594e91fb1a8730e2451a911bce85f62->m_frame.f_lineno = 26;
-            tmp_assign_source_15 = CALL_FUNCTION(tmp_called_name_14, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_15 = CALL_FUNCTION(tmp_called_value_14, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_15 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3795,7 +3697,7 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
         exception_lineno = 26;
         goto try_except_handler_3;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)mod_consts[26], tmp_assign_source_14);
     }
     goto try_end_3;
     // Exception handler code:
@@ -3855,19 +3757,36 @@ PyObject *modulecode_wx$lib$embeddedimage(PyObject *module, struct Nuitka_MetaPa
     goto module_exception_exit;
 
     frame_no_exception_2:;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("wx.lib.embeddedimage", false);
+
     return module_wx$lib$embeddedimage;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$embeddedimage, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("wx$lib$embeddedimage", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

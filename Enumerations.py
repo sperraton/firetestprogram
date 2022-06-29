@@ -1,5 +1,5 @@
 from enum import Enum
-from matplotlib import cm
+#from matplotlib import cm
 
 VERSION_NUM_STRING = "1.4"
 
@@ -19,11 +19,11 @@ UIcolours = enum(GRAPH_TARGET_TEMP_SERIES="#A40000",
                  GRAPH_FACE="#EBF1F2",
                  GRAPH_GRID_MAJOR="#8A9699",
                  GRAPH_GRID_MINOR="#A3B1B5",
-                 GRID_TIMESTAMP="#888A85",
-                 GRID_TARGET_TEMP="#AA0000",
-                 GRID_AVG_TEMP="#204A87",
-                 GRID_TARGET_AUC="#AA3333",
-                 GRID_AVG_AUC="#407087",
+                 GRID_TIMESTAMP="#DDDDDD",
+                 GRID_TARGET_TEMP="#FFEEEE",
+                 GRID_AVG_TEMP="#EEEEFF",
+                 GRID_TARGET_AUC="#FFEEEE",
+                 GRID_AVG_AUC="#EEEEFF",
                  GRID_UP_GROUP="#CE5C00",
                  GRID_MID_GROUP="#F57900",
                  GRID_BT_GROUP="#FCAF3E",
@@ -43,7 +43,7 @@ UIcolours = enum(GRAPH_TARGET_TEMP_SERIES="#A40000",
                  CTRL_OK_BG="#AAFF99",
                  CTRL_OK_FG="#006600")
 
-GRAPH_COLOURMAP = cm.gist_rainbow #cm.summer
+#GRAPH_COLOURMAP = cm.gist_rainbow #cm.summer
 
 class thermocouplePlacements(Enum):
     DISABLED = 0
@@ -92,8 +92,8 @@ pressurePlacementLabels = [
     "SPARE"]
 
 standardTableLabelsUnitsF = [
-    "TIMESTAMP",
-    "TIMESTAMP (dec.)",
+    "TIMESTAMP (hh:mm:ss)",
+    "TIMESTAMP (sec.)",
     "RQD. F",
     "AVG. F",
     "AUC RQD.",
@@ -145,7 +145,7 @@ CHANGE_TRIGGER = 0.0
 INVALID_VALUE = 1e300
 LEGEND_NUM_ROWS = 8
 DEFAULT_TEST_TIME = 60
-SAVE_RATE_LWR = 1
+SAVE_RATE_LWR = 5
 SAVE_RATE_UPR = 60
 SAVE_RATE_DEFAULT = 30
 

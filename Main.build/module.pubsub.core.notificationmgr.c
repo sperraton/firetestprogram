@@ -1,5 +1,5 @@
 /* Generated code for Python module 'pubsub.core.notificationmgr'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_pubsub$core$notificationmgr;
 PyDictObject *moduledict_pubsub$core$notificationmgr;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[129];
+static PyObject *mod_consts[126];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[126];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("pubsub.core.notificationmgr"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 126; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_pubsub$core$notificationmgr(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "pubsub.core.notificationmgr");
+    for (int i = 0; i < 126; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -90,29 +102,29 @@ static PyCodeObject *codeobj_a098e253c8cf8deb6c40a7bb14d4767c;
 static PyCodeObject *codeobj_5d90d3a020c8f863aefda49d089ba502;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[115]); CHECK_OBJECT(module_filename_obj);
-    codeobj_2dd476337dd052491225c62b4f78b4ef = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[116], NULL, NULL, 0, 0, 0);
-    codeobj_f070b972fab8902b774bd0ee251436fe = MAKE_CODEOBJECT(module_filename_obj, 12, CO_NOFREE, mod_consts[71], mod_consts[117], NULL, 0, 0, 0);
-    codeobj_b85098499c58eb85511cd911c230b462 = MAKE_CODEOBJECT(module_filename_obj, 78, CO_NOFREE, mod_consts[92], mod_consts[117], NULL, 0, 0, 0);
-    codeobj_69f5e2ecbbab8da07df8a882c9d6b3a8 = MAKE_CODEOBJECT(module_filename_obj, 99, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[94], mod_consts[118], NULL, 2, 0, 0);
-    codeobj_37128f46da7405a990f6932d7e3d6030 = MAKE_CODEOBJECT(module_filename_obj, 197, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[113], mod_consts[119], NULL, 1, 0, 0);
-    codeobj_e743b0675b3830129d6ff69630978c67 = MAKE_CODEOBJECT(module_filename_obj, 114, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[13], mod_consts[120], NULL, 2, 0, 0);
-    codeobj_8470b5223a4b603848f37e69ee0fa3ac = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[42], mod_consts[121], NULL, 1, 0, 0);
-    codeobj_d6e77c73173d6b3727c2c6d06dbf4493 = MAKE_CODEOBJECT(module_filename_obj, 155, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[108], mod_consts[121], NULL, 1, 0, 0);
-    codeobj_4db6fb43fa449011cafe18717eabf463 = MAKE_CODEOBJECT(module_filename_obj, 119, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[99], mod_consts[121], NULL, 1, 0, 0);
-    codeobj_5dee18194903bddd9d2036e65ea31b0c = MAKE_CODEOBJECT(module_filename_obj, 150, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[26], mod_consts[122], NULL, 1, 0, 0);
-    codeobj_de6f30d7c42a94d9aaceb710566b7aa5 = MAKE_CODEOBJECT(module_filename_obj, 37, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[26], mod_consts[123], NULL, 3, 0, 0);
-    codeobj_1518d4f3ffcee8177574ffac4b3f8e44 = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[25], mod_consts[122], NULL, 1, 0, 0);
-    codeobj_68e8e913d8560b0eab98e6ecd1d833a9 = MAKE_CODEOBJECT(module_filename_obj, 70, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[25], mod_consts[124], NULL, 2, 0, 0);
-    codeobj_6acfd604c3ad04ade04ba18f05526229 = MAKE_CODEOBJECT(module_filename_obj, 140, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[24], mod_consts[122], NULL, 1, 0, 0);
-    codeobj_d2e32d62ee0f586cd385c2e338acd54c = MAKE_CODEOBJECT(module_filename_obj, 58, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[24], mod_consts[125], NULL, 5, 0, 0);
-    codeobj_e25459517dd1dbb6384eb4ff977a49db = MAKE_CODEOBJECT(module_filename_obj, 135, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[23], mod_consts[122], NULL, 1, 0, 0);
-    codeobj_888033adc8c56ce67d4e6a049fa14e52 = MAKE_CODEOBJECT(module_filename_obj, 45, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[23], mod_consts[126], NULL, 4, 0, 0);
-    codeobj_29334e0292fd8799c620a7f39ee5919f = MAKE_CODEOBJECT(module_filename_obj, 125, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[19], mod_consts[122], NULL, 1, 0, 0);
-    codeobj_32ed790d409bb8e5ab34a65d28136777 = MAKE_CODEOBJECT(module_filename_obj, 20, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[19], mod_consts[127], NULL, 4, 0, 0);
-    codeobj_4ab4fbbbf52c077e0b8d46bd33838dc8 = MAKE_CODEOBJECT(module_filename_obj, 130, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[22], mod_consts[122], NULL, 1, 0, 0);
-    codeobj_a098e253c8cf8deb6c40a7bb14d4767c = MAKE_CODEOBJECT(module_filename_obj, 29, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[22], mod_consts[123], NULL, 3, 0, 0);
-    codeobj_5d90d3a020c8f863aefda49d089ba502 = MAKE_CODEOBJECT(module_filename_obj, 166, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[35], mod_consts[128], NULL, 8, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[111]); CHECK_OBJECT(module_filename_obj);
+    codeobj_2dd476337dd052491225c62b4f78b4ef = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[112], NULL, NULL, 0, 0, 0);
+    codeobj_f070b972fab8902b774bd0ee251436fe = MAKE_CODEOBJECT(module_filename_obj, 12, CO_NOFREE, mod_consts[67], mod_consts[113], NULL, 0, 0, 0);
+    codeobj_b85098499c58eb85511cd911c230b462 = MAKE_CODEOBJECT(module_filename_obj, 78, CO_NOFREE, mod_consts[88], mod_consts[113], NULL, 0, 0, 0);
+    codeobj_69f5e2ecbbab8da07df8a882c9d6b3a8 = MAKE_CODEOBJECT(module_filename_obj, 99, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[90], mod_consts[114], NULL, 2, 0, 0);
+    codeobj_37128f46da7405a990f6932d7e3d6030 = MAKE_CODEOBJECT(module_filename_obj, 197, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[109], mod_consts[115], NULL, 1, 0, 0);
+    codeobj_e743b0675b3830129d6ff69630978c67 = MAKE_CODEOBJECT(module_filename_obj, 114, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[13], mod_consts[116], NULL, 2, 0, 0);
+    codeobj_8470b5223a4b603848f37e69ee0fa3ac = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[39], mod_consts[117], NULL, 1, 0, 0);
+    codeobj_d6e77c73173d6b3727c2c6d06dbf4493 = MAKE_CODEOBJECT(module_filename_obj, 155, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[104], mod_consts[117], NULL, 1, 0, 0);
+    codeobj_4db6fb43fa449011cafe18717eabf463 = MAKE_CODEOBJECT(module_filename_obj, 119, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[95], mod_consts[117], NULL, 1, 0, 0);
+    codeobj_5dee18194903bddd9d2036e65ea31b0c = MAKE_CODEOBJECT(module_filename_obj, 150, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[24], mod_consts[118], NULL, 1, 0, 0);
+    codeobj_de6f30d7c42a94d9aaceb710566b7aa5 = MAKE_CODEOBJECT(module_filename_obj, 37, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[24], mod_consts[119], NULL, 3, 0, 0);
+    codeobj_1518d4f3ffcee8177574ffac4b3f8e44 = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[23], mod_consts[118], NULL, 1, 0, 0);
+    codeobj_68e8e913d8560b0eab98e6ecd1d833a9 = MAKE_CODEOBJECT(module_filename_obj, 70, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[23], mod_consts[120], NULL, 2, 0, 0);
+    codeobj_6acfd604c3ad04ade04ba18f05526229 = MAKE_CODEOBJECT(module_filename_obj, 140, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[22], mod_consts[118], NULL, 1, 0, 0);
+    codeobj_d2e32d62ee0f586cd385c2e338acd54c = MAKE_CODEOBJECT(module_filename_obj, 58, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[22], mod_consts[121], NULL, 5, 0, 0);
+    codeobj_e25459517dd1dbb6384eb4ff977a49db = MAKE_CODEOBJECT(module_filename_obj, 135, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[21], mod_consts[118], NULL, 1, 0, 0);
+    codeobj_888033adc8c56ce67d4e6a049fa14e52 = MAKE_CODEOBJECT(module_filename_obj, 45, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[21], mod_consts[122], NULL, 4, 0, 0);
+    codeobj_29334e0292fd8799c620a7f39ee5919f = MAKE_CODEOBJECT(module_filename_obj, 125, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[19], mod_consts[118], NULL, 1, 0, 0);
+    codeobj_32ed790d409bb8e5ab34a65d28136777 = MAKE_CODEOBJECT(module_filename_obj, 20, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[19], mod_consts[123], NULL, 4, 0, 0);
+    codeobj_4ab4fbbbf52c077e0b8d46bd33838dc8 = MAKE_CODEOBJECT(module_filename_obj, 130, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[20], mod_consts[118], NULL, 1, 0, 0);
+    codeobj_a098e253c8cf8deb6c40a7bb14d4767c = MAKE_CODEOBJECT(module_filename_obj, 29, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[20], mod_consts[119], NULL, 3, 0, 0);
+    codeobj_5d90d3a020c8f863aefda49d089ba502 = MAKE_CODEOBJECT(module_filename_obj, 166, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[32], mod_consts[124], NULL, 8, 0, 0);
 }
 
 // The module function declarations.
@@ -198,13 +210,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__1_notifySubscribe(
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_32ed790d409bb8e5ab34a65d28136777 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_32ed790d409bb8e5ab34a65d28136777)) {
         Py_XDECREF(cache_frame_32ed790d409bb8e5ab34a65d28136777);
 
@@ -292,48 +299,22 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__1_notifySubscribe(
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_pubListener);
-    Py_DECREF(par_pubListener);
-    par_pubListener = NULL;
-    CHECK_OBJECT(par_topicObj);
-    Py_DECREF(par_topicObj);
-    par_topicObj = NULL;
-    CHECK_OBJECT(par_newSub);
-    Py_DECREF(par_newSub);
-    par_newSub = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_pubListener);
+    Py_DECREF(par_pubListener);
+    CHECK_OBJECT(par_topicObj);
+    Py_DECREF(par_topicObj);
+    CHECK_OBJECT(par_newSub);
+    Py_DECREF(par_newSub);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
@@ -358,13 +339,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__2_notifyUnsubscrib
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_a098e253c8cf8deb6c40a7bb14d4767c = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_a098e253c8cf8deb6c40a7bb14d4767c)) {
         Py_XDECREF(cache_frame_a098e253c8cf8deb6c40a7bb14d4767c);
 
@@ -451,45 +427,20 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__2_notifyUnsubscrib
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_pubListener);
-    Py_DECREF(par_pubListener);
-    par_pubListener = NULL;
-    CHECK_OBJECT(par_topicObj);
-    Py_DECREF(par_topicObj);
-    par_topicObj = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_pubListener);
+    Py_DECREF(par_pubListener);
+    CHECK_OBJECT(par_topicObj);
+    Py_DECREF(par_topicObj);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
@@ -514,13 +465,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__3_notifyDeadListen
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_de6f30d7c42a94d9aaceb710566b7aa5 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_de6f30d7c42a94d9aaceb710566b7aa5)) {
         Py_XDECREF(cache_frame_de6f30d7c42a94d9aaceb710566b7aa5);
 
@@ -607,45 +553,20 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__3_notifyDeadListen
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_pubListener);
-    Py_DECREF(par_pubListener);
-    par_pubListener = NULL;
-    CHECK_OBJECT(par_topicObj);
-    Py_DECREF(par_topicObj);
-    par_topicObj = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_pubListener);
+    Py_DECREF(par_pubListener);
+    CHECK_OBJECT(par_topicObj);
+    Py_DECREF(par_topicObj);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
@@ -671,13 +592,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__4_notifySend(struc
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_888033adc8c56ce67d4e6a049fa14e52 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_888033adc8c56ce67d4e6a049fa14e52)) {
         Py_XDECREF(cache_frame_888033adc8c56ce67d4e6a049fa14e52);
 
@@ -765,48 +681,22 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__4_notifySend(struc
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_stage);
-    Py_DECREF(par_stage);
-    par_stage = NULL;
-    CHECK_OBJECT(par_topicObj);
-    Py_DECREF(par_topicObj);
-    par_topicObj = NULL;
-    CHECK_OBJECT(par_pubListener);
-    Py_DECREF(par_pubListener);
-    par_pubListener = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_stage);
+    Py_DECREF(par_stage);
+    CHECK_OBJECT(par_topicObj);
+    Py_DECREF(par_topicObj);
+    CHECK_OBJECT(par_pubListener);
+    Py_DECREF(par_pubListener);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
@@ -833,13 +723,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__5_notifyNewTopic(s
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_d2e32d62ee0f586cd385c2e338acd54c = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_d2e32d62ee0f586cd385c2e338acd54c)) {
         Py_XDECREF(cache_frame_d2e32d62ee0f586cd385c2e338acd54c);
 
@@ -928,51 +813,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__5_notifyNewTopic(s
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_topicObj);
-    Py_DECREF(par_topicObj);
-    par_topicObj = NULL;
-    CHECK_OBJECT(par_description);
-    Py_DECREF(par_description);
-    par_description = NULL;
-    CHECK_OBJECT(par_required);
-    Py_DECREF(par_required);
-    par_required = NULL;
-    CHECK_OBJECT(par_argsDocs);
-    Py_DECREF(par_argsDocs);
-    par_argsDocs = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_topicObj);
+    Py_DECREF(par_topicObj);
+    CHECK_OBJECT(par_description);
+    Py_DECREF(par_description);
+    CHECK_OBJECT(par_required);
+    Py_DECREF(par_required);
+    CHECK_OBJECT(par_argsDocs);
+    Py_DECREF(par_argsDocs);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
@@ -996,13 +854,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__6_notifyDelTopic(s
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_68e8e913d8560b0eab98e6ecd1d833a9 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_68e8e913d8560b0eab98e6ecd1d833a9)) {
         Py_XDECREF(cache_frame_68e8e913d8560b0eab98e6ecd1d833a9);
 
@@ -1088,42 +941,18 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__6_notifyDelTopic(s
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_topicName);
-    Py_DECREF(par_topicName);
-    par_topicName = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_topicName);
+    Py_DECREF(par_topicName);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
@@ -1150,13 +979,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     static struct Nuitka_FrameObject *cache_frame_69f5e2ecbbab8da07df8a882c9d6b3a8 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_69f5e2ecbbab8da07df8a882c9d6b3a8)) {
         Py_XDECREF(cache_frame_69f5e2ecbbab8da07df8a882c9d6b3a8);
 
@@ -1185,12 +1009,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = Py_False;
+        tmp_assattr_value_1 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[6], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[6], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1203,12 +1027,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_False;
+        tmp_assattr_value_2 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[7], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[7], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1221,12 +1045,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
         }
     }
     {
-        PyObject *tmp_assattr_name_3;
+        PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_name_3 = Py_False;
+        tmp_assattr_value_3 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[8], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[8], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1239,12 +1063,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
         }
     }
     {
-        PyObject *tmp_assattr_name_4;
+        PyObject *tmp_assattr_value_4;
         PyObject *tmp_assattr_target_4;
-        tmp_assattr_name_4 = Py_False;
+        tmp_assattr_value_4 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[9], tmp_assattr_name_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[9], tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1257,12 +1081,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
         }
     }
     {
-        PyObject *tmp_assattr_name_5;
+        PyObject *tmp_assattr_value_5;
         PyObject *tmp_assattr_target_5;
-        tmp_assattr_name_5 = Py_False;
+        tmp_assattr_value_5 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_5 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[10], tmp_assattr_name_5);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[10], tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1275,12 +1099,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
         }
     }
     {
-        PyObject *tmp_assattr_name_6;
+        PyObject *tmp_assattr_value_6;
         PyObject *tmp_assattr_target_6;
-        tmp_assattr_name_6 = Py_False;
+        tmp_assattr_value_6 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_6 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[11], tmp_assattr_name_6);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[11], tmp_assattr_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1293,13 +1117,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
         }
     }
     {
-        PyObject *tmp_assattr_name_7;
+        PyObject *tmp_assattr_value_7;
         PyObject *tmp_assattr_target_7;
-        tmp_assattr_name_7 = PyList_New(0);
+        tmp_assattr_value_7 = PyList_New(0);
         CHECK_OBJECT(par_self);
         tmp_assattr_target_7 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[12], tmp_assattr_name_7);
-        Py_DECREF(tmp_assattr_name_7);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[12], tmp_assattr_value_7);
+        Py_DECREF(tmp_assattr_value_7);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1313,12 +1137,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_notificationHandler);
-        tmp_compexpr_left_1 = par_notificationHandler;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_notificationHandler;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -1329,13 +1153,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_notificationHandler);
-        tmp_args_element_name_1 = par_notificationHandler;
+        tmp_args_element_value_1 = par_notificationHandler;
         frame_69f5e2ecbbab8da07df8a882c9d6b3a8->m_frame.f_lineno = 110;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[13], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[13], tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1350,9 +1174,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
     }
     branch_no_1:;
     {
-        PyObject *tmp_assattr_name_8;
+        PyObject *tmp_assattr_value_8;
         PyObject *tmp_assattr_target_8;
-        tmp_assattr_name_8 = Py_False;
+        tmp_assattr_value_8 = Py_False;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
@@ -1366,7 +1190,7 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
         }
 
         tmp_assattr_target_8 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_8, mod_consts[15], tmp_assattr_name_8);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_8, mod_consts[15], tmp_assattr_value_8);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1426,57 +1250,31 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__7___init__(struct 
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_notificationHandler);
-    par_notificationHandler = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_notificationHandler);
-    par_notificationHandler = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_notificationHandler);
+    Py_DECREF(par_notificationHandler);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_notificationHandler);
+    Py_DECREF(par_notificationHandler);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1505,13 +1303,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     static struct Nuitka_FrameObject *cache_frame_e743b0675b3830129d6ff69630978c67 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_e743b0675b3830129d6ff69630978c67)) {
         Py_XDECREF(cache_frame_e743b0675b3830129d6ff69630978c67);
 
@@ -1540,13 +1333,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[15]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[15]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1556,8 +1349,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1568,8 +1361,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -1579,18 +1372,7 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 116;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_e743b0675b3830129d6ff69630978c67->m_frame.f_lineno = 116;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[16]);
@@ -1609,23 +1391,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
     branch_no_1:;
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_1;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 117;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
+        PyObject *tmp_args_element_value_1;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1637,9 +1408,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_handler);
-        tmp_args_element_name_1 = par_handler;
+        tmp_args_element_value_1 = par_handler;
         frame_e743b0675b3830129d6ff69630978c67->m_frame.f_lineno = 117;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[17], tmp_args_element_name_1);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[17], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1701,57 +1472,31 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__8_addHandler(struc
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_handler);
-    par_handler = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_handler);
-    par_handler = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_handler);
+    Py_DECREF(par_handler);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_handler);
+    Py_DECREF(par_handler);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1777,13 +1522,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__9_getHandlers(stru
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_4db6fb43fa449011cafe18717eabf463 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_4db6fb43fa449011cafe18717eabf463)) {
         Py_XDECREF(cache_frame_4db6fb43fa449011cafe18717eabf463);
 
@@ -1812,13 +1552,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__9_getHandlers(stru
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1828,9 +1568,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__9_getHandlers(stru
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[18];
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_1 = mod_consts[18];
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1861,7 +1601,7 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__9_getHandlers(stru
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -1900,50 +1640,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__9_getHandlers(stru
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1970,13 +1684,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__10_clearHandlers(s
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_8470b5223a4b603848f37e69ee0fa3ac = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_8470b5223a4b603848f37e69ee0fa3ac)) {
         Py_XDECREF(cache_frame_8470b5223a4b603848f37e69ee0fa3ac);
 
@@ -2005,13 +1714,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__10_clearHandlers(s
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = PyList_New(0);
+        tmp_assattr_value_1 = PyList_New(0);
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[12], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[12], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2070,55 +1779,27 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__10_clearHandlers(s
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2193,15 +1874,15 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2242,20 +1923,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
             goto and_left_1;
         }
         and_right_1:;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 126;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2294,21 +1964,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 127;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[12]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[12]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2376,13 +2035,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
     }
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(var_handler);
-        tmp_expression_name_4 = var_handler;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[19]);
+        tmp_expression_value_4 = var_handler;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[19]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2393,31 +2052,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        if (par_args == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 128;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_args);
         tmp_dircall_arg2_1 = par_args;
-        if (par_kwargs == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 128;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kwargs);
         tmp_dircall_arg3_1 = par_kwargs;
         Py_INCREF(tmp_dircall_arg2_1);
         Py_INCREF(tmp_dircall_arg3_1);
@@ -2464,7 +2101,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -2477,7 +2115,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_1:;
 
@@ -2540,12 +2179,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     goto function_return_exit;
@@ -2560,12 +2193,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     // Re-raise.
@@ -2581,14 +2208,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2663,15 +2300,15 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[8]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2712,20 +2349,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
             goto and_left_1;
         }
         and_right_1:;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 131;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2764,21 +2390,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 132;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[12]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[12]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2846,13 +2461,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
     }
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(var_handler);
-        tmp_expression_name_4 = var_handler;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[22]);
+        tmp_expression_value_4 = var_handler;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[20]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2863,31 +2478,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        if (par_args == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 133;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_args);
         tmp_dircall_arg2_1 = par_args;
-        if (par_kwargs == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 133;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kwargs);
         tmp_dircall_arg3_1 = par_kwargs;
         Py_INCREF(tmp_dircall_arg2_1);
         Py_INCREF(tmp_dircall_arg3_1);
@@ -2934,7 +2527,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -2947,7 +2541,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_1:;
 
@@ -3010,12 +2605,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     goto function_return_exit;
@@ -3030,12 +2619,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     // Re-raise.
@@ -3051,14 +2634,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscri
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3133,15 +2726,15 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[6]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3182,20 +2775,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
             goto and_left_1;
         }
         and_right_1:;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 136;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3234,21 +2816,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 137;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[12]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[12]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3316,13 +2887,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
     }
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(var_handler);
-        tmp_expression_name_4 = var_handler;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[23]);
+        tmp_expression_value_4 = var_handler;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[21]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3333,31 +2904,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        if (par_args == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 138;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_args);
         tmp_dircall_arg2_1 = par_args;
-        if (par_kwargs == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 138;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kwargs);
         tmp_dircall_arg3_1 = par_kwargs;
         Py_INCREF(tmp_dircall_arg2_1);
         Py_INCREF(tmp_dircall_arg3_1);
@@ -3404,7 +2953,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -3417,7 +2967,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_1:;
 
@@ -3480,12 +3031,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     goto function_return_exit;
@@ -3500,12 +3045,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     // Re-raise.
@@ -3521,14 +3060,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__13_notifySend(stru
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3603,15 +3152,15 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[9]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[9]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3652,20 +3201,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
             goto and_left_1;
         }
         and_right_1:;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 141;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3704,21 +3242,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 142;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[12]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[12]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3786,13 +3313,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
     }
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(var_handler);
-        tmp_expression_name_4 = var_handler;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[24]);
+        tmp_expression_value_4 = var_handler;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[22]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3803,31 +3330,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        if (par_args == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 143;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_args);
         tmp_dircall_arg2_1 = par_args;
-        if (par_kwargs == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 143;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kwargs);
         tmp_dircall_arg3_1 = par_kwargs;
         Py_INCREF(tmp_dircall_arg2_1);
         Py_INCREF(tmp_dircall_arg3_1);
@@ -3874,7 +3379,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -3887,7 +3393,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_1:;
 
@@ -3950,12 +3457,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     goto function_return_exit;
@@ -3970,12 +3471,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     // Re-raise.
@@ -3991,14 +3486,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic(
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4073,15 +3578,15 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[10]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[10]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4122,20 +3627,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
             goto and_left_1;
         }
         and_right_1:;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 146;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4174,21 +3668,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 147;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[12]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[12]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4256,13 +3739,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
     }
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(var_handler);
-        tmp_expression_name_4 = var_handler;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[25]);
+        tmp_expression_value_4 = var_handler;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[23]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4273,31 +3756,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        if (par_args == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 148;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_args);
         tmp_dircall_arg2_1 = par_args;
-        if (par_kwargs == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 148;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kwargs);
         tmp_dircall_arg3_1 = par_kwargs;
         Py_INCREF(tmp_dircall_arg2_1);
         Py_INCREF(tmp_dircall_arg3_1);
@@ -4344,7 +3805,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -4357,7 +3819,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_1:;
 
@@ -4420,12 +3883,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     goto function_return_exit;
@@ -4440,12 +3897,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     // Re-raise.
@@ -4461,14 +3912,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic(
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4543,15 +4004,15 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[11]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[11]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4592,20 +4053,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
             goto and_left_1;
         }
         and_right_1:;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 151;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[12]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[12]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4644,21 +4094,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 152;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[12]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[12]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4726,13 +4165,13 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
     }
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(var_handler);
-        tmp_expression_name_4 = var_handler;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[26]);
+        tmp_expression_value_4 = var_handler;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[24]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4743,31 +4182,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        if (par_args == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 153;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_args);
         tmp_dircall_arg2_1 = par_args;
-        if (par_kwargs == NULL) {
-            Py_DECREF(tmp_dircall_arg1_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 153;
-            type_description_1 = "oooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kwargs);
         tmp_dircall_arg3_1 = par_kwargs;
         Py_INCREF(tmp_dircall_arg2_1);
         Py_INCREF(tmp_dircall_arg3_1);
@@ -4814,7 +4231,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -4827,7 +4245,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_1:;
 
@@ -4890,12 +4309,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     goto function_return_exit;
@@ -4910,12 +4323,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_args);
-    par_args = NULL;
-    Py_XDECREF(par_kwargs);
-    par_kwargs = NULL;
     Py_XDECREF(var_handler);
     var_handler = NULL;
     // Re-raise.
@@ -4931,14 +4338,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListe
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_args);
+    Py_DECREF(par_args);
+    CHECK_OBJECT(par_kwargs);
+    Py_DECREF(par_kwargs);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4965,13 +4382,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     int tmp_res;
     static struct Nuitka_FrameObject *cache_frame_d6e77c73173d6b3727c2c6d06dbf4493 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_d6e77c73173d6b3727c2c6d06dbf4493)) {
         Py_XDECREF(cache_frame_d6e77c73173d6b3727c2c6d06dbf4493);
 
@@ -5002,11 +4414,11 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_1;
-        tmp_dict_key_1 = mod_consts[27];
+        PyObject *tmp_expression_value_1;
+        tmp_dict_key_1 = mod_consts[25];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
+        tmp_expression_value_1 = par_self;
+        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
         if (tmp_dict_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5019,29 +4431,18 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
         }
         tmp_return_value = _PyDict_NewPresized( 6 );
         {
-            PyObject *tmp_expression_name_2;
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_expression_name_4;
-            PyObject *tmp_expression_name_5;
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_2;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_expression_value_5;
+            PyObject *tmp_expression_value_6;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[28];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 159;
-                type_description_1 = "o";
-                goto dict_build_exception_1;
-            }
-
-            tmp_expression_name_2 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
+            tmp_dict_key_1 = mod_consts[26];
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_2 = par_self;
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5049,6 +4450,40 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
 
 
                 exception_lineno = 159;
+                type_description_1 = "o";
+                goto dict_build_exception_1;
+            }
+            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
+            Py_DECREF(tmp_dict_value_1);
+            assert(!(tmp_res != 0));
+            tmp_dict_key_1 = mod_consts[27];
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_3 = par_self;
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[11]);
+            if (tmp_dict_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 160;
+                type_description_1 = "o";
+                goto dict_build_exception_1;
+            }
+            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
+            Py_DECREF(tmp_dict_value_1);
+            assert(!(tmp_res != 0));
+            tmp_dict_key_1 = mod_consts[28];
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_4 = par_self;
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[6]);
+            if (tmp_dict_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 161;
                 type_description_1 = "o";
                 goto dict_build_exception_1;
             }
@@ -5056,27 +4491,16 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
             tmp_dict_key_1 = mod_consts[29];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 160;
-                type_description_1 = "o";
-                goto dict_build_exception_1;
-            }
-
-            tmp_expression_name_3 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[11]);
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_5 = par_self;
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[9]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 160;
+                exception_lineno = 162;
                 type_description_1 = "o";
                 goto dict_build_exception_1;
             }
@@ -5084,76 +4508,9 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
             tmp_dict_key_1 = mod_consts[30];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 161;
-                type_description_1 = "o";
-                goto dict_build_exception_1;
-            }
-
-            tmp_expression_name_4 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[6]);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 161;
-                type_description_1 = "o";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[31];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 162;
-                type_description_1 = "o";
-                goto dict_build_exception_1;
-            }
-
-            tmp_expression_name_5 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[9]);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 162;
-                type_description_1 = "o";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[32];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 163;
-                type_description_1 = "o";
-                goto dict_build_exception_1;
-            }
-
-            tmp_expression_name_6 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[10]);
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_6 = par_self;
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[10]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5195,7 +4552,7 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -5234,50 +4591,24 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__17_getFlagStates(s
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5302,7 +4633,6 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     PyObject *par_newTopic = python_pars[5];
     PyObject *par_delTopic = python_pars[6];
     PyObject *par_all = python_pars[7];
-    PyObject *var_numArgs = NULL;
     struct Nuitka_FrameObject *frame_5d90d3a020c8f863aefda49d089ba502;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
@@ -5313,13 +4643,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     bool tmp_result;
     static struct Nuitka_FrameObject *cache_frame_5d90d3a020c8f863aefda49d089ba502 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_5d90d3a020c8f863aefda49d089ba502)) {
         Py_XDECREF(cache_frame_5d90d3a020c8f863aefda49d089ba502);
 
@@ -5349,12 +4674,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_all);
-        tmp_compexpr_left_1 = par_all;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_all;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -5363,26 +4688,17 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     }
     branch_yes_1:;
     {
-        PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[34];
-        assert(var_numArgs == NULL);
-        Py_INCREF(tmp_assign_source_1);
-        var_numArgs = tmp_assign_source_1;
-    }
-    {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_list_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[35]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5390,23 +4706,18 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 181;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
-        CHECK_OBJECT(var_numArgs);
-        tmp_left_name_2 = var_numArgs;
-        tmp_right_name_1 = mod_consts[36];
-        tmp_left_name_1 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_2, tmp_right_name_1);
-        assert(!(tmp_left_name_1 == NULL));
+        tmp_left_value_1 = mod_consts[33];
         CHECK_OBJECT(par_all);
         tmp_list_element_1 = par_all;
-        tmp_right_name_2 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_right_name_2, 0, tmp_list_element_1);
-        tmp_dircall_arg2_1 = BINARY_OPERATION_MULT_OBJECT_LONG_LIST(tmp_left_name_1, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_2);
+        tmp_right_value_1 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_right_value_1, 0, tmp_list_element_1);
+        tmp_dircall_arg2_1 = BINARY_OPERATION_MULT_OBJECT_LONG_LIST(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         assert(!(tmp_dircall_arg2_1 == NULL));
-        tmp_dircall_arg3_1 = PyDict_Copy(mod_consts[37]);
+        tmp_dircall_arg3_1 = PyDict_Copy(mod_consts[34]);
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
@@ -5419,7 +4730,7 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 181;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_1);
@@ -5427,12 +4738,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_sendMessage);
-        tmp_compexpr_left_2 = par_sendMessage;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_sendMessage;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -5441,10 +4752,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     }
     branch_yes_2:;
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_sendMessage);
-        tmp_assattr_name_1 = par_sendMessage;
+        tmp_assattr_value_1 = par_sendMessage;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
@@ -5453,12 +4764,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 184;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
 
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[6], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[6], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5466,19 +4777,19 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 184;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
     }
     branch_no_2:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(par_subscribe);
-        tmp_compexpr_left_3 = par_subscribe;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = par_subscribe;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -5487,10 +4798,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     }
     branch_yes_3:;
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_subscribe);
-        tmp_assattr_name_2 = par_subscribe;
+        tmp_assattr_value_2 = par_subscribe;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
@@ -5499,12 +4810,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 186;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
 
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[7], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[7], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5512,19 +4823,19 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 186;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
     }
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(par_unsubscribe);
-        tmp_compexpr_left_4 = par_unsubscribe;
-        tmp_compexpr_right_4 = Py_None;
-        tmp_condition_result_4 = (tmp_compexpr_left_4 != tmp_compexpr_right_4) ? true : false;
+        tmp_cmp_expr_left_4 = par_unsubscribe;
+        tmp_cmp_expr_right_4 = Py_None;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_4 != tmp_cmp_expr_right_4) ? true : false;
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -5533,10 +4844,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     }
     branch_yes_4:;
     {
-        PyObject *tmp_assattr_name_3;
+        PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
         CHECK_OBJECT(par_unsubscribe);
-        tmp_assattr_name_3 = par_unsubscribe;
+        tmp_assattr_value_3 = par_unsubscribe;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
@@ -5545,12 +4856,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 188;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
 
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[8], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[8], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5558,19 +4869,19 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 188;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
     }
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(par_newTopic);
-        tmp_compexpr_left_5 = par_newTopic;
-        tmp_compexpr_right_5 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_5 != tmp_compexpr_right_5) ? true : false;
+        tmp_cmp_expr_left_5 = par_newTopic;
+        tmp_cmp_expr_right_5 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_5 != tmp_cmp_expr_right_5) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -5579,10 +4890,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     }
     branch_yes_5:;
     {
-        PyObject *tmp_assattr_name_4;
+        PyObject *tmp_assattr_value_4;
         PyObject *tmp_assattr_target_4;
         CHECK_OBJECT(par_newTopic);
-        tmp_assattr_name_4 = par_newTopic;
+        tmp_assattr_value_4 = par_newTopic;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
@@ -5591,12 +4902,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 191;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
 
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[9], tmp_assattr_name_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[9], tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5604,19 +4915,19 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 191;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
     }
     branch_no_5:;
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(par_delTopic);
-        tmp_compexpr_left_6 = par_delTopic;
-        tmp_compexpr_right_6 = Py_None;
-        tmp_condition_result_6 = (tmp_compexpr_left_6 != tmp_compexpr_right_6) ? true : false;
+        tmp_cmp_expr_left_6 = par_delTopic;
+        tmp_cmp_expr_right_6 = Py_None;
+        tmp_condition_result_6 = (tmp_cmp_expr_left_6 != tmp_cmp_expr_right_6) ? true : false;
         if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
@@ -5625,10 +4936,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     }
     branch_yes_6:;
     {
-        PyObject *tmp_assattr_name_5;
+        PyObject *tmp_assattr_value_5;
         PyObject *tmp_assattr_target_5;
         CHECK_OBJECT(par_delTopic);
-        tmp_assattr_name_5 = par_delTopic;
+        tmp_assattr_value_5 = par_delTopic;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
@@ -5637,12 +4948,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 193;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
 
         tmp_assattr_target_5 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[10], tmp_assattr_name_5);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[10], tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5650,19 +4961,19 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 193;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
     }
     branch_no_6:;
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(par_deadListener);
-        tmp_compexpr_left_7 = par_deadListener;
-        tmp_compexpr_right_7 = Py_None;
-        tmp_condition_result_7 = (tmp_compexpr_left_7 != tmp_compexpr_right_7) ? true : false;
+        tmp_cmp_expr_left_7 = par_deadListener;
+        tmp_cmp_expr_right_7 = Py_None;
+        tmp_condition_result_7 = (tmp_cmp_expr_left_7 != tmp_cmp_expr_right_7) ? true : false;
         if (tmp_condition_result_7 != false) {
             goto branch_yes_7;
         } else {
@@ -5671,10 +4982,10 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     }
     branch_yes_7:;
     {
-        PyObject *tmp_assattr_name_6;
+        PyObject *tmp_assattr_value_6;
         PyObject *tmp_assattr_target_6;
         CHECK_OBJECT(par_deadListener);
-        tmp_assattr_name_6 = par_deadListener;
+        tmp_assattr_value_6 = par_deadListener;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
@@ -5683,12 +4994,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 195;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
 
         tmp_assattr_target_6 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[11], tmp_assattr_name_6);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[11], tmp_assattr_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5696,7 +5007,7 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
 
 
             exception_lineno = 195;
-            type_description_1 = "ooooooooo";
+            type_description_1 = "ooooooooN";
             goto frame_exception_exit_1;
         }
     }
@@ -5735,7 +5046,7 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
         par_newTopic,
         par_delTopic,
         par_all,
-        var_numArgs
+        NULL
     );
 
 
@@ -5756,99 +5067,55 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__18_setFlagStates(s
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_subscribe);
-    Py_DECREF(par_subscribe);
-    par_subscribe = NULL;
-    CHECK_OBJECT(par_unsubscribe);
-    Py_DECREF(par_unsubscribe);
-    par_unsubscribe = NULL;
-    CHECK_OBJECT(par_deadListener);
-    Py_DECREF(par_deadListener);
-    par_deadListener = NULL;
-    CHECK_OBJECT(par_sendMessage);
-    Py_DECREF(par_sendMessage);
-    par_sendMessage = NULL;
-    CHECK_OBJECT(par_newTopic);
-    Py_DECREF(par_newTopic);
-    par_newTopic = NULL;
-    CHECK_OBJECT(par_delTopic);
-    Py_DECREF(par_delTopic);
-    par_delTopic = NULL;
-    CHECK_OBJECT(par_all);
-    Py_DECREF(par_all);
-    par_all = NULL;
-    Py_XDECREF(var_numArgs);
-    var_numArgs = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_subscribe);
-    Py_DECREF(par_subscribe);
-    par_subscribe = NULL;
-    CHECK_OBJECT(par_unsubscribe);
-    Py_DECREF(par_unsubscribe);
-    par_unsubscribe = NULL;
-    CHECK_OBJECT(par_deadListener);
-    Py_DECREF(par_deadListener);
-    par_deadListener = NULL;
-    CHECK_OBJECT(par_sendMessage);
-    Py_DECREF(par_sendMessage);
-    par_sendMessage = NULL;
-    CHECK_OBJECT(par_newTopic);
-    Py_DECREF(par_newTopic);
-    par_newTopic = NULL;
-    CHECK_OBJECT(par_delTopic);
-    Py_DECREF(par_delTopic);
-    par_delTopic = NULL;
-    CHECK_OBJECT(par_all);
-    Py_DECREF(par_all);
-    par_all = NULL;
-    Py_XDECREF(var_numArgs);
-    var_numArgs = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_subscribe);
+    Py_DECREF(par_subscribe);
+    CHECK_OBJECT(par_unsubscribe);
+    Py_DECREF(par_unsubscribe);
+    CHECK_OBJECT(par_deadListener);
+    Py_DECREF(par_deadListener);
+    CHECK_OBJECT(par_sendMessage);
+    Py_DECREF(par_sendMessage);
+    CHECK_OBJECT(par_newTopic);
+    Py_DECREF(par_newTopic);
+    CHECK_OBJECT(par_delTopic);
+    Py_DECREF(par_delTopic);
+    CHECK_OBJECT(par_all);
+    Py_DECREF(par_all);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_subscribe);
+    Py_DECREF(par_subscribe);
+    CHECK_OBJECT(par_unsubscribe);
+    Py_DECREF(par_unsubscribe);
+    CHECK_OBJECT(par_deadListener);
+    Py_DECREF(par_deadListener);
+    CHECK_OBJECT(par_sendMessage);
+    Py_DECREF(par_sendMessage);
+    CHECK_OBJECT(par_newTopic);
+    Py_DECREF(par_newTopic);
+    CHECK_OBJECT(par_delTopic);
+    Py_DECREF(par_delTopic);
+    CHECK_OBJECT(par_all);
+    Py_DECREF(par_all);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5885,17 +5152,17 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__19___registerForAp
     // Actual function body.
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[39];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_pubsub$core$notificationmgr;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[40];
-        tmp_assign_source_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[36];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_pubsub$core$notificationmgr;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[37];
+        tmp_assign_source_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         assert(!(tmp_assign_source_1 == NULL));
         assert(var_atexit == NULL);
         var_atexit = tmp_assign_source_1;
@@ -5929,15 +5196,15 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__19___registerForAp
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(var_atexit);
-        tmp_expression_name_1 = var_atexit;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[41]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = var_atexit;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[38]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5948,22 +5215,22 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__19___registerForAp
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[42]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[39]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 199;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_37128f46da7405a990f6932d7e3d6030->m_frame.f_lineno = 199;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5977,23 +5244,12 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__19___registerForAp
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = Py_True;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 200;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_1 = Py_True;
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[15], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[15], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -6063,9 +5319,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__19___registerForAp
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(var_atexit);
+    CHECK_OBJECT(var_atexit);
+    Py_DECREF(var_atexit);
     var_atexit = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -6079,9 +5334,8 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__19___registerForAp
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(var_atexit);
+    CHECK_OBJECT(var_atexit);
+    Py_DECREF(var_atexit);
     var_atexit = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -6096,14 +5350,16 @@ static PyObject *impl_pubsub$core$notificationmgr$$$function__19___registerForAp
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6117,9 +5373,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__10_clearHandlers() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__10_clearHandlers,
-        mod_consts[42],
+        mod_consts[39],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[101],
+        mod_consts[97],
 #endif
         codeobj_8470b5223a4b603848f37e69ee0fa3ac,
         NULL,
@@ -6144,7 +5400,7 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__11_notify
         impl_pubsub$core$notificationmgr$$$function__11_notifySubscribe,
         mod_consts[19],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[102],
+        mod_consts[98],
 #endif
         codeobj_29334e0292fd8799c620a7f39ee5919f,
         NULL,
@@ -6167,9 +5423,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__11_notify
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__12_notifyUnsubscribe() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__12_notifyUnsubscribe,
-        mod_consts[22],
+        mod_consts[20],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[103],
+        mod_consts[99],
 #endif
         codeobj_4ab4fbbbf52c077e0b8d46bd33838dc8,
         NULL,
@@ -6192,9 +5448,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__12_notify
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__13_notifySend() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__13_notifySend,
-        mod_consts[23],
+        mod_consts[21],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[104],
+        mod_consts[100],
 #endif
         codeobj_e25459517dd1dbb6384eb4ff977a49db,
         NULL,
@@ -6217,9 +5473,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__13_notify
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__14_notifyNewTopic() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__14_notifyNewTopic,
-        mod_consts[24],
+        mod_consts[22],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[105],
+        mod_consts[101],
 #endif
         codeobj_6acfd604c3ad04ade04ba18f05526229,
         NULL,
@@ -6242,9 +5498,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__14_notify
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__15_notifyDelTopic() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__15_notifyDelTopic,
-        mod_consts[25],
+        mod_consts[23],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[106],
+        mod_consts[102],
 #endif
         codeobj_1518d4f3ffcee8177574ffac4b3f8e44,
         NULL,
@@ -6267,9 +5523,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__15_notify
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__16_notifyDeadListener() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__16_notifyDeadListener,
-        mod_consts[26],
+        mod_consts[24],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[107],
+        mod_consts[103],
 #endif
         codeobj_5dee18194903bddd9d2036e65ea31b0c,
         NULL,
@@ -6292,9 +5548,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__16_notify
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__17_getFlagStates(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__17_getFlagStates,
-        mod_consts[108],
+        mod_consts[104],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[109],
+        mod_consts[105],
 #endif
         codeobj_d6e77c73173d6b3727c2c6d06dbf4493,
         NULL,
@@ -6303,7 +5559,7 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__17_getFla
         annotations,
 #endif
         module_pubsub$core$notificationmgr,
-        mod_consts[33],
+        mod_consts[31],
         NULL,
         0
     );
@@ -6317,9 +5573,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__17_getFla
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__18_setFlagStates(PyObject *defaults, PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__18_setFlagStates,
-        mod_consts[35],
+        mod_consts[32],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[112],
+        mod_consts[108],
 #endif
         codeobj_5d90d3a020c8f863aefda49d089ba502,
         defaults,
@@ -6328,7 +5584,7 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__18_setFla
         annotations,
 #endif
         module_pubsub$core$notificationmgr,
-        mod_consts[38],
+        mod_consts[35],
         NULL,
         0
     );
@@ -6342,9 +5598,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__18_setFla
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__19___registerForAppExit() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__19___registerForAppExit,
-        mod_consts[113],
+        mod_consts[109],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[114],
+        mod_consts[110],
 #endif
         codeobj_37128f46da7405a990f6932d7e3d6030,
         NULL,
@@ -6369,7 +5625,7 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__1_notifyS
         impl_pubsub$core$notificationmgr$$$function__1_notifySubscribe,
         mod_consts[19],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[77],
+        mod_consts[73],
 #endif
         codeobj_32ed790d409bb8e5ab34a65d28136777,
         NULL,
@@ -6392,9 +5648,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__1_notifyS
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__2_notifyUnsubscribe(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__2_notifyUnsubscribe,
-        mod_consts[22],
+        mod_consts[20],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[78],
+        mod_consts[74],
 #endif
         codeobj_a098e253c8cf8deb6c40a7bb14d4767c,
         NULL,
@@ -6417,9 +5673,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__2_notifyU
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__3_notifyDeadListener(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__3_notifyDeadListener,
-        mod_consts[26],
+        mod_consts[24],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[79],
+        mod_consts[75],
 #endif
         codeobj_de6f30d7c42a94d9aaceb710566b7aa5,
         NULL,
@@ -6442,9 +5698,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__3_notifyD
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__4_notifySend(PyObject *defaults, PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__4_notifySend,
-        mod_consts[23],
+        mod_consts[21],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[83],
+        mod_consts[79],
 #endif
         codeobj_888033adc8c56ce67d4e6a049fa14e52,
         defaults,
@@ -6467,9 +5723,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__4_notifyS
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__5_notifyNewTopic(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__5_notifyNewTopic,
-        mod_consts[24],
+        mod_consts[22],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[87],
+        mod_consts[83],
 #endif
         codeobj_d2e32d62ee0f586cd385c2e338acd54c,
         NULL,
@@ -6492,9 +5748,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__5_notifyN
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__6_notifyDelTopic(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__6_notifyDelTopic,
-        mod_consts[25],
+        mod_consts[23],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[89],
+        mod_consts[85],
 #endif
         codeobj_68e8e913d8560b0eab98e6ecd1d833a9,
         NULL,
@@ -6517,9 +5773,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__6_notifyD
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__7___init__(PyObject *defaults, PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__7___init__,
-        mod_consts[94],
+        mod_consts[90],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[95],
+        mod_consts[91],
 #endif
         codeobj_69f5e2ecbbab8da07df8a882c9d6b3a8,
         defaults,
@@ -6544,7 +5800,7 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__8_addHand
         impl_pubsub$core$notificationmgr$$$function__8_addHandler,
         mod_consts[13],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[97],
+        mod_consts[93],
 #endif
         codeobj_e743b0675b3830129d6ff69630978c67,
         NULL,
@@ -6567,9 +5823,9 @@ static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__8_addHand
 static PyObject *MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__9_getHandlers(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_pubsub$core$notificationmgr$$$function__9_getHandlers,
-        mod_consts[99],
+        mod_consts[95],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[100],
+        mod_consts[96],
 #endif
         codeobj_4db6fb43fa449011cafe18717eabf463,
         NULL,
@@ -6773,71 +6029,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("pubsub.core.notificationmgr");
+
+    // Store the module for future use.
     module_pubsub$core$notificationmgr = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("pubsub.core.notificationmgr: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("pubsub.core.notificationmgr: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("pubsub.core.notificationmgr: Calling createModuleConstants().\n");
+        PRINT_STRING("pubsub.core.notificationmgr: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("pubsub.core.notificationmgr: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("pubsub.core.notificationmgr: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initpubsub$core$notificationmgr\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_pubsub$core$notificationmgr = MODULE_DICT(module_pubsub$core$notificationmgr);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -6853,7 +6111,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         UPDATE_STRING_DICT0(
             moduledict_pubsub$core$notificationmgr,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[125]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)const_str_plain___name__);
@@ -6903,7 +6161,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -7009,13 +6267,13 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[43];
-        UPDATE_STRING_DICT0(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[44], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[40];
+        UPDATE_STRING_DICT0(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[41], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[45], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[42], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_2dd476337dd052491225c62b4f78b4ef = MAKE_MODULE_FRAME(codeobj_2dd476337dd052491225c62b4f78b4ef, module_pubsub$core$notificationmgr);
@@ -7027,17 +6285,17 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[46]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[43]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[46]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[47], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[44], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7050,17 +6308,17 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[46]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[43]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[46]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[48], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[45], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7075,33 +6333,14 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[49], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[46], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[50];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_pubsub$core$notificationmgr;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[51];
-        tmp_level_name_1 = mod_consts[40];
-        frame_2dd476337dd052491225c62b4f78b4ef->m_frame.f_lineno = 6;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
-        if (tmp_assign_source_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 6;
-
-            goto frame_exception_exit_1;
-        }
+        tmp_assign_source_4 = IMPORT_HARD_TYPING();
+        assert(!(tmp_assign_source_4 == NULL));
         assert(tmp_import_from_1__module == NULL);
+        Py_INCREF(tmp_assign_source_4);
         tmp_import_from_1__module = tmp_assign_source_4;
     }
     // Tried code:
@@ -7114,11 +6353,11 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_pubsub$core$notificationmgr,
-                mod_consts[52],
-                mod_consts[40]
+                mod_consts[47],
+                mod_consts[37]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[52]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[47]);
         }
 
         if (tmp_assign_source_5 == NULL) {
@@ -7131,7 +6370,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[47], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
@@ -7142,11 +6381,11 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_pubsub$core$notificationmgr,
-                mod_consts[53],
-                mod_consts[40]
+                mod_consts[48],
+                mod_consts[37]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[53]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[48]);
         }
 
         if (tmp_assign_source_6 == NULL) {
@@ -7159,7 +6398,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[53], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_6);
     }
     goto try_end_1;
     // Exception handler code:
@@ -7191,18 +6430,18 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[54];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_pubsub$core$notificationmgr;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[55];
-        tmp_level_name_2 = mod_consts[36];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[49];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_pubsub$core$notificationmgr;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[50];
+        tmp_level_value_1 = mod_consts[51];
         frame_2dd476337dd052491225c62b4f78b4ef->m_frame.f_lineno = 8;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7217,11 +6456,11 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_pubsub$core$notificationmgr,
-                mod_consts[56],
-                mod_consts[40]
+                mod_consts[52],
+                mod_consts[37]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[56]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[52]);
         }
 
         Py_DECREF(tmp_import_name_from_3);
@@ -7235,23 +6474,23 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[56], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[57];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_pubsub$core$notificationmgr;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[58];
-        tmp_level_name_3 = mod_consts[36];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[53];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_pubsub$core$notificationmgr;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[54];
+        tmp_level_value_2 = mod_consts[51];
         frame_2dd476337dd052491225c62b4f78b4ef->m_frame.f_lineno = 9;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7266,11 +6505,11 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_pubsub$core$notificationmgr,
-                mod_consts[59],
-                mod_consts[40]
+                mod_consts[55],
+                mod_consts[37]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[59]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[55]);
         }
 
         Py_DECREF(tmp_import_name_from_4);
@@ -7284,7 +6523,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
@@ -7295,47 +6534,39 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     // Tried code:
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[60];
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[56];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[60];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 12;
-
-            goto try_except_handler_2;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[56];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
         goto condexpr_end_1;
         condexpr_false_1:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
         condexpr_end_1:;
-        tmp_bases_name_1 = mod_consts[61];
-        tmp_assign_source_10 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = mod_consts[57];
+        tmp_assign_source_10 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7350,16 +6581,16 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         tmp_class_creation_1__metaclass = tmp_assign_source_10;
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[60];
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[56];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -7368,7 +6599,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[60];
+    tmp_dictdel_key = mod_consts[56];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -7383,10 +6614,10 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_1 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_1, mod_consts[62]);
+        tmp_expression_value_1 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_1, mod_consts[58]);
         tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -7397,14 +6628,14 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[62]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[58]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7414,12 +6645,12 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_2;
         }
-        tmp_args_name_1 = mod_consts[63];
+        tmp_args_value_1 = mod_consts[59];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_2dd476337dd052491225c62b4f78b4ef->m_frame.f_lineno = 12;
-        tmp_assign_source_11 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_11 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7434,14 +6665,14 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         tmp_class_creation_1__prepared = tmp_assign_source_11;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_3;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_3 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[64]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_3 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[60]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7452,8 +6683,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_2;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -7463,18 +6694,18 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[65];
+        tmp_left_value_1 = mod_consts[61];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[66];
-        tmp_getattr_default_1 = mod_consts[67];
+        tmp_getattr_attr_1 = mod_consts[62];
+        tmp_getattr_default_1 = mod_consts[63];
         tmp_tuple_element_1 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7486,17 +6717,17 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_2;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_4;
+            PyObject *tmp_expression_value_4;
             PyObject *tmp_type_arg_1;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_1 = tmp_class_creation_1__prepared;
-            tmp_expression_name_4 = BUILTIN_TYPE1(tmp_type_arg_1);
-            assert(!(tmp_expression_name_4 == NULL));
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[66]);
-            Py_DECREF(tmp_expression_name_4);
+            tmp_expression_value_4 = BUILTIN_TYPE1(tmp_type_arg_1);
+            assert(!(tmp_expression_value_4 == NULL));
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[62]);
+            Py_DECREF(tmp_expression_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7507,17 +6738,17 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7557,8 +6788,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[68];
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[69], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[64];
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[65], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7569,8 +6800,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_4;
         }
-        tmp_dictset_value = mod_consts[70];
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[44], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[66];
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[41], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7581,8 +6812,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_4;
         }
-        tmp_dictset_value = mod_consts[71];
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[72], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[67];
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[68], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -7624,15 +6855,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_1;
             PyObject *tmp_dict_key_1;
             PyObject *tmp_dict_value_1;
-            tmp_dict_key_1 = mod_consts[73];
-            tmp_dict_value_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[56]);
+            tmp_dict_key_1 = mod_consts[69];
+            tmp_dict_value_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[52]);
 
             if (tmp_dict_value_1 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[56]);
+                    tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52]);
 
                     if (unlikely(tmp_dict_value_1 == NULL)) {
-                        tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[56]);
+                        tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
                     }
 
                     if (tmp_dict_value_1 == NULL) {
@@ -7646,6 +6877,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_dict_value_1);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -7653,15 +6886,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_res = PyDict_SetItem(tmp_annotations_1, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[74];
-            tmp_dict_value_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[59]);
+            tmp_dict_key_1 = mod_consts[70];
+            tmp_dict_value_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[55]);
 
             if (tmp_dict_value_1 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[59]);
+                    tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[55]);
 
                     if (unlikely(tmp_dict_value_1 == NULL)) {
-                        tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+                        tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
                     }
 
                     if (tmp_dict_value_1 == NULL) {
@@ -7675,19 +6908,23 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto dict_build_exception_1;
                     }
                     Py_INCREF(tmp_dict_value_1);
+                } else {
+                    goto dict_build_exception_1;
                 }
             }
 
             tmp_res = PyDict_SetItem(tmp_annotations_1, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[75];
-            tmp_dict_value_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[76]);
+            tmp_dict_key_1 = mod_consts[71];
+            tmp_dict_value_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[72]);
 
             if (tmp_dict_value_1 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_1 = (PyObject *)&PyBool_Type;
                     Py_INCREF(tmp_dict_value_1);
+                } else {
+                    goto dict_build_exception_1;
                 }
             }
 
@@ -7722,15 +6959,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_2;
             PyObject *tmp_dict_key_2;
             PyObject *tmp_dict_value_2;
-            tmp_dict_key_2 = mod_consts[73];
-            tmp_dict_value_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[56]);
+            tmp_dict_key_2 = mod_consts[69];
+            tmp_dict_value_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[52]);
 
             if (tmp_dict_value_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[56]);
+                    tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52]);
 
                     if (unlikely(tmp_dict_value_2 == NULL)) {
-                        tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[56]);
+                        tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
                     }
 
                     if (tmp_dict_value_2 == NULL) {
@@ -7744,6 +6981,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_dict_value_2);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -7751,15 +6990,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_res = PyDict_SetItem(tmp_annotations_2, tmp_dict_key_2, tmp_dict_value_2);
             Py_DECREF(tmp_dict_value_2);
             assert(!(tmp_res != 0));
-            tmp_dict_key_2 = mod_consts[74];
-            tmp_dict_value_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[59]);
+            tmp_dict_key_2 = mod_consts[70];
+            tmp_dict_value_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[55]);
 
             if (tmp_dict_value_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[59]);
+                    tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[55]);
 
                     if (unlikely(tmp_dict_value_2 == NULL)) {
-                        tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+                        tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
                     }
 
                     if (tmp_dict_value_2 == NULL) {
@@ -7773,6 +7012,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto dict_build_exception_2;
                     }
                     Py_INCREF(tmp_dict_value_2);
+                } else {
+                    goto dict_build_exception_2;
                 }
             }
 
@@ -7790,7 +7031,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__2_notifyUnsubscribe(tmp_annotations_2);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[22], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[20], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -7807,15 +7048,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_3;
             PyObject *tmp_dict_key_3;
             PyObject *tmp_dict_value_3;
-            tmp_dict_key_3 = mod_consts[73];
-            tmp_dict_value_3 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[56]);
+            tmp_dict_key_3 = mod_consts[69];
+            tmp_dict_value_3 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[52]);
 
             if (tmp_dict_value_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[56]);
+                    tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52]);
 
                     if (unlikely(tmp_dict_value_3 == NULL)) {
-                        tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[56]);
+                        tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
                     }
 
                     if (tmp_dict_value_3 == NULL) {
@@ -7829,6 +7070,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_dict_value_3);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -7836,15 +7079,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_res = PyDict_SetItem(tmp_annotations_3, tmp_dict_key_3, tmp_dict_value_3);
             Py_DECREF(tmp_dict_value_3);
             assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[74];
-            tmp_dict_value_3 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[59]);
+            tmp_dict_key_3 = mod_consts[70];
+            tmp_dict_value_3 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[55]);
 
             if (tmp_dict_value_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[59]);
+                    tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[55]);
 
                     if (unlikely(tmp_dict_value_3 == NULL)) {
-                        tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+                        tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
                     }
 
                     if (tmp_dict_value_3 == NULL) {
@@ -7858,6 +7101,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto dict_build_exception_3;
                     }
                     Py_INCREF(tmp_dict_value_3);
+                } else {
+                    goto dict_build_exception_3;
                 }
             }
 
@@ -7875,7 +7120,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__3_notifyDeadListener(tmp_annotations_3);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[26], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[24], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -7893,14 +7138,16 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_4;
             PyObject *tmp_dict_key_4;
             PyObject *tmp_dict_value_4;
-            tmp_defaults_1 = mod_consts[80];
-            tmp_dict_key_4 = mod_consts[81];
-            tmp_dict_value_4 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[82]);
+            tmp_defaults_1 = mod_consts[76];
+            tmp_dict_key_4 = mod_consts[77];
+            tmp_dict_value_4 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[78]);
 
             if (tmp_dict_value_4 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_4 = (PyObject *)&PyUnicode_Type;
                     Py_INCREF(tmp_dict_value_4);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -7908,15 +7155,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_res = PyDict_SetItem(tmp_annotations_4, tmp_dict_key_4, tmp_dict_value_4);
             Py_DECREF(tmp_dict_value_4);
             assert(!(tmp_res != 0));
-            tmp_dict_key_4 = mod_consts[74];
-            tmp_dict_value_4 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[59]);
+            tmp_dict_key_4 = mod_consts[70];
+            tmp_dict_value_4 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[55]);
 
             if (tmp_dict_value_4 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_4 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[59]);
+                    tmp_dict_value_4 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[55]);
 
                     if (unlikely(tmp_dict_value_4 == NULL)) {
-                        tmp_dict_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+                        tmp_dict_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
                     }
 
                     if (tmp_dict_value_4 == NULL) {
@@ -7930,21 +7177,23 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto dict_build_exception_4;
                     }
                     Py_INCREF(tmp_dict_value_4);
+                } else {
+                    goto dict_build_exception_4;
                 }
             }
 
             tmp_res = PyDict_SetItem(tmp_annotations_4, tmp_dict_key_4, tmp_dict_value_4);
             Py_DECREF(tmp_dict_value_4);
             assert(!(tmp_res != 0));
-            tmp_dict_key_4 = mod_consts[73];
-            tmp_dict_value_4 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[56]);
+            tmp_dict_key_4 = mod_consts[69];
+            tmp_dict_value_4 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[52]);
 
             if (tmp_dict_value_4 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_4 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[56]);
+                    tmp_dict_value_4 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52]);
 
                     if (unlikely(tmp_dict_value_4 == NULL)) {
-                        tmp_dict_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[56]);
+                        tmp_dict_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
                     }
 
                     if (tmp_dict_value_4 == NULL) {
@@ -7958,6 +7207,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto dict_build_exception_4;
                     }
                     Py_INCREF(tmp_dict_value_4);
+                } else {
+                    goto dict_build_exception_4;
                 }
             }
 
@@ -7976,7 +7227,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__4_notifySend(tmp_defaults_1, tmp_annotations_4);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[23], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[21], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -7993,15 +7244,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_5;
             PyObject *tmp_dict_key_5;
             PyObject *tmp_dict_value_5;
-            tmp_dict_key_5 = mod_consts[74];
-            tmp_dict_value_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[59]);
+            tmp_dict_key_5 = mod_consts[70];
+            tmp_dict_value_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[55]);
 
             if (tmp_dict_value_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_5 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[59]);
+                    tmp_dict_value_5 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[55]);
 
                     if (unlikely(tmp_dict_value_5 == NULL)) {
-                        tmp_dict_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+                        tmp_dict_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
                     }
 
                     if (tmp_dict_value_5 == NULL) {
@@ -8015,44 +7266,48 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_dict_value_5);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             tmp_annotations_5 = _PyDict_NewPresized( 4 );
             {
-                PyObject *tmp_expression_name_5;
-                PyObject *tmp_subscript_name_1;
-                PyObject *tmp_expression_name_6;
-                PyObject *tmp_subscript_name_2;
+                PyObject *tmp_expression_value_5;
+                PyObject *tmp_subscript_value_1;
+                PyObject *tmp_expression_value_6;
+                PyObject *tmp_subscript_value_2;
                 PyObject *tmp_tuple_element_2;
                 tmp_res = PyDict_SetItem(tmp_annotations_5, tmp_dict_key_5, tmp_dict_value_5);
                 Py_DECREF(tmp_dict_value_5);
                 assert(!(tmp_res != 0));
-                tmp_dict_key_5 = mod_consts[84];
-                tmp_dict_value_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[82]);
+                tmp_dict_key_5 = mod_consts[80];
+                tmp_dict_value_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[78]);
 
                 if (tmp_dict_value_5 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                         tmp_dict_value_5 = (PyObject *)&PyUnicode_Type;
                         Py_INCREF(tmp_dict_value_5);
+                    } else {
+                        goto dict_build_exception_5;
                     }
                 }
 
                 tmp_res = PyDict_SetItem(tmp_annotations_5, tmp_dict_key_5, tmp_dict_value_5);
                 Py_DECREF(tmp_dict_value_5);
                 assert(!(tmp_res != 0));
-                tmp_dict_key_5 = mod_consts[85];
-                tmp_expression_name_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[52]);
+                tmp_dict_key_5 = mod_consts[81];
+                tmp_expression_value_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[47]);
 
-                if (tmp_expression_name_5 == NULL) {
+                if (tmp_expression_value_5 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52]);
+                        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[47]);
 
-                        if (unlikely(tmp_expression_name_5 == NULL)) {
-                            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+                        if (unlikely(tmp_expression_value_5 == NULL)) {
+                            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
                         }
 
-                        if (tmp_expression_name_5 == NULL) {
+                        if (tmp_expression_value_5 == NULL) {
                             assert(ERROR_OCCURRED());
 
                             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8062,22 +7317,26 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                             type_description_2 = "o";
                             goto dict_build_exception_5;
                         }
-                        Py_INCREF(tmp_expression_name_5);
+                        Py_INCREF(tmp_expression_value_5);
+                    } else {
+                        goto dict_build_exception_5;
                     }
                 }
 
-                tmp_subscript_name_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[82]);
+                tmp_subscript_value_1 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[78]);
 
-                if (tmp_subscript_name_1 == NULL) {
+                if (tmp_subscript_value_1 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_subscript_name_1 = (PyObject *)&PyUnicode_Type;
-                        Py_INCREF(tmp_subscript_name_1);
+                        tmp_subscript_value_1 = (PyObject *)&PyUnicode_Type;
+                        Py_INCREF(tmp_subscript_value_1);
+                    } else {
+                        goto dict_build_exception_5;
                     }
                 }
 
-                tmp_dict_value_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_1);
-                Py_DECREF(tmp_expression_name_5);
-                Py_DECREF(tmp_subscript_name_1);
+                tmp_dict_value_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_1);
+                Py_DECREF(tmp_expression_value_5);
+                Py_DECREF(tmp_subscript_value_1);
                 if (tmp_dict_value_5 == NULL) {
                     assert(ERROR_OCCURRED());
 
@@ -8091,18 +7350,18 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                 tmp_res = PyDict_SetItem(tmp_annotations_5, tmp_dict_key_5, tmp_dict_value_5);
                 Py_DECREF(tmp_dict_value_5);
                 assert(!(tmp_res != 0));
-                tmp_dict_key_5 = mod_consts[86];
-                tmp_expression_name_6 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[53]);
+                tmp_dict_key_5 = mod_consts[82];
+                tmp_expression_value_6 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[48]);
 
-                if (tmp_expression_name_6 == NULL) {
+                if (tmp_expression_value_6 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[53]);
+                        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[48]);
 
-                        if (unlikely(tmp_expression_name_6 == NULL)) {
-                            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[53]);
+                        if (unlikely(tmp_expression_value_6 == NULL)) {
+                            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
                         }
 
-                        if (tmp_expression_name_6 == NULL) {
+                        if (tmp_expression_value_6 == NULL) {
                             assert(ERROR_OCCURRED());
 
                             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8112,34 +7371,40 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                             type_description_2 = "o";
                             goto dict_build_exception_5;
                         }
-                        Py_INCREF(tmp_expression_name_6);
+                        Py_INCREF(tmp_expression_value_6);
+                    } else {
+                        goto dict_build_exception_5;
                     }
                 }
 
-                tmp_tuple_element_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[82]);
+                tmp_tuple_element_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[78]);
 
                 if (tmp_tuple_element_2 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                         tmp_tuple_element_2 = (PyObject *)&PyUnicode_Type;
                         Py_INCREF(tmp_tuple_element_2);
+                    } else {
+                        goto dict_build_exception_5;
                     }
                 }
 
-                tmp_subscript_name_2 = PyTuple_New(2);
-                PyTuple_SET_ITEM(tmp_subscript_name_2, 0, tmp_tuple_element_2);
-                tmp_tuple_element_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[82]);
+                tmp_subscript_value_2 = PyTuple_New(2);
+                PyTuple_SET_ITEM(tmp_subscript_value_2, 0, tmp_tuple_element_2);
+                tmp_tuple_element_2 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[78]);
 
                 if (tmp_tuple_element_2 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                         tmp_tuple_element_2 = (PyObject *)&PyUnicode_Type;
                         Py_INCREF(tmp_tuple_element_2);
+                    } else {
+                        goto dict_build_exception_5;
                     }
                 }
 
-                PyTuple_SET_ITEM(tmp_subscript_name_2, 1, tmp_tuple_element_2);
-                tmp_dict_value_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_2);
-                Py_DECREF(tmp_expression_name_6);
-                Py_DECREF(tmp_subscript_name_2);
+                PyTuple_SET_ITEM(tmp_subscript_value_2, 1, tmp_tuple_element_2);
+                tmp_dict_value_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_2);
+                Py_DECREF(tmp_expression_value_6);
+                Py_DECREF(tmp_subscript_value_2);
                 if (tmp_dict_value_5 == NULL) {
                     assert(ERROR_OCCURRED());
 
@@ -8165,7 +7430,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__5_notifyNewTopic(tmp_annotations_5);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[24], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[22], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -8182,13 +7447,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_6;
             PyObject *tmp_dict_key_6;
             PyObject *tmp_dict_value_6;
-            tmp_dict_key_6 = mod_consts[88];
-            tmp_dict_value_6 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[82]);
+            tmp_dict_key_6 = mod_consts[84];
+            tmp_dict_value_6 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[78]);
 
             if (tmp_dict_value_6 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_6 = (PyObject *)&PyUnicode_Type;
                     Py_INCREF(tmp_dict_value_6);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -8200,7 +7467,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__6_notifyDelTopic(tmp_annotations_6);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[25], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12, mod_consts[23], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -8270,24 +7537,24 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         skip_nested_handling_1:;
         {
             PyObject *tmp_assign_source_14;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_3;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_3 = mod_consts[71];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
-            tmp_tuple_element_3 = mod_consts[61];
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_3);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_3 = mod_consts[67];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
+            tmp_tuple_element_3 = mod_consts[57];
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_3);
             tmp_tuple_element_3 = locals_pubsub$core$notificationmgr$$$class__1_INotificationHandler_12;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_2dd476337dd052491225c62b4f78b4ef->m_frame.f_lineno = 12;
-            tmp_assign_source_14 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_14 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_14 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -8366,7 +7633,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         exception_lineno = 12;
         goto try_except_handler_2;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[71], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[67], tmp_assign_source_13);
     }
     goto try_end_2;
     // Exception handler code:
@@ -8380,7 +7647,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
     Py_XDECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
@@ -8395,9 +7663,11 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -8411,47 +7681,39 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     // Tried code:
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_metaclass_name_2;
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_key_name_4;
-        PyObject *tmp_dict_arg_name_4;
-        PyObject *tmp_dict_arg_name_5;
-        PyObject *tmp_key_name_5;
-        PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[60];
+        PyObject *tmp_metaclass_value_2;
+        bool tmp_condition_result_5;
+        PyObject *tmp_key_value_4;
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
+        PyObject *tmp_bases_value_2;
+        tmp_key_value_4 = mod_consts[56];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
+        tmp_dict_arg_value_4 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_4, tmp_key_value_4);
         assert(!(tmp_res == -1));
-        tmp_condition_result_5 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto condexpr_true_2;
         } else {
             goto condexpr_false_2;
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[60];
-        tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
-        if (tmp_metaclass_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 78;
-
-            goto try_except_handler_5;
+        tmp_dict_arg_value_5 = tmp_class_creation_2__class_decl_dict;
+        tmp_key_value_5 = mod_consts[56];
+        tmp_metaclass_value_2 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
+        if (tmp_metaclass_value_2 == NULL) {
+            tmp_metaclass_value_2 = Py_None;
         }
+        assert(!(tmp_metaclass_value_2 == NULL));
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_2 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_2);
+        tmp_metaclass_value_2 = (PyObject *)&PyType_Type;
         condexpr_end_2:;
-        tmp_bases_name_2 = mod_consts[61];
-        tmp_assign_source_16 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
-        Py_DECREF(tmp_metaclass_name_2);
+        tmp_bases_value_2 = mod_consts[57];
+        tmp_assign_source_16 = SELECT_METACLASS(tmp_metaclass_value_2, tmp_bases_value_2);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8466,16 +7728,16 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         tmp_class_creation_2__metaclass = tmp_assign_source_16;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_key_name_6;
-        PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[60];
+        bool tmp_condition_result_6;
+        PyObject *tmp_key_value_6;
+        PyObject *tmp_dict_arg_value_6;
+        tmp_key_value_6 = mod_consts[56];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
+        tmp_dict_arg_value_6 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_6, tmp_key_value_6);
         assert(!(tmp_res == -1));
-        tmp_condition_result_6 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -8484,7 +7746,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     branch_yes_4:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[60];
+    tmp_dictdel_key = mod_consts[56];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -8499,10 +7761,10 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_7 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_7, mod_consts[62]);
+        tmp_expression_value_7 = tmp_class_creation_2__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_7, mod_consts[58]);
         tmp_condition_result_7 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
@@ -8513,14 +7775,14 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_name_3;
-        PyObject *tmp_kwargs_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_value_3;
+        PyObject *tmp_kwargs_value_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_8 = tmp_class_creation_2__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[62]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_8 = tmp_class_creation_2__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[58]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8530,12 +7792,12 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_5;
         }
-        tmp_args_name_3 = mod_consts[90];
+        tmp_args_value_3 = mod_consts[86];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
+        tmp_kwargs_value_3 = tmp_class_creation_2__class_decl_dict;
         frame_2dd476337dd052491225c62b4f78b4ef->m_frame.f_lineno = 78;
-        tmp_assign_source_17 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_3);
+        tmp_assign_source_17 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8550,14 +7812,14 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         tmp_class_creation_2__prepared = tmp_assign_source_17;
     }
     {
-        nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_expression_name_9;
+        bool tmp_condition_result_8;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
-        tmp_expression_name_9 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_9, mod_consts[64]);
-        tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_expression_value_9 = tmp_class_creation_2__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_9, mod_consts[60]);
+        tmp_operand_value_2 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8568,8 +7830,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_5;
         }
-        tmp_condition_result_8 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_8 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_8 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -8579,18 +7841,18 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_raise_value_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_tuple_element_4;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_2 = mod_consts[65];
+        tmp_left_value_2 = mod_consts[61];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[66];
-        tmp_getattr_default_2 = mod_consts[67];
+        tmp_getattr_attr_2 = mod_consts[62];
+        tmp_getattr_default_2 = mod_consts[63];
         tmp_tuple_element_4 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8602,17 +7864,17 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_5;
         }
-        tmp_right_name_2 = PyTuple_New(2);
+        tmp_right_value_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_10;
+            PyObject *tmp_expression_value_10;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_2, 0, tmp_tuple_element_4);
+            PyTuple_SET_ITEM(tmp_right_value_2, 0, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_2__prepared);
             tmp_type_arg_2 = tmp_class_creation_2__prepared;
-            tmp_expression_name_10 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_10 == NULL));
-            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[66]);
-            Py_DECREF(tmp_expression_name_10);
+            tmp_expression_value_10 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_10 == NULL));
+            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[62]);
+            Py_DECREF(tmp_expression_value_10);
             if (tmp_tuple_element_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -8623,17 +7885,17 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
                 goto tuple_build_exception_2;
             }
-            PyTuple_SET_ITEM(tmp_right_name_2, 1, tmp_tuple_element_4);
+            PyTuple_SET_ITEM(tmp_right_value_2, 1, tmp_tuple_element_4);
         }
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_2:;
-        Py_DECREF(tmp_right_name_2);
+        Py_DECREF(tmp_right_value_2);
         goto try_except_handler_5;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_raise_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8673,8 +7935,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[68];
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[69], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[64];
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[65], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -8685,8 +7947,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_7;
         }
-        tmp_dictset_value = mod_consts[91];
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[44], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[87];
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[41], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -8697,8 +7959,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             goto try_except_handler_7;
         }
-        tmp_dictset_value = mod_consts[92];
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[88];
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[68], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -8741,16 +8003,16 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_7;
             PyObject *tmp_dict_key_7;
             PyObject *tmp_dict_value_7;
-            tmp_defaults_2 = mod_consts[80];
-            tmp_dict_key_7 = mod_consts[93];
-            tmp_dict_value_7 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[71]);
+            tmp_defaults_2 = mod_consts[76];
+            tmp_dict_key_7 = mod_consts[89];
+            tmp_dict_value_7 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[67]);
 
             if (tmp_dict_value_7 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_7 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[71]);
+                    tmp_dict_value_7 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[67]);
 
                     if (unlikely(tmp_dict_value_7 == NULL)) {
-                        tmp_dict_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[71]);
+                        tmp_dict_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
                     }
 
                     if (tmp_dict_value_7 == NULL) {
@@ -8764,6 +8026,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto frame_exception_exit_3;
                     }
                     Py_INCREF(tmp_dict_value_7);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
@@ -8776,7 +8040,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__7___init__(tmp_defaults_2, tmp_annotations_7);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[94], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[90], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -8793,15 +8057,15 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_8;
             PyObject *tmp_dict_key_8;
             PyObject *tmp_dict_value_8;
-            tmp_dict_key_8 = mod_consts[96];
-            tmp_dict_value_8 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[71]);
+            tmp_dict_key_8 = mod_consts[92];
+            tmp_dict_value_8 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[67]);
 
             if (tmp_dict_value_8 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_8 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[71]);
+                    tmp_dict_value_8 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[67]);
 
                     if (unlikely(tmp_dict_value_8 == NULL)) {
-                        tmp_dict_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[71]);
+                        tmp_dict_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
                     }
 
                     if (tmp_dict_value_8 == NULL) {
@@ -8815,6 +8079,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         goto frame_exception_exit_3;
                     }
                     Py_INCREF(tmp_dict_value_8);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
@@ -8843,20 +8109,20 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_9;
             PyObject *tmp_dict_key_9;
             PyObject *tmp_dict_value_9;
-            PyObject *tmp_expression_name_11;
-            PyObject *tmp_subscript_name_3;
-            tmp_dict_key_9 = mod_consts[98];
-            tmp_expression_name_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[52]);
+            PyObject *tmp_expression_value_11;
+            PyObject *tmp_subscript_value_3;
+            tmp_dict_key_9 = mod_consts[94];
+            tmp_expression_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[47]);
 
-            if (tmp_expression_name_11 == NULL) {
+            if (tmp_expression_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[52]);
+                    tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[47]);
 
-                    if (unlikely(tmp_expression_name_11 == NULL)) {
-                        tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+                    if (unlikely(tmp_expression_value_11 == NULL)) {
+                        tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
                     }
 
-                    if (tmp_expression_name_11 == NULL) {
+                    if (tmp_expression_value_11 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8866,37 +8132,41 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_11);
+                    Py_INCREF(tmp_expression_value_11);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
-            tmp_subscript_name_3 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[71]);
+            tmp_subscript_value_3 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[67]);
 
-            if (tmp_subscript_name_3 == NULL) {
+            if (tmp_subscript_value_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_subscript_name_3 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[71]);
+                    tmp_subscript_value_3 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[67]);
 
-                    if (unlikely(tmp_subscript_name_3 == NULL)) {
-                        tmp_subscript_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[71]);
+                    if (unlikely(tmp_subscript_value_3 == NULL)) {
+                        tmp_subscript_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
                     }
 
-                    if (tmp_subscript_name_3 == NULL) {
+                    if (tmp_subscript_value_3 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_expression_name_11);
+                        Py_DECREF(tmp_expression_value_11);
 
                         exception_lineno = 119;
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_subscript_name_3);
+                    Py_INCREF(tmp_subscript_value_3);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
-            tmp_dict_value_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_3);
-            Py_DECREF(tmp_expression_name_11);
-            Py_DECREF(tmp_subscript_name_3);
+            tmp_dict_value_9 = LOOKUP_SUBSCRIPT(tmp_expression_value_11, tmp_subscript_value_3);
+            Py_DECREF(tmp_expression_value_11);
+            Py_DECREF(tmp_subscript_value_3);
             if (tmp_dict_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -8915,7 +8185,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__9_getHandlers(tmp_annotations_9);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[99], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[95], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -8932,7 +8202,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
         tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__10_clearHandlers();
 
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[42], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[39], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -8964,7 +8234,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
         tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__12_notifyUnsubscribe();
 
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[22], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[20], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -8980,7 +8250,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
         tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__13_notifySend();
 
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[23], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[21], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -8996,7 +8266,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
         tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__14_notifyNewTopic();
 
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[24], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[22], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -9012,7 +8282,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
         tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__15_notifyDelTopic();
 
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[25], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[23], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -9028,7 +8298,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
         tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__16_notifyDeadListener();
 
-        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[26], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[24], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -9044,21 +8314,21 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_10;
             PyObject *tmp_dict_key_10;
             PyObject *tmp_dict_value_10;
-            PyObject *tmp_expression_name_12;
-            PyObject *tmp_subscript_name_4;
+            PyObject *tmp_expression_value_12;
+            PyObject *tmp_subscript_value_4;
             PyObject *tmp_tuple_element_5;
-            tmp_dict_key_10 = mod_consts[98];
-            tmp_expression_name_12 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[53]);
+            tmp_dict_key_10 = mod_consts[94];
+            tmp_expression_value_12 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[48]);
 
-            if (tmp_expression_name_12 == NULL) {
+            if (tmp_expression_value_12 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[53]);
+                    tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[48]);
 
-                    if (unlikely(tmp_expression_name_12 == NULL)) {
-                        tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[53]);
+                    if (unlikely(tmp_expression_value_12 == NULL)) {
+                        tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
                     }
 
-                    if (tmp_expression_name_12 == NULL) {
+                    if (tmp_expression_value_12 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9068,34 +8338,40 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_12);
+                    Py_INCREF(tmp_expression_value_12);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
-            tmp_tuple_element_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[82]);
+            tmp_tuple_element_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[78]);
 
             if (tmp_tuple_element_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_tuple_element_5 = (PyObject *)&PyUnicode_Type;
                     Py_INCREF(tmp_tuple_element_5);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
-            tmp_subscript_name_4 = PyTuple_New(2);
-            PyTuple_SET_ITEM(tmp_subscript_name_4, 0, tmp_tuple_element_5);
-            tmp_tuple_element_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
+            tmp_subscript_value_4 = PyTuple_New(2);
+            PyTuple_SET_ITEM(tmp_subscript_value_4, 0, tmp_tuple_element_5);
+            tmp_tuple_element_5 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
 
             if (tmp_tuple_element_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_tuple_element_5 = (PyObject *)&PyBool_Type;
                     Py_INCREF(tmp_tuple_element_5);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
-            PyTuple_SET_ITEM(tmp_subscript_name_4, 1, tmp_tuple_element_5);
-            tmp_dict_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_4);
-            Py_DECREF(tmp_expression_name_12);
-            Py_DECREF(tmp_subscript_name_4);
+            PyTuple_SET_ITEM(tmp_subscript_value_4, 1, tmp_tuple_element_5);
+            tmp_dict_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_12, tmp_subscript_value_4);
+            Py_DECREF(tmp_expression_value_12);
+            Py_DECREF(tmp_subscript_value_4);
             if (tmp_dict_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9114,7 +8390,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__17_getFlagStates(tmp_annotations_10);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[108], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[104], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -9132,14 +8408,16 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             PyObject *tmp_annotations_11;
             PyObject *tmp_dict_key_11;
             PyObject *tmp_dict_value_11;
-            tmp_defaults_3 = mod_consts[110];
-            tmp_dict_key_11 = mod_consts[27];
-            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
+            tmp_defaults_3 = mod_consts[106];
+            tmp_dict_key_11 = mod_consts[25];
+            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
 
             if (tmp_dict_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_11 = (PyObject *)&PyBool_Type;
                     Py_INCREF(tmp_dict_value_11);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
@@ -9147,13 +8425,45 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             tmp_res = PyDict_SetItem(tmp_annotations_11, tmp_dict_key_11, tmp_dict_value_11);
             Py_DECREF(tmp_dict_value_11);
             assert(!(tmp_res != 0));
-            tmp_dict_key_11 = mod_consts[28];
-            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
+            tmp_dict_key_11 = mod_consts[26];
+            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
 
             if (tmp_dict_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_11 = (PyObject *)&PyBool_Type;
                     Py_INCREF(tmp_dict_value_11);
+                } else {
+                    goto frame_exception_exit_3;
+                }
+            }
+
+            tmp_res = PyDict_SetItem(tmp_annotations_11, tmp_dict_key_11, tmp_dict_value_11);
+            Py_DECREF(tmp_dict_value_11);
+            assert(!(tmp_res != 0));
+            tmp_dict_key_11 = mod_consts[27];
+            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
+
+            if (tmp_dict_value_11 == NULL) {
+                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
+                    tmp_dict_value_11 = (PyObject *)&PyBool_Type;
+                    Py_INCREF(tmp_dict_value_11);
+                } else {
+                    goto frame_exception_exit_3;
+                }
+            }
+
+            tmp_res = PyDict_SetItem(tmp_annotations_11, tmp_dict_key_11, tmp_dict_value_11);
+            Py_DECREF(tmp_dict_value_11);
+            assert(!(tmp_res != 0));
+            tmp_dict_key_11 = mod_consts[28];
+            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
+
+            if (tmp_dict_value_11 == NULL) {
+                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
+                    tmp_dict_value_11 = (PyObject *)&PyBool_Type;
+                    Py_INCREF(tmp_dict_value_11);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
@@ -9161,12 +8471,14 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             Py_DECREF(tmp_dict_value_11);
             assert(!(tmp_res != 0));
             tmp_dict_key_11 = mod_consts[29];
-            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
+            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
 
             if (tmp_dict_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_11 = (PyObject *)&PyBool_Type;
                     Py_INCREF(tmp_dict_value_11);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
@@ -9174,51 +8486,29 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
             Py_DECREF(tmp_dict_value_11);
             assert(!(tmp_res != 0));
             tmp_dict_key_11 = mod_consts[30];
-            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
+            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
 
             if (tmp_dict_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_11 = (PyObject *)&PyBool_Type;
                     Py_INCREF(tmp_dict_value_11);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
             tmp_res = PyDict_SetItem(tmp_annotations_11, tmp_dict_key_11, tmp_dict_value_11);
             Py_DECREF(tmp_dict_value_11);
             assert(!(tmp_res != 0));
-            tmp_dict_key_11 = mod_consts[31];
-            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
+            tmp_dict_key_11 = mod_consts[107];
+            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[72]);
 
             if (tmp_dict_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_dict_value_11 = (PyObject *)&PyBool_Type;
                     Py_INCREF(tmp_dict_value_11);
-                }
-            }
-
-            tmp_res = PyDict_SetItem(tmp_annotations_11, tmp_dict_key_11, tmp_dict_value_11);
-            Py_DECREF(tmp_dict_value_11);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_11 = mod_consts[32];
-            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
-
-            if (tmp_dict_value_11 == NULL) {
-                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_11 = (PyObject *)&PyBool_Type;
-                    Py_INCREF(tmp_dict_value_11);
-                }
-            }
-
-            tmp_res = PyDict_SetItem(tmp_annotations_11, tmp_dict_key_11, tmp_dict_value_11);
-            Py_DECREF(tmp_dict_value_11);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_11 = mod_consts[111];
-            tmp_dict_value_11 = PyObject_GetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[76]);
-
-            if (tmp_dict_value_11 == NULL) {
-                if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_dict_value_11 = (PyObject *)&PyBool_Type;
-                    Py_INCREF(tmp_dict_value_11);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
@@ -9230,7 +8520,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
 
             tmp_dictset_value = MAKE_FUNCTION_pubsub$core$notificationmgr$$$function__18_setFlagStates(tmp_defaults_3, tmp_annotations_11);
 
-            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[35], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78, mod_consts[32], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -9316,24 +8606,24 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         skip_nested_handling_2:;
         {
             PyObject *tmp_assign_source_20;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_name_4;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_value_4;
             PyObject *tmp_tuple_element_6;
-            PyObject *tmp_kwargs_name_4;
+            PyObject *tmp_kwargs_value_4;
             CHECK_OBJECT(tmp_class_creation_2__metaclass);
-            tmp_called_name_4 = tmp_class_creation_2__metaclass;
-            tmp_tuple_element_6 = mod_consts[92];
-            tmp_args_name_4 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_6);
-            tmp_tuple_element_6 = mod_consts[61];
-            PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_6);
+            tmp_called_value_4 = tmp_class_creation_2__metaclass;
+            tmp_tuple_element_6 = mod_consts[88];
+            tmp_args_value_4 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_6);
+            tmp_tuple_element_6 = mod_consts[57];
+            PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_6);
             tmp_tuple_element_6 = locals_pubsub$core$notificationmgr$$$class__2_NotificationMgr_78;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_6);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 2, tmp_tuple_element_6);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-            tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
+            tmp_kwargs_value_4 = tmp_class_creation_2__class_decl_dict;
             frame_2dd476337dd052491225c62b4f78b4ef->m_frame.f_lineno = 78;
-            tmp_assign_source_20 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_4, tmp_kwargs_name_4);
-            Py_DECREF(tmp_args_name_4);
+            tmp_assign_source_20 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_4, tmp_kwargs_value_4);
+            Py_DECREF(tmp_args_value_4);
             if (tmp_assign_source_20 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9412,7 +8702,7 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
         exception_lineno = 78;
         goto try_except_handler_5;
         outline_result_2:;
-        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[92], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)mod_consts[88], tmp_assign_source_19);
     }
     goto try_end_3;
     // Exception handler code:
@@ -9426,7 +8716,8 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
     Py_XDECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
@@ -9470,17 +8761,33 @@ PyObject *modulecode_pubsub$core$notificationmgr(PyObject *module, struct Nuitka
     goto module_exception_exit;
 
     frame_no_exception_3:;
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_2__prepared);
     Py_DECREF(tmp_class_creation_2__prepared);
     tmp_class_creation_2__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("pubsub.core.notificationmgr", false);
+
     return module_pubsub$core$notificationmgr;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_pubsub$core$notificationmgr, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("pubsub$core$notificationmgr", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'wx.py.parse'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_wx$py$parse;
 PyDictObject *moduledict_wx$py$parse;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[65];
+static PyObject *mod_consts[55];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[55];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("wx.py.parse"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 55; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_wx$py$parse(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "wx.py.parse");
+    for (int i = 0; i < 55; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -70,9 +82,9 @@ static PyCodeObject *codeobj_a123e0116477996e0c4e8e8d700e0424;
 static PyCodeObject *codeobj_ebc29118bde7efc6d5febe400e2563f8;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[62]); CHECK_OBJECT(module_filename_obj);
-    codeobj_a123e0116477996e0c4e8e8d700e0424 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[63], NULL, NULL, 0, 0, 0);
-    codeobj_ebc29118bde7efc6d5febe400e2563f8 = MAKE_CODEOBJECT(module_filename_obj, 20, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[61], mod_consts[64], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[52]); CHECK_OBJECT(module_filename_obj);
+    codeobj_a123e0116477996e0c4e8e8d700e0424 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[53], NULL, NULL, 0, 0, 0);
+    codeobj_ebc29118bde7efc6d5febe400e2563f8 = MAKE_CODEOBJECT(module_filename_obj, 20, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[51], mod_consts[54], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -266,20 +278,15 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     {
         PyObject *tmp_assign_source_14;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_name_1 = (PyObject *)&PyEnum_Type;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = (PyObject *)&PyEnum_Type;
         CHECK_OBJECT(par_codeBlock);
-        tmp_called_instance_1 = par_codeBlock;
-        frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 42;
-        tmp_args_element_name_1 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_1,
-            mod_consts[5],
-            &PyTuple_GET_ITEM(mod_consts[6], 0)
-        );
-
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_1 = par_codeBlock;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[5]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -290,8 +297,22 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto frame_exception_exit_1;
         }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 42;
-        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[6]);
+
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_args_element_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 42;
+            type_description_1 = "ooooooooooooooooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 42;
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -475,7 +496,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -511,7 +533,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     goto try_except_handler_2;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_19;
@@ -543,21 +566,18 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(var_l);
         tmp_len_arg_1 = var_l;
-        tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -567,46 +587,47 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        if (var_l == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(var_l);
+        tmp_expression_value_2 = var_l;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
+        if (tmp_called_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 43;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-
-        tmp_called_instance_2 = var_l;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 43;
-        tmp_len_arg_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[9]);
+        tmp_len_arg_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_len_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 43;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
+        tmp_right_value_1 = BUILTIN_LEN(tmp_len_arg_2);
         Py_DECREF(tmp_len_arg_2);
-        if (tmp_right_name_1 == NULL) {
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 43;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_21 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_assign_source_21 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         assert(!(tmp_assign_source_21 == NULL));
         {
             PyObject *old = var_currentIndentation;
@@ -617,15 +638,13 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_i);
-        tmp_compexpr_left_1 = var_i;
-        tmp_compexpr_right_1 = mod_consts[10];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_i;
+        tmp_cmp_expr_right_1 = mod_consts[9];
+        tmp_condition_result_1 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -635,24 +654,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 45;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
@@ -660,18 +667,18 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         int tmp_or_left_truth_1;
         PyObject *tmp_or_left_value_1;
         PyObject *tmp_or_right_value_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         int tmp_or_left_truth_2;
         PyObject *tmp_or_left_value_2;
         PyObject *tmp_or_right_value_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_3;
         if (var_lineContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[11]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -681,9 +688,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_1 = var_lineContinuationList;
-        tmp_subscript_name_1 = mod_consts[12];
-        tmp_or_left_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, -1);
+        tmp_expression_value_3 = var_lineContinuationList;
+        tmp_subscript_value_1 = mod_consts[11];
+        tmp_or_left_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_1, -1);
         if (tmp_or_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -701,7 +708,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_or_left_value_1);
 
-            exception_lineno = 48;
+            exception_lineno = 46;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
@@ -714,7 +721,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         Py_DECREF(tmp_or_left_value_1);
         if (var_stringContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -724,9 +731,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_2 = var_stringContinuationList;
-        tmp_subscript_name_2 = mod_consts[12];
-        tmp_or_left_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_2, -1);
+        tmp_expression_value_4 = var_stringContinuationList;
+        tmp_subscript_value_2 = mod_consts[11];
+        tmp_or_left_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_2, -1);
         if (tmp_or_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -744,7 +751,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_or_left_value_2);
 
-            exception_lineno = 48;
+            exception_lineno = 47;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
@@ -757,7 +764,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         Py_DECREF(tmp_or_left_value_2);
         if (var_parentheticalContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -767,9 +774,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_3 = var_parentheticalContinuationList;
-        tmp_subscript_name_3 = mod_consts[12];
-        tmp_or_right_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_3, -1);
+        tmp_expression_value_5 = var_parentheticalContinuationList;
+        tmp_subscript_value_3 = mod_consts[11];
+        tmp_or_right_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_3, -1);
         if (tmp_or_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -800,27 +807,27 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
-        if (var_l == NULL) {
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_6;
+        CHECK_OBJECT(var_l);
+        tmp_expression_value_6 = var_l;
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[8]);
+        if (tmp_called_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
 
             exception_lineno = 50;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-
-        tmp_called_instance_3 = var_l;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 50;
-        tmp_compexpr_left_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[9]);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_4);
+        Py_DECREF(tmp_called_value_4);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -830,10 +837,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_2 = mod_consts[15];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_right_2 = mod_consts[14];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -843,24 +850,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 50;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -878,29 +873,29 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_called_instance_4;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_3;
-        if (var_l == NULL) {
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_subscript_value_4;
+        CHECK_OBJECT(var_l);
+        tmp_expression_value_8 = var_l;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[15]);
+        if (tmp_called_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
 
             exception_lineno = 52;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-
-        tmp_called_instance_4 = var_l;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 52;
-        tmp_expression_name_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[16]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_7 = CALL_FUNCTION_NO_ARGS(tmp_called_value_5);
+        Py_DECREF(tmp_called_value_5);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -910,10 +905,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_4 = mod_consts[10];
-        tmp_compexpr_left_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_subscript_value_4 = mod_consts[9];
+        tmp_cmp_expr_left_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_7, tmp_subscript_value_4, 0);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -923,10 +918,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_3 = mod_consts[17];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_right_3 = mod_consts[16];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -936,24 +931,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 52;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -985,16 +968,14 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        int tmp_truth_name_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_tmp_and_right_value_1_object_1;
-        int tmp_truth_name_5;
+        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_5;
         if (var_newIndent == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1004,8 +985,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_truth_name_4 = CHECK_IF_TRUE(var_newIndent);
-        if (tmp_truth_name_4 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(var_newIndent);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1015,7 +996,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_and_left_value_1 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_left_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == -1) {
             assert(ERROR_OCCURRED());
@@ -1034,10 +1015,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         }
         and_right_1:;
         CHECK_OBJECT(var_currentIndentation);
-        tmp_compexpr_left_4 = var_currentIndentation;
+        tmp_cmp_expr_left_4 = var_currentIndentation;
         if (var_indentNumber == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1047,10 +1028,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = var_indentNumber;
-        tmp_subscript_name_5 = mod_consts[12];
-        tmp_compexpr_right_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_5, -1);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_expression_value_9 = var_indentNumber;
+        tmp_subscript_value_5 = mod_consts[11];
+        tmp_cmp_expr_right_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_9, tmp_subscript_value_5, -1);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1060,9 +1041,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_tmp_and_right_value_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_right_4);
-        if (tmp_tmp_and_right_value_1_object_1 == NULL) {
+        tmp_and_right_value_1 = RICH_COMPARE_GT_NBOOL_LONG_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
+        if (tmp_and_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1072,19 +1053,6 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_tmp_and_right_value_1_object_1);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_right_value_1_object_1);
-
-            exception_lineno = 56;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_and_right_value_1 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_right_value_1_object_1);
         tmp_condition_result_4 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
@@ -1095,6 +1063,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
@@ -1109,12 +1078,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
 
     }
     {
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         if (var_indentNumber == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1124,11 +1093,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_called_instance_5 = var_indentNumber;
+        tmp_called_instance_1 = var_indentNumber;
         CHECK_OBJECT(var_currentIndentation);
-        tmp_args_element_name_2 = var_currentIndentation;
+        tmp_args_element_value_2 = var_currentIndentation;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 58;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[20], tmp_args_element_name_2);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[19], tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1144,11 +1113,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     goto branch_end_4;
     branch_no_4:;
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
         if (var_lspContinuation == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[20]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1158,8 +1127,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_operand_name_1 = var_lspContinuation;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = var_lspContinuation;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1170,8 +1139,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
@@ -1179,14 +1148,48 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     branch_yes_5:;
     {
-        nuitka_bool tmp_condition_result_6;
+        bool tmp_condition_result_6;
         int tmp_and_left_truth_2;
-        nuitka_bool tmp_and_left_value_2;
-        nuitka_bool tmp_and_right_value_2;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        bool tmp_and_left_value_2;
+        bool tmp_and_right_value_2;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         if (var_newIndent == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 61;
+            type_description_1 = "ooooooooooooooooooooooooooo";
+            goto try_except_handler_2;
+        }
+
+        tmp_operand_value_2 = var_newIndent;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
+        if (tmp_res == -1) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 61;
+            type_description_1 = "ooooooooooooooooooooooooooo";
+            goto try_except_handler_2;
+        }
+        tmp_and_left_value_2 = (tmp_res == 0) ? true : false;
+        tmp_and_left_truth_2 = tmp_and_left_value_2 != false ? 1 : 0;
+        if (tmp_and_left_truth_2 == 1) {
+            goto and_right_2;
+        } else {
+            goto and_left_2;
+        }
+        and_right_2:;
+        CHECK_OBJECT(var_currentIndentation);
+        tmp_cmp_expr_left_5 = var_currentIndentation;
+        if (var_indentNumber == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
             exception_tb = NULL;
@@ -1198,8 +1201,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_operand_name_2 = var_newIndent;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_cmp_expr_right_5 = var_indentNumber;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_5, tmp_cmp_expr_left_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1210,57 +1213,13 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_and_left_value_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        tmp_and_left_truth_2 = tmp_and_left_value_2 == NUITKA_BOOL_TRUE ? 1 : 0;
-        if (tmp_and_left_truth_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 61;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        if (tmp_and_left_truth_2 == 1) {
-            goto and_right_2;
-        } else {
-            goto and_left_2;
-        }
-        and_right_2:;
-        CHECK_OBJECT(var_currentIndentation);
-        tmp_compexpr_left_5 = var_currentIndentation;
-        if (var_indentNumber == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 61;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_right_5 = var_indentNumber;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_5, tmp_compexpr_left_5);
-        if (tmp_res == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 61;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_and_right_value_2 = (tmp_res == 1) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        tmp_and_right_value_2 = (tmp_res == 1) ? true : false;
         tmp_condition_result_6 = tmp_and_right_value_2;
         goto and_end_2;
         and_left_2:;
         tmp_condition_result_6 = tmp_and_left_value_2;
         and_end_2:;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -1269,28 +1228,17 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_6:;
     loop_start_2:;
     {
-        nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_operand_name_3;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_6;
-        if (var_currentIndentation == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 62;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_left_6 = var_currentIndentation;
+        bool tmp_condition_result_7;
+        PyObject *tmp_operand_value_3;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_6;
+        CHECK_OBJECT(var_currentIndentation);
+        tmp_cmp_expr_left_6 = var_currentIndentation;
         if (var_indentNumber == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1300,10 +1248,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_6 = var_indentNumber;
-        tmp_subscript_name_6 = mod_consts[12];
-        tmp_compexpr_right_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_6, tmp_subscript_name_6, -1);
-        if (tmp_compexpr_right_6 == NULL) {
+        tmp_expression_value_10 = var_indentNumber;
+        tmp_subscript_value_6 = mod_consts[11];
+        tmp_cmp_expr_right_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_10, tmp_subscript_value_6, -1);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1313,9 +1261,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_operand_name_3 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        Py_DECREF(tmp_compexpr_right_6);
-        if (tmp_operand_name_3 == NULL) {
+        tmp_operand_value_3 = RICH_COMPARE_LT_OBJECT_LONG_OBJECT(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
+        if (tmp_operand_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1325,8 +1273,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_3);
-        Py_DECREF(tmp_operand_name_3);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_3);
+        Py_DECREF(tmp_operand_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1337,8 +1285,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_7 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_7 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_7 != false) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
@@ -1348,11 +1296,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     goto loop_end_2;
     branch_no_7:;
     {
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_call_result_2;
         if (var_indentNumber == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1362,9 +1311,21 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_called_instance_6 = var_indentNumber;
+        tmp_expression_value_11 = var_indentNumber;
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[21]);
+        if (tmp_called_value_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 63;
+            type_description_1 = "ooooooooooooooooooooooooooo";
+            goto try_except_handler_2;
+        }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 63;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[23]);
+        tmp_call_result_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_6);
+        Py_DECREF(tmp_called_value_6);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1392,22 +1353,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     goto branch_end_6;
     branch_no_6:;
     {
-        nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_operand_name_4;
-        if (par_ignoreErrors == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 64;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_operand_name_4 = par_ignoreErrors;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_4);
+        bool tmp_condition_result_8;
+        PyObject *tmp_operand_value_4;
+        CHECK_OBJECT(par_ignoreErrors);
+        tmp_operand_value_4 = par_ignoreErrors;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1418,8 +1368,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_8 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_8 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_8 != false) {
             goto branch_yes_8;
         } else {
             goto branch_no_8;
@@ -1428,7 +1378,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_8:;
     {
         PyObject *tmp_list_element_1;
-        tmp_list_element_1 = mod_consts[25];
+        tmp_list_element_1 = mod_consts[22];
         tmp_return_value = PyList_New(2);
         PyList_SET_ITEM0(tmp_return_value, 0, tmp_list_element_1);
         CHECK_OBJECT(var_i);
@@ -1444,19 +1394,19 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_end_2:;
     {
         PyObject *tmp_assign_source_27;
-        PyObject *tmp_called_instance_7;
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[26]);
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[23]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
+        if (unlikely(tmp_called_instance_3 == NULL)) {
+            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1466,39 +1416,20 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[27]);
-        if (tmp_called_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 68;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_args_element_name_3 = mod_consts[28];
-        if (var_l == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 68;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_args_element_name_4 = var_l;
+        tmp_args_element_value_3 = mod_consts[25];
+        CHECK_OBJECT(var_l);
+        tmp_args_element_value_4 = var_l;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 68;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_called_instance_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_called_instance_2 = CALL_METHOD_WITH_ARGS2(
+                tmp_called_instance_3,
+                mod_consts[24],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_2);
-        if (tmp_called_instance_8 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1509,9 +1440,21 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 68;
-        tmp_called_instance_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[29]);
-        Py_DECREF(tmp_called_instance_8);
-        if (tmp_called_instance_7 == NULL) {
+        tmp_expression_value_12 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[26]);
+        Py_DECREF(tmp_called_instance_2);
+        if (tmp_expression_value_12 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 68;
+            type_description_1 = "ooooooooooooooooooooooooooo";
+            goto try_except_handler_2;
+        }
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[8]);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1522,8 +1465,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 68;
-        tmp_assign_source_27 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[9]);
-        Py_DECREF(tmp_called_instance_7);
+        tmp_assign_source_27 = CALL_FUNCTION_NO_ARGS(tmp_called_value_7);
+        Py_DECREF(tmp_called_value_7);
         if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1543,13 +1486,13 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     {
         bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(var_firstWord);
-        tmp_compexpr_left_7 = var_firstWord;
-        tmp_compexpr_right_7 = LIST_COPY(mod_consts[30]);
-        tmp_res = PySequence_Contains(tmp_compexpr_right_7, tmp_compexpr_left_7);
-        Py_DECREF(tmp_compexpr_right_7);
+        tmp_cmp_expr_left_7 = var_firstWord;
+        tmp_cmp_expr_right_7 = LIST_COPY(mod_consts[27]);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_7, tmp_cmp_expr_left_7);
+        Py_DECREF(tmp_cmp_expr_right_7);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1607,18 +1550,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     {
         PyObject *tmp_assign_source_31;
         PyObject *tmp_len_arg_3;
-        if (var_l == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 77;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(var_l);
         tmp_len_arg_3 = var_l;
         tmp_assign_source_31 = BUILTIN_LEN(tmp_len_arg_3);
         if (tmp_assign_source_31 == NULL) {
@@ -1640,17 +1572,16 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     {
         PyObject *tmp_assign_source_32;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[26]);
+        PyObject *tmp_called_instance_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[23]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
+        if (unlikely(tmp_called_instance_4 == NULL)) {
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1660,38 +1591,19 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[31]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 79;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_args_element_name_5 = mod_consts[32];
-        if (var_l == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 79;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_args_element_name_6 = var_l;
+        tmp_args_element_value_5 = mod_consts[29];
+        CHECK_OBJECT(var_l);
+        tmp_args_element_value_6 = var_l;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 79;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_assign_source_32 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_assign_source_32 = CALL_METHOD_WITH_ARGS2(
+                tmp_called_instance_4,
+                mod_consts[28],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_3);
         if (tmp_assign_source_32 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1774,11 +1686,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     {
         PyObject *tmp_assign_source_36;
-        PyObject *tmp_called_instance_9;
+        PyObject *tmp_called_instance_5;
         CHECK_OBJECT(var_r);
-        tmp_called_instance_9 = var_r;
+        tmp_called_instance_5 = var_r;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 81;
-        tmp_assign_source_36 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[29]);
+        tmp_assign_source_36 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[26]);
         if (tmp_assign_source_36 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1798,11 +1710,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     {
         bool tmp_condition_result_10;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
         if (var_stringMark == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[30]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1812,9 +1724,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_5;
         }
 
-        tmp_compexpr_left_8 = var_stringMark;
-        tmp_compexpr_right_8 = Py_None;
-        tmp_condition_result_10 = (tmp_compexpr_left_8 == tmp_compexpr_right_8) ? true : false;
+        tmp_cmp_expr_left_8 = var_stringMark;
+        tmp_cmp_expr_right_8 = Py_None;
+        tmp_condition_result_10 = (tmp_cmp_expr_left_8 == tmp_cmp_expr_right_8) ? true : false;
         if (tmp_condition_result_10 != false) {
             goto branch_yes_10;
         } else {
@@ -1824,15 +1736,13 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_10:;
     {
         nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_compexpr_left_9;
-        PyObject *tmp_compexpr_right_9;
-        PyObject *tmp_tmp_condition_result_11_object_1;
-        int tmp_truth_name_6;
+        PyObject *tmp_cmp_expr_left_9;
+        PyObject *tmp_cmp_expr_right_9;
         CHECK_OBJECT(var_j);
-        tmp_compexpr_left_9 = var_j;
-        tmp_compexpr_right_9 = mod_consts[17];
-        tmp_tmp_condition_result_11_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_9, tmp_compexpr_right_9);
-        if (tmp_tmp_condition_result_11_object_1 == NULL) {
+        tmp_cmp_expr_left_9 = var_j;
+        tmp_cmp_expr_right_9 = mod_consts[16];
+        tmp_condition_result_11 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_9, tmp_cmp_expr_right_9);
+        if (tmp_condition_result_11 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1842,24 +1752,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_tmp_condition_result_11_object_1);
-        if (tmp_truth_name_6 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_11_object_1);
-
-            exception_lineno = 84;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-        tmp_condition_result_11 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_11_object_1);
         if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
             goto branch_yes_11;
         } else {
             goto branch_no_11;
         }
+        assert(tmp_condition_result_11 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_11:;
     {
@@ -1867,30 +1765,20 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         tmp_assign_source_37 = Py_True;
         {
             PyObject *old = var_commented;
+            assert(old != NULL);
             var_commented = tmp_assign_source_37;
             Py_INCREF(var_commented);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_38;
-        PyObject *tmp_called_instance_10;
-        if (var_r == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 87;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_called_instance_10 = var_r;
+        PyObject *tmp_called_instance_6;
+        CHECK_OBJECT(var_r);
+        tmp_called_instance_6 = var_r;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 87;
-        tmp_assign_source_38 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[35]);
+        tmp_assign_source_38 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[31]);
         if (tmp_assign_source_38 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1903,8 +1791,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         }
         {
             PyObject *old = var_nonCommentLength;
+            assert(old != NULL);
             var_nonCommentLength = tmp_assign_source_38;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -1913,24 +1802,13 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_no_11:;
     {
         bool tmp_condition_result_12;
-        PyObject *tmp_compexpr_left_10;
-        PyObject *tmp_compexpr_right_10;
+        PyObject *tmp_cmp_expr_left_10;
+        PyObject *tmp_cmp_expr_right_10;
         CHECK_OBJECT(var_j);
-        tmp_compexpr_left_10 = var_j;
-        if (var_stringMarks == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 89;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_compexpr_right_10 = var_stringMarks;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_10, tmp_compexpr_left_10);
+        tmp_cmp_expr_left_10 = var_j;
+        CHECK_OBJECT(var_stringMarks);
+        tmp_cmp_expr_right_10 = var_stringMarks;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_10, tmp_cmp_expr_left_10);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1968,15 +1846,13 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         int tmp_and_left_truth_3;
         nuitka_bool tmp_and_left_value_3;
         nuitka_bool tmp_and_right_value_3;
-        PyObject *tmp_compexpr_left_11;
-        PyObject *tmp_compexpr_right_11;
-        PyObject *tmp_tmp_and_left_value_3_object_1;
-        int tmp_truth_name_7;
-        PyObject *tmp_compexpr_left_12;
-        PyObject *tmp_compexpr_right_12;
+        PyObject *tmp_cmp_expr_left_11;
+        PyObject *tmp_cmp_expr_right_11;
+        PyObject *tmp_cmp_expr_left_12;
+        PyObject *tmp_cmp_expr_right_12;
         if (var_paraList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1986,11 +1862,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_5;
         }
 
-        tmp_compexpr_left_11 = var_paraList;
-        tmp_compexpr_right_11 = PyList_New(0);
-        tmp_tmp_and_left_value_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_11, tmp_compexpr_right_11);
-        Py_DECREF(tmp_compexpr_right_11);
-        if (tmp_tmp_and_left_value_3_object_1 == NULL) {
+        tmp_cmp_expr_left_11 = var_paraList;
+        tmp_cmp_expr_right_11 = PyList_New(0);
+        tmp_and_left_value_3 = RICH_COMPARE_NE_NBOOL_OBJECT_LIST(tmp_cmp_expr_left_11, tmp_cmp_expr_right_11);
+        Py_DECREF(tmp_cmp_expr_right_11);
+        if (tmp_and_left_value_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2000,25 +1876,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_truth_name_7 = CHECK_IF_TRUE(tmp_tmp_and_left_value_3_object_1);
-        if (tmp_truth_name_7 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_left_value_3_object_1);
-
-            exception_lineno = 92;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-        tmp_and_left_value_3 = tmp_truth_name_7 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_3_object_1);
         tmp_and_left_truth_3 = tmp_and_left_value_3 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_and_left_value_3);
 
             exception_lineno = 92;
             type_description_1 = "ooooooooooooooooooooooooooo";
@@ -2030,22 +1893,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto and_left_3;
         }
         and_right_3:;
+        assert(tmp_and_left_value_3 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(var_j);
-        tmp_compexpr_left_12 = var_j;
-        if (var_closeMarks == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 92;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_compexpr_right_12 = var_closeMarks;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_12, tmp_compexpr_left_12);
+        tmp_cmp_expr_left_12 = var_j;
+        CHECK_OBJECT(var_closeMarks);
+        tmp_cmp_expr_right_12 = var_closeMarks;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_12, tmp_cmp_expr_left_12);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2067,32 +1920,22 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         } else {
             goto branch_no_13;
         }
+        assert(tmp_condition_result_13 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_13:;
     {
         nuitka_bool tmp_condition_result_14;
-        PyObject *tmp_compexpr_left_13;
-        PyObject *tmp_compexpr_right_13;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_7;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_8;
-        if (var_paraMarkDict == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 93;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_expression_name_9 = var_paraMarkDict;
+        PyObject *tmp_cmp_expr_left_13;
+        PyObject *tmp_cmp_expr_right_13;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_7;
+        CHECK_OBJECT(var_paraMarkDict);
+        tmp_dict_arg_value_1 = var_paraMarkDict;
         if (var_paraList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2102,10 +1945,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_10 = var_paraList;
-        tmp_subscript_name_8 = mod_consts[12];
-        tmp_subscript_name_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_8, -1);
-        if (tmp_subscript_name_7 == NULL) {
+        tmp_expression_value_13 = var_paraList;
+        tmp_subscript_value_7 = mod_consts[11];
+        tmp_key_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_13, tmp_subscript_value_7, -1);
+        if (tmp_key_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2115,9 +1958,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_compexpr_left_13 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_7);
-        Py_DECREF(tmp_subscript_name_7);
-        if (tmp_compexpr_left_13 == NULL) {
+        tmp_cmp_expr_left_13 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_value_1, tmp_key_value_1);
+        Py_DECREF(tmp_key_value_1);
+        if (tmp_cmp_expr_left_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2128,9 +1971,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_5;
         }
         CHECK_OBJECT(var_j);
-        tmp_compexpr_right_13 = var_j;
-        tmp_condition_result_14 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_13, tmp_compexpr_right_13);
-        Py_DECREF(tmp_compexpr_left_13);
+        tmp_cmp_expr_right_13 = var_j;
+        tmp_condition_result_14 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_13, tmp_cmp_expr_right_13);
+        Py_DECREF(tmp_cmp_expr_left_13);
         if (tmp_condition_result_14 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -2150,11 +1993,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     branch_yes_14:;
     {
-        PyObject *tmp_called_instance_11;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_14;
         PyObject *tmp_call_result_3;
         if (var_paraList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2164,9 +2008,21 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_5;
         }
 
-        tmp_called_instance_11 = var_paraList;
+        tmp_expression_value_14 = var_paraList;
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[21]);
+        if (tmp_called_value_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 94;
+            type_description_1 = "ooooooooooooooooooooooooooo";
+            goto try_except_handler_5;
+        }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 94;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_11, mod_consts[23]);
+        tmp_call_result_3 = CALL_FUNCTION_NO_ARGS(tmp_called_value_8);
+        Py_DECREF(tmp_called_value_8);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2182,22 +2038,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     goto branch_end_14;
     branch_no_14:;
     {
-        nuitka_bool tmp_condition_result_15;
-        PyObject *tmp_operand_name_5;
-        if (par_ignoreErrors == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 95;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_operand_name_5 = par_ignoreErrors;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_5);
+        bool tmp_condition_result_15;
+        PyObject *tmp_operand_value_5;
+        CHECK_OBJECT(par_ignoreErrors);
+        tmp_operand_value_5 = par_ignoreErrors;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2208,8 +2053,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_condition_result_15 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_15 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_15 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_15 != false) {
             goto branch_yes_15;
         } else {
             goto branch_no_15;
@@ -2218,30 +2063,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_15:;
     {
         PyObject *tmp_list_element_2;
-        tmp_list_element_2 = mod_consts[40];
+        tmp_list_element_2 = mod_consts[33];
         tmp_return_value = PyList_New(2);
         PyList_SET_ITEM0(tmp_return_value, 0, tmp_list_element_2);
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 97;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto list_build_exception_1;
-        }
-
+        CHECK_OBJECT(var_i);
         tmp_list_element_2 = var_i;
         PyList_SET_ITEM0(tmp_return_value, 1, tmp_list_element_2);
-        goto list_build_noexception_1;
-        // Exception handling pass through code for list_build:
-        list_build_exception_1:;
-        Py_DECREF(tmp_return_value);
-        goto try_except_handler_5;
-        // Finished with no exception for list_build:
-        list_build_noexception_1:;
         goto try_return_handler_5;
     }
     branch_no_15:;
@@ -2249,24 +2076,13 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_no_13:;
     {
         bool tmp_condition_result_16;
-        PyObject *tmp_compexpr_left_14;
-        PyObject *tmp_compexpr_right_14;
+        PyObject *tmp_cmp_expr_left_14;
+        PyObject *tmp_cmp_expr_right_14;
         CHECK_OBJECT(var_j);
-        tmp_compexpr_left_14 = var_j;
-        if (var_openMarks == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[42]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 98;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_compexpr_right_14 = var_openMarks;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_14, tmp_compexpr_left_14);
+        tmp_cmp_expr_left_14 = var_j;
+        CHECK_OBJECT(var_openMarks);
+        tmp_cmp_expr_right_14 = var_openMarks;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_14, tmp_cmp_expr_left_14);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2286,12 +2102,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     branch_yes_16:;
     {
-        PyObject *tmp_called_instance_12;
+        PyObject *tmp_called_instance_7;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_args_element_value_7;
         if (var_paraList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2301,11 +2117,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_5;
         }
 
-        tmp_called_instance_12 = var_paraList;
+        tmp_called_instance_7 = var_paraList;
         CHECK_OBJECT(var_j);
-        tmp_args_element_name_7 = var_j;
+        tmp_args_element_value_7 = var_j;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 99;
-        tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_12, mod_consts[20], tmp_args_element_name_7);
+        tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[19], tmp_args_element_value_7);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2325,11 +2141,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_no_10:;
     {
         nuitka_bool tmp_condition_result_17;
-        PyObject *tmp_compexpr_left_15;
-        PyObject *tmp_compexpr_right_15;
+        PyObject *tmp_cmp_expr_left_15;
+        PyObject *tmp_cmp_expr_right_15;
         if (var_stringMark == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[30]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2339,10 +2155,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_5;
         }
 
-        tmp_compexpr_left_15 = var_stringMark;
+        tmp_cmp_expr_left_15 = var_stringMark;
         CHECK_OBJECT(var_j);
-        tmp_compexpr_right_15 = var_j;
-        tmp_condition_result_17 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_15, tmp_compexpr_right_15);
+        tmp_cmp_expr_right_15 = var_j;
+        tmp_condition_result_17 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_15, tmp_cmp_expr_right_15);
         if (tmp_condition_result_17 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -2392,7 +2208,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     CHECK_OBJECT(tmp_for_loop_2__iter_value);
     Py_DECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     goto try_return_handler_2;
     // Exception handler code:
@@ -2408,7 +2225,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -2421,18 +2239,19 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     try_end_3:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_compexpr_left_16;
-        PyObject *tmp_compexpr_right_16;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_cmp_expr_left_16;
+        PyObject *tmp_cmp_expr_right_16;
         if (var_stringContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2442,9 +2261,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_11 = var_stringContinuationList;
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[20]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_expression_value_15 = var_stringContinuationList;
+        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[19]);
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2455,8 +2274,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
         if (var_stringMark == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
+            Py_DECREF(tmp_called_value_9);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[30]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2466,23 +2285,23 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_compexpr_left_16 = var_stringMark;
-        tmp_compexpr_right_16 = Py_None;
-        tmp_args_element_name_8 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_16, tmp_compexpr_right_16);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_cmp_expr_left_16 = var_stringMark;
+        tmp_cmp_expr_right_16 = Py_None;
+        tmp_args_element_value_8 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_16, tmp_cmp_expr_right_16);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_9);
 
             exception_lineno = 103;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 103;
-        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_8);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_8);
+        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_8);
+        Py_DECREF(tmp_called_value_9);
+        Py_DECREF(tmp_args_element_value_8);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2496,11 +2315,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         Py_DECREF(tmp_call_result_5);
     }
     {
-        PyObject *tmp_called_instance_13;
+        PyObject *tmp_called_instance_8;
         PyObject *tmp_call_result_6;
         if (var_indentationBlockList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2510,12 +2329,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_called_instance_13 = var_indentationBlockList;
+        tmp_called_instance_8 = var_indentationBlockList;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 105;
-        tmp_call_result_6 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_13,
-            mod_consts[20],
-            &PyTuple_GET_ITEM(mod_consts[44], 0)
+        tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_8,
+            mod_consts[19],
+            PyTuple_GET_ITEM(mod_consts[35], 0)
         );
 
         if (tmp_call_result_6 == NULL) {
@@ -2532,41 +2351,32 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     }
     {
         PyObject *tmp_assign_source_41;
-        PyObject *tmp_called_instance_14;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_9;
-        PyObject *tmp_stop_name_1;
-        if (var_l == NULL) {
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_subscript_value_8;
+        PyObject *tmp_stop_value_1;
+        CHECK_OBJECT(var_l);
+        tmp_expression_value_17 = var_l;
+        CHECK_OBJECT(var_nonCommentLength);
+        tmp_stop_value_1 = var_nonCommentLength;
+        tmp_subscript_value_8 = MAKE_SLICEOBJ1(tmp_stop_value_1);
+        assert(!(tmp_subscript_value_8 == NULL));
+        tmp_expression_value_16 = LOOKUP_SUBSCRIPT(tmp_expression_value_17, tmp_subscript_value_8);
+        Py_DECREF(tmp_subscript_value_8);
+        if (tmp_expression_value_16 == NULL) {
+            assert(ERROR_OCCURRED());
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
-            exception_lineno = 106;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_12 = var_l;
-        if (var_nonCommentLength == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[45]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 106;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-
-        tmp_stop_name_1 = var_nonCommentLength;
-        tmp_subscript_name_9 = MAKE_SLICEOBJ1(tmp_stop_name_1);
-        assert(!(tmp_subscript_name_9 == NULL));
-        tmp_called_instance_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_9);
-        Py_DECREF(tmp_subscript_name_9);
-        if (tmp_called_instance_14 == NULL) {
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[36]);
+        Py_DECREF(tmp_expression_value_16);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2577,8 +2387,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 106;
-        tmp_assign_source_41 = CALL_METHOD_NO_ARGS(tmp_called_instance_14, mod_consts[46]);
-        Py_DECREF(tmp_called_instance_14);
+        tmp_assign_source_41 = CALL_FUNCTION_NO_ARGS(tmp_called_value_10);
+        Py_DECREF(tmp_called_value_10);
         if (tmp_assign_source_41 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2601,19 +2411,17 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         int tmp_and_left_truth_4;
         nuitka_bool tmp_and_left_value_4;
         nuitka_bool tmp_and_right_value_4;
-        PyObject *tmp_compexpr_left_17;
-        PyObject *tmp_compexpr_right_17;
-        PyObject *tmp_tmp_and_left_value_4_object_1;
-        int tmp_truth_name_8;
-        PyObject *tmp_compexpr_left_18;
-        PyObject *tmp_compexpr_right_18;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_10;
+        PyObject *tmp_cmp_expr_left_17;
+        PyObject *tmp_cmp_expr_right_17;
+        PyObject *tmp_cmp_expr_left_18;
+        PyObject *tmp_cmp_expr_right_18;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_subscript_value_9;
         CHECK_OBJECT(var_nonCommentString);
-        tmp_compexpr_left_17 = var_nonCommentString;
-        tmp_compexpr_right_17 = mod_consts[15];
-        tmp_tmp_and_left_value_4_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_17, tmp_compexpr_right_17);
-        if (tmp_tmp_and_left_value_4_object_1 == NULL) {
+        tmp_cmp_expr_left_17 = var_nonCommentString;
+        tmp_cmp_expr_right_17 = mod_consts[14];
+        tmp_and_left_value_4 = RICH_COMPARE_NE_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_17, tmp_cmp_expr_right_17);
+        if (tmp_and_left_value_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2623,25 +2431,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_8 = CHECK_IF_TRUE(tmp_tmp_and_left_value_4_object_1);
-        if (tmp_truth_name_8 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_left_value_4_object_1);
-
-            exception_lineno = 107;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_and_left_value_4 = tmp_truth_name_8 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_4_object_1);
         tmp_and_left_truth_4 = tmp_and_left_value_4 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_4 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_and_left_value_4);
 
             exception_lineno = 107;
             type_description_1 = "ooooooooooooooooooooooooooo";
@@ -2653,9 +2448,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto and_left_4;
         }
         and_right_4:;
+        assert(tmp_and_left_value_4 != NUITKA_BOOL_UNASSIGNED);
         if (var_stringContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2665,10 +2461,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_13 = var_stringContinuationList;
-        tmp_subscript_name_10 = mod_consts[12];
-        tmp_compexpr_left_18 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_10, -1);
-        if (tmp_compexpr_left_18 == NULL) {
+        tmp_expression_value_18 = var_stringContinuationList;
+        tmp_subscript_value_9 = mod_consts[11];
+        tmp_cmp_expr_left_18 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_18, tmp_subscript_value_9, -1);
+        if (tmp_cmp_expr_left_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2678,9 +2474,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_18 = Py_False;
-        tmp_and_right_value_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_18, tmp_compexpr_right_18);
-        Py_DECREF(tmp_compexpr_left_18);
+        tmp_cmp_expr_right_18 = Py_False;
+        tmp_and_right_value_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_18, tmp_cmp_expr_right_18);
+        Py_DECREF(tmp_cmp_expr_left_18);
         if (tmp_and_right_value_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -2706,17 +2502,15 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_18:;
     {
         nuitka_bool tmp_condition_result_19;
-        PyObject *tmp_compexpr_left_19;
-        PyObject *tmp_compexpr_right_19;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_11;
-        PyObject *tmp_tmp_condition_result_19_object_1;
-        int tmp_truth_name_9;
+        PyObject *tmp_cmp_expr_left_19;
+        PyObject *tmp_cmp_expr_right_19;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_subscript_value_10;
         CHECK_OBJECT(var_nonCommentString);
-        tmp_expression_name_14 = var_nonCommentString;
-        tmp_subscript_name_11 = mod_consts[12];
-        tmp_compexpr_left_19 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_11, -1);
-        if (tmp_compexpr_left_19 == NULL) {
+        tmp_expression_value_19 = var_nonCommentString;
+        tmp_subscript_value_10 = mod_consts[11];
+        tmp_cmp_expr_left_19 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_19, tmp_subscript_value_10, -1);
+        if (tmp_cmp_expr_left_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2726,10 +2520,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_19 = mod_consts[47];
-        tmp_tmp_condition_result_19_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_19, tmp_compexpr_right_19);
-        Py_DECREF(tmp_compexpr_left_19);
-        if (tmp_tmp_condition_result_19_object_1 == NULL) {
+        tmp_cmp_expr_right_19 = mod_consts[37];
+        tmp_condition_result_19 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_19, tmp_cmp_expr_right_19);
+        Py_DECREF(tmp_cmp_expr_left_19);
+        if (tmp_condition_result_19 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2739,24 +2533,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_9 = CHECK_IF_TRUE(tmp_tmp_condition_result_19_object_1);
-        if (tmp_truth_name_9 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_19_object_1);
-
-            exception_lineno = 108;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_19 = tmp_truth_name_9 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_19_object_1);
         if (tmp_condition_result_19 == NUITKA_BOOL_TRUE) {
             goto branch_yes_19;
         } else {
             goto branch_no_19;
         }
+        assert(tmp_condition_result_19 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_19:;
     {
@@ -2767,7 +2549,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         tmp_ass_subvalue_1 = Py_True;
         if (var_indentationBlockList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2778,7 +2560,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         }
 
         tmp_ass_subscribed_1 = var_indentationBlockList;
-        tmp_ass_subscript_1 = mod_consts[12];
+        tmp_ass_subscript_1 = mod_consts[11];
         tmp_ass_subscript_res_1 = SET_SUBSCRIPT_CONST(tmp_ass_subscribed_1, tmp_ass_subscript_1, -1, tmp_ass_subvalue_1);
         if (tmp_ass_subscript_res_1 == false) {
             assert(ERROR_OCCURRED());
@@ -2805,11 +2587,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_no_19:;
     branch_no_18:;
     {
-        PyObject *tmp_called_instance_15;
+        PyObject *tmp_called_instance_9;
         PyObject *tmp_call_result_7;
         if (var_lineContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[11]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2819,12 +2601,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_called_instance_15 = var_lineContinuationList;
+        tmp_called_instance_9 = var_lineContinuationList;
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 112;
-        tmp_call_result_7 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_15,
-            mod_consts[20],
-            &PyTuple_GET_ITEM(mod_consts[44], 0)
+        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_9,
+            mod_consts[19],
+            PyTuple_GET_ITEM(mod_consts[35], 0)
         );
 
         if (tmp_call_result_7 == NULL) {
@@ -2840,31 +2622,18 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         Py_DECREF(tmp_call_result_7);
     }
     {
-        nuitka_bool tmp_condition_result_20;
+        bool tmp_condition_result_20;
         int tmp_and_left_truth_5;
-        nuitka_bool tmp_and_left_value_5;
-        nuitka_bool tmp_and_right_value_5;
-        PyObject *tmp_compexpr_left_20;
-        PyObject *tmp_compexpr_right_20;
+        bool tmp_and_left_value_5;
+        bool tmp_and_right_value_5;
+        PyObject *tmp_cmp_expr_left_20;
+        PyObject *tmp_cmp_expr_right_20;
         PyObject *tmp_len_arg_4;
-        PyObject *tmp_tmp_and_left_value_5_object_1;
-        int tmp_truth_name_10;
-        PyObject *tmp_operand_name_6;
-        if (var_l == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 113;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        PyObject *tmp_operand_value_6;
+        CHECK_OBJECT(var_l);
         tmp_len_arg_4 = var_l;
-        tmp_compexpr_left_20 = BUILTIN_LEN(tmp_len_arg_4);
-        if (tmp_compexpr_left_20 == NULL) {
+        tmp_cmp_expr_left_20 = BUILTIN_LEN(tmp_len_arg_4);
+        if (tmp_cmp_expr_left_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2874,52 +2643,27 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_20 = mod_consts[10];
-        tmp_tmp_and_left_value_5_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_20, tmp_compexpr_right_20);
-        Py_DECREF(tmp_compexpr_left_20);
-        assert(!(tmp_tmp_and_left_value_5_object_1 == NULL));
-        tmp_truth_name_10 = CHECK_IF_TRUE(tmp_tmp_and_left_value_5_object_1);
-        assert(!(tmp_truth_name_10 == -1));
-        tmp_and_left_value_5 = tmp_truth_name_10 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_5_object_1);
-        tmp_and_left_truth_5 = tmp_and_left_value_5 == NUITKA_BOOL_TRUE ? 1 : 0;
+        tmp_cmp_expr_right_20 = mod_consts[9];
+        tmp_and_left_value_5 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_20, tmp_cmp_expr_right_20);
+        Py_DECREF(tmp_cmp_expr_left_20);
+        tmp_and_left_truth_5 = tmp_and_left_value_5 != false ? 1 : 0;
         if (tmp_and_left_truth_5 == 1) {
             goto and_right_5;
         } else {
             goto and_left_5;
         }
         and_right_5:;
-        if (var_commented == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[48]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 113;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_operand_name_6 = var_commented;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_6);
-        if (tmp_res == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 113;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_and_right_value_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        CHECK_OBJECT(var_commented);
+        tmp_operand_value_6 = var_commented;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_6);
+        assert(!(tmp_res == -1));
+        tmp_and_right_value_5 = (tmp_res == 0) ? true : false;
         tmp_condition_result_20 = tmp_and_right_value_5;
         goto and_end_5;
         and_left_5:;
         tmp_condition_result_20 = tmp_and_left_value_5;
         and_end_5:;
-        if (tmp_condition_result_20 == NUITKA_BOOL_TRUE) {
+        if (tmp_condition_result_20 != false) {
             goto branch_yes_20;
         } else {
             goto branch_no_20;
@@ -2928,28 +2672,15 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_20:;
     {
         nuitka_bool tmp_condition_result_21;
-        PyObject *tmp_compexpr_left_21;
-        PyObject *tmp_compexpr_right_21;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_subscript_name_12;
-        PyObject *tmp_tmp_condition_result_21_object_1;
-        int tmp_truth_name_11;
-        if (var_l == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 114;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_15 = var_l;
-        tmp_subscript_name_12 = mod_consts[12];
-        tmp_compexpr_left_21 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_15, tmp_subscript_name_12, -1);
-        if (tmp_compexpr_left_21 == NULL) {
+        PyObject *tmp_cmp_expr_left_21;
+        PyObject *tmp_cmp_expr_right_21;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_subscript_value_11;
+        CHECK_OBJECT(var_l);
+        tmp_expression_value_20 = var_l;
+        tmp_subscript_value_11 = mod_consts[11];
+        tmp_cmp_expr_left_21 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_20, tmp_subscript_value_11, -1);
+        if (tmp_cmp_expr_left_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2959,10 +2690,10 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_21 = mod_consts[49];
-        tmp_tmp_condition_result_21_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_21, tmp_compexpr_right_21);
-        Py_DECREF(tmp_compexpr_left_21);
-        if (tmp_tmp_condition_result_21_object_1 == NULL) {
+        tmp_cmp_expr_right_21 = mod_consts[38];
+        tmp_condition_result_21 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_21, tmp_cmp_expr_right_21);
+        Py_DECREF(tmp_cmp_expr_left_21);
+        if (tmp_condition_result_21 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2972,24 +2703,12 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_11 = CHECK_IF_TRUE(tmp_tmp_condition_result_21_object_1);
-        if (tmp_truth_name_11 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_21_object_1);
-
-            exception_lineno = 114;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_condition_result_21 = tmp_truth_name_11 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_21_object_1);
         if (tmp_condition_result_21 == NUITKA_BOOL_TRUE) {
             goto branch_yes_21;
         } else {
             goto branch_no_21;
         }
+        assert(tmp_condition_result_21 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_21:;
     {
@@ -3000,7 +2719,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         tmp_ass_subvalue_2 = Py_True;
         if (var_lineContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[11]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3011,7 +2730,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         }
 
         tmp_ass_subscribed_2 = var_lineContinuationList;
-        tmp_ass_subscript_2 = mod_consts[12];
+        tmp_ass_subscript_2 = mod_consts[11];
         tmp_ass_subscript_res_2 = SET_SUBSCRIPT_CONST(tmp_ass_subscribed_2, tmp_ass_subscript_2, -1, tmp_ass_subvalue_2);
         if (tmp_ass_subscript_res_2 == false) {
             assert(ERROR_OCCURRED());
@@ -3027,15 +2746,15 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_no_21:;
     branch_no_20:;
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_16;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_21;
         PyObject *tmp_call_result_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_compexpr_left_22;
-        PyObject *tmp_compexpr_right_22;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_cmp_expr_left_22;
+        PyObject *tmp_cmp_expr_right_22;
         if (var_parentheticalContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3045,9 +2764,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_16 = var_parentheticalContinuationList;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[20]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_21 = var_parentheticalContinuationList;
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[19]);
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3058,8 +2777,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
         if (var_paraList == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            Py_DECREF(tmp_called_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3069,24 +2788,24 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto try_except_handler_2;
         }
 
-        tmp_compexpr_left_22 = var_paraList;
-        tmp_compexpr_right_22 = PyList_New(0);
-        tmp_args_element_name_9 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_22, tmp_compexpr_right_22);
-        Py_DECREF(tmp_compexpr_right_22);
-        if (tmp_args_element_name_9 == NULL) {
+        tmp_cmp_expr_left_22 = var_paraList;
+        tmp_cmp_expr_right_22 = PyList_New(0);
+        tmp_args_element_value_9 = RICH_COMPARE_NE_OBJECT_OBJECT_LIST(tmp_cmp_expr_left_22, tmp_cmp_expr_right_22);
+        Py_DECREF(tmp_cmp_expr_right_22);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 117;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
         frame_ebc29118bde7efc6d5febe400e2563f8->m_frame.f_lineno = 117;
-        tmp_call_result_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_9);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_9);
+        tmp_call_result_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_9);
+        Py_DECREF(tmp_called_value_11);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_call_result_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3114,9 +2833,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     goto try_end_4;
     // Return handler code:
     try_return_handler_2:;
-    Py_XDECREF(tmp_for_loop_1__iter_value);
+    CHECK_OBJECT(tmp_for_loop_1__iter_value);
+    Py_DECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     goto frame_return_exit_1;
     // Exception handler code:
@@ -3132,7 +2853,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_4;
@@ -3145,7 +2867,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     try_end_4:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
         nuitka_bool tmp_condition_result_22;
@@ -3155,32 +2878,32 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         int tmp_or_left_truth_3;
         nuitka_bool tmp_or_left_value_3;
         nuitka_bool tmp_or_right_value_3;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_subscript_name_13;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_subscript_value_12;
         PyObject *tmp_subscript_result_1;
-        int tmp_truth_name_12;
+        int tmp_truth_name_2;
         int tmp_or_left_truth_4;
         nuitka_bool tmp_or_left_value_4;
         nuitka_bool tmp_or_right_value_4;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_subscript_name_14;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_subscript_value_13;
         PyObject *tmp_subscript_result_2;
-        int tmp_truth_name_13;
+        int tmp_truth_name_3;
         int tmp_or_left_truth_5;
         nuitka_bool tmp_or_left_value_5;
         nuitka_bool tmp_or_right_value_5;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_subscript_name_15;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_subscript_value_14;
         PyObject *tmp_subscript_result_3;
-        int tmp_truth_name_14;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_subscript_name_16;
+        int tmp_truth_name_4;
+        PyObject *tmp_expression_value_25;
+        PyObject *tmp_subscript_value_15;
         PyObject *tmp_subscript_result_4;
-        int tmp_truth_name_15;
-        PyObject *tmp_operand_name_7;
+        int tmp_truth_name_5;
+        PyObject *tmp_operand_value_7;
         if (var_stringContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3190,9 +2913,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_17 = var_stringContinuationList;
-        tmp_subscript_name_13 = mod_consts[12];
-        tmp_subscript_result_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_17, tmp_subscript_name_13, -1);
+        tmp_expression_value_22 = var_stringContinuationList;
+        tmp_subscript_value_12 = mod_consts[11];
+        tmp_subscript_result_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_22, tmp_subscript_value_12, -1);
         if (tmp_subscript_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3203,8 +2926,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_12 = CHECK_IF_TRUE(tmp_subscript_result_1);
-        if (tmp_truth_name_12 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_subscript_result_1);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3214,7 +2937,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_left_value_3 = tmp_truth_name_12 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_or_left_value_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_subscript_result_1);
         tmp_or_left_truth_3 = tmp_or_left_value_3 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_or_left_truth_3 == -1) {
@@ -3223,7 +2946,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 123;
+            exception_lineno = 122;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
@@ -3235,7 +2958,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         or_right_3:;
         if (var_indentationBlockList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3245,9 +2968,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_18 = var_indentationBlockList;
-        tmp_subscript_name_14 = mod_consts[12];
-        tmp_subscript_result_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_18, tmp_subscript_name_14, -1);
+        tmp_expression_value_23 = var_indentationBlockList;
+        tmp_subscript_value_13 = mod_consts[11];
+        tmp_subscript_result_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_23, tmp_subscript_value_13, -1);
         if (tmp_subscript_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3258,8 +2981,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_13 = CHECK_IF_TRUE(tmp_subscript_result_2);
-        if (tmp_truth_name_13 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_subscript_result_2);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3269,7 +2992,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_left_value_4 = tmp_truth_name_13 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_or_left_value_4 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_subscript_result_2);
         tmp_or_left_truth_4 = tmp_or_left_value_4 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_or_left_truth_4 == -1) {
@@ -3278,7 +3001,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 123;
+            exception_lineno = 122;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
@@ -3290,7 +3013,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         or_right_4:;
         if (var_lineContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[11]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3300,9 +3023,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_19 = var_lineContinuationList;
-        tmp_subscript_name_15 = mod_consts[12];
-        tmp_subscript_result_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_19, tmp_subscript_name_15, -1);
+        tmp_expression_value_24 = var_lineContinuationList;
+        tmp_subscript_value_14 = mod_consts[11];
+        tmp_subscript_result_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_24, tmp_subscript_value_14, -1);
         if (tmp_subscript_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3313,8 +3036,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_14 = CHECK_IF_TRUE(tmp_subscript_result_3);
-        if (tmp_truth_name_14 == -1) {
+        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_subscript_result_3);
+        if (tmp_truth_name_4 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3324,7 +3047,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_left_value_5 = tmp_truth_name_14 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_or_left_value_5 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_subscript_result_3);
         tmp_or_left_truth_5 = tmp_or_left_value_5 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_or_left_truth_5 == -1) {
@@ -3345,7 +3068,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         or_right_5:;
         if (var_parentheticalContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3355,9 +3078,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_20 = var_parentheticalContinuationList;
-        tmp_subscript_name_16 = mod_consts[12];
-        tmp_subscript_result_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_20, tmp_subscript_name_16, -1);
+        tmp_expression_value_25 = var_parentheticalContinuationList;
+        tmp_subscript_value_15 = mod_consts[11];
+        tmp_subscript_result_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_25, tmp_subscript_value_15, -1);
         if (tmp_subscript_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3368,8 +3091,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_15 = CHECK_IF_TRUE(tmp_subscript_result_4);
-        if (tmp_truth_name_15 == -1) {
+        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_subscript_result_4);
+        if (tmp_truth_name_5 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3379,7 +3102,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_right_value_5 = tmp_truth_name_15 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_or_right_value_5 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_subscript_result_4);
         tmp_or_right_value_4 = tmp_or_right_value_5;
         goto or_end_5;
@@ -3403,7 +3126,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 124;
+            exception_lineno = 123;
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
@@ -3413,20 +3136,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto and_left_6;
         }
         and_right_6:;
-        if (par_ignoreErrors == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 124;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_operand_name_7 = par_ignoreErrors;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_7);
+        CHECK_OBJECT(par_ignoreErrors);
+        tmp_operand_value_7 = par_ignoreErrors;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_7);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3452,30 +3164,30 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_22:;
     {
         PyObject *tmp_list_element_3;
-        tmp_list_element_3 = mod_consts[50];
+        tmp_list_element_3 = mod_consts[39];
         tmp_return_value = PyList_New(2);
         PyList_SET_ITEM0(tmp_return_value, 0, tmp_list_element_3);
         if (var_i == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[40]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 126;
             type_description_1 = "ooooooooooooooooooooooooooo";
-            goto list_build_exception_2;
+            goto list_build_exception_1;
         }
 
         tmp_list_element_3 = var_i;
         PyList_SET_ITEM0(tmp_return_value, 1, tmp_list_element_3);
-        goto list_build_noexception_2;
+        goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
-        list_build_exception_2:;
+        list_build_exception_1:;
         Py_DECREF(tmp_return_value);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
-        list_build_noexception_2:;
+        list_build_noexception_1:;
         goto frame_return_exit_1;
     }
     branch_no_22:;
@@ -3484,11 +3196,11 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         int tmp_and_left_truth_7;
         nuitka_bool tmp_and_left_value_7;
         nuitka_bool tmp_and_right_value_7;
-        int tmp_truth_name_16;
-        PyObject *tmp_operand_name_8;
+        int tmp_truth_name_6;
+        PyObject *tmp_operand_value_8;
         if (var_newIndent == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[18]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3498,8 +3210,8 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_truth_name_16 = CHECK_IF_TRUE(var_newIndent);
-        if (tmp_truth_name_16 == -1) {
+        tmp_truth_name_6 = CHECK_IF_TRUE(var_newIndent);
+        if (tmp_truth_name_6 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3509,7 +3221,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             type_description_1 = "ooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_and_left_value_7 = tmp_truth_name_16 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_left_value_7 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         tmp_and_left_truth_7 = tmp_and_left_value_7 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_7 == -1) {
             assert(ERROR_OCCURRED());
@@ -3527,20 +3239,9 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
             goto and_left_7;
         }
         and_right_7:;
-        if (par_ignoreErrors == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 128;
-            type_description_1 = "ooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_operand_name_8 = par_ignoreErrors;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_8);
+        CHECK_OBJECT(par_ignoreErrors);
+        tmp_operand_value_8 = par_ignoreErrors;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_8);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3566,30 +3267,30 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     branch_yes_23:;
     {
         PyObject *tmp_list_element_4;
-        tmp_list_element_4 = mod_consts[51];
+        tmp_list_element_4 = mod_consts[41];
         tmp_return_value = PyList_New(2);
         PyList_SET_ITEM0(tmp_return_value, 0, tmp_list_element_4);
         if (var_i == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[40]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 130;
             type_description_1 = "ooooooooooooooooooooooooooo";
-            goto list_build_exception_3;
+            goto list_build_exception_2;
         }
 
         tmp_list_element_4 = var_i;
         PyList_SET_ITEM0(tmp_return_value, 1, tmp_list_element_4);
-        goto list_build_noexception_3;
+        goto list_build_noexception_2;
         // Exception handling pass through code for list_build:
-        list_build_exception_3:;
+        list_build_exception_2:;
         Py_DECREF(tmp_return_value);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
-        list_build_noexception_3:;
+        list_build_noexception_2:;
         goto frame_return_exit_1;
     }
     branch_no_23:;
@@ -3597,7 +3298,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         PyObject *tmp_tuple_element_1;
         if (var_stringContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3612,7 +3313,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_1);
         if (var_indentationBlockList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3626,7 +3327,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_1);
         if (var_lineContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[11]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3640,7 +3341,7 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
         PyTuple_SET_ITEM0(tmp_return_value, 2, tmp_tuple_element_1);
         if (var_parentheticalContinuationList == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3751,23 +3452,23 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_codeBlock);
-    par_codeBlock = NULL;
-    Py_XDECREF(par_ignoreErrors);
-    par_ignoreErrors = NULL;
     Py_XDECREF(var_stringMark);
     var_stringMark = NULL;
     Py_XDECREF(var_paraList);
     var_paraList = NULL;
     Py_XDECREF(var_indentNumber);
     var_indentNumber = NULL;
-    Py_XDECREF(var_stringMarks);
+    CHECK_OBJECT(var_stringMarks);
+    Py_DECREF(var_stringMarks);
     var_stringMarks = NULL;
-    Py_XDECREF(var_openMarks);
+    CHECK_OBJECT(var_openMarks);
+    Py_DECREF(var_openMarks);
     var_openMarks = NULL;
-    Py_XDECREF(var_closeMarks);
+    CHECK_OBJECT(var_closeMarks);
+    Py_DECREF(var_closeMarks);
     var_closeMarks = NULL;
-    Py_XDECREF(var_paraMarkDict);
+    CHECK_OBJECT(var_paraMarkDict);
+    Py_DECREF(var_paraMarkDict);
     var_paraMarkDict = NULL;
     Py_XDECREF(var_stringContinuationList);
     var_stringContinuationList = NULL;
@@ -3817,23 +3518,23 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_codeBlock);
-    par_codeBlock = NULL;
-    Py_XDECREF(par_ignoreErrors);
-    par_ignoreErrors = NULL;
     Py_XDECREF(var_stringMark);
     var_stringMark = NULL;
     Py_XDECREF(var_paraList);
     var_paraList = NULL;
     Py_XDECREF(var_indentNumber);
     var_indentNumber = NULL;
-    Py_XDECREF(var_stringMarks);
+    CHECK_OBJECT(var_stringMarks);
+    Py_DECREF(var_stringMarks);
     var_stringMarks = NULL;
-    Py_XDECREF(var_openMarks);
+    CHECK_OBJECT(var_openMarks);
+    Py_DECREF(var_openMarks);
     var_openMarks = NULL;
-    Py_XDECREF(var_closeMarks);
+    CHECK_OBJECT(var_closeMarks);
+    Py_DECREF(var_closeMarks);
     var_closeMarks = NULL;
-    Py_XDECREF(var_paraMarkDict);
+    CHECK_OBJECT(var_paraMarkDict);
+    Py_DECREF(var_paraMarkDict);
     var_paraMarkDict = NULL;
     Py_XDECREF(var_stringContinuationList);
     var_stringContinuationList = NULL;
@@ -3884,14 +3585,20 @@ static PyObject *impl_wx$py$parse$$$function__1_testForContinuations(struct Nuit
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_codeBlock);
+    Py_DECREF(par_codeBlock);
+    CHECK_OBJECT(par_ignoreErrors);
+    Py_DECREF(par_ignoreErrors);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_codeBlock);
+    Py_DECREF(par_codeBlock);
+    CHECK_OBJECT(par_ignoreErrors);
+    Py_DECREF(par_ignoreErrors);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3905,7 +3612,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_wx$py$parse$$$function__1_testForContinuations(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$py$parse$$$function__1_testForContinuations,
-        mod_consts[61],
+        mod_consts[51],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -4093,71 +3800,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("wx.py.parse");
+
+    // Store the module for future use.
     module_wx$py$parse = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.py.parse: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("wx.py.parse: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.py.parse: Calling createModuleConstants().\n");
+        PRINT_STRING("wx.py.parse: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.py.parse: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("wx.py.parse: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initwx$py$parse\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_wx$py$parse = MODULE_DICT(module_wx$py$parse);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -4173,7 +3882,7 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
         UPDATE_STRING_DICT0(
             moduledict_wx$py$parse,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[14]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)const_str_plain___name__);
@@ -4223,7 +3932,7 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -4280,13 +3989,13 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[52];
-        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[53], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[42];
+        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[43], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[44], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_a123e0116477996e0c4e8e8d700e0424 = MAKE_MODULE_FRAME(codeobj_a123e0116477996e0c4e8e8d700e0424, module_wx$py$parse);
@@ -4298,17 +4007,17 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[45]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[56], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[46], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4321,17 +4030,17 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[45]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[57], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[47], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4346,27 +4055,27 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[58], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = mod_consts[59];
-        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_4);
+        tmp_assign_source_4 = mod_consts[49];
+        UPDATE_STRING_DICT0(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[50], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[26];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_wx$py$parse;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[10];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[23];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_wx$py$parse;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[9];
         frame_a123e0116477996e0c4e8e8d700e0424->m_frame.f_lineno = 16;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4377,7 +4086,7 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[26], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[23], tmp_assign_source_5);
     }
 
     // Restore frame exception if necessary.
@@ -4411,18 +4120,32 @@ PyObject *modulecode_wx$py$parse(PyObject *module, struct Nuitka_MetaPathBasedLo
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_defaults_1;
-        tmp_defaults_1 = mod_consts[44];
+        tmp_defaults_1 = mod_consts[35];
         Py_INCREF(tmp_defaults_1);
 
 
         tmp_assign_source_6 = MAKE_FUNCTION_wx$py$parse$$$function__1_testForContinuations(tmp_defaults_1);
 
-        UPDATE_STRING_DICT1(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_wx$py$parse, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_6);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("wx.py.parse", false);
 
     return module_wx$py$parse;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$py$parse, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("wx$py$parse", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

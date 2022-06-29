@@ -1,6 +1,6 @@
 import wx
 from math import ceil
-from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, pressurePlacementLabels, DEFAULT_TEST_TIME
+from Enumerations import UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
 from Graphing.BaseGraph import BaseGraph, PlotSettings, AxesSettings
 
 
@@ -77,9 +77,6 @@ class UnexposedGraph(BaseGraph):
             except IndexError: # Swallowing errors. Naughty, naughty.
                 continue
         
-        # All the plots got their new data. Time to draw to screen.
-        #self.graphCanvas.drawGraph()
-       
 
 
     def updateUnexposedThreshold(self, threshold):
@@ -103,20 +100,14 @@ class UnexposedGraph(BaseGraph):
         Set the test length.
         """
         super().setTestTimeMinutes(minutes)
-        # TODO update this for the new graph
+
         if self.graphCanvas.graphPlots[1].points:
-            threshold = self.graphCanvas.graphPlots[1].points[0][1] # .get_ydata()[0]
+            threshold = self.graphCanvas.graphPlots[1].points[0][1]
         else:
             threshold = 20
 
         if threshold > 0:
             self.updateUnexposedThreshold(threshold) # Continue on the threshold line
-
-
-
-
-
-
 
 
 
@@ -217,6 +208,15 @@ class FurnaceGraph(BaseGraph):
         self.graphCanvas.updateData(timeData, self.targetTempCurve, plotIndex=0) # Give the plot the updated data
 
 
+    # Override this to extend our predrawn lines
+    def setTestTimeMinutes(self, minutes):
+        """
+        Set the test length.
+        """
+        super().setTestTimeMinutes(minutes)
+
+        self.createTargetCurveArray(minutes)
+        self.graphCanvas.drawGraph() # Update the drawn plot
 
 
 
@@ -232,7 +232,6 @@ class FurnaceGraph(BaseGraph):
 
 class PressureGraph(BaseGraph):
     def __init__(self, parent, panelID, controller, axesSettings=None):
-
 
         BaseGraph.__init__(self, parent, panelID, axesSettings)
         self.controller = controller
@@ -273,9 +272,10 @@ class PressureGraph(BaseGraph):
         if not ch3Data and not ch2Data and not ch1Data:
            return
 
-        self.graphCanvas.updateData(timeData, ch1Data, plotIndex=0)
-        self.graphCanvas.updateData(timeData, ch2Data, plotIndex=1)
-        self.graphCanvas.updateData(timeData, ch3Data, plotIndex=2)
+        if ch1Data: self.graphCanvas.updateData(timeData, ch1Data, plotIndex=0)
+        if ch2Data: self.graphCanvas.updateData(timeData, ch2Data, plotIndex=1)
+        if ch3Data: self.graphCanvas.updateData(timeData, ch3Data, plotIndex=2)
+
 
 
     def hideUnusedPressureSensors(self):

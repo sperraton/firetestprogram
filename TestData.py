@@ -196,7 +196,10 @@ class TestData():
         # BUGBUGBUG This assumes that the time delta is constant. Need to not do that.
         self.avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
                                 (self.furnaceAvgData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) / 60.0) + self.avgAUC
-
+        # print("<<<",self.avgAUC)
+        # avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
+        #                         (self.furnaceAvgData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (1/ 60.0)) + self.avgAUC
+        # print(">>>",avgAUC)
         #avgFurnaceArr = np.array(self.furnaceAvgData)
         #avgFurnaceAUC = np.trapz(avgFurnaceArr, dx=1/60)
 

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'wx.py.images'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -34,6 +34,9 @@ PyDictObject *moduledict_wx$py$images;
 
 /* The declarations of module constants used, if any. */
 static PyObject *mod_consts[35];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[35];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("wx.py.images"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 35; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_wx$py$images(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "wx.py.images");
+    for (int i = 0; i < 35; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -73,12 +85,12 @@ static PyCodeObject *codeobj_18266d15000c1988845ba8e973e49eca;
 static PyCodeObject *codeobj_3df1866d28acaba99be6c1d16d8f572f;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[30]); CHECK_OBJECT(module_filename_obj);
-    codeobj_ee86a69b0cf181eca23562c62edb46f0 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[31], NULL, NULL, 0, 0, 0);
-    codeobj_b3c0ded6af7019676f9eba67d8bea98a = MAKE_CODEOBJECT(module_filename_obj, 13, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[32], NULL, 1, 0, 0);
-    codeobj_4bb13d41b2279ce986978466c63d7e2d = MAKE_CODEOBJECT(module_filename_obj, 20, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[8], mod_consts[32], NULL, 1, 0, 0);
-    codeobj_18266d15000c1988845ba8e973e49eca = MAKE_CODEOBJECT(module_filename_obj, 8, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[29], mod_consts[33], NULL, 1, 0, 0);
-    codeobj_3df1866d28acaba99be6c1d16d8f572f = MAKE_CODEOBJECT(module_filename_obj, 16, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[6], mod_consts[34], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[29]); CHECK_OBJECT(module_filename_obj);
+    codeobj_ee86a69b0cf181eca23562c62edb46f0 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[30], NULL, NULL, 0, 0, 0);
+    codeobj_b3c0ded6af7019676f9eba67d8bea98a = MAKE_CODEOBJECT(module_filename_obj, 13, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[31], NULL, 1, 0, 0);
+    codeobj_4bb13d41b2279ce986978466c63d7e2d = MAKE_CODEOBJECT(module_filename_obj, 20, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[7], mod_consts[31], NULL, 1, 0, 0);
+    codeobj_18266d15000c1988845ba8e973e49eca = MAKE_CODEOBJECT(module_filename_obj, 8, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[28], mod_consts[32], NULL, 1, 0, 0);
+    codeobj_3df1866d28acaba99be6c1d16d8f572f = MAKE_CODEOBJECT(module_filename_obj, 16, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[5], mod_consts[33], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
@@ -111,8 +123,8 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_18266d15000c1988845ba8e973e49eca = NULL;
+    PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -182,16 +194,16 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
         var_icon = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(var_icon);
-        tmp_expression_name_1 = var_icon;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[2]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = var_icon;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[2]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -201,40 +213,40 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[3]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[3]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[3]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[3]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 10;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_shellName);
-        tmp_args_element_name_2 = par_shellName;
+        tmp_args_element_value_2 = par_shellName;
         frame_18266d15000c1988845ba8e973e49eca->m_frame.f_lineno = 10;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 10;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_18266d15000c1988845ba8e973e49eca->m_frame.f_lineno = 10;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -247,21 +259,6 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
         }
         Py_DECREF(tmp_call_result_1);
     }
-    if (var_icon == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[4]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 11;
-        type_description_1 = "oo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_icon;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_18266d15000c1988845ba8e973e49eca);
@@ -271,16 +268,6 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_18266d15000c1988845ba8e973e49eca);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -323,13 +310,16 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_icon);
+    tmp_return_value = var_icon;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_shellName);
-    par_shellName = NULL;
-    Py_XDECREF(var_icon);
+    CHECK_OBJECT(var_icon);
+    Py_DECREF(var_icon);
     var_icon = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -343,8 +333,6 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_shellName);
-    par_shellName = NULL;
     Py_XDECREF(var_icon);
     var_icon = NULL;
     // Re-raise.
@@ -360,14 +348,16 @@ static PyObject *impl_wx$py$images$$$function__1_getPyIcon(struct Nuitka_Functio
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -393,13 +383,8 @@ static PyObject *impl_wx$py$images$$$function__2_getPyBitmap(struct Nuitka_Funct
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_b3c0ded6af7019676f9eba67d8bea98a = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_b3c0ded6af7019676f9eba67d8bea98a)) {
         Py_XDECREF(cache_frame_b3c0ded6af7019676f9eba67d8bea98a);
 
@@ -428,18 +413,18 @@ static PyObject *impl_wx$py$images$$$function__2_getPyBitmap(struct Nuitka_Funct
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -449,8 +434,8 @@ static PyObject *impl_wx$py$images$$$function__2_getPyBitmap(struct Nuitka_Funct
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[5]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[4]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -460,40 +445,40 @@ static PyObject *impl_wx$py$images$$$function__2_getPyBitmap(struct Nuitka_Funct
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 14;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_shellName);
-        tmp_args_element_name_2 = par_shellName;
+        tmp_args_element_value_2 = par_shellName;
         frame_b3c0ded6af7019676f9eba67d8bea98a->m_frame.f_lineno = 14;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 14;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
         frame_b3c0ded6af7019676f9eba67d8bea98a->m_frame.f_lineno = 14;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -524,7 +509,7 @@ static PyObject *impl_wx$py$images$$$function__2_getPyBitmap(struct Nuitka_Funct
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -563,50 +548,24 @@ static PyObject *impl_wx$py$images$$$function__2_getPyBitmap(struct Nuitka_Funct
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_shellName);
-    par_shellName = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_shellName);
-    par_shellName = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -669,17 +628,17 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[7]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[6]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -689,13 +648,13 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[8]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[7]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -706,10 +665,10 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_shellName);
-        tmp_args_element_name_2 = par_shellName;
+        tmp_args_element_value_2 = par_shellName;
         frame_3df1866d28acaba99be6c1d16d8f572f->m_frame.f_lineno = 17;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -720,8 +679,8 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         frame_3df1866d28acaba99be6c1d16d8f572f->m_frame.f_lineno = 17;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -737,7 +696,7 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -755,9 +714,9 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_stream);
-        tmp_args_element_name_3 = var_stream;
+        tmp_args_element_value_3 = var_stream;
         frame_3df1866d28acaba99be6c1d16d8f572f->m_frame.f_lineno = 18;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[9], tmp_args_element_name_3);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[8], tmp_args_element_value_3);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -835,9 +794,8 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_shellName);
-    par_shellName = NULL;
-    Py_XDECREF(var_stream);
+    CHECK_OBJECT(var_stream);
+    Py_DECREF(var_stream);
     var_stream = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -851,8 +809,6 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_shellName);
-    par_shellName = NULL;
     Py_XDECREF(var_stream);
     var_stream = NULL;
     // Re-raise.
@@ -868,14 +824,16 @@ static PyObject *impl_wx$py$images$$$function__3_getPyImage(struct Nuitka_Functi
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -901,13 +859,8 @@ static PyObject *impl_wx$py$images$$$function__4_getPyData(struct Nuitka_Functio
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_4bb13d41b2279ce986978466c63d7e2d = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_4bb13d41b2279ce986978466c63d7e2d)) {
         Py_XDECREF(cache_frame_4bb13d41b2279ce986978466c63d7e2d);
 
@@ -937,15 +890,13 @@ static PyObject *impl_wx$py$images$$$function__4_getPyData(struct Nuitka_Functio
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_shellName);
-        tmp_compexpr_left_1 = par_shellName;
-        tmp_compexpr_right_1 = mod_consts[10];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = par_shellName;
+        tmp_cmp_expr_right_1 = mod_consts[9];
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -955,42 +906,28 @@ static PyObject *impl_wx$py$images$$$function__4_getPyData(struct Nuitka_Functio
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 21;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
-    tmp_return_value = mod_consts[11];
+    tmp_return_value = mod_consts[10];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     goto branch_end_1;
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_shellName);
-        tmp_compexpr_left_2 = par_shellName;
-        tmp_compexpr_right_2 = mod_consts[12];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = par_shellName;
+        tmp_cmp_expr_right_2 = mod_consts[11];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1000,42 +937,28 @@ static PyObject *impl_wx$py$images$$$function__4_getPyData(struct Nuitka_Functio
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 71;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
-    tmp_return_value = mod_consts[13];
+    tmp_return_value = mod_consts[12];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     goto branch_end_2;
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(par_shellName);
-        tmp_compexpr_left_3 = par_shellName;
-        tmp_compexpr_right_3 = mod_consts[14];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = par_shellName;
+        tmp_cmp_expr_right_3 = mod_consts[13];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1045,27 +968,15 @@ static PyObject *impl_wx$py$images$$$function__4_getPyData(struct Nuitka_Functio
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 135;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
-    tmp_return_value = mod_consts[15];
+    tmp_return_value = mod_consts[14];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     branch_no_3:;
@@ -1089,7 +1000,7 @@ static PyObject *impl_wx$py$images$$$function__4_getPyData(struct Nuitka_Functio
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -1128,55 +1039,27 @@ static PyObject *impl_wx$py$images$$$function__4_getPyData(struct Nuitka_Functio
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_shellName);
-    Py_DECREF(par_shellName);
-    par_shellName = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_shellName);
-    Py_DECREF(par_shellName);
-    par_shellName = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_shellName);
+    Py_DECREF(par_shellName);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1190,7 +1073,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_wx$py$images$$$function__1_getPyIcon(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$py$images$$$function__1_getPyIcon,
-        mod_consts[29],
+        mod_consts[28],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -1240,7 +1123,7 @@ static PyObject *MAKE_FUNCTION_wx$py$images$$$function__2_getPyBitmap(PyObject *
 static PyObject *MAKE_FUNCTION_wx$py$images$$$function__3_getPyImage(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$py$images$$$function__3_getPyImage,
-        mod_consts[6],
+        mod_consts[5],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -1265,7 +1148,7 @@ static PyObject *MAKE_FUNCTION_wx$py$images$$$function__3_getPyImage(PyObject *d
 static PyObject *MAKE_FUNCTION_wx$py$images$$$function__4_getPyData(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$py$images$$$function__4_getPyData,
-        mod_consts[8],
+        mod_consts[7],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -1456,71 +1339,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("wx.py.images");
+
+    // Store the module for future use.
     module_wx$py$images = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.py.images: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("wx.py.images: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.py.images: Calling createModuleConstants().\n");
+        PRINT_STRING("wx.py.images: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.py.images: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("wx.py.images: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initwx$py$images\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_wx$py$images = MODULE_DICT(module_wx$py$images);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -1536,7 +1421,7 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
         UPDATE_STRING_DICT0(
             moduledict_wx$py$images,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[34]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)const_str_plain___name__);
@@ -1586,7 +1471,7 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -1643,13 +1528,13 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[16];
-        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[15];
+        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_ee86a69b0cf181eca23562c62edb46f0 = MAKE_MODULE_FRAME(codeobj_ee86a69b0cf181eca23562c62edb46f0, module_wx$py$images);
@@ -1661,17 +1546,17 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[19]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[18]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[20], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[19], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1684,17 +1569,17 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[19]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[18]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[21], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[20], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1709,27 +1594,27 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[21], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = mod_consts[23];
-        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[24], tmp_assign_source_4);
+        tmp_assign_source_4 = mod_consts[22];
+        UPDATE_STRING_DICT0(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[23], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[0];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_wx$py$images;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[25];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[0];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_wx$py$images;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[24];
         frame_ee86a69b0cf181eca23562c62edb46f0->m_frame.f_lineno = 5;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1745,18 +1630,18 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[26];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_wx$py$images;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[27];
-        tmp_level_name_2 = mod_consts[25];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[25];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_wx$py$images;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[26];
+        tmp_level_value_2 = mod_consts[24];
         frame_ee86a69b0cf181eca23562c62edb46f0->m_frame.f_lineno = 6;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1771,11 +1656,11 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_wx$py$images,
-                mod_consts[7],
-                mod_consts[25]
+                mod_consts[6],
+                mod_consts[24]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[7]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[6]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -1789,7 +1674,7 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_6);
     }
 
     // Restore frame exception if necessary.
@@ -1823,18 +1708,18 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_defaults_1;
-        tmp_defaults_1 = mod_consts[28];
+        tmp_defaults_1 = mod_consts[27];
         Py_INCREF(tmp_defaults_1);
 
 
         tmp_assign_source_7 = MAKE_FUNCTION_wx$py$images$$$function__1_getPyIcon(tmp_defaults_1);
 
-        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_defaults_2;
-        tmp_defaults_2 = mod_consts[28];
+        tmp_defaults_2 = mod_consts[27];
         Py_INCREF(tmp_defaults_2);
 
 
@@ -1845,29 +1730,43 @@ PyObject *modulecode_wx$py$images(PyObject *module, struct Nuitka_MetaPathBasedL
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_defaults_3;
-        tmp_defaults_3 = mod_consts[28];
+        tmp_defaults_3 = mod_consts[27];
         Py_INCREF(tmp_defaults_3);
 
 
         tmp_assign_source_9 = MAKE_FUNCTION_wx$py$images$$$function__3_getPyImage(tmp_defaults_3);
 
-        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
         PyObject *tmp_defaults_4;
-        tmp_defaults_4 = mod_consts[28];
+        tmp_defaults_4 = mod_consts[27];
         Py_INCREF(tmp_defaults_4);
 
 
         tmp_assign_source_10 = MAKE_FUNCTION_wx$py$images$$$function__4_getPyData(tmp_defaults_4);
 
-        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[8], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_wx$py$images, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_10);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("wx.py.images", false);
 
     return module_wx$py$images;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$py$images, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("wx$py$images", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

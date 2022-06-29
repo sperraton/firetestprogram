@@ -191,6 +191,35 @@ class Controller():
         self.testData.stopListening()
         pub.sendMessage("test.stopped")
 
+    def makeFakeData(self):
+        """
+        Used for testing purposes
+        """
+        for channelIdx in self.selectedUnexposedChannels:
+            num = random.uniform(10,90)
+            pub.sendMessage("channel.valueChange",
+                                sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
+                                channel=channelIdx,
+                                valueRaw=num,
+                                valueNumeric=num,
+                                valueFormatted="{0:.0f}".format(num))
+        for channelIdx in self.selectedFurnaceChannels:
+            num = random.uniform(10,90)
+            pub.sendMessage("channel.valueChange",
+                                sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
+                                channel=channelIdx,
+                                valueRaw=num,
+                                valueNumeric=num,
+                                valueFormatted="{0:.0f}".format(num))
+        for channelIdx in self.selectedPressureChannels:
+            num = random.uniform(10,90)
+            pub.sendMessage("channel.valueChange",
+                                sensorType="PRESS",    # For God's sake just use an enumeration like you do everywhere else.
+                                channel=channelIdx,
+                                valueRaw=num,
+                                valueNumeric=num,
+                                valueFormatted="{0:2.3f}".format(num))
+
 
     def onTimer(self, event):
         """
@@ -204,37 +233,17 @@ class Controller():
         """
 
         # # DEBUGGING Making fake data
-        if self.parent.noConnect:
-            for channelIdx in self.selectedUnexposedChannels:
-                num = random.uniform(10,90)
-                pub.sendMessage("channel.valueChange",
-                                    sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
-                                    channel=channelIdx,
-                                    valueRaw=num,
-                                    valueNumeric=num,
-                                    valueFormatted="{0:2.3f}".format(num))
-            for channelIdx in self.selectedFurnaceChannels:
-                num = random.uniform(10,90)
-                pub.sendMessage("channel.valueChange",
-                                    sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
-                                    channel=channelIdx,
-                                    valueRaw=num,
-                                    valueNumeric=num,
-                                    valueFormatted="{0:2.3f}".format(num))
-            for channelIdx in self.selectedPressureChannels:
-                num = random.uniform(10,90)
-                pub.sendMessage("channel.valueChange",
-                                    sensorType="PRESS",    # For God's sake just use an enumeration like you do everywhere else.
-                                    channel=channelIdx,
-                                    valueRaw=num,
-                                    valueNumeric=num,
-                                    valueFormatted="{0:2.3f}".format(num))
+        if self.parent.noConnect: self.makeFakeData()
 
         # Capture the time
         self.elapsedTime = time.time() - self.startTime
 
         # Get the latest data from the DAQ and put it in the grid and graphs
         self.updateData()
+
+
+
+
 
         # Is it time to save yet?
         #self.saveTick += 1
@@ -254,15 +263,18 @@ class Controller():
             # TODO, need to dynamically reduce the update rate if it is taking more than a second to fire.
             # change it to some even division of the save rate so the save rate can be preserved.
 
+
         # Does this test include time correction?
         if self.testSettings.canExtend:
             self.calcTimeCorrection()
+
 
         # Set the timer up for the next firing
         # This adjusts the next firing so we get closer to a true 1 second interval and there is no cumulative drift.
         delta = time.time()-self.startTime
         self.timer.StartOnce(
             int((self.updateRate*1000)-((delta % self.updateRate)*1000)))
+
 
         # Is the test to be over?
         if self.elapsedTime/60.0 >= self.testSettings.testTimeMinutes:
@@ -279,6 +291,7 @@ class Controller():
                                                 self.testSettings.getLagCorrection(),
                                                 self.correctionMinutes)
             self.stopTest()
+
             # Let the view know we're done here.
             pub.sendMessage("test.finished")
 
@@ -304,8 +317,7 @@ class Controller():
         """
 
         self.grabLatestData()
-
-        #pub.sendMessage("dataGrid.addRow", row=self.currentRow)
+        # TODO slow this to the minimum of 5 second update
         pub.sendMessage("graphData.update", testData=self.testData)
 
     def grabLatestData(self):
@@ -452,15 +464,12 @@ class Controller():
         timeString = "%d:%02d:%02d" % (h, m, s)
 
         # Build the standard front material
-        self.currentRow.append(timeString)
-        self.currentRow.append(str(self.elapsedTime))
-        self.currentRow.append("{0:.1f}".format(
-            self.testData.getTargetTempCurve()))
+        self.currentRow.append(timeString) # Timestamp
+        self.currentRow.append("{0:.0f}".format(self.elapsedTime)) # Timestamp in decimal seconds
+        self.currentRow.append("{0:.1f}".format(self.testData.getTargetTempCurve()))
         self.currentRow.append("{0:.1f}".format(self.testData.avgFurnace))
-        self.currentRow.append("{0:.2f}".format(
-            round(self.testData.targetAUC, 2)))
-        self.currentRow.append("{0:.2f}".format(
-            round(self.testData.avgAUC, 2)))
+        self.currentRow.append("{0:.2f}".format(round(self.testData.targetAUC, 2)))
+        self.currentRow.append("{0:.2f}".format(round(self.testData.avgAUC, 2)))
 
         # Seperate out the values for the graph data and the grid
 
@@ -665,6 +674,7 @@ class Controller():
 # Channel Wrangling
 ################################################################################
 
+    # TODO I don't think this is called anywhere
     def openThermocoupleChannels(self):
         self.daq.setSelectedThermocouples(
             self.selectedFurnaceChannels + self.selectedUnexposedChannels)
@@ -850,11 +860,12 @@ class Controller():
         new_offset = offset - y
         self.daq.channelPressure[channelIndex].offset = new_offset
 
+    # TODO I don't think this is called from anywhere now. Probably can take it out.
     def isLabelInSelectedThermocouples(self, label):
         # turn the label into enum
         labelIndex = thermocouplePlacementLabels.index(label)
         # Compare with all the selected
-        for channelIndex in self.selectedFurnaceChannels + self.selectedUnexposedChannels:
+        for channelIndex in self.selectedFurnaceChannels + self.selectedUnexposedChannels + self.selectedAfterburnerChannels + self.selectedAmbientChannels:
             if labelIndex == int(self.machineSettings.getThermocouplePlacement(channelIndex)):
                 return True
         return False
@@ -867,6 +878,19 @@ class Controller():
             if labelIndex == int(self.machineSettings.getPressurePlacement(channelIndex)):
                 return True
         return False
+
+    def isChannelInSelectedThermocouples(self, channelIndex):
+        if channelIndex in self.selectedFurnaceChannels + self.selectedUnexposedChannels + self.selectedAfterburnerChannels + self.selectedAmbientChannels:
+            return True
+        else:
+            return False
+
+    def isChannelInSelectedPressure(self, channelIndex):
+        if channelIndex in self.selectedPressureChannels:
+            return True
+        else:
+            return False
+
 
     def areSelectedAttached(self):
         # check if all the selected channels have been connected

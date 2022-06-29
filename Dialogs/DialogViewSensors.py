@@ -51,7 +51,7 @@ class ViewSensorsDialog(wx.Dialog):
         channelsSizer = wx.BoxSizer(wx.VERTICAL)
         topSizer = wx.BoxSizer(wx.VERTICAL)
 
-        instructionsString = "Check the status of all the sensor channels.\nCalibrations and TC role set here will be saved in the currently selected profile.\nYou may also give the channels a unique label by entering it in the box on the right."
+        instructionsString = "Check the status of all the sensor channels.\nCalibrations and TC role set here will be saved in the currently selected profile.\nYou may also give the channels a unique label by entering it in the box on the right.\nDisabled thermocouples will not have their data recorded."
         self.lblInstructions = wx.StaticText(self, wx.ID_ANY, instructionsString)
         instructionsSizer.Add(self.lblInstructions, 0, wx.ALL, 5)
 

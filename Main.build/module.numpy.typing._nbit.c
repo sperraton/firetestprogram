@@ -1,5 +1,5 @@
 /* Generated code for Python module 'numpy.typing._nbit'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_numpy$typing$_nbit;
 PyDictObject *moduledict_numpy$typing$_nbit;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[23];
+static PyObject *mod_consts[22];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[22];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("numpy.typing._nbit"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 22; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_numpy$typing$_nbit(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "numpy.typing._nbit");
+    for (int i = 0; i < 22; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -69,8 +81,8 @@ void checkModuleConstants_numpy$typing$_nbit(void) {
 static PyCodeObject *codeobj_f719291302b86d047f711c695b53cebb;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[21]); CHECK_OBJECT(module_filename_obj);
-    codeobj_f719291302b86d047f711c695b53cebb = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[22], NULL, NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[19]); CHECK_OBJECT(module_filename_obj);
+    codeobj_f719291302b86d047f711c695b53cebb = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[20], NULL, NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -246,71 +258,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("numpy.typing._nbit");
+
+    // Store the module for future use.
     module_numpy$typing$_nbit = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.typing._nbit: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("numpy.typing._nbit: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.typing._nbit: Calling createModuleConstants().\n");
+        PRINT_STRING("numpy.typing._nbit: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.typing._nbit: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("numpy.typing._nbit: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initnumpy$typing$_nbit\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_numpy$typing$_nbit = MODULE_DICT(module_numpy$typing$_nbit);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -326,7 +340,7 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
         UPDATE_STRING_DICT0(
             moduledict_numpy$typing$_nbit,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[21]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)const_str_plain___name__);
@@ -376,7 +390,7 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -451,9 +465,9 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_value_1 = module_filename_obj;
         tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[3]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
@@ -461,7 +475,7 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[4], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[4], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -474,9 +488,9 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
+        tmp_assattr_value_2 = Py_True;
         tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[3]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
@@ -484,7 +498,7 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[5], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[5], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -504,40 +518,19 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[7];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$typing$_nbit;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[8];
-        tmp_level_name_1 = mod_consts[9];
-        frame_f719291302b86d047f711c695b53cebb->m_frame.f_lineno = 3;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
-        if (tmp_import_name_from_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 3;
-
-            goto frame_exception_exit_1;
-        }
+        tmp_import_name_from_1 = IMPORT_HARD_TYPING();
+        assert(!(tmp_import_name_from_1 == NULL));
         if (PyModule_Check(tmp_import_name_from_1)) {
             tmp_assign_source_4 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_numpy$typing$_nbit,
-                mod_consts[10],
-                mod_consts[9]
+                mod_consts[7],
+                mod_consts[8]
             );
         } else {
-            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[10]);
+            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[7]);
         }
 
-        Py_DECREF(tmp_import_name_from_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -548,7 +541,198 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_4);
+    }
+    {
+        PyObject *tmp_assign_source_5;
+        tmp_assign_source_5 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_5 == NULL)) {
+            tmp_assign_source_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        assert(!(tmp_assign_source_5 == NULL));
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[9], tmp_assign_source_5);
+    }
+    {
+        PyObject *tmp_assign_source_6;
+        tmp_assign_source_6 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_6 == NULL)) {
+            tmp_assign_source_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 7;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_6);
+    }
+    {
+        PyObject *tmp_assign_source_7;
+        tmp_assign_source_7 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_7 == NULL)) {
+            tmp_assign_source_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_7 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 8;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_7);
+    }
+    {
+        PyObject *tmp_assign_source_8;
+        tmp_assign_source_8 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_8 == NULL)) {
+            tmp_assign_source_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 9;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_8);
+    }
+    {
+        PyObject *tmp_assign_source_9;
+        tmp_assign_source_9 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_9 == NULL)) {
+            tmp_assign_source_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_9 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 10;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_9);
+    }
+    {
+        PyObject *tmp_assign_source_10;
+        tmp_assign_source_10 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_10 == NULL)) {
+            tmp_assign_source_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_10 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 11;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_10);
+    }
+    {
+        PyObject *tmp_assign_source_11;
+        tmp_assign_source_11 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_11 == NULL)) {
+            tmp_assign_source_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_11 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 13;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_11);
+    }
+    {
+        PyObject *tmp_assign_source_12;
+        tmp_assign_source_12 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_12 == NULL)) {
+            tmp_assign_source_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_12 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 14;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_12);
+    }
+    {
+        PyObject *tmp_assign_source_13;
+        tmp_assign_source_13 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_13 == NULL)) {
+            tmp_assign_source_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_13 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 15;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_13);
+    }
+    {
+        PyObject *tmp_assign_source_14;
+        tmp_assign_source_14 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[7]);
+
+        if (unlikely(tmp_assign_source_14 == NULL)) {
+            tmp_assign_source_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        }
+
+        if (tmp_assign_source_14 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 16;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_14);
     }
 
     // Restore frame exception if necessary.
@@ -579,120 +763,24 @@ PyObject *modulecode_numpy$typing$_nbit(PyObject *module, struct Nuitka_MetaPath
     goto module_exception_exit;
 
     frame_no_exception_1:;
-    {
-        PyObject *tmp_assign_source_5;
-        tmp_assign_source_5 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
 
-        if (unlikely(tmp_assign_source_5 == NULL)) {
-            tmp_assign_source_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_5 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_5);
-    }
-    {
-        PyObject *tmp_assign_source_6;
-        tmp_assign_source_6 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_6 == NULL)) {
-            tmp_assign_source_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_6 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_6);
-    }
-    {
-        PyObject *tmp_assign_source_7;
-        tmp_assign_source_7 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_7 == NULL)) {
-            tmp_assign_source_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_7 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_7);
-    }
-    {
-        PyObject *tmp_assign_source_8;
-        tmp_assign_source_8 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_8 == NULL)) {
-            tmp_assign_source_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_8 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_8);
-    }
-    {
-        PyObject *tmp_assign_source_9;
-        tmp_assign_source_9 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_9 == NULL)) {
-            tmp_assign_source_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_9 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_9);
-    }
-    {
-        PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_10 == NULL)) {
-            tmp_assign_source_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_10 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_10);
-    }
-    {
-        PyObject *tmp_assign_source_11;
-        tmp_assign_source_11 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_11 == NULL)) {
-            tmp_assign_source_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_11 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_11);
-    }
-    {
-        PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_12 == NULL)) {
-            tmp_assign_source_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_12 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_12);
-    }
-    {
-        PyObject *tmp_assign_source_13;
-        tmp_assign_source_13 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_13 == NULL)) {
-            tmp_assign_source_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_13 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[19], tmp_assign_source_13);
-    }
-    {
-        PyObject *tmp_assign_source_14;
-        tmp_assign_source_14 = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[10]);
-
-        if (unlikely(tmp_assign_source_14 == NULL)) {
-            tmp_assign_source_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
-        }
-
-        assert(!(tmp_assign_source_14 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_14);
-    }
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("numpy.typing._nbit", false);
 
     return module_numpy$typing$_nbit;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$typing$_nbit, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("numpy$typing$_nbit", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

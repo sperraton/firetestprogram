@@ -1,5 +1,5 @@
 /* Generated code for Python module 'numpy.matrixlib.defmatrix'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_numpy$matrixlib$defmatrix;
 PyDictObject *moduledict_numpy$matrixlib$defmatrix;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[247];
+static PyObject *mod_consts[240];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[240];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("numpy.matrixlib.defmatrix"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 240; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_numpy$matrixlib$defmatrix(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "numpy.matrixlib.defmatrix");
+    for (int i = 0; i < 240; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -107,46 +119,46 @@ static PyCodeObject *codeobj_5b9245f6c92f2ebf5261acb6b91a5af0;
 static PyCodeObject *codeobj_77dfab103260c9988d3ba3b8b61d565d;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[227]); CHECK_OBJECT(module_filename_obj);
-    codeobj_b248597c1b08cff5784cbe7876d89193 = MAKE_CODEOBJECT(module_filename_obj, 174, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[228], mod_consts[229], NULL, 1, 0, 0);
-    codeobj_34b22225057a15cdf8473e094d4ce82e = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[230], NULL, NULL, 0, 0, 0);
-    codeobj_d242ea97a91de9b5004210ee22f55058 = MAKE_CODEOBJECT(module_filename_obj, 838, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[209], mod_consts[231], NULL, 1, 0, 0);
-    codeobj_610b6f433e6e4dbb8386147892020190 = MAKE_CODEOBJECT(module_filename_obj, 868, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[211], mod_consts[231], NULL, 1, 0, 0);
-    codeobj_dd1645c6dc927a80d9c4fc17328d642d = MAKE_CODEOBJECT(module_filename_obj, 969, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[216], mod_consts[231], NULL, 1, 0, 0);
-    codeobj_cf458e1238bf97bc3ffd32e943e7d974 = MAKE_CODEOBJECT(module_filename_obj, 793, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[207], mod_consts[232], NULL, 1, 0, 0);
-    codeobj_501da61fd7cfcac41823475141db4d4b = MAKE_CODEOBJECT(module_filename_obj, 936, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[214], mod_consts[231], NULL, 1, 0, 0);
-    codeobj_a3898697de0a8bd52afba6da1aa3005b = MAKE_CODEOBJECT(module_filename_obj, 167, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[171], mod_consts[233], NULL, 2, 0, 0);
-    codeobj_01b217e6b7ac337d93ea88d5dd4e6359 = MAKE_CODEOBJECT(module_filename_obj, 189, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[50], mod_consts[234], NULL, 2, 0, 0);
-    codeobj_e270f05c23913e6e2a817c082d652884 = MAKE_CODEOBJECT(module_filename_obj, 226, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[177], mod_consts[235], NULL, 2, 0, 0);
-    codeobj_7abb2463703dac8250985cee0d6e9f6d = MAKE_CODEOBJECT(module_filename_obj, 233, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[181], mod_consts[235], NULL, 2, 0, 0);
-    codeobj_4db3046a4bb0279cc7f49c8a8d892f25 = MAKE_CODEOBJECT(module_filename_obj, 215, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[174], mod_consts[235], NULL, 2, 0, 0);
-    codeobj_6ecd2d61ddcd625754be51423c9d3e7c = MAKE_CODEOBJECT(module_filename_obj, 115, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[43], mod_consts[236], NULL, 4, 0, 0);
-    codeobj_06eb6084087e262f76a1e49f45114ef3 = MAKE_CODEOBJECT(module_filename_obj, 230, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[179], mod_consts[235], NULL, 2, 0, 0);
-    codeobj_d4c6d6fc5c1dc9a22bca9ea0339b8fad = MAKE_CODEOBJECT(module_filename_obj, 223, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[59], mod_consts[235], NULL, 2, 0, 0);
-    codeobj_b3caab41c5a2f78c25497d483f891549 = MAKE_CODEOBJECT(module_filename_obj, 237, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[183], mod_consts[235], NULL, 2, 0, 0);
-    codeobj_c0742512bf480c1bb140b2517c27262e = MAKE_CODEOBJECT(module_filename_obj, 240, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[94], mod_consts[237], NULL, 2, 0, 0);
-    codeobj_7f01ad801491e90d07375c12b2b3c4dd = MAKE_CODEOBJECT(module_filename_obj, 253, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[237], NULL, 2, 0, 0);
-    codeobj_7ccaa1c30ebc8df3761bccc4b5cdde8a = MAKE_CODEOBJECT(module_filename_obj, 14, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[31], mod_consts[238], NULL, 1, 0, 0);
-    codeobj_95a27cf3016b91fd0c268536577e16be = MAKE_CODEOBJECT(module_filename_obj, 1010, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[135], mod_consts[239], NULL, 3, 0, 0);
-    codeobj_b23dfb767e4f74b8a0f8a8983dd6544c = MAKE_CODEOBJECT(module_filename_obj, 571, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[89], mod_consts[240], NULL, 3, 0, 0);
-    codeobj_36671bd47cdafff29fb56ca9c2ee0a2e = MAKE_CODEOBJECT(module_filename_obj, 548, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[87], mod_consts[240], NULL, 3, 0, 0);
-    codeobj_375472ebc744ea6d891517476ca1ac6a = MAKE_CODEOBJECT(module_filename_obj, 646, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[240], NULL, 3, 0, 0);
-    codeobj_859a1b80d8cd4e64ce971cf28f624b58 = MAKE_CODEOBJECT(module_filename_obj, 720, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[98], mod_consts[240], NULL, 3, 0, 0);
-    codeobj_02e8301f7a76a365adcb5bd418d882f1 = MAKE_CODEOBJECT(module_filename_obj, 37, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[57], mod_consts[241], NULL, 2, 0, 0);
-    codeobj_03b84e5af8158e8ba800253b786fa9f8 = MAKE_CODEOBJECT(module_filename_obj, 1036, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[225], mod_consts[242], NULL, 3, 0, 0);
-    codeobj_c6546763e7b40822da29050ea1997dd2 = MAKE_CODEOBJECT(module_filename_obj, 376, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[77], mod_consts[243], NULL, 2, 0, 0);
-    codeobj_054c52b138de742184a9a3affc195738 = MAKE_CODEOBJECT(module_filename_obj, 73, CO_NOFREE, mod_consts[18], mod_consts[244], NULL, 0, 0, 0);
-    codeobj_f300b05a9fc195a2e9f36bbadc6d2d37 = MAKE_CODEOBJECT(module_filename_obj, 611, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[91], mod_consts[240], NULL, 3, 0, 0);
-    codeobj_86f047faf52410c5aef8ddcd2fd81edd = MAKE_CODEOBJECT(module_filename_obj, 413, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[79], mod_consts[245], NULL, 4, 0, 0);
-    codeobj_56032ec4fdea74f322a02be127bb4407 = MAKE_CODEOBJECT(module_filename_obj, 685, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[96], mod_consts[240], NULL, 3, 0, 0);
-    codeobj_cd06fd9fc36dd3a8085b009daabee83b = MAKE_CODEOBJECT(module_filename_obj, 515, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[85], mod_consts[245], NULL, 4, 0, 0);
-    codeobj_4d81d90b0dabc305c7d124fdda90e93e = MAKE_CODEOBJECT(module_filename_obj, 759, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[100], mod_consts[240], NULL, 3, 0, 0);
-    codeobj_37102a863270e7e6971099ea9692ca6c = MAKE_CODEOBJECT(module_filename_obj, 897, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[110], mod_consts[243], NULL, 2, 0, 0);
-    codeobj_c9e5c8ea101c81655fc2fcaa97b220ae = MAKE_CODEOBJECT(module_filename_obj, 323, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[75], mod_consts[237], NULL, 2, 0, 0);
-    codeobj_ee4e40d78d097a55f054faa8bf3b797b = MAKE_CODEOBJECT(module_filename_obj, 447, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[81], mod_consts[246], NULL, 5, 0, 0);
-    codeobj_962f00607bd5b29e3c93a3b08732aac7 = MAKE_CODEOBJECT(module_filename_obj, 287, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[245], NULL, 4, 0, 0);
-    codeobj_5b9245f6c92f2ebf5261acb6b91a5af0 = MAKE_CODEOBJECT(module_filename_obj, 264, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[231], NULL, 1, 0, 0);
-    codeobj_77dfab103260c9988d3ba3b8b61d565d = MAKE_CODEOBJECT(module_filename_obj, 481, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[83], mod_consts[246], NULL, 5, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[220]); CHECK_OBJECT(module_filename_obj);
+    codeobj_b248597c1b08cff5784cbe7876d89193 = MAKE_CODEOBJECT(module_filename_obj, 174, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[221], mod_consts[222], NULL, 1, 0, 0);
+    codeobj_34b22225057a15cdf8473e094d4ce82e = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[223], NULL, NULL, 0, 0, 0);
+    codeobj_d242ea97a91de9b5004210ee22f55058 = MAKE_CODEOBJECT(module_filename_obj, 838, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[202], mod_consts[224], NULL, 1, 0, 0);
+    codeobj_610b6f433e6e4dbb8386147892020190 = MAKE_CODEOBJECT(module_filename_obj, 868, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[204], mod_consts[224], NULL, 1, 0, 0);
+    codeobj_dd1645c6dc927a80d9c4fc17328d642d = MAKE_CODEOBJECT(module_filename_obj, 969, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[209], mod_consts[224], NULL, 1, 0, 0);
+    codeobj_cf458e1238bf97bc3ffd32e943e7d974 = MAKE_CODEOBJECT(module_filename_obj, 793, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[200], mod_consts[225], NULL, 1, 0, 0);
+    codeobj_501da61fd7cfcac41823475141db4d4b = MAKE_CODEOBJECT(module_filename_obj, 936, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[207], mod_consts[224], NULL, 1, 0, 0);
+    codeobj_a3898697de0a8bd52afba6da1aa3005b = MAKE_CODEOBJECT(module_filename_obj, 167, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[164], mod_consts[226], NULL, 2, 0, 0);
+    codeobj_01b217e6b7ac337d93ea88d5dd4e6359 = MAKE_CODEOBJECT(module_filename_obj, 189, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[49], mod_consts[227], NULL, 2, 0, 0);
+    codeobj_e270f05c23913e6e2a817c082d652884 = MAKE_CODEOBJECT(module_filename_obj, 226, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[170], mod_consts[228], NULL, 2, 0, 0);
+    codeobj_7abb2463703dac8250985cee0d6e9f6d = MAKE_CODEOBJECT(module_filename_obj, 233, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[174], mod_consts[228], NULL, 2, 0, 0);
+    codeobj_4db3046a4bb0279cc7f49c8a8d892f25 = MAKE_CODEOBJECT(module_filename_obj, 215, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[167], mod_consts[228], NULL, 2, 0, 0);
+    codeobj_6ecd2d61ddcd625754be51423c9d3e7c = MAKE_CODEOBJECT(module_filename_obj, 115, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[44], mod_consts[229], NULL, 4, 0, 0);
+    codeobj_06eb6084087e262f76a1e49f45114ef3 = MAKE_CODEOBJECT(module_filename_obj, 230, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[172], mod_consts[228], NULL, 2, 0, 0);
+    codeobj_d4c6d6fc5c1dc9a22bca9ea0339b8fad = MAKE_CODEOBJECT(module_filename_obj, 223, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[55], mod_consts[228], NULL, 2, 0, 0);
+    codeobj_b3caab41c5a2f78c25497d483f891549 = MAKE_CODEOBJECT(module_filename_obj, 237, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[176], mod_consts[228], NULL, 2, 0, 0);
+    codeobj_c0742512bf480c1bb140b2517c27262e = MAKE_CODEOBJECT(module_filename_obj, 240, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[91], mod_consts[230], NULL, 2, 0, 0);
+    codeobj_7f01ad801491e90d07375c12b2b3c4dd = MAKE_CODEOBJECT(module_filename_obj, 253, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[230], NULL, 2, 0, 0);
+    codeobj_7ccaa1c30ebc8df3761bccc4b5cdde8a = MAKE_CODEOBJECT(module_filename_obj, 14, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[33], mod_consts[231], NULL, 1, 0, 0);
+    codeobj_95a27cf3016b91fd0c268536577e16be = MAKE_CODEOBJECT(module_filename_obj, 1010, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[129], mod_consts[232], NULL, 3, 0, 0);
+    codeobj_b23dfb767e4f74b8a0f8a8983dd6544c = MAKE_CODEOBJECT(module_filename_obj, 571, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[233], NULL, 3, 0, 0);
+    codeobj_36671bd47cdafff29fb56ca9c2ee0a2e = MAKE_CODEOBJECT(module_filename_obj, 548, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[84], mod_consts[233], NULL, 3, 0, 0);
+    codeobj_375472ebc744ea6d891517476ca1ac6a = MAKE_CODEOBJECT(module_filename_obj, 646, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[90], mod_consts[233], NULL, 3, 0, 0);
+    codeobj_859a1b80d8cd4e64ce971cf28f624b58 = MAKE_CODEOBJECT(module_filename_obj, 720, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[95], mod_consts[233], NULL, 3, 0, 0);
+    codeobj_02e8301f7a76a365adcb5bd418d882f1 = MAKE_CODEOBJECT(module_filename_obj, 37, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[54], mod_consts[234], NULL, 2, 0, 0);
+    codeobj_03b84e5af8158e8ba800253b786fa9f8 = MAKE_CODEOBJECT(module_filename_obj, 1036, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[218], mod_consts[235], NULL, 3, 0, 0);
+    codeobj_c6546763e7b40822da29050ea1997dd2 = MAKE_CODEOBJECT(module_filename_obj, 376, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[236], NULL, 2, 0, 0);
+    codeobj_054c52b138de742184a9a3affc195738 = MAKE_CODEOBJECT(module_filename_obj, 73, CO_NOFREE, mod_consts[18], mod_consts[237], NULL, 0, 0, 0);
+    codeobj_f300b05a9fc195a2e9f36bbadc6d2d37 = MAKE_CODEOBJECT(module_filename_obj, 611, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[88], mod_consts[233], NULL, 3, 0, 0);
+    codeobj_86f047faf52410c5aef8ddcd2fd81edd = MAKE_CODEOBJECT(module_filename_obj, 413, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[76], mod_consts[238], NULL, 4, 0, 0);
+    codeobj_56032ec4fdea74f322a02be127bb4407 = MAKE_CODEOBJECT(module_filename_obj, 685, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[233], NULL, 3, 0, 0);
+    codeobj_cd06fd9fc36dd3a8085b009daabee83b = MAKE_CODEOBJECT(module_filename_obj, 515, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[82], mod_consts[238], NULL, 4, 0, 0);
+    codeobj_4d81d90b0dabc305c7d124fdda90e93e = MAKE_CODEOBJECT(module_filename_obj, 759, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[97], mod_consts[233], NULL, 3, 0, 0);
+    codeobj_37102a863270e7e6971099ea9692ca6c = MAKE_CODEOBJECT(module_filename_obj, 897, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[107], mod_consts[236], NULL, 2, 0, 0);
+    codeobj_c9e5c8ea101c81655fc2fcaa97b220ae = MAKE_CODEOBJECT(module_filename_obj, 323, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[230], NULL, 2, 0, 0);
+    codeobj_ee4e40d78d097a55f054faa8bf3b797b = MAKE_CODEOBJECT(module_filename_obj, 447, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[78], mod_consts[239], NULL, 5, 0, 0);
+    codeobj_962f00607bd5b29e3c93a3b08732aac7 = MAKE_CODEOBJECT(module_filename_obj, 287, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[66], mod_consts[238], NULL, 4, 0, 0);
+    codeobj_5b9245f6c92f2ebf5261acb6b91a5af0 = MAKE_CODEOBJECT(module_filename_obj, 264, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[64], mod_consts[224], NULL, 1, 0, 0);
+    codeobj_77dfab103260c9988d3ba3b8b61d565d = MAKE_CODEOBJECT(module_filename_obj, 481, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[80], mod_consts[239], NULL, 5, 0, 0);
 }
 
 // The module function declarations.
@@ -393,9 +405,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (par_data == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
@@ -408,20 +421,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_2;
         }
 
-        tmp_called_instance_1 = par_data;
+        tmp_expression_value_1 = par_data;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[2]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 16;
+            type_description_1 = "ooooooooooo";
+            goto try_except_handler_2;
+        }
         CHECK_OBJECT(var_char);
-        tmp_args_element_name_1 = var_char;
-        tmp_args_element_name_2 = mod_consts[3];
+        tmp_args_element_value_1 = var_char;
+        tmp_args_element_value_2 = mod_consts[3];
         frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 16;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_1,
-                mod_consts[2],
-                call_args
-            );
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -465,7 +486,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -478,11 +500,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_2;
         if (par_data == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
@@ -495,14 +519,22 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_2 = par_data;
-        frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 18;
-        tmp_assign_source_5 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_2,
-            mod_consts[4],
-            &PyTuple_GET_ITEM(mod_consts[5], 0)
-        );
+        tmp_expression_value_2 = par_data;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[4]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 18;
+            type_description_1 = "ooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 18;
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[5]);
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -590,16 +622,25 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(var_row);
-        tmp_called_instance_3 = var_row;
-        frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 22;
-        tmp_assign_source_11 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_3,
-            mod_consts[4],
-            &PyTuple_GET_ITEM(mod_consts[7], 0)
-        );
+        tmp_expression_value_3 = var_row;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[4]);
+        if (tmp_called_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 22;
+            type_description_1 = "ooooooooooo";
+            goto try_except_handler_3;
+        }
+        frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 22;
+        tmp_assign_source_11 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[7]);
+
+        Py_DECREF(tmp_called_value_3);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -692,11 +733,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     }
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(var_col);
-        tmp_called_instance_4 = var_col;
+        tmp_expression_value_4 = var_col;
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[4]);
+        if (tmp_called_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 25;
+            type_description_1 = "ooooooooooo";
+            goto try_except_handler_4;
+        }
         frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 25;
-        tmp_assign_source_16 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[4]);
+        tmp_assign_source_16 = CALL_FUNCTION_NO_ARGS(tmp_called_value_4);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -715,14 +769,14 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_5;
         if (var_newrow == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
@@ -735,9 +789,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_1 = var_newrow;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[9]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_5 = var_newrow;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[9]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -747,57 +801,57 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             type_description_1 = "ooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_2 = (PyObject *)&PyMap_Type;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[10]);
+        tmp_called_value_6 = (PyObject *)&PyMap_Type;
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[10]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 26;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_args_element_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[11]);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[11]);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 26;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_temp);
-        tmp_args_element_name_5 = var_temp;
+        tmp_args_element_value_5 = var_temp;
         frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 26;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_args_element_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_args_element_value_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_4);
-        if (tmp_args_element_name_3 == NULL) {
+        Py_DECREF(tmp_args_element_value_4);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 26;
             type_description_1 = "ooooooooooo";
             goto try_except_handler_4;
         }
         frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 26;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -836,7 +890,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
 
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_2;
@@ -849,13 +904,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     try_end_2:;
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         if (var_count == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
@@ -868,12 +923,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_3;
         }
 
-        tmp_compexpr_left_1 = var_count;
-        tmp_compexpr_right_1 = mod_consts[6];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        assert(!(tmp_tmp_condition_result_1_object_1 == NULL));
-        tmp_condition_result_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
+        tmp_cmp_expr_left_1 = var_count;
+        tmp_cmp_expr_right_1 = mod_consts[6];
+        tmp_condition_result_1 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -919,11 +971,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
         if (var_newrow == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
@@ -937,8 +987,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
         }
 
         tmp_len_arg_2 = var_newrow;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -949,7 +999,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_3;
         }
         if (var_Ncols == NULL) {
-            Py_DECREF(tmp_compexpr_left_2);
+            Py_DECREF(tmp_cmp_expr_left_2);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -960,10 +1010,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_3;
         }
 
-        tmp_compexpr_right_2 = var_Ncols;
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_right_2 = var_Ncols;
+        tmp_condition_result_2 = RICH_COMPARE_NE_NBOOL_LONG_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -973,24 +1023,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             type_description_1 = "ooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 29;
-            type_description_1 = "ooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -1010,8 +1048,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     branch_end_1:;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         if (var_count == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
@@ -1024,19 +1062,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_3;
         }
 
-        tmp_left_name_1 = var_count;
-        tmp_right_name_1 = mod_consts[15];
-        tmp_result = BINARY_OPERATION_ADD_LONG_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = var_count;
+        tmp_right_value_1 = mod_consts[15];
+        tmp_result = BINARY_OPERATION_ADD_LONG_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         assert(!(tmp_result == false));
-        tmp_assign_source_18 = tmp_left_name_1;
+        tmp_assign_source_18 = tmp_left_value_1;
         var_count = tmp_assign_source_18;
 
     }
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_args_element_value_6;
         if (var_newdata == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
@@ -1049,9 +1087,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_3 = var_newdata;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[17]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_7 = var_newdata;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[17]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1062,7 +1100,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_3;
         }
         if (var_newrow == NULL) {
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_7);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -1073,10 +1111,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_6 = var_newrow;
+        tmp_args_element_value_6 = var_newrow;
         frame_7ccaa1c30ebc8df3761bccc4b5cdde8a->m_frame.f_lineno = 32;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_3);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_7);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1115,7 +1153,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -1128,7 +1167,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     try_end_3:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     if (var_newdata == NULL) {
 
@@ -1223,7 +1263,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_stri
     par_data = NULL;
     Py_XDECREF(var_char);
     var_char = NULL;
-    Py_XDECREF(var_rows);
+    CHECK_OBJECT(var_rows);
+    Py_DECREF(var_rows);
     var_rows = NULL;
     Py_XDECREF(var_newdata);
     var_newdata = NULL;
@@ -1321,15 +1362,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__2_asmatrix(struct Nu
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    int tmp_res;
     static struct Nuitka_FrameObject *cache_frame_02e8301f7a76a365adcb5bd418d882f1 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_02e8301f7a76a365adcb5bd418d882f1)) {
         Py_XDECREF(cache_frame_02e8301f7a76a365adcb5bd418d882f1);
 
@@ -1358,19 +1393,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__2_asmatrix(struct Nu
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_kw_call_dict_value_1_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1381,23 +1414,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__2_asmatrix(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_tuple_element_1 = par_data;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[19];
+        tmp_kw_call_arg_value_0_1 = par_data;
         CHECK_OBJECT(par_dtype);
-        tmp_dict_value_1 = par_dtype;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[20];
-        tmp_dict_value_1 = Py_False;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_0_1 = par_dtype;
+        tmp_kw_call_dict_value_1_1 = Py_False;
         frame_02e8301f7a76a365adcb5bd418d882f1->m_frame.f_lineno = 69;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[19]);
+        }
+
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1428,7 +1455,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__2_asmatrix(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -1468,54 +1495,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__2_asmatrix(struct Nu
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_data);
-    par_data = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_data);
-    par_data = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_data);
+    Py_DECREF(par_data);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_data);
+    Py_DECREF(par_data);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1589,19 +1590,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[22]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1611,8 +1612,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[23]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1622,13 +1623,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = mod_consts[24];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[25]);
+        tmp_tuple_element_1 = mod_consts[23];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[24]);
 
         if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
         }
 
         if (tmp_tuple_element_1 == NULL) {
@@ -1641,21 +1642,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto tuple_build_exception_1;
         }
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[26]);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[25]);
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 116;
-        tmp_call_result_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_call_result_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1690,7 +1691,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1711,10 +1712,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_2 = par_data;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[19]);
+        tmp_expression_value_2 = par_data;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[26]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1730,12 +1731,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_dtype);
-        tmp_compexpr_left_1 = par_dtype;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_dtype;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -1762,14 +1763,25 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_operand_name_1;
-        CHECK_OBJECT(var_dtype2);
-        tmp_compexpr_left_2 = var_dtype2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_operand_value_1;
+        if (var_dtype2 == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[27]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 126;
+            type_description_1 = "oooooooooooo";
+            goto frame_exception_exit_1;
+        }
+
+        tmp_cmp_expr_left_2 = var_dtype2;
         CHECK_OBJECT(par_dtype);
-        tmp_compexpr_right_2 = par_dtype;
-        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
+        tmp_cmp_expr_right_2 = par_dtype;
+        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
         if (tmp_and_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -1799,8 +1811,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         and_right_1:;
         assert(tmp_and_left_value_1 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(par_copy);
-        tmp_operand_name_1 = par_copy;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = par_copy;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1825,42 +1837,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
-    if (par_data == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 127;
-        type_description_1 = "oooooooooooo";
-        goto frame_exception_exit_1;
-    }
-
+    CHECK_OBJECT(par_data);
     tmp_return_value = par_data;
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     branch_no_3:;
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        if (par_data == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 128;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyObject *tmp_args_element_value_1;
+        CHECK_OBJECT(par_data);
         tmp_called_instance_1 = par_data;
         CHECK_OBJECT(par_dtype);
-        tmp_args_element_name_1 = par_dtype;
+        tmp_args_element_value_1 = par_dtype;
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 128;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[27], tmp_args_element_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[28], tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1878,16 +1868,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         nuitka_bool tmp_condition_result_4;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_data);
         tmp_isinstance_inst_2 = par_data;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1897,7 +1887,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
+        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[30]);
         if (tmp_isinstance_cls_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1908,7 +1898,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         Py_DECREF(tmp_isinstance_cls_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -1930,12 +1920,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_yes_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(par_dtype);
-        tmp_compexpr_left_3 = par_dtype;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = par_dtype;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_3 == tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -1945,10 +1935,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_4 = par_data;
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[19]);
+        tmp_expression_value_4 = par_data;
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[26]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1967,11 +1957,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -1985,9 +1975,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_dtype);
-        tmp_args_element_name_2 = par_dtype;
+        tmp_args_element_value_2 = par_dtype;
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 134;
-        tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[19], tmp_args_element_name_2);
+        tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[26], tmp_args_element_value_2);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2005,24 +1995,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_3;
-        if (par_data == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 135;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyObject *tmp_args_element_value_3;
+        CHECK_OBJECT(par_data);
         tmp_called_instance_3 = par_data;
         CHECK_OBJECT(par_subtype);
-        tmp_args_element_name_3 = par_subtype;
+        tmp_args_element_value_3 = par_subtype;
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 135;
-        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[30], tmp_args_element_name_3);
+        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[31], tmp_args_element_value_3);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2038,26 +2017,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(var_intype);
-        tmp_compexpr_left_4 = var_intype;
-        if (par_data == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 136;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = par_data;
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[19]);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_left_4 = var_intype;
+        CHECK_OBJECT(par_data);
+        tmp_expression_value_5 = par_data;
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[26]);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2067,8 +2035,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -2089,13 +2057,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_yes_6:;
     {
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         CHECK_OBJECT(var_new);
         tmp_called_instance_4 = var_new;
         CHECK_OBJECT(var_intype);
-        tmp_args_element_name_4 = var_intype;
+        tmp_args_element_value_4 = var_intype;
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 137;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[27], tmp_args_element_name_4);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[28], tmp_args_element_value_4);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2133,11 +2101,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     }
     branch_yes_7:;
     {
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(var_new);
-        tmp_called_instance_5 = var_new;
+        tmp_expression_value_6 = var_new;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[32]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 138;
+            type_description_1 = "oooooooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 138;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[20]);
+        tmp_return_value = CALL_FUNCTION_NO_ARGS(tmp_called_value_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2165,7 +2146,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         CHECK_OBJECT(par_data);
         tmp_isinstance_inst_3 = par_data;
         tmp_isinstance_cls_3 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2186,15 +2167,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_yes_8:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[31]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2205,9 +2186,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_5 = par_data;
+        tmp_args_element_value_5 = par_data;
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 142;
-        tmp_assign_source_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_5);
+        tmp_assign_source_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_5);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2220,28 +2201,27 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         }
         {
             PyObject *old = par_data;
+            assert(old != NULL);
             par_data = tmp_assign_source_6;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     branch_no_8:;
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_kw_call_dict_value_1_1;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2251,8 +2231,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[32]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[34]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2263,25 +2243,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_tuple_element_2 = par_data;
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_dict_key_1 = mod_consts[19];
+        tmp_kw_call_arg_value_0_1 = par_data;
         CHECK_OBJECT(par_dtype);
-        tmp_dict_value_1 = par_dtype;
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[20];
+        tmp_kw_call_dict_value_0_1 = par_dtype;
         CHECK_OBJECT(par_copy);
-        tmp_dict_value_1 = par_copy;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_1_1 = par_copy;
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 145;
-        tmp_assign_source_7 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_4, args, kw_values, mod_consts[19]);
+        }
+
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2297,10 +2271,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(var_arr);
-        tmp_expression_name_7 = var_arr;
-        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[33]);
+        tmp_expression_value_8 = var_arr;
+        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[35]);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2316,21 +2290,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_expression_name_8;
-        if (var_arr == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 147;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_8 = var_arr;
-        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[35]);
+        PyObject *tmp_expression_value_9;
+        CHECK_OBJECT(var_arr);
+        tmp_expression_value_9 = var_arr;
+        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[36]);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2346,15 +2309,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_tmp_condition_result_9_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_5 = var_ndim;
-        tmp_compexpr_right_5 = mod_consts[36];
-        tmp_tmp_condition_result_9_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        if (tmp_tmp_condition_result_9_object_1 == NULL) {
+        tmp_cmp_expr_left_5 = var_ndim;
+        tmp_cmp_expr_right_5 = mod_consts[37];
+        tmp_condition_result_9 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        if (tmp_condition_result_9 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2364,30 +2325,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_9_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_9_object_1);
-
-            exception_lineno = 148;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_9 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_9_object_1);
         if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
             goto branch_yes_9;
         } else {
             goto branch_no_9;
         }
+        assert(tmp_condition_result_9 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_9:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[37];
+        tmp_make_exception_arg_1 = mod_consts[38];
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 149;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -2401,15 +2350,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_no_9:;
     {
         nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_tmp_condition_result_10_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_6 = var_ndim;
-        tmp_compexpr_right_6 = mod_consts[6];
-        tmp_tmp_condition_result_10_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        if (tmp_tmp_condition_result_10_object_1 == NULL) {
+        tmp_cmp_expr_left_6 = var_ndim;
+        tmp_cmp_expr_right_6 = mod_consts[6];
+        tmp_condition_result_10 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        if (tmp_condition_result_10 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2419,29 +2366,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_10_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_10_object_1);
-
-            exception_lineno = 150;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_10 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_10_object_1);
         if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
             goto branch_yes_10;
         } else {
             goto branch_no_10;
         }
+        assert(tmp_condition_result_10 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_10:;
     {
         PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = mod_consts[38];
+        tmp_assign_source_10 = mod_consts[39];
         {
             PyObject *old = var_shape;
             assert(old != NULL);
@@ -2455,15 +2390,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_no_10:;
     {
         nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_tmp_condition_result_11_object_1;
-        int tmp_truth_name_4;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_7 = var_ndim;
-        tmp_compexpr_right_7 = mod_consts[15];
-        tmp_tmp_condition_result_11_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        if (tmp_tmp_condition_result_11_object_1 == NULL) {
+        tmp_cmp_expr_left_7 = var_ndim;
+        tmp_cmp_expr_right_7 = mod_consts[15];
+        tmp_condition_result_11 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        if (tmp_condition_result_11 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2473,40 +2406,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_11_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_11_object_1);
-
-            exception_lineno = 152;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_11 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_11_object_1);
         if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
             goto branch_yes_11;
         } else {
             goto branch_no_11;
         }
+        assert(tmp_condition_result_11 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_11:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_tuple_element_3;
-        tmp_tuple_element_3 = mod_consts[15];
+        PyObject *tmp_tuple_element_2;
+        tmp_tuple_element_2 = mod_consts[15];
         tmp_assign_source_11 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_9;
-            PyObject *tmp_subscript_name_1;
-            PyTuple_SET_ITEM0(tmp_assign_source_11, 0, tmp_tuple_element_3);
+            PyObject *tmp_expression_value_10;
+            PyObject *tmp_subscript_value_1;
+            PyTuple_SET_ITEM0(tmp_assign_source_11, 0, tmp_tuple_element_2);
             CHECK_OBJECT(var_shape);
-            tmp_expression_name_9 = var_shape;
-            tmp_subscript_name_1 = mod_consts[6];
-            tmp_tuple_element_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_1, 0);
-            if (tmp_tuple_element_3 == NULL) {
+            tmp_expression_value_10 = var_shape;
+            tmp_subscript_value_1 = mod_consts[6];
+            tmp_tuple_element_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_10, tmp_subscript_value_1, 0);
+            if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2516,7 +2437,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
                 type_description_1 = "oooooooooooo";
                 goto tuple_build_exception_2;
             }
-            PyTuple_SET_ITEM(tmp_assign_source_11, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_assign_source_11, 1, tmp_tuple_element_2);
         }
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
@@ -2538,7 +2459,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     branch_end_9:;
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = mod_consts[39];
+        tmp_assign_source_12 = mod_consts[40];
         assert(var_order == NULL);
         Py_INCREF(tmp_assign_source_12);
         var_order = tmp_assign_source_12;
@@ -2548,19 +2469,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         int tmp_and_left_truth_2;
         nuitka_bool tmp_and_left_value_2;
         nuitka_bool tmp_and_right_value_2;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        PyObject *tmp_tmp_and_left_value_2_object_1;
-        int tmp_truth_name_5;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_attribute_value_1;
-        int tmp_truth_name_6;
+        int tmp_truth_name_2;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_8 = var_ndim;
-        tmp_compexpr_right_8 = mod_consts[36];
-        tmp_tmp_and_left_value_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
-        if (tmp_tmp_and_left_value_2_object_1 == NULL) {
+        tmp_cmp_expr_left_8 = var_ndim;
+        tmp_cmp_expr_right_8 = mod_consts[37];
+        tmp_and_left_value_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
+        if (tmp_and_left_value_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2570,25 +2489,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_tmp_and_left_value_2_object_1);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_left_value_2_object_1);
-
-            exception_lineno = 156;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_and_left_value_2 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_2_object_1);
         tmp_and_left_truth_2 = tmp_and_left_value_2 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_and_left_value_2);
 
             exception_lineno = 156;
             type_description_1 = "oooooooooooo";
@@ -2600,21 +2506,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             goto and_left_2;
         }
         and_right_2:;
-        if (var_arr == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 156;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_11 = var_arr;
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[40]);
-        if (tmp_expression_name_10 == NULL) {
+        assert(tmp_and_left_value_2 != NUITKA_BOOL_UNASSIGNED);
+        CHECK_OBJECT(var_arr);
+        tmp_expression_value_12 = var_arr;
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[41]);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2624,8 +2520,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[41]);
-        Py_DECREF(tmp_expression_name_10);
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[42]);
+        Py_DECREF(tmp_expression_value_11);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2636,8 +2532,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_attribute_value_1);
-        if (tmp_truth_name_6 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_attribute_value_1);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2647,7 +2543,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_and_right_value_2 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_right_value_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_attribute_value_1);
         tmp_condition_result_12 = tmp_and_right_value_2;
         goto and_end_2;
@@ -2659,11 +2555,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
         } else {
             goto branch_no_12;
         }
+        assert(tmp_condition_result_12 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_12:;
     {
         PyObject *tmp_assign_source_13;
-        tmp_assign_source_13 = mod_consts[42];
+        tmp_assign_source_13 = mod_consts[43];
         {
             PyObject *old = var_order;
             assert(old != NULL);
@@ -2675,29 +2572,30 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     }
     branch_no_12:;
     {
-        PyObject *tmp_operand_name_2;
+        PyObject *tmp_operand_value_2;
         CHECK_OBJECT(var_order);
-        tmp_operand_name_2 = var_order;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_operand_value_2 = var_order;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         assert(!(tmp_res == -1));
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_name_3;
-        PyObject *tmp_tuple_element_4;
-        PyObject *tmp_kwargs_name_3;
-        PyObject *tmp_dict_key_2;
-        PyObject *tmp_dict_value_2;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_kw_call_arg_value_0_2;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_kw_call_arg_value_2_1;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_kw_call_dict_value_0_2;
+        PyObject *tmp_kw_call_dict_value_1_2;
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2707,8 +2605,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[29]);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_expression_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[30]);
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2718,9 +2616,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[43]);
-        Py_DECREF(tmp_expression_name_12);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[44]);
+        Py_DECREF(tmp_expression_value_13);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2731,87 +2629,46 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_subtype);
-        tmp_tuple_element_4 = par_subtype;
-        tmp_args_name_3 = PyTuple_New(3);
-        {
-            PyObject *tmp_expression_name_14;
-            PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_4);
-            if (var_shape == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[35]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 162;
-                type_description_1 = "oooooooooooo";
-                goto tuple_build_exception_3;
-            }
-
-            tmp_tuple_element_4 = var_shape;
-            PyTuple_SET_ITEM0(tmp_args_name_3, 1, tmp_tuple_element_4);
-            if (var_arr == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 162;
-                type_description_1 = "oooooooooooo";
-                goto tuple_build_exception_3;
-            }
-
-            tmp_expression_name_14 = var_arr;
-            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[19]);
-            if (tmp_tuple_element_4 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 162;
-                type_description_1 = "oooooooooooo";
-                goto tuple_build_exception_3;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_3, 2, tmp_tuple_element_4);
-        }
-        goto tuple_build_noexception_3;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_3:;
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_name_3);
-        goto frame_exception_exit_1;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_3:;
-        tmp_dict_key_2 = mod_consts[44];
-        if (var_arr == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
+        tmp_kw_call_arg_value_0_2 = par_subtype;
+        if (var_shape == NULL) {
+            Py_DECREF(tmp_called_value_5);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 163;
+            exception_lineno = 162;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
 
-        tmp_dict_value_2 = var_arr;
-        tmp_kwargs_name_3 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_2, tmp_dict_value_2);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_2 = mod_consts[45];
+        tmp_kw_call_arg_value_1_1 = var_shape;
+        CHECK_OBJECT(var_arr);
+        tmp_expression_value_15 = var_arr;
+        tmp_kw_call_arg_value_2_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[26]);
+        if (tmp_kw_call_arg_value_2_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+
+            exception_lineno = 162;
+            type_description_1 = "oooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(var_arr);
+        tmp_kw_call_dict_value_0_2 = var_arr;
         CHECK_OBJECT(var_order);
-        tmp_dict_value_2 = var_order;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_2, tmp_dict_value_2);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_1_2 = var_order;
         frame_6ecd2d61ddcd625754be51423c9d3e7c->m_frame.f_lineno = 162;
-        tmp_assign_source_14 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_name_3);
-        Py_DECREF(tmp_kwargs_name_3);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_2, tmp_kw_call_arg_value_1_1, tmp_kw_call_arg_value_2_1};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_2};
+            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS3_KWSPLIT(tmp_called_value_5, args, kw_values, mod_consts[45]);
+        }
+
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_kw_call_arg_value_2_1);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2904,14 +2761,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_subtype);
-    par_subtype = NULL;
     Py_XDECREF(par_data);
     par_data = NULL;
     Py_XDECREF(par_dtype);
     par_dtype = NULL;
-    Py_XDECREF(par_copy);
-    par_copy = NULL;
     Py_XDECREF(var_dtype2);
     var_dtype2 = NULL;
     Py_XDECREF(var_intype);
@@ -2940,14 +2793,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_subtype);
-    par_subtype = NULL;
     Py_XDECREF(par_data);
     par_data = NULL;
     Py_XDECREF(par_dtype);
     par_dtype = NULL;
-    Py_XDECREF(par_copy);
-    par_copy = NULL;
     Py_XDECREF(var_dtype2);
     var_dtype2 = NULL;
     Py_XDECREF(var_intype);
@@ -2975,14 +2824,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__3___new__(struct Nui
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_subtype);
+    Py_DECREF(par_subtype);
+    CHECK_OBJECT(par_copy);
+    Py_DECREF(par_copy);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_subtype);
+    Py_DECREF(par_subtype);
+    CHECK_OBJECT(par_copy);
+    Py_DECREF(par_copy);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3063,12 +2918,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = Py_False;
+        tmp_assattr_value_1 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[46], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[46], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3087,7 +2942,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
         nuitka_bool tmp_and_right_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_obj);
@@ -3108,7 +2963,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3138,8 +2993,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
         }
         and_right_1:;
         CHECK_OBJECT(par_obj);
-        tmp_expression_name_1 = par_obj;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[46]);
+        tmp_expression_value_1 = par_obj;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[46]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3181,10 +3036,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     branch_no_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[33]);
+        tmp_expression_value_2 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[35]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3200,15 +3055,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_1 = var_ndim;
-        tmp_compexpr_right_1 = mod_consts[36];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_ndim;
+        tmp_cmp_expr_right_1 = mod_consts[37];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3218,24 +3071,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 171;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     tmp_return_value = Py_None;
@@ -3244,15 +3085,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_2 = var_ndim;
-        tmp_compexpr_right_2 = mod_consts[36];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_ndim;
+        tmp_cmp_expr_right_2 = mod_consts[37];
+        tmp_condition_result_3 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3262,24 +3101,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 173;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -3289,21 +3116,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
         {
             PyObject *tmp_assign_source_3;
             PyObject *tmp_iter_arg_1;
-            PyObject *tmp_expression_name_3;
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[47]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 174;
-                type_description_1 = "oooo";
-                goto try_except_handler_2;
-            }
-
-            tmp_expression_name_3 = par_self;
-            tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[35]);
+            PyObject *tmp_expression_value_3;
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_3 = par_self;
+            tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[36]);
             if (tmp_iter_arg_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3404,15 +3220,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
         }
         {
             nuitka_bool tmp_condition_result_4;
-            PyObject *tmp_compexpr_left_3;
-            PyObject *tmp_compexpr_right_3;
-            PyObject *tmp_tmp_condition_result_4_object_1;
-            int tmp_truth_name_4;
+            PyObject *tmp_cmp_expr_left_3;
+            PyObject *tmp_cmp_expr_right_3;
             CHECK_OBJECT(outline_0_var_x);
-            tmp_compexpr_left_3 = outline_0_var_x;
-            tmp_compexpr_right_3 = mod_consts[15];
-            tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-            if (tmp_tmp_condition_result_4_object_1 == NULL) {
+            tmp_cmp_expr_left_3 = outline_0_var_x;
+            tmp_cmp_expr_right_3 = mod_consts[15];
+            tmp_condition_result_4 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+            if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3422,24 +3236,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
                 type_description_2 = "o";
                 goto try_except_handler_3;
             }
-            tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-            if (tmp_truth_name_4 == -1) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-                exception_lineno = 174;
-                type_description_2 = "o";
-                goto try_except_handler_3;
-            }
-            tmp_condition_result_4 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
             if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
                 goto branch_yes_4;
             } else {
                 goto branch_no_4;
             }
+            assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
         }
         branch_yes_4:;
         {
@@ -3483,7 +3285,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
         return NULL;
         // Return handler code:
         try_return_handler_3:;
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -3502,7 +3305,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
         exception_tb = NULL;
         exception_lineno = 0;
 
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -3648,16 +3452,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     }
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_tmp_condition_result_5_object_1;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_4 = var_ndim;
-        tmp_compexpr_right_4 = mod_consts[36];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        assert(!(tmp_tmp_condition_result_5_object_1 == NULL));
-        tmp_condition_result_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
+        tmp_cmp_expr_left_4 = var_ndim;
+        tmp_cmp_expr_right_4 = mod_consts[37];
+        tmp_condition_result_5 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -3666,35 +3466,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     }
     branch_yes_5:;
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        if (var_newshape == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[48]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 177;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_assattr_name_2 = var_newshape;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 177;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_newshape);
+        tmp_assattr_value_2 = var_newshape;
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[35], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[36], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3713,16 +3491,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     branch_no_5:;
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_tmp_condition_result_6_object_1;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_5 = var_ndim;
-        tmp_compexpr_right_5 = mod_consts[36];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        assert(!(tmp_tmp_condition_result_6_object_1 == NULL));
-        tmp_condition_result_6 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
+        tmp_cmp_expr_left_5 = var_ndim;
+        tmp_cmp_expr_right_5 = mod_consts[37];
+        tmp_condition_result_6 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
         if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
@@ -3733,7 +3507,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[49];
+        tmp_make_exception_arg_1 = mod_consts[47];
         frame_a3898697de0a8bd52afba6da1aa3005b->m_frame.f_lineno = 180;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -3749,21 +3523,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     branch_no_3:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_4;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 182;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_self;
-        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[35]);
+        PyObject *tmp_expression_value_4;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_4 = par_self;
+        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[36]);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3780,15 +3543,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     branch_end_3:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_tmp_condition_result_7_object_1;
-        int tmp_truth_name_5;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_6 = var_ndim;
-        tmp_compexpr_right_6 = mod_consts[6];
-        tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        if (tmp_tmp_condition_result_7_object_1 == NULL) {
+        tmp_cmp_expr_left_6 = var_ndim;
+        tmp_cmp_expr_right_6 = mod_consts[6];
+        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3798,44 +3559,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_7_object_1);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_7_object_1);
-
-            exception_lineno = 183;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_7 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_7_object_1);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
         }
+        assert(tmp_condition_result_7 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_7:;
     {
-        PyObject *tmp_assattr_name_3;
+        PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_name_3 = mod_consts[38];
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 184;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_3 = mod_consts[39];
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[35], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[36], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3851,15 +3589,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     branch_no_7:;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_tmp_condition_result_8_object_1;
-        int tmp_truth_name_6;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(var_ndim);
-        tmp_compexpr_left_7 = var_ndim;
-        tmp_compexpr_right_7 = mod_consts[15];
-        tmp_tmp_condition_result_8_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        if (tmp_tmp_condition_result_8_object_1 == NULL) {
+        tmp_cmp_expr_left_7 = var_ndim;
+        tmp_cmp_expr_right_7 = mod_consts[15];
+        tmp_condition_result_8 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        if (tmp_condition_result_8 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3869,36 +3605,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_tmp_condition_result_8_object_1);
-        if (tmp_truth_name_6 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_8_object_1);
-
-            exception_lineno = 185;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_8 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_8_object_1);
         if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
             goto branch_yes_8;
         } else {
             goto branch_no_8;
         }
+        assert(tmp_condition_result_8 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_8:;
     {
-        PyObject *tmp_assattr_name_4;
+        PyObject *tmp_assattr_value_4;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_assattr_target_4;
         tmp_tuple_element_1 = mod_consts[15];
-        tmp_assattr_name_4 = PyTuple_New(2);
+        tmp_assattr_value_4 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_5;
-            PyObject *tmp_subscript_name_1;
-            PyTuple_SET_ITEM0(tmp_assattr_name_4, 0, tmp_tuple_element_1);
+            PyObject *tmp_expression_value_5;
+            PyObject *tmp_subscript_value_1;
+            PyTuple_SET_ITEM0(tmp_assattr_value_4, 0, tmp_tuple_element_1);
             if (var_newshape == NULL) {
 
                 FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[48]);
@@ -3911,9 +3635,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
                 goto tuple_build_exception_1;
             }
 
-            tmp_expression_name_5 = var_newshape;
-            tmp_subscript_name_1 = mod_consts[6];
-            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_1, 0);
+            tmp_expression_value_5 = var_newshape;
+            tmp_subscript_value_1 = mod_consts[6];
+            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_1, 0);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3924,30 +3648,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
                 type_description_1 = "oooo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_assattr_name_4, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_assattr_value_4, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_assattr_name_4);
+        Py_DECREF(tmp_assattr_value_4);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 186;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[35], tmp_assattr_name_4);
-        Py_DECREF(tmp_assattr_name_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[36], tmp_assattr_value_4);
+        Py_DECREF(tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4031,10 +3744,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_obj);
-    par_obj = NULL;
     Py_XDECREF(var_ndim);
     var_ndim = NULL;
     Py_XDECREF(var_newshape);
@@ -4051,10 +3760,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_obj);
-    par_obj = NULL;
     Py_XDECREF(var_ndim);
     var_ndim = NULL;
     Py_XDECREF(var_newshape);
@@ -4072,14 +3777,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_obj);
+    Py_DECREF(par_obj);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_obj);
+    Py_DECREF(par_obj);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4168,12 +3879,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = Py_True;
+        tmp_assattr_value_1 = Py_True;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[46], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[46], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4189,16 +3900,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4208,7 +3919,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[29]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4220,15 +3931,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_index);
-        tmp_args_element_name_2 = par_index;
+        tmp_args_element_value_2 = par_index;
         frame_01b217e6b7ac337d93ea88d5dd4e6359->m_frame.f_lineno = 193;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[50],
+                mod_consts[49],
                 call_args
             );
         }
@@ -4273,23 +3984,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     PUBLISH_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
     // Tried code:
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_False;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 195;
-            type_description_1 = "ooooo";
-            goto try_except_handler_3;
-        }
-
+        tmp_assattr_value_2 = Py_False;
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[46], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[46], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4336,23 +4036,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     // End of try:
     try_end_1:;
     {
-        PyObject *tmp_assattr_name_3;
+        PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_name_3 = Py_False;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 195;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_3 = Py_False;
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[46], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[46], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4365,20 +4054,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
         }
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(var_out);
         tmp_isinstance_inst_1 = var_out;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4388,7 +4077,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[29]);
+        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
         if (tmp_isinstance_cls_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4399,7 +4088,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -4411,8 +4100,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -4423,8 +4112,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -4438,15 +4127,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(var_out);
-        tmp_expression_name_3 = var_out;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[33]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_3 = var_out;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[35]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4456,10 +4143,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[6];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[6];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4469,44 +4156,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 200;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
-        if (var_out == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 201;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = var_out;
-        tmp_subscript_name_1 = mod_consts[52];
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_1);
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(var_out);
+        tmp_expression_value_4 = var_out;
+        tmp_subscript_value_1 = mod_consts[50];
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4522,26 +4186,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_2;
-        if (var_out == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 202;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = var_out;
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[33]);
-        if (tmp_compexpr_left_2 == NULL) {
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_5;
+        CHECK_OBJECT(var_out);
+        tmp_expression_value_5 = var_out;
+        tmp_cmp_expr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[35]);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4551,10 +4202,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[15];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_right_2 = mod_consts[15];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4564,46 +4215,23 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 202;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_subscript_name_2;
-        if (var_out == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 203;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_7 = var_out;
-        tmp_expression_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[35]);
-        if (tmp_expression_name_6 == NULL) {
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_2;
+        CHECK_OBJECT(var_out);
+        tmp_expression_value_7 = var_out;
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[36]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4613,9 +4241,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[6];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_6, tmp_subscript_name_2, 0);
-        Py_DECREF(tmp_expression_name_6);
+        tmp_subscript_value_2 = mod_consts[6];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_6, tmp_subscript_value_2, 0);
+        Py_DECREF(tmp_expression_value_6);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4633,18 +4261,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_len_arg_1;
-        if (par_index == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[53]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 206;
-            type_description_1 = "ooooo";
-            goto try_except_handler_4;
-        }
-
+        CHECK_OBJECT(par_index);
         tmp_len_arg_1 = par_index;
         tmp_assign_source_3 = BUILTIN_LEN(tmp_len_arg_1);
         if (tmp_assign_source_3 == NULL) {
@@ -4687,11 +4304,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     // Tried code:
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_3 = PyExc_Exception;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_3 = PyExc_Exception;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
         assert(!(tmp_res == -1));
         tmp_condition_result_4 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_4 != false) {
@@ -4756,19 +4373,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_tmp_and_left_value_1_object_1;
-        int tmp_truth_name_3;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_3;
-        int tmp_truth_name_4;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_subscript_value_3;
+        int tmp_truth_name_1;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[54]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4778,10 +4393,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_4 = var_n;
-        tmp_compexpr_right_4 = mod_consts[15];
-        tmp_tmp_and_left_value_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        if (tmp_tmp_and_left_value_1_object_1 == NULL) {
+        tmp_cmp_expr_left_4 = var_n;
+        tmp_cmp_expr_right_4 = mod_consts[15];
+        tmp_and_left_value_1 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        if (tmp_and_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4791,25 +4406,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_and_left_value_1_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_left_value_1_object_1);
-
-            exception_lineno = 209;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_and_left_value_1 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_1_object_1);
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_and_left_value_1);
 
             exception_lineno = 209;
             type_description_1 = "ooooo";
@@ -4821,13 +4423,14 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             goto and_left_1;
         }
         and_right_1:;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[55]);
+        assert(tmp_and_left_value_1 != NUITKA_BOOL_UNASSIGNED);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4837,22 +4440,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (par_index == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[53]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 209;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_8 = par_index;
-        tmp_subscript_name_3 = mod_consts[15];
-        tmp_args_element_name_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_8, tmp_subscript_name_3, 1);
-        if (tmp_args_element_name_3 == NULL) {
+        CHECK_OBJECT(par_index);
+        tmp_expression_value_8 = par_index;
+        tmp_subscript_value_3 = mod_consts[15];
+        tmp_args_element_value_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_8, tmp_subscript_value_3, 1);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4863,8 +4455,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             goto frame_exception_exit_1;
         }
         frame_01b217e6b7ac337d93ea88d5dd4e6359->m_frame.f_lineno = 209;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4875,8 +4467,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_call_result_1);
-        if (tmp_truth_name_4 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_call_result_1);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4886,7 +4478,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_and_right_value_1 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_right_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_1);
         tmp_condition_result_5 = tmp_and_right_value_1;
         goto and_end_1;
@@ -4898,33 +4490,23 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
         } else {
             goto branch_no_5;
         }
+        assert(tmp_condition_result_5 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_5:;
     {
-        PyObject *tmp_assattr_name_4;
+        PyObject *tmp_assattr_value_4;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_assattr_target_4;
         CHECK_OBJECT(var_sh);
         tmp_tuple_element_1 = var_sh;
-        tmp_assattr_name_4 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_assattr_name_4, 0, tmp_tuple_element_1);
+        tmp_assattr_value_4 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_assattr_value_4, 0, tmp_tuple_element_1);
         tmp_tuple_element_1 = mod_consts[15];
-        PyTuple_SET_ITEM0(tmp_assattr_name_4, 1, tmp_tuple_element_1);
-        if (var_out == NULL) {
-            Py_DECREF(tmp_assattr_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 210;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyTuple_SET_ITEM0(tmp_assattr_value_4, 1, tmp_tuple_element_1);
+        CHECK_OBJECT(var_out);
         tmp_assattr_target_4 = var_out;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[35], tmp_assattr_name_4);
-        Py_DECREF(tmp_assattr_name_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[36], tmp_assattr_value_4);
+        Py_DECREF(tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4939,30 +4521,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     goto branch_end_5;
     branch_no_5:;
     {
-        PyObject *tmp_assattr_name_5;
+        PyObject *tmp_assattr_value_5;
         PyObject *tmp_tuple_element_2;
         PyObject *tmp_assattr_target_5;
         tmp_tuple_element_2 = mod_consts[15];
-        tmp_assattr_name_5 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_assattr_name_5, 0, tmp_tuple_element_2);
+        tmp_assattr_value_5 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_assattr_value_5, 0, tmp_tuple_element_2);
         CHECK_OBJECT(var_sh);
         tmp_tuple_element_2 = var_sh;
-        PyTuple_SET_ITEM0(tmp_assattr_name_5, 1, tmp_tuple_element_2);
-        if (var_out == NULL) {
-            Py_DECREF(tmp_assattr_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 212;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyTuple_SET_ITEM0(tmp_assattr_value_5, 1, tmp_tuple_element_2);
+        CHECK_OBJECT(var_out);
         tmp_assattr_target_5 = var_out;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[35], tmp_assattr_name_5);
-        Py_DECREF(tmp_assattr_name_5);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[36], tmp_assattr_value_5);
+        Py_DECREF(tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4976,21 +4547,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     }
     branch_end_5:;
     branch_no_3:;
-    if (var_out == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 213;
-        type_description_1 = "ooooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_out;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_01b217e6b7ac337d93ea88d5dd4e6359);
@@ -5055,15 +4611,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_out);
+    tmp_return_value = var_out;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_index);
-    par_index = NULL;
-    Py_XDECREF(var_out);
+    CHECK_OBJECT(var_out);
+    Py_DECREF(var_out);
     var_out = NULL;
     Py_XDECREF(var_sh);
     var_sh = NULL;
@@ -5081,10 +4638,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_index);
-    par_index = NULL;
     Py_XDECREF(var_out);
     var_out = NULL;
     Py_XDECREF(var_sh);
@@ -5104,14 +4657,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__5___getitem__(struct
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_index);
+    Py_DECREF(par_index);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_index);
+    Py_DECREF(par_index);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5139,13 +4698,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
     int tmp_res;
     PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_4db3046a4bb0279cc7f49c8a8d892f25 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_4db3046a4bb0279cc7f49c8a8d892f25)) {
         Py_XDECREF(cache_frame_4db3046a4bb0279cc7f49c8a8d892f25);
 
@@ -5178,16 +4732,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_other);
         tmp_isinstance_inst_1 = par_other;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5197,7 +4751,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[29]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5214,7 +4768,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
         PyTuple_SET_ITEM0(tmp_isinstance_cls_1, 1, tmp_tuple_element_1);
         tmp_tuple_element_1 = (PyObject *)&PyTuple_Type;
         PyTuple_SET_ITEM0(tmp_isinstance_cls_1, 2, tmp_tuple_element_1);
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -5235,19 +4789,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5257,8 +4811,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[56]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[53]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5269,32 +4823,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[57]);
+        tmp_args_element_value_1 = par_self;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[54]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 218;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_other);
-        tmp_args_element_name_3 = par_other;
+        tmp_args_element_value_3 = par_other;
         frame_4db3046a4bb0279cc7f49c8a8d892f25->m_frame.f_lineno = 218;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 218;
             type_description_1 = "oo";
@@ -5302,12 +4856,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
         }
         frame_4db3046a4bb0279cc7f49c8a8d892f25->m_frame.f_lineno = 218;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5326,20 +4880,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         int tmp_truth_name_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_attribute_name_1;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[55]);
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_attribute_value_1;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5350,9 +4904,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_other);
-        tmp_args_element_name_4 = par_other;
+        tmp_args_element_value_4 = par_other;
         frame_4db3046a4bb0279cc7f49c8a8d892f25->m_frame.f_lineno = 219;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_4);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_4);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5393,21 +4947,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
             goto or_right_1;
         }
         or_right_1:;
-        if (par_other == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[58]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 219;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_other;
-        tmp_attribute_name_1 = mod_consts[59];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_3, tmp_attribute_name_1);
+        CHECK_OBJECT(par_other);
+        tmp_expression_value_3 = par_other;
+        tmp_attribute_value_1 = mod_consts[55];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_3, tmp_attribute_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5418,8 +4961,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5444,28 +4987,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 220;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[56]);
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5476,27 +5007,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_5 = par_self;
-        if (par_other == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[58]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 220;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_6 = par_other;
+        tmp_args_element_value_5 = par_self;
+        CHECK_OBJECT(par_other);
+        tmp_args_element_value_6 = par_other;
         frame_4db3046a4bb0279cc7f49c8a8d892f25->m_frame.f_lineno = 220;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_return_value = CALL_METHOD_WITH_ARGS2(
+                tmp_called_instance_1,
+                mod_consts[53],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_4);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5528,7 +5051,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -5568,57 +5091,31 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__6___mul__(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_NotImplemented;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5645,13 +5142,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__7___rmul__(struct Nu
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_d4c6d6fc5c1dc9a22bca9ea0339b8fad = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_d4c6d6fc5c1dc9a22bca9ea0339b8fad)) {
         Py_XDECREF(cache_frame_d4c6d6fc5c1dc9a22bca9ea0339b8fad);
 
@@ -5681,12 +5173,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__7___rmul__(struct Nu
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -5700,15 +5192,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__7___rmul__(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_other);
-        tmp_args_element_name_1 = par_other;
+        tmp_args_element_value_1 = par_other;
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_2 = par_self;
+        tmp_args_element_value_2 = par_self;
         frame_d4c6d6fc5c1dc9a22bca9ea0339b8fad->m_frame.f_lineno = 224;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_return_value = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[56],
+                mod_consts[53],
                 call_args
             );
         }
@@ -5743,7 +5235,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__7___rmul__(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -5783,54 +5275,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__7___rmul__(struct Nu
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5856,15 +5322,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__8___imul__(struct Nu
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_e270f05c23913e6e2a817c082d652884 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
+    PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_e270f05c23913e6e2a817c082d652884)) {
         Py_XDECREF(cache_frame_e270f05c23913e6e2a817c082d652884);
 
@@ -5894,15 +5355,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__8___imul__(struct Nu
     // Framed code:
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(par_self);
-        tmp_left_name_1 = par_self;
+        tmp_left_value_1 = par_self;
         CHECK_OBJECT(par_other);
-        tmp_right_name_1 = par_other;
-        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = par_other;
+        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5913,20 +5374,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__8___imul__(struct Nu
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_ass_subvalue_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 227;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_ass_subscribed_1 = par_self;
-        tmp_ass_subscript_1 = mod_consts[60];
+        tmp_ass_subscript_1 = mod_consts[56];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subvalue_1);
         if (tmp_result == false) {
@@ -5940,21 +5390,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__8___imul__(struct Nu
             goto frame_exception_exit_1;
         }
     }
-    if (par_self == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 228;
-        type_description_1 = "oo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = par_self;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_e270f05c23913e6e2a817c082d652884);
@@ -5964,16 +5399,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__8___imul__(struct Nu
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_e270f05c23913e6e2a817c082d652884);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -6013,54 +5438,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__8___imul__(struct Nu
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
+    CHECK_OBJECT(par_self);
+    tmp_return_value = par_self;
+    Py_INCREF(tmp_return_value);
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6087,13 +5490,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__9___pow__(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_06eb6084087e262f76a1e49f45114ef3 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_06eb6084087e262f76a1e49f45114ef3)) {
         Py_XDECREF(cache_frame_06eb6084087e262f76a1e49f45114ef3);
 
@@ -6122,16 +5520,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__9___pow__(struct Nui
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[61]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[57]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6142,13 +5540,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__9___pow__(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_other);
-        tmp_args_element_name_2 = par_other;
+        tmp_args_element_value_2 = par_other;
         frame_06eb6084087e262f76a1e49f45114ef3->m_frame.f_lineno = 231;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -6181,7 +5579,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__9___pow__(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -6221,54 +5619,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__9___pow__(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6294,15 +5666,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__10___ipow__(struct N
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_7abb2463703dac8250985cee0d6e9f6d = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
+    PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_7abb2463703dac8250985cee0d6e9f6d)) {
         Py_XDECREF(cache_frame_7abb2463703dac8250985cee0d6e9f6d);
 
@@ -6332,15 +5699,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__10___ipow__(struct N
     // Framed code:
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(par_self);
-        tmp_left_name_1 = par_self;
+        tmp_left_value_1 = par_self;
         CHECK_OBJECT(par_other);
-        tmp_right_name_1 = par_other;
-        tmp_ass_subvalue_1 = BINARY_OPERATION_POW_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = par_other;
+        tmp_ass_subvalue_1 = BINARY_OPERATION_POW_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6351,20 +5718,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__10___ipow__(struct N
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_ass_subvalue_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 234;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_ass_subscribed_1 = par_self;
-        tmp_ass_subscript_1 = mod_consts[60];
+        tmp_ass_subscript_1 = mod_consts[56];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         Py_DECREF(tmp_ass_subvalue_1);
         if (tmp_result == false) {
@@ -6378,21 +5734,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__10___ipow__(struct N
             goto frame_exception_exit_1;
         }
     }
-    if (par_self == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 235;
-        type_description_1 = "oo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = par_self;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_7abb2463703dac8250985cee0d6e9f6d);
@@ -6402,16 +5743,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__10___ipow__(struct N
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_7abb2463703dac8250985cee0d6e9f6d);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -6451,54 +5782,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__10___ipow__(struct N
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
+    CHECK_OBJECT(par_self);
+    tmp_return_value = par_self;
+    Py_INCREF(tmp_return_value);
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_other);
-    par_other = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6520,22 +5829,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__11___rpow__(struct N
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    // Tried code:
     tmp_return_value = Py_NotImplemented;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_other);
-    Py_DECREF(par_other);
-    par_other = NULL;
     goto function_return_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -6543,7 +5839,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__11___rpow__(struct N
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_other);
+    Py_DECREF(par_other);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6570,13 +5869,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_c0742512bf480c1bb140b2517c27262e = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_c0742512bf480c1bb140b2517c27262e)) {
         Py_XDECREF(cache_frame_c0742512bf480c1bb140b2517c27262e);
 
@@ -6606,12 +5900,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_axis);
-        tmp_compexpr_left_1 = par_axis;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_axis;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -6620,12 +5914,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     }
     branch_yes_1:;
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_subscript_name_1 = mod_consts[62];
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_expression_value_1 = par_self;
+        tmp_subscript_value_1 = mod_consts[58];
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6642,15 +5936,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_axis);
-        tmp_compexpr_left_2 = par_axis;
-        tmp_compexpr_right_2 = mod_consts[6];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = par_axis;
+        tmp_cmp_expr_right_2 = mod_consts[6];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6660,24 +5952,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 246;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     CHECK_OBJECT(par_self);
@@ -6688,15 +5968,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(par_axis);
-        tmp_compexpr_left_3 = par_axis;
-        tmp_compexpr_right_3 = mod_consts[15];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = par_axis;
+        tmp_cmp_expr_right_3 = mod_consts[15];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6706,24 +5984,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 248;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -6731,7 +5997,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_c0742512bf480c1bb140b2517c27262e->m_frame.f_lineno = 249;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[63]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[59]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6749,7 +6015,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[64];
+        tmp_make_exception_arg_1 = mod_consts[60];
         frame_c0742512bf480c1bb140b2517c27262e->m_frame.f_lineno = 251;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -6780,7 +6046,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -6820,56 +6086,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__12__align(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_axis);
-    Py_DECREF(par_axis);
-    par_axis = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_axis);
-    Py_DECREF(par_axis);
-    par_axis = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6896,13 +6134,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__13__collapse(struct 
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_7f01ad801491e90d07375c12b2b3c4dd = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_7f01ad801491e90d07375c12b2b3c4dd)) {
         Py_XDECREF(cache_frame_7f01ad801491e90d07375c12b2b3c4dd);
 
@@ -6932,12 +6165,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__13__collapse(struct 
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_axis);
-        tmp_compexpr_left_1 = par_axis;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_axis;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -6946,12 +6179,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__13__collapse(struct 
     }
     branch_yes_1:;
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_subscript_name_1 = mod_consts[62];
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_expression_value_1 = par_self;
+        tmp_subscript_value_1 = mod_consts[58];
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6989,7 +6222,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__13__collapse(struct 
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -7029,58 +6262,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__13__collapse(struct 
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_axis);
-    Py_DECREF(par_axis);
-    par_axis = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_axis);
-    Py_DECREF(par_axis);
-    par_axis = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7106,13 +6309,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__14_tolist(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_5b9245f6c92f2ebf5261acb6b91a5af0 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_5b9245f6c92f2ebf5261acb6b91a5af0)) {
         Py_XDECREF(cache_frame_5b9245f6c92f2ebf5261acb6b91a5af0);
 
@@ -7146,7 +6344,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__14_tolist(struct Nui
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         frame_5b9245f6c92f2ebf5261acb6b91a5af0->m_frame.f_lineno = 284;
-        tmp_called_instance_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[67]);
+        tmp_called_instance_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7158,7 +6356,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__14_tolist(struct Nui
             goto frame_exception_exit_1;
         }
         frame_5b9245f6c92f2ebf5261acb6b91a5af0->m_frame.f_lineno = 284;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[68]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[64]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -7190,7 +6388,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__14_tolist(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -7229,50 +6427,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__14_tolist(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7301,13 +6473,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_962f00607bd5b29e3c93a3b08732aac7 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_962f00607bd5b29e3c93a3b08732aac7)) {
         Py_XDECREF(cache_frame_962f00607bd5b29e3c93a3b08732aac7);
 
@@ -7336,22 +6503,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7361,8 +6527,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7372,9 +6538,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[70]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[66]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7386,24 +6552,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(4);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(4);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_dtype);
         tmp_tuple_element_1 = par_dtype;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 3, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 3, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_962f00607bd5b29e3c93a3b08732aac7->m_frame.f_lineno = 319;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7413,34 +6579,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 319;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 319;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_962f00607bd5b29e3c93a3b08732aac7->m_frame.f_lineno = 319;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7471,7 +6614,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -7513,62 +6656,36 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__15_sum(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7594,15 +6711,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__16_squeeze(struct Nu
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    int tmp_res;
     static struct Nuitka_FrameObject *cache_frame_c9e5c8ea101c81655fc2fcaa97b220ae = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_c9e5c8ea101c81655fc2fcaa97b220ae)) {
         Py_XDECREF(cache_frame_c9e5c8ea101c81655fc2fcaa97b220ae);
 
@@ -7631,21 +6742,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__16_squeeze(struct Nu
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7655,8 +6763,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__16_squeeze(struct Nu
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[29]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7666,9 +6774,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__16_squeeze(struct Nu
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[75]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[70]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7679,20 +6787,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__16_squeeze(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[73];
+        tmp_kw_call_arg_value_0_1 = par_self;
         CHECK_OBJECT(par_axis);
-        tmp_dict_value_1 = par_axis;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_0_1 = par_axis;
         frame_c9e5c8ea101c81655fc2fcaa97b220ae->m_frame.f_lineno = 372;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[71]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7723,7 +6828,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__16_squeeze(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -7763,54 +6868,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__16_squeeze(struct Nu
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7836,15 +6915,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__17_flatten(struct Nu
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    int tmp_res;
     static struct Nuitka_FrameObject *cache_frame_c6546763e7b40822da29050ea1997dd2 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_c6546763e7b40822da29050ea1997dd2)) {
         Py_XDECREF(cache_frame_c6546763e7b40822da29050ea1997dd2);
 
@@ -7873,21 +6946,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__17_flatten(struct Nu
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7897,8 +6967,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__17_flatten(struct Nu
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[29]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7908,9 +6978,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__17_flatten(struct Nu
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[77]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[73]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7921,20 +6991,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__17_flatten(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[45];
+        tmp_kw_call_arg_value_0_1 = par_self;
         CHECK_OBJECT(par_order);
-        tmp_dict_value_1 = par_order;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_0_1 = par_order;
         frame_c6546763e7b40822da29050ea1997dd2->m_frame.f_lineno = 411;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[74]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7965,7 +7032,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__17_flatten(struct Nu
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -8005,54 +7072,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__17_flatten(struct Nu
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_order);
-    par_order = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_order);
-    par_order = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_order);
+    Py_DECREF(par_order);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_order);
+    Py_DECREF(par_order);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8081,13 +7122,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_86f047faf52410c5aef8ddcd2fd81edd = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_86f047faf52410c5aef8ddcd2fd81edd)) {
         Py_XDECREF(cache_frame_86f047faf52410c5aef8ddcd2fd81edd);
 
@@ -8116,22 +7152,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8141,8 +7176,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8152,9 +7187,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[79]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[76]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8166,24 +7201,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(4);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(4);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_dtype);
         tmp_tuple_element_1 = par_dtype;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 3, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 3, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_86f047faf52410c5aef8ddcd2fd81edd->m_frame.f_lineno = 445;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8193,34 +7228,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 445;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 445;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_86f047faf52410c5aef8ddcd2fd81edd->m_frame.f_lineno = 445;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8251,7 +7263,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -8293,62 +7305,36 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__18_mean(struct Nuitk
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8378,13 +7364,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_ee4e40d78d097a55f054faa8bf3b797b = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_ee4e40d78d097a55f054faa8bf3b797b)) {
         Py_XDECREF(cache_frame_ee4e40d78d097a55f054faa8bf3b797b);
 
@@ -8413,22 +7394,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8438,8 +7418,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8449,9 +7429,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[81]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[78]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8463,27 +7443,27 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(5);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(5);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_dtype);
         tmp_tuple_element_1 = par_dtype;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 3, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 3, tmp_tuple_element_1);
         CHECK_OBJECT(par_ddof);
         tmp_tuple_element_1 = par_ddof;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 4, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 4, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_ee4e40d78d097a55f054faa8bf3b797b->m_frame.f_lineno = 479;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8493,34 +7473,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 479;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 479;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_ee4e40d78d097a55f054faa8bf3b797b->m_frame.f_lineno = 479;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8551,7 +7508,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -8594,66 +7551,40 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__19_std(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    Py_XDECREF(par_ddof);
-    par_ddof = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    Py_XDECREF(par_ddof);
-    par_ddof = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
+    CHECK_OBJECT(par_ddof);
+    Py_DECREF(par_ddof);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
+    CHECK_OBJECT(par_ddof);
+    Py_DECREF(par_ddof);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8683,13 +7614,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_77dfab103260c9988d3ba3b8b61d565d = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_77dfab103260c9988d3ba3b8b61d565d)) {
         Py_XDECREF(cache_frame_77dfab103260c9988d3ba3b8b61d565d);
 
@@ -8718,22 +7644,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8743,8 +7668,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8754,9 +7679,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[83]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[80]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8768,27 +7693,27 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(5);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(5);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_dtype);
         tmp_tuple_element_1 = par_dtype;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 3, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 3, tmp_tuple_element_1);
         CHECK_OBJECT(par_ddof);
         tmp_tuple_element_1 = par_ddof;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 4, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 4, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_77dfab103260c9988d3ba3b8b61d565d->m_frame.f_lineno = 513;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8798,34 +7723,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 513;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 513;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_77dfab103260c9988d3ba3b8b61d565d->m_frame.f_lineno = 513;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8856,7 +7758,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -8899,66 +7801,40 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__20_var(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    Py_XDECREF(par_ddof);
-    par_ddof = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    Py_XDECREF(par_ddof);
-    par_ddof = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
+    CHECK_OBJECT(par_ddof);
+    Py_DECREF(par_ddof);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
+    CHECK_OBJECT(par_ddof);
+    Py_DECREF(par_ddof);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8987,13 +7863,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_cd06fd9fc36dd3a8085b009daabee83b = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_cd06fd9fc36dd3a8085b009daabee83b)) {
         Py_XDECREF(cache_frame_cd06fd9fc36dd3a8085b009daabee83b);
 
@@ -9022,22 +7893,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9047,8 +7917,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9058,9 +7928,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[85]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[82]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9072,24 +7942,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(4);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(4);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_dtype);
         tmp_tuple_element_1 = par_dtype;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 3, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 3, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_cd06fd9fc36dd3a8085b009daabee83b->m_frame.f_lineno = 546;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9099,34 +7969,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 546;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 546;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_cd06fd9fc36dd3a8085b009daabee83b->m_frame.f_lineno = 546;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9157,7 +8004,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -9199,62 +8046,36 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__21_prod(struct Nuitk
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_dtype);
-    par_dtype = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_dtype);
+    Py_DECREF(par_dtype);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9282,13 +8103,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_36671bd47cdafff29fb56ca9c2ee0a2e = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_36671bd47cdafff29fb56ca9c2ee0a2e)) {
         Py_XDECREF(cache_frame_36671bd47cdafff29fb56ca9c2ee0a2e);
 
@@ -9317,22 +8133,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9342,8 +8157,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9353,9 +8168,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[87]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[84]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9367,21 +8182,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_36671bd47cdafff29fb56ca9c2ee0a2e->m_frame.f_lineno = 569;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9391,34 +8206,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 569;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 569;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_36671bd47cdafff29fb56ca9c2ee0a2e->m_frame.f_lineno = 569;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9449,7 +8241,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -9490,58 +8282,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__22_any(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9569,13 +8335,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_b23dfb767e4f74b8a0f8a8983dd6544c = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_b23dfb767e4f74b8a0f8a8983dd6544c)) {
         Py_XDECREF(cache_frame_b23dfb767e4f74b8a0f8a8983dd6544c);
 
@@ -9604,22 +8365,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9629,8 +8389,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9640,9 +8400,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[89]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[86]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9654,21 +8414,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_b23dfb767e4f74b8a0f8a8983dd6544c->m_frame.f_lineno = 609;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9678,34 +8438,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 609;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 609;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_b23dfb767e4f74b8a0f8a8983dd6544c->m_frame.f_lineno = 609;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9736,7 +8473,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -9777,58 +8514,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__23_all(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9856,13 +8567,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_f300b05a9fc195a2e9f36bbadc6d2d37 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_f300b05a9fc195a2e9f36bbadc6d2d37)) {
         Py_XDECREF(cache_frame_f300b05a9fc195a2e9f36bbadc6d2d37);
 
@@ -9891,22 +8597,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9916,8 +8621,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9927,9 +8632,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[91]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[88]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9941,21 +8646,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_f300b05a9fc195a2e9f36bbadc6d2d37->m_frame.f_lineno = 644;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9965,34 +8670,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 644;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 644;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_f300b05a9fc195a2e9f36bbadc6d2d37->m_frame.f_lineno = 644;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10023,7 +8705,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -10064,58 +8746,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__24_max(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10143,13 +8799,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__25_argmax(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_375472ebc744ea6d891517476ca1ac6a = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_375472ebc744ea6d891517476ca1ac6a)) {
         Py_XDECREF(cache_frame_375472ebc744ea6d891517476ca1ac6a);
 
@@ -10178,21 +8829,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__25_argmax(struct Nui
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10202,8 +8852,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__25_argmax(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[29]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10214,23 +8864,23 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__25_argmax(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_axis);
-        tmp_args_element_name_2 = par_axis;
+        tmp_args_element_value_2 = par_axis;
         CHECK_OBJECT(par_out);
-        tmp_args_element_name_3 = par_out;
+        tmp_args_element_value_3 = par_out;
         frame_375472ebc744ea6d891517476ca1ac6a->m_frame.f_lineno = 683;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_expression_name_1 = CALL_METHOD_WITH_ARGS3(
-                tmp_called_instance_1,
-                mod_consts[93],
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_called_instance_1 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_2,
+                mod_consts[90],
                 call_args
             );
         }
 
-        Py_DECREF(tmp_called_instance_1);
-        if (tmp_expression_name_1 == NULL) {
+        Py_DECREF(tmp_called_instance_2);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10240,34 +8890,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__25_argmax(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[94]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 683;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 683;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_4 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_4 = par_axis;
         frame_375472ebc744ea6d891517476ca1ac6a->m_frame.f_lineno = 683;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[91], tmp_args_element_value_4);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10298,7 +8925,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__25_argmax(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -10339,58 +8966,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__25_argmax(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10418,13 +9019,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_56032ec4fdea74f322a02be127bb4407 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_56032ec4fdea74f322a02be127bb4407)) {
         Py_XDECREF(cache_frame_56032ec4fdea74f322a02be127bb4407);
 
@@ -10453,22 +9049,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10478,8 +9073,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[29]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10489,9 +9084,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[96]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[93]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10503,21 +9098,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_axis);
         tmp_tuple_element_1 = par_axis;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_out);
         tmp_tuple_element_1 = par_out;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[71]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[67]);
         frame_56032ec4fdea74f322a02be127bb4407->m_frame.f_lineno = 718;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_called_instance_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10527,34 +9122,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[72]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 718;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 718;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_1 = par_axis;
         frame_56032ec4fdea74f322a02be127bb4407->m_frame.f_lineno = 718;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[68], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10585,7 +9157,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -10626,58 +9198,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__26_min(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10705,13 +9251,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__27_argmin(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_859a1b80d8cd4e64ce971cf28f624b58 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_859a1b80d8cd4e64ce971cf28f624b58)) {
         Py_XDECREF(cache_frame_859a1b80d8cd4e64ce971cf28f624b58);
 
@@ -10740,21 +9281,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__27_argmin(struct Nui
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10764,8 +9304,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__27_argmin(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[29]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10776,23 +9316,23 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__27_argmin(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_axis);
-        tmp_args_element_name_2 = par_axis;
+        tmp_args_element_value_2 = par_axis;
         CHECK_OBJECT(par_out);
-        tmp_args_element_name_3 = par_out;
+        tmp_args_element_value_3 = par_out;
         frame_859a1b80d8cd4e64ce971cf28f624b58->m_frame.f_lineno = 757;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_expression_name_1 = CALL_METHOD_WITH_ARGS3(
-                tmp_called_instance_1,
-                mod_consts[98],
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_called_instance_1 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_2,
+                mod_consts[95],
                 call_args
             );
         }
 
-        Py_DECREF(tmp_called_instance_1);
-        if (tmp_expression_name_1 == NULL) {
+        Py_DECREF(tmp_called_instance_2);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10802,34 +9342,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__27_argmin(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[94]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 757;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 757;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_4 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_4 = par_axis;
         frame_859a1b80d8cd4e64ce971cf28f624b58->m_frame.f_lineno = 757;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[91], tmp_args_element_value_4);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10860,7 +9377,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__27_argmin(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -10901,58 +9418,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__27_argmin(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10980,13 +9471,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__28_ptp(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_4d81d90b0dabc305c7d124fdda90e93e = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_4d81d90b0dabc305c7d124fdda90e93e)) {
         Py_XDECREF(cache_frame_4d81d90b0dabc305c7d124fdda90e93e);
 
@@ -11015,21 +9501,20 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__28_ptp(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11039,8 +9524,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__28_ptp(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[29]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11051,23 +9536,23 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__28_ptp(struct Nuitka
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_axis);
-        tmp_args_element_name_2 = par_axis;
+        tmp_args_element_value_2 = par_axis;
         CHECK_OBJECT(par_out);
-        tmp_args_element_name_3 = par_out;
+        tmp_args_element_value_3 = par_out;
         frame_4d81d90b0dabc305c7d124fdda90e93e->m_frame.f_lineno = 790;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_expression_name_1 = CALL_METHOD_WITH_ARGS3(
-                tmp_called_instance_1,
-                mod_consts[100],
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_called_instance_1 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_2,
+                mod_consts[97],
                 call_args
             );
         }
 
-        Py_DECREF(tmp_called_instance_1);
-        if (tmp_expression_name_1 == NULL) {
+        Py_DECREF(tmp_called_instance_2);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11077,34 +9562,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__28_ptp(struct Nuitka
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[94]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 790;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_axis == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 790;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_4 = par_axis;
+        CHECK_OBJECT(par_axis);
+        tmp_args_element_value_4 = par_axis;
         frame_4d81d90b0dabc305c7d124fdda90e93e->m_frame.f_lineno = 790;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[91], tmp_args_element_value_4);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11135,7 +9597,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__28_ptp(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -11176,58 +9638,32 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__28_ptp(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
-    Py_XDECREF(par_out);
-    par_out = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
+    CHECK_OBJECT(par_out);
+    Py_DECREF(par_out);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11306,10 +9742,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[35]);
+        tmp_expression_value_1 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[36]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11412,7 +9848,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[102];
+            exception_value = mod_consts[99];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -11433,7 +9869,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -11469,7 +9906,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -11493,19 +9931,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_M);
-        tmp_compexpr_left_1 = var_M;
+        tmp_cmp_expr_left_1 = var_M;
         CHECK_OBJECT(var_N);
-        tmp_compexpr_right_1 = var_N;
-        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_cmp_expr_right_1 = var_N;
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -11527,18 +9961,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[103];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[104];
-        tmp_level_name_1 = mod_consts[6];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[100];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[101];
+        tmp_level_value_1 = mod_consts[6];
         frame_cf458e1238bf97bc3ffd32e943e7d974->m_frame.f_lineno = 832;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11553,11 +9987,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[105],
+                mod_consts[102],
                 mod_consts[6]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[105]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[102]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -11579,18 +10013,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[103];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[106];
-        tmp_level_name_2 = mod_consts[6];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[100];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[103];
+        tmp_level_value_2 = mod_consts[6];
         frame_cf458e1238bf97bc3ffd32e943e7d974->m_frame.f_lineno = 834;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11605,11 +10039,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[107],
+                mod_consts[104],
                 mod_consts[6]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[107]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[104]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -11628,17 +10062,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     }
     branch_end_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[57]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[54]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11649,23 +10083,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_func);
-        tmp_called_name_2 = var_func;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 835;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_2 = par_self;
+        tmp_called_value_2 = var_func;
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_2 = par_self;
         frame_cf458e1238bf97bc3ffd32e943e7d974->m_frame.f_lineno = 835;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11676,8 +10099,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_cf458e1238bf97bc3ffd32e943e7d974->m_frame.f_lineno = 835;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11757,15 +10180,14 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     CHECK_OBJECT(var_M);
     Py_DECREF(var_M);
     var_M = NULL;
     CHECK_OBJECT(var_N);
     Py_DECREF(var_N);
     var_N = NULL;
-    Py_XDECREF(var_func);
+    CHECK_OBJECT(var_func);
+    Py_DECREF(var_func);
     var_func = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -11779,8 +10201,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_M);
     var_M = NULL;
     Py_XDECREF(var_N);
@@ -11800,14 +10220,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__29_I(struct Nuitka_F
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11833,13 +10255,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__30_A(struct Nuitka_F
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_d242ea97a91de9b5004210ee22f55058 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_d242ea97a91de9b5004210ee22f55058)) {
         Py_XDECREF(cache_frame_d242ea97a91de9b5004210ee22f55058);
 
@@ -11872,7 +10289,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__30_A(struct Nuitka_F
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_d242ea97a91de9b5004210ee22f55058->m_frame.f_lineno = 865;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[67]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[63]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11903,7 +10320,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__30_A(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -11942,50 +10359,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__30_A(struct Nuitka_F
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -12011,13 +10402,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__31_A1(struct Nuitka_
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_610b6f433e6e4dbb8386147892020190 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_610b6f433e6e4dbb8386147892020190)) {
         Py_XDECREF(cache_frame_610b6f433e6e4dbb8386147892020190);
 
@@ -12051,7 +10437,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__31_A1(struct Nuitka_
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         frame_610b6f433e6e4dbb8386147892020190->m_frame.f_lineno = 894;
-        tmp_called_instance_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[67]);
+        tmp_called_instance_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12063,7 +10449,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__31_A1(struct Nuitka_
             goto frame_exception_exit_1;
         }
         frame_610b6f433e6e4dbb8386147892020190->m_frame.f_lineno = 894;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[110]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[107]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -12095,7 +10481,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__31_A1(struct Nuitka_
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -12134,50 +10520,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__31_A1(struct Nuitka_
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -12203,15 +10563,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__32_ravel(struct Nuit
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    int tmp_res;
     static struct Nuitka_FrameObject *cache_frame_37102a863270e7e6971099ea9692ca6c = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_37102a863270e7e6971099ea9692ca6c)) {
         Py_XDECREF(cache_frame_37102a863270e7e6971099ea9692ca6c);
 
@@ -12240,21 +10594,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__32_ravel(struct Nuit
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12264,8 +10615,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__32_ravel(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[29]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12275,9 +10626,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__32_ravel(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[110]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[107]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12288,20 +10639,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__32_ravel(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[45];
+        tmp_kw_call_arg_value_0_1 = par_self;
         CHECK_OBJECT(par_order);
-        tmp_dict_value_1 = par_order;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_0_1 = par_order;
         frame_37102a863270e7e6971099ea9692ca6c->m_frame.f_lineno = 933;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[74]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12332,7 +10680,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__32_ravel(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -12372,54 +10720,28 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__32_ravel(struct Nuit
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_order);
-    par_order = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_order);
-    par_order = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_order);
+    Py_DECREF(par_order);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_order);
+    Py_DECREF(par_order);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -12445,13 +10767,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__33_T(struct Nuitka_F
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_501da61fd7cfcac41823475141db4d4b = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_501da61fd7cfcac41823475141db4d4b)) {
         Py_XDECREF(cache_frame_501da61fd7cfcac41823475141db4d4b);
 
@@ -12484,7 +10801,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__33_T(struct Nuitka_F
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_501da61fd7cfcac41823475141db4d4b->m_frame.f_lineno = 966;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[63]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[59]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12515,7 +10832,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__33_T(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -12554,50 +10871,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__33_T(struct Nuitka_F
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -12624,13 +10915,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
     int tmp_res;
     PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_dd1645c6dc927a80d9c4fc17328d642d = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_dd1645c6dc927a80d9c4fc17328d642d)) {
         Py_XDECREF(cache_frame_dd1645c6dc927a80d9c4fc17328d642d);
 
@@ -12662,13 +10948,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_issubclass_cls_1;
         PyObject *tmp_issubclass_classes_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[19]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[26]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12678,8 +10964,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_issubclass_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[114]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_issubclass_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[111]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_issubclass_cls_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12690,13 +10976,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12706,7 +10992,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_issubclass_classes_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[115]);
+        tmp_issubclass_classes_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[112]);
         if (tmp_issubclass_classes_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12741,21 +11027,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_called_instance_2;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 999;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         frame_dd1645c6dc927a80d9c4fc17328d642d->m_frame.f_lineno = 999;
-        tmp_called_instance_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[63]);
+        tmp_called_instance_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[59]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12767,7 +11042,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_dd1645c6dc927a80d9c4fc17328d642d->m_frame.f_lineno = 999;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[116]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[113]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -12785,21 +11060,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
     branch_no_1:;
     {
         PyObject *tmp_called_instance_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1001;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_called_instance_3 = par_self;
         frame_dd1645c6dc927a80d9c4fc17328d642d->m_frame.f_lineno = 1001;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[63]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[59]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12831,7 +11095,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -12870,50 +11134,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__34_H(struct Nuitka_F
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -13034,16 +11272,25 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_str);
-        tmp_called_instance_1 = par_str;
-        frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1011;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_1,
-            mod_consts[4],
-            &PyTuple_GET_ITEM(mod_consts[5], 0)
-        );
+        tmp_expression_value_1 = par_str;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[4]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1011;
+            type_description_1 = "ooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1011;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[5]);
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13124,16 +11371,25 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(var_row);
-        tmp_called_instance_2 = var_row;
-        frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1014;
-        tmp_assign_source_6 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_2,
-            mod_consts[4],
-            &PyTuple_GET_ITEM(mod_consts[7], 0)
-        );
+        tmp_expression_value_2 = var_row;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[4]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1014;
+            type_description_1 = "ooooooooooooo";
+            goto try_except_handler_2;
+        }
+        frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1014;
+        tmp_assign_source_6 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[7]);
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13225,11 +11481,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_4;
         if (var_newrow == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
@@ -13242,9 +11499,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_1 = var_newrow;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[9]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_3 = var_newrow;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[9]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13255,23 +11512,35 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_x);
-        tmp_called_instance_3 = var_x;
-        frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1017;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[4]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_4 = var_x;
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[4]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 1017;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_3;
         }
         frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1017;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_args_element_value_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_4);
+        Py_DECREF(tmp_called_value_4);
+        if (tmp_args_element_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_3);
+
+            exception_lineno = 1017;
+            type_description_1 = "ooooooooooooo";
+            goto try_except_handler_3;
+        }
+        frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1017;
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13310,7 +11579,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -13323,7 +11593,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     try_end_1:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_11;
@@ -13342,9 +11613,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
         tmp_assign_source_11 = var_newrow;
         {
             PyObject *old = var_trow;
+            assert(old != NULL);
             var_trow = tmp_assign_source_11;
             Py_INCREF(var_trow);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -13423,11 +11695,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     }
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(var_col);
-        tmp_called_instance_4 = var_col;
+        tmp_expression_value_5 = var_col;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[115]);
+        if (tmp_called_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1021;
+            type_description_1 = "ooooooooooooo";
+            goto try_except_handler_4;
+        }
         frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1021;
-        tmp_assign_source_16 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[118]);
+        tmp_assign_source_16 = CALL_FUNCTION_NO_ARGS(tmp_called_value_5);
+        Py_DECREF(tmp_called_value_5);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13440,32 +11725,22 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
         }
         {
             PyObject *old = var_col;
+            assert(old != NULL);
             var_col = tmp_assign_source_16;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     // Tried code:
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        if (par_ldict == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[119]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1023;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_expression_name_2 = par_ldict;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(par_ldict);
+        tmp_expression_value_6 = par_ldict;
         CHECK_OBJECT(var_col);
-        tmp_subscript_name_1 = var_col;
-        tmp_assign_source_17 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
+        tmp_subscript_value_1 = var_col;
+        tmp_assign_source_17 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_1);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13510,11 +11785,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_KeyError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_KeyError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_1 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -13527,24 +11802,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     // Tried code:
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_2;
-        if (par_gdict == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[120]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1026;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_7;
-        }
-
-        tmp_expression_name_3 = par_gdict;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_2;
+        CHECK_OBJECT(par_gdict);
+        tmp_expression_value_7 = par_gdict;
         CHECK_OBJECT(var_col);
-        tmp_subscript_name_2 = var_col;
-        tmp_assign_source_18 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_2);
+        tmp_subscript_value_2 = var_col;
+        tmp_assign_source_18 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_2);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13589,11 +11853,11 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_2 = PyExc_KeyError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_2 = PyExc_KeyError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
         assert(!(tmp_res == -1));
         tmp_condition_result_2 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_2 != false) {
@@ -13606,13 +11870,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     {
         PyObject *tmp_assign_source_19;
         tmp_assign_source_19 = EXC_VALUE(PyThreadState_GET());
-        {
-            PyObject *old = var_e;
-            var_e = tmp_assign_source_19;
-            Py_INCREF(var_e);
-            Py_XDECREF(old);
-        }
-
+        assert(var_e == NULL);
+        Py_INCREF(tmp_assign_source_19);
+        var_e = tmp_assign_source_19;
     }
     // Tried code:
     {
@@ -13621,14 +11881,29 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
         PyObject *tmp_string_concat_values_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_raise_cause_1;
-        tmp_tuple_element_1 = mod_consts[121];
+        tmp_tuple_element_1 = mod_consts[116];
         tmp_string_concat_values_1 = PyTuple_New(3);
         {
-            PyObject *tmp_operand_name_1;
+            PyObject *tmp_format_value_1;
+            PyObject *tmp_operand_value_1;
+            PyObject *tmp_format_spec_1;
             PyTuple_SET_ITEM0(tmp_string_concat_values_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(var_col);
-            tmp_operand_name_1 = var_col;
-            tmp_tuple_element_1 = UNARY_OPERATION(PyObject_Repr, tmp_operand_name_1);
+            tmp_operand_value_1 = var_col;
+            tmp_format_value_1 = UNARY_OPERATION(PyObject_Repr, tmp_operand_value_1);
+            if (tmp_format_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1028;
+                type_description_1 = "ooooooooooooo";
+                goto tuple_build_exception_1;
+            }
+            tmp_format_spec_1 = mod_consts[3];
+            tmp_tuple_element_1 = BUILTIN_FORMAT(tmp_format_value_1, tmp_format_spec_1);
+            Py_DECREF(tmp_format_value_1);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -13640,7 +11915,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_string_concat_values_1, 1, tmp_tuple_element_1);
-            tmp_tuple_element_1 = mod_consts[122];
+            tmp_tuple_element_1 = mod_consts[117];
             PyTuple_SET_ITEM0(tmp_string_concat_values_1, 2, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
@@ -13780,13 +12055,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     // End of try:
     try_end_2:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         if (var_coltup == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[123]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13796,9 +12071,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_4 = var_coltup;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[17]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_8 = var_coltup;
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[17]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13809,8 +12084,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
             goto try_except_handler_4;
         }
         if (var_thismat == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            Py_DECREF(tmp_called_value_6);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[119]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13820,10 +12095,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
             goto try_except_handler_4;
         }
 
-        tmp_args_element_name_2 = var_thismat;
+        tmp_args_element_value_2 = var_thismat;
         frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1030;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_6);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13862,7 +12137,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
 
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_7;
@@ -13875,20 +12151,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     try_end_5:;
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         if (var_rowtup == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[120]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13898,9 +12175,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = var_rowtup;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[17]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_9 = var_rowtup;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[17]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13910,25 +12187,25 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[126]);
+        tmp_called_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[121]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+        if (unlikely(tmp_called_value_8 == NULL)) {
+            tmp_called_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[121]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 1031;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
         if (var_coltup == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[123]);
+            Py_DECREF(tmp_called_value_7);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13939,27 +12216,27 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
         }
 
         tmp_tuple_element_2 = var_coltup;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[127]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[122]);
         frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1031;
-        tmp_args_element_name_3 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = CALL_FUNCTION(tmp_called_value_8, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 1031;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
         frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1031;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13998,7 +12275,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_8;
@@ -14011,20 +12289,21 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     try_end_6:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_name_2;
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_args_value_2;
         PyObject *tmp_tuple_element_3;
-        PyObject *tmp_kwargs_name_2;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[126]);
+        PyObject *tmp_kwargs_value_2;
+        tmp_called_value_9 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[121]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+        if (unlikely(tmp_called_value_9 == NULL)) {
+            tmp_called_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[121]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14036,7 +12315,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
         }
         if (var_rowtup == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[125]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[120]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14047,13 +12326,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
         }
 
         tmp_tuple_element_3 = var_rowtup;
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
-        tmp_kwargs_name_2 = PyDict_Copy(mod_consts[128]);
+        tmp_args_value_2 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
+        tmp_kwargs_value_2 = PyDict_Copy(mod_consts[123]);
         frame_95a27cf3016b91fd0c268536577e16be->m_frame.f_lineno = 1032;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        tmp_return_value = CALL_FUNCTION(tmp_called_value_9, tmp_args_value_2, tmp_kwargs_value_2);
+        Py_DECREF(tmp_args_value_2);
+        Py_DECREF(tmp_kwargs_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14142,13 +12421,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_str);
-    par_str = NULL;
-    Py_XDECREF(par_gdict);
-    par_gdict = NULL;
-    Py_XDECREF(par_ldict);
-    par_ldict = NULL;
-    Py_XDECREF(var_rows);
+    CHECK_OBJECT(var_rows);
+    Py_DECREF(var_rows);
     var_rows = NULL;
     Py_XDECREF(var_rowtup);
     var_rowtup = NULL;
@@ -14166,8 +12440,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     var_col = NULL;
     Py_XDECREF(var_thismat);
     var_thismat = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
     goto function_return_exit;
     // Exception handler code:
     try_except_handler_1:;
@@ -14180,12 +12452,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_str);
-    par_str = NULL;
-    Py_XDECREF(par_gdict);
-    par_gdict = NULL;
-    Py_XDECREF(par_ldict);
-    par_ldict = NULL;
     Py_XDECREF(var_rows);
     var_rows = NULL;
     Py_XDECREF(var_rowtup);
@@ -14204,8 +12470,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     var_col = NULL;
     Py_XDECREF(var_thismat);
     var_thismat = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_9;
     exception_value = exception_keeper_value_9;
@@ -14219,14 +12483,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__35__from_string(stru
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_str);
+    Py_DECREF(par_str);
+    CHECK_OBJECT(par_gdict);
+    Py_DECREF(par_gdict);
+    CHECK_OBJECT(par_ldict);
+    Py_DECREF(par_ldict);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_str);
+    Py_DECREF(par_str);
+    CHECK_OBJECT(par_gdict);
+    Py_DECREF(par_gdict);
+    CHECK_OBJECT(par_ldict);
+    Py_DECREF(par_ldict);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -14308,7 +12582,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
         CHECK_OBJECT(par_obj);
         tmp_isinstance_inst_1 = par_obj;
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14329,12 +12603,12 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     branch_yes_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_gdict);
-        tmp_compexpr_left_1 = par_gdict;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_gdict;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -14344,27 +12618,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[129]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[124]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[124]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1092;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
+        assert(!(tmp_called_instance_1 == NULL));
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1092;
-        tmp_expression_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[130]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[125]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14374,8 +12639,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[131]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[126]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14391,10 +12656,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(var_frame);
-        tmp_expression_name_2 = var_frame;
-        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[132]);
+        tmp_expression_value_2 = var_frame;
+        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[127]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14410,21 +12675,10 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_3;
-        if (var_frame == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[133]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1094;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = var_frame;
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[134]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(var_frame);
+        tmp_expression_value_3 = var_frame;
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[128]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14458,19 +12712,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     }
     branch_end_2:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14480,13 +12734,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[135]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[129]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14497,18 +12751,18 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_obj);
-        tmp_args_element_name_2 = par_obj;
+        tmp_args_element_value_2 = par_obj;
         CHECK_OBJECT(var_glob_dict);
-        tmp_args_element_name_3 = var_glob_dict;
+        tmp_args_element_value_3 = var_glob_dict;
         CHECK_OBJECT(var_loc_dict);
-        tmp_args_element_name_4 = var_loc_dict;
+        tmp_args_element_value_4 = var_loc_dict;
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1099;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_args_element_name_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_args_element_value_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_2, call_args);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14519,8 +12773,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1099;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14540,8 +12794,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
         PyObject *tmp_isinstance_cls_2;
         CHECK_OBJECT(par_obj);
         tmp_isinstance_inst_2 = par_obj;
-        tmp_isinstance_cls_2 = mod_consts[136];
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_isinstance_cls_2 = mod_consts[130];
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14629,16 +12883,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
         nuitka_bool tmp_condition_result_4;
         PyObject *tmp_isinstance_inst_3;
         PyObject *tmp_isinstance_cls_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(var_row);
         tmp_isinstance_inst_3 = var_row;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14648,7 +12902,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_isinstance_cls_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[29]);
+        tmp_isinstance_cls_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[30]);
         if (tmp_isinstance_cls_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14659,7 +12913,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
         Py_DECREF(tmp_isinstance_cls_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -14680,19 +12934,19 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14702,13 +12956,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[126]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[121]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[121]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14718,27 +12972,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        if (par_obj == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[137]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1106;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_obj);
         tmp_tuple_element_1 = par_obj;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[127]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[122]);
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1106;
-        tmp_args_element_name_5 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_args_element_value_5 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14749,8 +12992,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             goto try_except_handler_2;
         }
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1106;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_5);
-        Py_DECREF(tmp_args_element_name_5);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14766,17 +13009,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     goto branch_end_4;
     branch_no_4:;
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_name_2;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_value_2;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
+        PyObject *tmp_kwargs_value_2;
         if (var_arr_rows == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[138]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[131]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14786,9 +13029,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = var_arr_rows;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[17]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_5 = var_arr_rows;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[17]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14798,17 +13041,17 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[126]);
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[121]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[121]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 1108;
             type_description_1 = "oooooooo";
@@ -14816,27 +13059,27 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
         }
         CHECK_OBJECT(var_row);
         tmp_tuple_element_2 = var_row;
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_kwargs_name_2 = PyDict_Copy(mod_consts[127]);
+        tmp_args_value_2 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_2);
+        tmp_kwargs_value_2 = PyDict_Copy(mod_consts[122]);
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1108;
-        tmp_args_element_name_6 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_args_element_value_6 = CALL_FUNCTION(tmp_called_value_6, tmp_args_value_2, tmp_kwargs_value_2);
+        Py_DECREF(tmp_args_value_2);
+        Py_DECREF(tmp_kwargs_value_2);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 1108;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1108;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14868,7 +13111,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     CHECK_OBJECT(tmp_for_loop_1__iter_value);
     Py_DECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     goto frame_return_exit_1;
     // Exception handler code:
@@ -14884,7 +13128,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -14897,22 +13142,23 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_args_name_3;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_args_value_3;
         PyObject *tmp_tuple_element_3;
-        PyObject *tmp_kwargs_name_3;
-        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
+        PyObject *tmp_kwargs_value_3;
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_called_name_7 == NULL)) {
-            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_called_name_7 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14922,13 +13168,13 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[126]);
+        tmp_called_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[121]);
 
-        if (unlikely(tmp_called_name_8 == NULL)) {
-            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+        if (unlikely(tmp_called_value_8 == NULL)) {
+            tmp_called_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[121]);
         }
 
-        if (tmp_called_name_8 == NULL) {
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14940,7 +13186,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
         }
         if (var_arr_rows == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[138]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[131]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14951,14 +13197,14 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
         }
 
         tmp_tuple_element_3 = var_arr_rows;
-        tmp_args_name_3 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_3);
-        tmp_kwargs_name_3 = PyDict_Copy(mod_consts[128]);
+        tmp_args_value_3 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 0, tmp_tuple_element_3);
+        tmp_kwargs_value_3 = PyDict_Copy(mod_consts[123]);
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1109;
-        tmp_args_element_name_7 = CALL_FUNCTION(tmp_called_name_8, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_args_name_3);
-        Py_DECREF(tmp_kwargs_name_3);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_args_element_value_7 = CALL_FUNCTION(tmp_called_value_8, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_args_value_3);
+        Py_DECREF(tmp_kwargs_value_3);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14969,8 +13215,8 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1109;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_7);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_7);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14988,16 +13234,16 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
         nuitka_bool tmp_condition_result_5;
         PyObject *tmp_isinstance_inst_4;
         PyObject *tmp_isinstance_cls_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(par_obj);
         tmp_isinstance_inst_4 = par_obj;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15007,7 +13253,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[29]);
+        tmp_isinstance_cls_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[30]);
         if (tmp_isinstance_cls_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15018,7 +13264,7 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_4, tmp_isinstance_cls_4);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_4, tmp_isinstance_cls_4);
         Py_DECREF(tmp_isinstance_cls_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -15039,15 +13285,15 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     }
     branch_yes_5:;
     {
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_args_element_name_8;
-        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_args_element_value_8;
+        tmp_called_value_9 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_called_name_9 == NULL)) {
-            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
+        if (unlikely(tmp_called_value_9 == NULL)) {
+            tmp_called_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_called_name_9 == NULL) {
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15058,9 +13304,9 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_obj);
-        tmp_args_element_name_8 = par_obj;
+        tmp_args_element_value_8 = par_obj;
         frame_03b84e5af8158e8ba800253b786fa9f8->m_frame.f_lineno = 1111;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_8);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_8);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15148,14 +13394,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_obj);
-    par_obj = NULL;
-    CHECK_OBJECT(par_ldict);
-    Py_DECREF(par_ldict);
-    par_ldict = NULL;
-    CHECK_OBJECT(par_gdict);
-    Py_DECREF(par_gdict);
-    par_gdict = NULL;
     Py_XDECREF(var_frame);
     var_frame = NULL;
     Py_XDECREF(var_glob_dict);
@@ -15178,14 +13416,6 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_obj);
-    par_obj = NULL;
-    CHECK_OBJECT(par_ldict);
-    Py_DECREF(par_ldict);
-    par_ldict = NULL;
-    CHECK_OBJECT(par_gdict);
-    Py_DECREF(par_gdict);
-    par_gdict = NULL;
     Py_XDECREF(var_frame);
     var_frame = NULL;
     Py_XDECREF(var_glob_dict);
@@ -15209,14 +13439,24 @@ static PyObject *impl_numpy$matrixlib$defmatrix$$$function__36_bmat(struct Nuitk
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_obj);
+    Py_DECREF(par_obj);
+    CHECK_OBJECT(par_ldict);
+    Py_DECREF(par_ldict);
+    CHECK_OBJECT(par_gdict);
+    Py_DECREF(par_gdict);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_obj);
+    Py_DECREF(par_obj);
+    CHECK_OBJECT(par_ldict);
+    Py_DECREF(par_ldict);
+    CHECK_OBJECT(par_gdict);
+    Py_DECREF(par_gdict);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -15230,9 +13470,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__10___ipow__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__10___ipow__,
-        mod_consts[181],
+        mod_consts[174],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[182],
+        mod_consts[175],
 #endif
         codeobj_7abb2463703dac8250985cee0d6e9f6d,
         NULL,
@@ -15255,9 +13495,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__10___ipow__
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__11___rpow__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__11___rpow__,
-        mod_consts[183],
+        mod_consts[176],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[184],
+        mod_consts[177],
 #endif
         codeobj_b3caab41c5a2f78c25497d483f891549,
         NULL,
@@ -15280,11 +13520,61 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__11___rpow__
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__12__align() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__12__align,
-        mod_consts[94],
+        mod_consts[91],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[185],
+        mod_consts[178],
 #endif
         codeobj_c0742512bf480c1bb140b2517c27262e,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$matrixlib$defmatrix,
+        mod_consts[61],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__13__collapse() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$matrixlib$defmatrix$$$function__13__collapse,
+        mod_consts[68],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[179],
+#endif
+        codeobj_7f01ad801491e90d07375c12b2b3c4dd,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$matrixlib$defmatrix,
+        mod_consts[62],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__14_tolist() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$matrixlib$defmatrix$$$function__14_tolist,
+        mod_consts[64],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[180],
+#endif
+        codeobj_5b9245f6c92f2ebf5261acb6b91a5af0,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15302,40 +13592,15 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__12__align()
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__13__collapse() {
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__15_sum(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__13__collapse,
-        mod_consts[72],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[186],
-#endif
-        codeobj_7f01ad801491e90d07375c12b2b3c4dd,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$matrixlib$defmatrix,
+        impl_numpy$matrixlib$defmatrix$$$function__15_sum,
         mod_consts[66],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__14_tolist() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__14_tolist,
-        mod_consts[68],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[187],
+        mod_consts[182],
 #endif
-        codeobj_5b9245f6c92f2ebf5261acb6b91a5af0,
-        NULL,
+        codeobj_962f00607bd5b29e3c93a3b08732aac7,
+        defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
         NULL,
@@ -15352,37 +13617,12 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__14_tolist()
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__15_sum(PyObject *defaults) {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__15_sum,
-        mod_consts[70],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[189],
-#endif
-        codeobj_962f00607bd5b29e3c93a3b08732aac7,
-        defaults,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$matrixlib$defmatrix,
-        mod_consts[74],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__16_squeeze(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__16_squeeze,
-        mod_consts[75],
+        mod_consts[70],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[190],
+        mod_consts[183],
 #endif
         codeobj_c9e5c8ea101c81655fc2fcaa97b220ae,
         defaults,
@@ -15391,7 +13631,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__16_squeeze(
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[76],
+        mod_consts[72],
         NULL,
         0
     );
@@ -15405,9 +13645,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__16_squeeze(
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__17_flatten(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__17_flatten,
-        mod_consts[77],
+        mod_consts[73],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[192],
+        mod_consts[185],
 #endif
         codeobj_c6546763e7b40822da29050ea1997dd2,
         defaults,
@@ -15416,7 +13656,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__17_flatten(
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[78],
+        mod_consts[75],
         NULL,
         0
     );
@@ -15430,9 +13670,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__17_flatten(
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__18_mean(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__18_mean,
-        mod_consts[79],
+        mod_consts[76],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[193],
+        mod_consts[186],
 #endif
         codeobj_86f047faf52410c5aef8ddcd2fd81edd,
         defaults,
@@ -15441,7 +13681,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__18_mean(PyO
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[80],
+        mod_consts[77],
         NULL,
         0
     );
@@ -15455,9 +13695,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__18_mean(PyO
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__19_std(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__19_std,
-        mod_consts[81],
+        mod_consts[78],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[195],
+        mod_consts[188],
 #endif
         codeobj_ee4e40d78d097a55f054faa8bf3b797b,
         defaults,
@@ -15466,7 +13706,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__19_std(PyOb
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[82],
+        mod_consts[79],
         NULL,
         0
     );
@@ -15480,7 +13720,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__19_std(PyOb
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__1__convert_from_string() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__1__convert_from_string,
-        mod_consts[31],
+        mod_consts[33],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -15505,9 +13745,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__1__convert_
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__20_var(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__20_var,
-        mod_consts[83],
+        mod_consts[80],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[196],
+        mod_consts[189],
 #endif
         codeobj_77dfab103260c9988d3ba3b8b61d565d,
         defaults,
@@ -15516,7 +13756,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__20_var(PyOb
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[84],
+        mod_consts[81],
         NULL,
         0
     );
@@ -15530,9 +13770,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__20_var(PyOb
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__21_prod(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__21_prod,
-        mod_consts[85],
+        mod_consts[82],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[197],
+        mod_consts[190],
 #endif
         codeobj_cd06fd9fc36dd3a8085b009daabee83b,
         defaults,
@@ -15541,7 +13781,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__21_prod(PyO
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[86],
+        mod_consts[83],
         NULL,
         0
     );
@@ -15555,9 +13795,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__21_prod(PyO
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__22_any(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__22_any,
-        mod_consts[87],
+        mod_consts[84],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[199],
+        mod_consts[192],
 #endif
         codeobj_36671bd47cdafff29fb56ca9c2ee0a2e,
         defaults,
@@ -15566,7 +13806,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__22_any(PyOb
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[88],
+        mod_consts[85],
         NULL,
         0
     );
@@ -15580,9 +13820,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__22_any(PyOb
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__23_all(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__23_all,
-        mod_consts[89],
+        mod_consts[86],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[200],
+        mod_consts[193],
 #endif
         codeobj_b23dfb767e4f74b8a0f8a8983dd6544c,
         defaults,
@@ -15591,7 +13831,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__23_all(PyOb
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[90],
+        mod_consts[87],
         NULL,
         0
     );
@@ -15605,11 +13845,36 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__23_all(PyOb
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__24_max(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__24_max,
-        mod_consts[91],
+        mod_consts[88],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[201],
+        mod_consts[194],
 #endif
         codeobj_f300b05a9fc195a2e9f36bbadc6d2d37,
+        defaults,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$matrixlib$defmatrix,
+        mod_consts[89],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__25_argmax(PyObject *defaults) {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$matrixlib$defmatrix$$$function__25_argmax,
+        mod_consts[90],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[195],
+#endif
+        codeobj_375472ebc744ea6d891517476ca1ac6a,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15627,37 +13892,12 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__24_max(PyOb
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__25_argmax(PyObject *defaults) {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__25_argmax,
-        mod_consts[93],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[202],
-#endif
-        codeobj_375472ebc744ea6d891517476ca1ac6a,
-        defaults,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$matrixlib$defmatrix,
-        mod_consts[95],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__26_min(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__26_min,
-        mod_consts[96],
+        mod_consts[93],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[203],
+        mod_consts[196],
 #endif
         codeobj_56032ec4fdea74f322a02be127bb4407,
         defaults,
@@ -15666,7 +13906,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__26_min(PyOb
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[97],
+        mod_consts[94],
         NULL,
         0
     );
@@ -15680,9 +13920,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__26_min(PyOb
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__27_argmin(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__27_argmin,
-        mod_consts[98],
+        mod_consts[95],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[204],
+        mod_consts[197],
 #endif
         codeobj_859a1b80d8cd4e64ce971cf28f624b58,
         defaults,
@@ -15691,7 +13931,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__27_argmin(P
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[99],
+        mod_consts[96],
         NULL,
         0
     );
@@ -15705,9 +13945,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__27_argmin(P
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__28_ptp(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__28_ptp,
-        mod_consts[100],
+        mod_consts[97],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[205],
+        mod_consts[198],
 #endif
         codeobj_4d81d90b0dabc305c7d124fdda90e93e,
         defaults,
@@ -15716,7 +13956,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__28_ptp(PyOb
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[101],
+        mod_consts[98],
         NULL,
         0
     );
@@ -15730,11 +13970,86 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__28_ptp(PyOb
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__29_I() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__29_I,
-        mod_consts[207],
+        mod_consts[200],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[208],
+        mod_consts[201],
 #endif
         codeobj_cf458e1238bf97bc3ffd32e943e7d974,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$matrixlib$defmatrix,
+        mod_consts[105],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__2_asmatrix(PyObject *defaults) {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$matrixlib$defmatrix$$$function__2_asmatrix,
+        mod_consts[54],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_02e8301f7a76a365adcb5bd418d882f1,
+        defaults,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$matrixlib$defmatrix,
+        mod_consts[20],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__30_A() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$matrixlib$defmatrix$$$function__30_A,
+        mod_consts[202],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[203],
+#endif
+        codeobj_d242ea97a91de9b5004210ee22f55058,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$matrixlib$defmatrix,
+        mod_consts[106],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__31_A1() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$matrixlib$defmatrix$$$function__31_A1,
+        mod_consts[204],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[205],
+#endif
+        codeobj_610b6f433e6e4dbb8386147892020190,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15752,40 +14067,15 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__29_I() {
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__2_asmatrix(PyObject *defaults) {
+static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__32_ravel(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__2_asmatrix,
-        mod_consts[57],
+        impl_numpy$matrixlib$defmatrix$$$function__32_ravel,
+        mod_consts[107],
 #if PYTHON_VERSION >= 0x300
-        NULL,
+        mod_consts[206],
 #endif
-        codeobj_02e8301f7a76a365adcb5bd418d882f1,
+        codeobj_37102a863270e7e6971099ea9692ca6c,
         defaults,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$matrixlib$defmatrix,
-        mod_consts[21],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__30_A() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__30_A,
-        mod_consts[209],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[210],
-#endif
-        codeobj_d242ea97a91de9b5004210ee22f55058,
-        NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
         NULL,
@@ -15802,62 +14092,12 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__30_A() {
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__31_A1() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__31_A1,
-        mod_consts[211],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[212],
-#endif
-        codeobj_610b6f433e6e4dbb8386147892020190,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$matrixlib$defmatrix,
-        mod_consts[111],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
-static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__32_ravel(PyObject *defaults) {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$matrixlib$defmatrix$$$function__32_ravel,
-        mod_consts[110],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[213],
-#endif
-        codeobj_37102a863270e7e6971099ea9692ca6c,
-        defaults,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$matrixlib$defmatrix,
-        mod_consts[112],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__33_T() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__33_T,
-        mod_consts[214],
+        mod_consts[207],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[215],
+        mod_consts[208],
 #endif
         codeobj_501da61fd7cfcac41823475141db4d4b,
         NULL,
@@ -15866,7 +14106,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__33_T() {
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[113],
+        mod_consts[110],
         NULL,
         0
     );
@@ -15880,9 +14120,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__33_T() {
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__34_H() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__34_H,
-        mod_consts[216],
+        mod_consts[209],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[217],
+        mod_consts[210],
 #endif
         codeobj_dd1645c6dc927a80d9c4fc17328d642d,
         NULL,
@@ -15891,7 +14131,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__34_H() {
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[117],
+        mod_consts[114],
         NULL,
         0
     );
@@ -15905,7 +14145,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__34_H() {
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__35__from_string() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__35__from_string,
-        mod_consts[135],
+        mod_consts[129],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -15930,7 +14170,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__35__from_st
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__36_bmat(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__36_bmat,
-        mod_consts[225],
+        mod_consts[218],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -15941,7 +14181,7 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__36_bmat(PyO
         NULL,
 #endif
         module_numpy$matrixlib$defmatrix,
-        mod_consts[139],
+        mod_consts[132],
         NULL,
         0
     );
@@ -15955,9 +14195,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__36_bmat(PyO
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__3___new__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__3___new__,
-        mod_consts[43],
+        mod_consts[44],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[170],
+        mod_consts[163],
 #endif
         codeobj_6ecd2d61ddcd625754be51423c9d3e7c,
         defaults,
@@ -15980,9 +14220,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__3___new__(P
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__4___array_finalize__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__4___array_finalize__,
-        mod_consts[171],
+        mod_consts[164],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[172],
+        mod_consts[165],
 #endif
         codeobj_a3898697de0a8bd52afba6da1aa3005b,
         NULL,
@@ -16005,9 +14245,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__4___array_f
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__5___getitem__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__5___getitem__,
-        mod_consts[50],
+        mod_consts[49],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[173],
+        mod_consts[166],
 #endif
         codeobj_01b217e6b7ac337d93ea88d5dd4e6359,
         NULL,
@@ -16030,9 +14270,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__5___getitem
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__6___mul__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__6___mul__,
-        mod_consts[174],
+        mod_consts[167],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[175],
+        mod_consts[168],
 #endif
         codeobj_4db3046a4bb0279cc7f49c8a8d892f25,
         NULL,
@@ -16055,9 +14295,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__6___mul__()
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__7___rmul__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__7___rmul__,
-        mod_consts[59],
+        mod_consts[55],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[176],
+        mod_consts[169],
 #endif
         codeobj_d4c6d6fc5c1dc9a22bca9ea0339b8fad,
         NULL,
@@ -16080,9 +14320,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__7___rmul__(
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__8___imul__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__8___imul__,
-        mod_consts[177],
+        mod_consts[170],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[178],
+        mod_consts[171],
 #endif
         codeobj_e270f05c23913e6e2a817c082d652884,
         NULL,
@@ -16105,9 +14345,9 @@ static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__8___imul__(
 static PyObject *MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__9___pow__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$matrixlib$defmatrix$$$function__9___pow__,
-        mod_consts[179],
+        mod_consts[172],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[180],
+        mod_consts[173],
 #endif
         codeobj_06eb6084087e262f76a1e49f45114ef3,
         NULL,
@@ -16328,71 +14568,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("numpy.matrixlib.defmatrix");
+
+    // Store the module for future use.
     module_numpy$matrixlib$defmatrix = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.matrixlib.defmatrix: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("numpy.matrixlib.defmatrix: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.matrixlib.defmatrix: Calling createModuleConstants().\n");
+        PRINT_STRING("numpy.matrixlib.defmatrix: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.matrixlib.defmatrix: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("numpy.matrixlib.defmatrix: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initnumpy$matrixlib$defmatrix\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_numpy$matrixlib$defmatrix = MODULE_DICT(module_numpy$matrixlib$defmatrix);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -16408,7 +14650,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         UPDATE_STRING_DICT0(
             moduledict_numpy$matrixlib$defmatrix,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[3]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)const_str_plain___name__);
@@ -16458,7 +14700,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -16547,12 +14789,12 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[140], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[141], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[134], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_34b22225057a15cdf8473e094d4ce82e = MAKE_MODULE_FRAME(codeobj_34b22225057a15cdf8473e094d4ce82e, module_numpy$matrixlib$defmatrix);
@@ -16564,17 +14806,17 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[142]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[135]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[142]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[143], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[136], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -16587,17 +14829,17 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[142]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[135]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[142]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[144], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[137], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -16612,34 +14854,33 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[145], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[138], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = LIST_COPY(mod_consts[146]);
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[147], tmp_assign_source_4);
+        tmp_assign_source_4 = LIST_COPY(mod_consts[139]);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[140], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 3;
         tmp_assign_source_5 = IMPORT_HARD_SYS();
         assert(!(tmp_assign_source_5 == NULL));
-        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_5);
+        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[124], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[22];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[6];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[21];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[6];
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 4;
-        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16650,22 +14891,22 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[21], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[10];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[6];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[10];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[6];
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 5;
-        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16682,18 +14923,18 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_1;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[148];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = Py_None;
-        tmp_level_name_3 = mod_consts[6];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[141];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = Py_None;
+        tmp_level_value_3 = mod_consts[6];
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 6;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16708,11 +14949,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             tmp_import_name_from_1 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[149],
+                mod_consts[142],
                 mod_consts[6]
             );
         } else {
-            tmp_import_name_from_1 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[149]);
+            tmp_import_name_from_1 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[142]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -16730,11 +14971,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[150],
+                mod_consts[143],
                 mod_consts[6]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[150]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[143]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -16748,22 +14989,22 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[148];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[151];
-        tmp_level_name_4 = mod_consts[6];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[141];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[144];
+        tmp_level_value_4 = mod_consts[6];
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 7;
-        tmp_assign_source_9 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_assign_source_9 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16787,11 +15028,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[126],
+                mod_consts[121],
                 mod_consts[6]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[126]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[121]);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -16804,7 +15045,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[121], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
@@ -16815,11 +15056,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[55],
+                mod_consts[52],
                 mod_consts[6]
             );
         } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[55]);
+            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[52]);
         }
 
         if (tmp_assign_source_11 == NULL) {
@@ -16832,7 +15073,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_11);
     }
     goto try_end_1;
     // Exception handler code:
@@ -16864,18 +15105,18 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_12;
         PyObject *tmp_import_name_from_5;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[152];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[153];
-        tmp_level_name_5 = mod_consts[6];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[145];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[146];
+        tmp_level_value_5 = mod_consts[6];
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 8;
-        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16890,11 +15131,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[154],
+                mod_consts[147],
                 mod_consts[6]
             );
         } else {
-            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[154]);
+            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[147]);
         }
 
         Py_DECREF(tmp_import_name_from_5);
@@ -16908,23 +15149,23 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[154], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[147], tmp_assign_source_12);
     }
     {
         PyObject *tmp_assign_source_13;
         PyObject *tmp_import_name_from_6;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[103];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[155];
-        tmp_level_name_6 = mod_consts[6];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[100];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_numpy$matrixlib$defmatrix;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[148];
+        tmp_level_value_6 = mod_consts[6];
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 11;
-        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_import_name_from_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16939,11 +15180,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_numpy$matrixlib$defmatrix,
-                mod_consts[61],
+                mod_consts[57],
                 mod_consts[6]
             );
         } else {
-            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[61]);
+            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[57]);
         }
 
         Py_DECREF(tmp_import_name_from_6);
@@ -16957,7 +15198,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[57], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
@@ -16965,21 +15206,21 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_14 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__1__convert_from_string();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[31], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[33], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_defaults_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[154]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[147]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[147]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16990,8 +15231,9 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 36;
-        tmp_called_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, mod_consts[156]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[149]);
+
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17001,16 +15243,16 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_defaults_1 = mod_consts[157];
+        tmp_defaults_1 = mod_consts[150];
         Py_INCREF(tmp_defaults_1);
 
 
-        tmp_args_element_name_1 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__2_asmatrix(tmp_defaults_1);
+        tmp_args_element_value_1 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__2_asmatrix(tmp_defaults_1);
 
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 36;
-        tmp_assign_source_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17021,20 +15263,20 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[57], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_15);
     }
     // Tried code:
     {
         PyObject *tmp_assign_source_16;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[29]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17044,7 +15286,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_2;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[29]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[30]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17092,44 +15334,39 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     }
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[158];
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[151];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[158];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 73;
-
-            goto try_except_handler_2;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[151];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -17152,9 +15389,9 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_2 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[6];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
+        tmp_expression_value_2 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[6];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17165,9 +15402,9 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_2;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17179,14 +15416,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_19 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_19 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17201,16 +15438,16 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         tmp_class_creation_1__metaclass = tmp_assign_source_19;
     }
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[158];
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[151];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_3 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -17219,7 +15456,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[158];
+    tmp_dictdel_key = mod_consts[151];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -17234,10 +15471,10 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[159]);
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[152]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -17248,15 +15485,15 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_20;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_4 = tmp_class_creation_1__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[159]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_4 = tmp_class_creation_1__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[152]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17267,17 +15504,17 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             goto try_except_handler_2;
         }
         tmp_tuple_element_2 = mod_consts[18];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_2 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 73;
-        tmp_assign_source_20 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_20 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17292,14 +15529,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         tmp_class_creation_1__prepared = tmp_assign_source_20;
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_5;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_5 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[50]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_5 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[49]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17310,8 +15547,8 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_2;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -17321,18 +15558,18 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[160];
+        tmp_left_value_1 = mod_consts[153];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[161];
-        tmp_getattr_default_1 = mod_consts[162];
+        tmp_getattr_attr_1 = mod_consts[154];
+        tmp_getattr_default_1 = mod_consts[155];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17344,17 +15581,17 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_2;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_6;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_6 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_6 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[161]);
-            Py_DECREF(tmp_expression_name_6);
+            tmp_expression_value_6 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_6 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[154]);
+            Py_DECREF(tmp_expression_value_6);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -17365,17 +15602,17 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17406,16 +15643,16 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     branch_end_2:;
     {
         PyObject *tmp_assign_source_22;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[147]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[147]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17426,8 +15663,9 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             goto try_except_handler_2;
         }
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 72;
-        tmp_called_name_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, mod_consts[156]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_5, mod_consts[149]);
+
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17446,8 +15684,8 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[163];
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[164], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[156];
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[157], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17458,8 +15696,8 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_4;
         }
-        tmp_dictset_value = mod_consts[165];
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[140], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[158];
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[133], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17471,7 +15709,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             goto try_except_handler_4;
         }
         tmp_dictset_value = mod_consts[18];
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[166], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[159], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17509,8 +15747,8 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         assert(Py_REFCNT(frame_054c52b138de742184a9a3affc195738_2) == 2); // Frame stack
 
         // Framed code:
-        tmp_dictset_value = mod_consts[167];
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[168], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[160];
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[161], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17523,13 +15761,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[169];
+            tmp_defaults_2 = mod_consts[162];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__3___new__(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[43], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[44], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17546,7 +15784,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__4___array_finalize__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[171], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[164], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17562,7 +15800,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__5___getitem__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[50], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[49], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17578,7 +15816,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__6___mul__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[174], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[167], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17594,7 +15832,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__7___rmul__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[59], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[55], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17610,7 +15848,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__8___imul__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[177], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[170], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17626,7 +15864,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__9___pow__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[179], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[172], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17642,7 +15880,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__10___ipow__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[181], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[174], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17658,7 +15896,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__11___rpow__();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[183], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[176], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17674,7 +15912,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__12__align();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[94], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[91], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17690,7 +15928,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__13__collapse();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[72], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[68], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17706,7 +15944,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__14_tolist();
 
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[68], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[64], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17720,13 +15958,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_3;
-            tmp_defaults_3 = mod_consts[188];
+            tmp_defaults_3 = mod_consts[181];
             Py_INCREF(tmp_defaults_3);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__15_sum(tmp_defaults_3);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[70], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[66], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17741,13 +15979,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_4;
-            tmp_defaults_4 = mod_consts[157];
+            tmp_defaults_4 = mod_consts[150];
             Py_INCREF(tmp_defaults_4);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__16_squeeze(tmp_defaults_4);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[75], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[70], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17762,13 +16000,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_5;
-            tmp_defaults_5 = mod_consts[191];
+            tmp_defaults_5 = mod_consts[184];
             Py_INCREF(tmp_defaults_5);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__17_flatten(tmp_defaults_5);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[77], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[73], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17783,13 +16021,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_6;
-            tmp_defaults_6 = mod_consts[188];
+            tmp_defaults_6 = mod_consts[181];
             Py_INCREF(tmp_defaults_6);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__18_mean(tmp_defaults_6);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[79], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[76], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17804,13 +16042,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_7;
-            tmp_defaults_7 = mod_consts[194];
+            tmp_defaults_7 = mod_consts[187];
             Py_INCREF(tmp_defaults_7);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__19_std(tmp_defaults_7);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[81], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[78], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17825,13 +16063,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_8;
-            tmp_defaults_8 = mod_consts[194];
+            tmp_defaults_8 = mod_consts[187];
             Py_INCREF(tmp_defaults_8);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__20_var(tmp_defaults_8);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[83], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[80], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17846,13 +16084,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_9;
-            tmp_defaults_9 = mod_consts[188];
+            tmp_defaults_9 = mod_consts[181];
             Py_INCREF(tmp_defaults_9);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__21_prod(tmp_defaults_9);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[85], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[82], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17867,13 +16105,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_10;
-            tmp_defaults_10 = mod_consts[198];
+            tmp_defaults_10 = mod_consts[191];
             Py_INCREF(tmp_defaults_10);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__22_any(tmp_defaults_10);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[87], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[84], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17888,13 +16126,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_11;
-            tmp_defaults_11 = mod_consts[198];
+            tmp_defaults_11 = mod_consts[191];
             Py_INCREF(tmp_defaults_11);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__23_all(tmp_defaults_11);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[89], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[86], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17909,13 +16147,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_12;
-            tmp_defaults_12 = mod_consts[198];
+            tmp_defaults_12 = mod_consts[191];
             Py_INCREF(tmp_defaults_12);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__24_max(tmp_defaults_12);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[91], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[88], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17930,13 +16168,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_13;
-            tmp_defaults_13 = mod_consts[198];
+            tmp_defaults_13 = mod_consts[191];
             Py_INCREF(tmp_defaults_13);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__25_argmax(tmp_defaults_13);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[93], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[90], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17951,13 +16189,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_14;
-            tmp_defaults_14 = mod_consts[198];
+            tmp_defaults_14 = mod_consts[191];
             Py_INCREF(tmp_defaults_14);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__26_min(tmp_defaults_14);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[96], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[93], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17972,13 +16210,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_15;
-            tmp_defaults_15 = mod_consts[198];
+            tmp_defaults_15 = mod_consts[191];
             Py_INCREF(tmp_defaults_15);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__27_argmin(tmp_defaults_15);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[98], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[95], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17993,13 +16231,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_16;
-            tmp_defaults_16 = mod_consts[198];
+            tmp_defaults_16 = mod_consts[191];
             Py_INCREF(tmp_defaults_16);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__28_ptp(tmp_defaults_16);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[100], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[97], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18014,11 +16252,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_6;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_element_name_3;
-            PyObject *tmp_called_name_7;
-            PyObject *tmp_args_element_name_4;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_element_value_3;
+            PyObject *tmp_called_value_7;
+            PyObject *tmp_args_element_value_4;
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -18037,11 +16275,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto condexpr_false_3;
             }
             condexpr_true_3:;
-            tmp_called_name_6 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            tmp_called_value_6 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
-            if (unlikely(tmp_called_name_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[206]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[199]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -18050,7 +16288,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_6 == NULL) {
+            if (tmp_called_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18062,12 +16300,12 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_3 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__29_I();
+            tmp_args_element_value_3 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__29_I();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 792;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_3);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_3);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_3);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_args_element_value_3);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18080,14 +16318,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_3;
             condexpr_false_3:;
-            tmp_called_name_7 = (PyObject *)&PyProperty_Type;
+            tmp_called_value_7 = (PyObject *)&PyProperty_Type;
 
 
-            tmp_args_element_name_4 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__29_I();
+            tmp_args_element_value_4 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__29_I();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 792;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_4);
-            Py_DECREF(tmp_args_element_name_4);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_4);
+            Py_DECREF(tmp_args_element_value_4);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18099,7 +16337,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_3:;
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[207], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[200], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18114,11 +16352,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_7;
-            PyObject *tmp_called_name_8;
-            PyObject *tmp_args_element_name_5;
-            PyObject *tmp_called_name_9;
-            PyObject *tmp_args_element_name_6;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            PyObject *tmp_called_value_8;
+            PyObject *tmp_args_element_value_5;
+            PyObject *tmp_called_value_9;
+            PyObject *tmp_args_element_value_6;
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -18137,11 +16375,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto condexpr_false_4;
             }
             condexpr_true_4:;
-            tmp_called_name_8 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            tmp_called_value_8 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
-            if (unlikely(tmp_called_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[206]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[199]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -18150,7 +16388,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_8 == NULL) {
+            if (tmp_called_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18162,12 +16400,12 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_5 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__30_A();
+            tmp_args_element_value_5 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__30_A();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 837;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_5);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_5);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_5);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_5);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18180,14 +16418,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_4;
             condexpr_false_4:;
-            tmp_called_name_9 = (PyObject *)&PyProperty_Type;
+            tmp_called_value_9 = (PyObject *)&PyProperty_Type;
 
 
-            tmp_args_element_name_6 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__30_A();
+            tmp_args_element_value_6 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__30_A();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 837;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_6);
-            Py_DECREF(tmp_args_element_name_6);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_6);
+            Py_DECREF(tmp_args_element_value_6);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18199,7 +16437,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_4:;
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[209], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[202], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18214,11 +16452,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_8;
-            PyObject *tmp_called_name_10;
-            PyObject *tmp_args_element_name_7;
-            PyObject *tmp_called_name_11;
-            PyObject *tmp_args_element_name_8;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            PyObject *tmp_called_value_10;
+            PyObject *tmp_args_element_value_7;
+            PyObject *tmp_called_value_11;
+            PyObject *tmp_args_element_value_8;
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -18237,11 +16475,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto condexpr_false_5;
             }
             condexpr_true_5:;
-            tmp_called_name_10 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            tmp_called_value_10 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
-            if (unlikely(tmp_called_name_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[206]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[199]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -18250,7 +16488,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_10 == NULL) {
+            if (tmp_called_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18262,12 +16500,12 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_7 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__31_A1();
+            tmp_args_element_value_7 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__31_A1();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 867;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_7);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_args_element_name_7);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_7);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_args_element_value_7);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18280,14 +16518,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_5;
             condexpr_false_5:;
-            tmp_called_name_11 = (PyObject *)&PyProperty_Type;
+            tmp_called_value_11 = (PyObject *)&PyProperty_Type;
 
 
-            tmp_args_element_name_8 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__31_A1();
+            tmp_args_element_value_8 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__31_A1();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 867;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_8);
-            Py_DECREF(tmp_args_element_name_8);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_8);
+            Py_DECREF(tmp_args_element_value_8);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18299,7 +16537,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_5:;
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[211], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[204], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18314,13 +16552,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_17;
-            tmp_defaults_17 = mod_consts[191];
+            tmp_defaults_17 = mod_consts[184];
             Py_INCREF(tmp_defaults_17);
 
 
             tmp_dictset_value = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__32_ravel(tmp_defaults_17);
 
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[110], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[107], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18335,11 +16573,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_9;
-            PyObject *tmp_called_name_12;
-            PyObject *tmp_args_element_name_9;
-            PyObject *tmp_called_name_13;
-            PyObject *tmp_args_element_name_10;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            PyObject *tmp_called_value_12;
+            PyObject *tmp_args_element_value_9;
+            PyObject *tmp_called_value_13;
+            PyObject *tmp_args_element_value_10;
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -18358,11 +16596,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto condexpr_false_6;
             }
             condexpr_true_6:;
-            tmp_called_name_12 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            tmp_called_value_12 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
-            if (unlikely(tmp_called_name_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[206]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[199]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -18371,7 +16609,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_12 == NULL) {
+            if (tmp_called_value_12 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18383,12 +16621,12 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_9 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__33_T();
+            tmp_args_element_value_9 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__33_T();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 935;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_9);
-            Py_DECREF(tmp_called_name_12);
-            Py_DECREF(tmp_args_element_name_9);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_9);
+            Py_DECREF(tmp_called_value_12);
+            Py_DECREF(tmp_args_element_value_9);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18401,14 +16639,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_6;
             condexpr_false_6:;
-            tmp_called_name_13 = (PyObject *)&PyProperty_Type;
+            tmp_called_value_13 = (PyObject *)&PyProperty_Type;
 
 
-            tmp_args_element_name_10 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__33_T();
+            tmp_args_element_value_10 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__33_T();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 935;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, tmp_args_element_name_10);
-            Py_DECREF(tmp_args_element_name_10);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_10);
+            Py_DECREF(tmp_args_element_value_10);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18420,7 +16658,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_6:;
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[214], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[207], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18435,11 +16673,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_10;
-            PyObject *tmp_called_name_14;
-            PyObject *tmp_args_element_name_11;
-            PyObject *tmp_called_name_15;
-            PyObject *tmp_args_element_name_12;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            PyObject *tmp_called_value_14;
+            PyObject *tmp_args_element_value_11;
+            PyObject *tmp_called_value_15;
+            PyObject *tmp_args_element_value_12;
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -18458,11 +16696,11 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto condexpr_false_7;
             }
             condexpr_true_7:;
-            tmp_called_name_14 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[206]);
+            tmp_called_value_14 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[199]);
 
-            if (unlikely(tmp_called_name_14 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_14 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[206]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[199]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -18471,7 +16709,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_14 == NULL) {
+            if (tmp_called_value_14 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18483,12 +16721,12 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_11 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__34_H();
+            tmp_args_element_value_11 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__34_H();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 968;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_14, tmp_args_element_name_11);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_element_name_11);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_14, tmp_args_element_value_11);
+            Py_DECREF(tmp_called_value_14);
+            Py_DECREF(tmp_args_element_value_11);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18501,14 +16739,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_7;
             condexpr_false_7:;
-            tmp_called_name_15 = (PyObject *)&PyProperty_Type;
+            tmp_called_value_15 = (PyObject *)&PyProperty_Type;
 
 
-            tmp_args_element_name_12 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__34_H();
+            tmp_args_element_value_12 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__34_H();
 
             frame_054c52b138de742184a9a3affc195738_2->m_frame.f_lineno = 968;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, tmp_args_element_name_12);
-            Py_DECREF(tmp_args_element_name_12);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_15, tmp_args_element_value_12);
+            Py_DECREF(tmp_args_element_value_12);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18520,7 +16758,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_7:;
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[216], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[209], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18534,221 +16772,221 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             }
         }
         {
-            PyObject *tmp_expression_name_7;
-            tmp_expression_name_7 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[214]);
+            PyObject *tmp_expression_value_7;
+            tmp_expression_value_7 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[207]);
 
-            if (unlikely(tmp_expression_name_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[214]);
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 1004;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-
-            if (tmp_expression_name_7 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1004;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[218]);
-            Py_DECREF(tmp_expression_name_7);
-            if (tmp_dictset_value == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1004;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[219], tmp_dictset_value);
-            Py_DECREF(tmp_dictset_value);
-            if (tmp_res != 0) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1004;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-        }
-        {
-            PyObject *tmp_expression_name_8;
-            tmp_expression_name_8 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[209]);
-
-            if (unlikely(tmp_expression_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[209]);
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 1005;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-
-            if (tmp_expression_name_8 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1005;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[218]);
-            Py_DECREF(tmp_expression_name_8);
-            if (tmp_dictset_value == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1005;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[220], tmp_dictset_value);
-            Py_DECREF(tmp_dictset_value);
-            if (tmp_res != 0) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1005;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-        }
-        {
-            PyObject *tmp_expression_name_9;
-            tmp_expression_name_9 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[211]);
-
-            if (unlikely(tmp_expression_name_9 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[211]);
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 1006;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-
-            if (tmp_expression_name_9 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1006;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[218]);
-            Py_DECREF(tmp_expression_name_9);
-            if (tmp_dictset_value == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1006;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[221], tmp_dictset_value);
-            Py_DECREF(tmp_dictset_value);
-            if (tmp_res != 0) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1006;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-        }
-        {
-            PyObject *tmp_expression_name_10;
-            tmp_expression_name_10 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[216]);
-
-            if (unlikely(tmp_expression_name_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
-
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[216]);
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 1007;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-
-            if (tmp_expression_name_10 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1007;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[218]);
-            Py_DECREF(tmp_expression_name_10);
-            if (tmp_dictset_value == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1007;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[222], tmp_dictset_value);
-            Py_DECREF(tmp_dictset_value);
-            if (tmp_res != 0) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 1007;
-                type_description_2 = "o";
-                goto frame_exception_exit_2;
-            }
-        }
-        {
-            PyObject *tmp_expression_name_11;
-            tmp_expression_name_11 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[207]);
-
-            if (unlikely(tmp_expression_name_11 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_expression_value_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
                 FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[207]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
+                exception_lineno = 1004;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+
+            if (tmp_expression_value_7 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1004;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[211]);
+            Py_DECREF(tmp_expression_value_7);
+            if (tmp_dictset_value == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1004;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[212], tmp_dictset_value);
+            Py_DECREF(tmp_dictset_value);
+            if (tmp_res != 0) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1004;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+        }
+        {
+            PyObject *tmp_expression_value_8;
+            tmp_expression_value_8 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[202]);
+
+            if (unlikely(tmp_expression_value_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+                CHAIN_EXCEPTION(exception_value);
+
+                exception_lineno = 1005;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+
+            if (tmp_expression_value_8 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1005;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[211]);
+            Py_DECREF(tmp_expression_value_8);
+            if (tmp_dictset_value == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1005;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[213], tmp_dictset_value);
+            Py_DECREF(tmp_dictset_value);
+            if (tmp_res != 0) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1005;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+        }
+        {
+            PyObject *tmp_expression_value_9;
+            tmp_expression_value_9 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[204]);
+
+            if (unlikely(tmp_expression_value_9 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[204]);
+                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+                CHAIN_EXCEPTION(exception_value);
+
+                exception_lineno = 1006;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+
+            if (tmp_expression_value_9 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1006;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[211]);
+            Py_DECREF(tmp_expression_value_9);
+            if (tmp_dictset_value == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1006;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[214], tmp_dictset_value);
+            Py_DECREF(tmp_dictset_value);
+            if (tmp_res != 0) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1006;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+        }
+        {
+            PyObject *tmp_expression_value_10;
+            tmp_expression_value_10 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[209]);
+
+            if (unlikely(tmp_expression_value_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[209]);
+                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+                CHAIN_EXCEPTION(exception_value);
+
+                exception_lineno = 1007;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+
+            if (tmp_expression_value_10 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1007;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[211]);
+            Py_DECREF(tmp_expression_value_10);
+            if (tmp_dictset_value == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1007;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[215], tmp_dictset_value);
+            Py_DECREF(tmp_dictset_value);
+            if (tmp_res != 0) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1007;
+                type_description_2 = "o";
+                goto frame_exception_exit_2;
+            }
+        }
+        {
+            PyObject *tmp_expression_value_11;
+            tmp_expression_value_11 = PyObject_GetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[200]);
+
+            if (unlikely(tmp_expression_value_11 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[200]);
+                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+                CHAIN_EXCEPTION(exception_value);
+
                 exception_lineno = 1008;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_expression_name_11 == NULL) {
+            if (tmp_expression_value_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18758,8 +16996,8 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[218]);
-            Py_DECREF(tmp_expression_name_11);
+            tmp_dictset_value = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[211]);
+            Py_DECREF(tmp_expression_value_11);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18770,7 +17008,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[223], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[216], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18840,13 +17078,13 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_11;
-            PyObject *tmp_compexpr_left_1;
-            PyObject *tmp_compexpr_right_1;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_1 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
             CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-            tmp_compexpr_right_1 = tmp_class_creation_1__bases_orig;
-            tmp_condition_result_11 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+            tmp_cmp_expr_right_1 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_11 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_11 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -18867,7 +17105,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         branch_yes_4:;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[224], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73, mod_consts[217], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -18881,25 +17119,25 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         branch_no_4:;
         {
             PyObject *tmp_assign_source_23;
-            PyObject *tmp_called_name_16;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_16;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_4;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_16 = tmp_class_creation_1__metaclass;
+            tmp_called_value_16 = tmp_class_creation_1__metaclass;
             tmp_tuple_element_4 = mod_consts[18];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_4);
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_4 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_4);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_4);
             tmp_tuple_element_4 = locals_numpy$matrixlib$defmatrix$$$class__1_matrix_73;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_4);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 73;
-            tmp_assign_source_23 = CALL_FUNCTION(tmp_called_name_16, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_23 = CALL_FUNCTION(tmp_called_value_16, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_23 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18914,8 +17152,8 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             outline_0_var___class__ = tmp_assign_source_23;
         }
         CHECK_OBJECT(outline_0_var___class__);
-        tmp_args_element_name_2 = outline_0_var___class__;
-        Py_INCREF(tmp_args_element_name_2);
+        tmp_args_element_value_2 = outline_0_var___class__;
+        Py_INCREF(tmp_args_element_value_2);
         goto try_return_handler_4;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -18979,9 +17217,9 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
         goto try_except_handler_2;
         outline_result_1:;
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 72;
-        tmp_assign_source_22 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_assign_source_22 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19028,11 +17266,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);
     tmp_class_creation_1__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -19043,21 +17284,21 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_24 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__35__from_string();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[135], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
-        PyObject *tmp_called_name_17;
-        PyObject *tmp_called_name_18;
-        PyObject *tmp_args_element_name_13;
+        PyObject *tmp_called_value_17;
+        PyObject *tmp_called_value_18;
+        PyObject *tmp_args_element_value_13;
         PyObject *tmp_defaults_18;
-        tmp_called_name_18 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[154]);
+        tmp_called_value_18 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[147]);
 
-        if (unlikely(tmp_called_name_18 == NULL)) {
-            tmp_called_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_called_value_18 == NULL)) {
+            tmp_called_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[147]);
         }
 
-        if (tmp_called_name_18 == NULL) {
+        if (tmp_called_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19068,8 +17309,9 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 1035;
-        tmp_called_name_17 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_18, mod_consts[156]);
-        if (tmp_called_name_17 == NULL) {
+        tmp_called_value_17 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_18, mod_consts[149]);
+
+        if (tmp_called_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19079,16 +17321,16 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_defaults_18 = mod_consts[198];
+        tmp_defaults_18 = mod_consts[191];
         Py_INCREF(tmp_defaults_18);
 
 
-        tmp_args_element_name_13 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__36_bmat(tmp_defaults_18);
+        tmp_args_element_value_13 = MAKE_FUNCTION_numpy$matrixlib$defmatrix$$$function__36_bmat(tmp_defaults_18);
 
         frame_34b22225057a15cdf8473e094d4ce82e->m_frame.f_lineno = 1035;
-        tmp_assign_source_25 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_17, tmp_args_element_name_13);
-        Py_DECREF(tmp_called_name_17);
-        Py_DECREF(tmp_args_element_name_13);
+        tmp_assign_source_25 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_17, tmp_args_element_value_13);
+        Py_DECREF(tmp_called_value_17);
+        Py_DECREF(tmp_args_element_value_13);
         if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19099,14 +17341,14 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[225], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[218], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
-        tmp_assign_source_26 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[57]);
+        tmp_assign_source_26 = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[54]);
 
         if (unlikely(tmp_assign_source_26 == NULL)) {
-            tmp_assign_source_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+            tmp_assign_source_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
         }
 
         if (tmp_assign_source_26 == NULL) {
@@ -19119,7 +17361,7 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[226], tmp_assign_source_26);
+        UPDATE_STRING_DICT0(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)mod_consts[219], tmp_assign_source_26);
     }
 
     // Restore frame exception if necessary.
@@ -19151,9 +17393,23 @@ PyObject *modulecode_numpy$matrixlib$defmatrix(PyObject *module, struct Nuitka_M
 
     frame_no_exception_2:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("numpy.matrixlib.defmatrix", false);
+
     return module_numpy$matrixlib$defmatrix;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$matrixlib$defmatrix, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("numpy$matrixlib$defmatrix", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

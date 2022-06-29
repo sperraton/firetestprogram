@@ -51,6 +51,7 @@ class TimeExtensionDialog(wx.Dialog):
         pub.sendMessage("test.extend", amtMinutes=self.extendAmt.GetValue())
         self.closeCleanUp()
         self.Destroy()
+        event.Skip()
 
     def testOver(self):
         self.closeCleanUp()
@@ -58,9 +59,11 @@ class TimeExtensionDialog(wx.Dialog):
 
     def onClose(self, event):
         self.closeCleanUp()
+        event.Skip()
 
     def onDestroy(self, event):
         self.closeCleanUp()
+        event.Skip()
 
     def closeCleanUp(self):
         pub.unsubscribe(self.testOver, "test.finished")

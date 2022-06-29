@@ -1,5 +1,5 @@
 /* Generated code for Python module 'wx.lib.agw.aui.aui_constants'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_wx$lib$agw$aui$aui_constants;
 PyDictObject *moduledict_wx$lib$agw$aui$aui_constants;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[451];
+static PyObject *mod_consts[452];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[452];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("wx.lib.agw.aui.aui_constants"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 452; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_wx$lib$agw$aui$aui_constants(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "wx.lib.agw.aui.aui_constants");
+    for (int i = 0; i < 452; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -246,71 +258,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("wx.lib.agw.aui.aui_constants");
+
+    // Store the module for future use.
     module_wx$lib$agw$aui$aui_constants = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.agw.aui.aui_constants: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("wx.lib.agw.aui.aui_constants: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.agw.aui.aui_constants: Calling createModuleConstants().\n");
+        PRINT_STRING("wx.lib.agw.aui.aui_constants: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.agw.aui.aui_constants: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("wx.lib.agw.aui.aui_constants: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initwx$lib$agw$aui$aui_constants\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_wx$lib$agw$aui$aui_constants = MODULE_DICT(module_wx$lib$agw$aui$aui_constants);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -326,7 +340,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
         UPDATE_STRING_DICT0(
             moduledict_wx$lib$agw$aui$aui_constants,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[451]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)const_str_plain___name__);
@@ -376,7 +390,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -485,9 +499,9 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_value_1 = module_filename_obj;
         tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[3]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
@@ -495,7 +509,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[4], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[4], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -508,9 +522,9 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
+        tmp_assattr_value_2 = Py_True;
         tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[3]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
@@ -518,7 +532,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[5], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[5], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -547,18 +561,18 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[11];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_wx$lib$agw$aui$aui_constants;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[12];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[11];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_wx$lib$agw$aui$aui_constants;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[12];
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 25;
-        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -574,18 +588,18 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[13];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_wx$lib$agw$aui$aui_constants;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[14];
-        tmp_level_name_2 = mod_consts[12];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[13];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_wx$lib$agw$aui$aui_constants;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[14];
+        tmp_level_value_2 = mod_consts[12];
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 26;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -627,18 +641,16 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -648,8 +660,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[18]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[18]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -659,10 +671,10 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[19];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[19];
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -672,24 +684,12 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 38;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
@@ -701,18 +701,16 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -722,8 +720,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[18]);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[18]);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -733,10 +731,10 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[22];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_right_2 = mod_consts[22];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -746,24 +744,12 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 42;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -797,14 +783,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -815,7 +801,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 61;
-        tmp_assign_source_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[31]);
+        tmp_assign_source_15 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[31]);
+
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -830,14 +817,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_2;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -848,7 +835,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 68;
-        tmp_assign_source_16 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, mod_consts[33]);
+        tmp_assign_source_16 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[33]);
+
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -863,14 +851,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -881,7 +869,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 83;
-        tmp_assign_source_17 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, mod_consts[35]);
+        tmp_assign_source_17 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[35]);
+
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -896,14 +885,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_called_name_4;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_4;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -914,7 +903,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 100;
-        tmp_assign_source_18 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, mod_consts[37]);
+        tmp_assign_source_18 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_4, mod_consts[37]);
+
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -929,14 +919,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_called_name_5;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_5;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -947,7 +937,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 108;
-        tmp_assign_source_19 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, mod_consts[39]);
+        tmp_assign_source_19 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_5, mod_consts[39]);
+
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -962,14 +953,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_20;
-        PyObject *tmp_called_name_6;
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_6;
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -980,7 +971,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 118;
-        tmp_assign_source_20 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, mod_consts[41]);
+        tmp_assign_source_20 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_6, mod_consts[41]);
+
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -995,14 +987,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_called_name_7;
-        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_7;
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_7 == NULL)) {
-            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_7 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1013,7 +1005,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 129;
-        tmp_assign_source_21 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, mod_consts[43]);
+        tmp_assign_source_21 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_7, mod_consts[43]);
+
         if (tmp_assign_source_21 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1028,14 +1021,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_22;
-        PyObject *tmp_called_name_8;
-        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_8;
+        tmp_called_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_8 == NULL)) {
-            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_8 == NULL)) {
+            tmp_called_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_8 == NULL) {
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1046,7 +1039,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 136;
-        tmp_assign_source_22 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, mod_consts[45]);
+        tmp_assign_source_22 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_8, mod_consts[45]);
+
         if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1061,14 +1055,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_called_name_9;
-        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_9;
+        tmp_called_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_9 == NULL)) {
-            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_9 == NULL)) {
+            tmp_called_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_9 == NULL) {
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1079,7 +1073,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 151;
-        tmp_assign_source_23 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, mod_consts[47]);
+        tmp_assign_source_23 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_9, mod_consts[47]);
+
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1214,96 +1209,96 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_48;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_right_name_6;
-        tmp_left_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_right_value_6;
+        tmp_left_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_left_name_6 == NULL)) {
-            tmp_left_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_left_value_6 == NULL)) {
+            tmp_left_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        assert(!(tmp_left_name_6 == NULL));
-        tmp_right_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[59]);
+        assert(!(tmp_left_value_6 == NULL));
+        tmp_right_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_right_name_1 == NULL)) {
-            tmp_right_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        if (unlikely(tmp_right_value_1 == NULL)) {
+            tmp_right_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        assert(!(tmp_right_name_1 == NULL));
-        tmp_left_name_5 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_6, tmp_right_name_1);
-        assert(!(tmp_left_name_5 == NULL));
-        tmp_right_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[61]);
+        assert(!(tmp_right_value_1 == NULL));
+        tmp_left_value_5 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_6, tmp_right_value_1);
+        assert(!(tmp_left_value_5 == NULL));
+        tmp_right_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[61]);
 
-        if (unlikely(tmp_right_name_2 == NULL)) {
-            tmp_right_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
+        if (unlikely(tmp_right_value_2 == NULL)) {
+            tmp_right_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
         }
 
-        assert(!(tmp_right_name_2 == NULL));
-        tmp_left_name_4 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_5, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_5);
-        assert(!(tmp_left_name_4 == NULL));
-        tmp_right_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[67]);
+        assert(!(tmp_right_value_2 == NULL));
+        tmp_left_value_4 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_5, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_5);
+        assert(!(tmp_left_value_4 == NULL));
+        tmp_right_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[67]);
 
-        if (unlikely(tmp_right_name_3 == NULL)) {
-            tmp_right_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
+        if (unlikely(tmp_right_value_3 == NULL)) {
+            tmp_right_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
-        assert(!(tmp_right_name_3 == NULL));
-        tmp_left_name_3 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_4, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_4);
-        assert(!(tmp_left_name_3 == NULL));
-        tmp_right_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[73]);
+        assert(!(tmp_right_value_3 == NULL));
+        tmp_left_value_3 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_4, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_4);
+        assert(!(tmp_left_value_3 == NULL));
+        tmp_right_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[73]);
 
-        if (unlikely(tmp_right_name_4 == NULL)) {
-            tmp_right_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[73]);
+        if (unlikely(tmp_right_value_4 == NULL)) {
+            tmp_right_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[73]);
         }
 
-        assert(!(tmp_right_name_4 == NULL));
-        tmp_left_name_2 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_3, tmp_right_name_4);
-        Py_DECREF(tmp_left_name_3);
-        assert(!(tmp_left_name_2 == NULL));
-        tmp_right_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[77]);
+        assert(!(tmp_right_value_4 == NULL));
+        tmp_left_value_2 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_3, tmp_right_value_4);
+        Py_DECREF(tmp_left_value_3);
+        assert(!(tmp_left_value_2 == NULL));
+        tmp_right_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[77]);
 
-        if (unlikely(tmp_right_name_5 == NULL)) {
-            tmp_right_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[77]);
+        if (unlikely(tmp_right_value_5 == NULL)) {
+            tmp_right_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[77]);
         }
 
-        assert(!(tmp_right_name_5 == NULL));
-        tmp_left_name_1 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_2, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_2);
-        assert(!(tmp_left_name_1 == NULL));
-        tmp_right_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[91]);
+        assert(!(tmp_right_value_5 == NULL));
+        tmp_left_value_1 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_2, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_2);
+        assert(!(tmp_left_value_1 == NULL));
+        tmp_right_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[91]);
 
-        if (unlikely(tmp_right_name_6 == NULL)) {
-            tmp_right_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[91]);
+        if (unlikely(tmp_right_value_6 == NULL)) {
+            tmp_right_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[91]);
         }
 
-        assert(!(tmp_right_name_6 == NULL));
-        tmp_assign_source_48 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_1);
+        assert(!(tmp_right_value_6 == NULL));
+        tmp_assign_source_48 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_1);
         assert(!(tmp_assign_source_48 == NULL));
         UPDATE_STRING_DICT1(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[96], tmp_assign_source_48);
     }
     {
         PyObject *tmp_assign_source_49;
-        PyObject *tmp_called_name_10;
-        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_10;
+        tmp_called_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_10 == NULL)) {
-            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_10 == NULL)) {
+            tmp_called_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_10 == NULL) {
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1314,7 +1309,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 231;
-        tmp_assign_source_49 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, mod_consts[97]);
+        tmp_assign_source_49 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_10, mod_consts[97]);
+
         if (tmp_assign_source_49 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1455,47 +1451,47 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_74;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_right_name_9;
-        tmp_left_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[110]);
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_right_value_9;
+        tmp_left_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[110]);
 
-        if (unlikely(tmp_left_name_9 == NULL)) {
-            tmp_left_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[110]);
+        if (unlikely(tmp_left_value_9 == NULL)) {
+            tmp_left_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[110]);
         }
 
-        assert(!(tmp_left_name_9 == NULL));
-        tmp_right_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[113]);
+        assert(!(tmp_left_value_9 == NULL));
+        tmp_right_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[113]);
 
-        if (unlikely(tmp_right_name_7 == NULL)) {
-            tmp_right_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[113]);
+        if (unlikely(tmp_right_value_7 == NULL)) {
+            tmp_right_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[113]);
         }
 
-        assert(!(tmp_right_name_7 == NULL));
-        tmp_left_name_8 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_9, tmp_right_name_7);
-        assert(!(tmp_left_name_8 == NULL));
-        tmp_right_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[116]);
+        assert(!(tmp_right_value_7 == NULL));
+        tmp_left_value_8 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_9, tmp_right_value_7);
+        assert(!(tmp_left_value_8 == NULL));
+        tmp_right_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[116]);
 
-        if (unlikely(tmp_right_name_8 == NULL)) {
-            tmp_right_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[116]);
+        if (unlikely(tmp_right_value_8 == NULL)) {
+            tmp_right_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[116]);
         }
 
-        assert(!(tmp_right_name_8 == NULL));
-        tmp_left_name_7 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_8, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_8);
-        assert(!(tmp_left_name_7 == NULL));
-        tmp_right_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[117]);
+        assert(!(tmp_right_value_8 == NULL));
+        tmp_left_value_7 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_8, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_8);
+        assert(!(tmp_left_value_7 == NULL));
+        tmp_right_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[117]);
 
-        if (unlikely(tmp_right_name_9 == NULL)) {
-            tmp_right_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
+        if (unlikely(tmp_right_value_9 == NULL)) {
+            tmp_right_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
         }
 
-        assert(!(tmp_right_name_9 == NULL));
-        tmp_assign_source_74 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_7, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_7);
+        assert(!(tmp_right_value_9 == NULL));
+        tmp_assign_source_74 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_7, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_7);
         assert(!(tmp_assign_source_74 == NULL));
         UPDATE_STRING_DICT1(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_74);
     }
@@ -1876,18 +1872,16 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_3;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_3;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1897,8 +1891,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[18]);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[18]);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1908,10 +1902,10 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = mod_consts[19];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_right_3 = mod_consts[19];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1921,24 +1915,12 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 475;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
@@ -1950,18 +1932,16 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_4;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_4;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1971,8 +1951,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[18]);
-        if (tmp_compexpr_left_4 == NULL) {
+        tmp_cmp_expr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[18]);
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1982,10 +1962,10 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = mod_consts[22];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_left_4);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_right_4 = mod_consts[22];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1995,24 +1975,12 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 480;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
@@ -2056,14 +2024,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_158;
-        PyObject *tmp_called_name_11;
-        tmp_called_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_11;
+        tmp_called_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_11 == NULL)) {
-            tmp_called_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_11 == NULL)) {
+            tmp_called_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_11 == NULL) {
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2074,7 +2042,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 525;
-        tmp_assign_source_158 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, mod_consts[248]);
+        tmp_assign_source_158 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_11, mod_consts[248]);
+
         if (tmp_assign_source_158 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2089,14 +2058,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_159;
-        PyObject *tmp_called_name_12;
-        tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_12;
+        tmp_called_value_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_12 == NULL)) {
-            tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_12 == NULL)) {
+            tmp_called_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_12 == NULL) {
+        if (tmp_called_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2107,7 +2076,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 542;
-        tmp_assign_source_159 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, mod_consts[250]);
+        tmp_assign_source_159 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_12, mod_consts[250]);
+
         if (tmp_assign_source_159 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2122,14 +2092,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_160;
-        PyObject *tmp_called_name_13;
-        tmp_called_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_13;
+        tmp_called_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_13 == NULL)) {
-            tmp_called_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_13 == NULL)) {
+            tmp_called_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_13 == NULL) {
+        if (tmp_called_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2140,7 +2110,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 559;
-        tmp_assign_source_160 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, mod_consts[252]);
+        tmp_assign_source_160 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_13, mod_consts[252]);
+
         if (tmp_assign_source_160 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2155,14 +2126,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_161;
-        PyObject *tmp_called_name_14;
-        tmp_called_name_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_14;
+        tmp_called_value_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_14 == NULL)) {
-            tmp_called_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_14 == NULL)) {
+            tmp_called_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_14 == NULL) {
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2173,7 +2144,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 576;
-        tmp_assign_source_161 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_14, mod_consts[254]);
+        tmp_assign_source_161 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_14, mod_consts[254]);
+
         if (tmp_assign_source_161 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2188,14 +2160,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_162;
-        PyObject *tmp_called_name_15;
-        tmp_called_name_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_15;
+        tmp_called_value_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_15 == NULL)) {
-            tmp_called_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_15 == NULL)) {
+            tmp_called_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_15 == NULL) {
+        if (tmp_called_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2206,7 +2178,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 593;
-        tmp_assign_source_162 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, mod_consts[256]);
+        tmp_assign_source_162 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_15, mod_consts[256]);
+
         if (tmp_assign_source_162 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2221,14 +2194,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_163;
-        PyObject *tmp_called_name_16;
-        tmp_called_name_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_16;
+        tmp_called_value_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_16 == NULL)) {
-            tmp_called_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_16 == NULL)) {
+            tmp_called_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_16 == NULL) {
+        if (tmp_called_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2239,7 +2212,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 610;
-        tmp_assign_source_163 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_16, mod_consts[258]);
+        tmp_assign_source_163 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_16, mod_consts[258]);
+
         if (tmp_assign_source_163 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2254,14 +2228,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_164;
-        PyObject *tmp_called_name_17;
-        tmp_called_name_17 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_17;
+        tmp_called_value_17 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_17 == NULL)) {
-            tmp_called_name_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_17 == NULL)) {
+            tmp_called_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_17 == NULL) {
+        if (tmp_called_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2272,7 +2246,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 627;
-        tmp_assign_source_164 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_17, mod_consts[260]);
+        tmp_assign_source_164 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_17, mod_consts[260]);
+
         if (tmp_assign_source_164 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2287,14 +2262,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_165;
-        PyObject *tmp_called_name_18;
-        tmp_called_name_18 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_18;
+        tmp_called_value_18 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_18 == NULL)) {
-            tmp_called_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_18 == NULL)) {
+            tmp_called_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_18 == NULL) {
+        if (tmp_called_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2305,7 +2280,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 646;
-        tmp_assign_source_165 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_18, mod_consts[262]);
+        tmp_assign_source_165 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_18, mod_consts[262]);
+
         if (tmp_assign_source_165 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2320,14 +2296,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_166;
-        PyObject *tmp_called_name_19;
-        tmp_called_name_19 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_19;
+        tmp_called_value_19 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_19 == NULL)) {
-            tmp_called_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_19 == NULL)) {
+            tmp_called_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_19 == NULL) {
+        if (tmp_called_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2338,7 +2314,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 665;
-        tmp_assign_source_166 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_19, mod_consts[264]);
+        tmp_assign_source_166 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_19, mod_consts[264]);
+
         if (tmp_assign_source_166 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2353,14 +2330,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_167;
-        PyObject *tmp_called_name_20;
-        tmp_called_name_20 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_20;
+        tmp_called_value_20 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_20 == NULL)) {
-            tmp_called_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_20 == NULL)) {
+            tmp_called_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_20 == NULL) {
+        if (tmp_called_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2371,7 +2348,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 682;
-        tmp_assign_source_167 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_20, mod_consts[266]);
+        tmp_assign_source_167 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_20, mod_consts[266]);
+
         if (tmp_assign_source_167 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2386,14 +2364,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_168;
-        PyObject *tmp_called_name_21;
-        tmp_called_name_21 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_21;
+        tmp_called_value_21 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_21 == NULL)) {
-            tmp_called_name_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_21 == NULL)) {
+            tmp_called_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_21 == NULL) {
+        if (tmp_called_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2404,7 +2382,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 699;
-        tmp_assign_source_168 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_21, mod_consts[268]);
+        tmp_assign_source_168 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_21, mod_consts[268]);
+
         if (tmp_assign_source_168 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2419,14 +2398,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_169;
-        PyObject *tmp_called_name_22;
-        tmp_called_name_22 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_22;
+        tmp_called_value_22 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_22 == NULL)) {
-            tmp_called_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_22 == NULL)) {
+            tmp_called_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_22 == NULL) {
+        if (tmp_called_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2437,7 +2416,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 715;
-        tmp_assign_source_169 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_22, mod_consts[248]);
+        tmp_assign_source_169 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_22, mod_consts[248]);
+
         if (tmp_assign_source_169 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2452,14 +2432,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_170;
-        PyObject *tmp_called_name_23;
-        tmp_called_name_23 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_23;
+        tmp_called_value_23 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_23 == NULL)) {
-            tmp_called_name_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_23 == NULL)) {
+            tmp_called_value_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_23 == NULL) {
+        if (tmp_called_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2470,7 +2450,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 732;
-        tmp_assign_source_170 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_23, mod_consts[271]);
+        tmp_assign_source_170 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_23, mod_consts[271]);
+
         if (tmp_assign_source_170 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2485,14 +2466,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_171;
-        PyObject *tmp_called_name_24;
-        tmp_called_name_24 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_24;
+        tmp_called_value_24 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_24 == NULL)) {
-            tmp_called_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_24 == NULL)) {
+            tmp_called_value_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_24 == NULL) {
+        if (tmp_called_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2503,7 +2484,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 748;
-        tmp_assign_source_171 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_24, mod_consts[252]);
+        tmp_assign_source_171 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_24, mod_consts[252]);
+
         if (tmp_assign_source_171 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2518,14 +2500,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_172;
-        PyObject *tmp_called_name_25;
-        tmp_called_name_25 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_25;
+        tmp_called_value_25 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_25 == NULL)) {
-            tmp_called_name_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_25 == NULL)) {
+            tmp_called_value_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_25 == NULL) {
+        if (tmp_called_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2536,7 +2518,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 765;
-        tmp_assign_source_172 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_25, mod_consts[274]);
+        tmp_assign_source_172 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_25, mod_consts[274]);
+
         if (tmp_assign_source_172 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2551,14 +2534,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_173;
-        PyObject *tmp_called_name_26;
-        tmp_called_name_26 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_26;
+        tmp_called_value_26 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_26 == NULL)) {
-            tmp_called_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_26 == NULL)) {
+            tmp_called_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_26 == NULL) {
+        if (tmp_called_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2569,7 +2552,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 781;
-        tmp_assign_source_173 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_26, mod_consts[256]);
+        tmp_assign_source_173 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_26, mod_consts[256]);
+
         if (tmp_assign_source_173 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2584,14 +2568,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_174;
-        PyObject *tmp_called_name_27;
-        tmp_called_name_27 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_27;
+        tmp_called_value_27 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_27 == NULL)) {
-            tmp_called_name_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_27 == NULL)) {
+            tmp_called_value_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_27 == NULL) {
+        if (tmp_called_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2602,7 +2586,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 798;
-        tmp_assign_source_174 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_27, mod_consts[277]);
+        tmp_assign_source_174 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_27, mod_consts[277]);
+
         if (tmp_assign_source_174 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2617,14 +2602,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_175;
-        PyObject *tmp_called_name_28;
-        tmp_called_name_28 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_28;
+        tmp_called_value_28 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_28 == NULL)) {
-            tmp_called_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_28 == NULL)) {
+            tmp_called_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_28 == NULL) {
+        if (tmp_called_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2635,7 +2620,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 816;
-        tmp_assign_source_175 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_28, mod_consts[260]);
+        tmp_assign_source_175 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_28, mod_consts[260]);
+
         if (tmp_assign_source_175 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2650,14 +2636,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_176;
-        PyObject *tmp_called_name_29;
-        tmp_called_name_29 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_29;
+        tmp_called_value_29 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_29 == NULL)) {
-            tmp_called_name_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_29 == NULL)) {
+            tmp_called_value_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_29 == NULL) {
+        if (tmp_called_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2668,7 +2654,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 835;
-        tmp_assign_source_176 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_29, mod_consts[280]);
+        tmp_assign_source_176 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_29, mod_consts[280]);
+
         if (tmp_assign_source_176 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2683,14 +2670,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_177;
-        PyObject *tmp_called_name_30;
-        tmp_called_name_30 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_30;
+        tmp_called_value_30 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_30 == NULL)) {
-            tmp_called_name_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_30 == NULL)) {
+            tmp_called_value_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_30 == NULL) {
+        if (tmp_called_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2701,7 +2688,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 850;
-        tmp_assign_source_177 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_30, mod_consts[264]);
+        tmp_assign_source_177 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_30, mod_consts[264]);
+
         if (tmp_assign_source_177 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2716,14 +2704,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_178;
-        PyObject *tmp_called_name_31;
-        tmp_called_name_31 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_31;
+        tmp_called_value_31 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_31 == NULL)) {
-            tmp_called_name_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_31 == NULL)) {
+            tmp_called_value_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_31 == NULL) {
+        if (tmp_called_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2734,7 +2722,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 867;
-        tmp_assign_source_178 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_31, mod_consts[283]);
+        tmp_assign_source_178 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_31, mod_consts[283]);
+
         if (tmp_assign_source_178 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2749,14 +2738,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_179;
-        PyObject *tmp_called_name_32;
-        tmp_called_name_32 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_32;
+        tmp_called_value_32 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_32 == NULL)) {
-            tmp_called_name_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_32 == NULL)) {
+            tmp_called_value_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_32 == NULL) {
+        if (tmp_called_value_32 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2767,7 +2756,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 931;
-        tmp_assign_source_179 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_32, mod_consts[285]);
+        tmp_assign_source_179 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_32, mod_consts[285]);
+
         if (tmp_assign_source_179 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2782,14 +2772,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_180;
-        PyObject *tmp_called_name_33;
-        tmp_called_name_33 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_33;
+        tmp_called_value_33 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_33 == NULL)) {
-            tmp_called_name_33 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_33 == NULL)) {
+            tmp_called_value_33 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_33 == NULL) {
+        if (tmp_called_value_33 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2800,7 +2790,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1017;
-        tmp_assign_source_180 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_33, mod_consts[287]);
+        tmp_assign_source_180 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_33, mod_consts[287]);
+
         if (tmp_assign_source_180 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2815,14 +2806,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_181;
-        PyObject *tmp_called_name_34;
-        tmp_called_name_34 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_34;
+        tmp_called_value_34 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_34 == NULL)) {
-            tmp_called_name_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_34 == NULL)) {
+            tmp_called_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_34 == NULL) {
+        if (tmp_called_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2833,7 +2824,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1101;
-        tmp_assign_source_181 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_34, mod_consts[289]);
+        tmp_assign_source_181 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_34, mod_consts[289]);
+
         if (tmp_assign_source_181 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2848,14 +2840,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_182;
-        PyObject *tmp_called_name_35;
-        tmp_called_name_35 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_35;
+        tmp_called_value_35 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_35 == NULL)) {
-            tmp_called_name_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_35 == NULL)) {
+            tmp_called_value_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_35 == NULL) {
+        if (tmp_called_value_35 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2866,7 +2858,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1184;
-        tmp_assign_source_182 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_35, mod_consts[291]);
+        tmp_assign_source_182 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_35, mod_consts[291]);
+
         if (tmp_assign_source_182 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2881,14 +2874,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_183;
-        PyObject *tmp_called_name_36;
-        tmp_called_name_36 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_36;
+        tmp_called_value_36 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_36 == NULL)) {
-            tmp_called_name_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_36 == NULL)) {
+            tmp_called_value_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_36 == NULL) {
+        if (tmp_called_value_36 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2899,7 +2892,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1266;
-        tmp_assign_source_183 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_36, mod_consts[293]);
+        tmp_assign_source_183 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_36, mod_consts[293]);
+
         if (tmp_assign_source_183 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2914,14 +2908,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_184;
-        PyObject *tmp_called_name_37;
-        tmp_called_name_37 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_37;
+        tmp_called_value_37 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_37 == NULL)) {
-            tmp_called_name_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_37 == NULL)) {
+            tmp_called_value_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_37 == NULL) {
+        if (tmp_called_value_37 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2932,7 +2926,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1347;
-        tmp_assign_source_184 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_37, mod_consts[295]);
+        tmp_assign_source_184 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_37, mod_consts[295]);
+
         if (tmp_assign_source_184 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2947,14 +2942,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_185;
-        PyObject *tmp_called_name_38;
-        tmp_called_name_38 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_38;
+        tmp_called_value_38 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_38 == NULL)) {
-            tmp_called_name_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_38 == NULL)) {
+            tmp_called_value_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_38 == NULL) {
+        if (tmp_called_value_38 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2965,7 +2960,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1431;
-        tmp_assign_source_185 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_38, mod_consts[297]);
+        tmp_assign_source_185 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_38, mod_consts[297]);
+
         if (tmp_assign_source_185 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2980,14 +2976,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_186;
-        PyObject *tmp_called_name_39;
-        tmp_called_name_39 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_39;
+        tmp_called_value_39 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_39 == NULL)) {
-            tmp_called_name_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_39 == NULL)) {
+            tmp_called_value_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_39 == NULL) {
+        if (tmp_called_value_39 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2998,7 +2994,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1447;
-        tmp_assign_source_186 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_39, mod_consts[299]);
+        tmp_assign_source_186 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_39, mod_consts[299]);
+
         if (tmp_assign_source_186 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3024,14 +3021,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_188;
-        PyObject *tmp_called_name_40;
-        tmp_called_name_40 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_40;
+        tmp_called_value_40 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_40 == NULL)) {
-            tmp_called_name_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_40 == NULL)) {
+            tmp_called_value_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_40 == NULL) {
+        if (tmp_called_value_40 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3042,7 +3039,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1477;
-        tmp_assign_source_188 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_40, mod_consts[297]);
+        tmp_assign_source_188 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_40, mod_consts[297]);
+
         if (tmp_assign_source_188 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3057,14 +3055,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_189;
-        PyObject *tmp_called_name_41;
-        tmp_called_name_41 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_41;
+        tmp_called_value_41 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_41 == NULL)) {
-            tmp_called_name_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_41 == NULL)) {
+            tmp_called_value_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_41 == NULL) {
+        if (tmp_called_value_41 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3075,7 +3073,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1493;
-        tmp_assign_source_189 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_41, mod_consts[303]);
+        tmp_assign_source_189 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_41, mod_consts[303]);
+
         if (tmp_assign_source_189 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3090,14 +3089,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_190;
-        PyObject *tmp_called_name_42;
-        tmp_called_name_42 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_42;
+        tmp_called_value_42 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_42 == NULL)) {
-            tmp_called_name_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_42 == NULL)) {
+            tmp_called_value_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_42 == NULL) {
+        if (tmp_called_value_42 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3108,7 +3107,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1510;
-        tmp_assign_source_190 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_42, mod_consts[305]);
+        tmp_assign_source_190 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_42, mod_consts[305]);
+
         if (tmp_assign_source_190 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3134,14 +3134,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_192;
-        PyObject *tmp_called_name_43;
-        tmp_called_name_43 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_43;
+        tmp_called_value_43 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_43 == NULL)) {
-            tmp_called_name_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_43 == NULL)) {
+            tmp_called_value_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_43 == NULL) {
+        if (tmp_called_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3152,7 +3152,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1539;
-        tmp_assign_source_192 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_43, mod_consts[303]);
+        tmp_assign_source_192 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_43, mod_consts[303]);
+
         if (tmp_assign_source_192 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3167,14 +3168,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_193;
-        PyObject *tmp_called_name_44;
-        tmp_called_name_44 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_44;
+        tmp_called_value_44 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_44 == NULL)) {
-            tmp_called_name_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_44 == NULL)) {
+            tmp_called_value_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_44 == NULL) {
+        if (tmp_called_value_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3185,7 +3186,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1556;
-        tmp_assign_source_193 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_44, mod_consts[309]);
+        tmp_assign_source_193 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_44, mod_consts[309]);
+
         if (tmp_assign_source_193 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3200,14 +3202,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_194;
-        PyObject *tmp_called_name_45;
-        tmp_called_name_45 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_45;
+        tmp_called_value_45 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_45 == NULL)) {
-            tmp_called_name_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_45 == NULL)) {
+            tmp_called_value_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_45 == NULL) {
+        if (tmp_called_value_45 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3218,7 +3220,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1573;
-        tmp_assign_source_194 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_45, mod_consts[311]);
+        tmp_assign_source_194 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_45, mod_consts[311]);
+
         if (tmp_assign_source_194 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3244,14 +3247,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_196;
-        PyObject *tmp_called_name_46;
-        tmp_called_name_46 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_46;
+        tmp_called_value_46 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_46 == NULL)) {
-            tmp_called_name_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_46 == NULL)) {
+            tmp_called_value_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_46 == NULL) {
+        if (tmp_called_value_46 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3262,7 +3265,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1601;
-        tmp_assign_source_196 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_46, mod_consts[309]);
+        tmp_assign_source_196 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_46, mod_consts[309]);
+
         if (tmp_assign_source_196 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3277,14 +3281,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_197;
-        PyObject *tmp_called_name_47;
-        tmp_called_name_47 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_47;
+        tmp_called_value_47 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_47 == NULL)) {
-            tmp_called_name_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_47 == NULL)) {
+            tmp_called_value_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_47 == NULL) {
+        if (tmp_called_value_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3295,7 +3299,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1618;
-        tmp_assign_source_197 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_47, mod_consts[315]);
+        tmp_assign_source_197 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_47, mod_consts[315]);
+
         if (tmp_assign_source_197 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3310,14 +3315,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_198;
-        PyObject *tmp_called_name_48;
-        tmp_called_name_48 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_48;
+        tmp_called_value_48 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_48 == NULL)) {
-            tmp_called_name_48 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_48 == NULL)) {
+            tmp_called_value_48 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_48 == NULL) {
+        if (tmp_called_value_48 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3328,7 +3333,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1644;
-        tmp_assign_source_198 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_48, mod_consts[317]);
+        tmp_assign_source_198 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_48, mod_consts[317]);
+
         if (tmp_assign_source_198 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3354,14 +3360,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_200;
-        PyObject *tmp_called_name_49;
-        tmp_called_name_49 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_49;
+        tmp_called_value_49 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_49 == NULL)) {
-            tmp_called_name_49 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_49 == NULL)) {
+            tmp_called_value_49 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_49 == NULL) {
+        if (tmp_called_value_49 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3372,7 +3378,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1677;
-        tmp_assign_source_200 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_49, mod_consts[315]);
+        tmp_assign_source_200 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_49, mod_consts[315]);
+
         if (tmp_assign_source_200 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3387,14 +3394,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_201;
-        PyObject *tmp_called_name_50;
-        tmp_called_name_50 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_50;
+        tmp_called_value_50 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_50 == NULL)) {
-            tmp_called_name_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_50 == NULL)) {
+            tmp_called_value_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_50 == NULL) {
+        if (tmp_called_value_50 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3405,7 +3412,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1703;
-        tmp_assign_source_201 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_50, mod_consts[321]);
+        tmp_assign_source_201 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_50, mod_consts[321]);
+
         if (tmp_assign_source_201 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3420,14 +3428,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_202;
-        PyObject *tmp_called_name_51;
-        tmp_called_name_51 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_51;
+        tmp_called_value_51 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_51 == NULL)) {
-            tmp_called_name_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_51 == NULL)) {
+            tmp_called_value_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_51 == NULL) {
+        if (tmp_called_value_51 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3438,7 +3446,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1720;
-        tmp_assign_source_202 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_51, mod_consts[323]);
+        tmp_assign_source_202 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_51, mod_consts[323]);
+
         if (tmp_assign_source_202 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3464,14 +3473,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_204;
-        PyObject *tmp_called_name_52;
-        tmp_called_name_52 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_52;
+        tmp_called_value_52 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_52 == NULL)) {
-            tmp_called_name_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_52 == NULL)) {
+            tmp_called_value_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_52 == NULL) {
+        if (tmp_called_value_52 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3482,7 +3491,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1750;
-        tmp_assign_source_204 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_52, mod_consts[321]);
+        tmp_assign_source_204 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_52, mod_consts[321]);
+
         if (tmp_assign_source_204 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3497,14 +3507,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_205;
-        PyObject *tmp_called_name_53;
-        tmp_called_name_53 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_53;
+        tmp_called_value_53 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_53 == NULL)) {
-            tmp_called_name_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_53 == NULL)) {
+            tmp_called_value_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_53 == NULL) {
+        if (tmp_called_value_53 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3515,7 +3525,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1767;
-        tmp_assign_source_205 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_53, mod_consts[327]);
+        tmp_assign_source_205 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_53, mod_consts[327]);
+
         if (tmp_assign_source_205 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3530,14 +3541,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_206;
-        PyObject *tmp_called_name_54;
-        tmp_called_name_54 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_54;
+        tmp_called_value_54 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_54 == NULL)) {
-            tmp_called_name_54 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_54 == NULL)) {
+            tmp_called_value_54 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_54 == NULL) {
+        if (tmp_called_value_54 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3548,7 +3559,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1789;
-        tmp_assign_source_206 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_54, mod_consts[329]);
+        tmp_assign_source_206 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_54, mod_consts[329]);
+
         if (tmp_assign_source_206 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3563,14 +3575,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_207;
-        PyObject *tmp_called_name_55;
-        tmp_called_name_55 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_55;
+        tmp_called_value_55 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_55 == NULL)) {
-            tmp_called_name_55 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_55 == NULL)) {
+            tmp_called_value_55 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_55 == NULL) {
+        if (tmp_called_value_55 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3581,7 +3593,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1806;
-        tmp_assign_source_207 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_55, mod_consts[331]);
+        tmp_assign_source_207 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_55, mod_consts[331]);
+
         if (tmp_assign_source_207 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3607,14 +3620,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_209;
-        PyObject *tmp_called_name_56;
-        tmp_called_name_56 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_56;
+        tmp_called_value_56 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_56 == NULL)) {
-            tmp_called_name_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_56 == NULL)) {
+            tmp_called_value_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_56 == NULL) {
+        if (tmp_called_value_56 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3625,7 +3638,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1842;
-        tmp_assign_source_209 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_56, mod_consts[334]);
+        tmp_assign_source_209 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_56, mod_consts[334]);
+
         if (tmp_assign_source_209 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3651,14 +3665,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_211;
-        PyObject *tmp_called_name_57;
-        tmp_called_name_57 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_57;
+        tmp_called_value_57 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_57 == NULL)) {
-            tmp_called_name_57 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_57 == NULL)) {
+            tmp_called_value_57 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_57 == NULL) {
+        if (tmp_called_value_57 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3669,7 +3683,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1879;
-        tmp_assign_source_211 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_57, mod_consts[337]);
+        tmp_assign_source_211 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_57, mod_consts[337]);
+
         if (tmp_assign_source_211 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3684,14 +3699,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_212;
-        PyObject *tmp_called_name_58;
-        tmp_called_name_58 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_58;
+        tmp_called_value_58 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_58 == NULL)) {
-            tmp_called_name_58 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_58 == NULL)) {
+            tmp_called_value_58 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_58 == NULL) {
+        if (tmp_called_value_58 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3702,7 +3717,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 1939;
-        tmp_assign_source_212 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_58, mod_consts[339]);
+        tmp_assign_source_212 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_58, mod_consts[339]);
+
         if (tmp_assign_source_212 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3717,14 +3733,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_213;
-        PyObject *tmp_called_name_59;
-        tmp_called_name_59 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_59;
+        tmp_called_value_59 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_59 == NULL)) {
-            tmp_called_name_59 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_59 == NULL)) {
+            tmp_called_value_59 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_59 == NULL) {
+        if (tmp_called_value_59 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3735,7 +3751,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2001;
-        tmp_assign_source_213 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_59, mod_consts[341]);
+        tmp_assign_source_213 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_59, mod_consts[341]);
+
         if (tmp_assign_source_213 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3750,14 +3767,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_214;
-        PyObject *tmp_called_name_60;
-        tmp_called_name_60 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_60;
+        tmp_called_value_60 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_60 == NULL)) {
-            tmp_called_name_60 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_60 == NULL)) {
+            tmp_called_value_60 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_60 == NULL) {
+        if (tmp_called_value_60 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3768,7 +3785,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2062;
-        tmp_assign_source_214 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_60, mod_consts[343]);
+        tmp_assign_source_214 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_60, mod_consts[343]);
+
         if (tmp_assign_source_214 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3783,14 +3801,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_215;
-        PyObject *tmp_called_name_61;
-        tmp_called_name_61 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_61;
+        tmp_called_value_61 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_61 == NULL)) {
-            tmp_called_name_61 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_61 == NULL)) {
+            tmp_called_value_61 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_61 == NULL) {
+        if (tmp_called_value_61 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3801,7 +3819,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2124;
-        tmp_assign_source_215 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_61, mod_consts[345]);
+        tmp_assign_source_215 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_61, mod_consts[345]);
+
         if (tmp_assign_source_215 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3816,14 +3835,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_216;
-        PyObject *tmp_called_name_62;
-        tmp_called_name_62 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_62;
+        tmp_called_value_62 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_62 == NULL)) {
-            tmp_called_name_62 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_62 == NULL)) {
+            tmp_called_value_62 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_62 == NULL) {
+        if (tmp_called_value_62 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3834,7 +3853,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2187;
-        tmp_assign_source_216 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_62, mod_consts[347]);
+        tmp_assign_source_216 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_62, mod_consts[347]);
+
         if (tmp_assign_source_216 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3849,14 +3869,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_217;
-        PyObject *tmp_called_name_63;
-        tmp_called_name_63 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_63;
+        tmp_called_value_63 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_63 == NULL)) {
-            tmp_called_name_63 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_63 == NULL)) {
+            tmp_called_value_63 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_63 == NULL) {
+        if (tmp_called_value_63 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3867,7 +3887,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2250;
-        tmp_assign_source_217 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_63, mod_consts[349]);
+        tmp_assign_source_217 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_63, mod_consts[349]);
+
         if (tmp_assign_source_217 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3893,14 +3914,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_219;
-        PyObject *tmp_called_name_64;
-        tmp_called_name_64 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_64;
+        tmp_called_value_64 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_64 == NULL)) {
-            tmp_called_name_64 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_64 == NULL)) {
+            tmp_called_value_64 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_64 == NULL) {
+        if (tmp_called_value_64 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3911,7 +3932,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2286;
-        tmp_assign_source_219 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_64, mod_consts[352]);
+        tmp_assign_source_219 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_64, mod_consts[352]);
+
         if (tmp_assign_source_219 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3937,14 +3959,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_221;
-        PyObject *tmp_called_name_65;
-        tmp_called_name_65 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_65;
+        tmp_called_value_65 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_65 == NULL)) {
-            tmp_called_name_65 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_65 == NULL)) {
+            tmp_called_value_65 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_65 == NULL) {
+        if (tmp_called_value_65 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3955,7 +3977,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2322;
-        tmp_assign_source_221 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_65, mod_consts[355]);
+        tmp_assign_source_221 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_65, mod_consts[355]);
+
         if (tmp_assign_source_221 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3981,14 +4004,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_223;
-        PyObject *tmp_called_name_66;
-        tmp_called_name_66 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_66;
+        tmp_called_value_66 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_66 == NULL)) {
-            tmp_called_name_66 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_66 == NULL)) {
+            tmp_called_value_66 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_66 == NULL) {
+        if (tmp_called_value_66 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3999,7 +4022,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2358;
-        tmp_assign_source_223 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_66, mod_consts[358]);
+        tmp_assign_source_223 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_66, mod_consts[358]);
+
         if (tmp_assign_source_223 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4025,14 +4049,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_225;
-        PyObject *tmp_called_name_67;
-        tmp_called_name_67 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_67;
+        tmp_called_value_67 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_67 == NULL)) {
-            tmp_called_name_67 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_67 == NULL)) {
+            tmp_called_value_67 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_67 == NULL) {
+        if (tmp_called_value_67 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4043,7 +4067,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2395;
-        tmp_assign_source_225 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_67, mod_consts[361]);
+        tmp_assign_source_225 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_67, mod_consts[361]);
+
         if (tmp_assign_source_225 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4069,14 +4094,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_227;
-        PyObject *tmp_called_name_68;
-        tmp_called_name_68 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
+        PyObject *tmp_called_value_68;
+        tmp_called_value_68 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[15]);
 
-        if (unlikely(tmp_called_name_68 == NULL)) {
-            tmp_called_name_68 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+        if (unlikely(tmp_called_value_68 == NULL)) {
+            tmp_called_value_68 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
-        if (tmp_called_name_68 == NULL) {
+        if (tmp_called_value_68 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4087,7 +4112,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2431;
-        tmp_assign_source_227 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_68, mod_consts[364]);
+        tmp_assign_source_227 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_68, mod_consts[364]);
+
         if (tmp_assign_source_227 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4133,14 +4159,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_230;
-        PyObject *tmp_expression_name_5;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_expression_value_5;
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4150,7 +4176,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_230 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[368]);
+        tmp_assign_source_230 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[368]);
         if (tmp_assign_source_230 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4165,17 +4191,17 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_231;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_10;
-        tmp_left_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[369]);
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_10;
+        tmp_left_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[369]);
 
-        if (unlikely(tmp_left_name_10 == NULL)) {
-            tmp_left_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[369]);
+        if (unlikely(tmp_left_value_10 == NULL)) {
+            tmp_left_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[369]);
         }
 
-        assert(!(tmp_left_name_10 == NULL));
-        tmp_right_name_10 = mod_consts[51];
-        tmp_assign_source_231 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_10, tmp_right_name_10);
+        assert(!(tmp_left_value_10 == NULL));
+        tmp_right_value_10 = mod_consts[51];
+        tmp_assign_source_231 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_10, tmp_right_value_10);
         if (tmp_assign_source_231 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4190,15 +4216,15 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_232;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_11;
-        tmp_left_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[369]);
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_11;
+        tmp_left_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[369]);
 
-        if (unlikely(tmp_left_name_11 == NULL)) {
-            tmp_left_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[369]);
+        if (unlikely(tmp_left_value_11 == NULL)) {
+            tmp_left_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[369]);
         }
 
-        if (tmp_left_name_11 == NULL) {
+        if (tmp_left_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4208,8 +4234,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_right_name_11 = mod_consts[53];
-        tmp_assign_source_232 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_11, tmp_right_name_11);
+        tmp_right_value_11 = mod_consts[53];
+        tmp_assign_source_232 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_11, tmp_right_value_11);
         if (tmp_assign_source_232 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4224,14 +4250,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_233;
-        PyObject *tmp_expression_name_6;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_expression_value_6;
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4241,7 +4267,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_233 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[372]);
+        tmp_assign_source_233 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[372]);
         if (tmp_assign_source_233 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4256,14 +4282,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_234;
-        PyObject *tmp_expression_name_7;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_expression_value_7;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4273,7 +4299,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_234 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[373]);
+        tmp_assign_source_234 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[373]);
         if (tmp_assign_source_234 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4288,14 +4314,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_235;
-        PyObject *tmp_expression_name_8;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_expression_value_8;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4305,7 +4331,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_235 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[374]);
+        tmp_assign_source_235 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[374]);
         if (tmp_assign_source_235 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4320,14 +4346,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_236;
-        PyObject *tmp_expression_name_9;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_expression_value_9;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4337,7 +4363,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_236 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[375]);
+        tmp_assign_source_236 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[375]);
         if (tmp_assign_source_236 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4352,16 +4378,16 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_237;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_right_name_12;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_right_value_12;
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4371,8 +4397,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[376]);
-        if (tmp_left_name_12 == NULL) {
+        tmp_left_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[376]);
+        if (tmp_left_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4382,9 +4408,9 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_right_name_12 = mod_consts[377];
-        tmp_assign_source_237 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_12, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_12);
+        tmp_right_value_12 = mod_consts[377];
+        tmp_assign_source_237 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_12, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_12);
         if (tmp_assign_source_237 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4409,18 +4435,18 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_240;
-        PyObject *tmp_called_name_69;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_called_value_69;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4430,8 +4456,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_called_name_69 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[382]);
-        if (tmp_called_name_69 == NULL) {
+        tmp_called_value_69 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[382]);
+        if (tmp_called_value_69 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4441,49 +4467,49 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[381]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[381]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[381]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[381]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_69);
+            Py_DECREF(tmp_called_value_69);
 
             exception_lineno = 2498;
 
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[381]);
+        tmp_args_element_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[381]);
 
-        if (unlikely(tmp_args_element_name_2 == NULL)) {
-            tmp_args_element_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[381]);
+        if (unlikely(tmp_args_element_value_2 == NULL)) {
+            tmp_args_element_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[381]);
         }
 
-        if (tmp_args_element_name_2 == NULL) {
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_69);
+            Py_DECREF(tmp_called_value_69);
 
             exception_lineno = 2499;
 
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[381]);
+        tmp_args_element_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[381]);
 
-        if (unlikely(tmp_args_element_name_3 == NULL)) {
-            tmp_args_element_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[381]);
+        if (unlikely(tmp_args_element_value_3 == NULL)) {
+            tmp_args_element_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[381]);
         }
 
-        if (tmp_args_element_name_3 == NULL) {
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_69);
+            Py_DECREF(tmp_called_value_69);
 
             exception_lineno = 2500;
 
@@ -4491,11 +4517,11 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
         }
         frame_5db6744f785b702f4e89737f6b483f4d->m_frame.f_lineno = 2498;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_240 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_69, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_240 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_69, call_args);
         }
 
-        Py_DECREF(tmp_called_name_69);
+        Py_DECREF(tmp_called_value_69);
         if (tmp_assign_source_240 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4560,57 +4586,57 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_251;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_right_name_13;
-        tmp_left_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[390]);
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_right_value_13;
+        tmp_left_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[390]);
 
-        if (unlikely(tmp_left_name_13 == NULL)) {
-            tmp_left_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[390]);
+        if (unlikely(tmp_left_value_13 == NULL)) {
+            tmp_left_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[390]);
         }
 
-        assert(!(tmp_left_name_13 == NULL));
-        tmp_right_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[384]);
+        assert(!(tmp_left_value_13 == NULL));
+        tmp_right_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[384]);
 
-        if (unlikely(tmp_right_name_13 == NULL)) {
-            tmp_right_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[384]);
+        if (unlikely(tmp_right_value_13 == NULL)) {
+            tmp_right_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[384]);
         }
 
-        assert(!(tmp_right_name_13 == NULL));
-        tmp_assign_source_251 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_13, tmp_right_name_13);
+        assert(!(tmp_right_value_13 == NULL));
+        tmp_assign_source_251 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_13, tmp_right_value_13);
         assert(!(tmp_assign_source_251 == NULL));
         UPDATE_STRING_DICT1(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[394], tmp_assign_source_251);
     }
     {
         PyObject *tmp_assign_source_252;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_14;
-        PyObject *tmp_right_name_15;
-        tmp_left_name_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[389]);
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_14;
+        PyObject *tmp_right_value_15;
+        tmp_left_value_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[389]);
 
-        if (unlikely(tmp_left_name_15 == NULL)) {
-            tmp_left_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[389]);
+        if (unlikely(tmp_left_value_15 == NULL)) {
+            tmp_left_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[389]);
         }
 
-        assert(!(tmp_left_name_15 == NULL));
-        tmp_right_name_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[392]);
+        assert(!(tmp_left_value_15 == NULL));
+        tmp_right_value_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[392]);
 
-        if (unlikely(tmp_right_name_14 == NULL)) {
-            tmp_right_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[392]);
+        if (unlikely(tmp_right_value_14 == NULL)) {
+            tmp_right_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[392]);
         }
 
-        assert(!(tmp_right_name_14 == NULL));
-        tmp_left_name_14 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_15, tmp_right_name_14);
-        assert(!(tmp_left_name_14 == NULL));
-        tmp_right_name_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[384]);
+        assert(!(tmp_right_value_14 == NULL));
+        tmp_left_value_14 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_15, tmp_right_value_14);
+        assert(!(tmp_left_value_14 == NULL));
+        tmp_right_value_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[384]);
 
-        if (unlikely(tmp_right_name_15 == NULL)) {
-            tmp_right_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[384]);
+        if (unlikely(tmp_right_value_15 == NULL)) {
+            tmp_right_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[384]);
         }
 
-        assert(!(tmp_right_name_15 == NULL));
-        tmp_assign_source_252 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_name_14, tmp_right_name_15);
-        Py_DECREF(tmp_left_name_14);
+        assert(!(tmp_right_value_15 == NULL));
+        tmp_assign_source_252 = BINARY_OPERATION_BITOR_OBJECT_LONG_LONG(tmp_left_value_14, tmp_right_value_15);
+        Py_DECREF(tmp_left_value_14);
         assert(!(tmp_assign_source_252 == NULL));
         UPDATE_STRING_DICT1(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[395], tmp_assign_source_252);
     }
@@ -4843,14 +4869,14 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_assign_source_272;
-        PyObject *tmp_expression_name_12;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
+        PyObject *tmp_expression_value_12;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[11]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[11]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4860,7 +4886,7 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_272 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[423]);
+        tmp_assign_source_272 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[423]);
         if (tmp_assign_source_272 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5195,7 +5221,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -5232,7 +5259,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_282;
@@ -5252,10 +5280,6 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         PyObject *tmp_assign_source_284;
         PyObject *tmp_iter_arg_2;
@@ -5350,7 +5374,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -5387,7 +5412,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_4:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_287;
@@ -5407,10 +5433,6 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     Py_XDECREF(tmp_tuple_unpack_2__element_2);
     tmp_tuple_unpack_2__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
     {
         PyObject *tmp_assign_source_289;
         PyObject *tmp_iter_arg_3;
@@ -5505,7 +5527,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_5;
@@ -5571,7 +5594,8 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     goto module_exception_exit;
 
     frame_no_exception_1:;
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     {
         PyObject *tmp_assign_source_292;
@@ -5591,10 +5615,6 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
     Py_XDECREF(tmp_tuple_unpack_3__element_2);
     tmp_tuple_unpack_3__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_3__element_1);
-    tmp_tuple_unpack_3__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_3__element_2);
-    tmp_tuple_unpack_3__element_2 = NULL;
     {
         PyObject *tmp_assign_source_294;
         tmp_assign_source_294 = mod_consts[16];
@@ -5606,9 +5626,23 @@ PyObject *modulecode_wx$lib$agw$aui$aui_constants(PyObject *module, struct Nuitk
         UPDATE_STRING_DICT0(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)mod_consts[448], tmp_assign_source_295);
     }
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("wx.lib.agw.aui.aui_constants", false);
+
     return module_wx$lib$agw$aui$aui_constants;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$agw$aui$aui_constants, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("wx$lib$agw$aui$aui_constants", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

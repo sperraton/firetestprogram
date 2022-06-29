@@ -1,5 +1,5 @@
 /* Generated code for Python module 'numpy.lib.histograms'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_numpy$lib$histograms;
 PyDictObject *moduledict_numpy$lib$histograms;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[272];
+static PyObject *mod_consts[265];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[265];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("numpy.lib.histograms"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 265; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_numpy$lib$histograms(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "numpy.lib.histograms");
+    for (int i = 0; i < 265; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -91,30 +103,30 @@ static PyCodeObject *codeobj_4d5e065be20d24b7acdc81634842114e;
 static PyCodeObject *codeobj_39224af0ed850082587e2d3777b12f01;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[250]); CHECK_OBJECT(module_filename_obj);
-    codeobj_8898a765fc2b978a0ecfc94a0d45f255 = MAKE_CODEOBJECT(module_filename_obj, 1074, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[211], mod_consts[251], NULL, 1, 0, 0);
-    codeobj_322555bc6db264e2d2272d4df8498652 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[252], NULL, NULL, 0, 0, 0);
-    codeobj_0a02fbec5d9f8c384bac0bc5026f7084 = MAKE_CODEOBJECT(module_filename_obj, 360, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[133], mod_consts[253], NULL, 4, 0, 0);
-    codeobj_b4d90bafc76cd4afa8d1cbfdee51a838 = MAKE_CODEOBJECT(module_filename_obj, 304, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[103], mod_consts[254], NULL, 2, 0, 0);
-    codeobj_d152888d6b5c4a453a53e3c6aeaca594 = MAKE_CODEOBJECT(module_filename_obj, 229, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[235], mod_consts[255], NULL, 2, 0, 0);
-    codeobj_f168e74cf8441642e0ce4af64f57740c = MAKE_CODEOBJECT(module_filename_obj, 164, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[234], mod_consts[256], NULL, 2, 0, 0);
-    codeobj_6aeb1b65ce0b857f56a5ab5834fa171f = MAKE_CODEOBJECT(module_filename_obj, 199, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[58], mod_consts[257], NULL, 2, 0, 0);
-    codeobj_06d4abaf8a9482af77edaee101b396ba = MAKE_CODEOBJECT(module_filename_obj, 76, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[231], mod_consts[258], NULL, 2, 0, 0);
-    codeobj_59b50a6255db52dcb22737d5f696fedb = MAKE_CODEOBJECT(module_filename_obj, 100, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[232], mod_consts[258], NULL, 2, 0, 0);
-    codeobj_16733f7abe284a7acf7766e3049c19f9 = MAKE_CODEOBJECT(module_filename_obj, 32, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[230], mod_consts[258], NULL, 2, 0, 0);
-    codeobj_f6240f26f53915e954e6675a8108f5e5 = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[233], mod_consts[259], NULL, 2, 0, 0);
-    codeobj_3500fcdc033ec70f169e251cc3f34142 = MAKE_CODEOBJECT(module_filename_obj, 53, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[59], mod_consts[258], NULL, 2, 0, 0);
-    codeobj_881f577a89ba99ad95458d2ea9520d4d = MAKE_CODEOBJECT(module_filename_obj, 466, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[243], mod_consts[260], NULL, 4, 0, 0);
-    codeobj_611d99919d5eb2b6547c14751b891aac = MAKE_CODEOBJECT(module_filename_obj, 673, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[247], mod_consts[261], NULL, 6, 0, 0);
-    codeobj_678427d531112cead8168ccead8e2cf0 = MAKE_CODEOBJECT(module_filename_obj, 932, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[178], mod_consts[262], NULL, 6, 0, 0);
-    codeobj_3a7ea06c3576ca075c12efa7eb32a823 = MAKE_CODEOBJECT(module_filename_obj, 22, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[5], mod_consts[263], NULL, 1, 0, 0);
-    codeobj_2ea93b1ef5fa2103ffd5401f715c7317 = MAKE_CODEOBJECT(module_filename_obj, 283, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[132], mod_consts[264], NULL, 2, 0, 0);
-    codeobj_79906ca0850721573351e75389abc866 = MAKE_CODEOBJECT(module_filename_obj, 454, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[157], mod_consts[265], NULL, 2, 0, 0);
-    codeobj_09f223e445342ba791b0bfa5c758b52e = MAKE_CODEOBJECT(module_filename_obj, 334, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[0], mod_consts[266], NULL, 2, 0, 0);
-    codeobj_6e4dec849e9836e540ab9c9cec2bdb07 = MAKE_CODEOBJECT(module_filename_obj, 679, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[37], mod_consts[267], NULL, 6, 0, 0);
-    codeobj_11fe65f4fd30bcfe73c6613e95c22f81 = MAKE_CODEOBJECT(module_filename_obj, 471, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[245], mod_consts[268], NULL, 4, 0, 0);
-    codeobj_4d5e065be20d24b7acdc81634842114e = MAKE_CODEOBJECT(module_filename_obj, 944, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[249], mod_consts[269], NULL, 6, 0, 0);
-    codeobj_39224af0ed850082587e2d3777b12f01 = MAKE_CODEOBJECT(module_filename_obj, 151, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[25], mod_consts[270], mod_consts[271], 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[242]); CHECK_OBJECT(module_filename_obj);
+    codeobj_8898a765fc2b978a0ecfc94a0d45f255 = MAKE_CODEOBJECT(module_filename_obj, 1074, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[203], mod_consts[243], NULL, 1, 0, 0);
+    codeobj_322555bc6db264e2d2272d4df8498652 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[244], NULL, NULL, 0, 0, 0);
+    codeobj_0a02fbec5d9f8c384bac0bc5026f7084 = MAKE_CODEOBJECT(module_filename_obj, 360, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[126], mod_consts[245], NULL, 4, 0, 0);
+    codeobj_b4d90bafc76cd4afa8d1cbfdee51a838 = MAKE_CODEOBJECT(module_filename_obj, 304, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[97], mod_consts[246], NULL, 2, 0, 0);
+    codeobj_d152888d6b5c4a453a53e3c6aeaca594 = MAKE_CODEOBJECT(module_filename_obj, 229, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[227], mod_consts[247], NULL, 2, 0, 0);
+    codeobj_f168e74cf8441642e0ce4af64f57740c = MAKE_CODEOBJECT(module_filename_obj, 164, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[226], mod_consts[248], NULL, 2, 0, 0);
+    codeobj_6aeb1b65ce0b857f56a5ab5834fa171f = MAKE_CODEOBJECT(module_filename_obj, 199, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[54], mod_consts[249], NULL, 2, 0, 0);
+    codeobj_06d4abaf8a9482af77edaee101b396ba = MAKE_CODEOBJECT(module_filename_obj, 76, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[223], mod_consts[250], NULL, 2, 0, 0);
+    codeobj_59b50a6255db52dcb22737d5f696fedb = MAKE_CODEOBJECT(module_filename_obj, 100, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[224], mod_consts[250], NULL, 2, 0, 0);
+    codeobj_16733f7abe284a7acf7766e3049c19f9 = MAKE_CODEOBJECT(module_filename_obj, 32, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[222], mod_consts[250], NULL, 2, 0, 0);
+    codeobj_f6240f26f53915e954e6675a8108f5e5 = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[225], mod_consts[251], NULL, 2, 0, 0);
+    codeobj_3500fcdc033ec70f169e251cc3f34142 = MAKE_CODEOBJECT(module_filename_obj, 53, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[55], mod_consts[250], NULL, 2, 0, 0);
+    codeobj_881f577a89ba99ad95458d2ea9520d4d = MAKE_CODEOBJECT(module_filename_obj, 466, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[235], mod_consts[252], NULL, 4, 0, 0);
+    codeobj_611d99919d5eb2b6547c14751b891aac = MAKE_CODEOBJECT(module_filename_obj, 673, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[239], mod_consts[253], NULL, 6, 0, 0);
+    codeobj_678427d531112cead8168ccead8e2cf0 = MAKE_CODEOBJECT(module_filename_obj, 932, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[170], mod_consts[254], NULL, 6, 0, 0);
+    codeobj_3a7ea06c3576ca075c12efa7eb32a823 = MAKE_CODEOBJECT(module_filename_obj, 22, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[4], mod_consts[255], NULL, 1, 0, 0);
+    codeobj_2ea93b1ef5fa2103ffd5401f715c7317 = MAKE_CODEOBJECT(module_filename_obj, 283, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[125], mod_consts[256], NULL, 2, 0, 0);
+    codeobj_79906ca0850721573351e75389abc866 = MAKE_CODEOBJECT(module_filename_obj, 454, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[147], mod_consts[257], NULL, 2, 0, 0);
+    codeobj_09f223e445342ba791b0bfa5c758b52e = MAKE_CODEOBJECT(module_filename_obj, 334, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[0], mod_consts[258], NULL, 2, 0, 0);
+    codeobj_6e4dec849e9836e540ab9c9cec2bdb07 = MAKE_CODEOBJECT(module_filename_obj, 679, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[34], mod_consts[259], NULL, 6, 0, 0);
+    codeobj_11fe65f4fd30bcfe73c6613e95c22f81 = MAKE_CODEOBJECT(module_filename_obj, 471, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[237], mod_consts[260], NULL, 4, 0, 0);
+    codeobj_4d5e065be20d24b7acdc81634842114e = MAKE_CODEOBJECT(module_filename_obj, 944, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[241], mod_consts[261], NULL, 6, 0, 0);
+    codeobj_39224af0ed850082587e2d3777b12f01 = MAKE_CODEOBJECT(module_filename_obj, 151, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[22], mod_consts[262], mod_consts[263], 1, 0, 0);
 }
 
 // The module function declarations.
@@ -207,13 +219,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__1__ptp(struct Nuitka_Func
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_3a7ea06c3576ca075c12efa7eb32a823 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_3a7ea06c3576ca075c12efa7eb32a823)) {
         Py_XDECREF(cache_frame_3a7ea06c3576ca075c12efa7eb32a823);
 
@@ -242,18 +249,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__1__ptp(struct Nuitka_Func
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_called_instance_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -266,8 +273,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__1__ptp(struct Nuitka_Func
         CHECK_OBJECT(par_x);
         tmp_called_instance_1 = par_x;
         frame_3a7ea06c3576ca075c12efa7eb32a823->m_frame.f_lineno = 29;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[1]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[1]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -277,26 +284,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__1__ptp(struct Nuitka_Func
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_args_element_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 29;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_x);
         tmp_called_instance_2 = par_x;
         frame_3a7ea06c3576ca075c12efa7eb32a823->m_frame.f_lineno = 29;
-        tmp_args_element_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[3]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[2]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_1);
+            Py_DECREF(tmp_args_element_value_1);
 
             exception_lineno = 29;
             type_description_1 = "o";
@@ -304,12 +300,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__1__ptp(struct Nuitka_Func
         }
         frame_3a7ea06c3576ca075c12efa7eb32a823->m_frame.f_lineno = 29;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -340,7 +336,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__1__ptp(struct Nuitka_Func
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -379,50 +375,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__1__ptp(struct Nuitka_Func
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -449,17 +419,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__2__hist_bin_sqrt(struct N
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_16733f7abe284a7acf7766e3049c19f9 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
     CHECK_OBJECT(par_range);
     Py_DECREF(par_range);
     par_range = NULL;
 
-    // Tried code:
     if (isFrameUnusable(cache_frame_16733f7abe284a7acf7766e3049c19f9)) {
         Py_XDECREF(cache_frame_16733f7abe284a7acf7766e3049c19f9);
 
@@ -488,21 +453,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__2__hist_bin_sqrt(struct N
 
     // Framed code:
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -513,10 +478,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__2__hist_bin_sqrt(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_1 = par_x;
+        tmp_args_element_value_1 = par_x;
         frame_16733f7abe284a7acf7766e3049c19f9->m_frame.f_lineno = 50;
-        tmp_left_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -526,76 +491,64 @@ static PyObject *impl_numpy$lib$histograms$$$function__2__hist_bin_sqrt(struct N
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 50;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 50;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 50;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_x;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_args_element_name_2 == NULL) {
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_2 = par_x;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[7]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 50;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_16733f7abe284a7acf7766e3049c19f9->m_frame.f_lineno = 50;
-        tmp_right_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 50;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -626,7 +579,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__2__hist_bin_sqrt(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -666,54 +619,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__2__hist_bin_sqrt(struct N
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -740,17 +663,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__3__hist_bin_sturges(struc
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_3500fcdc033ec70f169e251cc3f34142 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
     CHECK_OBJECT(par_range);
     Py_DECREF(par_range);
     par_range = NULL;
 
-    // Tried code:
     if (isFrameUnusable(cache_frame_3500fcdc033ec70f169e251cc3f34142)) {
         Py_XDECREF(cache_frame_3500fcdc033ec70f169e251cc3f34142);
 
@@ -779,23 +697,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__3__hist_bin_sturges(struc
 
     // Framed code:
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_right_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_right_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -806,10 +724,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__3__hist_bin_sturges(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_1 = par_x;
+        tmp_args_element_value_1 = par_x;
         frame_3500fcdc033ec70f169e251cc3f34142->m_frame.f_lineno = 73;
-        tmp_left_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -819,89 +737,77 @@ static PyObject *impl_numpy$lib$histograms$$$function__3__hist_bin_sturges(struc
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 73;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[10]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[9]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 73;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 73;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_x;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_args_element_name_2 == NULL) {
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_2 = par_x;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[7]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 73;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_3500fcdc033ec70f169e251cc3f34142->m_frame.f_lineno = 73;
-        tmp_left_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_left_name_2 == NULL) {
+        tmp_left_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 73;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = mod_consts[11];
-        tmp_right_name_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_2 = mod_consts[10];
+        tmp_right_value_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 73;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -932,7 +838,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__3__hist_bin_sturges(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -972,54 +878,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__3__hist_bin_sturges(struc
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1046,17 +922,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__4__hist_bin_rice(struct N
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_06d4abaf8a9482af77edaee101b396ba = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
     CHECK_OBJECT(par_range);
     Py_DECREF(par_range);
     par_range = NULL;
 
-    // Tried code:
     if (isFrameUnusable(cache_frame_06d4abaf8a9482af77edaee101b396ba)) {
         Py_XDECREF(cache_frame_06d4abaf8a9482af77edaee101b396ba);
 
@@ -1085,22 +956,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__4__hist_bin_rice(struct N
 
     // Framed code:
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_right_name_3;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_right_value_3;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1111,10 +982,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__4__hist_bin_rice(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_1 = par_x;
+        tmp_args_element_value_1 = par_x;
         frame_06d4abaf8a9482af77edaee101b396ba->m_frame.f_lineno = 97;
-        tmp_left_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1124,59 +995,48 @@ static PyObject *impl_numpy$lib$histograms$$$function__4__hist_bin_rice(struct N
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = mod_consts[13];
-        if (par_x == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 97;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_1 = par_x;
-        tmp_left_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_2 = mod_consts[12];
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_1 = par_x;
+        tmp_left_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 97;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = mod_consts[14];
-        tmp_right_name_2 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_3);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_3 = mod_consts[13];
+        tmp_right_value_2 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_3);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 97;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 97;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1207,7 +1067,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__4__hist_bin_rice(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -1247,54 +1107,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__4__hist_bin_rice(struct N
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1321,17 +1151,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_59b50a6255db52dcb22737d5f696fedb = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
     CHECK_OBJECT(par_range);
     Py_DECREF(par_range);
     par_range = NULL;
 
-    // Tried code:
     if (isFrameUnusable(cache_frame_59b50a6255db52dcb22737d5f696fedb)) {
         Py_XDECREF(cache_frame_59b50a6255db52dcb22737d5f696fedb);
 
@@ -1360,29 +1185,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
 
     // Framed code:
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
-        tmp_left_name_4 = mod_consts[16];
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_left_value_4 = mod_consts[15];
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1392,8 +1216,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[17]);
-        if (tmp_left_name_5 == NULL) {
+        tmp_left_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[16]);
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1403,10 +1227,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = mod_consts[18];
-        tmp_right_name_1 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_name_5, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_5);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_2 = mod_consts[17];
+        tmp_right_value_1 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_value_5, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_5);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1416,9 +1240,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_name_4, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_3 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_value_4, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1429,35 +1253,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_expression_name_2 = par_x;
-        tmp_right_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_right_name_3 == NULL) {
+        tmp_expression_value_2 = par_x;
+        tmp_right_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[7]);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_3);
+            Py_DECREF(tmp_left_value_3);
 
             exception_lineno = 119;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_3);
-        Py_DECREF(tmp_right_name_3);
-        if (tmp_left_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 119;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_right_name_4 = mod_consts[14];
-        tmp_left_name_1 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_name_2, tmp_right_name_4);
-        Py_DECREF(tmp_left_name_2);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_2 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_3);
+        Py_DECREF(tmp_right_value_3);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1467,63 +1278,52 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
-
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
-        }
-
-        if (tmp_expression_name_3 == NULL) {
+        tmp_right_value_4 = mod_consts[13];
+        tmp_left_value_1 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_value_2, tmp_right_value_4);
+        Py_DECREF(tmp_left_value_2);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+
 
             exception_lineno = 119;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[19]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
+
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        }
+
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 119;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 119;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_x;
+        CHECK_OBJECT(par_x);
+        tmp_args_element_value_1 = par_x;
         frame_59b50a6255db52dcb22737d5f696fedb->m_frame.f_lineno = 119;
-        tmp_right_name_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        if (tmp_right_name_5 == NULL) {
+        tmp_right_value_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[18], tmp_args_element_value_1);
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 119;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_5);
+        tmp_return_value = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_5);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1554,7 +1354,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -1594,54 +1394,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__5__hist_bin_scott(struct 
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1672,7 +1442,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
-    int tmp_res;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     static struct Nuitka_FrameObject *cache_frame_f6240f26f53915e954e6675a8108f5e5 = NULL;
     PyObject *exception_keeper_type_1;
@@ -1711,10 +1480,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(Nuitka_Cell_GET(par_x));
-        tmp_expression_name_1 = Nuitka_Cell_GET(par_x);
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
+        tmp_expression_value_1 = Nuitka_Cell_GET(par_x);
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1731,15 +1500,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1749,21 +1518,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        if (Nuitka_Cell_GET(par_x) == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 147;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = Nuitka_Cell_GET(par_x);
+        CHECK_OBJECT(Nuitka_Cell_GET(par_x));
+        tmp_args_element_value_1 = Nuitka_Cell_GET(par_x);
         frame_f6240f26f53915e954e6675a8108f5e5->m_frame.f_lineno = 147;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1783,30 +1541,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_or_left_value_1_object_1;
-        int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_or_right_value_1_object_1;
-        int tmp_truth_name_2;
-        if (Nuitka_Cell_GET(var_n) == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 148;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(var_n);
-        tmp_compexpr_right_1 = mod_consts[22];
-        tmp_tmp_or_left_value_1_object_1 = RICH_COMPARE_LE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_or_left_value_1_object_1 == NULL) {
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        CHECK_OBJECT(Nuitka_Cell_GET(var_n));
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(var_n);
+        tmp_cmp_expr_right_1 = mod_consts[20];
+        tmp_or_left_value_1 = RICH_COMPARE_LE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_or_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1816,25 +1559,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_or_left_value_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_or_left_value_1_object_1);
-
-            exception_lineno = 148;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_or_left_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_or_left_value_1_object_1);
         tmp_or_left_truth_1 = tmp_or_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_or_left_truth_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_or_left_value_1);
 
             exception_lineno = 148;
             type_description_1 = "ccccooo";
@@ -1846,22 +1576,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             goto or_right_1;
         }
         or_right_1:;
-        if (Nuitka_Cell_GET(var_ptp_x) == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 148;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_2 = Nuitka_Cell_GET(var_ptp_x);
-        tmp_compexpr_right_2 = mod_consts[24];
-        tmp_tmp_or_right_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_or_right_value_1_object_1 == NULL) {
+        assert(tmp_or_left_value_1 != NUITKA_BOOL_UNASSIGNED);
+        CHECK_OBJECT(Nuitka_Cell_GET(var_ptp_x));
+        tmp_cmp_expr_left_2 = Nuitka_Cell_GET(var_ptp_x);
+        tmp_cmp_expr_right_2 = mod_consts[21];
+        tmp_or_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_or_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1871,19 +1591,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_or_right_value_1_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_or_right_value_1_object_1);
-
-            exception_lineno = 148;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_or_right_value_1 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_or_right_value_1_object_1);
         tmp_condition_result_1 = tmp_or_right_value_1;
         goto or_end_1;
         or_left_1:;
@@ -1894,9 +1601,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
-    tmp_return_value = mod_consts[24];
+    tmp_return_value = mod_consts[21];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     branch_no_1:;
@@ -1920,23 +1628,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         PyObject *tmp_int_arg_1;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[1]);
-        assert(tmp_called_name_2 != NULL);
-        tmp_args_element_name_2 = mod_consts[27];
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_2 = LOOKUP_BUILTIN(mod_consts[1]);
+        assert(tmp_called_value_2 != NULL);
+        tmp_args_element_value_2 = mod_consts[24];
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1946,33 +1653,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[7]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 156;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-        if (Nuitka_Cell_GET(var_n) == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 156;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_4 = Nuitka_Cell_GET(var_n);
+        CHECK_OBJECT(Nuitka_Cell_GET(var_n));
+        tmp_args_element_value_4 = Nuitka_Cell_GET(var_n);
         frame_f6240f26f53915e954e6675a8108f5e5->m_frame.f_lineno = 156;
-        tmp_int_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_3);
+        tmp_int_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[6], tmp_args_element_value_4);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1983,9 +1667,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = PyNumber_Int(tmp_int_arg_1);
+        tmp_args_element_value_3 = PyNumber_Int(tmp_int_arg_1);
         Py_DECREF(tmp_int_arg_1);
-        if (tmp_args_element_name_3 == NULL) {
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1997,11 +1681,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
         }
         frame_f6240f26f53915e954e6675a8108f5e5->m_frame.f_lineno = 156;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2017,26 +1701,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_called_name_4 = LOOKUP_BUILTIN(mod_consts[3]);
-        assert(tmp_called_name_4 != NULL);
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        tmp_called_value_3 = LOOKUP_BUILTIN(mod_consts[2]);
+        assert(tmp_called_value_3 != NULL);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2046,12 +1727,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[22];
+        tmp_args_element_value_5 = mod_consts[20];
         CHECK_OBJECT(var_nbins_upper_bound);
-        tmp_left_name_1 = var_nbins_upper_bound;
-        tmp_right_name_1 = mod_consts[22];
-        tmp_args_element_name_6 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_left_value_1 = var_nbins_upper_bound;
+        tmp_right_value_1 = mod_consts[20];
+        tmp_args_element_value_6 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2063,12 +1744,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
         }
         frame_f6240f26f53915e954e6675a8108f5e5->m_frame.f_lineno = 157;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_tuple_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_kw_call_arg_value_0_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_6);
-        if (tmp_tuple_element_1 == NULL) {
+        Py_DECREF(tmp_args_element_value_6);
+        if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2078,18 +1759,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[29];
         CHECK_OBJECT(var_jhat);
-        tmp_dict_value_1 = var_jhat;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_0_1 = var_jhat;
         frame_f6240f26f53915e954e6675a8108f5e5->m_frame.f_lineno = 157;
-        tmp_assign_source_5 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_3, args, kw_values, mod_consts[26]);
+        }
+
+        Py_DECREF(tmp_kw_call_arg_value_0_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2105,24 +1784,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_nbins);
-        tmp_compexpr_left_3 = var_nbins;
-        if (var_nbins_upper_bound == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[30]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 158;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_right_3 = var_nbins_upper_bound;
-        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
+        tmp_cmp_expr_left_3 = var_nbins;
+        CHECK_OBJECT(var_nbins_upper_bound);
+        tmp_cmp_expr_right_3 = var_nbins_upper_bound;
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
         if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -2142,19 +1810,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[31]);
+        PyObject *tmp_args_value_1;
+        PyObject *tmp_tuple_element_1;
+        PyObject *tmp_kwargs_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2164,8 +1832,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[32]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[28]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2175,16 +1843,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_2 = mod_consts[33];
-        tmp_args_name_2 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[34]);
+        tmp_tuple_element_1 = mod_consts[29];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[30]);
 
-        if (unlikely(tmp_tuple_element_2 == NULL)) {
-            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
+        if (unlikely(tmp_tuple_element_1 == NULL)) {
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[30]);
         }
 
-        if (tmp_tuple_element_2 == NULL) {
+        if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2194,21 +1862,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
             type_description_1 = "ccccooo";
             goto tuple_build_exception_1;
         }
-        PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_name_2);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_value_1);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_kwargs_name_2 = PyDict_Copy(mod_consts[35]);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[31]);
         frame_f6240f26f53915e954e6675a8108f5e5->m_frame.f_lineno = 159;
-        tmp_call_result_1 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        tmp_call_result_1 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2223,24 +1891,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     }
     branch_no_2:;
     {
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        if (Nuitka_Cell_GET(var_ptp_x) == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 161;
-            type_description_1 = "ccccooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_2 = Nuitka_Cell_GET(var_ptp_x);
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        CHECK_OBJECT(Nuitka_Cell_GET(var_ptp_x));
+        tmp_left_value_2 = Nuitka_Cell_GET(var_ptp_x);
         CHECK_OBJECT(var_nbins);
-        tmp_right_name_2 = var_nbins;
-        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = var_nbins;
+        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2323,12 +1980,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    CHECK_OBJECT(par_x);
-    Py_DECREF(par_x);
-    par_x = NULL;
-    CHECK_OBJECT(par_range);
-    Py_DECREF(par_range);
-    par_range = NULL;
     CHECK_OBJECT(var_n);
     Py_DECREF(var_n);
     var_n = NULL;
@@ -2353,12 +2004,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     exception_tb = NULL;
     exception_lineno = 0;
 
-    CHECK_OBJECT(par_x);
-    Py_DECREF(par_x);
-    par_x = NULL;
-    CHECK_OBJECT(par_range);
-    Py_DECREF(par_range);
-    par_range = NULL;
     CHECK_OBJECT(var_n);
     Py_DECREF(var_n);
     var_n = NULL;
@@ -2384,14 +2029,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone(struct 
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2417,7 +2068,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    int tmp_res;
     PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_39224af0ed850082587e2d3777b12f01 = NULL;
     PyObject *exception_keeper_type_1;
@@ -2456,11 +2106,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         if (Nuitka_Cell_GET(self->m_closure[1]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[23]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[33]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2470,10 +2120,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_1 = Nuitka_Cell_GET(self->m_closure[1]);
+        tmp_left_value_1 = Nuitka_Cell_GET(self->m_closure[1]);
         CHECK_OBJECT(par_nbins);
-        tmp_right_name_1 = par_nbins;
-        tmp_assign_source_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = par_nbins;
+        tmp_assign_source_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2489,24 +2139,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_right_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_kw_call_dict_value_1_1;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_right_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2516,8 +2164,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             type_description_1 = "ooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[37]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[34]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2528,8 +2176,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(self->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[2]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[35]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2539,58 +2187,31 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
 
-        tmp_tuple_element_1 = Nuitka_Cell_GET(self->m_closure[3]);
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[38];
-        if (par_nbins == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 153;
-            type_description_1 = "ooocccc";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_dict_value_1 = par_nbins;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[40];
+        tmp_kw_call_arg_value_0_1 = Nuitka_Cell_GET(self->m_closure[3]);
+        CHECK_OBJECT(par_nbins);
+        tmp_kw_call_dict_value_0_1 = par_nbins;
         if (Nuitka_Cell_GET(self->m_closure[2]) == NULL) {
-
-            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[40]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[36]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 153;
             type_description_1 = "ooocccc";
-            goto dict_build_exception_1;
+            goto frame_exception_exit_1;
         }
 
-        tmp_dict_value_1 = Nuitka_Cell_GET(self->m_closure[2]);
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        goto dict_build_noexception_1;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        goto frame_exception_exit_1;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_1:;
+        tmp_kw_call_dict_value_1_1 = Nuitka_Cell_GET(self->m_closure[2]);
         frame_39224af0ed850082587e2d3777b12f01->m_frame.f_lineno = 153;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
+            tmp_expression_value_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[37]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2600,10 +2221,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             type_description_1 = "ooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_1 = mod_consts[24];
-        tmp_left_name_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_left_name_2 == NULL) {
+        tmp_subscript_value_1 = mod_consts[21];
+        tmp_left_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2614,8 +2235,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_left_name_2);
-            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            Py_DECREF(tmp_left_value_2);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2625,9 +2246,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
 
-        tmp_right_name_2 = Nuitka_Cell_GET(self->m_closure[0]);
-        tmp_assign_source_2 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
+        tmp_right_value_2 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_assign_source_2 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2642,21 +2263,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
         var_p_k = tmp_assign_source_2;
     }
     {
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_right_name_6;
-        tmp_left_name_4 = mod_consts[41];
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_right_value_6;
+        tmp_left_value_4 = mod_consts[39];
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2666,10 +2286,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_6 = Nuitka_Cell_GET(self->m_closure[0]);
-        tmp_right_name_4 = mod_consts[22];
-        tmp_left_name_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_6, tmp_right_name_4);
-        if (tmp_left_name_5 == NULL) {
+        tmp_left_value_6 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_right_value_4 = mod_consts[20];
+        tmp_left_value_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_6, tmp_right_value_4);
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2680,49 +2300,25 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_p_k);
-        tmp_expression_name_3 = var_p_k;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[42]);
-        if (tmp_called_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_5);
-
-            exception_lineno = 154;
-            type_description_1 = "ooocccc";
-            goto frame_exception_exit_1;
-        }
-        if (var_p_k == NULL) {
-            Py_DECREF(tmp_left_name_5);
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 154;
-            type_description_1 = "ooocccc";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = var_p_k;
+        tmp_called_instance_1 = var_p_k;
+        CHECK_OBJECT(var_p_k);
+        tmp_args_element_value_1 = var_p_k;
         frame_39224af0ed850082587e2d3777b12f01->m_frame.f_lineno = 154;
-        tmp_right_name_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
-        if (tmp_right_name_5 == NULL) {
+        tmp_right_value_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[40], tmp_args_element_value_1);
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_5);
+            Py_DECREF(tmp_left_value_5);
 
             exception_lineno = 154;
             type_description_1 = "ooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_5);
-        Py_DECREF(tmp_right_name_5);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_3 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_5);
+        Py_DECREF(tmp_right_value_5);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2732,9 +2328,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             type_description_1 = "ooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = BINARY_OPERATION_SUB_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_3 = BINARY_OPERATION_SUB_OBJECT_LONG_OBJECT(tmp_left_value_4, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2745,9 +2341,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_hh);
-        tmp_right_name_6 = var_hh;
-        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_3);
+        tmp_right_value_6 = var_hh;
+        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_3);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2830,11 +2426,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_nbins);
-    par_nbins = NULL;
-    Py_XDECREF(var_hh);
+    CHECK_OBJECT(var_hh);
+    Py_DECREF(var_hh);
     var_hh = NULL;
-    Py_XDECREF(var_p_k);
+    CHECK_OBJECT(var_p_k);
+    Py_DECREF(var_p_k);
     var_p_k = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -2848,8 +2444,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_nbins);
-    par_nbins = NULL;
     Py_XDECREF(var_hh);
     var_hh = NULL;
     Py_XDECREF(var_p_k);
@@ -2867,14 +2461,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$funct
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_nbins);
+    Py_DECREF(par_nbins);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_nbins);
+    Py_DECREF(par_nbins);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2946,15 +2542,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_x);
-        tmp_expression_name_1 = par_x;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_x;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2964,10 +2558,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[41];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[39];
+        tmp_condition_result_1 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2977,53 +2571,41 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 183;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_right_name_6;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_right_value_6;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3033,8 +2615,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[7]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[6]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3044,170 +2626,134 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = mod_consts[44];
-        if (par_x == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 184;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_x;
-        tmp_left_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[8]);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_2 = mod_consts[41];
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_3 = par_x;
+        tmp_left_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[7]);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = mod_consts[41];
-        tmp_right_name_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_3);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_2 = mod_consts[39];
+        tmp_right_value_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_3);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_name_2, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_value_2, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 184;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_x;
-        tmp_left_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[8]);
-        if (tmp_left_name_5 == NULL) {
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_4 = par_x;
+        tmp_left_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[7]);
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_4 = mod_consts[11];
-        tmp_left_name_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_name_5, tmp_right_name_4);
-        Py_DECREF(tmp_left_name_5);
-        if (tmp_left_name_4 == NULL) {
+        tmp_right_value_4 = mod_consts[10];
+        tmp_left_value_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_value_5, tmp_right_value_4);
+        Py_DECREF(tmp_left_value_5);
+        if (tmp_left_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 184;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = par_x;
-        tmp_left_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[8]);
-        if (tmp_left_name_6 == NULL) {
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_5 = par_x;
+        tmp_left_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[7]);
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_4);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_left_value_4);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_6 = mod_consts[45];
-        tmp_right_name_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_6);
-        if (tmp_right_name_5 == NULL) {
+        tmp_right_value_6 = mod_consts[42];
+        tmp_right_value_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_6);
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_4);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_left_value_4);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_4);
-        Py_DECREF(tmp_right_name_5);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_3 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_4);
+        Py_DECREF(tmp_right_value_5);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_3);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_3);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 184;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 184;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3223,16 +2769,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_2;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3242,33 +2787,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[19]);
-        if (tmp_called_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 185;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 185;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_2 = par_x;
+        CHECK_OBJECT(par_x);
+        tmp_args_element_value_2 = par_x;
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 185;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
+        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[18], tmp_args_element_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3284,12 +2806,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_sigma);
-        tmp_compexpr_left_2 = var_sigma;
-        tmp_compexpr_right_2 = mod_consts[46];
-        tmp_condition_result_2 = RICH_COMPARE_GT_NBOOL_OBJECT_FLOAT(tmp_compexpr_left_2, tmp_compexpr_right_2);
+        tmp_cmp_expr_left_2 = var_sigma;
+        tmp_cmp_expr_right_2 = mod_consts[43];
+        tmp_condition_result_2 = RICH_COMPARE_GT_NBOOL_OBJECT_FLOAT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
         if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3310,31 +2832,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_3;
-        if (par_x == NULL) {
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_args_element_value_3;
+        CHECK_OBJECT(par_x);
+        tmp_left_value_7 = par_x;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 190;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_called_instance_2 == NULL)) {
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        tmp_left_name_7 = par_x;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
-
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
-        }
-
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3344,34 +2854,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[47]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 190;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 190;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_3 = par_x;
+        CHECK_OBJECT(par_x);
+        tmp_args_element_value_3 = par_x;
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 190;
-        tmp_right_name_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_3);
-        if (tmp_right_name_7 == NULL) {
+        tmp_right_value_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[44], tmp_args_element_value_3);
+        if (tmp_right_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3381,8 +2868,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_7);
-        Py_DECREF(tmp_right_name_7);
+        tmp_assign_source_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_7);
+        Py_DECREF(tmp_right_value_7);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3397,18 +2884,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
         var_temp = tmp_assign_source_3;
     }
     {
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_3 == NULL)) {
+            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3419,17 +2906,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_temp);
-        tmp_args_element_name_4 = var_temp;
+        tmp_args_element_value_4 = var_temp;
         CHECK_OBJECT(var_sigma);
-        tmp_args_element_name_5 = var_sigma;
+        tmp_args_element_value_5 = var_sigma;
         CHECK_OBJECT(var_temp);
-        tmp_args_element_name_6 = var_temp;
+        tmp_args_element_value_6 = var_temp;
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 191;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS3(
-                tmp_called_instance_1,
-                mod_consts[48],
+                tmp_called_instance_3,
+                mod_consts[45],
                 call_args
             );
         }
@@ -3447,19 +2934,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_instance_4;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_4 == NULL)) {
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3469,51 +2955,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[49]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 192;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_temp == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[50]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 192;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_7 = var_temp;
-        tmp_args_element_name_8 = mod_consts[45];
-        if (var_temp == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[50]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 192;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_9 = var_temp;
+        CHECK_OBJECT(var_temp);
+        tmp_args_element_value_7 = var_temp;
+        tmp_args_element_value_8 = mod_consts[42];
+        CHECK_OBJECT(var_temp);
+        tmp_args_element_value_9 = var_temp;
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 192;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_call_result_2 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_4,
+                mod_consts[46],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_4);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3528,16 +2984,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_element_name_10;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_instance_5;
+        PyObject *tmp_args_element_value_10;
+        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_5 == NULL)) {
+            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3547,33 +3002,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[47]);
-        if (tmp_called_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 193;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_temp == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[50]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 193;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_10 = var_temp;
+        CHECK_OBJECT(var_temp);
+        tmp_args_element_value_10 = var_temp;
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 193;
-        tmp_assign_source_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_10);
-        Py_DECREF(tmp_called_name_5);
+        tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[44], tmp_args_element_value_10);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3588,34 +3020,34 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
         var_g1 = tmp_assign_source_4;
     }
     {
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_right_name_12;
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_called_instance_6;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_right_value_12;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3625,22 +3057,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 194;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_11 = par_x;
+        CHECK_OBJECT(par_x);
+        tmp_args_element_value_11 = par_x;
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 194;
-        tmp_left_name_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_11);
-        if (tmp_left_name_8 == NULL) {
+        tmp_left_value_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_11);
+        if (tmp_left_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3650,211 +3071,199 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[11];
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_left_value_10 = mod_consts[10];
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 194;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[10]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[9]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 194;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 194;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_11 = par_x;
-        tmp_args_element_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[8]);
-        if (tmp_args_element_name_12 == NULL) {
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_7 = par_x;
+        tmp_args_element_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[7]);
+        if (tmp_args_element_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 194;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 194;
-        tmp_right_name_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_12);
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_element_name_12);
-        if (tmp_right_name_9 == NULL) {
+        tmp_right_value_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_12);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_12);
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 194;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_9 = BINARY_OPERATION_ADD_OBJECT_FLOAT_OBJECT(tmp_left_name_10, tmp_right_name_9);
-        Py_DECREF(tmp_right_name_9);
-        if (tmp_left_name_9 == NULL) {
+        tmp_left_value_9 = BINARY_OPERATION_ADD_OBJECT_FLOAT_OBJECT(tmp_left_value_10, tmp_right_value_9);
+        Py_DECREF(tmp_right_value_9);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 194;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[10]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[9]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_11 = mod_consts[11];
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_left_value_11 = mod_consts[10];
+        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_6 == NULL)) {
+            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_instance_2 == NULL) {
+        if (tmp_called_instance_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_9);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_9);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_g1);
-        tmp_args_element_name_14 = var_g1;
+        tmp_args_element_value_14 = var_g1;
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 195;
-        tmp_left_name_12 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[51], tmp_args_element_name_14);
-        if (tmp_left_name_12 == NULL) {
+        tmp_left_value_12 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[47], tmp_args_element_value_14);
+        if (tmp_left_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_9);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_9);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_sg1);
-        tmp_right_name_12 = var_sg1;
-        tmp_right_name_11 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_12, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_12);
-        if (tmp_right_name_11 == NULL) {
+        tmp_right_value_12 = var_sg1;
+        tmp_right_value_11 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_12, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_12);
+        if (tmp_right_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_9);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_9);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_13 = BINARY_OPERATION_ADD_OBJECT_FLOAT_OBJECT(tmp_left_name_11, tmp_right_name_11);
-        Py_DECREF(tmp_right_name_11);
-        if (tmp_args_element_name_13 == NULL) {
+        tmp_args_element_value_13 = BINARY_OPERATION_ADD_OBJECT_FLOAT_OBJECT(tmp_left_value_11, tmp_right_value_11);
+        Py_DECREF(tmp_right_value_11);
+        if (tmp_args_element_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_9);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_9);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
         frame_f168e74cf8441642e0ce4af64f57740c->m_frame.f_lineno = 195;
-        tmp_right_name_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_13);
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_13);
-        if (tmp_right_name_10 == NULL) {
+        tmp_right_value_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_13);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_13);
+        if (tmp_right_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_8 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_10);
-        Py_DECREF(tmp_left_name_9);
-        Py_DECREF(tmp_right_name_10);
-        if (tmp_right_name_8 == NULL) {
+        tmp_right_value_8 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_10);
+        Py_DECREF(tmp_left_value_9);
+        Py_DECREF(tmp_right_value_10);
+        if (tmp_right_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
-            exception_lineno = 194;
+            exception_lineno = 195;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_8);
-        Py_DECREF(tmp_right_name_8);
+        tmp_return_value = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_8);
+        Py_DECREF(tmp_right_value_8);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3934,17 +3343,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     goto try_except_handler_1;
 
     frame_no_exception_1:;
-    tmp_return_value = mod_consts[46];
+    tmp_return_value = mod_consts[43];
     Py_INCREF(tmp_return_value);
     goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     Py_XDECREF(var_sg1);
     var_sg1 = NULL;
     Py_XDECREF(var_sigma);
@@ -3965,10 +3370,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     Py_XDECREF(var_sg1);
     var_sg1 = NULL;
     Py_XDECREF(var_sigma);
@@ -3990,14 +3391,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__7__hist_bin_doane(struct 
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4066,18 +3469,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4087,7 +3490,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[53]);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[49]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4098,10 +3501,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -4115,19 +3518,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_1 = par_x;
-        tmp_args_element_name_2 = LIST_COPY(mod_consts[55]);
+        tmp_args_element_value_1 = par_x;
+        tmp_args_element_value_2 = LIST_COPY(mod_consts[51]);
         frame_6aeb1b65ce0b857f56a5ab5834fa171f->m_frame.f_lineno = 225;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_dircall_arg2_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[54],
+                mod_consts[50],
                 call_args
             );
         }
 
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_dircall_arg2_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4157,18 +3560,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
         var_iqr = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_right_name_3;
-        tmp_left_name_2 = mod_consts[13];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_right_value_3;
+        tmp_left_value_2 = mod_consts[12];
         CHECK_OBJECT(var_iqr);
-        tmp_right_name_1 = var_iqr;
-        tmp_left_name_1 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_name_2, tmp_right_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_right_value_1 = var_iqr;
+        tmp_left_value_1 = BINARY_OPERATION_MULT_OBJECT_FLOAT_OBJECT(tmp_left_value_2, tmp_right_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4178,46 +3581,35 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 226;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_x;
-        tmp_left_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_left_name_3 == NULL) {
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_2 = par_x;
+        tmp_left_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[7]);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 226;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = mod_consts[56];
-        tmp_right_name_2 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_3);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_3 = mod_consts[52];
+        tmp_right_value_2 = BINARY_OPERATION_POW_OBJECT_OBJECT_FLOAT(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_3);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 226;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_2);
+        tmp_return_value = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4296,11 +3688,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    Py_XDECREF(var_iqr);
+    CHECK_OBJECT(var_iqr);
+    Py_DECREF(var_iqr);
     var_iqr = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -4314,10 +3703,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     Py_XDECREF(var_iqr);
     var_iqr = NULL;
     // Re-raise.
@@ -4333,14 +3718,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4367,7 +3754,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    bool tmp_result;
     PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_d152888d6b5c4a453a53e3c6aeaca594 = NULL;
     PyObject *exception_keeper_type_1;
@@ -4406,16 +3792,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[58]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[54]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[58]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4426,13 +3812,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_1 = par_x;
+        tmp_args_element_value_1 = par_x;
         CHECK_OBJECT(par_range);
-        tmp_args_element_name_2 = par_range;
+        tmp_args_element_value_2 = par_range;
         frame_d152888d6b5c4a453a53e3c6aeaca594->m_frame.f_lineno = 263;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_assign_source_1 == NULL) {
@@ -4450,16 +3836,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[59]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[55]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4469,36 +3855,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        if (par_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[2]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 264;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_3 = par_x;
-        if (par_range == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[40]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 264;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_4 = par_range;
+        CHECK_OBJECT(par_x);
+        tmp_args_element_value_3 = par_x;
+        CHECK_OBJECT(par_range);
+        tmp_args_element_value_4 = par_range;
         frame_d152888d6b5c4a453a53e3c6aeaca594->m_frame.f_lineno = 264;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
         if (tmp_assign_source_2 == NULL) {
@@ -4514,23 +3878,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
         assert(var_sturges_bw == NULL);
         var_sturges_bw = tmp_assign_source_2;
     }
-    tmp_result = par_range != NULL;
-    if (likely(tmp_result)) {
-        Py_DECREF(par_range);
-        par_range = NULL;
-    }
-
-    if (tmp_result == false) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[40]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 265;
-        type_description_1 = "oooo";
-        goto frame_exception_exit_1;
-    }
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    par_range = NULL;
 
     {
         nuitka_bool tmp_condition_result_1;
@@ -4556,19 +3906,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_3 = LOOKUP_BUILTIN(mod_consts[3]);
-        assert(tmp_called_name_3 != NULL);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_3 = LOOKUP_BUILTIN(mod_consts[2]);
+        assert(tmp_called_value_3 != NULL);
         CHECK_OBJECT(var_fd_bw);
-        tmp_args_element_name_5 = var_fd_bw;
+        tmp_args_element_value_5 = var_fd_bw;
         CHECK_OBJECT(var_sturges_bw);
-        tmp_args_element_name_6 = var_sturges_bw;
+        tmp_args_element_value_6 = var_sturges_bw;
         frame_d152888d6b5c4a453a53e3c6aeaca594->m_frame.f_lineno = 267;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -4657,10 +4007,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     CHECK_OBJECT(var_fd_bw);
     Py_DECREF(var_fd_bw);
     var_fd_bw = NULL;
@@ -4679,8 +4025,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_x);
-    par_x = NULL;
     Py_XDECREF(par_range);
     par_range = NULL;
     Py_XDECREF(var_fd_bw);
@@ -4700,14 +4044,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__9__hist_bin_auto(struct N
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4772,11 +4118,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_1;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -4790,9 +4136,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_1 = par_a;
+        tmp_args_element_value_1 = par_a;
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 285;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[61], tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[57], tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4805,21 +4151,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
         }
         {
             PyObject *old = par_a;
+            assert(old != NULL);
             par_a = tmp_assign_source_1;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_a);
-        tmp_expression_name_1 = par_a;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[62]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_a;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[58]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4829,36 +4176,36 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_1);
+            Py_DECREF(tmp_cmp_expr_left_1);
 
             exception_lineno = 288;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[63]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[59]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_1);
+            Py_DECREF(tmp_cmp_expr_left_1);
 
             exception_lineno = 288;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -4878,25 +4225,25 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_kwargs_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[31]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_kwargs_value_1;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4906,8 +4253,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[32]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[28]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4917,61 +4264,49 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = mod_consts[64];
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[65]);
-        assert(!(tmp_called_name_2 == NULL));
-        if (par_a == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        tmp_expression_value_4 = mod_consts[60];
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[61]);
+        assert(!(tmp_called_value_2 == NULL));
+        CHECK_OBJECT(par_a);
+        tmp_expression_value_5 = par_a;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[58]);
+        if (tmp_args_element_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 290;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        tmp_expression_name_5 = par_a;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[62]);
-        if (tmp_args_element_name_2 == NULL) {
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        }
+
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 290;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
-
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
-        }
-
-        if (tmp_expression_name_6 == NULL) {
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[62]);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
-
-            exception_lineno = 290;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[67]);
-        if (tmp_args_element_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 290;
             type_description_1 = "oo";
@@ -4979,29 +4314,29 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
         }
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 289;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_tuple_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_tuple_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_3);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 289;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[34]);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[30]);
 
         if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[30]);
         }
 
         if (tmp_tuple_element_1 == NULL) {
@@ -5014,21 +4349,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             type_description_1 = "oo";
             goto tuple_build_exception_1;
         }
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[35]);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[31]);
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 289;
-        tmp_call_result_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_call_result_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5043,25 +4378,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_8;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 292;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_7 = par_a;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[68]);
-        if (tmp_called_name_3 == NULL) {
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_8;
+        CHECK_OBJECT(par_a);
+        tmp_expression_value_7 = par_a;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[63]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5071,37 +4395,37 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 292;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[67]);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[62]);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 292;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 292;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_4);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5114,20 +4438,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
         }
         {
             PyObject *old = par_a;
+            assert(old != NULL);
             par_a = tmp_assign_source_2;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_weights);
-        tmp_compexpr_left_2 = par_weights;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_weights;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -5138,11 +4463,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_5;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -5156,9 +4481,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_weights);
-        tmp_args_element_name_5 = par_weights;
+        tmp_args_element_value_5 = par_weights;
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 295;
-        tmp_assign_source_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[61], tmp_args_element_name_5);
+        tmp_assign_source_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[57], tmp_args_element_value_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5171,21 +4496,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
         }
         {
             PyObject *old = par_weights;
+            assert(old != NULL);
             par_weights = tmp_assign_source_3;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
         CHECK_OBJECT(par_weights);
-        tmp_expression_name_9 = par_weights;
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[69]);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_expression_value_9 = par_weights;
+        tmp_cmp_expr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[64]);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5196,8 +4522,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             goto frame_exception_exit_1;
         }
         if (par_a == NULL) {
-            Py_DECREF(tmp_compexpr_left_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
+            Py_DECREF(tmp_cmp_expr_left_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5207,21 +4533,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_10 = par_a;
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[69]);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_expression_value_10 = par_a;
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[64]);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_3);
+            Py_DECREF(tmp_cmp_expr_left_3);
 
             exception_lineno = 296;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -5243,7 +4569,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[70];
+        tmp_make_exception_arg_1 = mod_consts[66];
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 297;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -5257,21 +4583,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_called_instance_3;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 299;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_weights);
         tmp_called_instance_3 = par_weights;
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 299;
-        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[72]);
+        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[67]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5284,8 +4599,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
         }
         {
             PyObject *old = par_weights;
+            assert(old != NULL);
             par_weights = tmp_assign_source_4;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -5295,7 +4611,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
         PyObject *tmp_called_instance_4;
         if (par_a == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5307,7 +4623,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__10__ravel_and_check_weigh
 
         tmp_called_instance_4 = par_a;
         frame_2ea93b1ef5fa2103ffd5401f715c7317->m_frame.f_lineno = 300;
-        tmp_assign_source_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[72]);
+        tmp_assign_source_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[67]);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5533,12 +4849,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_range);
-        tmp_compexpr_left_1 = par_range;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_range;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -5643,7 +4959,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -5664,7 +4980,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -5700,7 +5017,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -5724,19 +5042,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_first_edge);
-        tmp_compexpr_left_2 = var_first_edge;
+        tmp_cmp_expr_left_2 = var_first_edge;
         CHECK_OBJECT(var_last_edge);
-        tmp_compexpr_right_2 = var_last_edge;
-        tmp_condition_result_2 = RICH_COMPARE_GT_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
+        tmp_cmp_expr_right_2 = var_last_edge;
+        tmp_condition_result_2 = RICH_COMPARE_GT_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
         if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -5758,7 +5072,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[75];
+        tmp_make_exception_arg_1 = mod_consts[70];
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 312;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -5770,19 +5084,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     }
     branch_no_2:;
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_3;
+        PyObject *tmp_operand_value_1;
         int tmp_and_left_truth_1;
         PyObject *tmp_and_left_value_1;
         PyObject *tmp_and_right_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -5796,9 +5110,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_first_edge);
-        tmp_args_element_name_1 = var_first_edge;
+        tmp_args_element_value_1 = var_first_edge;
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 314;
-        tmp_and_left_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[76], tmp_args_element_name_1);
+        tmp_and_left_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[71], tmp_args_element_value_1);
         if (tmp_and_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5827,10 +5141,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
         }
         and_right_1:;
         Py_DECREF(tmp_and_left_value_1);
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -5844,9 +5158,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_last_edge);
-        tmp_args_element_name_2 = var_last_edge;
+        tmp_args_element_value_2 = var_last_edge;
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 314;
-        tmp_and_right_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[76], tmp_args_element_name_2);
+        tmp_and_right_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[71], tmp_args_element_value_2);
         if (tmp_and_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5857,13 +5171,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = tmp_and_right_value_1;
+        tmp_operand_value_1 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
-        tmp_operand_name_1 = tmp_and_left_value_1;
+        tmp_operand_value_1 = tmp_and_left_value_1;
         and_end_1:;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5874,8 +5188,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -5885,29 +5199,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_1 = mod_consts[77];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[65]);
-        assert(!(tmp_called_name_1 == NULL));
-        if (var_first_edge == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 316;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_3 = var_first_edge;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = mod_consts[72];
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[61]);
+        assert(!(tmp_called_value_1 == NULL));
+        CHECK_OBJECT(var_first_edge);
+        tmp_args_element_value_3 = var_first_edge;
         if (var_last_edge == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5917,14 +5220,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_4 = var_last_edge;
+        tmp_args_element_value_4 = var_last_edge;
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 316;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_make_exception_arg_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_make_exception_arg_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5950,15 +5253,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_a);
-        tmp_expression_name_2 = par_a;
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_expression_value_2 = par_a;
+        tmp_cmp_expr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[7]);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5968,10 +5269,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = mod_consts[24];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_right_3 = mod_consts[21];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5981,30 +5282,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 317;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_iter_arg_2;
-        tmp_iter_arg_2 = mod_consts[80];
+        tmp_iter_arg_2 = mod_consts[74];
         tmp_assign_source_6 = MAKE_ITERATOR_INFALLIBLE(tmp_iter_arg_2);
         assert(!(tmp_assign_source_6 == NULL));
         assert(tmp_tuple_unpack_2__source_iter == NULL);
@@ -6074,7 +5363,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -6095,7 +5384,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -6132,7 +5422,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     goto frame_exception_exit_1;
     // End of try:
     try_end_4:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_9;
@@ -6156,10 +5447,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     Py_XDECREF(tmp_tuple_unpack_2__element_2);
     tmp_tuple_unpack_2__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
     goto branch_end_4;
     branch_no_4:;
     // Tried code:
@@ -6168,21 +5455,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
         PyObject *tmp_iter_arg_3;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_called_instance_3;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 321;
-            type_description_1 = "oooo";
-            goto try_except_handler_6;
-        }
-
+        CHECK_OBJECT(par_a);
         tmp_called_instance_3 = par_a;
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 321;
-        tmp_tuple_element_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[3]);
+        tmp_tuple_element_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[2]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6197,18 +5473,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
         {
             PyObject *tmp_called_instance_4;
             PyTuple_SET_ITEM(tmp_iter_arg_3, 0, tmp_tuple_element_1);
-            if (par_a == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 321;
-                type_description_1 = "oooo";
-                goto tuple_build_exception_1;
-            }
-
+            CHECK_OBJECT(par_a);
             tmp_called_instance_4 = par_a;
             frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 321;
             tmp_tuple_element_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[1]);
@@ -6300,7 +5565,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -6321,7 +5586,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_5;
@@ -6357,7 +5623,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     goto frame_exception_exit_1;
     // End of try:
     try_end_6:;
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     {
         PyObject *tmp_assign_source_14;
@@ -6381,24 +5648,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     Py_XDECREF(tmp_tuple_unpack_3__element_2);
     tmp_tuple_unpack_3__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_3__element_1);
-    tmp_tuple_unpack_3__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_3__element_2);
-    tmp_tuple_unpack_3__element_2 = NULL;
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_2;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_2;
         int tmp_and_left_truth_2;
         PyObject *tmp_and_left_value_2;
         PyObject *tmp_and_right_value_2;
         PyObject *tmp_called_instance_5;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_5;
         PyObject *tmp_called_instance_6;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_6;
+        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_5 == NULL)) {
-            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_5 == NULL) {
@@ -6412,9 +5675,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_first_edge);
-        tmp_args_element_name_5 = var_first_edge;
+        tmp_args_element_value_5 = var_first_edge;
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 322;
-        tmp_and_left_value_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[76], tmp_args_element_name_5);
+        tmp_and_left_value_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[71], tmp_args_element_value_5);
         if (tmp_and_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6443,10 +5706,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
         }
         and_right_2:;
         Py_DECREF(tmp_and_left_value_2);
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_6 == NULL) {
@@ -6460,9 +5723,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_last_edge);
-        tmp_args_element_name_6 = var_last_edge;
+        tmp_args_element_value_6 = var_last_edge;
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 322;
-        tmp_and_right_value_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[76], tmp_args_element_name_6);
+        tmp_and_right_value_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[71], tmp_args_element_value_6);
         if (tmp_and_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6473,13 +5736,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_2 = tmp_and_right_value_2;
+        tmp_operand_value_2 = tmp_and_right_value_2;
         goto and_end_2;
         and_left_2:;
-        tmp_operand_name_2 = tmp_and_left_value_2;
+        tmp_operand_value_2 = tmp_and_left_value_2;
         and_end_2:;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
-        Py_DECREF(tmp_operand_name_2);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
+        Py_DECREF(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6490,8 +5753,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
@@ -6501,29 +5764,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        tmp_expression_name_3 = mod_consts[81];
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[65]);
-        assert(!(tmp_called_name_2 == NULL));
-        if (var_first_edge == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 324;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_7 = var_first_edge;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        tmp_expression_value_3 = mod_consts[75];
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[61]);
+        assert(!(tmp_called_value_2 == NULL));
+        CHECK_OBJECT(var_first_edge);
+        tmp_args_element_value_7 = var_first_edge;
         if (var_last_edge == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6533,14 +5785,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_8 = var_last_edge;
+        tmp_args_element_value_8 = var_last_edge;
         frame_b4d90bafc76cd4afa8d1cbfdee51a838->m_frame.f_lineno = 324;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_make_exception_arg_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_make_exception_arg_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6566,11 +5818,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     branch_end_1:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         if (var_first_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6580,10 +5832,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_4 = var_first_edge;
+        tmp_cmp_expr_left_4 = var_first_edge;
         if (var_last_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6593,8 +5845,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_right_4 = var_last_edge;
-        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
+        tmp_cmp_expr_right_4 = var_last_edge;
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
         if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -6615,11 +5867,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         if (var_first_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6629,9 +5881,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_1 = var_first_edge;
-        tmp_right_name_1 = mod_consts[18];
-        tmp_assign_source_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_FLOAT(tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = var_first_edge;
+        tmp_right_value_1 = mod_consts[17];
+        tmp_assign_source_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_FLOAT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6651,11 +5903,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         if (var_last_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6665,9 +5917,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_2 = var_last_edge;
-        tmp_right_name_2 = mod_consts[18];
-        tmp_assign_source_17 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_name_2, tmp_right_name_2);
+        tmp_left_value_2 = var_last_edge;
+        tmp_right_value_2 = mod_consts[17];
+        tmp_assign_source_17 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_value_2, tmp_right_value_2);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6690,7 +5942,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
         PyObject *tmp_tuple_element_2;
         if (var_first_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6705,7 +5957,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
         PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_2);
         if (var_last_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6793,10 +6045,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_a);
-    par_a = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     Py_XDECREF(var_first_edge);
     var_first_edge = NULL;
     Py_XDECREF(var_last_edge);
@@ -6813,10 +6061,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_a);
-    par_a = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     Py_XDECREF(var_first_edge);
     var_first_edge = NULL;
     Py_XDECREF(var_last_edge);
@@ -6834,14 +6078,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__11__get_outer_edges(struc
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6862,7 +6112,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     PyObject *par_b = python_pars[1];
     PyObject *var_signed_to_unsigned = NULL;
     PyObject *var_dt = NULL;
-    nuitka_bool tmp_try_except_1__unhandled_indicator = NUITKA_BOOL_UNASSIGNED;
     struct Nuitka_FrameObject *frame_09f223e445342ba791b0bfa5c758b52e;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
@@ -6922,15 +6171,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
         PyObject *tmp_assign_source_1;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6940,7 +6189,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[83]);
+        tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[78]);
         if (tmp_dict_key_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6951,13 +6200,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6967,7 +6216,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
+        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[79]);
         if (tmp_dict_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6980,14 +6229,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
         }
         tmp_assign_source_1 = _PyDict_NewPresized( 5 );
         {
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_expression_name_4;
-            PyObject *tmp_expression_name_5;
-            PyObject *tmp_expression_name_6;
-            PyObject *tmp_expression_name_7;
-            PyObject *tmp_expression_name_8;
-            PyObject *tmp_expression_name_9;
-            PyObject *tmp_expression_name_10;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_expression_value_5;
+            PyObject *tmp_expression_value_6;
+            PyObject *tmp_expression_value_7;
+            PyObject *tmp_expression_value_8;
+            PyObject *tmp_expression_value_9;
+            PyObject *tmp_expression_value_10;
             tmp_res = PyDict_SetItem(tmp_assign_source_1, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             Py_DECREF(tmp_dict_key_1);
@@ -6997,17 +6246,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 342;
+                exception_lineno = 343;
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_3 == NULL)) {
-                tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_3 == NULL)) {
+                tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_3 == NULL) {
+            if (tmp_expression_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7017,7 +6266,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[85]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[80]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7028,13 +6277,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_4 == NULL)) {
-                tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_4 == NULL)) {
+                tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_4 == NULL) {
+            if (tmp_expression_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7044,7 +6293,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[86]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[81]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7064,17 +6313,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 342;
+                exception_lineno = 344;
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_5 == NULL)) {
-                tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_5 == NULL)) {
+                tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_5 == NULL) {
+            if (tmp_expression_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7084,7 +6333,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[87]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[82]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7095,13 +6344,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_6 == NULL)) {
-                tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_6 == NULL)) {
+                tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_6 == NULL) {
+            if (tmp_expression_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7111,7 +6360,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[88]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[83]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7131,17 +6380,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 342;
+                exception_lineno = 345;
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_7 == NULL)) {
-                tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_7 == NULL)) {
+                tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_7 == NULL) {
+            if (tmp_expression_value_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7151,7 +6400,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[89]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[84]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7162,13 +6411,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_8 == NULL)) {
-                tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_8 == NULL)) {
+                tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_8 == NULL) {
+            if (tmp_expression_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7178,7 +6427,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[90]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[85]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7198,17 +6447,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 342;
+                exception_lineno = 346;
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_9 == NULL)) {
-                tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_9 == NULL)) {
+                tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_9 == NULL) {
+            if (tmp_expression_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7218,7 +6467,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[91]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[86]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7229,13 +6478,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_10 == NULL)) {
-                tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_10 == NULL)) {
+                tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_10 == NULL) {
+            if (tmp_expression_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7245,7 +6494,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[92]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[87]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -7265,7 +6514,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 342;
+                exception_lineno = 347;
                 type_description_1 = "oooo";
                 goto dict_build_exception_1;
             }
@@ -7283,12 +6532,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -7302,15 +6551,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_1 = par_a;
+        tmp_args_element_value_1 = par_a;
         CHECK_OBJECT(par_b);
-        tmp_args_element_name_2 = par_b;
+        tmp_args_element_value_2 = par_b;
         frame_09f223e445342ba791b0bfa5c758b52e->m_frame.f_lineno = 349;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assign_source_2 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[93],
+                mod_consts[88],
                 call_args
             );
         }
@@ -7328,23 +6577,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
         assert(var_dt == NULL);
         var_dt = tmp_assign_source_2;
     }
-    {
-        nuitka_bool tmp_assign_source_3;
-        tmp_assign_source_3 = NUITKA_BOOL_TRUE;
-        tmp_try_except_1__unhandled_indicator = tmp_assign_source_3;
-    }
     // Tried code:
     {
-        PyObject *tmp_assign_source_4;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_assign_source_3;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_expression_value_11;
         CHECK_OBJECT(var_signed_to_unsigned);
-        tmp_dict_arg_name_1 = var_signed_to_unsigned;
+        tmp_dict_arg_value_1 = var_signed_to_unsigned;
         CHECK_OBJECT(var_dt);
-        tmp_expression_name_11 = var_dt;
-        tmp_key_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[94]);
-        if (tmp_key_name_1 == NULL) {
+        tmp_expression_value_11 = var_dt;
+        tmp_key_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[89]);
+        if (tmp_key_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7354,9 +6598,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_4 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_1, tmp_key_name_1);
-        Py_DECREF(tmp_key_name_1);
-        if (tmp_assign_source_4 == NULL) {
+        tmp_assign_source_3 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_value_1, tmp_key_value_1);
+        Py_DECREF(tmp_key_value_1);
+        if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7368,8 +6612,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
         }
         {
             PyObject *old = var_dt;
-            var_dt = tmp_assign_source_4;
-            Py_XDECREF(old);
+            assert(old != NULL);
+            var_dt = tmp_assign_source_3;
+            Py_DECREF(old);
         }
 
     }
@@ -7385,11 +6630,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     exception_tb = NULL;
     exception_lineno = 0;
 
-    {
-        nuitka_bool tmp_assign_source_5;
-        tmp_assign_source_5 = NUITKA_BOOL_FALSE;
-        tmp_try_except_1__unhandled_indicator = tmp_assign_source_5;
-    }
     // Preserve existing published exception id 1.
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
@@ -7405,11 +6645,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_KeyError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_KeyError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_1 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -7420,20 +6660,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_2;
-        PyObject *tmp_dict_value_2;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7443,8 +6681,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[53]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[49]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7454,66 +6692,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto try_except_handler_3;
         }
-        if (par_a == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 353;
-            type_description_1 = "oooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_tuple_element_1 = par_a;
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        if (par_b == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[95]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 353;
-            type_description_1 = "oooo";
-            goto tuple_build_exception_1;
-        }
-
-        tmp_tuple_element_1 = par_b;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
-        goto tuple_build_noexception_1;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        goto try_except_handler_3;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_1:;
-        tmp_dict_key_2 = mod_consts[62];
-        if (var_dt == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[96]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 353;
-            type_description_1 = "oooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_dict_value_2 = var_dt;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_2, tmp_dict_value_2);
-        assert(!(tmp_res != 0));
+        CHECK_OBJECT(par_a);
+        tmp_kw_call_arg_value_0_1 = par_a;
+        CHECK_OBJECT(par_b);
+        tmp_kw_call_arg_value_1_1 = par_b;
+        CHECK_OBJECT(var_dt);
+        tmp_kw_call_dict_value_0_1 = var_dt;
         frame_09f223e445342ba791b0bfa5c758b52e->m_frame.f_lineno = 353;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[90]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7570,35 +6762,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     // End of try:
     try_end_1:;
     {
-        bool tmp_condition_result_2;
-        nuitka_bool tmp_compexpr_left_2;
-        nuitka_bool tmp_compexpr_right_2;
-        assert(tmp_try_except_1__unhandled_indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_2 = tmp_try_except_1__unhandled_indicator;
-        tmp_compexpr_right_2 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
-        if (tmp_condition_result_2 != false) {
-            goto branch_yes_2;
-        } else {
-            goto branch_no_2;
-        }
-    }
-    branch_yes_2:;
-    {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_3;
-        PyObject *tmp_dict_value_3;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_kw_call_arg_value_0_2;
+        PyObject *tmp_kw_call_arg_value_1_2;
+        PyObject *tmp_kw_call_dict_value_0_2;
+        PyObject *tmp_kw_call_dict_value_1_1;
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7608,8 +6784,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[53]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[49]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7619,58 +6795,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        if (par_a == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 357;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_tuple_element_2 = par_a;
-        tmp_args_name_2 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-        if (par_b == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[95]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 357;
-            type_description_1 = "oooo";
-            goto tuple_build_exception_2;
-        }
-
-        tmp_tuple_element_2 = par_b;
-        PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
-        goto tuple_build_noexception_2;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_2:;
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_2);
-        goto frame_exception_exit_1;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_2:;
-        tmp_dict_key_3 = mod_consts[97];
-        tmp_dict_value_3 = mod_consts[98];
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_3, tmp_dict_value_3);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_3 = mod_consts[62];
+        CHECK_OBJECT(par_a);
+        tmp_kw_call_arg_value_0_2 = par_a;
+        CHECK_OBJECT(par_b);
+        tmp_kw_call_arg_value_1_2 = par_b;
+        tmp_kw_call_dict_value_0_2 = mod_consts[91];
         CHECK_OBJECT(var_dt);
-        tmp_dict_value_3 = var_dt;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_3, tmp_dict_value_3);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_1_1 = var_dt;
         frame_09f223e445342ba791b0bfa5c758b52e->m_frame.f_lineno = 357;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_2, tmp_kw_call_arg_value_1_2};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_1};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[92]);
+        }
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7683,7 +6822,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
         }
         goto frame_return_exit_1;
     }
-    branch_no_2:;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_09f223e445342ba791b0bfa5c758b52e);
@@ -7747,17 +6885,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     goto try_except_handler_1;
 
     frame_no_exception_1:;
-    tmp_return_value = Py_None;
-    Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_a);
-    par_a = NULL;
-    Py_XDECREF(par_b);
-    par_b = NULL;
     CHECK_OBJECT(var_signed_to_unsigned);
     Py_DECREF(var_signed_to_unsigned);
     var_signed_to_unsigned = NULL;
@@ -7775,10 +6906,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_a);
-    par_a = NULL;
-    Py_XDECREF(par_b);
-    par_b = NULL;
     Py_XDECREF(var_signed_to_unsigned);
     var_signed_to_unsigned = NULL;
     Py_XDECREF(var_dt);
@@ -7796,14 +6923,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__12__unsigned_subtract(str
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_b);
+    Py_DECREF(par_b);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_b);
+    Py_DECREF(par_b);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7936,7 +7069,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
         CHECK_OBJECT(par_bins);
         tmp_isinstance_inst_1 = par_bins;
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7965,17 +7098,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_bin_name);
-        tmp_compexpr_left_1 = var_bin_name;
-        tmp_compexpr_right_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[100]);
+        tmp_cmp_expr_left_1 = var_bin_name;
+        tmp_cmp_expr_right_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[94]);
 
-        if (unlikely(tmp_compexpr_right_1 == NULL)) {
-            tmp_compexpr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
+        if (unlikely(tmp_cmp_expr_right_1 == NULL)) {
+            tmp_cmp_expr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[94]);
         }
 
-        if (tmp_compexpr_right_1 == NULL) {
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7985,7 +7118,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8007,13 +7140,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_instance_1 = mod_consts[101];
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_expression_value_1 = mod_consts[95];
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[61]);
+        assert(!(tmp_called_value_1 == NULL));
         CHECK_OBJECT(var_bin_name);
-        tmp_args_element_name_1 = var_bin_name;
+        tmp_args_element_value_1 = var_bin_name;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 391;
-        tmp_make_exception_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[65], tmp_args_element_name_1);
+        tmp_make_exception_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8037,12 +7174,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_no_2:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_weights);
-        tmp_compexpr_left_2 = par_weights;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_weights;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -8053,7 +7190,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        tmp_make_exception_arg_2 = mod_consts[102];
+        tmp_make_exception_arg_2 = mod_consts[96];
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 393;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
@@ -8068,16 +7205,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[103]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[97]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[103]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[97]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8088,13 +7225,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_2 = par_a;
+        tmp_args_element_value_2 = par_a;
         CHECK_OBJECT(par_range);
-        tmp_args_element_name_3 = par_range;
+        tmp_args_element_value_3 = par_range;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 396;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
         if (tmp_iter_arg_1 == NULL) {
@@ -8199,7 +7336,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -8220,7 +7357,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -8256,7 +7394,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_7;
@@ -8280,29 +7419,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        if (par_range == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[40]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 399;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_3 = par_range;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_4 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        CHECK_OBJECT(par_range);
+        tmp_cmp_expr_left_3 = par_range;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -8312,24 +7436,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 400;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_4 = par_a;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        CHECK_OBJECT(par_a);
+        tmp_cmp_expr_left_4 = par_a;
         CHECK_OBJECT(var_first_edge);
-        tmp_compexpr_right_4 = var_first_edge;
-        tmp_assign_source_9 = RICH_COMPARE_GE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
+        tmp_cmp_expr_right_4 = var_first_edge;
+        tmp_assign_source_9 = RICH_COMPARE_GE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8345,29 +7458,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_keep);
-        tmp_left_name_1 = var_keep;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 401;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_5 = par_a;
+        tmp_left_value_1 = var_keep;
+        CHECK_OBJECT(par_a);
+        tmp_cmp_expr_left_5 = par_a;
         CHECK_OBJECT(var_last_edge);
-        tmp_compexpr_right_5 = var_last_edge;
-        tmp_right_name_1 = RICH_COMPARE_LE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        if (tmp_right_name_1 == NULL) {
+        tmp_cmp_expr_right_5 = var_last_edge;
+        tmp_right_value_1 = RICH_COMPARE_LE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8377,8 +7479,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_result = BINARY_OPERATION_BITAND_OBJECT_OBJECT_INPLACE(&tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_result = BINARY_OPERATION_BITAND_OBJECT_OBJECT_INPLACE(&tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8389,23 +7491,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_10 = tmp_left_name_1;
+        tmp_assign_source_10 = tmp_left_value_1;
         var_keep = tmp_assign_source_10;
 
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8415,8 +7517,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[104]);
-        if (tmp_called_instance_2 == NULL) {
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[98]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8427,11 +7529,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_keep);
-        tmp_args_element_name_4 = var_keep;
+        tmp_args_element_value_4 = var_keep;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 402;
-        tmp_operand_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[105], tmp_args_element_name_4);
-        Py_DECREF(tmp_called_instance_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[99], tmp_args_element_value_4);
+        Py_DECREF(tmp_called_instance_1);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8441,8 +7543,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8453,8 +7555,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
@@ -8463,35 +7565,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 403;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_a;
-        if (var_keep == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[106]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 403;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_subscript_name_1 = var_keep;
-        tmp_assign_source_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(par_a);
+        tmp_expression_value_3 = par_a;
+        CHECK_OBJECT(var_keep);
+        tmp_subscript_value_1 = var_keep;
+        tmp_assign_source_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8504,8 +7584,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
         }
         {
             PyObject *old = par_a;
+            assert(old != NULL);
             par_a = tmp_assign_source_11;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -8513,14 +7594,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_4;
         if (par_a == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8530,9 +7609,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = par_a;
-        tmp_compexpr_left_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[8]);
-        if (tmp_compexpr_left_6 == NULL) {
+        tmp_expression_value_4 = par_a;
+        tmp_cmp_expr_left_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[7]);
+        if (tmp_cmp_expr_left_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8542,10 +7621,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_6 = mod_consts[24];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        Py_DECREF(tmp_compexpr_left_6);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_right_6 = mod_consts[21];
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        Py_DECREF(tmp_cmp_expr_left_6);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8555,29 +7634,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 405;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_6 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = mod_consts[22];
+        tmp_assign_source_12 = mod_consts[20];
         {
             PyObject *old = var_n_equal_bins;
             assert(old != NULL);
@@ -8591,19 +7658,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_no_6:;
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
         PyObject *tmp_tuple_element_1;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[100]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[94]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[94]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8614,9 +7681,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_bin_name);
-        tmp_subscript_name_2 = var_bin_name;
-        tmp_called_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_2);
-        if (tmp_called_name_2 == NULL) {
+        tmp_subscript_value_2 = var_bin_name;
+        tmp_called_value_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8627,8 +7694,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
         if (par_a == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8638,22 +7705,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_5 = par_a;
+        tmp_args_element_value_5 = par_a;
         CHECK_OBJECT(var_first_edge);
         tmp_tuple_element_1 = var_first_edge;
-        tmp_args_element_name_6 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_element_name_6, 0, tmp_tuple_element_1);
+        tmp_args_element_value_6 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_6, 0, tmp_tuple_element_1);
         CHECK_OBJECT(var_last_edge);
         tmp_tuple_element_1 = var_last_edge;
-        PyTuple_SET_ITEM0(tmp_args_element_name_6, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_element_value_6, 1, tmp_tuple_element_1);
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 409;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_assign_source_13 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_assign_source_13 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_6);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8669,10 +7736,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     }
     {
         nuitka_bool tmp_condition_result_7;
-        int tmp_truth_name_2;
+        int tmp_truth_name_1;
         CHECK_OBJECT(var_width);
-        tmp_truth_name_2 = CHECK_IF_TRUE(var_width);
-        if (tmp_truth_name_2 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(var_width);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8682,7 +7749,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_7 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_7 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
         } else {
@@ -8693,21 +7760,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     {
         PyObject *tmp_assign_source_14;
         PyObject *tmp_int_arg_1;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_right_name_2;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_right_value_2;
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8717,8 +7784,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[107]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[100]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8728,82 +7795,60 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 411;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_last_edge == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 411;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_8 = var_last_edge;
-        if (var_first_edge == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 411;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_9 = var_first_edge;
+        CHECK_OBJECT(var_last_edge);
+        tmp_args_element_value_8 = var_last_edge;
+        CHECK_OBJECT(var_first_edge);
+        tmp_args_element_value_9 = var_first_edge;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 411;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_left_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_left_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_5, call_args);
         }
 
-        if (tmp_left_name_2 == NULL) {
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 411;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_width);
-        tmp_right_name_2 = var_width;
-        tmp_args_element_name_7 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_right_value_2 = var_width;
+        tmp_args_element_value_7 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 411;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 411;
-        tmp_int_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_7);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_int_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_7);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8838,7 +7883,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_no_7:;
     {
         PyObject *tmp_assign_source_15;
-        tmp_assign_source_15 = mod_consts[22];
+        tmp_assign_source_15 = mod_consts[20];
         {
             PyObject *old = var_n_equal_bins;
             assert(old != NULL);
@@ -8854,19 +7899,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_tmp_condition_result_8_object_1;
-        int tmp_truth_name_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_args_element_value_10;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_2 == NULL)) {
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8877,10 +7920,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_bins);
-        tmp_args_element_name_10 = par_bins;
+        tmp_args_element_value_10 = par_bins;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 417;
-        tmp_compexpr_left_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[108], tmp_args_element_name_10);
-        if (tmp_compexpr_left_7 == NULL) {
+        tmp_cmp_expr_left_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[101], tmp_args_element_value_10);
+        if (tmp_cmp_expr_left_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8890,10 +7933,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_7 = mod_consts[24];
-        tmp_tmp_condition_result_8_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        Py_DECREF(tmp_compexpr_left_7);
-        if (tmp_tmp_condition_result_8_object_1 == NULL) {
+        tmp_cmp_expr_right_7 = mod_consts[21];
+        tmp_condition_result_8 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        Py_DECREF(tmp_cmp_expr_left_7);
+        if (tmp_condition_result_8 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8903,39 +7946,27 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_8_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_8_object_1);
-
-            exception_lineno = 417;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_8 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_8_object_1);
         if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
             goto branch_yes_8;
         } else {
             goto branch_no_8;
         }
+        assert(tmp_condition_result_8 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_8:;
     // Tried code:
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_11;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[109]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_11;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[102]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[109]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[102]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8945,8 +7976,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[110]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[103]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8956,22 +7987,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_4;
         }
-        if (par_bins == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 419;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_args_element_name_11 = par_bins;
+        CHECK_OBJECT(par_bins);
+        tmp_args_element_value_11 = par_bins;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 419;
-        tmp_assign_source_16 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_11);
-        Py_DECREF(tmp_called_name_5);
+        tmp_assign_source_16 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_11);
+        Py_DECREF(tmp_called_value_6);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9017,11 +8037,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     // Tried code:
     {
         bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        tmp_compexpr_left_8 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_8 = PyExc_TypeError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_8, tmp_compexpr_right_8);
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
+        tmp_cmp_expr_left_8 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_8 = PyExc_TypeError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
         assert(!(tmp_res == -1));
         tmp_condition_result_9 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_9 != false) {
@@ -9043,7 +8063,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
         PyObject *tmp_raise_cause_1;
-        tmp_make_exception_arg_3 = mod_consts[111];
+        tmp_make_exception_arg_3 = mod_consts[104];
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 421;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -9120,15 +8140,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     try_end_3:;
     {
         nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_compexpr_left_9;
-        PyObject *tmp_compexpr_right_9;
-        PyObject *tmp_tmp_condition_result_10_object_1;
-        int tmp_truth_name_4;
+        PyObject *tmp_cmp_expr_left_9;
+        PyObject *tmp_cmp_expr_right_9;
         CHECK_OBJECT(var_n_equal_bins);
-        tmp_compexpr_left_9 = var_n_equal_bins;
-        tmp_compexpr_right_9 = mod_consts[22];
-        tmp_tmp_condition_result_10_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_9, tmp_compexpr_right_9);
-        if (tmp_tmp_condition_result_10_object_1 == NULL) {
+        tmp_cmp_expr_left_9 = var_n_equal_bins;
+        tmp_cmp_expr_right_9 = mod_consts[20];
+        tmp_condition_result_10 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_9, tmp_cmp_expr_right_9);
+        if (tmp_condition_result_10 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9138,30 +8156,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_10_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_10_object_1);
-
-            exception_lineno = 423;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_10 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_10_object_1);
         if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
             goto branch_yes_10;
         } else {
             goto branch_no_10;
         }
+        assert(tmp_condition_result_10 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_10:;
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        tmp_make_exception_arg_4 = mod_consts[112];
+        tmp_make_exception_arg_4 = mod_consts[105];
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 424;
         tmp_raise_type_4 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_4);
         assert(!(tmp_raise_type_4 == NULL));
@@ -9176,16 +8182,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     {
         PyObject *tmp_assign_source_18;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[103]);
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[97]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[103]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[97]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9196,13 +8202,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto try_except_handler_7;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_12 = par_a;
+        tmp_args_element_value_12 = par_a;
         CHECK_OBJECT(par_range);
-        tmp_args_element_name_13 = par_range;
+        tmp_args_element_value_13 = par_range;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 426;
         {
-            PyObject *call_args[] = {tmp_args_element_name_12, tmp_args_element_name_13};
-            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_12, tmp_args_element_value_13};
+            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_7, call_args);
         }
 
         if (tmp_iter_arg_2 == NULL) {
@@ -9307,7 +8313,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -9328,7 +8334,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_6;
@@ -9364,7 +8371,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     goto frame_exception_exit_1;
     // End of try:
     try_end_5:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_21;
@@ -9388,28 +8396,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     Py_XDECREF(tmp_tuple_unpack_2__element_2);
     tmp_tuple_unpack_2__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
     goto branch_end_8;
     branch_no_8:;
     {
         nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_compexpr_left_10;
-        PyObject *tmp_compexpr_right_10;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_tmp_condition_result_11_object_1;
-        int tmp_truth_name_5;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_cmp_expr_left_10;
+        PyObject *tmp_cmp_expr_right_10;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_args_element_value_14;
+        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_3 == NULL)) {
+            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9419,34 +8420,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[108]);
-        if (tmp_called_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 428;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_bins == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 428;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_14 = par_bins;
+        CHECK_OBJECT(par_bins);
+        tmp_args_element_value_14 = par_bins;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 428;
-        tmp_compexpr_left_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_14);
-        Py_DECREF(tmp_called_name_7);
-        if (tmp_compexpr_left_10 == NULL) {
+        tmp_cmp_expr_left_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[101], tmp_args_element_value_14);
+        if (tmp_cmp_expr_left_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9456,10 +8434,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_10 = mod_consts[22];
-        tmp_tmp_condition_result_11_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_10, tmp_compexpr_right_10);
-        Py_DECREF(tmp_compexpr_left_10);
-        if (tmp_tmp_condition_result_11_object_1 == NULL) {
+        tmp_cmp_expr_right_10 = mod_consts[20];
+        tmp_condition_result_11 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_10, tmp_cmp_expr_right_10);
+        Py_DECREF(tmp_cmp_expr_left_10);
+        if (tmp_condition_result_11 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9469,38 +8447,25 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_11_object_1);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_11_object_1);
-
-            exception_lineno = 428;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_11 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_11_object_1);
         if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
             goto branch_yes_11;
         } else {
             goto branch_no_11;
         }
+        assert(tmp_condition_result_11 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_11:;
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_15;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_instance_4;
+        PyObject *tmp_args_element_value_15;
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_4 == NULL)) {
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9510,33 +8475,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[61]);
-        if (tmp_called_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 429;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_bins == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 429;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_15 = par_bins;
+        CHECK_OBJECT(par_bins);
+        tmp_args_element_value_15 = par_bins;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 429;
-        tmp_assign_source_23 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_15);
-        Py_DECREF(tmp_called_name_8);
+        tmp_assign_source_23 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[57], tmp_args_element_value_15);
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9557,24 +8499,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     }
     {
         nuitka_bool tmp_condition_result_12;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_compexpr_left_11;
-        PyObject *tmp_compexpr_right_11;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_4;
-        int tmp_truth_name_6;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_cmp_expr_left_11;
+        PyObject *tmp_cmp_expr_right_11;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_4;
+        int tmp_truth_name_2;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9584,63 +8526,63 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[113]);
-        if (tmp_called_name_9 == NULL) {
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[106]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
-
-            exception_lineno = 430;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        CHECK_OBJECT(var_bin_edges);
-        tmp_expression_name_10 = var_bin_edges;
-        tmp_subscript_name_3 = mod_consts[114];
-        tmp_compexpr_left_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_3);
-        if (tmp_compexpr_left_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
 
             exception_lineno = 430;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_bin_edges);
-        tmp_expression_name_11 = var_bin_edges;
-        tmp_subscript_name_4 = mod_consts[115];
-        tmp_compexpr_right_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_4);
-        if (tmp_compexpr_right_11 == NULL) {
+        tmp_expression_value_9 = var_bin_edges;
+        tmp_subscript_value_3 = mod_consts[107];
+        tmp_cmp_expr_left_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_9, tmp_subscript_value_3);
+        if (tmp_cmp_expr_left_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
-            Py_DECREF(tmp_compexpr_left_11);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 430;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_16 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_11, tmp_compexpr_right_11);
-        Py_DECREF(tmp_compexpr_left_11);
-        Py_DECREF(tmp_compexpr_right_11);
-        if (tmp_args_element_name_16 == NULL) {
+        CHECK_OBJECT(var_bin_edges);
+        tmp_expression_value_10 = var_bin_edges;
+        tmp_subscript_value_4 = mod_consts[108];
+        tmp_cmp_expr_right_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_4);
+        if (tmp_cmp_expr_right_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_cmp_expr_left_11);
+
+            exception_lineno = 430;
+            type_description_1 = "ooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_16 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_11, tmp_cmp_expr_right_11);
+        Py_DECREF(tmp_cmp_expr_left_11);
+        Py_DECREF(tmp_cmp_expr_right_11);
+        if (tmp_args_element_value_16 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 430;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 430;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_16);
-        Py_DECREF(tmp_called_name_9);
-        Py_DECREF(tmp_args_element_name_16);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_16);
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_element_value_16);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9651,8 +8593,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_call_result_1);
-        if (tmp_truth_name_6 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_call_result_1);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9662,7 +8604,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_12 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_12 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_1);
         if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
             goto branch_yes_12;
@@ -9674,7 +8616,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     {
         PyObject *tmp_raise_type_5;
         PyObject *tmp_make_exception_arg_5;
-        tmp_make_exception_arg_5 = mod_consts[116];
+        tmp_make_exception_arg_5 = mod_consts[109];
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 431;
         tmp_raise_type_5 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_5);
         assert(!(tmp_raise_type_5 == NULL));
@@ -9690,7 +8632,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     {
         PyObject *tmp_raise_type_6;
         PyObject *tmp_make_exception_arg_6;
-        tmp_make_exception_arg_6 = mod_consts[117];
+        tmp_make_exception_arg_6 = mod_consts[110];
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 435;
         tmp_raise_type_6 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_6);
         assert(!(tmp_raise_type_6 == NULL));
@@ -9705,11 +8647,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_end_1:;
     {
         bool tmp_condition_result_13;
-        PyObject *tmp_compexpr_left_12;
-        PyObject *tmp_compexpr_right_12;
+        PyObject *tmp_cmp_expr_left_12;
+        PyObject *tmp_cmp_expr_right_12;
         if (var_n_equal_bins == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9719,9 +8661,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_12 = var_n_equal_bins;
-        tmp_compexpr_right_12 = Py_None;
-        tmp_condition_result_13 = (tmp_compexpr_left_12 != tmp_compexpr_right_12) ? true : false;
+        tmp_cmp_expr_left_12 = var_n_equal_bins;
+        tmp_cmp_expr_right_12 = Py_None;
+        tmp_condition_result_13 = (tmp_cmp_expr_left_12 != tmp_cmp_expr_right_12) ? true : false;
         if (tmp_condition_result_13 != false) {
             goto branch_yes_13;
         } else {
@@ -9731,18 +8673,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_yes_13:;
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_args_element_name_18;
-        PyObject *tmp_args_element_name_19;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_args_element_value_19;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9752,8 +8694,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[93]);
-        if (tmp_called_name_10 == NULL) {
+        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[88]);
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9764,8 +8706,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
         if (var_first_edge == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+            Py_DECREF(tmp_called_value_9);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9775,10 +8717,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_17 = var_first_edge;
+        tmp_args_element_value_17 = var_first_edge;
         if (var_last_edge == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
+            Py_DECREF(tmp_called_value_9);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9788,10 +8730,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_18 = var_last_edge;
+        tmp_args_element_value_18 = var_last_edge;
         if (par_a == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
+            Py_DECREF(tmp_called_value_9);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9801,14 +8743,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_19 = par_a;
+        tmp_args_element_value_19 = par_a;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 441;
         {
-            PyObject *call_args[] = {tmp_args_element_name_17, tmp_args_element_name_18, tmp_args_element_name_19};
-            tmp_assign_source_24 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_10, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_17, tmp_args_element_value_18, tmp_args_element_value_19};
+            tmp_assign_source_24 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_10);
+        Py_DECREF(tmp_called_value_9);
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9824,20 +8766,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     }
     {
         nuitka_bool tmp_condition_result_14;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_expression_name_14;
-        int tmp_truth_name_7;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_expression_value_13;
+        int tmp_truth_name_3;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9847,8 +8789,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[119]);
-        if (tmp_called_name_11 == NULL) {
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[112]);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9859,29 +8801,29 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_bin_type);
-        tmp_args_element_name_20 = var_bin_type;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_args_element_value_20 = var_bin_type;
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 442;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[120]);
-        if (tmp_args_element_name_21 == NULL) {
+        tmp_args_element_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[113]);
+        if (tmp_args_element_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 442;
             type_description_1 = "ooooooooooooo";
@@ -9889,12 +8831,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
         }
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 442;
         {
-            PyObject *call_args[] = {tmp_args_element_name_20, tmp_args_element_name_21};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_11, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_20, tmp_args_element_value_21};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_11);
-        Py_DECREF(tmp_args_element_name_21);
+        Py_DECREF(tmp_called_value_10);
+        Py_DECREF(tmp_args_element_value_21);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9905,8 +8847,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_7 = CHECK_IF_TRUE(tmp_call_result_2);
-        if (tmp_truth_name_7 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_call_result_2);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9916,7 +8858,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_14 = tmp_truth_name_7 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_14 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_2);
         if (tmp_condition_result_14 == NUITKA_BOOL_TRUE) {
             goto branch_yes_14;
@@ -9927,17 +8869,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     branch_yes_14:;
     {
         PyObject *tmp_assign_source_25;
-        PyObject *tmp_called_name_12;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_args_element_name_23;
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_instance_5;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_args_element_value_23;
+        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_5 == NULL)) {
+            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_15 == NULL) {
+        if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9947,38 +8888,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[93]);
-        if (tmp_called_name_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 443;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_bin_type == NULL) {
-            Py_DECREF(tmp_called_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[121]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 443;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_22 = var_bin_type;
-        tmp_args_element_name_23 = (PyObject *)&PyFloat_Type;
+        CHECK_OBJECT(var_bin_type);
+        tmp_args_element_value_22 = var_bin_type;
+        tmp_args_element_value_23 = (PyObject *)&PyFloat_Type;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 443;
         {
-            PyObject *call_args[] = {tmp_args_element_name_22, tmp_args_element_name_23};
-            tmp_assign_source_25 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_12, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_22, tmp_args_element_value_23};
+            tmp_assign_source_25 = CALL_METHOD_WITH_ARGS2(
+                tmp_called_instance_5,
+                mod_consts[88],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_12);
         if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9991,28 +8913,31 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
         }
         {
             PyObject *old = var_bin_type;
+            assert(old != NULL);
             var_bin_type = tmp_assign_source_25;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     branch_no_14:;
     {
         PyObject *tmp_assign_source_26;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_kw_call_arg_value_2_1;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_kw_call_dict_value_1_1;
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10022,8 +8947,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[122]);
-        if (tmp_called_name_13 == NULL) {
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[114]);
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10034,8 +8959,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
         if (var_first_edge == NULL) {
-            Py_DECREF(tmp_called_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+            Py_DECREF(tmp_called_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10045,96 +8970,69 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_tuple_element_2 = var_first_edge;
-        tmp_args_name_1 = PyTuple_New(3);
-        {
-            PyObject *tmp_left_name_3;
-            PyObject *tmp_right_name_3;
-            PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
-            if (var_last_edge == NULL) {
+        tmp_kw_call_arg_value_0_1 = var_first_edge;
+        if (var_last_edge == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
 
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 447;
-                type_description_1 = "ooooooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_tuple_element_2 = var_last_edge;
-            PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
-            if (var_n_equal_bins == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 447;
-                type_description_1 = "ooooooooooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_left_name_3 = var_n_equal_bins;
-            tmp_right_name_3 = mod_consts[22];
-            tmp_tuple_element_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
-            if (tmp_tuple_element_2 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 447;
-                type_description_1 = "ooooooooooooo";
-                goto tuple_build_exception_1;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_1, 2, tmp_tuple_element_2);
+            exception_lineno = 447;
+            type_description_1 = "ooooooooooooo";
+            goto frame_exception_exit_1;
         }
-        goto tuple_build_noexception_1;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_13);
-        Py_DECREF(tmp_args_name_1);
-        goto frame_exception_exit_1;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_1:;
-        tmp_dict_key_1 = mod_consts[123];
-        tmp_dict_value_1 = Py_True;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[62];
-        if (var_bin_type == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[121]);
+        tmp_kw_call_arg_value_1_1 = var_last_edge;
+        if (var_n_equal_bins == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 447;
+            type_description_1 = "ooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+
+        tmp_left_value_3 = var_n_equal_bins;
+        tmp_right_value_3 = mod_consts[20];
+        tmp_kw_call_arg_value_2_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
+        if (tmp_kw_call_arg_value_2_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+
+            exception_lineno = 447;
+            type_description_1 = "ooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_kw_call_dict_value_0_1 = Py_True;
+        if (var_bin_type == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[115]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 448;
             type_description_1 = "ooooooooooooo";
-            goto dict_build_exception_1;
+            goto frame_exception_exit_1;
         }
 
-        tmp_dict_value_1 = var_bin_type;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        goto dict_build_noexception_1;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_1:;
-        Py_DECREF(tmp_called_name_13);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        goto frame_exception_exit_1;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_1:;
+        tmp_kw_call_dict_value_1_1 = var_bin_type;
         frame_0a02fbec5d9f8c384bac0bc5026f7084->m_frame.f_lineno = 446;
-        tmp_assign_source_26 = CALL_FUNCTION(tmp_called_name_13, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_13);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1, tmp_kw_call_arg_value_2_1};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
+            tmp_assign_source_26 = CALL_FUNCTION_WITH_ARGS3_KWSPLIT(tmp_called_value_11, args, kw_values, mod_consts[116]);
+        }
+
+        Py_DECREF(tmp_called_value_11);
+        Py_DECREF(tmp_kw_call_arg_value_2_1);
         if (tmp_assign_source_26 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10153,16 +9051,31 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
 
     }
     {
-        PyObject *tmp_tuple_element_3;
+        PyObject *tmp_tuple_element_2;
         CHECK_OBJECT(var_bin_edges);
-        tmp_tuple_element_3 = var_bin_edges;
+        tmp_tuple_element_2 = var_bin_edges;
         tmp_return_value = PyTuple_New(2);
         {
-            PyObject *tmp_tuple_element_4;
-            PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_3);
+            PyObject *tmp_tuple_element_3;
+            PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_2);
             if (var_first_edge == NULL) {
 
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
+                exception_tb = NULL;
+                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+                CHAIN_EXCEPTION(exception_value);
+
+                exception_lineno = 449;
+                type_description_1 = "ooooooooooooo";
+                goto tuple_build_exception_1;
+            }
+
+            tmp_tuple_element_3 = var_first_edge;
+            tmp_tuple_element_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_tuple_element_2, 0, tmp_tuple_element_3);
+            if (var_last_edge == NULL) {
+
+                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
                 exception_tb = NULL;
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
@@ -10172,62 +9085,47 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
                 goto tuple_build_exception_2;
             }
 
-            tmp_tuple_element_4 = var_first_edge;
-            tmp_tuple_element_3 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_tuple_element_3, 0, tmp_tuple_element_4);
-            if (var_last_edge == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 449;
-                type_description_1 = "ooooooooooooo";
-                goto tuple_build_exception_3;
-            }
-
-            tmp_tuple_element_4 = var_last_edge;
-            PyTuple_SET_ITEM0(tmp_tuple_element_3, 1, tmp_tuple_element_4);
+            tmp_tuple_element_3 = var_last_edge;
+            PyTuple_SET_ITEM0(tmp_tuple_element_2, 1, tmp_tuple_element_3);
             if (var_n_equal_bins == NULL) {
 
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
+                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
                 exception_tb = NULL;
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
                 exception_lineno = 449;
                 type_description_1 = "ooooooooooooo";
-                goto tuple_build_exception_3;
+                goto tuple_build_exception_2;
             }
 
-            tmp_tuple_element_4 = var_n_equal_bins;
-            PyTuple_SET_ITEM0(tmp_tuple_element_3, 2, tmp_tuple_element_4);
-            goto tuple_build_noexception_2;
+            tmp_tuple_element_3 = var_n_equal_bins;
+            PyTuple_SET_ITEM0(tmp_tuple_element_2, 2, tmp_tuple_element_3);
+            goto tuple_build_noexception_1;
             // Exception handling pass through code for tuple_build:
-            tuple_build_exception_3:;
-            Py_DECREF(tmp_tuple_element_3);
-            goto tuple_build_exception_2;
+            tuple_build_exception_2:;
+            Py_DECREF(tmp_tuple_element_2);
+            goto tuple_build_exception_1;
             // Finished with no exception for tuple_build:
-            tuple_build_noexception_2:;
-            PyTuple_SET_ITEM(tmp_return_value, 1, tmp_tuple_element_3);
+            tuple_build_noexception_1:;
+            PyTuple_SET_ITEM(tmp_return_value, 1, tmp_tuple_element_2);
         }
-        goto tuple_build_noexception_3;
+        goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
-        tuple_build_exception_2:;
+        tuple_build_exception_1:;
         Py_DECREF(tmp_return_value);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
-        tuple_build_noexception_3:;
+        tuple_build_noexception_2:;
         goto frame_return_exit_1;
     }
     goto branch_end_13;
     branch_no_13:;
     {
-        PyObject *tmp_tuple_element_5;
+        PyObject *tmp_tuple_element_4;
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10237,11 +9135,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_tuple_element_5 = var_bin_edges;
+        tmp_tuple_element_4 = var_bin_edges;
         tmp_return_value = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_5);
-        tmp_tuple_element_5 = Py_None;
-        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_5);
+        PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_4);
+        tmp_tuple_element_4 = Py_None;
+        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_4);
         goto frame_return_exit_1;
     }
     branch_end_13:;
@@ -10323,13 +9221,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     try_return_handler_1:;
     Py_XDECREF(par_a);
     par_a = NULL;
-    Py_XDECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    CHECK_OBJECT(par_weights);
-    Py_DECREF(par_weights);
-    par_weights = NULL;
     Py_XDECREF(var_n_equal_bins);
     var_n_equal_bins = NULL;
     Py_XDECREF(var_bin_edges);
@@ -10360,13 +9251,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
 
     Py_XDECREF(par_a);
     par_a = NULL;
-    Py_XDECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    CHECK_OBJECT(par_weights);
-    Py_DECREF(par_weights);
-    par_weights = NULL;
     Py_XDECREF(var_n_equal_bins);
     var_n_equal_bins = NULL;
     Py_XDECREF(var_bin_edges);
@@ -10381,8 +9265,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     var_keep = NULL;
     Py_XDECREF(var_width);
     var_width = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
     Py_XDECREF(var_bin_type);
     var_bin_type = NULL;
     // Re-raise.
@@ -10398,14 +9280,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__13__get_bin_edges(struct 
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10432,13 +9324,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_79906ca0850721573351e75389abc866 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_79906ca0850721573351e75389abc866)) {
         Py_XDECREF(cache_frame_79906ca0850721573351e75389abc866);
 
@@ -10467,23 +9354,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10493,8 +9380,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[126]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[119]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10505,76 +9392,65 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_a);
-        tmp_expression_name_2 = par_a;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[127]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_2 = par_a;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[120]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 461;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_v);
-        tmp_expression_name_3 = par_v;
-        tmp_subscript_name_1 = mod_consts[114];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_3 = par_v;
+        tmp_subscript_value_1 = mod_consts[107];
+        tmp_args_element_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 461;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[128];
+        tmp_args_element_value_3 = mod_consts[121];
         frame_79906ca0850721573351e75389abc866->m_frame.f_lineno = 461;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_tuple_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_tuple_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 461;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = PyTuple_New(2);
+        tmp_args_element_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_called_name_3;
-            PyObject *tmp_expression_name_4;
-            PyObject *tmp_args_element_name_4;
-            PyObject *tmp_expression_name_5;
-            PyObject *tmp_subscript_name_2;
-            PyObject *tmp_args_element_name_5;
-            PyTuple_SET_ITEM(tmp_args_element_name_1, 0, tmp_tuple_element_1);
-            if (par_a == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 462;
-                type_description_1 = "oo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_4 = par_a;
-            tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[127]);
-            if (tmp_called_name_3 == NULL) {
+            PyObject *tmp_called_value_3;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_args_element_value_4;
+            PyObject *tmp_expression_value_5;
+            PyObject *tmp_subscript_value_2;
+            PyObject *tmp_args_element_value_5;
+            PyTuple_SET_ITEM(tmp_args_element_value_1, 0, tmp_tuple_element_1);
+            CHECK_OBJECT(par_a);
+            tmp_expression_value_4 = par_a;
+            tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[120]);
+            if (tmp_called_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10585,28 +9461,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
                 goto tuple_build_exception_1;
             }
             CHECK_OBJECT(par_v);
-            tmp_expression_name_5 = par_v;
-            tmp_subscript_name_2 = mod_consts[129];
-            tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
-            if (tmp_args_element_name_4 == NULL) {
+            tmp_expression_value_5 = par_v;
+            tmp_subscript_value_2 = mod_consts[122];
+            tmp_args_element_value_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+            if (tmp_args_element_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_3);
+                Py_DECREF(tmp_called_value_3);
 
                 exception_lineno = 462;
                 type_description_1 = "oo";
                 goto tuple_build_exception_1;
             }
-            tmp_args_element_name_5 = mod_consts[130];
+            tmp_args_element_value_5 = mod_consts[123];
             frame_79906ca0850721573351e75389abc866->m_frame.f_lineno = 462;
             {
-                PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-                tmp_tuple_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+                tmp_tuple_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
             }
 
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_4);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -10617,20 +9493,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
                 type_description_1 = "oo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_args_element_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_args_element_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         frame_79906ca0850721573351e75389abc866->m_frame.f_lineno = 460;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10661,7 +9537,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -10701,56 +9577,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__14__search_sorted_inclusi
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_a);
-    par_a = NULL;
-    CHECK_OBJECT(par_v);
-    Py_DECREF(par_v);
-    par_v = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_a);
-    par_a = NULL;
-    CHECK_OBJECT(par_v);
-    Py_DECREF(par_v);
-    par_v = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_v);
+    Py_DECREF(par_v);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_v);
+    Py_DECREF(par_v);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10774,7 +9622,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__15__histogram_bin_edges_d
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    // Tried code:
     {
         PyObject *tmp_tuple_element_1;
         CHECK_OBJECT(par_a);
@@ -10787,26 +9634,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__15__histogram_bin_edges_d
         CHECK_OBJECT(par_weights);
         tmp_tuple_element_1 = par_weights;
         PyTuple_SET_ITEM0(tmp_return_value, 2, tmp_tuple_element_1);
-        goto try_return_handler_1;
+        goto function_return_exit;
     }
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_a);
-    Py_DECREF(par_a);
-    par_a = NULL;
-    CHECK_OBJECT(par_bins);
-    Py_DECREF(par_bins);
-    par_bins = NULL;
-    CHECK_OBJECT(par_range);
-    Py_DECREF(par_range);
-    par_range = NULL;
-    CHECK_OBJECT(par_weights);
-    Py_DECREF(par_weights);
-    par_weights = NULL;
-    goto function_return_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -10814,7 +9643,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__15__histogram_bin_edges_d
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10906,16 +9742,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[132]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[125]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10926,13 +9762,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_1 = par_a;
+        tmp_args_element_value_1 = par_a;
         CHECK_OBJECT(par_weights);
-        tmp_args_element_name_2 = par_weights;
+        tmp_args_element_value_2 = par_weights;
         frame_11fe65f4fd30bcfe73c6613e95c22f81->m_frame.f_lineno = 668;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_iter_arg_1 == NULL) {
@@ -11037,7 +9873,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -11058,7 +9894,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -11094,7 +9931,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -11102,9 +9940,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
         tmp_assign_source_4 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_a;
+            assert(old != NULL);
             par_a = tmp_assign_source_4;
             Py_INCREF(par_a);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -11117,35 +9956,32 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
         tmp_assign_source_5 = tmp_tuple_unpack_1__element_2;
         {
             PyObject *old = par_weights;
+            assert(old != NULL);
             par_weights = tmp_assign_source_5;
             Py_INCREF(par_weights);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     // Tried code:
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[133]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[126]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[133]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11156,17 +9992,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
             goto try_except_handler_4;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_3 = par_a;
+        tmp_args_element_value_3 = par_a;
         CHECK_OBJECT(par_bins);
-        tmp_args_element_name_4 = par_bins;
+        tmp_args_element_value_4 = par_bins;
         CHECK_OBJECT(par_range);
-        tmp_args_element_name_5 = par_range;
+        tmp_args_element_value_5 = par_range;
         CHECK_OBJECT(par_weights);
-        tmp_args_element_name_6 = par_weights;
+        tmp_args_element_value_6 = par_weights;
         frame_11fe65f4fd30bcfe73c6613e95c22f81->m_frame.f_lineno = 669;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_2, call_args);
         }
 
         if (tmp_iter_arg_2 == NULL) {
@@ -11271,7 +10107,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -11292,7 +10128,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -11383,7 +10220,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     goto try_except_handler_1;
 
     frame_no_exception_1:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_9;
@@ -11407,10 +10245,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     Py_XDECREF(tmp_tuple_unpack_2__element_2);
     tmp_tuple_unpack_2__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
     CHECK_OBJECT(var_bin_edges);
     tmp_return_value = var_bin_edges;
     Py_INCREF(tmp_return_value);
@@ -11419,13 +10253,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_a);
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
     par_a = NULL;
-    Py_XDECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    Py_XDECREF(par_weights);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);
     par_weights = NULL;
     CHECK_OBJECT(var_bin_edges);
     Py_DECREF(var_bin_edges);
@@ -11447,10 +10279,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
 
     Py_XDECREF(par_a);
     par_a = NULL;
-    Py_XDECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     Py_XDECREF(par_weights);
     par_weights = NULL;
     // Re-raise.
@@ -11466,14 +10294,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__16_histogram_bin_edges(st
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11499,7 +10333,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__17__histogram_dispatcher(
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    // Tried code:
     {
         PyObject *tmp_tuple_element_1;
         CHECK_OBJECT(par_a);
@@ -11512,32 +10345,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__17__histogram_dispatcher(
         CHECK_OBJECT(par_weights);
         tmp_tuple_element_1 = par_weights;
         PyTuple_SET_ITEM0(tmp_return_value, 2, tmp_tuple_element_1);
-        goto try_return_handler_1;
+        goto function_return_exit;
     }
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_a);
-    Py_DECREF(par_a);
-    par_a = NULL;
-    CHECK_OBJECT(par_bins);
-    Py_DECREF(par_bins);
-    par_bins = NULL;
-    CHECK_OBJECT(par_range);
-    Py_DECREF(par_range);
-    par_range = NULL;
-    CHECK_OBJECT(par_normed);
-    Py_DECREF(par_normed);
-    par_normed = NULL;
-    CHECK_OBJECT(par_weights);
-    Py_DECREF(par_weights);
-    par_weights = NULL;
-    CHECK_OBJECT(par_density);
-    Py_DECREF(par_density);
-    par_density = NULL;
-    goto function_return_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -11545,7 +10354,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__17__histogram_dispatcher(
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    CHECK_OBJECT(par_normed);
+    Py_DECREF(par_normed);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);
+    CHECK_OBJECT(par_density);
+    Py_DECREF(par_density);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11727,16 +10547,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[132]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[125]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11747,13 +10567,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_1 = par_a;
+        tmp_args_element_value_1 = par_a;
         CHECK_OBJECT(par_weights);
-        tmp_args_element_name_2 = par_weights;
+        tmp_args_element_value_2 = par_weights;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 791;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_iter_arg_1 == NULL) {
@@ -11858,7 +10678,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -11879,7 +10699,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -11915,7 +10736,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -11923,9 +10745,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         tmp_assign_source_4 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_a;
+            assert(old != NULL);
             par_a = tmp_assign_source_4;
             Py_INCREF(par_a);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -11938,35 +10761,32 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         tmp_assign_source_5 = tmp_tuple_unpack_1__element_2;
         {
             PyObject *old = par_weights;
+            assert(old != NULL);
             par_weights = tmp_assign_source_5;
             Py_INCREF(par_weights);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     // Tried code:
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[133]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[126]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[133]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11977,17 +10797,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_4;
         }
         CHECK_OBJECT(par_a);
-        tmp_args_element_name_3 = par_a;
+        tmp_args_element_value_3 = par_a;
         CHECK_OBJECT(par_bins);
-        tmp_args_element_name_4 = par_bins;
+        tmp_args_element_value_4 = par_bins;
         CHECK_OBJECT(par_range);
-        tmp_args_element_name_5 = par_range;
+        tmp_args_element_value_5 = par_range;
         CHECK_OBJECT(par_weights);
-        tmp_args_element_name_6 = par_weights;
+        tmp_args_element_value_6 = par_weights;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 793;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_2, call_args);
         }
 
         if (tmp_iter_arg_2 == NULL) {
@@ -12092,7 +10912,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -12113,7 +10933,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -12149,7 +10970,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_4:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_9;
@@ -12173,29 +10995,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     Py_XDECREF(tmp_tuple_unpack_2__element_2);
     tmp_tuple_unpack_2__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 796;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_1 = par_weights;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        CHECK_OBJECT(par_weights);
+        tmp_cmp_expr_left_1 = par_weights;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -12205,17 +11012,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12225,8 +11032,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[62]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[58]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12236,37 +11043,37 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 797;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[135]);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_args_element_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[128]);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 797;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 797;
-        tmp_assign_source_11 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_7);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_assign_source_11 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_7);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12284,21 +11091,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_no_1:;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_expression_name_3;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 799;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_weights;
-        tmp_assign_source_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[62]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_weights);
+        tmp_expression_value_3 = par_weights;
+        tmp_assign_source_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[58]);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12315,7 +11111,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_end_1:;
     {
         PyObject *tmp_assign_source_13;
-        tmp_assign_source_13 = mod_consts[136];
+        tmp_assign_source_13 = mod_consts[129];
         assert(var_BLOCK == NULL);
         Py_INCREF(tmp_assign_source_13);
         var_BLOCK = tmp_assign_source_13;
@@ -12325,37 +11121,26 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         int tmp_or_left_truth_1;
         PyObject *tmp_or_left_value_1;
         PyObject *tmp_or_right_value_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         int tmp_or_left_truth_2;
         PyObject *tmp_or_left_value_2;
         PyObject *tmp_or_right_value_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_11;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 808;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_2 = par_weights;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_or_left_value_1 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? Py_True : Py_False;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_11;
+        CHECK_OBJECT(par_weights);
+        tmp_cmp_expr_left_2 = par_weights;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_or_left_value_1 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? Py_True : Py_False;
         tmp_or_left_truth_1 = CHECK_IF_TRUE(tmp_or_left_value_1);
         if (tmp_or_left_truth_1 == 1) {
             goto or_left_1;
@@ -12363,13 +11148,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto or_right_1;
         }
         or_right_1:;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12379,8 +11164,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[137]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[130]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12390,54 +11175,43 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_weights == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(par_weights);
+        tmp_expression_value_5 = par_weights;
+        tmp_args_element_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[58]);
+        if (tmp_args_element_value_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 809;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        tmp_expression_name_5 = par_weights;
-        tmp_args_element_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[62]);
-        if (tmp_args_element_name_8 == NULL) {
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        }
+
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_8);
 
             exception_lineno = 809;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
-
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
-        }
-
-        if (tmp_expression_name_6 == NULL) {
+        tmp_args_element_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[131]);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_8);
-
-            exception_lineno = 809;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[138]);
-        if (tmp_args_element_name_9 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_8);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_8);
 
             exception_lineno = 809;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
@@ -12445,13 +11219,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         }
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 809;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_or_left_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_or_left_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_8);
-        Py_DECREF(tmp_args_element_name_9);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_8);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_or_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12469,7 +11243,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_or_left_value_2);
 
-            exception_lineno = 810;
+            exception_lineno = 809;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
@@ -12480,13 +11254,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         }
         or_right_2:;
         Py_DECREF(tmp_or_left_value_2);
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12496,8 +11270,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[137]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[130]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12507,39 +11281,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_weights == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 810;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_8 = par_weights;
-        tmp_args_element_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[62]);
-        if (tmp_args_element_name_10 == NULL) {
+        CHECK_OBJECT(par_weights);
+        tmp_expression_value_8 = par_weights;
+        tmp_args_element_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[58]);
+        if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 810;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_11 = (PyObject *)&PyComplex_Type;
+        tmp_args_element_value_11 = (PyObject *)&PyComplex_Type;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 810;
         {
-            PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11};
-            tmp_or_right_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11};
+            tmp_or_right_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_10);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_10);
         if (tmp_or_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12569,13 +11332,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         int tmp_truth_name_1;
         CHECK_OBJECT(var_uniform_bins);
-        tmp_compexpr_left_3 = var_uniform_bins;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_and_left_value_1 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        tmp_cmp_expr_left_3 = var_uniform_bins;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_and_left_value_1 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == 1) {
             goto and_right_1;
@@ -12729,7 +11492,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[139];
+            exception_value = mod_consts[132];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -12750,7 +11513,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_5;
@@ -12788,7 +11552,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_6:;
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     {
         PyObject *tmp_assign_source_19;
@@ -12823,21 +11588,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     Py_XDECREF(tmp_tuple_unpack_3__element_3);
     tmp_tuple_unpack_3__element_3 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_3__element_1);
-    tmp_tuple_unpack_3__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_3__element_2);
-    tmp_tuple_unpack_3__element_2 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_3__element_3);
-    tmp_tuple_unpack_3__element_3 = NULL;
     {
         PyObject *tmp_assign_source_22;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -12851,15 +11610,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_n_equal_bins);
-        tmp_args_element_name_12 = var_n_equal_bins;
+        tmp_args_element_value_12 = var_n_equal_bins;
         CHECK_OBJECT(var_ntype);
-        tmp_args_element_name_13 = var_ntype;
+        tmp_args_element_value_13 = var_ntype;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 820;
         {
-            PyObject *call_args[] = {tmp_args_element_name_12, tmp_args_element_name_13};
+            PyObject *call_args[] = {tmp_args_element_value_12, tmp_args_element_value_13};
             tmp_assign_source_22 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[140],
+                mod_consts[133],
                 call_args
             );
         }
@@ -12879,31 +11638,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_args_element_name_15;
-        if (var_n_equal_bins == NULL) {
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_args_element_value_15;
+        CHECK_OBJECT(var_n_equal_bins);
+        tmp_left_value_1 = var_n_equal_bins;
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 823;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_1 = var_n_equal_bins;
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12914,16 +11662,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_last_edge);
-        tmp_args_element_name_14 = var_last_edge;
+        tmp_args_element_value_14 = var_last_edge;
         CHECK_OBJECT(var_first_edge);
-        tmp_args_element_name_15 = var_first_edge;
+        tmp_args_element_value_15 = var_first_edge;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 823;
         {
-            PyObject *call_args[] = {tmp_args_element_name_14, tmp_args_element_name_15};
-            tmp_right_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_14, tmp_args_element_value_15};
+            tmp_right_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
-        if (tmp_right_name_1 == NULL) {
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12933,8 +11681,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_23 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_assign_source_23 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12951,18 +11699,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     {
         PyObject *tmp_assign_source_24;
         PyObject *tmp_iter_arg_4;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_args_element_name_17;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_17;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_args_element_name_18;
-        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_args_element_value_18;
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_called_name_7 == NULL)) {
-            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_called_name_7 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12972,22 +11720,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_16 = mod_consts[24];
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 829;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_args_element_value_16 = mod_consts[21];
+        CHECK_OBJECT(par_a);
         tmp_len_arg_1 = par_a;
-        tmp_args_element_name_17 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_args_element_name_17 == NULL) {
+        tmp_args_element_value_17 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_args_element_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12998,14 +11735,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_BLOCK);
-        tmp_args_element_name_18 = var_BLOCK;
+        tmp_args_element_value_18 = var_BLOCK;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 829;
         {
-            PyObject *call_args[] = {tmp_args_element_name_16, tmp_args_element_name_17, tmp_args_element_name_18};
-            tmp_iter_arg_4 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_16, tmp_args_element_value_17, tmp_args_element_value_18};
+            tmp_iter_arg_4 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_7, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_17);
+        Py_DECREF(tmp_args_element_value_17);
         if (tmp_iter_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13073,32 +11810,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_27;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_start_name_1;
-        PyObject *tmp_stop_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 830;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_expression_name_9 = par_a;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_start_value_1;
+        PyObject *tmp_stop_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        CHECK_OBJECT(par_a);
+        tmp_expression_value_9 = par_a;
         CHECK_OBJECT(var_i);
-        tmp_start_name_1 = var_i;
+        tmp_start_value_1 = var_i;
         CHECK_OBJECT(var_i);
-        tmp_left_name_2 = var_i;
+        tmp_left_value_2 = var_i;
         if (var_BLOCK == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[141]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[134]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13108,9 +11834,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_right_name_2 = var_BLOCK;
-        tmp_stop_name_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        if (tmp_stop_name_1 == NULL) {
+        tmp_right_value_2 = var_BLOCK;
+        tmp_stop_value_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        if (tmp_stop_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13120,11 +11846,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_subscript_name_1 = MAKE_SLICEOBJ2(tmp_start_name_1, tmp_stop_name_1);
-        Py_DECREF(tmp_stop_name_1);
-        assert(!(tmp_subscript_name_1 == NULL));
-        tmp_assign_source_27 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_1);
-        Py_DECREF(tmp_subscript_name_1);
+        tmp_subscript_value_1 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        Py_DECREF(tmp_stop_value_1);
+        assert(!(tmp_subscript_value_1 == NULL));
+        tmp_assign_source_27 = LOOKUP_SUBSCRIPT(tmp_expression_value_9, tmp_subscript_value_1);
+        Py_DECREF(tmp_subscript_value_1);
         if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13144,23 +11870,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 831;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_compexpr_left_4 = par_weights;
-        tmp_compexpr_right_4 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_4 == tmp_compexpr_right_4) ? true : false;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        CHECK_OBJECT(par_weights);
+        tmp_cmp_expr_left_4 = par_weights;
+        tmp_cmp_expr_right_4 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_4 == tmp_cmp_expr_right_4) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -13183,54 +11898,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_no_3:;
     {
         PyObject *tmp_assign_source_29;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_start_name_2;
-        PyObject *tmp_stop_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 834;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_expression_name_10 = par_weights;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[142]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 834;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_start_name_2 = var_i;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[142]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 834;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_left_name_3 = var_i;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_start_value_2;
+        PyObject *tmp_stop_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        CHECK_OBJECT(par_weights);
+        tmp_expression_value_10 = par_weights;
+        CHECK_OBJECT(var_i);
+        tmp_start_value_2 = var_i;
+        CHECK_OBJECT(var_i);
+        tmp_left_value_3 = var_i;
         if (var_BLOCK == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[141]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[134]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13240,9 +11922,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_right_name_3 = var_BLOCK;
-        tmp_stop_name_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_3);
-        if (tmp_stop_name_2 == NULL) {
+        tmp_right_value_3 = var_BLOCK;
+        tmp_stop_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_3);
+        if (tmp_stop_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13252,11 +11934,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_subscript_name_2 = MAKE_SLICEOBJ2(tmp_start_name_2, tmp_stop_name_2);
-        Py_DECREF(tmp_stop_name_2);
-        assert(!(tmp_subscript_name_2 == NULL));
-        tmp_assign_source_29 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_2);
-        Py_DECREF(tmp_subscript_name_2);
+        tmp_subscript_value_2 = MAKE_SLICEOBJ2(tmp_start_value_2, tmp_stop_value_2);
+        Py_DECREF(tmp_stop_value_2);
+        assert(!(tmp_subscript_value_2 == NULL));
+        tmp_assign_source_29 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_2);
+        Py_DECREF(tmp_subscript_value_2);
         if (tmp_assign_source_29 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13277,13 +11959,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_end_3:;
     {
         PyObject *tmp_assign_source_30;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_tmp_a);
-        tmp_compexpr_left_5 = var_tmp_a;
+        tmp_cmp_expr_left_5 = var_tmp_a;
         if (var_first_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13293,8 +11975,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_compexpr_right_5 = var_first_edge;
-        tmp_assign_source_30 = RICH_COMPARE_GE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
+        tmp_cmp_expr_right_5 = var_first_edge;
+        tmp_assign_source_30 = RICH_COMPARE_GE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
         if (tmp_assign_source_30 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13314,29 +11996,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_31;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(var_keep);
-        tmp_left_name_4 = var_keep;
+        tmp_left_value_4 = var_keep;
         CHECK_OBJECT(var_tmp_a);
-        tmp_compexpr_left_6 = var_tmp_a;
-        if (var_last_edge == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 838;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_compexpr_right_6 = var_last_edge;
-        tmp_right_name_4 = RICH_COMPARE_LE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        if (tmp_right_name_4 == NULL) {
+        tmp_cmp_expr_left_6 = var_tmp_a;
+        CHECK_OBJECT(var_last_edge);
+        tmp_cmp_expr_right_6 = var_last_edge;
+        tmp_right_value_4 = RICH_COMPARE_LE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        if (tmp_right_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13346,8 +12017,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_result = BINARY_OPERATION_BITAND_OBJECT_OBJECT_INPLACE(&tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_result = BINARY_OPERATION_BITAND_OBJECT_OBJECT_INPLACE(&tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -13358,23 +12029,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_assign_source_31 = tmp_left_name_4;
+        tmp_assign_source_31 = tmp_left_value_4;
         var_keep = tmp_assign_source_31;
 
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_args_element_name_19;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_args_element_value_19;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13384,7 +12055,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[104]);
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[98]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13396,11 +12067,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
         CHECK_OBJECT(var_keep);
-        tmp_args_element_name_19 = var_keep;
+        tmp_args_element_value_19 = var_keep;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 839;
-        tmp_operand_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[105], tmp_args_element_name_19);
+        tmp_operand_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[99], tmp_args_element_value_19);
         Py_DECREF(tmp_called_instance_2);
-        if (tmp_operand_name_1 == NULL) {
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13410,8 +12081,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -13422,8 +12093,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -13432,24 +12103,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_32;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_3;
         CHECK_OBJECT(var_tmp_a);
-        tmp_expression_name_12 = var_tmp_a;
-        if (var_keep == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[106]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 840;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_subscript_name_3 = var_keep;
-        tmp_assign_source_32 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_3);
+        tmp_expression_value_12 = var_tmp_a;
+        CHECK_OBJECT(var_keep);
+        tmp_subscript_value_3 = var_keep;
+        tmp_assign_source_32 = LOOKUP_SUBSCRIPT(tmp_expression_value_12, tmp_subscript_value_3);
         if (tmp_assign_source_32 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13470,12 +12130,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
         CHECK_OBJECT(var_tmp_w);
-        tmp_compexpr_left_7 = var_tmp_w;
-        tmp_compexpr_right_7 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_7 != tmp_compexpr_right_7) ? true : false;
+        tmp_cmp_expr_left_7 = var_tmp_w;
+        tmp_cmp_expr_right_7 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_7 != tmp_cmp_expr_right_7) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -13485,24 +12145,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_33;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_4;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_4;
         CHECK_OBJECT(var_tmp_w);
-        tmp_expression_name_13 = var_tmp_w;
-        if (var_keep == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[106]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 842;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_subscript_name_4 = var_keep;
-        tmp_assign_source_33 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_4);
+        tmp_expression_value_13 = var_tmp_w;
+        CHECK_OBJECT(var_keep);
+        tmp_subscript_value_4 = var_keep;
+        tmp_assign_source_33 = LOOKUP_SUBSCRIPT(tmp_expression_value_13, tmp_subscript_value_4);
         if (tmp_assign_source_33 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13525,16 +12174,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_no_4:;
     {
         PyObject *tmp_assign_source_34;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(var_tmp_a);
-        tmp_expression_name_14 = var_tmp_a;
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[68]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_expression_value_14 = var_tmp_a;
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[63]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13545,8 +12194,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
         if (var_bin_edges == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            Py_DECREF(tmp_called_value_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13556,26 +12205,26 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_expression_name_15 = var_bin_edges;
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[62]);
+        tmp_expression_value_15 = var_bin_edges;
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[58]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 847;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[143]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[135]);
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 847;
-        tmp_assign_source_34 = CALL_FUNCTION(tmp_called_name_8, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_assign_source_34 = CALL_FUNCTION(tmp_called_value_8, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_assign_source_34 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13588,25 +12237,26 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         }
         {
             PyObject *old = var_tmp_a;
+            assert(old != NULL);
             var_tmp_a = tmp_assign_source_34;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_35;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_right_name_5;
-        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_right_value_5;
+        tmp_called_value_9 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_called_name_9 == NULL)) {
-            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_value_9 == NULL)) {
+            tmp_called_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_called_name_9 == NULL) {
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13617,10 +12267,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
         CHECK_OBJECT(var_tmp_a);
-        tmp_args_element_name_20 = var_tmp_a;
+        tmp_args_element_value_20 = var_tmp_a;
         if (var_first_edge == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13630,14 +12280,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_args_element_name_21 = var_first_edge;
+        tmp_args_element_value_21 = var_first_edge;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 851;
         {
-            PyObject *call_args[] = {tmp_args_element_name_20, tmp_args_element_name_21};
-            tmp_left_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_20, tmp_args_element_value_21};
+            tmp_left_value_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_9, call_args);
         }
 
-        if (tmp_left_name_5 == NULL) {
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13648,8 +12298,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
         if (var_norm == NULL) {
-            Py_DECREF(tmp_left_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
+            Py_DECREF(tmp_left_value_5);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[136]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13659,9 +12309,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_right_name_5 = var_norm;
-        tmp_assign_source_35 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_5);
+        tmp_right_value_5 = var_norm;
+        tmp_assign_source_35 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_5);
         if (tmp_assign_source_35 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13681,14 +12331,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_36;
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_expression_value_17;
         CHECK_OBJECT(var_f_indices);
-        tmp_expression_name_16 = var_f_indices;
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[68]);
-        if (tmp_called_name_10 == NULL) {
+        tmp_expression_value_16 = var_f_indices;
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[63]);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13698,37 +12348,37 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_expression_name_17 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_17 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_17 == NULL)) {
-            tmp_expression_name_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_17 == NULL)) {
+            tmp_expression_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_17 == NULL) {
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 852;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_args_element_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[135]);
-        if (tmp_args_element_name_22 == NULL) {
+        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[128]);
+        if (tmp_args_element_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 852;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 852;
-        tmp_assign_source_36 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_22);
-        Py_DECREF(tmp_called_name_10);
-        Py_DECREF(tmp_args_element_name_22);
+        tmp_assign_source_36 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_22);
+        Py_DECREF(tmp_called_value_10);
+        Py_DECREF(tmp_args_element_value_22);
         if (tmp_assign_source_36 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13761,13 +12411,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     // Tried code:
     {
         PyObject *tmp_assign_source_38;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
         CHECK_OBJECT(var_indices);
-        tmp_compexpr_left_8 = var_indices;
+        tmp_cmp_expr_left_8 = var_indices;
         if (var_n_equal_bins == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13777,8 +12427,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_9;
         }
 
-        tmp_compexpr_right_8 = var_n_equal_bins;
-        tmp_assign_source_38 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
+        tmp_cmp_expr_right_8 = var_n_equal_bins;
+        tmp_assign_source_38 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
         if (tmp_assign_source_38 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13798,13 +12448,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_39;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_subscript_name_5;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_subscript_value_5;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_18 = tmp_inplace_assign_subscr_1__target;
+        tmp_expression_value_18 = tmp_inplace_assign_subscr_1__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_5 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_39 = LOOKUP_SUBSCRIPT(tmp_expression_name_18, tmp_subscript_name_5);
+        tmp_subscript_value_5 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_assign_source_39 = LOOKUP_SUBSCRIPT(tmp_expression_value_18, tmp_subscript_value_5);
         if (tmp_assign_source_39 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13824,12 +12474,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_40;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_6 = tmp_inplace_assign_subscr_1__value;
-        tmp_right_name_6 = mod_consts[22];
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_name_6, tmp_right_name_6);
+        tmp_left_value_6 = tmp_inplace_assign_subscr_1__value;
+        tmp_right_value_6 = mod_consts[20];
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_value_6, tmp_right_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -13840,7 +12490,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_9;
         }
-        tmp_assign_source_40 = tmp_left_name_6;
+        tmp_assign_source_40 = tmp_left_value_6;
         tmp_inplace_assign_subscr_1__value = tmp_assign_source_40;
 
     }
@@ -13905,26 +12555,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     tmp_inplace_assign_subscr_1__value = NULL;
     {
         PyObject *tmp_assign_source_41;
-        PyObject *tmp_compexpr_left_9;
-        PyObject *tmp_compexpr_right_9;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_subscript_name_6;
-        if (var_tmp_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 857;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_compexpr_left_9 = var_tmp_a;
+        PyObject *tmp_cmp_expr_left_9;
+        PyObject *tmp_cmp_expr_right_9;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_subscript_value_6;
+        CHECK_OBJECT(var_tmp_a);
+        tmp_cmp_expr_left_9 = var_tmp_a;
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13934,11 +12573,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_expression_name_19 = var_bin_edges;
+        tmp_expression_value_19 = var_bin_edges;
         CHECK_OBJECT(var_indices);
-        tmp_subscript_name_6 = var_indices;
-        tmp_compexpr_right_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_19, tmp_subscript_name_6);
-        if (tmp_compexpr_right_9 == NULL) {
+        tmp_subscript_value_6 = var_indices;
+        tmp_cmp_expr_right_9 = LOOKUP_SUBSCRIPT(tmp_expression_value_19, tmp_subscript_value_6);
+        if (tmp_cmp_expr_right_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13948,8 +12587,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_assign_source_41 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_9, tmp_compexpr_right_9);
-        Py_DECREF(tmp_compexpr_right_9);
+        tmp_assign_source_41 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_9, tmp_cmp_expr_right_9);
+        Py_DECREF(tmp_cmp_expr_right_9);
         if (tmp_assign_source_41 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13994,13 +12633,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     // Tried code:
     {
         PyObject *tmp_assign_source_44;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_subscript_name_7;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_subscript_value_7;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__target);
-        tmp_expression_name_20 = tmp_inplace_assign_subscr_2__target;
+        tmp_expression_value_20 = tmp_inplace_assign_subscr_2__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__subscript);
-        tmp_subscript_name_7 = tmp_inplace_assign_subscr_2__subscript;
-        tmp_assign_source_44 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_7);
+        tmp_subscript_value_7 = tmp_inplace_assign_subscr_2__subscript;
+        tmp_assign_source_44 = LOOKUP_SUBSCRIPT(tmp_expression_value_20, tmp_subscript_value_7);
         if (tmp_assign_source_44 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14020,12 +12659,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_45;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__value);
-        tmp_left_name_7 = tmp_inplace_assign_subscr_2__value;
-        tmp_right_name_7 = mod_consts[22];
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_name_7, tmp_right_name_7);
+        tmp_left_value_7 = tmp_inplace_assign_subscr_2__value;
+        tmp_right_value_7 = mod_consts[20];
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_value_7, tmp_right_value_7);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -14036,7 +12675,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_assign_source_45 = tmp_left_name_7;
+        tmp_assign_source_45 = tmp_left_value_7;
         tmp_inplace_assign_subscr_2__value = tmp_assign_source_45;
 
     }
@@ -14102,34 +12741,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     tmp_inplace_assign_subscr_2__value = NULL;
     {
         PyObject *tmp_assign_source_46;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_compexpr_left_10;
-        PyObject *tmp_compexpr_right_10;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_subscript_name_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_compexpr_left_11;
-        PyObject *tmp_compexpr_right_11;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_10;
-        if (var_tmp_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 860;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_compexpr_left_10 = var_tmp_a;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_cmp_expr_left_10;
+        PyObject *tmp_cmp_expr_right_10;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_subscript_value_8;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_cmp_expr_left_11;
+        PyObject *tmp_cmp_expr_right_11;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_10;
+        CHECK_OBJECT(var_tmp_a);
+        tmp_cmp_expr_left_10 = var_tmp_a;
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14139,12 +12767,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_expression_name_21 = var_bin_edges;
+        tmp_expression_value_21 = var_bin_edges;
         CHECK_OBJECT(var_indices);
-        tmp_left_name_9 = var_indices;
-        tmp_right_name_8 = mod_consts[22];
-        tmp_subscript_name_8 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_9, tmp_right_name_8);
-        if (tmp_subscript_name_8 == NULL) {
+        tmp_left_value_9 = var_indices;
+        tmp_right_value_8 = mod_consts[20];
+        tmp_subscript_value_8 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_9, tmp_right_value_8);
+        if (tmp_subscript_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14154,9 +12782,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_compexpr_right_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_21, tmp_subscript_name_8);
-        Py_DECREF(tmp_subscript_name_8);
-        if (tmp_compexpr_right_10 == NULL) {
+        tmp_cmp_expr_right_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_21, tmp_subscript_value_8);
+        Py_DECREF(tmp_subscript_value_8);
+        if (tmp_cmp_expr_right_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14166,9 +12794,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_left_name_8 = RICH_COMPARE_GE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_10, tmp_compexpr_right_10);
-        Py_DECREF(tmp_compexpr_right_10);
-        if (tmp_left_name_8 == NULL) {
+        tmp_left_value_8 = RICH_COMPARE_GE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_10, tmp_cmp_expr_right_10);
+        Py_DECREF(tmp_cmp_expr_right_10);
+        if (tmp_left_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14178,22 +12806,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        if (var_indices == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 861;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_compexpr_left_11 = var_indices;
+        CHECK_OBJECT(var_indices);
+        tmp_cmp_expr_left_11 = var_indices;
         if (var_n_equal_bins == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
+            Py_DECREF(tmp_left_value_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14203,41 +12820,41 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_left_name_10 = var_n_equal_bins;
-        tmp_right_name_10 = mod_consts[22];
-        tmp_compexpr_right_11 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_10, tmp_right_name_10);
-        if (tmp_compexpr_right_11 == NULL) {
+        tmp_left_value_10 = var_n_equal_bins;
+        tmp_right_value_10 = mod_consts[20];
+        tmp_cmp_expr_right_11 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_10, tmp_right_value_10);
+        if (tmp_cmp_expr_right_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 861;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_right_name_9 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_11, tmp_compexpr_right_11);
-        Py_DECREF(tmp_compexpr_right_11);
-        if (tmp_right_name_9 == NULL) {
+        tmp_right_value_9 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_11, tmp_cmp_expr_right_11);
+        Py_DECREF(tmp_cmp_expr_right_11);
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 861;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_assign_source_46 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_8);
-        Py_DECREF(tmp_right_name_9);
+        tmp_assign_source_46 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_8);
+        Py_DECREF(tmp_right_value_9);
         if (tmp_assign_source_46 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 860;
+            exception_lineno = 861;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
@@ -14250,18 +12867,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_47;
-        if (var_indices == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 862;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
+        CHECK_OBJECT(var_indices);
         tmp_assign_source_47 = var_indices;
         {
             PyObject *old = tmp_inplace_assign_subscr_3__target;
@@ -14286,13 +12892,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     // Tried code:
     {
         PyObject *tmp_assign_source_49;
-        PyObject *tmp_expression_name_22;
-        PyObject *tmp_subscript_name_9;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_subscript_value_9;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__target);
-        tmp_expression_name_22 = tmp_inplace_assign_subscr_3__target;
+        tmp_expression_value_22 = tmp_inplace_assign_subscr_3__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__subscript);
-        tmp_subscript_name_9 = tmp_inplace_assign_subscr_3__subscript;
-        tmp_assign_source_49 = LOOKUP_SUBSCRIPT(tmp_expression_name_22, tmp_subscript_name_9);
+        tmp_subscript_value_9 = tmp_inplace_assign_subscr_3__subscript;
+        tmp_assign_source_49 = LOOKUP_SUBSCRIPT(tmp_expression_value_22, tmp_subscript_value_9);
         if (tmp_assign_source_49 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14312,12 +12918,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_50;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_11;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_11;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__value);
-        tmp_left_name_11 = tmp_inplace_assign_subscr_3__value;
-        tmp_right_name_11 = mod_consts[22];
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_LONG_INPLACE(&tmp_left_name_11, tmp_right_name_11);
+        tmp_left_value_11 = tmp_inplace_assign_subscr_3__value;
+        tmp_right_value_11 = mod_consts[20];
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_LONG_INPLACE(&tmp_left_value_11, tmp_right_value_11);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -14328,7 +12934,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_11;
         }
-        tmp_assign_source_50 = tmp_left_name_11;
+        tmp_assign_source_50 = tmp_left_value_11;
         tmp_inplace_assign_subscr_3__value = tmp_assign_source_50;
 
     }
@@ -14394,14 +13000,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     tmp_inplace_assign_subscr_3__value = NULL;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_12;
-        PyObject *tmp_compexpr_right_12;
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_12;
+        PyObject *tmp_cmp_expr_right_12;
+        PyObject *tmp_expression_value_23;
         if (var_ntype == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[137]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14411,9 +13015,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_expression_name_23 = var_ntype;
-        tmp_compexpr_left_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[148]);
-        if (tmp_compexpr_left_12 == NULL) {
+        tmp_expression_value_23 = var_ntype;
+        tmp_cmp_expr_left_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[138]);
+        if (tmp_cmp_expr_left_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14423,10 +13027,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_compexpr_right_12 = mod_consts[149];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_12, tmp_compexpr_right_12);
-        Py_DECREF(tmp_compexpr_left_12);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_right_12 = mod_consts[139];
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_12, tmp_cmp_expr_right_12);
+        Py_DECREF(tmp_cmp_expr_left_12);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14436,32 +13040,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 865;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-        tmp_condition_result_6 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_51;
-        PyObject *tmp_expression_name_24;
+        PyObject *tmp_expression_value_24;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14471,8 +13063,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_expression_name_24 = var_n;
-        tmp_assign_source_51 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[150]);
+        tmp_expression_value_24 = var_n;
+        tmp_assign_source_51 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[140]);
         if (tmp_assign_source_51 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14493,25 +13085,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     // Tried code:
     {
         PyObject *tmp_assign_source_52;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_right_name_12;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_25;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_26;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_right_value_12;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_25;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_kw_call_dict_value_1_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_left_name_12 = tmp_inplace_assign_1__value;
-        tmp_expression_name_25 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_left_value_12 = tmp_inplace_assign_1__value;
+        tmp_expression_value_25 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_25 == NULL)) {
-            tmp_expression_name_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_25 == NULL)) {
+            tmp_expression_value_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_25 == NULL) {
+        if (tmp_expression_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14521,8 +13111,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_12;
         }
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[151]);
-        if (tmp_called_name_11 == NULL) {
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[141]);
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14532,26 +13122,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_12;
         }
-        if (var_indices == NULL) {
-            Py_DECREF(tmp_called_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 866;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_12;
-        }
-
-        tmp_tuple_element_2 = var_indices;
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_dict_key_1 = mod_consts[71];
+        CHECK_OBJECT(var_indices);
+        tmp_kw_call_arg_value_0_1 = var_indices;
         if (var_tmp_w == NULL) {
-            Py_DECREF(tmp_called_name_11);
-            Py_DECREF(tmp_args_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            Py_DECREF(tmp_called_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[142]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14561,54 +13136,42 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_12;
         }
 
-        tmp_expression_name_26 = var_tmp_w;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[150]);
-        if (tmp_dict_value_1 == NULL) {
+        tmp_expression_value_26 = var_tmp_w;
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[140]);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 866;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_12;
         }
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[153];
         if (var_n_equal_bins == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_dict_value_0_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 867;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto dict_build_exception_1;
+            goto try_except_handler_12;
         }
 
-        tmp_dict_value_1 = var_n_equal_bins;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        goto dict_build_noexception_1;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_1:;
-        Py_DECREF(tmp_called_name_11);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
-        goto try_except_handler_12;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_1:;
+        tmp_kw_call_dict_value_1_1 = var_n_equal_bins;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 866;
-        tmp_right_name_12 = CALL_FUNCTION(tmp_called_name_11, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_11);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
-        if (tmp_right_name_12 == NULL) {
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
+            tmp_right_value_12 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_11, args, kw_values, mod_consts[143]);
+        }
+
+        Py_DECREF(tmp_called_value_11);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
+        if (tmp_right_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14618,8 +13181,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_12;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_12, tmp_right_name_12);
-        Py_DECREF(tmp_right_name_12);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_12, tmp_right_value_12);
+        Py_DECREF(tmp_right_value_12);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -14630,18 +13193,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_12;
         }
-        tmp_assign_source_52 = tmp_left_name_12;
+        tmp_assign_source_52 = tmp_left_value_12;
         tmp_inplace_assign_1__value = tmp_assign_source_52;
 
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_assattr_name_1 = tmp_inplace_assign_1__value;
+        tmp_assattr_value_1 = tmp_inplace_assign_1__value;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14652,7 +13215,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         }
 
         tmp_assattr_target_1 = var_n;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[150], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[140], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -14693,10 +13256,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     tmp_inplace_assign_1__value = NULL;
     {
         PyObject *tmp_assign_source_53;
-        PyObject *tmp_expression_name_27;
+        PyObject *tmp_expression_value_27;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14706,8 +13269,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_expression_name_27 = var_n;
-        tmp_assign_source_53 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[154]);
+        tmp_expression_value_27 = var_n;
+        tmp_assign_source_53 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[144]);
         if (tmp_assign_source_53 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14728,25 +13291,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     // Tried code:
     {
         PyObject *tmp_assign_source_54;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_right_name_13;
-        PyObject *tmp_called_name_12;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_args_name_3;
-        PyObject *tmp_tuple_element_3;
-        PyObject *tmp_kwargs_name_3;
-        PyObject *tmp_dict_key_2;
-        PyObject *tmp_dict_value_2;
-        PyObject *tmp_expression_name_29;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_right_value_13;
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_kw_call_arg_value_0_2;
+        PyObject *tmp_kw_call_dict_value_0_2;
+        PyObject *tmp_expression_value_29;
+        PyObject *tmp_kw_call_dict_value_1_2;
         CHECK_OBJECT(tmp_inplace_assign_2__value);
-        tmp_left_name_13 = tmp_inplace_assign_2__value;
-        tmp_expression_name_28 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_left_value_13 = tmp_inplace_assign_2__value;
+        tmp_expression_value_28 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_28 == NULL)) {
-            tmp_expression_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_28 == NULL)) {
+            tmp_expression_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_28 == NULL) {
+        if (tmp_expression_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14756,8 +13317,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_13;
         }
-        tmp_called_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[151]);
-        if (tmp_called_name_12 == NULL) {
+        tmp_called_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[141]);
+        if (tmp_called_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14767,26 +13328,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_13;
         }
-        if (var_indices == NULL) {
-            Py_DECREF(tmp_called_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 868;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_13;
-        }
-
-        tmp_tuple_element_3 = var_indices;
-        tmp_args_name_3 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_3);
-        tmp_dict_key_2 = mod_consts[71];
+        CHECK_OBJECT(var_indices);
+        tmp_kw_call_arg_value_0_2 = var_indices;
         if (var_tmp_w == NULL) {
-            Py_DECREF(tmp_called_name_12);
-            Py_DECREF(tmp_args_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            Py_DECREF(tmp_called_value_12);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[142]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14796,54 +13342,42 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_13;
         }
 
-        tmp_expression_name_29 = var_tmp_w;
-        tmp_dict_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[154]);
-        if (tmp_dict_value_2 == NULL) {
+        tmp_expression_value_29 = var_tmp_w;
+        tmp_kw_call_dict_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[144]);
+        if (tmp_kw_call_dict_value_0_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
-            Py_DECREF(tmp_args_name_3);
+            Py_DECREF(tmp_called_value_12);
 
             exception_lineno = 868;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_13;
         }
-        tmp_kwargs_name_3 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_2, tmp_dict_value_2);
-        Py_DECREF(tmp_dict_value_2);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_2 = mod_consts[153];
         if (var_n_equal_bins == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
+            Py_DECREF(tmp_called_value_12);
+            Py_DECREF(tmp_kw_call_dict_value_0_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 869;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto dict_build_exception_2;
+            goto try_except_handler_13;
         }
 
-        tmp_dict_value_2 = var_n_equal_bins;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_2, tmp_dict_value_2);
-        assert(!(tmp_res != 0));
-        goto dict_build_noexception_2;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_2:;
-        Py_DECREF(tmp_called_name_12);
-        Py_DECREF(tmp_args_name_3);
-        Py_DECREF(tmp_kwargs_name_3);
-        goto try_except_handler_13;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_2:;
+        tmp_kw_call_dict_value_1_2 = var_n_equal_bins;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 868;
-        tmp_right_name_13 = CALL_FUNCTION(tmp_called_name_12, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_12);
-        Py_DECREF(tmp_args_name_3);
-        Py_DECREF(tmp_kwargs_name_3);
-        if (tmp_right_name_13 == NULL) {
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_2};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_2};
+            tmp_right_value_13 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_12, args, kw_values, mod_consts[143]);
+        }
+
+        Py_DECREF(tmp_called_value_12);
+        Py_DECREF(tmp_kw_call_dict_value_0_2);
+        if (tmp_right_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14853,8 +13387,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_13;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_13, tmp_right_name_13);
-        Py_DECREF(tmp_right_name_13);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_13, tmp_right_value_13);
+        Py_DECREF(tmp_right_value_13);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -14865,18 +13399,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_13;
         }
-        tmp_assign_source_54 = tmp_left_name_13;
+        tmp_assign_source_54 = tmp_left_value_13;
         tmp_inplace_assign_2__value = tmp_assign_source_54;
 
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(tmp_inplace_assign_2__value);
-        tmp_assattr_name_2 = tmp_inplace_assign_2__value;
+        tmp_assattr_value_2 = tmp_inplace_assign_2__value;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14887,7 +13421,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         }
 
         tmp_assattr_target_2 = var_n;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[154], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[144], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -14930,21 +13464,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_no_6:;
     {
         PyObject *tmp_assign_source_55;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_right_name_14;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_expression_name_30;
-        PyObject *tmp_called_name_14;
-        PyObject *tmp_expression_name_31;
-        PyObject *tmp_args_name_4;
-        PyObject *tmp_tuple_element_4;
-        PyObject *tmp_kwargs_name_4;
-        PyObject *tmp_dict_key_3;
-        PyObject *tmp_dict_value_3;
-        PyObject *tmp_args_element_name_23;
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_right_value_14;
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_expression_value_30;
+        PyObject *tmp_called_value_14;
+        PyObject *tmp_expression_value_31;
+        PyObject *tmp_kw_call_arg_value_0_3;
+        PyObject *tmp_kw_call_dict_value_0_3;
+        PyObject *tmp_kw_call_dict_value_1_3;
+        PyObject *tmp_args_element_value_23;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14954,14 +13486,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_left_name_14 = var_n;
-        tmp_expression_name_31 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_left_value_14 = var_n;
+        tmp_expression_value_31 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_31 == NULL)) {
-            tmp_expression_name_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_31 == NULL)) {
+            tmp_expression_value_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_31 == NULL) {
+        if (tmp_expression_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14971,8 +13503,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_31, mod_consts[151]);
-        if (tmp_called_name_14 == NULL) {
+        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[141]);
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14982,26 +13514,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        if (var_indices == NULL) {
-            Py_DECREF(tmp_called_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 871;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_8;
-        }
-
-        tmp_tuple_element_4 = var_indices;
-        tmp_args_name_4 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_4);
-        tmp_dict_key_3 = mod_consts[71];
+        CHECK_OBJECT(var_indices);
+        tmp_kw_call_arg_value_0_3 = var_indices;
         if (var_tmp_w == NULL) {
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            Py_DECREF(tmp_called_value_14);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[142]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15011,41 +13528,29 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_dict_value_3 = var_tmp_w;
-        tmp_kwargs_name_4 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_4, tmp_dict_key_3, tmp_dict_value_3);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_3 = mod_consts[153];
+        tmp_kw_call_dict_value_0_3 = var_tmp_w;
         if (var_n_equal_bins == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
+            Py_DECREF(tmp_called_value_14);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 872;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto dict_build_exception_3;
+            goto try_except_handler_8;
         }
 
-        tmp_dict_value_3 = var_n_equal_bins;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_4, tmp_dict_key_3, tmp_dict_value_3);
-        assert(!(tmp_res != 0));
-        goto dict_build_noexception_3;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_3:;
-        Py_DECREF(tmp_called_name_14);
-        Py_DECREF(tmp_args_name_4);
-        Py_DECREF(tmp_kwargs_name_4);
-        goto try_except_handler_8;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_3:;
+        tmp_kw_call_dict_value_1_3 = var_n_equal_bins;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 871;
-        tmp_expression_name_30 = CALL_FUNCTION(tmp_called_name_14, tmp_args_name_4, tmp_kwargs_name_4);
-        Py_DECREF(tmp_called_name_14);
-        Py_DECREF(tmp_args_name_4);
-        Py_DECREF(tmp_kwargs_name_4);
-        if (tmp_expression_name_30 == NULL) {
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_3};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_3, tmp_kw_call_dict_value_1_3};
+            tmp_expression_value_30 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_14, args, kw_values, mod_consts[143]);
+        }
+
+        Py_DECREF(tmp_called_value_14);
+        if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15055,9 +13560,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_called_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[68]);
-        Py_DECREF(tmp_expression_name_30);
-        if (tmp_called_name_13 == NULL) {
+        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[63]);
+        Py_DECREF(tmp_expression_value_30);
+        if (tmp_called_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15068,8 +13573,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
         if (var_ntype == NULL) {
-            Py_DECREF(tmp_called_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            Py_DECREF(tmp_called_value_13);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[137]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15079,11 +13584,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_8;
         }
 
-        tmp_args_element_name_23 = var_ntype;
+        tmp_args_element_value_23 = var_ntype;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 871;
-        tmp_right_name_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, tmp_args_element_name_23);
-        Py_DECREF(tmp_called_name_13);
-        if (tmp_right_name_14 == NULL) {
+        tmp_right_value_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_23);
+        Py_DECREF(tmp_called_value_13);
+        if (tmp_right_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15093,8 +13598,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_14, tmp_right_name_14);
-        Py_DECREF(tmp_right_name_14);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_14, tmp_right_value_14);
+        Py_DECREF(tmp_right_value_14);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -15105,7 +13610,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_assign_source_55 = tmp_left_name_14;
+        tmp_assign_source_55 = tmp_left_value_14;
         var_n = tmp_assign_source_55;
 
     }
@@ -15136,7 +13641,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_12;
@@ -15149,24 +13655,25 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     try_end_12:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     goto branch_end_2;
     branch_no_2:;
     {
         PyObject *tmp_assign_source_56;
-        PyObject *tmp_called_name_15;
-        PyObject *tmp_expression_name_32;
-        PyObject *tmp_args_element_name_24;
-        PyObject *tmp_expression_name_33;
-        PyObject *tmp_args_element_name_25;
-        tmp_expression_name_32 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_15;
+        PyObject *tmp_expression_value_32;
+        PyObject *tmp_args_element_value_24;
+        PyObject *tmp_expression_value_33;
+        PyObject *tmp_args_element_value_25;
+        tmp_expression_value_32 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_32 == NULL)) {
-            tmp_expression_name_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_32 == NULL)) {
+            tmp_expression_value_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_32 == NULL) {
+        if (tmp_expression_value_32 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15176,8 +13683,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[140]);
-        if (tmp_called_name_15 == NULL) {
+        tmp_called_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[133]);
+        if (tmp_called_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15188,28 +13695,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_bin_edges);
-        tmp_expression_name_33 = var_bin_edges;
-        tmp_args_element_name_24 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[69]);
-        if (tmp_args_element_name_24 == NULL) {
+        tmp_expression_value_33 = var_bin_edges;
+        tmp_args_element_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[64]);
+        if (tmp_args_element_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_15);
+            Py_DECREF(tmp_called_value_15);
 
             exception_lineno = 875;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_ntype);
-        tmp_args_element_name_25 = var_ntype;
+        tmp_args_element_value_25 = var_ntype;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 875;
         {
-            PyObject *call_args[] = {tmp_args_element_name_24, tmp_args_element_name_25};
-            tmp_assign_source_56 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_15, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_24, tmp_args_element_value_25};
+            tmp_assign_source_56 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_15, call_args);
         }
 
-        Py_DECREF(tmp_called_name_15);
-        Py_DECREF(tmp_args_element_name_24);
+        Py_DECREF(tmp_called_value_15);
+        Py_DECREF(tmp_args_element_value_24);
         if (tmp_assign_source_56 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15225,23 +13732,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_13;
-        PyObject *tmp_compexpr_right_13;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 876;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_13 = par_weights;
-        tmp_compexpr_right_13 = Py_None;
-        tmp_condition_result_7 = (tmp_compexpr_left_13 == tmp_compexpr_right_13) ? true : false;
+        PyObject *tmp_cmp_expr_left_13;
+        PyObject *tmp_cmp_expr_right_13;
+        CHECK_OBJECT(par_weights);
+        tmp_cmp_expr_left_13 = par_weights;
+        tmp_cmp_expr_right_13 = Py_None;
+        tmp_condition_result_7 = (tmp_cmp_expr_left_13 == tmp_cmp_expr_right_13) ? true : false;
         if (tmp_condition_result_7 != false) {
             goto branch_yes_7;
         } else {
@@ -15252,18 +13748,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     {
         PyObject *tmp_assign_source_57;
         PyObject *tmp_iter_arg_5;
-        PyObject *tmp_called_name_16;
-        PyObject *tmp_args_element_name_26;
-        PyObject *tmp_args_element_name_27;
+        PyObject *tmp_called_value_16;
+        PyObject *tmp_args_element_value_26;
+        PyObject *tmp_args_element_value_27;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_args_element_name_28;
-        tmp_called_name_16 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_args_element_value_28;
+        tmp_called_value_16 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_called_name_16 == NULL)) {
-            tmp_called_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_value_16 == NULL)) {
+            tmp_called_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_called_name_16 == NULL) {
+        if (tmp_called_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15273,22 +13769,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_26 = mod_consts[24];
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 877;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_args_element_value_26 = mod_consts[21];
+        CHECK_OBJECT(par_a);
         tmp_len_arg_2 = par_a;
-        tmp_args_element_name_27 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_args_element_name_27 == NULL) {
+        tmp_args_element_value_27 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_args_element_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15299,14 +13784,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_BLOCK);
-        tmp_args_element_name_28 = var_BLOCK;
+        tmp_args_element_value_28 = var_BLOCK;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 877;
         {
-            PyObject *call_args[] = {tmp_args_element_name_26, tmp_args_element_name_27, tmp_args_element_name_28};
-            tmp_iter_arg_5 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_16, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_26, tmp_args_element_value_27, tmp_args_element_value_28};
+            tmp_iter_arg_5 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_16, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_27);
+        Py_DECREF(tmp_args_element_value_27);
         if (tmp_iter_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15374,22 +13859,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_60;
-        PyObject *tmp_called_name_17;
-        PyObject *tmp_expression_name_34;
-        PyObject *tmp_args_element_name_29;
-        PyObject *tmp_expression_name_35;
-        PyObject *tmp_subscript_name_10;
-        PyObject *tmp_start_name_3;
-        PyObject *tmp_stop_name_3;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_15;
-        tmp_expression_name_34 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_17;
+        PyObject *tmp_expression_value_34;
+        PyObject *tmp_args_element_value_29;
+        PyObject *tmp_expression_value_35;
+        PyObject *tmp_subscript_value_10;
+        PyObject *tmp_start_value_3;
+        PyObject *tmp_stop_value_3;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_15;
+        tmp_expression_value_34 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_34 == NULL)) {
-            tmp_expression_name_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_34 == NULL)) {
+            tmp_expression_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_34 == NULL) {
+        if (tmp_expression_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15399,8 +13884,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_14;
         }
-        tmp_called_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_34, mod_consts[155]);
-        if (tmp_called_name_17 == NULL) {
+        tmp_called_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[145]);
+        if (tmp_called_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15410,26 +13895,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_14;
         }
-        if (par_a == NULL) {
-            Py_DECREF(tmp_called_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 878;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_14;
-        }
-
-        tmp_expression_name_35 = par_a;
+        CHECK_OBJECT(par_a);
+        tmp_expression_value_35 = par_a;
         CHECK_OBJECT(var_i);
-        tmp_start_name_3 = var_i;
+        tmp_start_value_3 = var_i;
         CHECK_OBJECT(var_i);
-        tmp_left_name_15 = var_i;
+        tmp_left_value_15 = var_i;
         if (var_BLOCK == NULL) {
-            Py_DECREF(tmp_called_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[141]);
+            Py_DECREF(tmp_called_value_17);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[134]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15439,37 +13913,37 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_14;
         }
 
-        tmp_right_name_15 = var_BLOCK;
-        tmp_stop_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_15, tmp_right_name_15);
-        if (tmp_stop_name_3 == NULL) {
+        tmp_right_value_15 = var_BLOCK;
+        tmp_stop_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_15, tmp_right_value_15);
+        if (tmp_stop_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_17);
+            Py_DECREF(tmp_called_value_17);
 
             exception_lineno = 878;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_14;
         }
-        tmp_subscript_name_10 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
-        Py_DECREF(tmp_stop_name_3);
-        assert(!(tmp_subscript_name_10 == NULL));
-        tmp_args_element_name_29 = LOOKUP_SUBSCRIPT(tmp_expression_name_35, tmp_subscript_name_10);
-        Py_DECREF(tmp_subscript_name_10);
-        if (tmp_args_element_name_29 == NULL) {
+        tmp_subscript_value_10 = MAKE_SLICEOBJ2(tmp_start_value_3, tmp_stop_value_3);
+        Py_DECREF(tmp_stop_value_3);
+        assert(!(tmp_subscript_value_10 == NULL));
+        tmp_args_element_value_29 = LOOKUP_SUBSCRIPT(tmp_expression_value_35, tmp_subscript_value_10);
+        Py_DECREF(tmp_subscript_value_10);
+        if (tmp_args_element_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_17);
+            Py_DECREF(tmp_called_value_17);
 
             exception_lineno = 878;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_14;
         }
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 878;
-        tmp_assign_source_60 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_17, tmp_args_element_name_29);
-        Py_DECREF(tmp_called_name_17);
-        Py_DECREF(tmp_args_element_name_29);
+        tmp_assign_source_60 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_17, tmp_args_element_value_29);
+        Py_DECREF(tmp_called_value_17);
+        Py_DECREF(tmp_args_element_value_29);
         if (tmp_assign_source_60 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15489,14 +13963,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_61;
-        PyObject *tmp_left_name_16;
-        PyObject *tmp_right_name_16;
-        PyObject *tmp_called_name_18;
-        PyObject *tmp_args_element_name_30;
-        PyObject *tmp_args_element_name_31;
+        PyObject *tmp_left_value_16;
+        PyObject *tmp_right_value_16;
+        PyObject *tmp_called_value_18;
+        PyObject *tmp_args_element_value_30;
+        PyObject *tmp_args_element_value_31;
         if (var_cum_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15506,14 +13980,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_14;
         }
 
-        tmp_left_name_16 = var_cum_n;
-        tmp_called_name_18 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[157]);
+        tmp_left_value_16 = var_cum_n;
+        tmp_called_value_18 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[147]);
 
-        if (unlikely(tmp_called_name_18 == NULL)) {
-            tmp_called_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[157]);
+        if (unlikely(tmp_called_value_18 == NULL)) {
+            tmp_called_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[147]);
         }
 
-        if (tmp_called_name_18 == NULL) {
+        if (tmp_called_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15524,10 +13998,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_14;
         }
         CHECK_OBJECT(var_sa);
-        tmp_args_element_name_30 = var_sa;
+        tmp_args_element_value_30 = var_sa;
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15537,14 +14011,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_14;
         }
 
-        tmp_args_element_name_31 = var_bin_edges;
+        tmp_args_element_value_31 = var_bin_edges;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 879;
         {
-            PyObject *call_args[] = {tmp_args_element_name_30, tmp_args_element_name_31};
-            tmp_right_name_16 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_18, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_30, tmp_args_element_value_31};
+            tmp_right_value_16 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_18, call_args);
         }
 
-        if (tmp_right_name_16 == NULL) {
+        if (tmp_right_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15554,8 +14028,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_14;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_16, tmp_right_name_16);
-        Py_DECREF(tmp_right_name_16);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_16, tmp_right_value_16);
+        Py_DECREF(tmp_right_value_16);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -15566,7 +14040,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_14;
         }
-        tmp_assign_source_61 = tmp_left_name_16;
+        tmp_assign_source_61 = tmp_left_value_16;
         var_cum_n = tmp_assign_source_61;
 
     }
@@ -15596,7 +14070,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_13;
@@ -15609,25 +14084,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     try_end_13:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     goto branch_end_7;
     branch_no_7:;
     {
         PyObject *tmp_assign_source_62;
-        PyObject *tmp_called_name_19;
-        PyObject *tmp_expression_name_36;
-        PyObject *tmp_args_name_5;
-        PyObject *tmp_kwargs_name_5;
-        PyObject *tmp_dict_key_4;
-        PyObject *tmp_dict_value_4;
-        tmp_expression_name_36 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_19;
+        PyObject *tmp_expression_value_36;
+        PyObject *tmp_kw_call_value_0_1;
+        tmp_expression_value_36 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_36 == NULL)) {
-            tmp_expression_name_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_36 == NULL)) {
+            tmp_expression_value_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_36 == NULL) {
+        if (tmp_expression_value_36 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15637,8 +14110,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[140]);
-        if (tmp_called_name_19 == NULL) {
+        tmp_called_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[133]);
+        if (tmp_called_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15648,28 +14121,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_name_5 = mod_consts[158];
-        tmp_dict_key_4 = mod_consts[62];
-        if (var_ntype == NULL) {
-            Py_DECREF(tmp_called_name_19);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 881;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_dict_value_4 = var_ntype;
-        tmp_kwargs_name_5 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_5, tmp_dict_key_4, tmp_dict_value_4);
-        assert(!(tmp_res != 0));
+        CHECK_OBJECT(var_ntype);
+        tmp_kw_call_value_0_1 = var_ntype;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 881;
-        tmp_assign_source_62 = CALL_FUNCTION(tmp_called_name_19, tmp_args_name_5, tmp_kwargs_name_5);
-        Py_DECREF(tmp_called_name_19);
-        Py_DECREF(tmp_kwargs_name_5);
+        {
+            PyObject *kw_values[1] = {tmp_kw_call_value_0_1};
+            tmp_assign_source_62 = CALL_FUNCTION_WITH_POSARGS1_KWSPLIT(tmp_called_value_19, mod_consts[148], kw_values, mod_consts[90]);
+        }
+
+        Py_DECREF(tmp_called_value_19);
         if (tmp_assign_source_62 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15686,18 +14146,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     {
         PyObject *tmp_assign_source_63;
         PyObject *tmp_iter_arg_6;
-        PyObject *tmp_called_name_20;
-        PyObject *tmp_args_element_name_32;
-        PyObject *tmp_args_element_name_33;
+        PyObject *tmp_called_value_20;
+        PyObject *tmp_args_element_value_32;
+        PyObject *tmp_args_element_value_33;
         PyObject *tmp_len_arg_3;
-        PyObject *tmp_args_element_name_34;
-        tmp_called_name_20 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_args_element_value_34;
+        tmp_called_value_20 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_called_name_20 == NULL)) {
-            tmp_called_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_value_20 == NULL)) {
+            tmp_called_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_called_name_20 == NULL) {
+        if (tmp_called_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15707,22 +14167,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_32 = mod_consts[24];
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 882;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_args_element_value_32 = mod_consts[21];
+        CHECK_OBJECT(par_a);
         tmp_len_arg_3 = par_a;
-        tmp_args_element_name_33 = BUILTIN_LEN(tmp_len_arg_3);
-        if (tmp_args_element_name_33 == NULL) {
+        tmp_args_element_value_33 = BUILTIN_LEN(tmp_len_arg_3);
+        if (tmp_args_element_value_33 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15733,14 +14182,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_BLOCK);
-        tmp_args_element_name_34 = var_BLOCK;
+        tmp_args_element_value_34 = var_BLOCK;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 882;
         {
-            PyObject *call_args[] = {tmp_args_element_name_32, tmp_args_element_name_33, tmp_args_element_name_34};
-            tmp_iter_arg_6 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_20, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_32, tmp_args_element_value_33, tmp_args_element_value_34};
+            tmp_iter_arg_6 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_20, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_33);
+        Py_DECREF(tmp_args_element_value_33);
         if (tmp_iter_arg_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15808,32 +14257,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_66;
-        PyObject *tmp_expression_name_37;
-        PyObject *tmp_subscript_name_11;
-        PyObject *tmp_start_name_4;
-        PyObject *tmp_stop_name_4;
-        PyObject *tmp_left_name_17;
-        PyObject *tmp_right_name_17;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[66]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 883;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_15;
-        }
-
-        tmp_expression_name_37 = par_a;
+        PyObject *tmp_expression_value_37;
+        PyObject *tmp_subscript_value_11;
+        PyObject *tmp_start_value_4;
+        PyObject *tmp_stop_value_4;
+        PyObject *tmp_left_value_17;
+        PyObject *tmp_right_value_17;
+        CHECK_OBJECT(par_a);
+        tmp_expression_value_37 = par_a;
         CHECK_OBJECT(var_i);
-        tmp_start_name_4 = var_i;
+        tmp_start_value_4 = var_i;
         CHECK_OBJECT(var_i);
-        tmp_left_name_17 = var_i;
+        tmp_left_value_17 = var_i;
         if (var_BLOCK == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[141]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[134]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15843,9 +14281,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
 
-        tmp_right_name_17 = var_BLOCK;
-        tmp_stop_name_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_17, tmp_right_name_17);
-        if (tmp_stop_name_4 == NULL) {
+        tmp_right_value_17 = var_BLOCK;
+        tmp_stop_value_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_17, tmp_right_value_17);
+        if (tmp_stop_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15855,11 +14293,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_15;
         }
-        tmp_subscript_name_11 = MAKE_SLICEOBJ2(tmp_start_name_4, tmp_stop_name_4);
-        Py_DECREF(tmp_stop_name_4);
-        assert(!(tmp_subscript_name_11 == NULL));
-        tmp_assign_source_66 = LOOKUP_SUBSCRIPT(tmp_expression_name_37, tmp_subscript_name_11);
-        Py_DECREF(tmp_subscript_name_11);
+        tmp_subscript_value_11 = MAKE_SLICEOBJ2(tmp_start_value_4, tmp_stop_value_4);
+        Py_DECREF(tmp_stop_value_4);
+        assert(!(tmp_subscript_value_11 == NULL));
+        tmp_assign_source_66 = LOOKUP_SUBSCRIPT(tmp_expression_value_37, tmp_subscript_value_11);
+        Py_DECREF(tmp_subscript_value_11);
         if (tmp_assign_source_66 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15879,54 +14317,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_67;
-        PyObject *tmp_expression_name_38;
-        PyObject *tmp_subscript_name_12;
-        PyObject *tmp_start_name_5;
-        PyObject *tmp_stop_name_5;
-        PyObject *tmp_left_name_18;
-        PyObject *tmp_right_name_18;
-        if (par_weights == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 884;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_15;
-        }
-
-        tmp_expression_name_38 = par_weights;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[142]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 884;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_15;
-        }
-
-        tmp_start_name_5 = var_i;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[142]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 884;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_15;
-        }
-
-        tmp_left_name_18 = var_i;
+        PyObject *tmp_expression_value_38;
+        PyObject *tmp_subscript_value_12;
+        PyObject *tmp_start_value_5;
+        PyObject *tmp_stop_value_5;
+        PyObject *tmp_left_value_18;
+        PyObject *tmp_right_value_18;
+        CHECK_OBJECT(par_weights);
+        tmp_expression_value_38 = par_weights;
+        CHECK_OBJECT(var_i);
+        tmp_start_value_5 = var_i;
+        CHECK_OBJECT(var_i);
+        tmp_left_value_18 = var_i;
         if (var_BLOCK == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[141]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[134]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15936,9 +14341,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
 
-        tmp_right_name_18 = var_BLOCK;
-        tmp_stop_name_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_18, tmp_right_name_18);
-        if (tmp_stop_name_5 == NULL) {
+        tmp_right_value_18 = var_BLOCK;
+        tmp_stop_value_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_18, tmp_right_value_18);
+        if (tmp_stop_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15948,11 +14353,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_15;
         }
-        tmp_subscript_name_12 = MAKE_SLICEOBJ2(tmp_start_name_5, tmp_stop_name_5);
-        Py_DECREF(tmp_stop_name_5);
-        assert(!(tmp_subscript_name_12 == NULL));
-        tmp_assign_source_67 = LOOKUP_SUBSCRIPT(tmp_expression_name_38, tmp_subscript_name_12);
-        Py_DECREF(tmp_subscript_name_12);
+        tmp_subscript_value_12 = MAKE_SLICEOBJ2(tmp_start_value_5, tmp_stop_value_5);
+        Py_DECREF(tmp_stop_value_5);
+        assert(!(tmp_subscript_value_12 == NULL));
+        tmp_assign_source_67 = LOOKUP_SUBSCRIPT(tmp_expression_value_38, tmp_subscript_value_12);
+        Py_DECREF(tmp_subscript_value_12);
         if (tmp_assign_source_67 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15973,11 +14378,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     {
         PyObject *tmp_assign_source_68;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_35;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_35;
+        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
         if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
         if (tmp_called_instance_3 == NULL) {
@@ -15991,9 +14396,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
         CHECK_OBJECT(var_tmp_a);
-        tmp_args_element_name_35 = var_tmp_a;
+        tmp_args_element_value_35 = var_tmp_a;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 885;
-        tmp_assign_source_68 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[159], tmp_args_element_name_35);
+        tmp_assign_source_68 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[149], tmp_args_element_value_35);
         if (tmp_assign_source_68 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16013,24 +14418,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_69;
-        PyObject *tmp_expression_name_39;
-        PyObject *tmp_subscript_name_13;
-        if (var_tmp_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 886;
-            type_description_1 = "oooooooooooooooooooooooooooooooo";
-            goto try_except_handler_15;
-        }
-
-        tmp_expression_name_39 = var_tmp_a;
+        PyObject *tmp_expression_value_39;
+        PyObject *tmp_subscript_value_13;
+        CHECK_OBJECT(var_tmp_a);
+        tmp_expression_value_39 = var_tmp_a;
         CHECK_OBJECT(var_sorting_index);
-        tmp_subscript_name_13 = var_sorting_index;
-        tmp_assign_source_69 = LOOKUP_SUBSCRIPT(tmp_expression_name_39, tmp_subscript_name_13);
+        tmp_subscript_value_13 = var_sorting_index;
+        tmp_assign_source_69 = LOOKUP_SUBSCRIPT(tmp_expression_value_39, tmp_subscript_value_13);
         if (tmp_assign_source_69 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16050,13 +14444,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_70;
-        PyObject *tmp_expression_name_40;
-        PyObject *tmp_subscript_name_14;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_subscript_value_14;
         CHECK_OBJECT(var_tmp_w);
-        tmp_expression_name_40 = var_tmp_w;
+        tmp_expression_value_40 = var_tmp_w;
         CHECK_OBJECT(var_sorting_index);
-        tmp_subscript_name_14 = var_sorting_index;
-        tmp_assign_source_70 = LOOKUP_SUBSCRIPT(tmp_expression_name_40, tmp_subscript_name_14);
+        tmp_subscript_value_14 = var_sorting_index;
+        tmp_assign_source_70 = LOOKUP_SUBSCRIPT(tmp_expression_value_40, tmp_subscript_value_14);
         if (tmp_assign_source_70 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16076,17 +14470,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_71;
-        PyObject *tmp_called_name_21;
-        PyObject *tmp_expression_name_41;
-        PyObject *tmp_args_element_name_36;
-        PyObject *tmp_tuple_element_5;
-        tmp_expression_name_41 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_21;
+        PyObject *tmp_expression_value_41;
+        PyObject *tmp_args_element_value_36;
+        PyObject *tmp_tuple_element_2;
+        tmp_expression_value_41 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_41 == NULL)) {
-            tmp_expression_name_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_41 == NULL)) {
+            tmp_expression_value_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_41 == NULL) {
+        if (tmp_expression_value_41 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16096,8 +14490,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_15;
         }
-        tmp_called_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_41, mod_consts[126]);
-        if (tmp_called_name_21 == NULL) {
+        tmp_called_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[119]);
+        if (tmp_called_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16108,8 +14502,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
         if (var_zero == NULL) {
-            Py_DECREF(tmp_called_name_21);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
+            Py_DECREF(tmp_called_value_21);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[150]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16119,16 +14513,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
 
-        tmp_tuple_element_5 = var_zero;
-        tmp_args_element_name_36 = PyTuple_New(2);
+        tmp_tuple_element_2 = var_zero;
+        tmp_args_element_value_36 = PyTuple_New(2);
         {
             PyObject *tmp_called_instance_4;
-            PyTuple_SET_ITEM0(tmp_args_element_name_36, 0, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_args_element_value_36, 0, tmp_tuple_element_2);
             CHECK_OBJECT(var_sw);
             tmp_called_instance_4 = var_sw;
             frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 888;
-            tmp_tuple_element_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[161]);
-            if (tmp_tuple_element_5 == NULL) {
+            tmp_tuple_element_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[151]);
+            if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16138,20 +14532,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
                 type_description_1 = "oooooooooooooooooooooooooooooooo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_args_element_name_36, 1, tmp_tuple_element_5);
+            PyTuple_SET_ITEM(tmp_args_element_value_36, 1, tmp_tuple_element_2);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_21);
-        Py_DECREF(tmp_args_element_name_36);
+        Py_DECREF(tmp_called_value_21);
+        Py_DECREF(tmp_args_element_value_36);
         goto try_except_handler_15;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 888;
-        tmp_assign_source_71 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_21, tmp_args_element_name_36);
-        Py_DECREF(tmp_called_name_21);
-        Py_DECREF(tmp_args_element_name_36);
+        tmp_assign_source_71 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_21, tmp_args_element_value_36);
+        Py_DECREF(tmp_called_value_21);
+        Py_DECREF(tmp_args_element_value_36);
         if (tmp_assign_source_71 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16171,16 +14565,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_72;
-        PyObject *tmp_called_name_22;
-        PyObject *tmp_args_element_name_37;
-        PyObject *tmp_args_element_name_38;
-        tmp_called_name_22 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[157]);
+        PyObject *tmp_called_value_22;
+        PyObject *tmp_args_element_value_37;
+        PyObject *tmp_args_element_value_38;
+        tmp_called_value_22 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[147]);
 
-        if (unlikely(tmp_called_name_22 == NULL)) {
-            tmp_called_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[157]);
+        if (unlikely(tmp_called_value_22 == NULL)) {
+            tmp_called_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[147]);
         }
 
-        if (tmp_called_name_22 == NULL) {
+        if (tmp_called_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16191,10 +14585,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
         CHECK_OBJECT(var_sa);
-        tmp_args_element_name_37 = var_sa;
+        tmp_args_element_value_37 = var_sa;
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16204,11 +14598,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
 
-        tmp_args_element_name_38 = var_bin_edges;
+        tmp_args_element_value_38 = var_bin_edges;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 889;
         {
-            PyObject *call_args[] = {tmp_args_element_name_37, tmp_args_element_name_38};
-            tmp_assign_source_72 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_22, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_37, tmp_args_element_value_38};
+            tmp_assign_source_72 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_22, call_args);
         }
 
         if (tmp_assign_source_72 == NULL) {
@@ -16230,13 +14624,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_73;
-        PyObject *tmp_left_name_19;
-        PyObject *tmp_right_name_19;
-        PyObject *tmp_expression_name_42;
-        PyObject *tmp_subscript_name_15;
+        PyObject *tmp_left_value_19;
+        PyObject *tmp_right_value_19;
+        PyObject *tmp_expression_value_42;
+        PyObject *tmp_subscript_value_15;
         if (var_cum_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16246,13 +14640,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto try_except_handler_15;
         }
 
-        tmp_left_name_19 = var_cum_n;
+        tmp_left_value_19 = var_cum_n;
         CHECK_OBJECT(var_cw);
-        tmp_expression_name_42 = var_cw;
+        tmp_expression_value_42 = var_cw;
         CHECK_OBJECT(var_bin_index);
-        tmp_subscript_name_15 = var_bin_index;
-        tmp_right_name_19 = LOOKUP_SUBSCRIPT(tmp_expression_name_42, tmp_subscript_name_15);
-        if (tmp_right_name_19 == NULL) {
+        tmp_subscript_value_15 = var_bin_index;
+        tmp_right_value_19 = LOOKUP_SUBSCRIPT(tmp_expression_value_42, tmp_subscript_value_15);
+        if (tmp_right_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16262,8 +14656,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_15;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_19, tmp_right_name_19);
-        Py_DECREF(tmp_right_name_19);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_19, tmp_right_value_19);
+        Py_DECREF(tmp_right_value_19);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -16274,7 +14668,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto try_except_handler_15;
         }
-        tmp_assign_source_73 = tmp_left_name_19;
+        tmp_assign_source_73 = tmp_left_value_19;
         var_cum_n = tmp_assign_source_73;
 
     }
@@ -16304,7 +14698,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_14;
@@ -16317,21 +14712,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     try_end_14:;
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     branch_end_7:;
     {
         PyObject *tmp_assign_source_74;
-        PyObject *tmp_called_name_23;
-        PyObject *tmp_expression_name_43;
-        PyObject *tmp_args_element_name_39;
-        tmp_expression_name_43 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_23;
+        PyObject *tmp_expression_value_43;
+        PyObject *tmp_args_element_value_39;
+        tmp_expression_value_43 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_43 == NULL)) {
-            tmp_expression_name_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_43 == NULL)) {
+            tmp_expression_value_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_43 == NULL) {
+        if (tmp_expression_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16341,8 +14737,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_43, mod_consts[162]);
-        if (tmp_called_name_23 == NULL) {
+        tmp_called_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_43, mod_consts[152]);
+        if (tmp_called_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16353,8 +14749,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         if (var_cum_n == NULL) {
-            Py_DECREF(tmp_called_name_23);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
+            Py_DECREF(tmp_called_value_23);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16364,10 +14760,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_39 = var_cum_n;
+        tmp_args_element_value_39 = var_cum_n;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 892;
-        tmp_assign_source_74 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_23, tmp_args_element_name_39);
-        Py_DECREF(tmp_called_name_23);
+        tmp_assign_source_74 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_23, tmp_args_element_value_39);
+        Py_DECREF(tmp_called_value_23);
         if (tmp_assign_source_74 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16384,12 +14780,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_end_2:;
     {
         bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_14;
-        PyObject *tmp_compexpr_right_14;
+        PyObject *tmp_cmp_expr_left_14;
+        PyObject *tmp_cmp_expr_right_14;
         CHECK_OBJECT(par_density);
-        tmp_compexpr_left_14 = par_density;
-        tmp_compexpr_right_14 = Py_None;
-        tmp_condition_result_8 = (tmp_compexpr_left_14 != tmp_compexpr_right_14) ? true : false;
+        tmp_cmp_expr_left_14 = par_density;
+        tmp_cmp_expr_right_14 = Py_None;
+        tmp_condition_result_8 = (tmp_cmp_expr_left_14 != tmp_cmp_expr_right_14) ? true : false;
         if (tmp_condition_result_8 != false) {
             goto branch_yes_8;
         } else {
@@ -16399,12 +14795,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_yes_8:;
     {
         bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_15;
-        PyObject *tmp_compexpr_right_15;
+        PyObject *tmp_cmp_expr_left_15;
+        PyObject *tmp_cmp_expr_right_15;
         CHECK_OBJECT(par_normed);
-        tmp_compexpr_left_15 = par_normed;
-        tmp_compexpr_right_15 = Py_None;
-        tmp_condition_result_9 = (tmp_compexpr_left_15 != tmp_compexpr_right_15) ? true : false;
+        tmp_cmp_expr_left_15 = par_normed;
+        tmp_cmp_expr_right_15 = Py_None;
+        tmp_condition_result_9 = (tmp_cmp_expr_left_15 != tmp_cmp_expr_right_15) ? true : false;
         if (tmp_condition_result_9 != false) {
             goto branch_yes_9;
         } else {
@@ -16413,19 +14809,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     branch_yes_9:;
     {
-        PyObject *tmp_called_name_24;
-        PyObject *tmp_expression_name_44;
+        PyObject *tmp_called_value_24;
+        PyObject *tmp_expression_value_44;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_name_6;
-        PyObject *tmp_tuple_element_6;
-        PyObject *tmp_kwargs_name_6;
-        tmp_expression_name_44 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[31]);
+        PyObject *tmp_args_value_2;
+        PyObject *tmp_tuple_element_3;
+        PyObject *tmp_kwargs_value_2;
+        tmp_expression_value_44 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_expression_name_44 == NULL)) {
-            tmp_expression_name_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_expression_value_44 == NULL)) {
+            tmp_expression_value_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_expression_name_44 == NULL) {
+        if (tmp_expression_value_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16435,8 +14831,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_24 = LOOKUP_ATTRIBUTE(tmp_expression_name_44, mod_consts[32]);
-        if (tmp_called_name_24 == NULL) {
+        tmp_called_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_44, mod_consts[28]);
+        if (tmp_called_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16446,16 +14842,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_6 = mod_consts[163];
-        tmp_args_name_6 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_6, 0, tmp_tuple_element_6);
-        tmp_tuple_element_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[164]);
+        tmp_tuple_element_3 = mod_consts[153];
+        tmp_args_value_2 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
+        tmp_tuple_element_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[154]);
 
-        if (unlikely(tmp_tuple_element_6 == NULL)) {
-            tmp_tuple_element_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[164]);
+        if (unlikely(tmp_tuple_element_3 == NULL)) {
+            tmp_tuple_element_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
         }
 
-        if (tmp_tuple_element_6 == NULL) {
+        if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16465,21 +14861,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto tuple_build_exception_2;
         }
-        PyTuple_SET_ITEM0(tmp_args_name_6, 1, tmp_tuple_element_6);
+        PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_3);
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_2:;
-        Py_DECREF(tmp_called_name_24);
-        Py_DECREF(tmp_args_name_6);
+        Py_DECREF(tmp_called_value_24);
+        Py_DECREF(tmp_args_value_2);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_kwargs_name_6 = PyDict_Copy(mod_consts[35]);
+        tmp_kwargs_value_2 = PyDict_Copy(mod_consts[31]);
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 898;
-        tmp_call_result_1 = CALL_FUNCTION(tmp_called_name_24, tmp_args_name_6, tmp_kwargs_name_6);
-        Py_DECREF(tmp_called_name_24);
-        Py_DECREF(tmp_args_name_6);
-        Py_DECREF(tmp_kwargs_name_6);
+        tmp_call_result_1 = CALL_FUNCTION(tmp_called_value_24, tmp_args_value_2, tmp_kwargs_value_2);
+        Py_DECREF(tmp_called_value_24);
+        Py_DECREF(tmp_args_value_2);
+        Py_DECREF(tmp_kwargs_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16508,10 +14904,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_no_8:;
     {
         nuitka_bool tmp_condition_result_10;
-        int tmp_truth_name_3;
+        int tmp_truth_name_2;
         CHECK_OBJECT(par_density);
-        tmp_truth_name_3 = CHECK_IF_TRUE(par_density);
-        if (tmp_truth_name_3 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(par_density);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16521,7 +14917,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_10 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_10 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
             goto branch_yes_10;
         } else {
@@ -16531,20 +14927,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_yes_10:;
     {
         PyObject *tmp_assign_source_76;
-        PyObject *tmp_called_name_25;
-        PyObject *tmp_expression_name_45;
-        PyObject *tmp_args_element_name_40;
-        PyObject *tmp_called_name_26;
-        PyObject *tmp_expression_name_46;
-        PyObject *tmp_args_element_name_41;
-        PyObject *tmp_args_element_name_42;
-        tmp_expression_name_45 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_25;
+        PyObject *tmp_expression_value_45;
+        PyObject *tmp_args_element_value_40;
+        PyObject *tmp_called_value_26;
+        PyObject *tmp_expression_value_46;
+        PyObject *tmp_args_element_value_41;
+        PyObject *tmp_args_element_value_42;
+        tmp_expression_value_45 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_45 == NULL)) {
-            tmp_expression_name_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_45 == NULL)) {
+            tmp_expression_value_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_45 == NULL) {
+        if (tmp_expression_value_45 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16554,8 +14950,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_25 = LOOKUP_ATTRIBUTE(tmp_expression_name_45, mod_consts[165]);
-        if (tmp_called_name_25 == NULL) {
+        tmp_called_value_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_45, mod_consts[155]);
+        if (tmp_called_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16565,37 +14961,37 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_46 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_46 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_46 == NULL)) {
-            tmp_expression_name_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_46 == NULL)) {
+            tmp_expression_value_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_46 == NULL) {
+        if (tmp_expression_value_46 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_25);
 
             exception_lineno = 905;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_26 = LOOKUP_ATTRIBUTE(tmp_expression_name_46, mod_consts[162]);
-        if (tmp_called_name_26 == NULL) {
+        tmp_called_value_26 = LOOKUP_ATTRIBUTE(tmp_expression_value_46, mod_consts[152]);
+        if (tmp_called_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_25);
 
             exception_lineno = 905;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         if (var_bin_edges == NULL) {
-            Py_DECREF(tmp_called_name_25);
-            Py_DECREF(tmp_called_name_26);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            Py_DECREF(tmp_called_value_25);
+            Py_DECREF(tmp_called_value_26);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16605,29 +15001,29 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_41 = var_bin_edges;
+        tmp_args_element_value_41 = var_bin_edges;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 905;
-        tmp_args_element_name_40 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_26, tmp_args_element_name_41);
-        Py_DECREF(tmp_called_name_26);
-        if (tmp_args_element_name_40 == NULL) {
+        tmp_args_element_value_40 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_26, tmp_args_element_value_41);
+        Py_DECREF(tmp_called_value_26);
+        if (tmp_args_element_value_40 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_25);
 
             exception_lineno = 905;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_42 = (PyObject *)&PyFloat_Type;
+        tmp_args_element_value_42 = (PyObject *)&PyFloat_Type;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 905;
         {
-            PyObject *call_args[] = {tmp_args_element_name_40, tmp_args_element_name_42};
-            tmp_assign_source_76 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_25, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_40, tmp_args_element_value_42};
+            tmp_assign_source_76 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_25, call_args);
         }
 
-        Py_DECREF(tmp_called_name_25);
-        Py_DECREF(tmp_args_element_name_40);
+        Py_DECREF(tmp_called_value_25);
+        Py_DECREF(tmp_args_element_value_40);
         if (tmp_assign_source_76 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16642,15 +15038,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         var_db = tmp_assign_source_76;
     }
     {
-        PyObject *tmp_tuple_element_7;
-        PyObject *tmp_left_name_20;
-        PyObject *tmp_left_name_21;
-        PyObject *tmp_right_name_20;
-        PyObject *tmp_right_name_21;
+        PyObject *tmp_tuple_element_4;
+        PyObject *tmp_left_value_20;
+        PyObject *tmp_left_value_21;
+        PyObject *tmp_right_value_20;
+        PyObject *tmp_right_value_21;
         PyObject *tmp_called_instance_5;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16660,11 +15056,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_21 = var_n;
+        tmp_left_value_21 = var_n;
         CHECK_OBJECT(var_db);
-        tmp_right_name_20 = var_db;
-        tmp_left_name_20 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_21, tmp_right_name_20);
-        if (tmp_left_name_20 == NULL) {
+        tmp_right_value_20 = var_db;
+        tmp_left_value_20 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_21, tmp_right_value_20);
+        if (tmp_left_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16675,8 +15071,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         if (var_n == NULL) {
-            Py_DECREF(tmp_left_name_20);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            Py_DECREF(tmp_left_value_20);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16688,21 +15084,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
         tmp_called_instance_5 = var_n;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 906;
-        tmp_right_name_21 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[166]);
-        if (tmp_right_name_21 == NULL) {
+        tmp_right_value_21 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[156]);
+        if (tmp_right_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_20);
+            Py_DECREF(tmp_left_value_20);
 
             exception_lineno = 906;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_7 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_20, tmp_right_name_21);
-        Py_DECREF(tmp_left_name_20);
-        Py_DECREF(tmp_right_name_21);
-        if (tmp_tuple_element_7 == NULL) {
+        tmp_tuple_element_4 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_20, tmp_right_value_21);
+        Py_DECREF(tmp_left_value_20);
+        Py_DECREF(tmp_right_value_21);
+        if (tmp_tuple_element_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16713,10 +15109,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         tmp_return_value = PyTuple_New(2);
-        PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_7);
+        PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_4);
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16726,8 +15122,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto tuple_build_exception_3;
         }
 
-        tmp_tuple_element_7 = var_bin_edges;
-        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_7);
+        tmp_tuple_element_4 = var_bin_edges;
+        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_4);
         goto tuple_build_noexception_3;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_3:;
@@ -16741,10 +15137,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_no_10:;
     {
         nuitka_bool tmp_condition_result_11;
-        int tmp_truth_name_4;
+        int tmp_truth_name_3;
         CHECK_OBJECT(par_normed);
-        tmp_truth_name_4 = CHECK_IF_TRUE(par_normed);
-        if (tmp_truth_name_4 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(par_normed);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16754,7 +15150,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_11 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_11 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
             goto branch_yes_11;
         } else {
@@ -16763,19 +15159,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     branch_yes_11:;
     {
-        PyObject *tmp_called_name_27;
-        PyObject *tmp_expression_name_47;
+        PyObject *tmp_called_value_27;
+        PyObject *tmp_expression_value_47;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_name_7;
-        PyObject *tmp_tuple_element_8;
-        PyObject *tmp_kwargs_name_7;
-        tmp_expression_name_47 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[31]);
+        PyObject *tmp_args_value_3;
+        PyObject *tmp_tuple_element_5;
+        PyObject *tmp_kwargs_value_3;
+        tmp_expression_value_47 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_expression_name_47 == NULL)) {
-            tmp_expression_name_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_expression_value_47 == NULL)) {
+            tmp_expression_value_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_expression_name_47 == NULL) {
+        if (tmp_expression_value_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16785,8 +15181,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_47, mod_consts[32]);
-        if (tmp_called_name_27 == NULL) {
+        tmp_called_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[28]);
+        if (tmp_called_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16796,18 +15192,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_8 = mod_consts[167];
-        tmp_args_name_7 = PyTuple_New(2);
+        tmp_tuple_element_5 = mod_consts[157];
+        tmp_args_value_3 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_48;
-            PyTuple_SET_ITEM0(tmp_args_name_7, 0, tmp_tuple_element_8);
-            tmp_expression_name_48 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+            PyObject *tmp_expression_value_48;
+            PyTuple_SET_ITEM0(tmp_args_value_3, 0, tmp_tuple_element_5);
+            tmp_expression_value_48 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-            if (unlikely(tmp_expression_name_48 == NULL)) {
-                tmp_expression_name_48 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+            if (unlikely(tmp_expression_value_48 == NULL)) {
+                tmp_expression_value_48 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
             }
 
-            if (tmp_expression_name_48 == NULL) {
+            if (tmp_expression_value_48 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16817,8 +15213,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
                 type_description_1 = "oooooooooooooooooooooooooooooooo";
                 goto tuple_build_exception_4;
             }
-            tmp_tuple_element_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_48, mod_consts[168]);
-            if (tmp_tuple_element_8 == NULL) {
+            tmp_tuple_element_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_48, mod_consts[158]);
+            if (tmp_tuple_element_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16828,22 +15224,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
                 type_description_1 = "oooooooooooooooooooooooooooooooo";
                 goto tuple_build_exception_4;
             }
-            PyTuple_SET_ITEM(tmp_args_name_7, 1, tmp_tuple_element_8);
+            PyTuple_SET_ITEM(tmp_args_value_3, 1, tmp_tuple_element_5);
         }
         goto tuple_build_noexception_4;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_4:;
-        Py_DECREF(tmp_called_name_27);
-        Py_DECREF(tmp_args_name_7);
+        Py_DECREF(tmp_called_value_27);
+        Py_DECREF(tmp_args_value_3);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_4:;
-        tmp_kwargs_name_7 = PyDict_Copy(mod_consts[35]);
+        tmp_kwargs_value_3 = PyDict_Copy(mod_consts[31]);
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 909;
-        tmp_call_result_2 = CALL_FUNCTION(tmp_called_name_27, tmp_args_name_7, tmp_kwargs_name_7);
-        Py_DECREF(tmp_called_name_27);
-        Py_DECREF(tmp_args_name_7);
-        Py_DECREF(tmp_kwargs_name_7);
+        tmp_call_result_2 = CALL_FUNCTION(tmp_called_value_27, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_27);
+        Py_DECREF(tmp_args_value_3);
+        Py_DECREF(tmp_kwargs_value_3);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16858,20 +15254,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_77;
-        PyObject *tmp_called_name_28;
-        PyObject *tmp_expression_name_49;
-        PyObject *tmp_args_element_name_43;
-        PyObject *tmp_called_name_29;
-        PyObject *tmp_expression_name_50;
-        PyObject *tmp_args_element_name_44;
-        PyObject *tmp_args_element_name_45;
-        tmp_expression_name_49 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_28;
+        PyObject *tmp_expression_value_49;
+        PyObject *tmp_args_element_value_43;
+        PyObject *tmp_called_value_29;
+        PyObject *tmp_expression_value_50;
+        PyObject *tmp_args_element_value_44;
+        PyObject *tmp_args_element_value_45;
+        tmp_expression_value_49 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_49 == NULL)) {
-            tmp_expression_name_49 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_49 == NULL)) {
+            tmp_expression_value_49 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_49 == NULL) {
+        if (tmp_expression_value_49 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16881,8 +15277,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_28 = LOOKUP_ATTRIBUTE(tmp_expression_name_49, mod_consts[165]);
-        if (tmp_called_name_28 == NULL) {
+        tmp_called_value_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_49, mod_consts[155]);
+        if (tmp_called_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16892,37 +15288,37 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_50 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_50 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_50 == NULL)) {
-            tmp_expression_name_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_50 == NULL)) {
+            tmp_expression_value_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_50 == NULL) {
+        if (tmp_expression_value_50 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_28);
+            Py_DECREF(tmp_called_value_28);
 
             exception_lineno = 920;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_29 = LOOKUP_ATTRIBUTE(tmp_expression_name_50, mod_consts[162]);
-        if (tmp_called_name_29 == NULL) {
+        tmp_called_value_29 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[152]);
+        if (tmp_called_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_28);
+            Py_DECREF(tmp_called_value_28);
 
             exception_lineno = 920;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         if (var_bin_edges == NULL) {
-            Py_DECREF(tmp_called_name_28);
-            Py_DECREF(tmp_called_name_29);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            Py_DECREF(tmp_called_value_28);
+            Py_DECREF(tmp_called_value_29);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16932,29 +15328,29 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_44 = var_bin_edges;
+        tmp_args_element_value_44 = var_bin_edges;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 920;
-        tmp_args_element_name_43 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_29, tmp_args_element_name_44);
-        Py_DECREF(tmp_called_name_29);
-        if (tmp_args_element_name_43 == NULL) {
+        tmp_args_element_value_43 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_29, tmp_args_element_value_44);
+        Py_DECREF(tmp_called_value_29);
+        if (tmp_args_element_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_28);
+            Py_DECREF(tmp_called_value_28);
 
             exception_lineno = 920;
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_45 = (PyObject *)&PyFloat_Type;
+        tmp_args_element_value_45 = (PyObject *)&PyFloat_Type;
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 920;
         {
-            PyObject *call_args[] = {tmp_args_element_name_43, tmp_args_element_name_45};
-            tmp_assign_source_77 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_28, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_43, tmp_args_element_value_45};
+            tmp_assign_source_77 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_28, call_args);
         }
 
-        Py_DECREF(tmp_called_name_28);
-        Py_DECREF(tmp_args_element_name_43);
+        Py_DECREF(tmp_called_value_28);
+        Py_DECREF(tmp_args_element_value_43);
         if (tmp_assign_source_77 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16969,15 +15365,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
         var_db = tmp_assign_source_77;
     }
     {
-        PyObject *tmp_tuple_element_9;
-        PyObject *tmp_left_name_22;
-        PyObject *tmp_right_name_22;
+        PyObject *tmp_tuple_element_6;
+        PyObject *tmp_left_value_22;
+        PyObject *tmp_right_value_22;
         PyObject *tmp_called_instance_6;
-        PyObject *tmp_left_name_23;
-        PyObject *tmp_right_name_23;
+        PyObject *tmp_left_value_23;
+        PyObject *tmp_right_value_23;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16987,10 +15383,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_22 = var_n;
+        tmp_left_value_22 = var_n;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17000,10 +15396,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_23 = var_n;
+        tmp_left_value_23 = var_n;
         CHECK_OBJECT(var_db);
-        tmp_right_name_23 = var_db;
-        tmp_called_instance_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_23, tmp_right_name_23);
+        tmp_right_value_23 = var_db;
+        tmp_called_instance_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_23, tmp_right_value_23);
         if (tmp_called_instance_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17015,9 +15411,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 921;
-        tmp_right_name_22 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[166]);
+        tmp_right_value_22 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[156]);
         Py_DECREF(tmp_called_instance_6);
-        if (tmp_right_name_22 == NULL) {
+        if (tmp_right_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17027,9 +15423,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_9 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_22, tmp_right_name_22);
-        Py_DECREF(tmp_right_name_22);
-        if (tmp_tuple_element_9 == NULL) {
+        tmp_tuple_element_6 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_22, tmp_right_value_22);
+        Py_DECREF(tmp_right_value_22);
+        if (tmp_tuple_element_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17040,10 +15436,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
         tmp_return_value = PyTuple_New(2);
-        PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_9);
+        PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_6);
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17053,8 +15449,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto tuple_build_exception_5;
         }
 
-        tmp_tuple_element_9 = var_bin_edges;
-        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_9);
+        tmp_tuple_element_6 = var_bin_edges;
+        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_6);
         goto tuple_build_noexception_5;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_5:;
@@ -17068,12 +15464,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     branch_no_11:;
     {
         bool tmp_condition_result_12;
-        PyObject *tmp_compexpr_left_16;
-        PyObject *tmp_compexpr_right_16;
+        PyObject *tmp_cmp_expr_left_16;
+        PyObject *tmp_cmp_expr_right_16;
         CHECK_OBJECT(par_normed);
-        tmp_compexpr_left_16 = par_normed;
-        tmp_compexpr_right_16 = Py_None;
-        tmp_condition_result_12 = (tmp_compexpr_left_16 != tmp_compexpr_right_16) ? true : false;
+        tmp_cmp_expr_left_16 = par_normed;
+        tmp_cmp_expr_right_16 = Py_None;
+        tmp_condition_result_12 = (tmp_cmp_expr_left_16 != tmp_cmp_expr_right_16) ? true : false;
         if (tmp_condition_result_12 != false) {
             goto branch_yes_12;
         } else {
@@ -17082,19 +15478,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     branch_yes_12:;
     {
-        PyObject *tmp_called_name_30;
-        PyObject *tmp_expression_name_51;
+        PyObject *tmp_called_value_30;
+        PyObject *tmp_expression_value_51;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_name_8;
-        PyObject *tmp_tuple_element_10;
-        PyObject *tmp_kwargs_name_8;
-        tmp_expression_name_51 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[31]);
+        PyObject *tmp_args_value_4;
+        PyObject *tmp_tuple_element_7;
+        PyObject *tmp_kwargs_value_4;
+        tmp_expression_value_51 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[27]);
 
-        if (unlikely(tmp_expression_name_51 == NULL)) {
-            tmp_expression_name_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+        if (unlikely(tmp_expression_value_51 == NULL)) {
+            tmp_expression_value_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[27]);
         }
 
-        if (tmp_expression_name_51 == NULL) {
+        if (tmp_expression_value_51 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17104,8 +15500,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_30 = LOOKUP_ATTRIBUTE(tmp_expression_name_51, mod_consts[32]);
-        if (tmp_called_name_30 == NULL) {
+        tmp_called_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_51, mod_consts[28]);
+        if (tmp_called_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17115,16 +15511,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_10 = mod_consts[169];
-        tmp_args_name_8 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_8, 0, tmp_tuple_element_10);
-        tmp_tuple_element_10 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[164]);
+        tmp_tuple_element_7 = mod_consts[159];
+        tmp_args_value_4 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_7);
+        tmp_tuple_element_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[154]);
 
-        if (unlikely(tmp_tuple_element_10 == NULL)) {
-            tmp_tuple_element_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[164]);
+        if (unlikely(tmp_tuple_element_7 == NULL)) {
+            tmp_tuple_element_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
         }
 
-        if (tmp_tuple_element_10 == NULL) {
+        if (tmp_tuple_element_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17134,21 +15530,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             type_description_1 = "oooooooooooooooooooooooooooooooo";
             goto tuple_build_exception_6;
         }
-        PyTuple_SET_ITEM0(tmp_args_name_8, 1, tmp_tuple_element_10);
+        PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_7);
         goto tuple_build_noexception_6;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_6:;
-        Py_DECREF(tmp_called_name_30);
-        Py_DECREF(tmp_args_name_8);
+        Py_DECREF(tmp_called_value_30);
+        Py_DECREF(tmp_args_value_4);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_6:;
-        tmp_kwargs_name_8 = PyDict_Copy(mod_consts[35]);
+        tmp_kwargs_value_4 = PyDict_Copy(mod_consts[31]);
         frame_6e4dec849e9836e540ab9c9cec2bdb07->m_frame.f_lineno = 925;
-        tmp_call_result_3 = CALL_FUNCTION(tmp_called_name_30, tmp_args_name_8, tmp_kwargs_name_8);
-        Py_DECREF(tmp_called_name_30);
-        Py_DECREF(tmp_args_name_8);
-        Py_DECREF(tmp_kwargs_name_8);
+        tmp_call_result_3 = CALL_FUNCTION(tmp_called_value_30, tmp_args_value_4, tmp_kwargs_value_4);
+        Py_DECREF(tmp_called_value_30);
+        Py_DECREF(tmp_args_value_4);
+        Py_DECREF(tmp_kwargs_value_4);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17163,10 +15559,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     }
     branch_no_12:;
     {
-        PyObject *tmp_tuple_element_11;
+        PyObject *tmp_tuple_element_8;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17176,12 +15572,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto frame_exception_exit_1;
         }
 
-        tmp_tuple_element_11 = var_n;
+        tmp_tuple_element_8 = var_n;
         tmp_return_value = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_11);
+        PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_8);
         if (var_bin_edges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[124]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[117]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17191,8 +15587,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
             goto tuple_build_exception_7;
         }
 
-        tmp_tuple_element_11 = var_bin_edges;
-        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_11);
+        tmp_tuple_element_8 = var_bin_edges;
+        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_8);
         goto tuple_build_noexception_7;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_7:;
@@ -17299,23 +15695,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_a);
+    CHECK_OBJECT(par_a);
+    Py_DECREF(par_a);
     par_a = NULL;
-    Py_XDECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     CHECK_OBJECT(par_normed);
     Py_DECREF(par_normed);
     par_normed = NULL;
-    Py_XDECREF(par_weights);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);
     par_weights = NULL;
-    CHECK_OBJECT(par_density);
-    Py_DECREF(par_density);
-    par_density = NULL;
     Py_XDECREF(var_bin_edges);
     var_bin_edges = NULL;
-    Py_XDECREF(var_uniform_bins);
+    CHECK_OBJECT(var_uniform_bins);
+    Py_DECREF(var_uniform_bins);
     var_uniform_bins = NULL;
     Py_XDECREF(var_ntype);
     var_ntype = NULL;
@@ -17380,17 +15772,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
 
     Py_XDECREF(par_a);
     par_a = NULL;
-    Py_XDECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
     Py_XDECREF(par_normed);
     par_normed = NULL;
     Py_XDECREF(par_weights);
     par_weights = NULL;
-    CHECK_OBJECT(par_density);
-    Py_DECREF(par_density);
-    par_density = NULL;
     Py_XDECREF(var_bin_edges);
     var_bin_edges = NULL;
     Py_XDECREF(var_uniform_bins);
@@ -17456,14 +15841,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__18_histogram(struct Nuitk
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    CHECK_OBJECT(par_density);
+    Py_DECREF(par_density);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    CHECK_OBJECT(par_density);
+    Py_DECREF(par_density);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -17489,7 +15884,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__19__histogramdd_dispatche
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    // Tried code:
     {
         struct Nuitka_CellObject *tmp_closure_1[6];
 
@@ -17505,44 +15899,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__19__histogramdd_dispatche
 
         tmp_return_value = MAKE_GENERATOR_numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$genobj__1__histogramdd_dispatcher(tmp_closure_1);
 
-        goto try_return_handler_1;
+        goto function_return_exit;
     }
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_sample);
-    Py_DECREF(par_sample);
-    par_sample = NULL;
-    CHECK_OBJECT(par_bins);
-    Py_DECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    Py_XDECREF(par_normed);
-    par_normed = NULL;
-    CHECK_OBJECT(par_weights);
-    Py_DECREF(par_weights);
-    par_weights = NULL;
-    Py_XDECREF(par_density);
-    par_density = NULL;
-    goto function_return_exit;
-    // End of try:
-    CHECK_OBJECT(par_sample);
-    Py_DECREF(par_sample);
-    par_sample = NULL;
-    CHECK_OBJECT(par_bins);
-    Py_DECREF(par_bins);
-    par_bins = NULL;
-    Py_XDECREF(par_range);
-    par_range = NULL;
-    Py_XDECREF(par_normed);
-    par_normed = NULL;
-    CHECK_OBJECT(par_weights);
-    Py_DECREF(par_weights);
-    par_weights = NULL;
-    Py_XDECREF(par_density);
-    par_density = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -17550,7 +15908,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__19__histogramdd_dispatche
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_sample);
+    Py_DECREF(par_sample);
+    CHECK_OBJECT(par_bins);
+    Py_DECREF(par_bins);
+    CHECK_OBJECT(par_range);
+    Py_DECREF(par_range);
+    CHECK_OBJECT(par_normed);
+    Py_DECREF(par_normed);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);
+    CHECK_OBJECT(par_density);
+    Py_DECREF(par_density);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -17682,11 +16051,11 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_attribute_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_attribute_value_1;
         if (Nuitka_Cell_GET(generator->m_closure[4]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[171]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[161]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -17696,9 +16065,9 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(generator->m_closure[4]);
-        tmp_attribute_name_1 = mod_consts[69];
-        generator_heap->tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_1, tmp_attribute_name_1);
+        tmp_expression_value_1 = Nuitka_Cell_GET(generator->m_closure[4]);
+        tmp_attribute_value_1 = mod_consts[64];
+        generator_heap->tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_1, tmp_attribute_value_1);
         if (generator_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17718,11 +16087,11 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     }
     branch_yes_1:;
     {
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
         if (Nuitka_Cell_GET(generator->m_closure[4]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[171]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[161]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -17732,10 +16101,10 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(generator->m_closure[4]);
-        Py_INCREF(tmp_expression_name_2);
+        tmp_expression_value_2 = Nuitka_Cell_GET(generator->m_closure[4]);
+        Py_INCREF(tmp_expression_value_2);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_2;
+        return tmp_expression_value_2;
         yield_return_1:
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -17752,11 +16121,11 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     goto branch_end_1;
     branch_no_1:;
     {
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_yieldfrom_result_1;
         if (Nuitka_Cell_GET(generator->m_closure[4]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[171]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[161]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -17766,10 +16135,10 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(generator->m_closure[4]);
-        Py_INCREF(tmp_expression_name_3);
+        tmp_expression_value_3 = Nuitka_Cell_GET(generator->m_closure[4]);
+        Py_INCREF(tmp_expression_value_3);
         generator->m_yield_return_index = 2;
-        generator->m_yieldfrom = tmp_expression_name_3;
+        generator->m_yieldfrom = tmp_expression_value_3;
         return NULL;
 
         yield_return_2:
@@ -17791,10 +16160,10 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[172]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[162]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[172]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[162]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -17808,10 +16177,10 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             goto try_except_handler_1;
         }
         generator->m_frame->m_frame.f_lineno = 938;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS1(
+        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_1,
-            mod_consts[173],
-            &PyTuple_GET_ITEM(mod_consts[174], 0)
+            mod_consts[163],
+            PyTuple_GET_ITEM(mod_consts[164], 0)
         );
 
         if (tmp_assign_source_1 == NULL) {
@@ -17829,12 +16198,12 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(generator_heap->tmp_with_1__source);
-        tmp_expression_name_4 = generator_heap->tmp_with_1__source;
-        tmp_called_name_1 = LOOKUP_SPECIAL(tmp_expression_name_4, mod_consts[175]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_4 = generator_heap->tmp_with_1__source;
+        tmp_called_value_1 = LOOKUP_SPECIAL(tmp_expression_value_4, mod_consts[165]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -17845,8 +16214,8 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             goto try_except_handler_1;
         }
         generator->m_frame->m_frame.f_lineno = 938;
-        tmp_assign_source_2 = CALL_FUNCTION_NO_ARGS(tmp_called_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17862,10 +16231,10 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(generator_heap->tmp_with_1__source);
-        tmp_expression_name_5 = generator_heap->tmp_with_1__source;
-        tmp_assign_source_3 = LOOKUP_SPECIAL(tmp_expression_name_5, mod_consts[176]);
+        tmp_expression_value_5 = generator_heap->tmp_with_1__source;
+        tmp_assign_source_3 = LOOKUP_SPECIAL(tmp_expression_value_5, mod_consts[166]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17887,11 +16256,11 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     // Tried code:
     // Tried code:
     {
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_yieldfrom_result_2;
         if (Nuitka_Cell_GET(generator->m_closure[0]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[38]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[167]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -17901,10 +16270,10 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(generator->m_closure[0]);
-        Py_INCREF(tmp_expression_name_6);
+        tmp_expression_value_6 = Nuitka_Cell_GET(generator->m_closure[0]);
+        Py_INCREF(tmp_expression_value_6);
         generator->m_yield_return_index = 3;
-        generator->m_yieldfrom = tmp_expression_name_6;
+        generator->m_yieldfrom = tmp_expression_value_6;
         return NULL;
 
         yield_return_3:
@@ -17948,11 +16317,11 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_BaseException;
-        generator_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_BaseException;
+        generator_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(generator_heap->tmp_res == -1));
         tmp_condition_result_2 = (generator_heap->tmp_res != 0) ? true : false;
         if (tmp_condition_result_2 != false) {
@@ -17968,24 +16337,24 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
         generator_heap->tmp_with_1__indicator = tmp_assign_source_5;
     }
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        bool tmp_condition_result_3;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(generator_heap->tmp_with_1__exit);
-        tmp_called_name_2 = generator_heap->tmp_with_1__exit;
-        tmp_args_element_name_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_args_element_name_2 = EXC_VALUE(PyThreadState_GET());
-        tmp_args_element_name_3 = EXC_TRACEBACK(PyThreadState_GET());
+        tmp_called_value_2 = generator_heap->tmp_with_1__exit;
+        tmp_args_element_value_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_args_element_value_2 = EXC_VALUE(PyThreadState_GET());
+        tmp_args_element_value_3 = EXC_TRACEBACK(PyThreadState_GET());
         generator->m_frame->m_frame.f_lineno = 939;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_operand_name_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_operand_value_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_2, call_args);
         }
 
-        if (tmp_operand_name_1 == NULL) {
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -17995,8 +16364,8 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             generator_heap->type_description_1 = "cccccc";
             goto try_except_handler_4;
         }
-        generator_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        generator_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (generator_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18007,8 +16376,8 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             generator_heap->type_description_1 = "cccccc";
             goto try_except_handler_4;
         }
-        tmp_condition_result_3 = (generator_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (generator_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -18081,12 +16450,12 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
 
     {
         bool tmp_condition_result_4;
-        nuitka_bool tmp_compexpr_left_2;
-        nuitka_bool tmp_compexpr_right_2;
+        nuitka_bool tmp_cmp_expr_left_2;
+        nuitka_bool tmp_cmp_expr_right_2;
         assert(generator_heap->tmp_with_1__indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_2 = generator_heap->tmp_with_1__indicator;
-        tmp_compexpr_right_2 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_4 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = generator_heap->tmp_with_1__indicator;
+        tmp_cmp_expr_right_2 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -18095,12 +16464,12 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(generator_heap->tmp_with_1__exit);
-        tmp_called_name_3 = generator_heap->tmp_with_1__exit;
+        tmp_called_value_3 = generator_heap->tmp_with_1__exit;
         generator->m_frame->m_frame.f_lineno = 939;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, &PyTuple_GET_ITEM(mod_consts[177], 0));
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_3, mod_consts[168]);
 
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18129,12 +16498,12 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     try_end_3:;
     {
         bool tmp_condition_result_5;
-        nuitka_bool tmp_compexpr_left_3;
-        nuitka_bool tmp_compexpr_right_3;
+        nuitka_bool tmp_cmp_expr_left_3;
+        nuitka_bool tmp_cmp_expr_right_3;
         assert(generator_heap->tmp_with_1__indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_3 = generator_heap->tmp_with_1__indicator;
-        tmp_compexpr_right_3 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_5 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = generator_heap->tmp_with_1__indicator;
+        tmp_cmp_expr_right_3 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_3 == tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -18143,12 +16512,12 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     }
     branch_yes_5:;
     {
-        PyObject *tmp_called_name_4;
+        PyObject *tmp_called_value_4;
         PyObject *tmp_call_result_2;
         CHECK_OBJECT(generator_heap->tmp_with_1__exit);
-        tmp_called_name_4 = generator_heap->tmp_with_1__exit;
+        tmp_called_value_4 = generator_heap->tmp_with_1__exit;
         generator->m_frame->m_frame.f_lineno = 939;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_4, &PyTuple_GET_ITEM(mod_consts[177], 0));
+        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_4, mod_consts[168]);
 
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18199,11 +16568,11 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
     Py_XDECREF(generator_heap->tmp_with_1__exit);
     generator_heap->tmp_with_1__exit = NULL;
     {
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_2;
         if (Nuitka_Cell_GET(generator->m_closure[5]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[71]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[169]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -18213,10 +16582,10 @@ static PyObject *numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$g
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = Nuitka_Cell_GET(generator->m_closure[5]);
-        Py_INCREF(tmp_expression_name_7);
+        tmp_expression_value_7 = Nuitka_Cell_GET(generator->m_closure[5]);
+        Py_INCREF(tmp_expression_value_7);
         generator->m_yield_return_index = 4;
-        return tmp_expression_name_7;
+        return tmp_expression_value_7;
         yield_return_4:
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -18307,7 +16676,7 @@ static PyObject *MAKE_GENERATOR_numpy$lib$histograms$$$function__19__histogramdd
     return Nuitka_Generator_New(
         numpy$lib$histograms$$$function__19__histogramdd_dispatcher$$$genobj__1__histogramdd_dispatcher_context,
         module_numpy$lib$histograms,
-        mod_consts[178],
+        mod_consts[170],
 #if PYTHON_VERSION >= 0x350
         NULL,
 #endif
@@ -18496,10 +16865,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(Nuitka_Cell_GET(par_sample));
-        tmp_expression_name_1 = Nuitka_Cell_GET(par_sample);
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[69]);
+        tmp_expression_value_1 = Nuitka_Cell_GET(par_sample);
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[64]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18602,7 +16971,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -18623,7 +16992,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -18659,7 +17029,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     goto try_except_handler_2;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -18683,10 +17054,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     goto try_end_3;
     // Exception handler code:
     try_except_handler_2:;
@@ -18714,11 +17081,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = mod_consts[179];
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = mod_consts[171];
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18739,17 +17106,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18759,34 +17125,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[180]);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1019;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_5;
-        }
-        if (Nuitka_Cell_GET(par_sample) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[171]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1019;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_args_element_name_1 = Nuitka_Cell_GET(par_sample);
+        CHECK_OBJECT(Nuitka_Cell_GET(par_sample));
+        tmp_args_element_value_1 = Nuitka_Cell_GET(par_sample);
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1019;
-        tmp_expression_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[172], tmp_args_element_value_1);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18796,8 +17139,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[181]);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[173]);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18819,10 +17162,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(Nuitka_Cell_GET(par_sample));
-        tmp_expression_name_4 = Nuitka_Cell_GET(par_sample);
-        tmp_iter_arg_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[69]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(par_sample);
+        tmp_iter_arg_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[64]);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18925,7 +17268,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -18946,7 +17289,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_4;
@@ -18982,7 +17326,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     goto try_except_handler_5;
     // End of try:
     try_end_5:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_10;
@@ -19006,10 +17351,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     Py_XDECREF(tmp_tuple_unpack_2__element_2);
     tmp_tuple_unpack_2__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
     goto branch_end_1;
     branch_no_1:;
     tmp_result = RERAISE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -19055,17 +17396,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     try_end_3:;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19075,8 +17416,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[182]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[174]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19087,8 +17428,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
         if (var_D == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19098,15 +17439,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_2 = var_D;
-        tmp_args_element_name_3 = (PyObject *)&PyLong_Type;
+        tmp_args_element_value_2 = var_D;
+        tmp_args_element_value_3 = (PyObject *)&PyLong_Type;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1022;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19122,11 +17463,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19136,10 +17477,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_1 = var_D;
-        tmp_right_name_1 = LIST_COPY(mod_consts[184]);
-        tmp_assign_source_13 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LIST(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_left_value_1 = var_D;
+        tmp_right_value_1 = LIST_COPY(mod_consts[176]);
+        tmp_assign_source_13 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LIST(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19156,11 +17497,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19170,10 +17511,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_2 = var_D;
-        tmp_right_name_2 = LIST_COPY(mod_consts[184]);
-        tmp_assign_source_14 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LIST(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_left_value_2 = var_D;
+        tmp_right_value_2 = LIST_COPY(mod_consts[176]);
+        tmp_assign_source_14 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LIST(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19189,12 +17530,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_weights);
-        tmp_compexpr_left_2 = par_weights;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_weights;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -19204,15 +17545,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_instance_2 == NULL)) {
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19223,9 +17564,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_weights);
-        tmp_args_element_name_4 = par_weights;
+        tmp_args_element_value_4 = par_weights;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1026;
-        tmp_assign_source_15 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[61], tmp_args_element_name_4);
+        tmp_assign_source_15 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[57], tmp_args_element_value_4);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19238,8 +17579,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         {
             PyObject *old = par_weights;
+            assert(old != NULL);
             par_weights = tmp_assign_source_15;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -19266,15 +17608,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_M);
-        tmp_compexpr_left_3 = var_M;
+        tmp_cmp_expr_left_3 = var_M;
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19284,9 +17624,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_8;
         }
 
-        tmp_compexpr_right_3 = var_D;
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_right_3 = var_D;
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_LONG_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19296,30 +17636,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_8;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 1030;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_8;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[185];
+        tmp_make_exception_arg_1 = mod_consts[177];
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1031;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -19357,11 +17685,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     // Tried code:
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        tmp_compexpr_left_4 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_4 = PyExc_TypeError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_4, tmp_compexpr_right_4);
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        tmp_cmp_expr_left_4 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_4 = PyExc_TypeError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
         assert(!(tmp_res == -1));
         tmp_condition_result_4 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_4 != false) {
@@ -19373,12 +17701,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_list_element_1;
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19388,24 +17716,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_9;
         }
 
-        tmp_left_name_3 = var_D;
-        if (par_bins == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1036;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_9;
-        }
-
+        tmp_left_value_3 = var_D;
+        CHECK_OBJECT(par_bins);
         tmp_list_element_1 = par_bins;
-        tmp_right_name_3 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_right_name_3, 0, tmp_list_element_1);
-        tmp_assign_source_17 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LIST(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_right_value_3 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_right_value_3, 0, tmp_list_element_1);
+        tmp_assign_source_17 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LIST(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19418,8 +17735,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         {
             PyObject *old = par_bins;
+            assert(old != NULL);
             par_bins = tmp_assign_source_17;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -19468,12 +17786,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     try_end_7:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(par_range);
-        tmp_compexpr_left_5 = par_range;
-        tmp_compexpr_right_5 = Py_None;
-        tmp_condition_result_5 = (tmp_compexpr_left_5 == tmp_compexpr_right_5) ? true : false;
+        tmp_cmp_expr_left_5 = par_range;
+        tmp_cmp_expr_right_5 = Py_None;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_5 == tmp_cmp_expr_right_5) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -19483,12 +17801,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        tmp_left_name_4 = mod_consts[186];
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        tmp_left_value_4 = mod_consts[178];
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19498,8 +17816,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_right_name_4 = var_D;
-        tmp_assign_source_18 = BINARY_OPERATION_MULT_OBJECT_TUPLE_OBJECT(tmp_left_name_4, tmp_right_name_4);
+        tmp_right_value_4 = var_D;
+        tmp_assign_source_18 = BINARY_OPERATION_MULT_OBJECT_TUPLE_OBJECT(tmp_left_value_4, tmp_right_value_4);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19522,15 +17840,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_2;
         CHECK_OBJECT(par_range);
         tmp_len_arg_2 = par_range;
-        tmp_compexpr_left_6 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_left_6 == NULL) {
+        tmp_cmp_expr_left_6 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_left_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19541,8 +17857,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
         if (var_D == NULL) {
-            Py_DECREF(tmp_compexpr_left_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            Py_DECREF(tmp_cmp_expr_left_6);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19552,10 +17868,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_right_6 = var_D;
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        Py_DECREF(tmp_compexpr_left_6);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_right_6 = var_D;
+        tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_LONG_OBJECT(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        Py_DECREF(tmp_cmp_expr_left_6);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19565,30 +17881,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 1041;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_6 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        tmp_make_exception_arg_2 = mod_consts[187];
+        tmp_make_exception_arg_2 = mod_consts[179];
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1042;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
@@ -19603,15 +17907,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_assign_source_19;
         PyObject *tmp_iter_arg_3;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19623,7 +17927,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19633,9 +17937,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_5 = var_D;
+        tmp_args_element_value_5 = var_D;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1045;
-        tmp_iter_arg_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_5);
+        tmp_iter_arg_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_5);
         if (tmp_iter_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19703,22 +18007,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_tmp_condition_result_7_object_1;
-        int tmp_truth_name_3;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_1;
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19728,8 +18030,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[108]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[101]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19740,8 +18042,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
         if (par_bins == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19751,25 +18053,25 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_7 = par_bins;
+        tmp_expression_value_6 = par_bins;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_1 = var_i;
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_1);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_subscript_value_1 = var_i;
+        tmp_args_element_value_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_1);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 1046;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1046;
-        tmp_compexpr_left_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_6);
-        if (tmp_compexpr_left_7 == NULL) {
+        tmp_cmp_expr_left_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_6);
+        if (tmp_cmp_expr_left_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19779,10 +18081,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_compexpr_right_7 = mod_consts[24];
-        tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        Py_DECREF(tmp_compexpr_left_7);
-        if (tmp_tmp_condition_result_7_object_1 == NULL) {
+        tmp_cmp_expr_right_7 = mod_consts[21];
+        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        Py_DECREF(tmp_cmp_expr_left_7);
+        if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19792,37 +18094,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_7_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_7_object_1);
-
-            exception_lineno = 1046;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_10;
-        }
-        tmp_condition_result_7 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_7_object_1);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
         }
+        assert(tmp_condition_result_7 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_7:;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_tmp_condition_result_8_object_1;
-        int tmp_truth_name_4;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_2;
         if (par_bins == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19832,11 +18120,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_8 = par_bins;
+        tmp_expression_value_7 = par_bins;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_2 = var_i;
-        tmp_compexpr_left_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_2);
-        if (tmp_compexpr_left_8 == NULL) {
+        tmp_subscript_value_2 = var_i;
+        tmp_cmp_expr_left_8 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_2);
+        if (tmp_cmp_expr_left_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19846,10 +18134,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_compexpr_right_8 = mod_consts[22];
-        tmp_tmp_condition_result_8_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
-        Py_DECREF(tmp_compexpr_left_8);
-        if (tmp_tmp_condition_result_8_object_1 == NULL) {
+        tmp_cmp_expr_right_8 = mod_consts[20];
+        tmp_condition_result_8 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
+        Py_DECREF(tmp_cmp_expr_left_8);
+        if (tmp_condition_result_8 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19859,36 +18147,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_8_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_8_object_1);
-
-            exception_lineno = 1047;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_10;
-        }
-        tmp_condition_result_8 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_8_object_1);
         if (tmp_condition_result_8 == NUITKA_BOOL_TRUE) {
             goto branch_yes_8;
         } else {
             goto branch_no_8;
         }
+        assert(tmp_condition_result_8 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_8:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_7;
-        tmp_called_instance_2 = mod_consts[188];
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_7;
+        tmp_expression_value_8 = mod_consts[180];
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[61]);
+        assert(!(tmp_called_value_4 == NULL));
         CHECK_OBJECT(var_i);
-        tmp_args_element_name_7 = var_i;
+        tmp_args_element_value_7 = var_i;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1049;
-        tmp_make_exception_arg_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[65], tmp_args_element_name_7);
+        tmp_make_exception_arg_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_7);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_make_exception_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19914,21 +18194,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_assign_source_22;
         PyObject *tmp_iter_arg_4;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_3;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_4;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[103]);
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_4;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[97]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[103]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[97]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19940,7 +18220,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         if (Nuitka_Cell_GET(par_sample) == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[171]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[161]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19950,16 +18230,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_11;
         }
 
-        tmp_expression_name_9 = Nuitka_Cell_GET(par_sample);
-        tmp_tuple_element_1 = mod_consts[189];
-        tmp_subscript_name_3 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_subscript_name_3, 0, tmp_tuple_element_1);
+        tmp_expression_value_9 = Nuitka_Cell_GET(par_sample);
+        tmp_tuple_element_1 = mod_consts[181];
+        tmp_subscript_value_3 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_subscript_value_3, 0, tmp_tuple_element_1);
         CHECK_OBJECT(var_i);
         tmp_tuple_element_1 = var_i;
-        PyTuple_SET_ITEM0(tmp_subscript_name_3, 1, tmp_tuple_element_1);
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_3);
-        Py_DECREF(tmp_subscript_name_3);
-        if (tmp_args_element_name_8 == NULL) {
+        PyTuple_SET_ITEM0(tmp_subscript_value_3, 1, tmp_tuple_element_1);
+        tmp_args_element_value_8 = LOOKUP_SUBSCRIPT(tmp_expression_value_9, tmp_subscript_value_3);
+        Py_DECREF(tmp_subscript_value_3);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19970,8 +18250,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_11;
         }
         if (par_range == NULL) {
-            Py_DECREF(tmp_args_element_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[40]);
+            Py_DECREF(tmp_args_element_value_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -19981,15 +18261,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_11;
         }
 
-        tmp_expression_name_10 = par_range;
+        tmp_expression_value_10 = par_range;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_4 = var_i;
-        tmp_args_element_name_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_4);
-        if (tmp_args_element_name_9 == NULL) {
+        tmp_subscript_value_4 = var_i;
+        tmp_args_element_value_9 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_4);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_8);
+            Py_DECREF(tmp_args_element_value_8);
 
             exception_lineno = 1050;
             type_description_1 = "coooooooocoooooooooooooo";
@@ -19997,12 +18277,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1050;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_iter_arg_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_iter_arg_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_8);
-        Py_DECREF(tmp_args_element_name_9);
+        Py_DECREF(tmp_args_element_value_8);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_iter_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20117,7 +18397,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[74];
+            exception_value = mod_consts[69];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -20138,7 +18418,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_9;
@@ -20174,7 +18455,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     goto try_except_handler_10;
     // End of try:
     try_end_10:;
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     {
         PyObject *tmp_assign_source_25;
@@ -20206,25 +18488,21 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     Py_XDECREF(tmp_tuple_unpack_3__element_2);
     tmp_tuple_unpack_3__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_3__element_1);
-    tmp_tuple_unpack_3__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_3__element_2);
-    tmp_tuple_unpack_3__element_2 = NULL;
     // Tried code:
     {
         PyObject *tmp_assign_source_27;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_5;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[109]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_5;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[102]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[109]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[102]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20234,8 +18512,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_13;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[110]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[103]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20246,8 +18524,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_13;
         }
         if (par_bins == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
+            Py_DECREF(tmp_called_value_6);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20257,24 +18535,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_13;
         }
 
-        tmp_expression_name_12 = par_bins;
+        tmp_expression_value_12 = par_bins;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_5 = var_i;
-        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_5);
-        if (tmp_args_element_name_10 == NULL) {
+        tmp_subscript_value_5 = var_i;
+        tmp_args_element_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_12, tmp_subscript_value_5);
+        if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 1052;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_13;
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1052;
-        tmp_assign_source_27 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_10);
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_10);
+        tmp_assign_source_27 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_10);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_10);
         if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20319,11 +18597,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     // Tried code:
     {
         bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_9;
-        PyObject *tmp_compexpr_right_9;
-        tmp_compexpr_left_9 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_9 = PyExc_TypeError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_9, tmp_compexpr_right_9);
+        PyObject *tmp_cmp_expr_left_9;
+        PyObject *tmp_cmp_expr_right_9;
+        tmp_cmp_expr_left_9 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_9 = PyExc_TypeError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_9, tmp_cmp_expr_right_9);
         assert(!(tmp_res == -1));
         tmp_condition_result_9 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_9 != false) {
@@ -20336,26 +18614,26 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_assign_source_28;
         tmp_assign_source_28 = EXC_VALUE(PyThreadState_GET());
-        {
-            PyObject *old = var_e;
-            var_e = tmp_assign_source_28;
-            Py_INCREF(var_e);
-            Py_XDECREF(old);
-        }
-
+        assert(var_e == NULL);
+        Py_INCREF(tmp_assign_source_28);
+        var_e = tmp_assign_source_28;
     }
     // Tried code:
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_11;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_args_element_value_11;
         PyObject *tmp_raise_cause_1;
-        tmp_called_instance_3 = mod_consts[190];
+        tmp_expression_value_13 = mod_consts[182];
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[61]);
+        assert(!(tmp_called_value_7 == NULL));
         CHECK_OBJECT(var_i);
-        tmp_args_element_name_11 = var_i;
+        tmp_args_element_value_11 = var_i;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1056;
-        tmp_make_exception_arg_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[65], tmp_args_element_name_11);
+        tmp_make_exception_arg_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_11);
+        Py_DECREF(tmp_called_value_7);
         if (tmp_make_exception_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20443,22 +18721,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     try_end_11:;
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20468,8 +18746,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[122]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[114]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20480,18 +18758,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
         CHECK_OBJECT(var_smin);
-        tmp_args_element_name_12 = var_smin;
+        tmp_args_element_value_12 = var_smin;
         CHECK_OBJECT(var_smax);
-        tmp_args_element_name_13 = var_smax;
+        tmp_args_element_value_13 = var_smax;
         CHECK_OBJECT(var_n);
-        tmp_left_name_5 = var_n;
-        tmp_right_name_5 = mod_consts[22];
-        tmp_args_element_name_14 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_5, tmp_right_name_5);
-        if (tmp_args_element_name_14 == NULL) {
+        tmp_left_value_5 = var_n;
+        tmp_right_value_5 = mod_consts[20];
+        tmp_args_element_value_14 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_5, tmp_right_value_5);
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 1059;
             type_description_1 = "coooooooocoooooooooooooo";
@@ -20499,12 +18777,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1059;
         {
-            PyObject *call_args[] = {tmp_args_element_name_12, tmp_args_element_name_13, tmp_args_element_name_14};
-            tmp_ass_subvalue_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_12, tmp_args_element_value_13, tmp_args_element_value_14};
+            tmp_ass_subvalue_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_element_name_14);
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_element_value_14);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20517,7 +18795,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         if (Nuitka_Cell_GET(var_edges) == NULL) {
             Py_DECREF(tmp_ass_subvalue_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20547,22 +18825,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_no_7:;
     {
         nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_compexpr_left_10;
-        PyObject *tmp_compexpr_right_10;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_subscript_name_6;
-        PyObject *tmp_tmp_condition_result_10_object_1;
-        int tmp_truth_name_5;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_cmp_expr_left_10;
+        PyObject *tmp_cmp_expr_right_10;
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_subscript_value_6;
+        tmp_expression_value_15 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_15 == NULL)) {
+            tmp_expression_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20572,8 +18848,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[108]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[101]);
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20584,8 +18860,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
         if (par_bins == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
+            Py_DECREF(tmp_called_value_9);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20595,25 +18871,25 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_15 = par_bins;
+        tmp_expression_value_16 = par_bins;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_6 = var_i;
-        tmp_args_element_name_15 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_6);
-        if (tmp_args_element_name_15 == NULL) {
+        tmp_subscript_value_6 = var_i;
+        tmp_args_element_value_15 = LOOKUP_SUBSCRIPT(tmp_expression_value_16, tmp_subscript_value_6);
+        if (tmp_args_element_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_9);
 
             exception_lineno = 1060;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1060;
-        tmp_compexpr_left_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_15);
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_15);
-        if (tmp_compexpr_left_10 == NULL) {
+        tmp_cmp_expr_left_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_15);
+        Py_DECREF(tmp_called_value_9);
+        Py_DECREF(tmp_args_element_value_15);
+        if (tmp_cmp_expr_left_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20623,10 +18899,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_compexpr_right_10 = mod_consts[22];
-        tmp_tmp_condition_result_10_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_10, tmp_compexpr_right_10);
-        Py_DECREF(tmp_compexpr_left_10);
-        if (tmp_tmp_condition_result_10_object_1 == NULL) {
+        tmp_cmp_expr_right_10 = mod_consts[20];
+        tmp_condition_result_10 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_10, tmp_cmp_expr_right_10);
+        Py_DECREF(tmp_cmp_expr_left_10);
+        if (tmp_condition_result_10 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20636,42 +18912,30 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_10_object_1);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_10_object_1);
-
-            exception_lineno = 1060;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_10;
-        }
-        tmp_condition_result_10 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_10_object_1);
         if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
             goto branch_yes_10;
         } else {
             goto branch_no_10;
         }
+        assert(tmp_condition_result_10 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_10:;
     {
         PyObject *tmp_ass_subvalue_2;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_subscript_name_7;
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_subscript_value_7;
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_17 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_17 == NULL)) {
+            tmp_expression_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20681,8 +18945,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[61]);
-        if (tmp_called_name_9 == NULL) {
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[57]);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20693,8 +18957,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
         if (par_bins == NULL) {
-            Py_DECREF(tmp_called_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
+            Py_DECREF(tmp_called_value_10);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20704,24 +18968,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_17 = par_bins;
+        tmp_expression_value_18 = par_bins;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_7 = var_i;
-        tmp_args_element_name_16 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_7);
-        if (tmp_args_element_name_16 == NULL) {
+        tmp_subscript_value_7 = var_i;
+        tmp_args_element_value_16 = LOOKUP_SUBSCRIPT(tmp_expression_value_18, tmp_subscript_value_7);
+        if (tmp_args_element_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 1061;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1061;
-        tmp_ass_subvalue_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_16);
-        Py_DECREF(tmp_called_name_9);
-        Py_DECREF(tmp_args_element_name_16);
+        tmp_ass_subvalue_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_16);
+        Py_DECREF(tmp_called_value_10);
+        Py_DECREF(tmp_args_element_value_16);
         if (tmp_ass_subvalue_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20734,7 +18998,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         if (Nuitka_Cell_GET(var_edges) == NULL) {
             Py_DECREF(tmp_ass_subvalue_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20762,28 +19026,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_18;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_19;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_compexpr_left_11;
-        PyObject *tmp_compexpr_right_11;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_subscript_name_8;
-        PyObject *tmp_subscript_name_9;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_expression_name_22;
-        PyObject *tmp_subscript_name_10;
-        PyObject *tmp_subscript_name_11;
-        int tmp_truth_name_6;
-        tmp_expression_name_18 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_cmp_expr_left_11;
+        PyObject *tmp_cmp_expr_right_11;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_subscript_value_8;
+        PyObject *tmp_subscript_value_9;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_subscript_value_10;
+        PyObject *tmp_subscript_value_11;
+        int tmp_truth_name_1;
+        tmp_expression_value_19 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_18 == NULL)) {
-            tmp_expression_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_19 == NULL)) {
+            tmp_expression_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_18 == NULL) {
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20793,8 +19057,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[113]);
-        if (tmp_called_name_10 == NULL) {
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[106]);
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20805,8 +19069,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
         if (Nuitka_Cell_GET(var_edges) == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            Py_DECREF(tmp_called_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20816,37 +19080,37 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_20 = Nuitka_Cell_GET(var_edges);
+        tmp_expression_value_21 = Nuitka_Cell_GET(var_edges);
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_8 = var_i;
-        tmp_expression_name_19 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_8);
-        if (tmp_expression_name_19 == NULL) {
+        tmp_subscript_value_8 = var_i;
+        tmp_expression_value_20 = LOOKUP_SUBSCRIPT(tmp_expression_value_21, tmp_subscript_value_8);
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 1062;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_subscript_name_9 = mod_consts[114];
-        tmp_compexpr_left_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_19, tmp_subscript_name_9);
-        Py_DECREF(tmp_expression_name_19);
-        if (tmp_compexpr_left_11 == NULL) {
+        tmp_subscript_value_9 = mod_consts[107];
+        tmp_cmp_expr_left_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_20, tmp_subscript_value_9);
+        Py_DECREF(tmp_expression_value_20);
+        if (tmp_cmp_expr_left_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 1062;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
         if (Nuitka_Cell_GET(var_edges) == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_compexpr_left_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_cmp_expr_left_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -20856,52 +19120,52 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_22 = Nuitka_Cell_GET(var_edges);
+        tmp_expression_value_23 = Nuitka_Cell_GET(var_edges);
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_10 = var_i;
-        tmp_expression_name_21 = LOOKUP_SUBSCRIPT(tmp_expression_name_22, tmp_subscript_name_10);
-        if (tmp_expression_name_21 == NULL) {
+        tmp_subscript_value_10 = var_i;
+        tmp_expression_value_22 = LOOKUP_SUBSCRIPT(tmp_expression_value_23, tmp_subscript_value_10);
+        if (tmp_expression_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_compexpr_left_11);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_cmp_expr_left_11);
 
             exception_lineno = 1062;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_subscript_name_11 = mod_consts[115];
-        tmp_compexpr_right_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_21, tmp_subscript_name_11);
-        Py_DECREF(tmp_expression_name_21);
-        if (tmp_compexpr_right_11 == NULL) {
+        tmp_subscript_value_11 = mod_consts[108];
+        tmp_cmp_expr_right_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_22, tmp_subscript_value_11);
+        Py_DECREF(tmp_expression_value_22);
+        if (tmp_cmp_expr_right_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_compexpr_left_11);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_cmp_expr_left_11);
 
             exception_lineno = 1062;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_args_element_name_17 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_11, tmp_compexpr_right_11);
-        Py_DECREF(tmp_compexpr_left_11);
-        Py_DECREF(tmp_compexpr_right_11);
-        if (tmp_args_element_name_17 == NULL) {
+        tmp_args_element_value_17 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_11, tmp_cmp_expr_right_11);
+        Py_DECREF(tmp_cmp_expr_left_11);
+        Py_DECREF(tmp_cmp_expr_right_11);
+        if (tmp_args_element_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 1062;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1062;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_17);
-        Py_DECREF(tmp_called_name_10);
-        Py_DECREF(tmp_args_element_name_17);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_17);
+        Py_DECREF(tmp_called_value_11);
+        Py_DECREF(tmp_args_element_value_17);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20912,8 +19176,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_call_result_1);
-        if (tmp_truth_name_6 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_call_result_1);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20923,7 +19187,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_condition_result_11 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_11 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_1);
         if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
             goto branch_yes_11;
@@ -20935,13 +19199,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_raise_type_5;
         PyObject *tmp_make_exception_arg_5;
-        PyObject *tmp_called_instance_4;
-        PyObject *tmp_args_element_name_18;
-        tmp_called_instance_4 = mod_consts[192];
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_args_element_value_18;
+        tmp_expression_value_24 = mod_consts[184];
+        tmp_called_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[61]);
+        assert(!(tmp_called_value_12 == NULL));
         CHECK_OBJECT(var_i);
-        tmp_args_element_name_18 = var_i;
+        tmp_args_element_value_18 = var_i;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1064;
-        tmp_make_exception_arg_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[65], tmp_args_element_name_18);
+        tmp_make_exception_arg_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_18);
+        Py_DECREF(tmp_called_value_12);
         if (tmp_make_exception_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20968,13 +19236,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_raise_type_6;
         PyObject *tmp_make_exception_arg_6;
-        PyObject *tmp_called_instance_5;
-        PyObject *tmp_args_element_name_19;
-        tmp_called_instance_5 = mod_consts[193];
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_expression_value_25;
+        PyObject *tmp_args_element_value_19;
+        tmp_expression_value_25 = mod_consts[185];
+        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[61]);
+        assert(!(tmp_called_value_13 == NULL));
         CHECK_OBJECT(var_i);
-        tmp_args_element_name_19 = var_i;
+        tmp_args_element_value_19 = var_i;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1068;
-        tmp_make_exception_arg_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[65], tmp_args_element_name_19);
+        tmp_make_exception_arg_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_19);
+        Py_DECREF(tmp_called_value_13);
         if (tmp_make_exception_arg_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20999,16 +19271,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_end_7:;
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_left_name_6;
+        PyObject *tmp_left_value_6;
         PyObject *tmp_len_arg_3;
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_subscript_name_12;
-        PyObject *tmp_right_name_6;
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_subscript_value_12;
+        PyObject *tmp_right_value_6;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
         if (Nuitka_Cell_GET(var_edges) == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21018,10 +19290,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_23 = Nuitka_Cell_GET(var_edges);
+        tmp_expression_value_26 = Nuitka_Cell_GET(var_edges);
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_12 = var_i;
-        tmp_len_arg_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_23, tmp_subscript_name_12);
+        tmp_subscript_value_12 = var_i;
+        tmp_len_arg_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_26, tmp_subscript_value_12);
         if (tmp_len_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21032,9 +19304,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_left_name_6 = BUILTIN_LEN(tmp_len_arg_3);
+        tmp_left_value_6 = BUILTIN_LEN(tmp_len_arg_3);
         Py_DECREF(tmp_len_arg_3);
-        if (tmp_left_name_6 == NULL) {
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21044,13 +19316,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_right_name_6 = mod_consts[22];
-        tmp_ass_subvalue_3 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_6);
+        tmp_right_value_6 = mod_consts[20];
+        tmp_ass_subvalue_3 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_6);
         assert(!(tmp_ass_subvalue_3 == NULL));
         if (var_nbin == NULL) {
             Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[194]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[186]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21078,20 +19350,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_4;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_24;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_expression_name_25;
-        PyObject *tmp_subscript_name_13;
+        PyObject *tmp_called_value_14;
+        PyObject *tmp_expression_value_27;
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_subscript_value_13;
         PyObject *tmp_ass_subscribed_4;
         PyObject *tmp_ass_subscript_4;
-        tmp_expression_name_24 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_27 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_24 == NULL)) {
-            tmp_expression_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_27 == NULL)) {
+            tmp_expression_value_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_24 == NULL) {
+        if (tmp_expression_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21101,8 +19373,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[162]);
-        if (tmp_called_name_11 == NULL) {
+        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[152]);
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21113,8 +19385,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
         if (Nuitka_Cell_GET(var_edges) == NULL) {
-            Py_DECREF(tmp_called_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            Py_DECREF(tmp_called_value_14);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21124,24 +19396,24 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_10;
         }
 
-        tmp_expression_name_25 = Nuitka_Cell_GET(var_edges);
+        tmp_expression_value_28 = Nuitka_Cell_GET(var_edges);
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_13 = var_i;
-        tmp_args_element_name_20 = LOOKUP_SUBSCRIPT(tmp_expression_name_25, tmp_subscript_name_13);
-        if (tmp_args_element_name_20 == NULL) {
+        tmp_subscript_value_13 = var_i;
+        tmp_args_element_value_20 = LOOKUP_SUBSCRIPT(tmp_expression_value_28, tmp_subscript_value_13);
+        if (tmp_args_element_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+            Py_DECREF(tmp_called_value_14);
 
             exception_lineno = 1071;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_10;
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1071;
-        tmp_ass_subvalue_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_20);
-        Py_DECREF(tmp_called_name_11);
-        Py_DECREF(tmp_args_element_name_20);
+        tmp_ass_subvalue_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_14, tmp_args_element_value_20);
+        Py_DECREF(tmp_called_value_14);
+        Py_DECREF(tmp_args_element_value_20);
         if (tmp_ass_subvalue_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21154,7 +19426,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         if (var_dedges == NULL) {
             Py_DECREF(tmp_ass_subvalue_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[195]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[187]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21206,7 +19478,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_14;
@@ -21219,7 +19492,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     try_end_12:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_29;
@@ -21227,15 +19501,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         {
             PyObject *tmp_assign_source_30;
             PyObject *tmp_iter_arg_5;
-            PyObject *tmp_called_name_12;
-            PyObject *tmp_args_element_name_21;
-            tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+            PyObject *tmp_called_value_15;
+            PyObject *tmp_args_element_value_21;
+            tmp_called_value_15 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-            if (unlikely(tmp_called_name_12 == NULL)) {
-                tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+            if (unlikely(tmp_called_value_15 == NULL)) {
+                tmp_called_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
             }
 
-            if (tmp_called_name_12 == NULL) {
+            if (tmp_called_value_15 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21247,7 +19521,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             }
             if (var_D == NULL) {
 
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
                 exception_tb = NULL;
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
@@ -21257,9 +19531,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
                 goto frame_exception_exit_1;
             }
 
-            tmp_args_element_name_21 = var_D;
+            tmp_args_element_value_21 = var_D;
             frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1077;
-            tmp_iter_arg_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_21);
+            tmp_iter_arg_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_15, tmp_args_element_value_21);
             if (tmp_iter_arg_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21308,9 +19582,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         tmp_genexpr_1__$0 = NULL;
         goto outline_result_1;
         // End of try:
-        CHECK_OBJECT(tmp_genexpr_1__$0);
-        Py_DECREF(tmp_genexpr_1__$0);
-        tmp_genexpr_1__$0 = NULL;
         NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
         return NULL;
         outline_result_1:;
@@ -21332,15 +19603,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_assign_source_31;
         PyObject *tmp_iter_arg_6;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_args_element_name_22;
-        tmp_called_name_13 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_16;
+        PyObject *tmp_args_element_value_22;
+        tmp_called_value_16 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_called_name_13 == NULL)) {
-            tmp_called_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_value_16 == NULL)) {
+            tmp_called_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_called_name_13 == NULL) {
+        if (tmp_called_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21352,7 +19623,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21362,9 +19633,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_22 = var_D;
+        tmp_args_element_value_22 = var_D;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1083;
-        tmp_iter_arg_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, tmp_args_element_name_22);
+        tmp_iter_arg_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_16, tmp_args_element_value_22);
         if (tmp_iter_arg_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21432,18 +19703,18 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_34;
-        PyObject *tmp_compexpr_left_12;
-        PyObject *tmp_compexpr_right_12;
-        PyObject *tmp_expression_name_26;
-        PyObject *tmp_subscript_name_14;
+        PyObject *tmp_cmp_expr_left_12;
+        PyObject *tmp_cmp_expr_right_12;
+        PyObject *tmp_expression_value_29;
+        PyObject *tmp_subscript_value_14;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_expression_name_27;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_subscript_name_15;
-        PyObject *tmp_subscript_name_16;
+        PyObject *tmp_expression_value_30;
+        PyObject *tmp_expression_value_31;
+        PyObject *tmp_subscript_value_15;
+        PyObject *tmp_subscript_value_16;
         if (Nuitka_Cell_GET(par_sample) == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[171]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[161]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21453,16 +19724,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_17;
         }
 
-        tmp_expression_name_26 = Nuitka_Cell_GET(par_sample);
-        tmp_tuple_element_2 = mod_consts[189];
-        tmp_subscript_name_14 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_subscript_name_14, 0, tmp_tuple_element_2);
+        tmp_expression_value_29 = Nuitka_Cell_GET(par_sample);
+        tmp_tuple_element_2 = mod_consts[181];
+        tmp_subscript_value_14 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_subscript_value_14, 0, tmp_tuple_element_2);
         CHECK_OBJECT(var_i);
         tmp_tuple_element_2 = var_i;
-        PyTuple_SET_ITEM0(tmp_subscript_name_14, 1, tmp_tuple_element_2);
-        tmp_compexpr_left_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_26, tmp_subscript_name_14);
-        Py_DECREF(tmp_subscript_name_14);
-        if (tmp_compexpr_left_12 == NULL) {
+        PyTuple_SET_ITEM0(tmp_subscript_value_14, 1, tmp_tuple_element_2);
+        tmp_cmp_expr_left_12 = LOOKUP_SUBSCRIPT(tmp_expression_value_29, tmp_subscript_value_14);
+        Py_DECREF(tmp_subscript_value_14);
+        if (tmp_cmp_expr_left_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21473,8 +19744,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_17;
         }
         if (Nuitka_Cell_GET(var_edges) == NULL) {
-            Py_DECREF(tmp_compexpr_left_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            Py_DECREF(tmp_cmp_expr_left_12);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21484,36 +19755,36 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_17;
         }
 
-        tmp_expression_name_28 = Nuitka_Cell_GET(var_edges);
+        tmp_expression_value_31 = Nuitka_Cell_GET(var_edges);
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_15 = var_i;
-        tmp_expression_name_27 = LOOKUP_SUBSCRIPT(tmp_expression_name_28, tmp_subscript_name_15);
-        if (tmp_expression_name_27 == NULL) {
+        tmp_subscript_value_15 = var_i;
+        tmp_expression_value_30 = LOOKUP_SUBSCRIPT(tmp_expression_value_31, tmp_subscript_value_15);
+        if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_12);
+            Py_DECREF(tmp_cmp_expr_left_12);
 
             exception_lineno = 1085;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_17;
         }
-        tmp_subscript_name_16 = mod_consts[196];
-        tmp_compexpr_right_12 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_27, tmp_subscript_name_16, -1);
-        Py_DECREF(tmp_expression_name_27);
-        if (tmp_compexpr_right_12 == NULL) {
+        tmp_subscript_value_16 = mod_consts[188];
+        tmp_cmp_expr_right_12 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_30, tmp_subscript_value_16, -1);
+        Py_DECREF(tmp_expression_value_30);
+        if (tmp_cmp_expr_right_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_12);
+            Py_DECREF(tmp_cmp_expr_left_12);
 
             exception_lineno = 1085;
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_17;
         }
-        tmp_assign_source_34 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_12, tmp_compexpr_right_12);
-        Py_DECREF(tmp_compexpr_left_12);
-        Py_DECREF(tmp_compexpr_right_12);
+        tmp_assign_source_34 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_12, tmp_cmp_expr_right_12);
+        Py_DECREF(tmp_cmp_expr_left_12);
+        Py_DECREF(tmp_cmp_expr_right_12);
         if (tmp_assign_source_34 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21533,24 +19804,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_35;
-        PyObject *tmp_expression_name_29;
-        PyObject *tmp_subscript_name_17;
-        if (var_Ncount == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[197]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1087;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_17;
-        }
-
-        tmp_expression_name_29 = var_Ncount;
+        PyObject *tmp_expression_value_32;
+        PyObject *tmp_subscript_value_17;
+        CHECK_OBJECT(var_Ncount);
+        tmp_expression_value_32 = var_Ncount;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_17 = var_i;
-        tmp_assign_source_35 = LOOKUP_SUBSCRIPT(tmp_expression_name_29, tmp_subscript_name_17);
+        tmp_subscript_value_17 = var_i;
+        tmp_assign_source_35 = LOOKUP_SUBSCRIPT(tmp_expression_value_32, tmp_subscript_value_17);
         if (tmp_assign_source_35 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21583,13 +19843,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_37;
-        PyObject *tmp_expression_name_30;
-        PyObject *tmp_subscript_name_18;
+        PyObject *tmp_expression_value_33;
+        PyObject *tmp_subscript_value_18;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_30 = tmp_inplace_assign_subscr_1__target;
+        tmp_expression_value_33 = tmp_inplace_assign_subscr_1__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_18 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_37 = LOOKUP_SUBSCRIPT(tmp_expression_name_30, tmp_subscript_name_18);
+        tmp_subscript_value_18 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_assign_source_37 = LOOKUP_SUBSCRIPT(tmp_expression_value_33, tmp_subscript_value_18);
         if (tmp_assign_source_37 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21609,12 +19869,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_38;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_7 = tmp_inplace_assign_subscr_1__value;
-        tmp_right_name_7 = mod_consts[22];
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_name_7, tmp_right_name_7);
+        tmp_left_value_7 = tmp_inplace_assign_subscr_1__value;
+        tmp_right_value_7 = mod_consts[20];
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_value_7, tmp_right_value_7);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -21625,7 +19885,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_18;
         }
-        tmp_assign_source_38 = tmp_left_name_7;
+        tmp_assign_source_38 = tmp_left_value_7;
         tmp_inplace_assign_subscr_1__value = tmp_assign_source_38;
 
     }
@@ -21715,7 +19975,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_16;
@@ -21728,21 +19989,22 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     try_end_14:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_39;
-        PyObject *tmp_called_name_14;
-        PyObject *tmp_expression_name_31;
-        PyObject *tmp_args_element_name_23;
-        PyObject *tmp_args_element_name_24;
-        tmp_expression_name_31 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_17;
+        PyObject *tmp_expression_value_34;
+        PyObject *tmp_args_element_value_23;
+        PyObject *tmp_args_element_value_24;
+        tmp_expression_value_34 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_31 == NULL)) {
-            tmp_expression_name_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_34 == NULL)) {
+            tmp_expression_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_31 == NULL) {
+        if (tmp_expression_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21752,8 +20014,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_31, mod_consts[198]);
-        if (tmp_called_name_14 == NULL) {
+        tmp_called_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[189]);
+        if (tmp_called_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21763,22 +20025,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_Ncount == NULL) {
-            Py_DECREF(tmp_called_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[197]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1091;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_23 = var_Ncount;
+        CHECK_OBJECT(var_Ncount);
+        tmp_args_element_value_23 = var_Ncount;
         if (var_nbin == NULL) {
-            Py_DECREF(tmp_called_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[194]);
+            Py_DECREF(tmp_called_value_17);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[186]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21788,14 +20039,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_24 = var_nbin;
+        tmp_args_element_value_24 = var_nbin;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1091;
         {
-            PyObject *call_args[] = {tmp_args_element_name_23, tmp_args_element_name_24};
-            tmp_assign_source_39 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_14, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_23, tmp_args_element_value_24};
+            tmp_assign_source_39 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_17, call_args);
         }
 
-        Py_DECREF(tmp_called_name_14);
+        Py_DECREF(tmp_called_value_17);
         if (tmp_assign_source_39 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21811,21 +20062,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_40;
-        PyObject *tmp_called_name_15;
-        PyObject *tmp_expression_name_32;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_3;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_called_instance_6;
-        tmp_expression_name_32 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_18;
+        PyObject *tmp_expression_value_35;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_called_instance_3;
+        tmp_expression_value_35 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_32 == NULL)) {
-            tmp_expression_name_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_35 == NULL)) {
+            tmp_expression_value_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_32 == NULL) {
+        if (tmp_expression_value_35 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21835,8 +20084,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[151]);
-        if (tmp_called_name_15 == NULL) {
+        tmp_called_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[141]);
+        if (tmp_called_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21847,17 +20096,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xy);
-        tmp_tuple_element_3 = var_xy;
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_3);
+        tmp_kw_call_arg_value_0_1 = var_xy;
         CHECK_OBJECT(par_weights);
-        tmp_tuple_element_3 = par_weights;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_3);
-        tmp_dict_key_1 = mod_consts[153];
+        tmp_kw_call_arg_value_1_1 = par_weights;
         if (var_nbin == NULL) {
-            Py_DECREF(tmp_called_name_15);
-            Py_DECREF(tmp_args_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[194]);
+            Py_DECREF(tmp_called_value_18);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[186]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21867,29 +20111,28 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_6 = var_nbin;
+        tmp_called_instance_3 = var_nbin;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1095;
-        tmp_dict_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[199]);
-        if (tmp_dict_value_1 == NULL) {
+        tmp_kw_call_dict_value_0_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[190]);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_15);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_18);
 
             exception_lineno = 1095;
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1095;
-        tmp_assign_source_40 = CALL_FUNCTION(tmp_called_name_15, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_15);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_40 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_18, args, kw_values, mod_consts[191]);
+        }
+
+        Py_DECREF(tmp_called_value_18);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_assign_source_40 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21905,13 +20148,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_41;
-        PyObject *tmp_called_name_16;
-        PyObject *tmp_expression_name_33;
-        PyObject *tmp_args_element_name_25;
+        PyObject *tmp_called_value_19;
+        PyObject *tmp_expression_value_36;
+        PyObject *tmp_args_element_value_25;
         CHECK_OBJECT(var_hist);
-        tmp_expression_name_33 = var_hist;
-        tmp_called_name_16 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[200]);
-        if (tmp_called_name_16 == NULL) {
+        tmp_expression_value_36 = var_hist;
+        tmp_called_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[192]);
+        if (tmp_called_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21922,8 +20165,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
         if (var_nbin == NULL) {
-            Py_DECREF(tmp_called_name_16);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[194]);
+            Py_DECREF(tmp_called_value_19);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[186]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -21933,10 +20176,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_25 = var_nbin;
+        tmp_args_element_value_25 = var_nbin;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1098;
-        tmp_assign_source_41 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_16, tmp_args_element_name_25);
-        Py_DECREF(tmp_called_name_16);
+        tmp_assign_source_41 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_19, tmp_args_element_value_25);
+        Py_DECREF(tmp_called_value_19);
         if (tmp_assign_source_41 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21949,21 +20192,20 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         {
             PyObject *old = var_hist;
+            assert(old != NULL);
             var_hist = tmp_assign_source_41;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_42;
-        PyObject *tmp_called_name_17;
-        PyObject *tmp_expression_name_34;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_kwargs_name_2;
+        PyObject *tmp_called_value_20;
+        PyObject *tmp_expression_value_37;
         CHECK_OBJECT(var_hist);
-        tmp_expression_name_34 = var_hist;
-        tmp_called_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_34, mod_consts[68]);
-        if (tmp_called_name_17 == NULL) {
+        tmp_expression_value_37 = var_hist;
+        tmp_called_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[63]);
+        if (tmp_called_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21973,12 +20215,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_name_2 = mod_consts[201];
-        tmp_kwargs_name_2 = PyDict_Copy(mod_consts[202]);
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1101;
-        tmp_assign_source_42 = CALL_FUNCTION(tmp_called_name_17, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_17);
-        Py_DECREF(tmp_kwargs_name_2);
+        tmp_assign_source_42 = CALL_FUNCTION_WITH_ARGS1_VECTORCALL(tmp_called_value_20, &PyTuple_GET_ITEM(mod_consts[193], 0), mod_consts[194]);
+        Py_DECREF(tmp_called_value_20);
         if (tmp_assign_source_42 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21991,18 +20230,19 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         {
             PyObject *old = var_hist;
+            assert(old != NULL);
             var_hist = tmp_assign_source_42;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_43;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22012,9 +20252,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_8 = var_D;
-        tmp_right_name_8 = mod_consts[203];
-        tmp_assign_source_43 = BINARY_OPERATION_MULT_OBJECT_OBJECT_TUPLE(tmp_left_name_8, tmp_right_name_8);
+        tmp_left_value_8 = var_D;
+        tmp_right_value_8 = mod_consts[195];
+        tmp_assign_source_43 = BINARY_OPERATION_MULT_OBJECT_OBJECT_TUPLE(tmp_left_value_8, tmp_right_value_8);
         if (tmp_assign_source_43 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22030,13 +20270,13 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_44;
-        PyObject *tmp_expression_name_35;
-        PyObject *tmp_subscript_name_19;
+        PyObject *tmp_expression_value_38;
+        PyObject *tmp_subscript_value_19;
         CHECK_OBJECT(var_hist);
-        tmp_expression_name_35 = var_hist;
+        tmp_expression_value_38 = var_hist;
         CHECK_OBJECT(var_core);
-        tmp_subscript_name_19 = var_core;
-        tmp_assign_source_44 = LOOKUP_SUBSCRIPT(tmp_expression_name_35, tmp_subscript_name_19);
+        tmp_subscript_value_19 = var_core;
+        tmp_assign_source_44 = LOOKUP_SUBSCRIPT(tmp_expression_value_38, tmp_subscript_value_19);
         if (tmp_assign_source_44 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22057,12 +20297,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         bool tmp_condition_result_12;
-        PyObject *tmp_compexpr_left_13;
-        PyObject *tmp_compexpr_right_13;
+        PyObject *tmp_cmp_expr_left_13;
+        PyObject *tmp_cmp_expr_right_13;
         CHECK_OBJECT(par_normed);
-        tmp_compexpr_left_13 = par_normed;
-        tmp_compexpr_right_13 = Py_None;
-        tmp_condition_result_12 = (tmp_compexpr_left_13 == tmp_compexpr_right_13) ? true : false;
+        tmp_cmp_expr_left_13 = par_normed;
+        tmp_cmp_expr_right_13 = Py_None;
+        tmp_condition_result_12 = (tmp_cmp_expr_left_13 == tmp_cmp_expr_right_13) ? true : false;
         if (tmp_condition_result_12 != false) {
             goto branch_yes_12;
         } else {
@@ -22072,12 +20312,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_yes_12:;
     {
         bool tmp_condition_result_13;
-        PyObject *tmp_compexpr_left_14;
-        PyObject *tmp_compexpr_right_14;
+        PyObject *tmp_cmp_expr_left_14;
+        PyObject *tmp_cmp_expr_right_14;
         CHECK_OBJECT(par_density);
-        tmp_compexpr_left_14 = par_density;
-        tmp_compexpr_right_14 = Py_None;
-        tmp_condition_result_13 = (tmp_compexpr_left_14 == tmp_compexpr_right_14) ? true : false;
+        tmp_cmp_expr_left_14 = par_density;
+        tmp_cmp_expr_right_14 = Py_None;
+        tmp_condition_result_13 = (tmp_cmp_expr_left_14 == tmp_cmp_expr_right_14) ? true : false;
         if (tmp_condition_result_13 != false) {
             goto branch_yes_13;
         } else {
@@ -22102,12 +20342,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_no_12:;
     {
         bool tmp_condition_result_14;
-        PyObject *tmp_compexpr_left_15;
-        PyObject *tmp_compexpr_right_15;
+        PyObject *tmp_cmp_expr_left_15;
+        PyObject *tmp_cmp_expr_right_15;
         CHECK_OBJECT(par_density);
-        tmp_compexpr_left_15 = par_density;
-        tmp_compexpr_right_15 = Py_None;
-        tmp_condition_result_14 = (tmp_compexpr_left_15 == tmp_compexpr_right_15) ? true : false;
+        tmp_cmp_expr_left_15 = par_density;
+        tmp_cmp_expr_right_15 = Py_None;
+        tmp_condition_result_14 = (tmp_cmp_expr_left_15 == tmp_cmp_expr_right_15) ? true : false;
         if (tmp_condition_result_14 != false) {
             goto branch_yes_14;
         } else {
@@ -22133,7 +20373,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_raise_type_7;
         PyObject *tmp_make_exception_arg_7;
-        tmp_make_exception_arg_7 = mod_consts[204];
+        tmp_make_exception_arg_7 = mod_consts[196];
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1115;
         tmp_raise_type_7 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_7);
         assert(!(tmp_raise_type_7 == NULL));
@@ -22147,10 +20387,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_end_12:;
     {
         nuitka_bool tmp_condition_result_15;
-        int tmp_truth_name_7;
+        int tmp_truth_name_2;
         if (par_density == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[205]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[197]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22160,8 +20400,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_truth_name_7 = CHECK_IF_TRUE(par_density);
-        if (tmp_truth_name_7 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(par_density);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22171,7 +20411,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_15 = tmp_truth_name_7 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_15 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_15 == NUITKA_BOOL_TRUE) {
             goto branch_yes_15;
         } else {
@@ -22181,11 +20421,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     branch_yes_15:;
     {
         PyObject *tmp_assign_source_47;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_4;
         CHECK_OBJECT(var_hist);
-        tmp_called_instance_7 = var_hist;
+        tmp_called_instance_4 = var_hist;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1119;
-        tmp_assign_source_47 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[166]);
+        tmp_assign_source_47 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[156]);
         if (tmp_assign_source_47 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22202,15 +20442,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_assign_source_48;
         PyObject *tmp_iter_arg_7;
-        PyObject *tmp_called_name_18;
-        PyObject *tmp_args_element_name_26;
-        tmp_called_name_18 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28]);
+        PyObject *tmp_called_value_21;
+        PyObject *tmp_args_element_value_26;
+        tmp_called_value_21 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_called_name_18 == NULL)) {
-            tmp_called_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_called_value_21 == NULL)) {
+            tmp_called_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_called_name_18 == NULL) {
+        if (tmp_called_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22222,7 +20462,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
         }
         if (var_D == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22232,9 +20472,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_26 = var_D;
+        tmp_args_element_value_26 = var_D;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1120;
-        tmp_iter_arg_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_18, tmp_args_element_name_26);
+        tmp_iter_arg_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_21, tmp_args_element_value_26);
         if (tmp_iter_arg_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22302,17 +20542,17 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_51;
-        PyObject *tmp_called_name_19;
-        PyObject *tmp_expression_name_36;
-        PyObject *tmp_args_element_name_27;
-        PyObject *tmp_args_element_name_28;
-        tmp_expression_name_36 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_22;
+        PyObject *tmp_expression_value_39;
+        PyObject *tmp_args_element_value_27;
+        PyObject *tmp_args_element_value_28;
+        tmp_expression_value_39 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_36 == NULL)) {
-            tmp_expression_name_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_39 == NULL)) {
+            tmp_expression_value_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_36 == NULL) {
+        if (tmp_expression_value_39 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22322,8 +20562,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_19;
         }
-        tmp_called_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[206]);
-        if (tmp_called_name_19 == NULL) {
+        tmp_called_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[198]);
+        if (tmp_called_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22334,8 +20574,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_19;
         }
         if (var_D == NULL) {
-            Py_DECREF(tmp_called_name_19);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
+            Py_DECREF(tmp_called_value_22);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22345,15 +20585,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_19;
         }
 
-        tmp_args_element_name_27 = var_D;
-        tmp_args_element_name_28 = (PyObject *)&PyLong_Type;
+        tmp_args_element_value_27 = var_D;
+        tmp_args_element_value_28 = (PyObject *)&PyLong_Type;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1121;
         {
-            PyObject *call_args[] = {tmp_args_element_name_27, tmp_args_element_name_28};
-            tmp_assign_source_51 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_19, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_27, tmp_args_element_value_28};
+            tmp_assign_source_51 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_22, call_args);
         }
 
-        Py_DECREF(tmp_called_name_19);
+        Py_DECREF(tmp_called_value_22);
         if (tmp_assign_source_51 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22373,15 +20613,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_6;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_expression_name_37;
-        PyObject *tmp_subscript_name_20;
-        PyObject *tmp_right_name_9;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_subscript_value_20;
+        PyObject *tmp_right_value_9;
         PyObject *tmp_ass_subscribed_6;
         PyObject *tmp_ass_subscript_6;
         if (var_nbin == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[194]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[186]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22391,11 +20631,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_19;
         }
 
-        tmp_expression_name_37 = var_nbin;
+        tmp_expression_value_40 = var_nbin;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_20 = var_i;
-        tmp_left_name_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_37, tmp_subscript_name_20);
-        if (tmp_left_name_9 == NULL) {
+        tmp_subscript_value_20 = var_i;
+        tmp_left_value_9 = LOOKUP_SUBSCRIPT(tmp_expression_value_40, tmp_subscript_value_20);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22405,9 +20645,9 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_19;
         }
-        tmp_right_name_9 = mod_consts[41];
-        tmp_ass_subvalue_6 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_9, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_9);
+        tmp_right_value_9 = mod_consts[39];
+        tmp_ass_subvalue_6 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_9, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_9);
         if (tmp_ass_subvalue_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22437,16 +20677,15 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     {
         PyObject *tmp_assign_source_52;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_called_name_20;
-        PyObject *tmp_expression_name_38;
-        PyObject *tmp_expression_name_39;
-        PyObject *tmp_subscript_name_21;
-        PyObject *tmp_args_element_name_29;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_called_instance_5;
+        PyObject *tmp_expression_value_41;
+        PyObject *tmp_subscript_value_21;
+        PyObject *tmp_args_element_value_29;
         if (var_hist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[207]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[199]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22456,10 +20695,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_19;
         }
 
-        tmp_left_name_10 = var_hist;
+        tmp_left_value_10 = var_hist;
         if (var_dedges == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[195]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[187]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22469,11 +20708,11 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto try_except_handler_19;
         }
 
-        tmp_expression_name_39 = var_dedges;
+        tmp_expression_value_41 = var_dedges;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_21 = var_i;
-        tmp_expression_name_38 = LOOKUP_SUBSCRIPT(tmp_expression_name_39, tmp_subscript_name_21);
-        if (tmp_expression_name_38 == NULL) {
+        tmp_subscript_value_21 = var_i;
+        tmp_called_instance_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_41, tmp_subscript_value_21);
+        if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22483,35 +20722,12 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_19;
         }
-        tmp_called_name_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[200]);
-        Py_DECREF(tmp_expression_name_38);
-        if (tmp_called_name_20 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1123;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_19;
-        }
-        if (var_shape == NULL) {
-            Py_DECREF(tmp_called_name_20);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1123;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto try_except_handler_19;
-        }
-
-        tmp_args_element_name_29 = var_shape;
+        CHECK_OBJECT(var_shape);
+        tmp_args_element_value_29 = var_shape;
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1123;
-        tmp_right_name_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_20, tmp_args_element_name_29);
-        Py_DECREF(tmp_called_name_20);
-        if (tmp_right_name_10 == NULL) {
+        tmp_right_value_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[192], tmp_args_element_value_29);
+        Py_DECREF(tmp_called_instance_5);
+        if (tmp_right_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22521,8 +20737,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto try_except_handler_19;
         }
-        tmp_assign_source_52 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_10);
-        Py_DECREF(tmp_right_name_10);
+        tmp_assign_source_52 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_10);
+        Py_DECREF(tmp_right_value_10);
         if (tmp_assign_source_52 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22566,7 +20782,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
 
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_17;
@@ -22579,15 +20796,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     try_end_15:;
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_53;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_11;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_11;
         if (var_hist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[207]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[199]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22597,10 +20815,10 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_11 = var_hist;
+        tmp_left_value_11 = var_hist;
         CHECK_OBJECT(var_s);
-        tmp_right_name_11 = var_s;
-        tmp_result = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_INPLACE(&tmp_left_name_11, tmp_right_name_11);
+        tmp_right_value_11 = var_s;
+        tmp_result = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_INPLACE(&tmp_left_value_11, tmp_right_value_11);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -22611,25 +20829,25 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_53 = tmp_left_name_11;
+        tmp_assign_source_53 = tmp_left_value_11;
         var_hist = tmp_assign_source_53;
 
     }
     branch_no_15:;
     {
         nuitka_bool tmp_condition_result_16;
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_compexpr_left_16;
-        PyObject *tmp_compexpr_right_16;
-        PyObject *tmp_expression_name_40;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_right_name_12;
+        PyObject *tmp_called_instance_6;
+        PyObject *tmp_cmp_expr_left_16;
+        PyObject *tmp_cmp_expr_right_16;
+        PyObject *tmp_expression_value_42;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_right_value_12;
         PyObject *tmp_call_result_2;
-        int tmp_truth_name_8;
+        int tmp_truth_name_3;
         CHECK_OBJECT(var_hist);
-        tmp_expression_name_40 = var_hist;
-        tmp_compexpr_left_16 = LOOKUP_ATTRIBUTE(tmp_expression_name_40, mod_consts[69]);
-        if (tmp_compexpr_left_16 == NULL) {
+        tmp_expression_value_42 = var_hist;
+        tmp_cmp_expr_left_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[64]);
+        if (tmp_cmp_expr_left_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22640,8 +20858,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
         if (var_nbin == NULL) {
-            Py_DECREF(tmp_compexpr_left_16);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[194]);
+            Py_DECREF(tmp_cmp_expr_left_16);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[186]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22651,23 +20869,23 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_12 = var_nbin;
-        tmp_right_name_12 = mod_consts[41];
-        tmp_compexpr_right_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_12, tmp_right_name_12);
-        if (tmp_compexpr_right_16 == NULL) {
+        tmp_left_value_12 = var_nbin;
+        tmp_right_value_12 = mod_consts[39];
+        tmp_cmp_expr_right_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_12, tmp_right_value_12);
+        if (tmp_cmp_expr_right_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_16);
+            Py_DECREF(tmp_cmp_expr_left_16);
 
             exception_lineno = 1126;
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_8 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_16, tmp_compexpr_right_16);
-        Py_DECREF(tmp_compexpr_left_16);
-        Py_DECREF(tmp_compexpr_right_16);
-        if (tmp_called_instance_8 == NULL) {
+        tmp_called_instance_6 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_cmp_expr_left_16, tmp_cmp_expr_right_16);
+        Py_DECREF(tmp_cmp_expr_left_16);
+        Py_DECREF(tmp_cmp_expr_right_16);
+        if (tmp_called_instance_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22678,8 +20896,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto frame_exception_exit_1;
         }
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1126;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[113]);
-        Py_DECREF(tmp_called_instance_8);
+        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[106]);
+        Py_DECREF(tmp_called_instance_6);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22690,8 +20908,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_8 = CHECK_IF_TRUE(tmp_call_result_2);
-        if (tmp_truth_name_8 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_call_result_2);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22701,7 +20919,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             type_description_1 = "coooooooocoooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_16 = tmp_truth_name_8 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_16 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_2);
         if (tmp_condition_result_16 == NUITKA_BOOL_TRUE) {
             goto branch_yes_16;
@@ -22713,7 +20931,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     {
         PyObject *tmp_raise_type_8;
         PyObject *tmp_make_exception_arg_8;
-        tmp_make_exception_arg_8 = mod_consts[208];
+        tmp_make_exception_arg_8 = mod_consts[200];
         frame_4d5e065be20d24b7acdc81634842114e->m_frame.f_lineno = 1127;
         tmp_raise_type_8 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_RuntimeError, tmp_make_exception_arg_8);
         assert(!(tmp_raise_type_8 == NULL));
@@ -22725,25 +20943,14 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     }
     branch_no_16:;
     {
-        PyObject *tmp_tuple_element_4;
-        if (var_hist == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[207]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1129;
-            type_description_1 = "coooooooocoooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_tuple_element_4 = var_hist;
+        PyObject *tmp_tuple_element_3;
+        CHECK_OBJECT(var_hist);
+        tmp_tuple_element_3 = var_hist;
         tmp_return_value = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_4);
+        PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_3);
         if (Nuitka_Cell_GET(var_edges) == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[191]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[183]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -22753,8 +20960,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
             goto tuple_build_exception_1;
         }
 
-        tmp_tuple_element_4 = Nuitka_Cell_GET(var_edges);
-        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_4);
+        tmp_tuple_element_3 = Nuitka_Cell_GET(var_edges);
+        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_3);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
@@ -22858,10 +21065,8 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     par_bins = NULL;
     Py_XDECREF(par_range);
     par_range = NULL;
-    CHECK_OBJECT(par_normed);
-    Py_DECREF(par_normed);
-    par_normed = NULL;
-    Py_XDECREF(par_weights);
+    CHECK_OBJECT(par_weights);
+    Py_DECREF(par_weights);
     par_weights = NULL;
     Py_XDECREF(par_density);
     par_density = NULL;
@@ -22886,15 +21091,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     var_smax = NULL;
     Py_XDECREF(var_n);
     var_n = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
-    Py_XDECREF(var_Ncount);
+    CHECK_OBJECT(var_Ncount);
+    Py_DECREF(var_Ncount);
     var_Ncount = NULL;
     Py_XDECREF(var_on_edge);
     var_on_edge = NULL;
-    Py_XDECREF(var_xy);
+    CHECK_OBJECT(var_xy);
+    Py_DECREF(var_xy);
     var_xy = NULL;
-    Py_XDECREF(var_hist);
+    CHECK_OBJECT(var_hist);
+    Py_DECREF(var_hist);
     var_hist = NULL;
     CHECK_OBJECT(var_core);
     Py_DECREF(var_core);
@@ -22922,9 +21128,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     par_bins = NULL;
     Py_XDECREF(par_range);
     par_range = NULL;
-    CHECK_OBJECT(par_normed);
-    Py_DECREF(par_normed);
-    par_normed = NULL;
     Py_XDECREF(par_weights);
     par_weights = NULL;
     Py_XDECREF(par_density);
@@ -22950,8 +21153,6 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     var_smax = NULL;
     Py_XDECREF(var_n);
     var_n = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
     Py_XDECREF(var_Ncount);
     var_Ncount = NULL;
     Py_XDECREF(var_on_edge);
@@ -22979,14 +21180,16 @@ static PyObject *impl_numpy$lib$histograms$$$function__20_histogramdd(struct Nui
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_normed);
+    Py_DECREF(par_normed);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_normed);
+    Py_DECREF(par_normed);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -23139,22 +21342,22 @@ static PyObject *numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_ge
 
     }
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_kwargs_value_1;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -23164,8 +21367,8 @@ static PyObject *numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_ge
             generator_heap->type_description_1 = "Nocc";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[127]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[120]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -23176,8 +21379,8 @@ static PyObject *numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_ge
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(generator->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[191]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[183]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -23187,29 +21390,29 @@ static PyObject *numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_ge
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(generator->m_closure[0]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(generator->m_closure[0]);
         CHECK_OBJECT(generator_heap->var_i);
-        tmp_subscript_name_1 = generator_heap->var_i;
-        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_subscript_value_1 = generator_heap->var_i;
+        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             generator_heap->exception_lineno = 1076;
             generator_heap->type_description_1 = "Nocc";
             goto try_except_handler_2;
         }
-        tmp_args_name_1 = PyTuple_New(2);
+        tmp_args_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_4;
-            PyObject *tmp_subscript_name_2;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_subscript_value_2;
             PyObject *tmp_tuple_element_2;
-            PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_args_value_1, 0, tmp_tuple_element_1);
             if (Nuitka_Cell_GET(generator->m_closure[2]) == NULL) {
 
-                FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[171]);
+                FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[161]);
                 generator_heap->exception_tb = NULL;
                 NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
                 CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -23219,15 +21422,15 @@ static PyObject *numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_ge
                 goto tuple_build_exception_1;
             }
 
-            tmp_expression_name_4 = Nuitka_Cell_GET(generator->m_closure[2]);
-            tmp_tuple_element_2 = mod_consts[189];
-            tmp_subscript_name_2 = PyTuple_New(2);
-            PyTuple_SET_ITEM0(tmp_subscript_name_2, 0, tmp_tuple_element_2);
+            tmp_expression_value_4 = Nuitka_Cell_GET(generator->m_closure[2]);
+            tmp_tuple_element_2 = mod_consts[181];
+            tmp_subscript_value_2 = PyTuple_New(2);
+            PyTuple_SET_ITEM0(tmp_subscript_value_2, 0, tmp_tuple_element_2);
             CHECK_OBJECT(generator_heap->var_i);
             tmp_tuple_element_2 = generator_heap->var_i;
-            PyTuple_SET_ITEM0(tmp_subscript_name_2, 1, tmp_tuple_element_2);
-            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_2);
-            Py_DECREF(tmp_subscript_name_2);
+            PyTuple_SET_ITEM0(tmp_subscript_value_2, 1, tmp_tuple_element_2);
+            tmp_tuple_element_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_2);
+            Py_DECREF(tmp_subscript_value_2);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23238,23 +21441,23 @@ static PyObject *numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_ge
                 generator_heap->type_description_1 = "Nocc";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_args_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_args_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[210]);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[202]);
         generator->m_frame->m_frame.f_lineno = 1076;
-        tmp_expression_name_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -23264,18 +21467,18 @@ static PyObject *numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_ge
             generator_heap->type_description_1 = "Nocc";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(generator_heap->yield_tmps, &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_2, sizeof(PyObject *), &tmp_args_name_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_subscript_name_1, sizeof(PyObject *), &tmp_kwargs_name_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(generator_heap->yield_tmps, &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_2, sizeof(PyObject *), &tmp_args_value_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_subscript_value_1, sizeof(PyObject *), &tmp_kwargs_value_1, sizeof(PyObject *), NULL);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_1;
+        return tmp_expression_value_1;
         yield_return_1:
-        Nuitka_RestoreHeap(generator_heap->yield_tmps, &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_2, sizeof(PyObject *), &tmp_args_name_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_subscript_name_1, sizeof(PyObject *), &tmp_kwargs_name_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(generator_heap->yield_tmps, &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_2, sizeof(PyObject *), &tmp_args_value_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_subscript_value_1, sizeof(PyObject *), &tmp_kwargs_value_1, sizeof(PyObject *), NULL);
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
 
 
-            generator_heap->exception_lineno = 1074;
+            generator_heap->exception_lineno = 1076;
             generator_heap->type_description_1 = "Nocc";
             goto try_except_handler_2;
         }
@@ -23418,9 +21621,9 @@ static PyObject *MAKE_GENERATOR_numpy$lib$histograms$$$function__20_histogramdd$
     return Nuitka_Generator_New(
         numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_genexpr_context,
         module_numpy$lib$histograms,
-        mod_consts[211],
+        mod_consts[203],
 #if PYTHON_VERSION >= 0x350
-        mod_consts[212],
+        mod_consts[204],
 #endif
         codeobj_8898a765fc2b978a0ecfc94a0d45f255,
         closure,
@@ -23434,7 +21637,7 @@ static PyObject *MAKE_GENERATOR_numpy$lib$histograms$$$function__20_histogramdd$
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__10__ravel_and_check_weights() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__10__ravel_and_check_weights,
-        mod_consts[132],
+        mod_consts[125],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23445,7 +21648,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__10__ravel_and_ch
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[73],
+        mod_consts[68],
         NULL,
         0
     );
@@ -23459,7 +21662,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__10__ravel_and_ch
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__11__get_outer_edges() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__11__get_outer_edges,
-        mod_consts[103],
+        mod_consts[97],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23470,7 +21673,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__11__get_outer_ed
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[82],
+        mod_consts[77],
         NULL,
         0
     );
@@ -23495,7 +21698,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__12__unsigned_sub
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[99],
+        mod_consts[93],
         NULL,
         0
     );
@@ -23509,7 +21712,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__12__unsigned_sub
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__13__get_bin_edges() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__13__get_bin_edges,
-        mod_consts[133],
+        mod_consts[126],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23520,7 +21723,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__13__get_bin_edge
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[125],
+        mod_consts[118],
         NULL,
         0
     );
@@ -23534,7 +21737,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__13__get_bin_edge
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__14__search_sorted_inclusive() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__14__search_sorted_inclusive,
-        mod_consts[157],
+        mod_consts[147],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23545,7 +21748,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__14__search_sorte
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[131],
+        mod_consts[124],
         NULL,
         0
     );
@@ -23559,7 +21762,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__14__search_sorte
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__15__histogram_bin_edges_dispatcher(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__15__histogram_bin_edges_dispatcher,
-        mod_consts[243],
+        mod_consts[235],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23584,7 +21787,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__15__histogram_bi
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__16_histogram_bin_edges(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__16_histogram_bin_edges,
-        mod_consts[245],
+        mod_consts[237],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23595,7 +21798,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__16_histogram_bin
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[134],
+        mod_consts[127],
         NULL,
         0
     );
@@ -23609,7 +21812,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__16_histogram_bin
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__17__histogram_dispatcher(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__17__histogram_dispatcher,
-        mod_consts[247],
+        mod_consts[239],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23634,7 +21837,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__17__histogram_di
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__18_histogram(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__18_histogram,
-        mod_consts[37],
+        mod_consts[34],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23645,7 +21848,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__18_histogram(PyO
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[170],
+        mod_consts[160],
         NULL,
         0
     );
@@ -23659,7 +21862,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__18_histogram(PyO
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__19__histogramdd_dispatcher(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__19__histogramdd_dispatcher,
-        mod_consts[178],
+        mod_consts[170],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23684,7 +21887,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__19__histogramdd_
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__1__ptp() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__1__ptp,
-        mod_consts[5],
+        mod_consts[4],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23695,7 +21898,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__1__ptp() {
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[4],
+        mod_consts[3],
         NULL,
         0
     );
@@ -23709,7 +21912,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__1__ptp() {
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__20_histogramdd(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__20_histogramdd,
-        mod_consts[249],
+        mod_consts[241],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23720,7 +21923,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__20_histogramdd(P
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[209],
+        mod_consts[201],
         NULL,
         0
     );
@@ -23734,7 +21937,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__20_histogramdd(P
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__2__hist_bin_sqrt() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__2__hist_bin_sqrt,
-        mod_consts[230],
+        mod_consts[222],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23745,7 +21948,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__2__hist_bin_sqrt
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[9],
+        mod_consts[8],
         NULL,
         0
     );
@@ -23759,7 +21962,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__2__hist_bin_sqrt
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__3__hist_bin_sturges() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__3__hist_bin_sturges,
-        mod_consts[59],
+        mod_consts[55],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23770,7 +21973,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__3__hist_bin_stur
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[12],
+        mod_consts[11],
         NULL,
         0
     );
@@ -23784,7 +21987,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__3__hist_bin_stur
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__4__hist_bin_rice() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__4__hist_bin_rice,
-        mod_consts[231],
+        mod_consts[223],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23795,7 +21998,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__4__hist_bin_rice
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[15],
+        mod_consts[14],
         NULL,
         0
     );
@@ -23809,7 +22012,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__4__hist_bin_rice
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__5__hist_bin_scott() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__5__hist_bin_scott,
-        mod_consts[232],
+        mod_consts[224],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23820,7 +22023,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__5__hist_bin_scot
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[20],
+        mod_consts[19],
         NULL,
         0
     );
@@ -23834,7 +22037,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__5__hist_bin_scot
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__6__hist_bin_stone() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__6__hist_bin_stone,
-        mod_consts[233],
+        mod_consts[225],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23845,7 +22048,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__6__hist_bin_ston
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[36],
+        mod_consts[32],
         NULL,
         0
     );
@@ -23859,9 +22062,9 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__6__hist_bin_ston
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__6__hist_bin_stone$$$function__1_jhat(struct Nuitka_CellObject **closure) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__6__hist_bin_stone$$$function__1_jhat,
-        mod_consts[25],
+        mod_consts[22],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[26],
+        mod_consts[23],
 #endif
         codeobj_39224af0ed850082587e2d3777b12f01,
         NULL,
@@ -23884,7 +22087,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__6__hist_bin_ston
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__7__hist_bin_doane() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__7__hist_bin_doane,
-        mod_consts[234],
+        mod_consts[226],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23895,7 +22098,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__7__hist_bin_doan
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[52],
+        mod_consts[48],
         NULL,
         0
     );
@@ -23909,7 +22112,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__7__hist_bin_doan
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__8__hist_bin_fd() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__8__hist_bin_fd,
-        mod_consts[58],
+        mod_consts[54],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23920,7 +22123,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__8__hist_bin_fd()
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[57],
+        mod_consts[53],
         NULL,
         0
     );
@@ -23934,7 +22137,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__8__hist_bin_fd()
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__9__hist_bin_auto() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$lib$histograms$$$function__9__hist_bin_auto,
-        mod_consts[235],
+        mod_consts[227],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -23945,7 +22148,7 @@ static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__9__hist_bin_auto
         NULL,
 #endif
         module_numpy$lib$histograms,
-        mod_consts[60],
+        mod_consts[56],
         NULL,
         0
     );
@@ -24142,71 +22345,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("numpy.lib.histograms");
+
+    // Store the module for future use.
     module_numpy$lib$histograms = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.lib.histograms: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("numpy.lib.histograms: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.lib.histograms: Calling createModuleConstants().\n");
+        PRINT_STRING("numpy.lib.histograms: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.lib.histograms: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("numpy.lib.histograms: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initnumpy$lib$histograms\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_numpy$lib$histograms = MODULE_DICT(module_numpy$lib$histograms);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -24222,7 +22427,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
         UPDATE_STRING_DICT0(
             moduledict_numpy$lib$histograms,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[264]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)const_str_plain___name__);
@@ -24272,7 +22477,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -24330,13 +22535,13 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[213];
-        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[214], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[205];
+        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[206], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[215], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[207], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_322555bc6db264e2d2272d4df8498652 = MAKE_MODULE_FRAME(codeobj_322555bc6db264e2d2272d4df8498652, module_numpy$lib$histograms);
@@ -24348,17 +22553,17 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[216]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[208]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[216]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[208]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[217], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[209], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -24371,17 +22576,17 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[216]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[208]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[216]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[208]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[218], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[210], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -24396,22 +22601,22 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[219], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[211], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[172];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$lib$histograms;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[24];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[162];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_numpy$lib$histograms;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[21];
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 4;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24422,48 +22627,28 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[172], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[162], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[220];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_numpy$lib$histograms;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[24];
-        frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 5;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
-        if (tmp_assign_source_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 5;
-
-            goto frame_exception_exit_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[220], tmp_assign_source_5);
+        tmp_assign_source_5 = IMPORT_HARD_FUNCTOOLS();
+        assert(!(tmp_assign_source_5 == NULL));
+        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[212], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[109];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_numpy$lib$histograms;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = Py_None;
-        tmp_level_name_3 = mod_consts[24];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[102];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_numpy$lib$histograms;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[21];
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 6;
-        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24474,22 +22659,22 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[109], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[102], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[31];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_numpy$lib$histograms;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = Py_None;
-        tmp_level_name_4 = mod_consts[24];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[27];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_numpy$lib$histograms;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = Py_None;
+        tmp_level_value_3 = mod_consts[21];
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 7;
-        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24500,22 +22685,22 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[31], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[27], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[221];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_numpy$lib$histograms;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = Py_None;
-        tmp_level_name_5 = mod_consts[24];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[213];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_numpy$lib$histograms;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = Py_None;
+        tmp_level_value_4 = mod_consts[21];
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 9;
-        tmp_assign_source_8 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_assign_source_8 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24526,23 +22711,23 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[222];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_numpy$lib$histograms;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[223];
-        tmp_level_name_6 = mod_consts[24];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[214];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_numpy$lib$histograms;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[215];
+        tmp_level_value_5 = mod_consts[21];
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 10;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24557,11 +22742,11 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_numpy$lib$histograms,
-                mod_consts[224],
-                mod_consts[24]
+                mod_consts[216],
+                mod_consts[21]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[224]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[216]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -24575,83 +22760,51 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[224], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[216], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = LIST_COPY(mod_consts[225]);
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[226], tmp_assign_source_10);
+        tmp_assign_source_10 = LIST_COPY(mod_consts[217]);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[218], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_kwargs_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[220]);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_kwargs_value_1;
+        {
+            PyObject *hard_module = IMPORT_HARD_FUNCTOOLS();
+            tmp_called_value_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[219]);
+        }
+        assert(!(tmp_called_value_1 == NULL));
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[216]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[220]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[216]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 14;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[227]);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 14;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[224]);
-
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[224]);
-        }
-
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-
-            exception_lineno = 15;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[228]);
+        assert(!(tmp_expression_value_1 == NULL));
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[220]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 15;
 
             goto frame_exception_exit_1;
         }
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[229]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[221]);
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 14;
-        tmp_assign_source_11 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_assign_source_11 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24662,12 +22815,12 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[228], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[220], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
         tmp_assign_source_12 = (PyObject *)&PyRange_Type;
-        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_12);
+        UPDATE_STRING_DICT0(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[25], tmp_assign_source_12);
     }
     {
         PyObject *tmp_assign_source_13;
@@ -24675,7 +22828,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_13 = MAKE_FUNCTION_numpy$lib$histograms$$$function__1__ptp();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[4], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
@@ -24683,7 +22836,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_14 = MAKE_FUNCTION_numpy$lib$histograms$$$function__2__hist_bin_sqrt();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[230], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[222], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
@@ -24691,7 +22844,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_15 = MAKE_FUNCTION_numpy$lib$histograms$$$function__3__hist_bin_sturges();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_15);
     }
     {
         PyObject *tmp_assign_source_16;
@@ -24699,7 +22852,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_16 = MAKE_FUNCTION_numpy$lib$histograms$$$function__4__hist_bin_rice();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[231], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[223], tmp_assign_source_16);
     }
     {
         PyObject *tmp_assign_source_17;
@@ -24707,7 +22860,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_17 = MAKE_FUNCTION_numpy$lib$histograms$$$function__5__hist_bin_scott();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[232], tmp_assign_source_17);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[224], tmp_assign_source_17);
     }
     {
         PyObject *tmp_assign_source_18;
@@ -24715,7 +22868,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_18 = MAKE_FUNCTION_numpy$lib$histograms$$$function__6__hist_bin_stone();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[233], tmp_assign_source_18);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[225], tmp_assign_source_18);
     }
     {
         PyObject *tmp_assign_source_19;
@@ -24723,7 +22876,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_19 = MAKE_FUNCTION_numpy$lib$histograms$$$function__7__hist_bin_doane();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[234], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[226], tmp_assign_source_19);
     }
     {
         PyObject *tmp_assign_source_20;
@@ -24731,7 +22884,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_20 = MAKE_FUNCTION_numpy$lib$histograms$$$function__8__hist_bin_fd();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[58], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_20);
     }
     {
         PyObject *tmp_assign_source_21;
@@ -24739,94 +22892,94 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_21 = MAKE_FUNCTION_numpy$lib$histograms$$$function__9__hist_bin_auto();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[235], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[227], tmp_assign_source_21);
     }
     {
         PyObject *tmp_assign_source_22;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[236];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[233]);
+        tmp_dict_key_1 = mod_consts[228];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[225]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[233]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[225]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_assign_source_22 = _PyDict_NewPresized( 8 );
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[237];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[235]);
+        tmp_dict_key_1 = mod_consts[229];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[227]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[227]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[238];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[234]);
+        tmp_dict_key_1 = mod_consts[230];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[226]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[234]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[226]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[239];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[58]);
+        tmp_dict_key_1 = mod_consts[231];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[54]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[58]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[240];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[231]);
+        tmp_dict_key_1 = mod_consts[232];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[223]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[231]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[223]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[241];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[232]);
+        tmp_dict_key_1 = mod_consts[233];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[224]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[232]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[224]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[7];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[230]);
+        tmp_dict_key_1 = mod_consts[6];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[222]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[230]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[222]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[242];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[59]);
+        tmp_dict_key_1 = mod_consts[234];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[55]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_res = PyDict_SetItem(tmp_assign_source_22, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[100], tmp_assign_source_22);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[94], tmp_assign_source_22);
     }
     {
         PyObject *tmp_assign_source_23;
@@ -24834,7 +22987,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_23 = MAKE_FUNCTION_numpy$lib$histograms$$$function__10__ravel_and_check_weights();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[132], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[125], tmp_assign_source_23);
     }
     {
         PyObject *tmp_assign_source_24;
@@ -24842,7 +22995,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_24 = MAKE_FUNCTION_numpy$lib$histograms$$$function__11__get_outer_edges();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[103], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[97], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
@@ -24858,7 +23011,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_26 = MAKE_FUNCTION_numpy$lib$histograms$$$function__13__get_bin_edges();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_26);
     }
     {
         PyObject *tmp_assign_source_27;
@@ -24866,43 +23019,43 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
         tmp_assign_source_27 = MAKE_FUNCTION_numpy$lib$histograms$$$function__14__search_sorted_inclusive();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[157], tmp_assign_source_27);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[147], tmp_assign_source_27);
     }
     {
         PyObject *tmp_assign_source_28;
         PyObject *tmp_defaults_1;
-        tmp_defaults_1 = mod_consts[177];
+        tmp_defaults_1 = mod_consts[168];
         Py_INCREF(tmp_defaults_1);
 
 
         tmp_assign_source_28 = MAKE_FUNCTION_numpy$lib$histograms$$$function__15__histogram_bin_edges_dispatcher(tmp_defaults_1);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[243], tmp_assign_source_28);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[235], tmp_assign_source_28);
     }
     {
         PyObject *tmp_assign_source_29;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_defaults_2;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[228]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[220]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[228]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[220]);
         }
 
-        assert(!(tmp_called_name_3 == NULL));
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[243]);
+        assert(!(tmp_called_value_3 == NULL));
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        assert(!(tmp_args_element_name_1 == NULL));
+        assert(!(tmp_args_element_value_1 == NULL));
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 470;
-        tmp_called_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_1);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_1);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24912,16 +23065,16 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        tmp_defaults_2 = mod_consts[244];
+        tmp_defaults_2 = mod_consts[236];
         Py_INCREF(tmp_defaults_2);
 
 
-        tmp_args_element_name_2 = MAKE_FUNCTION_numpy$lib$histograms$$$function__16_histogram_bin_edges(tmp_defaults_2);
+        tmp_args_element_value_2 = MAKE_FUNCTION_numpy$lib$histograms$$$function__16_histogram_bin_edges(tmp_defaults_2);
 
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 470;
-        tmp_assign_source_29 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_assign_source_29 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_assign_source_29 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24932,33 +23085,33 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[245], tmp_assign_source_29);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[237], tmp_assign_source_29);
     }
     {
         PyObject *tmp_assign_source_30;
         PyObject *tmp_defaults_3;
-        tmp_defaults_3 = mod_consts[246];
+        tmp_defaults_3 = mod_consts[238];
         Py_INCREF(tmp_defaults_3);
 
 
         tmp_assign_source_30 = MAKE_FUNCTION_numpy$lib$histograms$$$function__17__histogram_dispatcher(tmp_defaults_3);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[247], tmp_assign_source_30);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[239], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_defaults_4;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[228]);
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[220]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[228]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[220]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24968,16 +23121,16 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[247]);
+        tmp_args_element_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[239]);
 
-        if (unlikely(tmp_args_element_name_3 == NULL)) {
-            tmp_args_element_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[247]);
+        if (unlikely(tmp_args_element_value_3 == NULL)) {
+            tmp_args_element_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[239]);
         }
 
-        assert(!(tmp_args_element_name_3 == NULL));
+        assert(!(tmp_args_element_value_3 == NULL));
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 678;
-        tmp_called_name_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_3);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_3);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24987,16 +23140,16 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        tmp_defaults_4 = mod_consts[248];
+        tmp_defaults_4 = mod_consts[240];
         Py_INCREF(tmp_defaults_4);
 
 
-        tmp_args_element_name_4 = MAKE_FUNCTION_numpy$lib$histograms$$$function__18_histogram(tmp_defaults_4);
+        tmp_args_element_value_4 = MAKE_FUNCTION_numpy$lib$histograms$$$function__18_histogram(tmp_defaults_4);
 
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 678;
-        tmp_assign_source_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_4);
+        tmp_assign_source_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_assign_source_31 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -25007,33 +23160,33 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[37], tmp_assign_source_31);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[34], tmp_assign_source_31);
     }
     {
         PyObject *tmp_assign_source_32;
         PyObject *tmp_defaults_5;
-        tmp_defaults_5 = mod_consts[246];
+        tmp_defaults_5 = mod_consts[238];
         Py_INCREF(tmp_defaults_5);
 
 
         tmp_assign_source_32 = MAKE_FUNCTION_numpy$lib$histograms$$$function__19__histogramdd_dispatcher(tmp_defaults_5);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[178], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[170], tmp_assign_source_32);
     }
     {
         PyObject *tmp_assign_source_33;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
         PyObject *tmp_defaults_6;
-        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[228]);
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[220]);
 
-        if (unlikely(tmp_called_name_7 == NULL)) {
-            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[228]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[220]);
         }
 
-        if (tmp_called_name_7 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25043,16 +23196,16 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[178]);
+        tmp_args_element_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[170]);
 
-        if (unlikely(tmp_args_element_name_5 == NULL)) {
-            tmp_args_element_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[178]);
+        if (unlikely(tmp_args_element_value_5 == NULL)) {
+            tmp_args_element_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[170]);
         }
 
-        assert(!(tmp_args_element_name_5 == NULL));
+        assert(!(tmp_args_element_value_5 == NULL));
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 943;
-        tmp_called_name_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_5);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_5);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25062,16 +23215,16 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        tmp_defaults_6 = mod_consts[248];
+        tmp_defaults_6 = mod_consts[240];
         Py_INCREF(tmp_defaults_6);
 
 
-        tmp_args_element_name_6 = MAKE_FUNCTION_numpy$lib$histograms$$$function__20_histogramdd(tmp_defaults_6);
+        tmp_args_element_value_6 = MAKE_FUNCTION_numpy$lib$histograms$$$function__20_histogramdd(tmp_defaults_6);
 
         frame_322555bc6db264e2d2272d4df8498652->m_frame.f_lineno = 943;
-        tmp_assign_source_33 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_assign_source_33 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_assign_source_33 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -25082,7 +23235,7 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[249], tmp_assign_source_33);
+        UPDATE_STRING_DICT1(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)mod_consts[241], tmp_assign_source_33);
     }
 
     // Restore frame exception if necessary.
@@ -25114,9 +23267,23 @@ PyObject *modulecode_numpy$lib$histograms(PyObject *module, struct Nuitka_MetaPa
 
     frame_no_exception_1:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("numpy.lib.histograms", false);
+
     return module_numpy$lib$histograms;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$lib$histograms, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("numpy$lib$histograms", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

@@ -1,25 +1,27 @@
+from ctypes.wintypes import MAX_PATH
+from urllib.parse import MAX_CACHE_SIZE
 import wx
 import wx.grid
-
+from pubsub import pub
+from Enumerations import UIcolours
 class DataGrid(wx.Panel):
-    def __init__(self, parent, frame):
+    def __init__(self, parent):
         wx.Panel.__init__(self, parent)
         self.parent = parent
-        self.frame = frame
-        self.isExpanded = False # Adding this attribute to keep track of state
+        
+        #self.isExpanded = False # Adding this attribute to keep track of state
+        pub.subscribe(self.addDataRow, "dataGrid.addRow")
 
 
-    def makeGrid(self, numRow, numCol, headers):
-        if numCol < len(headers):
-            numCol = len(headers)
+    def makeGrid(self, header):
             
         # Create a wxGrid object
         self.gridView = wx.grid.Grid(self, -1)
-        self.gridView.CreateGrid(numRow,numCol)
+        self.gridView.CreateGrid(numRows=0, numCols=len(header))
 
 
         # Set up the columns
-        self.makeColumnLabels(headers)
+        self.makeColumnLabels(header)
 
         # Add to sizer and layout
         self.gridViewSizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -29,25 +31,36 @@ class DataGrid(wx.Panel):
 
 
     # Change the colums based on the selected channels
-    def makeColumnLabels(self, headers):
+    def makeColumnLabels(self, header):
 
         # Maybe make this into a dict. to keep colours consistent
-#        self.Colours = [UIcolours.GRID_TIMESTAMP,
-#                        UIcolours.GRID_TARGET_TEMP,
-#                        UIcolours.GRID_AVG_TEMP,
-#                        UIcolours.GRID_TARGET_AUC,
-#                        UIcolours.GRID_AVG_AUC]
+        self.Colours = [UIcolours.GRID_TIMESTAMP,
+                       UIcolours.GRID_TIMESTAMP,
+                       UIcolours.GRID_TARGET_TEMP,
+                       UIcolours.GRID_AVG_TEMP,
+                       UIcolours.GRID_TARGET_AUC,
+                       UIcolours.GRID_AVG_AUC]
 
-        for col, label in enumerate(headers):
+        self.gridView.SetColLabelTextOrientation(wx.VERTICAL)
+        #self.gridView.AutoSizeColumns()
+        maxHeight = 0
+        for col, label in enumerate(header):
             # Check for labels to truncate
             if label == "UNEXPOSED":
                 label = "UNEXP."
             self.gridView.SetColLabelValue(col, label)
+            w, h = self.gridView.GetTextExtent(label)
+            maxHeight = max([w+10, maxHeight])
+            self.gridView.SetColLabelSize(maxHeight)
+            #self.gridView.SetRowSize(0,maxHeight)
+            
             attr = wx.grid.GridCellAttr()
             attr.SetReadOnly()
-#            attr.SetBackgroundColour(self.Colours[col]) # Colour the columns by groupings
+            if col < len(self.Colours):
+                attr.SetBackgroundColour(self.Colours[col]) # Colour the columns by groupings
+                
             self.gridView.SetColAttr(col, attr)
-            self.gridView.AutoSizeColumns()
+            
 
             # TODO there should be a structure with the standard labels and formats that gets referenced instead of all this hard coded stuff.
             #Set the number format. Skip the first col which is a timestamp.
@@ -80,8 +93,12 @@ class DataGrid(wx.Panel):
 
         # Make sure the grid updates the view
         self.gridViewSizer.Layout()
-        self.Layout()
+        #self.Layout()
 
 
     def clearGrid(self):
         self.gridView.Clear() # Bye bye old data.
+
+
+    def OnDestroy(self):
+        pub.unsubscribe(self.addDataRow, "dataGrid.addRow")

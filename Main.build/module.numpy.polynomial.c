@@ -1,5 +1,5 @@
 /* Generated code for Python module 'numpy.polynomial'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -34,6 +34,9 @@ PyDictObject *moduledict_numpy$polynomial;
 
 /* The declarations of module constants used, if any. */
 static PyObject *mod_consts[57];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[57];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("numpy.polynomial"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 57; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_numpy$polynomial(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "numpy.polynomial");
+    for (int i = 0; i < 57; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -88,7 +100,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
 
     // Local variable declarations.
     PyObject *par_style = python_pars[0];
-    PyObject *var__use_unicode = NULL;
+    nuitka_bool var__use_unicode = NUITKA_BOOL_UNASSIGNED;
     PyObject *var_ABCPolyBase = NULL;
     struct Nuitka_FrameObject *frame_ef991cc531577ab6453f4eeb331e6137;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
@@ -118,7 +130,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_ef991cc531577ab6453f4eeb331e6137 = MAKE_FUNCTION_FRAME(codeobj_ef991cc531577ab6453f4eeb331e6137, module_numpy$polynomial, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_ef991cc531577ab6453f4eeb331e6137 = MAKE_FUNCTION_FRAME(codeobj_ef991cc531577ab6453f4eeb331e6137, module_numpy$polynomial, sizeof(nuitka_bool)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
@@ -136,12 +148,12 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_style);
-        tmp_compexpr_left_1 = par_style;
-        tmp_compexpr_right_1 = mod_consts[0];
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
+        tmp_cmp_expr_left_1 = par_style;
+        tmp_cmp_expr_right_1 = mod_consts[0];
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -149,7 +161,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
 
 
             exception_lineno = 171;
-            type_description_1 = "ooo";
+            type_description_1 = "obo";
             goto frame_exception_exit_1;
         }
         tmp_condition_result_1 = (tmp_res == 0) ? true : false;
@@ -182,7 +194,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
 
 
                 exception_lineno = 173;
-                type_description_1 = "ooo";
+                type_description_1 = "obo";
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_string_concat_values_1, 1, tmp_tuple_element_1);
@@ -205,7 +217,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
 
 
             exception_lineno = 173;
-            type_description_1 = "ooo";
+            type_description_1 = "obo";
             goto frame_exception_exit_1;
         }
         frame_ef991cc531577ab6453f4eeb331e6137->m_frame.f_lineno = 172;
@@ -215,85 +227,62 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
         exception_type = tmp_raise_type_1;
         exception_lineno = 172;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
-        type_description_1 = "ooo";
+        type_description_1 = "obo";
         goto frame_exception_exit_1;
     }
     branch_no_1:;
     {
-        PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = Py_True;
-        assert(var__use_unicode == NULL);
-        Py_INCREF(tmp_assign_source_1);
+        nuitka_bool tmp_assign_source_1;
+        tmp_assign_source_1 = NUITKA_BOOL_TRUE;
         var__use_unicode = tmp_assign_source_1;
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_style);
-        tmp_compexpr_left_2 = par_style;
-        tmp_compexpr_right_2 = mod_consts[4];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = par_style;
+        tmp_cmp_expr_right_2 = mod_consts[4];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
             exception_lineno = 177;
-            type_description_1 = "ooo";
+            type_description_1 = "obo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 177;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
-        PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = Py_False;
-        {
-            PyObject *old = var__use_unicode;
-            assert(old != NULL);
-            var__use_unicode = tmp_assign_source_2;
-            Py_INCREF(var__use_unicode);
-            Py_DECREF(old);
-        }
-
+        nuitka_bool tmp_assign_source_2;
+        tmp_assign_source_2 = NUITKA_BOOL_FALSE;
+        var__use_unicode = tmp_assign_source_2;
     }
     branch_no_2:;
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[5];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[6];
-        tmp_level_name_1 = mod_consts[7];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[5];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[6];
+        tmp_level_value_1 = mod_consts[7];
         frame_ef991cc531577ab6453f4eeb331e6137->m_frame.f_lineno = 179;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -301,7 +290,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
 
 
             exception_lineno = 179;
-            type_description_1 = "ooo";
+            type_description_1 = "obo";
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_1)) {
@@ -323,20 +312,20 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
 
 
             exception_lineno = 179;
-            type_description_1 = "ooo";
+            type_description_1 = "obo";
             goto frame_exception_exit_1;
         }
         assert(var_ABCPolyBase == NULL);
         var_ABCPolyBase = tmp_assign_source_3;
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        CHECK_OBJECT(var__use_unicode);
-        tmp_assattr_name_1 = var__use_unicode;
+        assert(var__use_unicode != NUITKA_BOOL_UNASSIGNED);
+        tmp_assattr_value_1 = (var__use_unicode == NUITKA_BOOL_TRUE) ? Py_True : Py_False;
         CHECK_OBJECT(var_ABCPolyBase);
         tmp_assattr_target_1 = var_ABCPolyBase;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[10], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[10], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -344,7 +333,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
 
 
             exception_lineno = 180;
-            type_description_1 = "ooo";
+            type_description_1 = "obo";
             goto frame_exception_exit_1;
         }
     }
@@ -375,7 +364,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
         frame_ef991cc531577ab6453f4eeb331e6137,
         type_description_1,
         par_style,
-        var__use_unicode,
+        (int)var__use_unicode,
         var_ABCPolyBase
     );
 
@@ -407,12 +396,8 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    CHECK_OBJECT(par_style);
-    Py_DECREF(par_style);
-    par_style = NULL;
-    CHECK_OBJECT(var__use_unicode);
-    Py_DECREF(var__use_unicode);
-    var__use_unicode = NULL;
+    assert(var__use_unicode != NUITKA_BOOL_UNASSIGNED);
+    var__use_unicode = NUITKA_BOOL_UNASSIGNED;
     CHECK_OBJECT(var_ABCPolyBase);
     Py_DECREF(var_ABCPolyBase);
     var_ABCPolyBase = NULL;
@@ -428,11 +413,7 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
     exception_tb = NULL;
     exception_lineno = 0;
 
-    CHECK_OBJECT(par_style);
-    Py_DECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(var__use_unicode);
-    var__use_unicode = NULL;
+    var__use_unicode = NUITKA_BOOL_UNASSIGNED;
     Py_XDECREF(var_ABCPolyBase);
     var_ABCPolyBase = NULL;
     // Re-raise.
@@ -448,14 +429,16 @@ static PyObject *impl_numpy$polynomial$$$function__1_set_default_printstyle(stru
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -657,71 +640,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("numpy.polynomial");
+
+    // Store the module for future use.
     module_numpy$polynomial = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.polynomial: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("numpy.polynomial: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.polynomial: Calling createModuleConstants().\n");
+        PRINT_STRING("numpy.polynomial: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.polynomial: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("numpy.polynomial: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initnumpy$polynomial\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_numpy$polynomial = MODULE_DICT(module_numpy$polynomial);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -737,7 +722,7 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         UPDATE_STRING_DICT0(
             moduledict_numpy$polynomial,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[2]
         );
 #elif 1
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)const_str_plain___name__);
@@ -787,7 +772,7 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -868,16 +853,31 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_list_element_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
         {
             PyObject *hard_module = IMPORT_HARD_OS();
-            tmp_expression_name_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[15]);
+            if (likely(hard_module != NULL)) {
+                tmp_expression_value_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[15]);
+            } else {
+                tmp_expression_value_1 = NULL;
+            }
         }
+        if (tmp_expression_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
-        if (tmp_expression_name_1 == NULL) {
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_expression_value_1);
+
+            exception_lineno = 1;
+
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[16]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -887,21 +887,10 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
 
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[16]);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_1 = module_filename_obj;
+        tmp_args_element_value_1 = module_filename_obj;
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
-        tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_list_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -914,31 +903,37 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         }
         tmp_assign_source_3 = PyList_New(3);
         {
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_expression_name_2;
-            PyObject *tmp_args_element_name_2;
-            PyObject *tmp_called_instance_1;
-            PyObject *tmp_args_element_name_3;
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_expression_value_2;
+            PyObject *tmp_args_element_value_2;
+            PyObject *tmp_called_value_3;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_args_element_value_3;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_expression_value_4;
             PyList_SET_ITEM(tmp_assign_source_3, 0, tmp_list_element_1);
             frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_expression_name_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[15]);
+                if (likely(hard_module != NULL)) {
+                    tmp_expression_value_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[15]);
+                } else {
+                    tmp_expression_value_2 = NULL;
+                }
             }
-
-            if (tmp_expression_name_2 == NULL) {
+            if (tmp_expression_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+                Py_DECREF(tmp_expression_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
-            tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[17]);
-            if (tmp_called_name_2 == NULL) {
+            tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[17]);
+            Py_DECREF(tmp_expression_value_2);
+            if (tmp_called_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -951,45 +946,58 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
             frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_called_instance_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[18]);
+                if (likely(hard_module != NULL)) {
+                    tmp_expression_value_3 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[18]);
+                } else {
+                    tmp_expression_value_3 = NULL;
+                }
             }
-
-            if (tmp_called_instance_1 == NULL) {
+            if (tmp_expression_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_2);
+                Py_DECREF(tmp_called_value_2);
+                Py_DECREF(tmp_expression_value_3);
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[19]);
+            Py_DECREF(tmp_expression_value_3);
+            if (tmp_called_value_3 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_called_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
             frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
-            tmp_args_element_name_2 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_1,
-                mod_consts[19],
-                &PyTuple_GET_ITEM(mod_consts[20], 0)
-            );
+            tmp_args_element_value_2 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_3, mod_consts[20]);
 
-            if (tmp_args_element_name_2 == NULL) {
+            Py_DECREF(tmp_called_value_3);
+            if (tmp_args_element_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_2);
+                Py_DECREF(tmp_called_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
-            tmp_args_element_name_3 = mod_consts[21];
+            tmp_args_element_value_3 = mod_consts[21];
             frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
             {
-                PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
             }
 
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -1004,10 +1012,25 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
             frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_called_instance_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[18]);
+                if (likely(hard_module != NULL)) {
+                    tmp_expression_value_4 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[18]);
+                } else {
+                    tmp_expression_value_4 = NULL;
+                }
             }
+            if (tmp_expression_value_4 == NULL) {
+                assert(ERROR_OCCURRED());
 
-            if (tmp_called_instance_2 == NULL) {
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_expression_value_4);
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[19]);
+            Py_DECREF(tmp_expression_value_4);
+            if (tmp_called_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1018,12 +1041,9 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
                 goto list_build_exception_1;
             }
             frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 1;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[19],
-                &PyTuple_GET_ITEM(mod_consts[22], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_4, mod_consts[22]);
 
+            Py_DECREF(tmp_called_value_4);
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -1046,10 +1066,10 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         UPDATE_STRING_DICT1(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[23], tmp_assign_source_3);
     }
     {
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        tmp_dictset_value = Nuitka_Loader_New(module_entry);
-        tmp_dictset_dict = PySys_GetObject((char *)"path_importer_cache");
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_1;
+        tmp_dictset_value = Nuitka_Loader_New(loader_entry);
+        tmp_dictset_dict = Nuitka_SysGetObject("path_importer_cache");
         if (tmp_dictset_dict == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1060,15 +1080,15 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[23]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[23]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
         }
 
-        assert(!(tmp_expression_name_3 == NULL));
-        tmp_subscript_name_1 = mod_consts[9];
-        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_1, 0);
+        assert(!(tmp_expression_value_5 == NULL));
+        tmp_subscript_value_1 = mod_consts[9];
+        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_1, 0);
         if (tmp_dictset_key == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1079,7 +1099,9 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
 
             goto frame_exception_exit_1;
         }
+        assert(PyDict_CheckExact(tmp_dictset_dict));
         tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
+
         Py_DECREF(tmp_dictset_key);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -1093,9 +1115,9 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         }
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_value_1 = module_filename_obj;
         tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[24]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
@@ -1103,7 +1125,7 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[25], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[25], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1116,9 +1138,9 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
+        tmp_assattr_value_2 = Py_True;
         tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[24]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
@@ -1126,7 +1148,7 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[26], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[26], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1139,15 +1161,15 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         }
     }
     {
-        PyObject *tmp_assattr_name_3;
+        PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[23]);
+        tmp_assattr_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[23]);
 
-        if (unlikely(tmp_assattr_name_3 == NULL)) {
-            tmp_assattr_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
+        if (unlikely(tmp_assattr_value_3 == NULL)) {
+            tmp_assattr_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[23]);
         }
 
-        if (tmp_assattr_name_3 == NULL) {
+        if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1164,7 +1186,7 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
         }
 
         assert(!(tmp_assattr_target_3 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[27], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[27], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1184,18 +1206,18 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[21];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[29];
-        tmp_level_name_1 = mod_consts[7];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[21];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[29];
+        tmp_level_value_1 = mod_consts[7];
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 116;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1233,18 +1255,18 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[31];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[32];
-        tmp_level_name_2 = mod_consts[7];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[31];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[32];
+        tmp_level_value_2 = mod_consts[7];
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 117;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1282,18 +1304,18 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[34];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[35];
-        tmp_level_name_3 = mod_consts[7];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[34];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[35];
+        tmp_level_value_3 = mod_consts[7];
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 118;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1331,18 +1353,18 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[37];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[38];
-        tmp_level_name_4 = mod_consts[7];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[37];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[38];
+        tmp_level_value_4 = mod_consts[7];
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 119;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1380,18 +1402,18 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_import_name_from_5;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[40];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[41];
-        tmp_level_name_5 = mod_consts[7];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[40];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[41];
+        tmp_level_value_5 = mod_consts[7];
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 120;
-        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1429,18 +1451,18 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_10;
         PyObject *tmp_import_name_from_6;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[43];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[44];
-        tmp_level_name_6 = mod_consts[7];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[43];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[44];
+        tmp_level_value_6 = mod_consts[7];
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 121;
-        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_import_name_from_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1491,18 +1513,18 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     {
         PyObject *tmp_assign_source_13;
         PyObject *tmp_import_name_from_7;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[49];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_numpy$polynomial;
-        tmp_locals_arg_name_7 = Py_None;
-        tmp_fromlist_name_7 = mod_consts[50];
-        tmp_level_name_7 = mod_consts[9];
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[49];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_numpy$polynomial;
+        tmp_locals_arg_value_7 = Py_None;
+        tmp_fromlist_value_7 = mod_consts[50];
+        tmp_level_value_7 = mod_consts[9];
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 183;
-        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
+        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
         if (tmp_import_name_from_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1539,16 +1561,17 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[51]);
+        PyObject *tmp_called_value_5;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)mod_consts[51]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
-        assert(!(tmp_called_name_3 == NULL));
+        assert(!(tmp_called_value_5 == NULL));
         frame_c7ddbe92c81454362160496988307499->m_frame.f_lineno = 184;
-        tmp_assign_source_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, mod_consts[52]);
+        tmp_assign_source_14 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_5, mod_consts[52]);
+
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1606,9 +1629,23 @@ PyObject *modulecode_numpy$polynomial(PyObject *module, struct Nuitka_MetaPathBa
 
     frame_no_exception_1:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("numpy.polynomial", false);
+
     return module_numpy$polynomial;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("numpy$polynomial", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

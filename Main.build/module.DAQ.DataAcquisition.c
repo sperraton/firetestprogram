@@ -1,5 +1,5 @@
 /* Generated code for Python module 'DAQ.DataAcquisition'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_DAQ$DataAcquisition;
 PyDictObject *moduledict_DAQ$DataAcquisition;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[173];
+static PyObject *mod_consts[171];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[171];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("DAQ.DataAcquisition"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 171; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_DAQ$DataAcquisition(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "DAQ.DataAcquisition");
+    for (int i = 0; i < 171; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -93,32 +105,32 @@ static PyCodeObject *codeobj_04883554864f8e89f960ff59b912714c;
 static PyCodeObject *codeobj_1af66fdbfa7ba2f82390f223aac7d371;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[159]); CHECK_OBJECT(module_filename_obj);
-    codeobj_4bfca3acda777e4672cc0cacb05715c1 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[160], NULL, NULL, 0, 0, 0);
-    codeobj_85b457769af7018d6c468c74f9cc3ce6 = MAKE_CODEOBJECT(module_filename_obj, 13, CO_NOFREE, mod_consts[112], mod_consts[161], NULL, 0, 0, 0);
-    codeobj_5da914633a1e00e25c92c94d9646feca = MAKE_CODEOBJECT(module_filename_obj, 18, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[114], mod_consts[162], NULL, 3, 0, 0);
-    codeobj_2f543e6b053d0642723b97a2b8ab17c6 = MAKE_CODEOBJECT(module_filename_obj, 218, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[146], mod_consts[163], NULL, 1, 0, 0);
-    codeobj_2f2eb61849ac90f438d7d13dd07c9993 = MAKE_CODEOBJECT(module_filename_obj, 161, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[130], mod_consts[164], NULL, 1, 0, 0);
-    codeobj_82f32a0f49bba181393a50ea01279dfb = MAKE_CODEOBJECT(module_filename_obj, 139, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[124], mod_consts[164], NULL, 1, 0, 0);
-    codeobj_733bff2d38dee9b82fbda1b3e7223780 = MAKE_CODEOBJECT(module_filename_obj, 189, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[138], mod_consts[165], NULL, 1, 0, 0);
-    codeobj_bd65cf06a3d02a42b74a4eb974d7fa59 = MAKE_CODEOBJECT(module_filename_obj, 184, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[136], mod_consts[165], NULL, 1, 0, 0);
-    codeobj_e239aa8ab0bffe2901c38fa000310b50 = MAKE_CODEOBJECT(module_filename_obj, 214, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[144], mod_consts[163], NULL, 1, 0, 0);
-    codeobj_7375dada3c1f77492466a0b08e06087e = MAKE_CODEOBJECT(module_filename_obj, 209, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[142], mod_consts[166], NULL, 1, 0, 0);
-    codeobj_5bb5fa89ebbfd5069681974f3dfd957b = MAKE_CODEOBJECT(module_filename_obj, 234, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[150], mod_consts[165], NULL, 2, 0, 0);
-    codeobj_cff934a4aaf254dd754aa419c73d8ee8 = MAKE_CODEOBJECT(module_filename_obj, 241, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[152], mod_consts[165], NULL, 2, 0, 0);
-    codeobj_4293d160b85e0b48e89bf0cead2e9df8 = MAKE_CODEOBJECT(module_filename_obj, 273, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[11], mod_consts[167], NULL, 1, 0, 0);
-    codeobj_b73bc865b24d382708cdf88f205afe0d = MAKE_CODEOBJECT(module_filename_obj, 251, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[154], mod_consts[168], NULL, 1, 0, 0);
-    codeobj_28c5f5dcab5dd5ae96929f6a0ea44f97 = MAKE_CODEOBJECT(module_filename_obj, 262, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[156], mod_consts[168], NULL, 1, 0, 0);
-    codeobj_d606505442bb1d2e145ca1bd0243cdf7 = MAKE_CODEOBJECT(module_filename_obj, 178, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[169], NULL, 2, 0, 0);
-    codeobj_a89f561e42f86eb5762757476f9ff3cb = MAKE_CODEOBJECT(module_filename_obj, 157, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[128], mod_consts[169], NULL, 2, 0, 0);
-    codeobj_f5f2ac823af79b68ff6ffc44ab459cc5 = MAKE_CODEOBJECT(module_filename_obj, 174, CO_NOFREE, mod_consts[132], mod_consts[163], NULL, 1, 0, 0);
-    codeobj_4ccbc51d382637190ece7097458ab6f0 = MAKE_CODEOBJECT(module_filename_obj, 153, CO_NOFREE, mod_consts[126], mod_consts[163], NULL, 1, 0, 0);
-    codeobj_e0346f17561f156251f613c6b300a9ee = MAKE_CODEOBJECT(module_filename_obj, 104, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[118], mod_consts[170], NULL, 2, 0, 0);
-    codeobj_ade1cc1a9028672d00607740c220a55e = MAKE_CODEOBJECT(module_filename_obj, 116, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[122], mod_consts[171], NULL, 2, 0, 0);
-    codeobj_413cc174036ed94a2dbfcfb667244313 = MAKE_CODEOBJECT(module_filename_obj, 109, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[120], mod_consts[171], NULL, 2, 0, 0);
-    codeobj_44dc8b3c5215b6a66f50e8947e94b93e = MAKE_CODEOBJECT(module_filename_obj, 99, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[116], mod_consts[170], NULL, 2, 0, 0);
-    codeobj_04883554864f8e89f960ff59b912714c = MAKE_CODEOBJECT(module_filename_obj, 222, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[148], mod_consts[172], NULL, 1, 0, 0);
-    codeobj_1af66fdbfa7ba2f82390f223aac7d371 = MAKE_CODEOBJECT(module_filename_obj, 196, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[140], mod_consts[172], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[157]); CHECK_OBJECT(module_filename_obj);
+    codeobj_4bfca3acda777e4672cc0cacb05715c1 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[158], NULL, NULL, 0, 0, 0);
+    codeobj_85b457769af7018d6c468c74f9cc3ce6 = MAKE_CODEOBJECT(module_filename_obj, 13, CO_NOFREE, mod_consts[110], mod_consts[159], NULL, 0, 0, 0);
+    codeobj_5da914633a1e00e25c92c94d9646feca = MAKE_CODEOBJECT(module_filename_obj, 18, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[112], mod_consts[160], NULL, 3, 0, 0);
+    codeobj_2f543e6b053d0642723b97a2b8ab17c6 = MAKE_CODEOBJECT(module_filename_obj, 218, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[144], mod_consts[161], NULL, 1, 0, 0);
+    codeobj_2f2eb61849ac90f438d7d13dd07c9993 = MAKE_CODEOBJECT(module_filename_obj, 161, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[128], mod_consts[162], NULL, 1, 0, 0);
+    codeobj_82f32a0f49bba181393a50ea01279dfb = MAKE_CODEOBJECT(module_filename_obj, 139, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[122], mod_consts[162], NULL, 1, 0, 0);
+    codeobj_733bff2d38dee9b82fbda1b3e7223780 = MAKE_CODEOBJECT(module_filename_obj, 189, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[136], mod_consts[163], NULL, 1, 0, 0);
+    codeobj_bd65cf06a3d02a42b74a4eb974d7fa59 = MAKE_CODEOBJECT(module_filename_obj, 184, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[163], NULL, 1, 0, 0);
+    codeobj_e239aa8ab0bffe2901c38fa000310b50 = MAKE_CODEOBJECT(module_filename_obj, 214, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[142], mod_consts[161], NULL, 1, 0, 0);
+    codeobj_7375dada3c1f77492466a0b08e06087e = MAKE_CODEOBJECT(module_filename_obj, 209, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[140], mod_consts[164], NULL, 1, 0, 0);
+    codeobj_5bb5fa89ebbfd5069681974f3dfd957b = MAKE_CODEOBJECT(module_filename_obj, 234, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[148], mod_consts[163], NULL, 2, 0, 0);
+    codeobj_cff934a4aaf254dd754aa419c73d8ee8 = MAKE_CODEOBJECT(module_filename_obj, 241, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[150], mod_consts[163], NULL, 2, 0, 0);
+    codeobj_4293d160b85e0b48e89bf0cead2e9df8 = MAKE_CODEOBJECT(module_filename_obj, 273, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[10], mod_consts[165], NULL, 1, 0, 0);
+    codeobj_b73bc865b24d382708cdf88f205afe0d = MAKE_CODEOBJECT(module_filename_obj, 251, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[152], mod_consts[166], NULL, 1, 0, 0);
+    codeobj_28c5f5dcab5dd5ae96929f6a0ea44f97 = MAKE_CODEOBJECT(module_filename_obj, 262, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[154], mod_consts[166], NULL, 1, 0, 0);
+    codeobj_d606505442bb1d2e145ca1bd0243cdf7 = MAKE_CODEOBJECT(module_filename_obj, 178, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[132], mod_consts[167], NULL, 2, 0, 0);
+    codeobj_a89f561e42f86eb5762757476f9ff3cb = MAKE_CODEOBJECT(module_filename_obj, 157, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[126], mod_consts[167], NULL, 2, 0, 0);
+    codeobj_f5f2ac823af79b68ff6ffc44ab459cc5 = MAKE_CODEOBJECT(module_filename_obj, 174, CO_NOFREE, mod_consts[130], mod_consts[161], NULL, 1, 0, 0);
+    codeobj_4ccbc51d382637190ece7097458ab6f0 = MAKE_CODEOBJECT(module_filename_obj, 153, CO_NOFREE, mod_consts[124], mod_consts[161], NULL, 1, 0, 0);
+    codeobj_e0346f17561f156251f613c6b300a9ee = MAKE_CODEOBJECT(module_filename_obj, 104, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[116], mod_consts[168], NULL, 2, 0, 0);
+    codeobj_ade1cc1a9028672d00607740c220a55e = MAKE_CODEOBJECT(module_filename_obj, 116, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[120], mod_consts[169], NULL, 2, 0, 0);
+    codeobj_413cc174036ed94a2dbfcfb667244313 = MAKE_CODEOBJECT(module_filename_obj, 109, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[118], mod_consts[169], NULL, 2, 0, 0);
+    codeobj_44dc8b3c5215b6a66f50e8947e94b93e = MAKE_CODEOBJECT(module_filename_obj, 99, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[114], mod_consts[168], NULL, 2, 0, 0);
+    codeobj_04883554864f8e89f960ff59b912714c = MAKE_CODEOBJECT(module_filename_obj, 222, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[146], mod_consts[170], NULL, 1, 0, 0);
+    codeobj_1af66fdbfa7ba2f82390f223aac7d371 = MAKE_CODEOBJECT(module_filename_obj, 196, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[138], mod_consts[170], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
@@ -216,7 +228,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    int tmp_res;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -232,6 +243,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     PyObject *exception_preserved_type_1;
     PyObject *exception_preserved_value_1;
     PyTracebackObject *exception_preserved_tb_1;
+    int tmp_res;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -281,13 +293,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_parent);
-        tmp_assattr_name_1 = par_parent;
+        tmp_assattr_value_1 = par_parent;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[0], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[0], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -300,13 +312,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_machineSettings);
-        tmp_assattr_name_2 = par_machineSettings;
+        tmp_assattr_value_2 = par_machineSettings;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[1], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[1], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -319,15 +331,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -338,7 +350,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 25;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[3]);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[3]);
+
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -352,14 +365,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_assattr_name_3;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_assattr_value_3;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_assattr_target_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[1]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[1]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -369,9 +382,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assattr_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[4]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_assattr_name_3 == NULL) {
+        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[4]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -381,21 +394,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 29;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[4], tmp_assattr_name_3);
-        Py_DECREF(tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[4], tmp_assattr_value_3);
+        Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -408,25 +410,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_assattr_name_4;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_assattr_value_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_assattr_target_4;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 30;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[1]);
-        if (tmp_expression_name_3 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[1]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -436,9 +427,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assattr_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[6]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_assattr_name_4 == NULL) {
+        tmp_assattr_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[5]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_assattr_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -448,21 +439,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 30;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[6], tmp_assattr_name_4);
-        Py_DECREF(tmp_assattr_name_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[5], tmp_assattr_value_4);
+        Py_DECREF(tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -475,24 +455,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_assattr_name_5;
+        PyObject *tmp_assattr_value_5;
         PyObject *tmp_assattr_target_5;
-        tmp_assattr_name_5 = PyList_New(0);
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 32;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_5 = PyList_New(0);
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_5 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[7], tmp_assattr_name_5);
-        Py_DECREF(tmp_assattr_name_5);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[6], tmp_assattr_value_5);
+        Py_DECREF(tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -505,24 +474,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_assattr_name_6;
+        PyObject *tmp_assattr_value_6;
         PyObject *tmp_assattr_target_6;
-        tmp_assattr_name_6 = PyList_New(0);
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 33;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_6 = PyList_New(0);
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_6 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[8], tmp_assattr_name_6);
-        Py_DECREF(tmp_assattr_name_6);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[7], tmp_assattr_value_6);
+        Py_DECREF(tmp_assattr_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -535,13 +493,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_assattr_name_7;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_assattr_value_7;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_assattr_target_7;
         CHECK_OBJECT(par_machineSettings);
-        tmp_expression_name_5 = par_machineSettings;
-        tmp_assattr_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[9]);
-        if (tmp_assattr_name_7 == NULL) {
+        tmp_expression_value_5 = par_machineSettings;
+        tmp_assattr_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[8]);
+        if (tmp_assattr_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -551,21 +509,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 40;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_7 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[9], tmp_assattr_name_7);
-        Py_DECREF(tmp_assattr_name_7);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[8], tmp_assattr_value_7);
+        Py_DECREF(tmp_assattr_value_7);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -578,24 +525,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_assattr_name_8;
+        PyObject *tmp_assattr_value_8;
         PyObject *tmp_assattr_target_8;
-        tmp_assattr_name_8 = PyList_New(0);
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 43;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_8 = PyList_New(0);
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_8 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_8, mod_consts[10], tmp_assattr_name_8);
-        Py_DECREF(tmp_assattr_name_8);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_8, mod_consts[9], tmp_assattr_value_8);
+        Py_DECREF(tmp_assattr_value_8);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -610,21 +546,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_2;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 44;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 44;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[11]);
+        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[10]);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -639,18 +564,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     }
     // Tried code:
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_string_concat_values_1;
         PyObject *tmp_tuple_element_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -660,27 +585,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_tuple_element_1 = mod_consts[12];
+        tmp_tuple_element_1 = mod_consts[11];
         tmp_string_concat_values_1 = PyTuple_New(3);
         {
             PyObject *tmp_format_value_1;
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_6;
             PyObject *tmp_format_spec_1;
             PyTuple_SET_ITEM0(tmp_string_concat_values_1, 0, tmp_tuple_element_1);
-            if (par_machineSettings == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 49;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_6 = par_machineSettings;
-            tmp_format_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[13]);
+            CHECK_OBJECT(par_machineSettings);
+            tmp_expression_value_6 = par_machineSettings;
+            tmp_format_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[12]);
             if (tmp_format_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -691,7 +605,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
                 type_description_1 = "ooooo";
                 goto tuple_build_exception_1;
             }
-            tmp_format_spec_1 = mod_consts[14];
+            tmp_format_spec_1 = mod_consts[13];
             tmp_tuple_element_1 = BUILTIN_FORMAT(tmp_format_value_1, tmp_format_spec_1);
             Py_DECREF(tmp_format_value_1);
             if (tmp_tuple_element_1 == NULL) {
@@ -705,7 +619,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_string_concat_values_1, 1, tmp_tuple_element_1);
-            tmp_tuple_element_1 = mod_consts[15];
+            tmp_tuple_element_1 = mod_consts[14];
             PyTuple_SET_ITEM0(tmp_string_concat_values_1, 2, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
@@ -715,9 +629,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_args_element_name_1 = PyUnicode_Join(mod_consts[14], tmp_string_concat_values_1);
+        tmp_args_element_value_1 = PyUnicode_Join(mod_consts[13], tmp_string_concat_values_1);
         Py_DECREF(tmp_string_concat_values_1);
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -728,8 +642,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_2;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 49;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -743,24 +657,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_3);
     }
     {
-        PyObject *tmp_assattr_name_9;
+        PyObject *tmp_assattr_value_9;
         PyObject *tmp_assattr_target_9;
-        tmp_assattr_name_9 = PyList_New(0);
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 50;
-            type_description_1 = "ooooo";
-            goto try_except_handler_2;
-        }
-
+        tmp_assattr_value_9 = PyList_New(0);
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_9 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_9, mod_consts[16], tmp_assattr_name_9);
-        Py_DECREF(tmp_assattr_name_9);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_9, mod_consts[15], tmp_assattr_value_9);
+        Py_DECREF(tmp_assattr_value_9);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -775,17 +678,17 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_7;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_7;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -795,22 +698,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_2 = mod_consts[18];
-        if (par_machineSettings == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 51;
-            type_description_1 = "ooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_7 = par_machineSettings;
-        tmp_args_element_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[13]);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_2 = mod_consts[17];
+        CHECK_OBJECT(par_machineSettings);
+        tmp_expression_value_7 = par_machineSettings;
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[12]);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -822,11 +714,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 51;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -893,18 +785,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
 
     }
     {
-        PyObject *tmp_called_name_4;
+        PyObject *tmp_called_value_4;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_string_concat_values_2;
         PyObject *tmp_tuple_element_2;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -914,7 +806,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_tuple_element_2 = mod_consts[19];
+        tmp_tuple_element_2 = mod_consts[18];
         tmp_string_concat_values_2 = PyTuple_New(2);
         {
             PyObject *tmp_format_value_2;
@@ -922,7 +814,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             PyTuple_SET_ITEM0(tmp_string_concat_values_2, 0, tmp_tuple_element_2);
             CHECK_OBJECT(var_i);
             tmp_format_value_2 = var_i;
-            tmp_format_spec_2 = mod_consts[14];
+            tmp_format_spec_2 = mod_consts[13];
             tmp_tuple_element_2 = BUILTIN_FORMAT(tmp_format_value_2, tmp_format_spec_2);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -943,9 +835,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         goto try_except_handler_3;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_args_element_name_4 = PyUnicode_Join(mod_consts[14], tmp_string_concat_values_2);
+        tmp_args_element_value_4 = PyUnicode_Join(mod_consts[13], tmp_string_concat_values_2);
         Py_DECREF(tmp_string_concat_values_2);
-        if (tmp_args_element_name_4 == NULL) {
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -956,8 +848,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_3;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 52;
-        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_args_element_name_4);
+        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -971,24 +863,50 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_4);
     }
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_3;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_kw_call_arg_value_2_1;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_kw_call_arg_value_3_1;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_kw_call_arg_value_4_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_kw_call_dict_value_1_1;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_kw_call_dict_value_2_1;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_value_25;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_subscript_value_6;
+        PyObject *tmp_kw_call_dict_value_3_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -998,9 +916,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_9 = par_self;
-        tmp_expression_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[16]);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_expression_value_9 = par_self;
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[15]);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1010,9 +928,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[20]);
-        Py_DECREF(tmp_expression_name_8);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[20]);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1022,25 +940,25 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[21]);
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 53;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            Py_DECREF(tmp_called_value_5);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1050,423 +968,408 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_12 = par_self;
-        tmp_expression_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[9]);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_12 = par_self;
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[8]);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 53;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_1 = var_i;
-        tmp_expression_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_11);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_subscript_value_1 = var_i;
+        tmp_expression_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_11, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_11);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 53;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[22]);
-        Py_DECREF(tmp_expression_name_10);
-        if (tmp_tuple_element_3 == NULL) {
+        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[22]);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 53;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_args_name_1 = PyTuple_New(5);
-        {
-            PyObject *tmp_expression_name_13;
-            PyObject *tmp_expression_name_14;
-            PyObject *tmp_expression_name_15;
-            PyObject *tmp_subscript_name_2;
-            PyObject *tmp_expression_name_16;
-            PyObject *tmp_expression_name_17;
-            PyObject *tmp_expression_name_18;
-            PyObject *tmp_subscript_name_3;
-            PyObject *tmp_expression_name_19;
-            PyObject *tmp_expression_name_20;
-            PyObject *tmp_expression_name_21;
-            PyObject *tmp_subscript_name_4;
-            PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_3);
-            if (par_self == NULL) {
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
 
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 54;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-
-            tmp_expression_name_15 = par_self;
-            tmp_expression_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[9]);
-            if (tmp_expression_name_14 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 54;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_subscript_name_2 = var_i;
-            tmp_expression_name_13 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_2);
-            Py_DECREF(tmp_expression_name_14);
-            if (tmp_expression_name_13 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 54;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[23]);
-            Py_DECREF(tmp_expression_name_13);
-            if (tmp_tuple_element_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 54;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_1, 1, tmp_tuple_element_3);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 55;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-
-            tmp_expression_name_18 = par_self;
-            tmp_expression_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[9]);
-            if (tmp_expression_name_17 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 55;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_subscript_name_3 = var_i;
-            tmp_expression_name_16 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_3);
-            Py_DECREF(tmp_expression_name_17);
-            if (tmp_expression_name_16 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 55;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[24]);
-            Py_DECREF(tmp_expression_name_16);
-            if (tmp_tuple_element_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 55;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_1, 2, tmp_tuple_element_3);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 56;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-
-            tmp_expression_name_21 = par_self;
-            tmp_expression_name_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[9]);
-            if (tmp_expression_name_20 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 56;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_subscript_name_4 = var_i;
-            tmp_expression_name_19 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_4);
-            Py_DECREF(tmp_expression_name_20);
-            if (tmp_expression_name_19 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 56;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[25]);
-            Py_DECREF(tmp_expression_name_19);
-            if (tmp_tuple_element_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 56;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_1, 3, tmp_tuple_element_3);
-            tmp_tuple_element_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[26]);
-
-            if (unlikely(tmp_tuple_element_3 == NULL)) {
-                tmp_tuple_element_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
-            }
-
-            if (tmp_tuple_element_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 57;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_3;
-            }
-            PyTuple_SET_ITEM0(tmp_args_name_1, 4, tmp_tuple_element_3);
+            exception_lineno = 54;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
         }
-        goto tuple_build_noexception_3;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_3:;
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_name_1);
-        goto try_except_handler_3;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_3:;
-        tmp_dict_key_1 = mod_consts[27];
+
+        tmp_expression_value_15 = par_self;
+        tmp_expression_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[8]);
+        if (tmp_expression_value_14 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+
+            exception_lineno = 54;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
         CHECK_OBJECT(var_i);
-        tmp_dict_value_1 = var_i;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 4 );
-        {
-            PyObject *tmp_expression_name_22;
-            PyObject *tmp_called_instance_2;
-            PyObject *tmp_expression_name_23;
-            PyObject *tmp_args_element_name_6;
-            PyObject *tmp_subscript_name_5;
-            PyObject *tmp_expression_name_24;
-            PyObject *tmp_called_name_7;
-            PyObject *tmp_expression_name_25;
-            PyObject *tmp_expression_name_26;
-            PyObject *tmp_args_element_name_7;
-            PyObject *tmp_subscript_name_6;
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[28];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 59;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-
-            tmp_expression_name_23 = par_self;
-            tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[0]);
-            if (tmp_called_instance_2 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 59;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_args_element_name_6 = var_i;
-            frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 59;
-            tmp_expression_name_22 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[29], tmp_args_element_name_6);
-            Py_DECREF(tmp_called_instance_2);
-            if (tmp_expression_name_22 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 59;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_subscript_name_5 = mod_consts[18];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_22, tmp_subscript_name_5, 0);
-            Py_DECREF(tmp_expression_name_22);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 59;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[30];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 60;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-
-            tmp_expression_name_26 = par_self;
-            tmp_expression_name_25 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[0]);
-            if (tmp_expression_name_25 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 60;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[29]);
-            Py_DECREF(tmp_expression_name_25);
-            if (tmp_called_name_7 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 60;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-            if (var_i == NULL) {
-                Py_DECREF(tmp_called_name_7);
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[31]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 60;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-
-            tmp_args_element_name_7 = var_i;
-            frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 60;
-            tmp_expression_name_24 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_7);
-            Py_DECREF(tmp_called_name_7);
-            if (tmp_expression_name_24 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 60;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_subscript_name_6 = mod_consts[32];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_24, tmp_subscript_name_6, 1);
-            Py_DECREF(tmp_expression_name_24);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 60;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[33];
-            tmp_dict_value_1 = mod_consts[34];
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-        }
-        goto dict_build_noexception_1;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_1:;
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        goto try_except_handler_3;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_1:;
-        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 53;
-        tmp_args_element_name_5 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_subscript_value_2 = var_i;
+        tmp_expression_value_13 = LOOKUP_SUBSCRIPT(tmp_expression_value_14, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_14);
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+
+            exception_lineno = 54;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        tmp_kw_call_arg_value_1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_13);
+        if (tmp_kw_call_arg_value_1_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+
+            exception_lineno = 54;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 55;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+
+        tmp_expression_value_18 = par_self;
+        tmp_expression_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[8]);
+        if (tmp_expression_value_17 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+
+            exception_lineno = 55;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_subscript_value_3 = var_i;
+        tmp_expression_value_16 = LOOKUP_SUBSCRIPT(tmp_expression_value_17, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_17);
+        if (tmp_expression_value_16 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+
+            exception_lineno = 55;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        tmp_kw_call_arg_value_2_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[24]);
+        Py_DECREF(tmp_expression_value_16);
+        if (tmp_kw_call_arg_value_2_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+
+            exception_lineno = 55;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 56;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+
+        tmp_expression_value_21 = par_self;
+        tmp_expression_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[8]);
+        if (tmp_expression_value_20 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+
+            exception_lineno = 56;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_subscript_value_4 = var_i;
+        tmp_expression_value_19 = LOOKUP_SUBSCRIPT(tmp_expression_value_20, tmp_subscript_value_4);
+        Py_DECREF(tmp_expression_value_20);
+        if (tmp_expression_value_19 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+
+            exception_lineno = 56;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        tmp_kw_call_arg_value_3_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[25]);
+        Py_DECREF(tmp_expression_value_19);
+        if (tmp_kw_call_arg_value_3_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+
+            exception_lineno = 56;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        tmp_kw_call_arg_value_4_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[26]);
+
+        if (unlikely(tmp_kw_call_arg_value_4_1 == NULL)) {
+            tmp_kw_call_arg_value_4_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
+        }
+
+        if (tmp_kw_call_arg_value_4_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+
+            exception_lineno = 57;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_kw_call_dict_value_0_1 = var_i;
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 59;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+
+        tmp_expression_value_23 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[0]);
+        if (tmp_called_instance_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+
+            exception_lineno = 59;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_args_element_value_6 = var_i;
+        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 59;
+        tmp_expression_value_22 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[27], tmp_args_element_value_6);
+        Py_DECREF(tmp_called_instance_2);
+        if (tmp_expression_value_22 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+
+            exception_lineno = 59;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        tmp_subscript_value_5 = mod_consts[17];
+        tmp_kw_call_dict_value_1_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_22, tmp_subscript_value_5, 0);
+        Py_DECREF(tmp_expression_value_22);
+        if (tmp_kw_call_dict_value_1_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+
+            exception_lineno = 59;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+            Py_DECREF(tmp_kw_call_dict_value_1_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 60;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+
+        tmp_expression_value_25 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[0]);
+        if (tmp_called_instance_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+            Py_DECREF(tmp_kw_call_dict_value_1_1);
+
+            exception_lineno = 60;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_args_element_value_7 = var_i;
+        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 60;
+        tmp_expression_value_24 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[27], tmp_args_element_value_7);
+        Py_DECREF(tmp_called_instance_3);
+        if (tmp_expression_value_24 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+            Py_DECREF(tmp_kw_call_dict_value_1_1);
+
+            exception_lineno = 60;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        tmp_subscript_value_6 = mod_consts[28];
+        tmp_kw_call_dict_value_2_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_24, tmp_subscript_value_6, 1);
+        Py_DECREF(tmp_expression_value_24);
+        if (tmp_kw_call_dict_value_2_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
+            Py_DECREF(tmp_kw_call_arg_value_1_1);
+            Py_DECREF(tmp_kw_call_arg_value_2_1);
+            Py_DECREF(tmp_kw_call_arg_value_3_1);
+            Py_DECREF(tmp_kw_call_dict_value_1_1);
+
+            exception_lineno = 60;
+            type_description_1 = "ooooo";
+            goto try_except_handler_3;
+        }
+        tmp_kw_call_dict_value_3_1 = mod_consts[29];
+        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 53;
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1, tmp_kw_call_arg_value_2_1, tmp_kw_call_arg_value_3_1, tmp_kw_call_arg_value_4_1};
+            PyObject *kw_values[4] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1, tmp_kw_call_dict_value_3_1};
+            tmp_args_element_value_5 = CALL_FUNCTION_WITH_ARGS5_KWSPLIT(tmp_called_value_6, args, kw_values, mod_consts[30]);
+        }
+
+        Py_DECREF(tmp_kw_call_arg_value_0_1);
+        Py_DECREF(tmp_kw_call_arg_value_1_1);
+        Py_DECREF(tmp_kw_call_arg_value_2_1);
+        Py_DECREF(tmp_kw_call_arg_value_3_1);
+        Py_DECREF(tmp_kw_call_dict_value_1_1);
+        Py_DECREF(tmp_kw_call_dict_value_2_1);
+        if (tmp_args_element_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 53;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 53;
-        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_5);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_5);
+        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_5);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1505,7 +1408,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -1518,29 +1422,42 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
-        PyObject *tmp_assattr_name_10;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_4;
-        PyObject *tmp_expression_name_27;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_expression_name_29;
-        PyObject *tmp_subscript_name_7;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_2;
-        PyObject *tmp_dict_value_2;
-        PyObject *tmp_expression_name_36;
+        PyObject *tmp_assattr_value_10;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_kw_call_arg_value_0_2;
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_expression_value_27;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_subscript_value_7;
+        PyObject *tmp_kw_call_arg_value_1_2;
+        PyObject *tmp_expression_value_29;
+        PyObject *tmp_expression_value_30;
+        PyObject *tmp_expression_value_31;
+        PyObject *tmp_subscript_value_8;
+        PyObject *tmp_kw_call_arg_value_2_2;
+        PyObject *tmp_kw_call_arg_value_3_2;
+        PyObject *tmp_expression_value_32;
+        PyObject *tmp_expression_value_33;
+        PyObject *tmp_expression_value_34;
+        PyObject *tmp_subscript_value_9;
+        PyObject *tmp_kw_call_arg_value_4_2;
+        PyObject *tmp_kw_call_dict_value_0_2;
+        PyObject *tmp_expression_value_35;
+        PyObject *tmp_kw_call_dict_value_1_2;
+        PyObject *tmp_kw_call_dict_value_2_2;
+        PyObject *tmp_kw_call_dict_value_3_2;
         PyObject *tmp_assattr_target_10;
-        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[21]);
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_called_name_8 == NULL)) {
-            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_called_name_8 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1552,7 +1469,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1562,9 +1479,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_29 = par_self;
-        tmp_expression_name_28 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[9]);
-        if (tmp_expression_name_28 == NULL) {
+        tmp_expression_value_28 = par_self;
+        tmp_expression_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[8]);
+        if (tmp_expression_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1574,10 +1491,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_7 = mod_consts[18];
-        tmp_expression_name_27 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_28, tmp_subscript_name_7, 0);
-        Py_DECREF(tmp_expression_name_28);
-        if (tmp_expression_name_27 == NULL) {
+        tmp_subscript_value_7 = mod_consts[17];
+        tmp_expression_value_26 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_27, tmp_subscript_value_7, 0);
+        Py_DECREF(tmp_expression_value_27);
+        if (tmp_expression_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1587,9 +1504,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[22]);
-        Py_DECREF(tmp_expression_name_27);
-        if (tmp_tuple_element_4 == NULL) {
+        tmp_kw_call_arg_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[22]);
+        Py_DECREF(tmp_expression_value_26);
+        if (tmp_kw_call_arg_value_0_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1599,190 +1516,157 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_args_name_2 = PyTuple_New(5);
-        {
-            PyObject *tmp_expression_name_30;
-            PyObject *tmp_expression_name_31;
-            PyObject *tmp_expression_name_32;
-            PyObject *tmp_subscript_name_8;
-            PyObject *tmp_expression_name_33;
-            PyObject *tmp_expression_name_34;
-            PyObject *tmp_expression_name_35;
-            PyObject *tmp_subscript_name_9;
-            PyTuple_SET_ITEM(tmp_args_name_2, 0, tmp_tuple_element_4);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 65;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-
-            tmp_expression_name_32 = par_self;
-            tmp_expression_name_31 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[9]);
-            if (tmp_expression_name_31 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 65;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-            tmp_subscript_name_8 = mod_consts[18];
-            tmp_expression_name_30 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_31, tmp_subscript_name_8, 0);
-            Py_DECREF(tmp_expression_name_31);
-            if (tmp_expression_name_30 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 65;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[23]);
-            Py_DECREF(tmp_expression_name_30);
-            if (tmp_tuple_element_4 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 65;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_2, 1, tmp_tuple_element_4);
-            tmp_tuple_element_4 = mod_consts[35];
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_4);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 67;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-
-            tmp_expression_name_35 = par_self;
-            tmp_expression_name_34 = LOOKUP_ATTRIBUTE(tmp_expression_name_35, mod_consts[9]);
-            if (tmp_expression_name_34 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 67;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-            tmp_subscript_name_9 = mod_consts[18];
-            tmp_expression_name_33 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_34, tmp_subscript_name_9, 0);
-            Py_DECREF(tmp_expression_name_34);
-            if (tmp_expression_name_33 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 67;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[25]);
-            Py_DECREF(tmp_expression_name_33);
-            if (tmp_tuple_element_4 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 67;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_2, 3, tmp_tuple_element_4);
-            tmp_tuple_element_4 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[26]);
-
-            if (unlikely(tmp_tuple_element_4 == NULL)) {
-                tmp_tuple_element_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
-            }
-
-            if (tmp_tuple_element_4 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 68;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_4;
-            }
-            PyTuple_SET_ITEM0(tmp_args_name_2, 4, tmp_tuple_element_4);
-        }
-        goto tuple_build_noexception_4;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_4:;
-        Py_DECREF(tmp_args_name_2);
-        goto try_except_handler_2;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_4:;
-        tmp_dict_key_2 = mod_consts[27];
-        if (par_machineSettings == NULL) {
-            Py_DECREF(tmp_args_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
+        if (par_self == NULL) {
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 69;
+            exception_lineno = 65;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_36 = par_machineSettings;
-        tmp_dict_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[13]);
-        if (tmp_dict_value_2 == NULL) {
+        tmp_expression_value_31 = par_self;
+        tmp_expression_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[8]);
+        if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+
+            exception_lineno = 65;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+        tmp_subscript_value_8 = mod_consts[17];
+        tmp_expression_value_29 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_30, tmp_subscript_value_8, 0);
+        Py_DECREF(tmp_expression_value_30);
+        if (tmp_expression_value_29 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+
+            exception_lineno = 65;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+        tmp_kw_call_arg_value_1_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_29);
+        if (tmp_kw_call_arg_value_1_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+
+            exception_lineno = 65;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+        tmp_kw_call_arg_value_2_2 = mod_consts[31];
+        if (par_self == NULL) {
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+            Py_DECREF(tmp_kw_call_arg_value_1_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 67;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+
+        tmp_expression_value_34 = par_self;
+        tmp_expression_value_33 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[8]);
+        if (tmp_expression_value_33 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+            Py_DECREF(tmp_kw_call_arg_value_1_2);
+
+            exception_lineno = 67;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+        tmp_subscript_value_9 = mod_consts[17];
+        tmp_expression_value_32 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_33, tmp_subscript_value_9, 0);
+        Py_DECREF(tmp_expression_value_33);
+        if (tmp_expression_value_32 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+            Py_DECREF(tmp_kw_call_arg_value_1_2);
+
+            exception_lineno = 67;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+        tmp_kw_call_arg_value_3_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[25]);
+        Py_DECREF(tmp_expression_value_32);
+        if (tmp_kw_call_arg_value_3_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+            Py_DECREF(tmp_kw_call_arg_value_1_2);
+
+            exception_lineno = 67;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+        tmp_kw_call_arg_value_4_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[26]);
+
+        if (unlikely(tmp_kw_call_arg_value_4_2 == NULL)) {
+            tmp_kw_call_arg_value_4_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
+        }
+
+        if (tmp_kw_call_arg_value_4_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+            Py_DECREF(tmp_kw_call_arg_value_1_2);
+            Py_DECREF(tmp_kw_call_arg_value_3_2);
+
+            exception_lineno = 68;
+            type_description_1 = "ooooo";
+            goto try_except_handler_2;
+        }
+        CHECK_OBJECT(par_machineSettings);
+        tmp_expression_value_35 = par_machineSettings;
+        tmp_kw_call_dict_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[12]);
+        if (tmp_kw_call_dict_value_0_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_kw_call_arg_value_0_2);
+            Py_DECREF(tmp_kw_call_arg_value_1_2);
+            Py_DECREF(tmp_kw_call_arg_value_3_2);
 
             exception_lineno = 69;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 4 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_2, tmp_dict_value_2);
-        Py_DECREF(tmp_dict_value_2);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_2 = mod_consts[28];
-        tmp_dict_value_2 = mod_consts[36];
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_2, tmp_dict_value_2);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_2 = mod_consts[30];
-        tmp_dict_value_2 = mod_consts[37];
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_2, tmp_dict_value_2);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_2 = mod_consts[33];
-        tmp_dict_value_2 = mod_consts[34];
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_2, tmp_dict_value_2);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_1_2 = mod_consts[32];
+        tmp_kw_call_dict_value_2_2 = mod_consts[33];
+        tmp_kw_call_dict_value_3_2 = mod_consts[29];
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 64;
-        tmp_assattr_name_10 = CALL_FUNCTION(tmp_called_name_8, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
-        if (tmp_assattr_name_10 == NULL) {
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_2, tmp_kw_call_arg_value_1_2, tmp_kw_call_arg_value_2_2, tmp_kw_call_arg_value_3_2, tmp_kw_call_arg_value_4_2};
+            PyObject *kw_values[4] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_2, tmp_kw_call_dict_value_2_2, tmp_kw_call_dict_value_3_2};
+            tmp_assattr_value_10 = CALL_FUNCTION_WITH_ARGS5_KWSPLIT(tmp_called_value_7, args, kw_values, mod_consts[30]);
+        }
+
+        Py_DECREF(tmp_kw_call_arg_value_0_2);
+        Py_DECREF(tmp_kw_call_arg_value_1_2);
+        Py_DECREF(tmp_kw_call_arg_value_3_2);
+        Py_DECREF(tmp_kw_call_dict_value_0_2);
+        if (tmp_assattr_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1793,8 +1677,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_2;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            Py_DECREF(tmp_assattr_value_10);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1805,8 +1689,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
 
         tmp_assattr_target_10 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_10, mod_consts[38], tmp_assattr_name_10);
-        Py_DECREF(tmp_assattr_name_10);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_10, mod_consts[34], tmp_assattr_value_10);
+        Py_DECREF(tmp_assattr_value_10);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1819,15 +1703,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_called_name_9;
+        PyObject *tmp_called_value_8;
         PyObject *tmp_call_result_6;
-        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_value_8 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_9 == NULL)) {
-            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_8 == NULL)) {
+            tmp_called_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_9 == NULL) {
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1838,7 +1722,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_2;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 75;
-        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, mod_consts[39]);
+        tmp_call_result_6 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_8, mod_consts[35]);
+
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1852,12 +1737,12 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_6);
     }
     {
-        PyObject *tmp_assattr_name_11;
+        PyObject *tmp_assattr_value_11;
         PyObject *tmp_assattr_target_11;
-        tmp_assattr_name_11 = PyList_New(0);
+        tmp_assattr_value_11 = PyList_New(0);
         if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            Py_DECREF(tmp_assattr_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1868,8 +1753,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
 
         tmp_assattr_target_11 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_11, mod_consts[40], tmp_assattr_name_11);
-        Py_DECREF(tmp_assattr_name_11);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_11, mod_consts[36], tmp_assattr_value_11);
+        Py_DECREF(tmp_assattr_value_11);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1884,17 +1769,17 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_expression_name_37;
-        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_expression_value_36;
+        tmp_called_value_9 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_10 == NULL)) {
-            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_9 == NULL)) {
+            tmp_called_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_10 == NULL) {
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1904,22 +1789,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_8 = mod_consts[18];
-        if (par_machineSettings == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 77;
-            type_description_1 = "ooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_37 = par_machineSettings;
-        tmp_args_element_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_37, mod_consts[41]);
-        if (tmp_args_element_name_9 == NULL) {
+        tmp_args_element_value_8 = mod_consts[17];
+        CHECK_OBJECT(par_machineSettings);
+        tmp_expression_value_36 = par_machineSettings;
+        tmp_args_element_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[37]);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1931,11 +1805,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 77;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_9, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_9);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2002,18 +1876,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
 
     }
     {
-        PyObject *tmp_called_name_11;
+        PyObject *tmp_called_value_10;
         PyObject *tmp_call_result_7;
-        PyObject *tmp_args_element_name_10;
+        PyObject *tmp_args_element_value_10;
         PyObject *tmp_string_concat_values_3;
-        PyObject *tmp_tuple_element_5;
-        tmp_called_name_11 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        PyObject *tmp_tuple_element_3;
+        tmp_called_value_10 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_11 == NULL)) {
-            tmp_called_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_10 == NULL)) {
+            tmp_called_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_11 == NULL) {
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2023,17 +1897,17 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_tuple_element_5 = mod_consts[19];
+        tmp_tuple_element_3 = mod_consts[18];
         tmp_string_concat_values_3 = PyTuple_New(2);
         {
             PyObject *tmp_format_value_3;
             PyObject *tmp_format_spec_3;
-            PyTuple_SET_ITEM0(tmp_string_concat_values_3, 0, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_string_concat_values_3, 0, tmp_tuple_element_3);
             CHECK_OBJECT(var_i);
             tmp_format_value_3 = var_i;
-            tmp_format_spec_3 = mod_consts[14];
-            tmp_tuple_element_5 = BUILTIN_FORMAT(tmp_format_value_3, tmp_format_spec_3);
-            if (tmp_tuple_element_5 == NULL) {
+            tmp_format_spec_3 = mod_consts[13];
+            tmp_tuple_element_3 = BUILTIN_FORMAT(tmp_format_value_3, tmp_format_spec_3);
+            if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2041,20 +1915,20 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
 
                 exception_lineno = 78;
                 type_description_1 = "ooooo";
-                goto tuple_build_exception_5;
+                goto tuple_build_exception_3;
             }
-            PyTuple_SET_ITEM(tmp_string_concat_values_3, 1, tmp_tuple_element_5);
+            PyTuple_SET_ITEM(tmp_string_concat_values_3, 1, tmp_tuple_element_3);
         }
-        goto tuple_build_noexception_5;
+        goto tuple_build_noexception_3;
         // Exception handling pass through code for tuple_build:
-        tuple_build_exception_5:;
+        tuple_build_exception_3:;
         Py_DECREF(tmp_string_concat_values_3);
         goto try_except_handler_4;
         // Finished with no exception for tuple_build:
-        tuple_build_noexception_5:;
-        tmp_args_element_name_10 = PyUnicode_Join(mod_consts[14], tmp_string_concat_values_3);
+        tuple_build_noexception_3:;
+        tmp_args_element_value_10 = PyUnicode_Join(mod_consts[13], tmp_string_concat_values_3);
         Py_DECREF(tmp_string_concat_values_3);
-        if (tmp_args_element_name_10 == NULL) {
+        if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2065,8 +1939,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_4;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 78;
-        tmp_call_result_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_10);
-        Py_DECREF(tmp_args_element_name_10);
+        tmp_call_result_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_10);
+        Py_DECREF(tmp_args_element_value_10);
         if (tmp_call_result_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2080,24 +1954,53 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_7);
     }
     {
-        PyObject *tmp_called_name_12;
-        PyObject *tmp_expression_name_38;
-        PyObject *tmp_expression_name_39;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_37;
+        PyObject *tmp_expression_value_38;
         PyObject *tmp_call_result_8;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_args_name_3;
-        PyObject *tmp_tuple_element_6;
-        PyObject *tmp_expression_name_40;
-        PyObject *tmp_expression_name_41;
-        PyObject *tmp_expression_name_42;
-        PyObject *tmp_subscript_name_10;
-        PyObject *tmp_kwargs_name_3;
-        PyObject *tmp_dict_key_3;
-        PyObject *tmp_dict_value_3;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_kw_call_arg_value_0_3;
+        PyObject *tmp_expression_value_39;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_expression_value_41;
+        PyObject *tmp_subscript_value_10;
+        PyObject *tmp_kw_call_arg_value_1_3;
+        PyObject *tmp_expression_value_42;
+        PyObject *tmp_expression_value_43;
+        PyObject *tmp_expression_value_44;
+        PyObject *tmp_subscript_value_11;
+        PyObject *tmp_kw_call_arg_value_2_3;
+        PyObject *tmp_expression_value_45;
+        PyObject *tmp_expression_value_46;
+        PyObject *tmp_expression_value_47;
+        PyObject *tmp_subscript_value_12;
+        PyObject *tmp_kw_call_arg_value_3_3;
+        PyObject *tmp_expression_value_48;
+        PyObject *tmp_expression_value_49;
+        PyObject *tmp_expression_value_50;
+        PyObject *tmp_subscript_value_13;
+        PyObject *tmp_kw_call_arg_value_4_3;
+        PyObject *tmp_kw_call_dict_value_0_3;
+        PyObject *tmp_kw_call_dict_value_1_3;
+        PyObject *tmp_expression_value_51;
+        PyObject *tmp_called_instance_4;
+        PyObject *tmp_expression_value_52;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_subscript_value_14;
+        PyObject *tmp_kw_call_dict_value_2_3;
+        PyObject *tmp_expression_value_53;
+        PyObject *tmp_called_instance_5;
+        PyObject *tmp_expression_value_54;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_subscript_value_15;
+        PyObject *tmp_kw_call_dict_value_3_3;
+        PyObject *tmp_kw_call_dict_value_4_1;
+        PyObject *tmp_called_instance_6;
+        PyObject *tmp_args_element_value_14;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2107,9 +2010,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_39 = par_self;
-        tmp_expression_name_38 = LOOKUP_ATTRIBUTE(tmp_expression_name_39, mod_consts[40]);
-        if (tmp_expression_name_38 == NULL) {
+        tmp_expression_value_38 = par_self;
+        tmp_expression_value_37 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[36]);
+        if (tmp_expression_value_37 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2119,9 +2022,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[20]);
-        Py_DECREF(tmp_expression_name_38);
-        if (tmp_called_name_12 == NULL) {
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[20]);
+        Py_DECREF(tmp_expression_value_37);
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2131,25 +2034,25 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_13 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[42]);
+        tmp_called_value_12 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_called_name_13 == NULL)) {
-            tmp_called_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[42]);
+        if (unlikely(tmp_called_value_12 == NULL)) {
+            tmp_called_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        if (tmp_called_name_13 == NULL) {
+        if (tmp_called_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 79;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            Py_DECREF(tmp_called_value_11);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2159,480 +2062,448 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_42 = par_self;
-        tmp_expression_name_41 = LOOKUP_ATTRIBUTE(tmp_expression_name_42, mod_consts[10]);
-        if (tmp_expression_name_41 == NULL) {
+        tmp_expression_value_41 = par_self;
+        tmp_expression_value_40 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[9]);
+        if (tmp_expression_value_40 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 79;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_10 = var_i;
-        tmp_expression_name_40 = LOOKUP_SUBSCRIPT(tmp_expression_name_41, tmp_subscript_name_10);
-        Py_DECREF(tmp_expression_name_41);
-        if (tmp_expression_name_40 == NULL) {
+        tmp_subscript_value_10 = var_i;
+        tmp_expression_value_39 = LOOKUP_SUBSCRIPT(tmp_expression_value_40, tmp_subscript_value_10);
+        Py_DECREF(tmp_expression_value_40);
+        if (tmp_expression_value_39 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 79;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_tuple_element_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_40, mod_consts[22]);
-        Py_DECREF(tmp_expression_name_40);
-        if (tmp_tuple_element_6 == NULL) {
+        tmp_kw_call_arg_value_0_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[22]);
+        Py_DECREF(tmp_expression_value_39);
+        if (tmp_kw_call_arg_value_0_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 79;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_args_name_3 = PyTuple_New(5);
-        {
-            PyObject *tmp_expression_name_43;
-            PyObject *tmp_expression_name_44;
-            PyObject *tmp_expression_name_45;
-            PyObject *tmp_subscript_name_11;
-            PyObject *tmp_expression_name_46;
-            PyObject *tmp_expression_name_47;
-            PyObject *tmp_expression_name_48;
-            PyObject *tmp_subscript_name_12;
-            PyObject *tmp_expression_name_49;
-            PyObject *tmp_expression_name_50;
-            PyObject *tmp_expression_name_51;
-            PyObject *tmp_subscript_name_13;
-            PyTuple_SET_ITEM(tmp_args_name_3, 0, tmp_tuple_element_6);
-            if (par_self == NULL) {
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
 
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 80;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-
-            tmp_expression_name_45 = par_self;
-            tmp_expression_name_44 = LOOKUP_ATTRIBUTE(tmp_expression_name_45, mod_consts[10]);
-            if (tmp_expression_name_44 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 80;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_subscript_name_11 = var_i;
-            tmp_expression_name_43 = LOOKUP_SUBSCRIPT(tmp_expression_name_44, tmp_subscript_name_11);
-            Py_DECREF(tmp_expression_name_44);
-            if (tmp_expression_name_43 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 80;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            tmp_tuple_element_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_43, mod_consts[23]);
-            Py_DECREF(tmp_expression_name_43);
-            if (tmp_tuple_element_6 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 80;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_3, 1, tmp_tuple_element_6);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 81;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-
-            tmp_expression_name_48 = par_self;
-            tmp_expression_name_47 = LOOKUP_ATTRIBUTE(tmp_expression_name_48, mod_consts[10]);
-            if (tmp_expression_name_47 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 81;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_subscript_name_12 = var_i;
-            tmp_expression_name_46 = LOOKUP_SUBSCRIPT(tmp_expression_name_47, tmp_subscript_name_12);
-            Py_DECREF(tmp_expression_name_47);
-            if (tmp_expression_name_46 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 81;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            tmp_tuple_element_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_46, mod_consts[24]);
-            Py_DECREF(tmp_expression_name_46);
-            if (tmp_tuple_element_6 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 81;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_3, 2, tmp_tuple_element_6);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 82;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-
-            tmp_expression_name_51 = par_self;
-            tmp_expression_name_50 = LOOKUP_ATTRIBUTE(tmp_expression_name_51, mod_consts[10]);
-            if (tmp_expression_name_50 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 82;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_subscript_name_13 = var_i;
-            tmp_expression_name_49 = LOOKUP_SUBSCRIPT(tmp_expression_name_50, tmp_subscript_name_13);
-            Py_DECREF(tmp_expression_name_50);
-            if (tmp_expression_name_49 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 82;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            tmp_tuple_element_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_49, mod_consts[25]);
-            Py_DECREF(tmp_expression_name_49);
-            if (tmp_tuple_element_6 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 82;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            PyTuple_SET_ITEM(tmp_args_name_3, 3, tmp_tuple_element_6);
-            tmp_tuple_element_6 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[26]);
-
-            if (unlikely(tmp_tuple_element_6 == NULL)) {
-                tmp_tuple_element_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
-            }
-
-            if (tmp_tuple_element_6 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 83;
-                type_description_1 = "ooooo";
-                goto tuple_build_exception_6;
-            }
-            PyTuple_SET_ITEM0(tmp_args_name_3, 4, tmp_tuple_element_6);
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
         }
-        goto tuple_build_noexception_6;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_6:;
-        Py_DECREF(tmp_called_name_12);
-        Py_DECREF(tmp_args_name_3);
-        goto try_except_handler_4;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_6:;
-        tmp_dict_key_3 = mod_consts[27];
+
+        tmp_expression_value_44 = par_self;
+        tmp_expression_value_43 = LOOKUP_ATTRIBUTE(tmp_expression_value_44, mod_consts[9]);
+        if (tmp_expression_value_43 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
         CHECK_OBJECT(var_i);
-        tmp_dict_value_3 = var_i;
-        tmp_kwargs_name_3 = _PyDict_NewPresized( 5 );
-        {
-            PyObject *tmp_expression_name_52;
-            PyObject *tmp_called_instance_3;
-            PyObject *tmp_expression_name_53;
-            PyObject *tmp_args_element_name_12;
-            PyObject *tmp_subscript_name_14;
-            PyObject *tmp_expression_name_54;
-            PyObject *tmp_called_name_14;
-            PyObject *tmp_expression_name_55;
-            PyObject *tmp_expression_name_56;
-            PyObject *tmp_args_element_name_13;
-            PyObject *tmp_subscript_name_15;
-            PyObject *tmp_called_name_15;
-            PyObject *tmp_expression_name_57;
-            PyObject *tmp_args_element_name_14;
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_3, tmp_dict_value_3);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[28];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 85;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-
-            tmp_expression_name_53 = par_self;
-            tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_53, mod_consts[0]);
-            if (tmp_called_instance_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 85;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            CHECK_OBJECT(var_i);
-            tmp_args_element_name_12 = var_i;
-            frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 85;
-            tmp_expression_name_52 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[43], tmp_args_element_name_12);
-            Py_DECREF(tmp_called_instance_3);
-            if (tmp_expression_name_52 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 85;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            tmp_subscript_name_14 = mod_consts[18];
-            tmp_dict_value_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_52, tmp_subscript_name_14, 0);
-            Py_DECREF(tmp_expression_name_52);
-            if (tmp_dict_value_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 85;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_3, tmp_dict_value_3);
-            Py_DECREF(tmp_dict_value_3);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[30];
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 86;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-
-            tmp_expression_name_56 = par_self;
-            tmp_expression_name_55 = LOOKUP_ATTRIBUTE(tmp_expression_name_56, mod_consts[0]);
-            if (tmp_expression_name_55 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 86;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_55, mod_consts[43]);
-            Py_DECREF(tmp_expression_name_55);
-            if (tmp_called_name_14 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 86;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            if (var_i == NULL) {
-                Py_DECREF(tmp_called_name_14);
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[31]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 86;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-
-            tmp_args_element_name_13 = var_i;
-            frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 86;
-            tmp_expression_name_54 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_14, tmp_args_element_name_13);
-            Py_DECREF(tmp_called_name_14);
-            if (tmp_expression_name_54 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 86;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            tmp_subscript_name_15 = mod_consts[32];
-            tmp_dict_value_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_54, tmp_subscript_name_15, 1);
-            Py_DECREF(tmp_expression_name_54);
-            if (tmp_dict_value_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 86;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_3, tmp_dict_value_3);
-            Py_DECREF(tmp_dict_value_3);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[33];
-            tmp_dict_value_3 = mod_consts[44];
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_3, tmp_dict_value_3);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[45];
-            if (par_machineSettings == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 88;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-
-            tmp_expression_name_57 = par_machineSettings;
-            tmp_called_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_57, mod_consts[46]);
-            if (tmp_called_name_15 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 88;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            if (var_i == NULL) {
-                Py_DECREF(tmp_called_name_15);
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[31]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 88;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-
-            tmp_args_element_name_14 = var_i;
-            frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 88;
-            tmp_dict_value_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, tmp_args_element_name_14);
-            Py_DECREF(tmp_called_name_15);
-            if (tmp_dict_value_3 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 88;
-                type_description_1 = "ooooo";
-                goto dict_build_exception_2;
-            }
-            tmp_res = PyDict_SetItem(tmp_kwargs_name_3, tmp_dict_key_3, tmp_dict_value_3);
-            Py_DECREF(tmp_dict_value_3);
-            assert(!(tmp_res != 0));
-        }
-        goto dict_build_noexception_2;
-        // Exception handling pass through code for dict_build:
-        dict_build_exception_2:;
-        Py_DECREF(tmp_called_name_12);
-        Py_DECREF(tmp_args_name_3);
-        Py_DECREF(tmp_kwargs_name_3);
-        goto try_except_handler_4;
-        // Finished with no exception for dict_build:
-        dict_build_noexception_2:;
-        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 79;
-        tmp_args_element_name_11 = CALL_FUNCTION(tmp_called_name_13, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_args_name_3);
-        Py_DECREF(tmp_kwargs_name_3);
-        if (tmp_args_element_name_11 == NULL) {
+        tmp_subscript_value_11 = var_i;
+        tmp_expression_value_42 = LOOKUP_SUBSCRIPT(tmp_expression_value_43, tmp_subscript_value_11);
+        Py_DECREF(tmp_expression_value_43);
+        if (tmp_expression_value_42 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_kw_call_arg_value_1_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_42);
+        if (tmp_kw_call_arg_value_1_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+
+            exception_lineno = 80;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 81;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+
+        tmp_expression_value_47 = par_self;
+        tmp_expression_value_46 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[9]);
+        if (tmp_expression_value_46 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+
+            exception_lineno = 81;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_subscript_value_12 = var_i;
+        tmp_expression_value_45 = LOOKUP_SUBSCRIPT(tmp_expression_value_46, tmp_subscript_value_12);
+        Py_DECREF(tmp_expression_value_46);
+        if (tmp_expression_value_45 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+
+            exception_lineno = 81;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_kw_call_arg_value_2_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_45, mod_consts[24]);
+        Py_DECREF(tmp_expression_value_45);
+        if (tmp_kw_call_arg_value_2_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+
+            exception_lineno = 81;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 82;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+
+        tmp_expression_value_50 = par_self;
+        tmp_expression_value_49 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[9]);
+        if (tmp_expression_value_49 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+
+            exception_lineno = 82;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_subscript_value_13 = var_i;
+        tmp_expression_value_48 = LOOKUP_SUBSCRIPT(tmp_expression_value_49, tmp_subscript_value_13);
+        Py_DECREF(tmp_expression_value_49);
+        if (tmp_expression_value_48 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+
+            exception_lineno = 82;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_kw_call_arg_value_3_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_48, mod_consts[25]);
+        Py_DECREF(tmp_expression_value_48);
+        if (tmp_kw_call_arg_value_3_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+
+            exception_lineno = 82;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_kw_call_arg_value_4_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[26]);
+
+        if (unlikely(tmp_kw_call_arg_value_4_3 == NULL)) {
+            tmp_kw_call_arg_value_4_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
+        }
+
+        if (tmp_kw_call_arg_value_4_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+
+            exception_lineno = 83;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_kw_call_dict_value_0_3 = var_i;
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 85;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+
+        tmp_expression_value_52 = par_self;
+        tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_52, mod_consts[0]);
+        if (tmp_called_instance_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+
+            exception_lineno = 85;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_args_element_value_12 = var_i;
+        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 85;
+        tmp_expression_value_51 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[39], tmp_args_element_value_12);
+        Py_DECREF(tmp_called_instance_4);
+        if (tmp_expression_value_51 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+
+            exception_lineno = 85;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_subscript_value_14 = mod_consts[17];
+        tmp_kw_call_dict_value_1_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_51, tmp_subscript_value_14, 0);
+        Py_DECREF(tmp_expression_value_51);
+        if (tmp_kw_call_dict_value_1_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+
+            exception_lineno = 85;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        if (par_self == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+            Py_DECREF(tmp_kw_call_dict_value_1_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 86;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+
+        tmp_expression_value_54 = par_self;
+        tmp_called_instance_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_54, mod_consts[0]);
+        if (tmp_called_instance_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+            Py_DECREF(tmp_kw_call_dict_value_1_3);
+
+            exception_lineno = 86;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        CHECK_OBJECT(var_i);
+        tmp_args_element_value_13 = var_i;
+        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 86;
+        tmp_expression_value_53 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[39], tmp_args_element_value_13);
+        Py_DECREF(tmp_called_instance_5);
+        if (tmp_expression_value_53 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+            Py_DECREF(tmp_kw_call_dict_value_1_3);
+
+            exception_lineno = 86;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_subscript_value_15 = mod_consts[28];
+        tmp_kw_call_dict_value_2_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_53, tmp_subscript_value_15, 1);
+        Py_DECREF(tmp_expression_value_53);
+        if (tmp_kw_call_dict_value_2_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+            Py_DECREF(tmp_kw_call_dict_value_1_3);
+
+            exception_lineno = 86;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        tmp_kw_call_dict_value_3_3 = mod_consts[40];
+        if (par_machineSettings == NULL) {
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+            Py_DECREF(tmp_kw_call_dict_value_1_3);
+            Py_DECREF(tmp_kw_call_dict_value_2_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 88;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+
+        tmp_called_instance_6 = par_machineSettings;
+        CHECK_OBJECT(var_i);
+        tmp_args_element_value_14 = var_i;
+        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 88;
+        tmp_kw_call_dict_value_4_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[41], tmp_args_element_value_14);
+        if (tmp_kw_call_dict_value_4_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_kw_call_arg_value_0_3);
+            Py_DECREF(tmp_kw_call_arg_value_1_3);
+            Py_DECREF(tmp_kw_call_arg_value_2_3);
+            Py_DECREF(tmp_kw_call_arg_value_3_3);
+            Py_DECREF(tmp_kw_call_dict_value_1_3);
+            Py_DECREF(tmp_kw_call_dict_value_2_3);
+
+            exception_lineno = 88;
+            type_description_1 = "ooooo";
+            goto try_except_handler_4;
+        }
+        frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 79;
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_3, tmp_kw_call_arg_value_1_3, tmp_kw_call_arg_value_2_3, tmp_kw_call_arg_value_3_3, tmp_kw_call_arg_value_4_3};
+            PyObject *kw_values[5] = {tmp_kw_call_dict_value_0_3, tmp_kw_call_dict_value_1_3, tmp_kw_call_dict_value_2_3, tmp_kw_call_dict_value_3_3, tmp_kw_call_dict_value_4_1};
+            tmp_args_element_value_11 = CALL_FUNCTION_WITH_ARGS5_KWSPLIT(tmp_called_value_12, args, kw_values, mod_consts[42]);
+        }
+
+        Py_DECREF(tmp_kw_call_arg_value_0_3);
+        Py_DECREF(tmp_kw_call_arg_value_1_3);
+        Py_DECREF(tmp_kw_call_arg_value_2_3);
+        Py_DECREF(tmp_kw_call_arg_value_3_3);
+        Py_DECREF(tmp_kw_call_dict_value_1_3);
+        Py_DECREF(tmp_kw_call_dict_value_2_3);
+        Py_DECREF(tmp_kw_call_dict_value_4_1);
+        if (tmp_args_element_value_11 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 79;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 79;
-        tmp_call_result_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_11);
-        Py_DECREF(tmp_called_name_12);
-        Py_DECREF(tmp_args_element_name_11);
+        tmp_call_result_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_11);
+        Py_DECREF(tmp_called_value_11);
+        Py_DECREF(tmp_args_element_value_11);
         if (tmp_call_result_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2671,7 +2542,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_2;
@@ -2709,16 +2581,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[47]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[43]);
 
-        if (unlikely(tmp_compexpr_right_1 == NULL)) {
-            tmp_compexpr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+        if (unlikely(tmp_cmp_expr_right_1 == NULL)) {
+            tmp_cmp_expr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
         }
 
-        if (tmp_compexpr_right_1 == NULL) {
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2728,7 +2600,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_5;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2756,44 +2628,17 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_4;
-        PyObject *tmp_expression_name_58;
+        PyObject *tmp_called_instance_7;
         PyObject *tmp_call_result_9;
-        tmp_expression_name_58 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[48]);
-
-        if (unlikely(tmp_expression_name_58 == NULL)) {
-            tmp_expression_name_58 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
-        }
-
-        if (tmp_expression_name_58 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 91;
-            type_description_1 = "ooooo";
-            goto try_except_handler_6;
-        }
-        tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_58, mod_consts[49]);
-        if (tmp_called_instance_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 91;
-            type_description_1 = "ooooo";
-            goto try_except_handler_6;
-        }
+        tmp_called_instance_7 = Nuitka_SysGetObject("stderr");
+        assert(!(tmp_called_instance_7 == NULL));
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 91;
-        tmp_call_result_9 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_4,
-            mod_consts[50],
-            &PyTuple_GET_ITEM(mod_consts[51], 0)
+        tmp_call_result_9 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_7,
+            mod_consts[44],
+            PyTuple_GET_ITEM(mod_consts[45], 0)
         );
 
-        Py_DECREF(tmp_called_instance_4);
         if (tmp_call_result_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2807,23 +2652,19 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
         Py_DECREF(tmp_call_result_9);
     }
     {
-        PyObject *tmp_called_name_16;
-        PyObject *tmp_expression_name_59;
-        PyObject *tmp_expression_name_60;
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_expression_value_55;
         PyObject *tmp_call_result_10;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_61;
-        PyObject *tmp_right_name_2;
-        tmp_expression_name_60 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[48]);
-
-        if (unlikely(tmp_expression_name_60 == NULL)) {
-            tmp_expression_name_60 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
-        }
-
-        if (tmp_expression_name_60 == NULL) {
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_56;
+        PyObject *tmp_right_value_2;
+        tmp_expression_value_55 = Nuitka_SysGetObject("stderr");
+        assert(!(tmp_expression_value_55 == NULL));
+        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_55, mod_consts[44]);
+        if (tmp_called_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2833,72 +2674,49 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_6;
         }
-        tmp_expression_name_59 = LOOKUP_ATTRIBUTE(tmp_expression_name_60, mod_consts[49]);
-        if (tmp_expression_name_59 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 92;
-            type_description_1 = "ooooo";
-            goto try_except_handler_6;
-        }
-        tmp_called_name_16 = LOOKUP_ATTRIBUTE(tmp_expression_name_59, mod_consts[50]);
-        Py_DECREF(tmp_expression_name_59);
-        if (tmp_called_name_16 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 92;
-            type_description_1 = "ooooo";
-            goto try_except_handler_6;
-        }
-        tmp_left_name_2 = mod_consts[52];
+        tmp_left_value_2 = mod_consts[46];
         CHECK_OBJECT(var_e);
-        tmp_expression_name_61 = var_e;
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_61, mod_consts[53]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_expression_value_56 = var_e;
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_56, mod_consts[47]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_16);
+            Py_DECREF(tmp_called_value_13);
 
             exception_lineno = 92;
             type_description_1 = "ooooo";
             goto try_except_handler_6;
         }
-        tmp_left_name_1 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_16);
+            Py_DECREF(tmp_called_value_13);
 
             exception_lineno = 92;
             type_description_1 = "ooooo";
             goto try_except_handler_6;
         }
-        tmp_right_name_2 = mod_consts[54];
-        tmp_args_element_name_15 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_name_1, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_1);
-        if (tmp_args_element_name_15 == NULL) {
+        tmp_right_value_2 = mod_consts[48];
+        tmp_args_element_value_15 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_value_1, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_1);
+        if (tmp_args_element_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_16);
+            Py_DECREF(tmp_called_value_13);
 
             exception_lineno = 92;
             type_description_1 = "ooooo";
             goto try_except_handler_6;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 92;
-        tmp_call_result_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_16, tmp_args_element_name_15);
-        Py_DECREF(tmp_called_name_16);
-        Py_DECREF(tmp_args_element_name_15);
+        tmp_call_result_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_15);
+        Py_DECREF(tmp_called_value_13);
+        Py_DECREF(tmp_args_element_value_15);
         if (tmp_call_result_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2947,16 +2765,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[55]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[49]);
 
-        if (unlikely(tmp_compexpr_right_2 == NULL)) {
-            tmp_compexpr_right_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_cmp_expr_right_2 == NULL)) {
+            tmp_cmp_expr_right_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[49]);
         }
 
-        if (tmp_compexpr_right_2 == NULL) {
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2966,7 +2784,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_5;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2994,20 +2812,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     }
     // Tried code:
     {
-        PyObject *tmp_called_name_17;
-        PyObject *tmp_expression_name_62;
-        PyObject *tmp_expression_name_63;
+        PyObject *tmp_called_value_14;
+        PyObject *tmp_expression_value_57;
         PyObject *tmp_call_result_11;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        tmp_expression_name_63 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[48]);
-
-        if (unlikely(tmp_expression_name_63 == NULL)) {
-            tmp_expression_name_63 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
-        }
-
-        if (tmp_expression_name_63 == NULL) {
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        tmp_expression_value_57 = Nuitka_SysGetObject("stderr");
+        assert(!(tmp_expression_value_57 == NULL));
+        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_57, mod_consts[44]);
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3017,47 +2831,24 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
             type_description_1 = "ooooo";
             goto try_except_handler_7;
         }
-        tmp_expression_name_62 = LOOKUP_ATTRIBUTE(tmp_expression_name_63, mod_consts[49]);
-        if (tmp_expression_name_62 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 95;
-            type_description_1 = "ooooo";
-            goto try_except_handler_7;
-        }
-        tmp_called_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_62, mod_consts[50]);
-        Py_DECREF(tmp_expression_name_62);
-        if (tmp_called_name_17 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 95;
-            type_description_1 = "ooooo";
-            goto try_except_handler_7;
-        }
-        tmp_left_name_3 = mod_consts[56];
+        tmp_left_value_3 = mod_consts[50];
         CHECK_OBJECT(var_e);
-        tmp_right_name_3 = var_e;
-        tmp_args_element_name_16 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_name_3, tmp_right_name_3);
-        if (tmp_args_element_name_16 == NULL) {
+        tmp_right_value_3 = var_e;
+        tmp_args_element_value_16 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_value_3, tmp_right_value_3);
+        if (tmp_args_element_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_17);
+            Py_DECREF(tmp_called_value_14);
 
             exception_lineno = 95;
             type_description_1 = "ooooo";
             goto try_except_handler_7;
         }
         frame_5da914633a1e00e25c92c94d9646feca->m_frame.f_lineno = 95;
-        tmp_call_result_11 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_17, tmp_args_element_name_16);
-        Py_DECREF(tmp_called_name_17);
-        Py_DECREF(tmp_args_element_name_16);
+        tmp_call_result_11 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_14, tmp_args_element_value_16);
+        Py_DECREF(tmp_called_value_14);
+        Py_DECREF(tmp_args_element_value_16);
         if (tmp_call_result_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3196,7 +2987,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -3205,13 +2997,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_parent);
-    Py_DECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_machineSettings);
-    par_machineSettings = NULL;
     Py_XDECREF(var_i);
     var_i = NULL;
     goto function_return_exit;
@@ -3226,17 +3011,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_parent);
-    Py_DECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_machineSettings);
-    par_machineSettings = NULL;
     Py_XDECREF(var_i);
     var_i = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_7;
     exception_value = exception_keeper_value_7;
@@ -3250,14 +3026,24 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__1___init__(struct Nuitka_F
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_machineSettings);
+    Py_DECREF(par_machineSettings);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_machineSettings);
+    Py_DECREF(par_machineSettings);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3329,18 +3115,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3350,13 +3136,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[57]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[51]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3367,9 +3153,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[16]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[15]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3380,9 +3166,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
             goto frame_exception_exit_1;
         }
         frame_44dc8b3c5215b6a66f50e8947e94b93e->m_frame.f_lineno = 100;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3393,8 +3179,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
             goto frame_exception_exit_1;
         }
         frame_44dc8b3c5215b6a66f50e8947e94b93e->m_frame.f_lineno = 100;
-        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3461,27 +3247,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
 
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        if (par_units == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 101;
-            type_description_1 = "ooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_assattr_name_1 = par_units;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(par_units);
+        tmp_assattr_value_1 = par_units;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3491,9 +3266,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[16]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[15]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3504,9 +3279,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_assattr_target_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_assattr_target_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assattr_target_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3517,7 +3292,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[33], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[52], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_target_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -3556,7 +3331,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -3621,7 +3397,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -3630,10 +3407,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_units);
-    par_units = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     goto function_return_exit;
@@ -3648,10 +3421,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_units);
-    par_units = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     // Re-raise.
@@ -3667,14 +3436,20 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits(stru
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_units);
+    Py_DECREF(par_units);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_units);
+    Py_DECREF(par_units);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3746,18 +3521,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3767,13 +3542,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[57]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[51]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3784,9 +3559,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[40]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[36]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3797,9 +3572,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
             goto frame_exception_exit_1;
         }
         frame_e0346f17561f156251f613c6b300a9ee->m_frame.f_lineno = 105;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3810,8 +3585,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
             goto frame_exception_exit_1;
         }
         frame_e0346f17561f156251f613c6b300a9ee->m_frame.f_lineno = 105;
-        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3878,27 +3653,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
 
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        if (par_units == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 106;
-            type_description_1 = "ooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_assattr_name_1 = par_units;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(par_units);
+        tmp_assattr_value_1 = par_units;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3908,9 +3672,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[40]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[36]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3921,9 +3685,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_assattr_target_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_assattr_target_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assattr_target_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3934,7 +3698,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[33], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[52], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_target_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -3973,7 +3737,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -4038,7 +3803,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -4047,10 +3813,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_units);
-    par_units = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     goto function_return_exit;
@@ -4065,10 +3827,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_units);
-    par_units = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     // Re-raise.
@@ -4084,14 +3842,20 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__3_setPressureUnits(struct 
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_units);
+    Py_DECREF(par_units);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_units);
+    Py_DECREF(par_units);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4119,13 +3883,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__4_setSelectedThermocouples
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_413cc174036ed94a2dbfcfb667244313 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_413cc174036ed94a2dbfcfb667244313)) {
         Py_XDECREF(cache_frame_413cc174036ed94a2dbfcfb667244313);
 
@@ -4154,13 +3913,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__4_setSelectedThermocouples
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_selected);
-        tmp_assattr_name_1 = par_selected;
+        tmp_assattr_value_1 = par_selected;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[7], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[6], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4220,61 +3979,31 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__4_setSelectedThermocouples
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_selected);
-    Py_DECREF(par_selected);
-    par_selected = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_selected);
-    Py_DECREF(par_selected);
-    par_selected = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_selected);
+    Py_DECREF(par_selected);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_selected);
+    Py_DECREF(par_selected);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4302,13 +4031,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__5_setSelectedPressureSenso
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_ade1cc1a9028672d00607740c220a55e = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_ade1cc1a9028672d00607740c220a55e)) {
         Py_XDECREF(cache_frame_ade1cc1a9028672d00607740c220a55e);
 
@@ -4337,13 +4061,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__5_setSelectedPressureSenso
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_selected);
-        tmp_assattr_name_1 = par_selected;
+        tmp_assattr_value_1 = par_selected;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[8], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[7], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4403,61 +4127,31 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__5_setSelectedPressureSenso
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_selected);
-    Py_DECREF(par_selected);
-    par_selected = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_selected);
-    Py_DECREF(par_selected);
-    par_selected = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_selected);
+    Py_DECREF(par_selected);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_selected);
+    Py_DECREF(par_selected);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4546,10 +4240,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
+        tmp_expression_value_1 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4616,15 +4310,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
 
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4634,9 +4328,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[16]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[15]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4647,10 +4341,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_expression_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_expression_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4660,9 +4354,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[58]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[53]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4672,8 +4366,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -4684,8 +4378,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -4695,13 +4389,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     // Tried code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_2;
         PyObject *tmp_call_result_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4711,9 +4405,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_6 = par_self;
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[16]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[15]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4724,9 +4418,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_2 = var_channelIndex;
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_5);
+        tmp_subscript_value_2 = var_channelIndex;
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_5);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4738,7 +4432,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             goto try_except_handler_3;
         }
         frame_82f32a0f49bba181393a50ea01279dfb->m_frame.f_lineno = 144;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[59]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[54]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4779,16 +4473,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[47]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[43]);
 
-        if (unlikely(tmp_compexpr_right_1 == NULL)) {
-            tmp_compexpr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+        if (unlikely(tmp_cmp_expr_right_1 == NULL)) {
+            tmp_cmp_expr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
         }
 
-        if (tmp_compexpr_right_1 == NULL) {
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4798,7 +4492,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             type_description_1 = "ooo";
             goto try_except_handler_4;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -4830,15 +4524,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     }
     // Tried code:
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4849,7 +4543,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             goto try_except_handler_5;
         }
         frame_82f32a0f49bba181393a50ea01279dfb->m_frame.f_lineno = 148;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[60]);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[55]);
+
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4863,20 +4558,20 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_7;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        PyObject *tmp_expression_value_7;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4886,10 +4581,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             type_description_1 = "ooo";
             goto try_except_handler_5;
         }
-        tmp_left_name_1 = mod_consts[61];
+        tmp_left_value_1 = mod_consts[56];
         CHECK_OBJECT(var_e);
-        tmp_expression_name_7 = var_e;
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[62]);
+        tmp_expression_value_7 = var_e;
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[57]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4900,24 +4595,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             type_description_1 = "ooo";
             goto try_except_handler_5;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_8;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_1);
-            if (var_e == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[63]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 149;
-                type_description_1 = "ooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_8 = var_e;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[53]);
+            PyObject *tmp_expression_value_8;
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_1);
+            CHECK_OBJECT(var_e);
+            tmp_expression_value_8 = var_e;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[47]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -4928,18 +4612,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
                 type_description_1 = "ooo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_5;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_args_element_name_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4950,8 +4634,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
             goto try_except_handler_5;
         }
         frame_82f32a0f49bba181393a50ea01279dfb->m_frame.f_lineno = 149;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5061,7 +4745,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_4;
@@ -5126,7 +4811,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -5135,8 +4821,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     Py_XDECREF(var_e);
@@ -5153,8 +4837,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     Py_XDECREF(var_e);
@@ -5172,58 +4854,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocoup
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
-
-   // Actual function exit with return value, making sure we did not make
-   // the error status worse despite non-NULL return.
-   CHECK_OBJECT(tmp_return_value);
-   assert(had_error || !ERROR_OCCURRED());
-   return tmp_return_value;
-}
-
-
-static PyObject *impl_DAQ$DataAcquisition$$$function__7_listAttachedThermoocouples(struct Nuitka_FunctionObject const *self, PyObject **python_pars) {
-    // Preserve error status for checks
-#ifndef __NUITKA_NO_ASSERT__
-    NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
-#endif
-
-    // Local variable declarations.
-    PyObject *par_self = python_pars[0];
-    PyObject *tmp_return_value = NULL;
-
-    // Actual function body.
-    // Tried code:
-    tmp_return_value = Py_None;
-    Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
     CHECK_OBJECT(par_self);
     Py_DECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // End of try:
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-
-    NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
-    return NULL;
-
-
-function_return_exit:
-   // Function cleanup code if any.
-
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5250,13 +4890,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached(s
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_a89f561e42f86eb5762757476f9ff3cb = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_a89f561e42f86eb5762757476f9ff3cb)) {
         Py_XDECREF(cache_frame_a89f561e42f86eb5762757476f9ff3cb);
 
@@ -5286,14 +4921,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached(s
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[16]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[15]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5304,10 +4939,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached(s
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_channel);
-        tmp_subscript_name_1 = par_channel;
-        tmp_expression_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_subscript_value_1 = par_channel;
+        tmp_expression_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5317,8 +4952,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached(s
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[24]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[24]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5330,7 +4965,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached(s
             goto frame_exception_exit_1;
         }
         frame_a89f561e42f86eb5762757476f9ff3cb->m_frame.f_lineno = 158;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[64]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[58]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -5362,7 +4997,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached(s
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -5402,56 +5037,28 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached(s
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channel);
-    Py_DECREF(par_channel);
-    par_channel = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channel);
-    Py_DECREF(par_channel);
-    par_channel = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channel);
+    Py_DECREF(par_channel);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channel);
+    Py_DECREF(par_channel);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5540,10 +5147,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
+        tmp_expression_value_1 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5610,15 +5217,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
 
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5628,9 +5235,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[40]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[36]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5641,10 +5248,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_expression_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_expression_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5654,9 +5261,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[58]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[53]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5666,8 +5273,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5678,8 +5285,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -5689,13 +5296,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     // Tried code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_2;
         PyObject *tmp_call_result_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5705,9 +5312,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_6 = par_self;
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[40]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[36]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5718,9 +5325,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_2 = var_channelIndex;
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_5);
+        tmp_subscript_value_2 = var_channelIndex;
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_5);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5732,7 +5339,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_3;
         }
         frame_2f2eb61849ac90f438d7d13dd07c9993->m_frame.f_lineno = 166;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[59]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[54]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5773,16 +5380,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[47]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[43]);
 
-        if (unlikely(tmp_compexpr_right_1 == NULL)) {
-            tmp_compexpr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+        if (unlikely(tmp_cmp_expr_right_1 == NULL)) {
+            tmp_cmp_expr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
         }
 
-        if (tmp_compexpr_right_1 == NULL) {
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5792,7 +5399,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_4;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5824,19 +5431,19 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     }
     // Tried code:
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[65]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[65]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5848,7 +5455,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5858,9 +5465,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_8 = par_self;
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[0]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_8 = par_self;
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[0]);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5870,9 +5477,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[0]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[0]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5882,14 +5489,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_2 = mod_consts[66];
+        tmp_args_element_value_2 = mod_consts[60];
         frame_2f2eb61849ac90f438d7d13dd07c9993->m_frame.f_lineno = 169;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5903,15 +5510,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5922,7 +5529,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_5;
         }
         frame_2f2eb61849ac90f438d7d13dd07c9993->m_frame.f_lineno = 170;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, mod_consts[60]);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[55]);
+
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5936,20 +5544,20 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
         Py_DECREF(tmp_call_result_3);
     }
     {
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_9;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
+        PyObject *tmp_expression_value_9;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5959,10 +5567,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_5;
         }
-        tmp_left_name_1 = mod_consts[61];
+        tmp_left_value_1 = mod_consts[56];
         CHECK_OBJECT(var_e);
-        tmp_expression_name_9 = var_e;
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[62]);
+        tmp_expression_value_9 = var_e;
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[57]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5973,24 +5581,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             type_description_1 = "ooo";
             goto try_except_handler_5;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_10;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_1);
-            if (var_e == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[63]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 171;
-                type_description_1 = "ooo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_10 = var_e;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[53]);
+            PyObject *tmp_expression_value_10;
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_1);
+            CHECK_OBJECT(var_e);
+            tmp_expression_value_10 = var_e;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[47]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6001,18 +5598,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
                 type_description_1 = "ooo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_5;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_args_element_name_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6023,8 +5620,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
             goto try_except_handler_5;
         }
         frame_2f2eb61849ac90f438d7d13dd07c9993->m_frame.f_lineno = 171;
-        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6134,7 +5731,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_4;
@@ -6199,7 +5797,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -6208,8 +5807,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     Py_XDECREF(var_e);
@@ -6226,8 +5823,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     Py_XDECREF(var_e);
@@ -6245,58 +5840,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSe
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
-
-   // Actual function exit with return value, making sure we did not make
-   // the error status worse despite non-NULL return.
-   CHECK_OBJECT(tmp_return_value);
-   assert(had_error || !ERROR_OCCURRED());
-   return tmp_return_value;
-}
-
-
-static PyObject *impl_DAQ$DataAcquisition$$$function__10_listAttachedPressureSensors(struct Nuitka_FunctionObject const *self, PyObject **python_pars) {
-    // Preserve error status for checks
-#ifndef __NUITKA_NO_ASSERT__
-    NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
-#endif
-
-    // Local variable declarations.
-    PyObject *par_self = python_pars[0];
-    PyObject *tmp_return_value = NULL;
-
-    // Actual function body.
-    // Tried code:
-    tmp_return_value = Py_None;
-    Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
     CHECK_OBJECT(par_self);
     Py_DECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // End of try:
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-
-    NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
-    return NULL;
-
-
-function_return_exit:
-   // Function cleanup code if any.
-
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6323,13 +5876,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttache
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_d606505442bb1d2e145ca1bd0243cdf7 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_d606505442bb1d2e145ca1bd0243cdf7)) {
         Py_XDECREF(cache_frame_d606505442bb1d2e145ca1bd0243cdf7);
 
@@ -6359,14 +5907,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttache
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[40]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[36]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6377,10 +5925,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttache
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_channel);
-        tmp_subscript_name_1 = par_channel;
-        tmp_expression_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_subscript_value_1 = par_channel;
+        tmp_expression_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6390,8 +5938,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttache
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[24]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[24]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6403,7 +5951,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttache
             goto frame_exception_exit_1;
         }
         frame_d606505442bb1d2e145ca1bd0243cdf7->m_frame.f_lineno = 179;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[64]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[58]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -6435,7 +5983,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttache
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -6475,56 +6023,28 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttache
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channel);
-    Py_DECREF(par_channel);
-    par_channel = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channel);
-    Py_DECREF(par_channel);
-    par_channel = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channel);
+    Py_DECREF(par_channel);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channel);
+    Py_DECREF(par_channel);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6595,18 +6115,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6616,13 +6136,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[57]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[51]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6633,9 +6153,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[16]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[15]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6646,9 +6166,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
             goto frame_exception_exit_1;
         }
         frame_bd65cf06a3d02a42b74a4eb974d7fa59->m_frame.f_lineno = 185;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6659,8 +6179,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
             goto frame_exception_exit_1;
         }
         frame_bd65cf06a3d02a42b74a4eb974d7fa59->m_frame.f_lineno = 185;
-        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6728,13 +6248,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         PyObject *tmp_call_result_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6744,9 +6264,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[16]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[15]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6757,9 +6277,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6771,7 +6291,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
             goto try_except_handler_2;
         }
         frame_bd65cf06a3d02a42b74a4eb974d7fa59->m_frame.f_lineno = 186;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[67]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[61]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6811,7 +6331,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -6875,7 +6396,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -6884,8 +6406,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     goto function_return_exit;
@@ -6900,8 +6420,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     // Re-raise.
@@ -6917,14 +6435,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels(stru
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6995,18 +6515,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7016,13 +6536,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[57]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[51]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7033,9 +6553,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[40]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[36]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7046,9 +6566,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
             goto frame_exception_exit_1;
         }
         frame_733bff2d38dee9b82fbda1b3e7223780->m_frame.f_lineno = 190;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7059,8 +6579,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
             goto frame_exception_exit_1;
         }
         frame_733bff2d38dee9b82fbda1b3e7223780->m_frame.f_lineno = 190;
-        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7128,13 +6648,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         PyObject *tmp_call_result_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7144,9 +6664,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[40]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[36]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7157,9 +6677,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7171,7 +6691,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
             goto try_except_handler_2;
         }
         frame_733bff2d38dee9b82fbda1b3e7223780->m_frame.f_lineno = 191;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[67]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[61]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7211,7 +6731,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -7275,7 +6796,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -7284,8 +6806,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     goto function_return_exit;
@@ -7300,8 +6820,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_channelIndex);
     var_channelIndex = NULL;
     // Re-raise.
@@ -7317,14 +6835,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannel
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7417,10 +6937,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
+        tmp_expression_value_1 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7487,15 +7007,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
 
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7505,9 +7025,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[16]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[15]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7518,10 +7038,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_expression_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_expression_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7531,9 +7051,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[68]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[62]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7543,8 +7063,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7555,8 +7075,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -7572,12 +7092,12 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
         PyObject *tmp_assign_source_5;
         PyObject *tmp_iter_arg_2;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_2;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7587,9 +7107,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_6 = par_self;
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[16]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[15]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7600,9 +7120,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_2 = var_channelIndex;
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_5);
+        tmp_subscript_value_2 = var_channelIndex;
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_5);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7614,7 +7134,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
             goto try_except_handler_3;
         }
         frame_1af66fdbfa7ba2f82390f223aac7d371->m_frame.f_lineno = 204;
-        tmp_iter_arg_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[69]);
+        tmp_iter_arg_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[63]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7730,7 +7250,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[70];
+            exception_value = mod_consts[64];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -7751,7 +7271,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -7787,7 +7308,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     goto try_except_handler_2;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_8;
@@ -7819,18 +7341,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         if (var_data == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7843,14 +7361,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
         tmp_called_instance_2 = var_data;
         CHECK_OBJECT(var_channelIndex);
         tmp_list_element_1 = var_channelIndex;
-        tmp_args_element_name_1 = PyList_New(2);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(2);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         CHECK_OBJECT(var_valueFormatted);
         tmp_list_element_1 = var_valueFormatted;
-        PyList_SET_ITEM0(tmp_args_element_name_1, 1, tmp_list_element_1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 1, tmp_list_element_1);
         frame_1af66fdbfa7ba2f82390f223aac7d371->m_frame.f_lineno = 205;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[20], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[20], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7881,7 +7399,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     CHECK_OBJECT(tmp_for_loop_1__iter_value);
     Py_DECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     goto frame_return_exit_1;
     // Exception handler code:
@@ -7897,7 +7416,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -7910,11 +7430,12 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     try_end_3:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     if (var_data == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -7995,8 +7516,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_data);
     var_data = NULL;
     Py_XDECREF(var_channelIndex);
@@ -8017,8 +7536,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_data);
     var_data = NULL;
     Py_XDECREF(var_channelIndex);
@@ -8040,14 +7557,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature(
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8126,10 +7645,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[38]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[34]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8141,7 +7660,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
             goto try_except_handler_2;
         }
         frame_7375dada3c1f77492466a0b08e06087e->m_frame.f_lineno = 210;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[69]);
+        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[63]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8245,7 +7764,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[70];
+            exception_value = mod_consts[64];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -8266,7 +7785,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -8354,7 +7874,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
     goto try_except_handler_1;
 
     frame_no_exception_1:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -8378,10 +7899,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     CHECK_OBJECT(var_valueFormatted);
     tmp_return_value = var_valueFormatted;
     Py_INCREF(tmp_return_value);
@@ -8390,8 +7907,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     CHECK_OBJECT(var_valueRaw);
     Py_DECREF(var_valueRaw);
     var_valueRaw = NULL;
@@ -8410,8 +7925,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
     exception_value = exception_keeper_value_3;
@@ -8425,14 +7938,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature(
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8459,13 +7974,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__16_closeInternalTemperatur
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_e239aa8ab0bffe2901c38fa000310b50 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_e239aa8ab0bffe2901c38fa000310b50)) {
         Py_XDECREF(cache_frame_e239aa8ab0bffe2901c38fa000310b50);
 
@@ -8495,11 +8005,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__16_closeInternalTemperatur
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[38]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[34]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8511,7 +8021,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__16_closeInternalTemperatur
             goto frame_exception_exit_1;
         }
         frame_e239aa8ab0bffe2901c38fa000310b50->m_frame.f_lineno = 215;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[67]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[61]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8572,53 +8082,27 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__16_closeInternalTemperatur
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8645,13 +8129,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__17_attachInternalTemperatu
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_2f543e6b053d0642723b97a2b8ab17c6 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_2f543e6b053d0642723b97a2b8ab17c6)) {
         Py_XDECREF(cache_frame_2f543e6b053d0642723b97a2b8ab17c6);
 
@@ -8681,11 +8160,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__17_attachInternalTemperatu
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[38]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[34]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8697,7 +8176,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__17_attachInternalTemperatu
             goto frame_exception_exit_1;
         }
         frame_2f543e6b053d0642723b97a2b8ab17c6->m_frame.f_lineno = 219;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[59]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[54]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8758,53 +8237,27 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__17_attachInternalTemperatu
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8897,10 +8350,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
+        tmp_expression_value_1 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8967,15 +8420,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
 
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8985,9 +8438,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[40]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[36]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8998,10 +8451,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_1 = var_channelIndex;
-        tmp_expression_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_subscript_value_1 = var_channelIndex;
+        tmp_expression_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9011,9 +8464,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[68]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[62]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9023,8 +8476,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9035,8 +8488,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -9052,12 +8505,12 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
         PyObject *tmp_assign_source_5;
         PyObject *tmp_iter_arg_2;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_2;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9067,9 +8520,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_6 = par_self;
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[40]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[36]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9080,9 +8533,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             goto try_except_handler_3;
         }
         CHECK_OBJECT(var_channelIndex);
-        tmp_subscript_name_2 = var_channelIndex;
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_5);
+        tmp_subscript_value_2 = var_channelIndex;
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_5);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9094,7 +8547,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
             goto try_except_handler_3;
         }
         frame_04883554864f8e89f960ff59b912714c->m_frame.f_lineno = 230;
-        tmp_iter_arg_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[69]);
+        tmp_iter_arg_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[63]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9210,7 +8663,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[70];
+            exception_value = mod_consts[64];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -9231,7 +8684,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -9267,7 +8721,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     goto try_except_handler_2;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_8;
@@ -9299,18 +8754,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         if (var_data == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9323,14 +8774,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
         tmp_called_instance_2 = var_data;
         CHECK_OBJECT(var_channelIndex);
         tmp_list_element_1 = var_channelIndex;
-        tmp_args_element_name_1 = PyList_New(2);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(2);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         CHECK_OBJECT(var_valueFormatted);
         tmp_list_element_1 = var_valueFormatted;
-        PyList_SET_ITEM0(tmp_args_element_name_1, 1, tmp_list_element_1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 1, tmp_list_element_1);
         frame_04883554864f8e89f960ff59b912714c->m_frame.f_lineno = 231;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[20], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[20], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9361,7 +8812,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     CHECK_OBJECT(tmp_for_loop_1__iter_value);
     Py_DECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     goto frame_return_exit_1;
     // Exception handler code:
@@ -9377,7 +8829,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -9390,11 +8843,12 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     try_end_3:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     if (var_data == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[71]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -9475,8 +8929,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_data);
     var_data = NULL;
     Py_XDECREF(var_channelIndex);
@@ -9497,8 +8949,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_data);
     var_data = NULL;
     Py_XDECREF(var_channelIndex);
@@ -9520,14 +8970,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure(str
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9554,13 +9006,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__19_getPressure(struct Nuit
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_5bb5fa89ebbfd5069681974f3dfd957b = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_5bb5fa89ebbfd5069681974f3dfd957b)) {
         Py_XDECREF(cache_frame_5bb5fa89ebbfd5069681974f3dfd957b);
 
@@ -9590,13 +9037,13 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__19_getPressure(struct Nuit
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[40]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[36]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9607,9 +9054,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__19_getPressure(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_channelIndex);
-        tmp_subscript_name_1 = par_channelIndex;
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_subscript_value_1 = par_channelIndex;
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9621,7 +9068,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__19_getPressure(struct Nuit
             goto frame_exception_exit_1;
         }
         frame_5bb5fa89ebbfd5069681974f3dfd957b->m_frame.f_lineno = 238;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[69]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[63]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -9653,7 +9100,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__19_getPressure(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -9693,56 +9140,28 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__19_getPressure(struct Nuit
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channelIndex);
-    Py_DECREF(par_channelIndex);
-    par_channelIndex = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channelIndex);
-    Py_DECREF(par_channelIndex);
-    par_channelIndex = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channelIndex);
+    Py_DECREF(par_channelIndex);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channelIndex);
+    Py_DECREF(par_channelIndex);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9769,13 +9188,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_cff934a4aaf254dd754aa419c73d8ee8 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_cff934a4aaf254dd754aa419c73d8ee8)) {
         Py_XDECREF(cache_frame_cff934a4aaf254dd754aa419c73d8ee8);
 
@@ -9805,14 +9219,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
     // Framed code:
     {
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[40]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[36]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9823,10 +9237,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_channelIndex);
-        tmp_subscript_name_1 = par_channelIndex;
-        tmp_expression_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_subscript_value_1 = par_channelIndex;
+        tmp_expression_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9836,8 +9250,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[28]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[67]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9850,26 +9264,15 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
         }
         tmp_return_value = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_4;
-            PyObject *tmp_expression_name_5;
-            PyObject *tmp_expression_name_6;
-            PyObject *tmp_subscript_name_2;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_expression_value_5;
+            PyObject *tmp_expression_value_6;
+            PyObject *tmp_subscript_value_2;
             PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_1);
-            if (par_self == NULL) {
-
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 245;
-                type_description_1 = "oo";
-                goto tuple_build_exception_1;
-            }
-
-            tmp_expression_name_6 = par_self;
-            tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[40]);
-            if (tmp_expression_name_5 == NULL) {
+            CHECK_OBJECT(par_self);
+            tmp_expression_value_6 = par_self;
+            tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[36]);
+            if (tmp_expression_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9880,10 +9283,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
                 goto tuple_build_exception_1;
             }
             CHECK_OBJECT(par_channelIndex);
-            tmp_subscript_name_2 = par_channelIndex;
-            tmp_expression_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
-            Py_DECREF(tmp_expression_name_5);
-            if (tmp_expression_name_4 == NULL) {
+            tmp_subscript_value_2 = par_channelIndex;
+            tmp_expression_value_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+            Py_DECREF(tmp_expression_value_5);
+            if (tmp_expression_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9893,8 +9296,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
                 type_description_1 = "oo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[30]);
-            Py_DECREF(tmp_expression_name_4);
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[68]);
+            Py_DECREF(tmp_expression_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9934,7 +9337,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -9974,56 +9377,28 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset(s
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channelIndex);
-    Py_DECREF(par_channelIndex);
-    par_channelIndex = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    CHECK_OBJECT(par_channelIndex);
-    Py_DECREF(par_channelIndex);
-    par_channelIndex = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channelIndex);
+    Py_DECREF(par_channelIndex);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_channelIndex);
+    Py_DECREF(par_channelIndex);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10108,10 +9483,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[4]);
+        tmp_expression_value_1 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[4]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10180,14 +9555,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10198,7 +9573,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
             goto try_except_handler_2;
         }
         frame_b73bc865b24d382708cdf88f205afe0d->m_frame.f_lineno = 253;
-        tmp_iter_arg_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, &PyTuple_GET_ITEM(mod_consts[74], 0));
+        tmp_iter_arg_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_1, mod_consts[70]);
 
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10272,14 +9647,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_iter_arg_3;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_2;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10290,7 +9665,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
             goto try_except_handler_3;
         }
         frame_b73bc865b24d382708cdf88f205afe0d->m_frame.f_lineno = 254;
-        tmp_iter_arg_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, mod_consts[35]);
+        tmp_iter_arg_3 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[71]);
+
         if (tmp_iter_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10361,18 +9737,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
 
     }
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10382,9 +9758,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[9]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[8]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10394,9 +9770,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[20]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[20]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10406,25 +9782,25 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 256;
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
         if (var_VINThubSerialNum == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10435,11 +9811,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
         }
 
         tmp_tuple_element_1 = var_VINThubSerialNum;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         if (var_VINThubPortIndex == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[74]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10450,37 +9826,37 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
         }
 
         tmp_tuple_element_1 = var_VINThubPortIndex;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(var_thermocoupleChannelIndex);
         tmp_tuple_element_1 = var_thermocoupleChannelIndex;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_1);
         goto try_except_handler_4;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[78]);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[75]);
         frame_b73bc865b24d382708cdf88f205afe0d->m_frame.f_lineno = 256;
-        tmp_args_element_name_1 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 256;
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
         frame_b73bc865b24d382708cdf88f205afe0d->m_frame.f_lineno = 256;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10519,7 +9895,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
 
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -10532,7 +9909,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     try_end_1:;
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     if (CONSIDER_THREADING() == false) {
         assert(ERROR_OCCURRED());
@@ -10560,7 +9938,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_2;
@@ -10573,7 +9952,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     try_end_2:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     if (CONSIDER_THREADING() == false) {
         assert(ERROR_OCCURRED());
@@ -10601,7 +9981,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -10667,7 +10048,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -10676,8 +10058,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_VINThubSerialNum);
     var_VINThubSerialNum = NULL;
     Py_XDECREF(var_VINThubPortIndex);
@@ -10696,8 +10076,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_VINThubSerialNum);
     var_VINThubSerialNum = NULL;
     Py_XDECREF(var_VINThubPortIndex);
@@ -10717,14 +10095,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddress
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10809,10 +10189,10 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[4]);
+        tmp_expression_value_1 = par_self;
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[4]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10881,14 +10261,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10899,7 +10279,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
             goto try_except_handler_2;
         }
         frame_28c5f5dcab5dd5ae96929f6a0ea44f97->m_frame.f_lineno = 264;
-        tmp_iter_arg_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[79]);
+        tmp_iter_arg_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[76]);
+
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10972,14 +10353,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_iter_arg_3;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_2;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10990,7 +10371,7 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
             goto try_except_handler_3;
         }
         frame_28c5f5dcab5dd5ae96929f6a0ea44f97->m_frame.f_lineno = 265;
-        tmp_iter_arg_3 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_2, &PyTuple_GET_ITEM(mod_consts[80], 0));
+        tmp_iter_arg_3 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_2, mod_consts[77]);
 
         if (tmp_iter_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11062,18 +10443,18 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
 
     }
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11083,9 +10464,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[9]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[8]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11095,9 +10476,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[20]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[20]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11107,25 +10488,25 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 267;
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
         if (var_VINThubSerialNum == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11136,11 +10517,11 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
         }
 
         tmp_tuple_element_1 = var_VINThubSerialNum;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         if (var_VINThubPortIndex == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[74]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11151,37 +10532,37 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
         }
 
         tmp_tuple_element_1 = var_VINThubPortIndex;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(var_thermocoupleChannelIndex);
         tmp_tuple_element_1 = var_thermocoupleChannelIndex;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_1);
         goto try_except_handler_4;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[78]);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[75]);
         frame_28c5f5dcab5dd5ae96929f6a0ea44f97->m_frame.f_lineno = 267;
-        tmp_args_element_name_1 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 267;
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
         frame_28c5f5dcab5dd5ae96929f6a0ea44f97->m_frame.f_lineno = 267;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11220,7 +10601,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
 
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -11233,7 +10615,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     try_end_1:;
     Py_XDECREF(tmp_for_loop_3__iter_value);
     tmp_for_loop_3__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_3__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_3__for_iterator);
+    Py_DECREF(tmp_for_loop_3__for_iterator);
     tmp_for_loop_3__for_iterator = NULL;
     if (CONSIDER_THREADING() == false) {
         assert(ERROR_OCCURRED());
@@ -11261,7 +10644,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_2;
@@ -11274,7 +10658,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     try_end_2:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     if (CONSIDER_THREADING() == false) {
         assert(ERROR_OCCURRED());
@@ -11302,7 +10687,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -11368,7 +10754,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -11377,8 +10764,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_VINThubSerialNum);
     var_VINThubSerialNum = NULL;
     Py_XDECREF(var_VINThubPortIndex);
@@ -11397,8 +10782,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_VINThubSerialNum);
     var_VINThubSerialNum = NULL;
     Py_XDECREF(var_VINThubPortIndex);
@@ -11418,14 +10801,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddress
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11496,14 +10881,14 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[16]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11514,7 +10899,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
             goto frame_exception_exit_1;
         }
         frame_4293d160b85e0b48e89bf0cead2e9df8->m_frame.f_lineno = 274;
-        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[81]);
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[78]);
+
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11581,21 +10967,21 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
 
     }
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_kwargs_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11605,9 +10991,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[10]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[9]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11617,9 +11003,9 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[20]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[20]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11629,25 +11015,25 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 275;
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[5]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11657,55 +11043,55 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[6]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[5]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 275;
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_1 = mod_consts[18];
-        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_1, 0);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_subscript_value_1 = mod_consts[17];
+        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_1, 0);
+        Py_DECREF(tmp_expression_value_3);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 275;
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(var_VINThubPortIndex);
         tmp_tuple_element_1 = var_VINThubPortIndex;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[82]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[79]);
         frame_4293d160b85e0b48e89bf0cead2e9df8->m_frame.f_lineno = 275;
-        tmp_args_element_name_1 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 275;
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
         frame_4293d160b85e0b48e89bf0cead2e9df8->m_frame.f_lineno = 275;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11744,7 +11130,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -11808,7 +11195,8 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -11817,8 +11205,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_VINThubPortIndex);
     var_VINThubPortIndex = NULL;
     goto function_return_exit;
@@ -11833,8 +11219,6 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_VINThubPortIndex);
     var_VINThubPortIndex = NULL;
     // Re-raise.
@@ -11850,14 +11234,16 @@ static PyObject *impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses(s
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11870,10 +11256,10 @@ function_return_exit:
 
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__10_listAttachedPressureSensors() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_DAQ$DataAcquisition$$$function__10_listAttachedPressureSensors,
-        mod_consts[132],
+        NULL,
+        mod_consts[130],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[133],
+        mod_consts[131],
 #endif
         codeobj_f5f2ac823af79b68ff6ffc44ab459cc5,
         NULL,
@@ -11896,9 +11282,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__10_listAttachedPr
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__11_isPressureSensorAttached() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttached,
-        mod_consts[134],
+        mod_consts[132],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[135],
+        mod_consts[133],
 #endif
         codeobj_d606505442bb1d2e145ca1bd0243cdf7,
         NULL,
@@ -11921,9 +11307,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__11_isPressureSens
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__12_closeAllTCChannels() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels,
-        mod_consts[136],
+        mod_consts[134],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[137],
+        mod_consts[135],
 #endif
         codeobj_bd65cf06a3d02a42b74a4eb974d7fa59,
         NULL,
@@ -11946,9 +11332,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__12_closeAllTCChan
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__13_closeAllPressureChannels() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannels,
-        mod_consts[138],
+        mod_consts[136],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[139],
+        mod_consts[137],
 #endif
         codeobj_733bff2d38dee9b82fbda1b3e7223780,
         NULL,
@@ -11971,9 +11357,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__13_closeAllPressu
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature,
-        mod_consts[140],
+        mod_consts[138],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[141],
+        mod_consts[139],
 #endif
         codeobj_1af66fdbfa7ba2f82390f223aac7d371,
         NULL,
@@ -11996,9 +11382,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__14_tryToGatherTem
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__15_getInternalTemperature() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__15_getInternalTemperature,
-        mod_consts[142],
+        mod_consts[140],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[143],
+        mod_consts[141],
 #endif
         codeobj_7375dada3c1f77492466a0b08e06087e,
         NULL,
@@ -12021,9 +11407,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__15_getInternalTem
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__16_closeInternalTemperature() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__16_closeInternalTemperature,
-        mod_consts[144],
+        mod_consts[142],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[145],
+        mod_consts[143],
 #endif
         codeobj_e239aa8ab0bffe2901c38fa000310b50,
         NULL,
@@ -12046,9 +11432,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__16_closeInternalT
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__17_attachInternalTemperature() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__17_attachInternalTemperature,
-        mod_consts[146],
+        mod_consts[144],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[147],
+        mod_consts[145],
 #endif
         codeobj_2f543e6b053d0642723b97a2b8ab17c6,
         NULL,
@@ -12071,9 +11457,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__17_attachInternal
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__18_tryToGatherPressure() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__18_tryToGatherPressure,
-        mod_consts[148],
+        mod_consts[146],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[149],
+        mod_consts[147],
 #endif
         codeobj_04883554864f8e89f960ff59b912714c,
         NULL,
@@ -12096,9 +11482,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__18_tryToGatherPre
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__19_getPressure() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__19_getPressure,
-        mod_consts[150],
+        mod_consts[148],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[151],
+        mod_consts[149],
 #endif
         codeobj_5bb5fa89ebbfd5069681974f3dfd957b,
         NULL,
@@ -12107,7 +11493,7 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__19_getPressure() 
         NULL,
 #endif
         module_DAQ$DataAcquisition,
-        mod_consts[72],
+        mod_consts[66],
         NULL,
         0
     );
@@ -12121,9 +11507,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__19_getPressure() 
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__1___init__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__1___init__,
-        mod_consts[114],
+        mod_consts[112],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[115],
+        mod_consts[113],
 #endif
         codeobj_5da914633a1e00e25c92c94d9646feca,
         NULL,
@@ -12146,9 +11532,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__1___init__() {
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__20_getPressureGainOffset() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__20_getPressureGainOffset,
-        mod_consts[152],
+        mod_consts[150],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[153],
+        mod_consts[151],
 #endif
         codeobj_cff934a4aaf254dd754aa419c73d8ee8,
         NULL,
@@ -12157,7 +11543,7 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__20_getPressureGai
         NULL,
 #endif
         module_DAQ$DataAcquisition,
-        mod_consts[73],
+        mod_consts[69],
         NULL,
         0
     );
@@ -12171,9 +11557,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__20_getPressureGai
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__21_initThermocoupleAddresses() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__21_initThermocoupleAddresses,
-        mod_consts[154],
+        mod_consts[152],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[155],
+        mod_consts[153],
 #endif
         codeobj_b73bc865b24d382708cdf88f205afe0d,
         NULL,
@@ -12196,9 +11582,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__21_initThermocoup
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__22_initThermocoupleAddressesReverse() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__22_initThermocoupleAddressesReverse,
-        mod_consts[156],
+        mod_consts[154],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[157],
+        mod_consts[155],
 #endif
         codeobj_28c5f5dcab5dd5ae96929f6a0ea44f97,
         NULL,
@@ -12221,9 +11607,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__22_initThermocoup
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__23_initPressureAddresses() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__23_initPressureAddresses,
-        mod_consts[11],
+        mod_consts[10],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[158],
+        mod_consts[156],
 #endif
         codeobj_4293d160b85e0b48e89bf0cead2e9df8,
         NULL,
@@ -12246,9 +11632,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__23_initPressureAd
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__2_setTemperatureUnits() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__2_setTemperatureUnits,
-        mod_consts[116],
+        mod_consts[114],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[117],
+        mod_consts[115],
 #endif
         codeobj_44dc8b3c5215b6a66f50e8947e94b93e,
         NULL,
@@ -12271,9 +11657,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__2_setTemperatureU
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__3_setPressureUnits() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__3_setPressureUnits,
-        mod_consts[118],
+        mod_consts[116],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[119],
+        mod_consts[117],
 #endif
         codeobj_e0346f17561f156251f613c6b300a9ee,
         NULL,
@@ -12296,9 +11682,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__3_setPressureUnit
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__4_setSelectedThermocouples() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__4_setSelectedThermocouples,
-        mod_consts[120],
+        mod_consts[118],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[121],
+        mod_consts[119],
 #endif
         codeobj_413cc174036ed94a2dbfcfb667244313,
         NULL,
@@ -12321,9 +11707,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__4_setSelectedTher
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__5_setSelectedPressureSensors() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__5_setSelectedPressureSensors,
-        mod_consts[122],
+        mod_consts[120],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[123],
+        mod_consts[121],
 #endif
         codeobj_ade1cc1a9028672d00607740c220a55e,
         NULL,
@@ -12346,9 +11732,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__5_setSelectedPres
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__6_attachSelectedThermocouples() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocouples,
-        mod_consts[124],
+        mod_consts[122],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[125],
+        mod_consts[123],
 #endif
         codeobj_82f32a0f49bba181393a50ea01279dfb,
         NULL,
@@ -12370,10 +11756,10 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__6_attachSelectedT
 
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__7_listAttachedThermoocouples() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_DAQ$DataAcquisition$$$function__7_listAttachedThermoocouples,
-        mod_consts[126],
+        NULL,
+        mod_consts[124],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[127],
+        mod_consts[125],
 #endif
         codeobj_4ccbc51d382637190ece7097458ab6f0,
         NULL,
@@ -12396,9 +11782,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__7_listAttachedThe
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached,
-        mod_consts[128],
+        mod_consts[126],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[129],
+        mod_consts[127],
 #endif
         codeobj_a89f561e42f86eb5762757476f9ff3cb,
         NULL,
@@ -12421,9 +11807,9 @@ static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__8_isThermocoupleA
 static PyObject *MAKE_FUNCTION_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSensors() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSensors,
-        mod_consts[130],
+        mod_consts[128],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[131],
+        mod_consts[129],
 #endif
         codeobj_2f2eb61849ac90f438d7d13dd07c9993,
         NULL,
@@ -12462,10 +11848,10 @@ function_impl_code functable_DAQ$DataAcquisition[] = {
     impl_DAQ$DataAcquisition$$$function__4_setSelectedThermocouples,
     impl_DAQ$DataAcquisition$$$function__5_setSelectedPressureSensors,
     impl_DAQ$DataAcquisition$$$function__6_attachSelectedThermocouples,
-    impl_DAQ$DataAcquisition$$$function__7_listAttachedThermoocouples,
+    NULL,
     impl_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached,
     impl_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSensors,
-    impl_DAQ$DataAcquisition$$$function__10_listAttachedPressureSensors,
+    NULL,
     impl_DAQ$DataAcquisition$$$function__11_isPressureSensorAttached,
     impl_DAQ$DataAcquisition$$$function__12_closeAllTCChannels,
     impl_DAQ$DataAcquisition$$$function__13_closeAllPressureChannels,
@@ -12631,71 +12017,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("DAQ.DataAcquisition");
+
+    // Store the module for future use.
     module_DAQ$DataAcquisition = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("DAQ.DataAcquisition: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("DAQ.DataAcquisition: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("DAQ.DataAcquisition: Calling createModuleConstants().\n");
+        PRINT_STRING("DAQ.DataAcquisition: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("DAQ.DataAcquisition: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("DAQ.DataAcquisition: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initDAQ$DataAcquisition\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_DAQ$DataAcquisition = MODULE_DICT(module_DAQ$DataAcquisition);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -12711,7 +12099,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         UPDATE_STRING_DICT0(
             moduledict_DAQ$DataAcquisition,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[13]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)const_str_plain___name__);
@@ -12761,7 +12149,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -12843,12 +12231,12 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_4bfca3acda777e4672cc0cacb05715c1 = MAKE_MODULE_FRAME(codeobj_4bfca3acda777e4672cc0cacb05715c1, module_DAQ$DataAcquisition);
@@ -12860,17 +12248,17 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[85]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[82]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[86], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[83], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -12883,17 +12271,17 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[85]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[82]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[87], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[84], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -12908,29 +12296,28 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[88], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 1;
         tmp_assign_source_4 = IMPORT_HARD_SYS();
         assert(!(tmp_assign_source_4 == NULL));
-        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_4);
+        UPDATE_STRING_DICT0(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[86], tmp_assign_source_4);
     }
     {
         PyObject *tmp_star_imported_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[89];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_1 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_fromlist_name_1 = mod_consts[90];
-        tmp_level_name_1 = mod_consts[18];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[87];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_1 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_fromlist_value_1 = mod_consts[88];
+        tmp_level_value_1 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 3;
-        tmp_star_imported_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_star_imported_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_star_imported_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12956,18 +12343,18 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     }
     {
         PyObject *tmp_star_imported_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[91];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_2 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_fromlist_name_2 = mod_consts[90];
-        tmp_level_name_2 = mod_consts[18];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[89];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_2 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_fromlist_value_2 = mod_consts[88];
+        tmp_level_value_2 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 4;
-        tmp_star_imported_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_star_imported_2 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_star_imported_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12993,18 +12380,18 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     }
     {
         PyObject *tmp_star_imported_3;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[92];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_3 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_fromlist_name_3 = mod_consts[90];
-        tmp_level_name_3 = mod_consts[18];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[90];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_3 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_fromlist_value_3 = mod_consts[88];
+        tmp_level_value_3 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 5;
-        tmp_star_imported_3 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_star_imported_3 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_star_imported_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13031,18 +12418,18 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[93];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[94];
-        tmp_level_name_4 = mod_consts[18];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[91];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[92];
+        tmp_level_value_4 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 7;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13057,11 +12444,11 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_DAQ$DataAcquisition,
-                mod_consts[75],
-                mod_consts[18]
+                mod_consts[72],
+                mod_consts[17]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[75]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[72]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -13075,23 +12462,23 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[75], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[72], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[95];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[96];
-        tmp_level_name_5 = mod_consts[18];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[93];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[94];
+        tmp_level_value_5 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 8;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13107,7 +12494,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_DAQ$DataAcquisition,
                 mod_consts[21],
-                mod_consts[18]
+                mod_consts[17]
             );
         } else {
             tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[21]);
@@ -13129,18 +12516,18 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[97];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[98];
-        tmp_level_name_6 = mod_consts[18];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[95];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[96];
+        tmp_level_value_6 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 9;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13155,11 +12542,11 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_DAQ$DataAcquisition,
-                mod_consts[42],
-                mod_consts[18]
+                mod_consts[38],
+                mod_consts[17]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[42]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[38]);
         }
 
         Py_DECREF(tmp_import_name_from_3);
@@ -13173,22 +12560,22 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[42], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[38], tmp_assign_source_7);
     }
     {
         PyObject *tmp_star_imported_4;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[99];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_7 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_fromlist_name_7 = mod_consts[90];
-        tmp_level_name_7 = mod_consts[18];
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[97];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_7 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_fromlist_value_7 = mod_consts[88];
+        tmp_level_value_7 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 10;
-        tmp_star_imported_4 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
+        tmp_star_imported_4 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
         if (tmp_star_imported_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13215,18 +12602,18 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_8;
-        PyObject *tmp_globals_arg_name_8;
-        PyObject *tmp_locals_arg_name_8;
-        PyObject *tmp_fromlist_name_8;
-        PyObject *tmp_level_name_8;
-        tmp_name_name_8 = mod_consts[100];
-        tmp_globals_arg_name_8 = (PyObject *)moduledict_DAQ$DataAcquisition;
-        tmp_locals_arg_name_8 = Py_None;
-        tmp_fromlist_name_8 = mod_consts[101];
-        tmp_level_name_8 = mod_consts[18];
+        PyObject *tmp_name_value_8;
+        PyObject *tmp_globals_arg_value_8;
+        PyObject *tmp_locals_arg_value_8;
+        PyObject *tmp_fromlist_value_8;
+        PyObject *tmp_level_value_8;
+        tmp_name_value_8 = mod_consts[98];
+        tmp_globals_arg_value_8 = (PyObject *)moduledict_DAQ$DataAcquisition;
+        tmp_locals_arg_value_8 = Py_None;
+        tmp_fromlist_value_8 = mod_consts[99];
+        tmp_level_value_8 = mod_consts[17];
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 11;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_8, tmp_locals_arg_name_8, tmp_fromlist_name_8, tmp_level_name_8);
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13242,7 +12629,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_DAQ$DataAcquisition,
                 mod_consts[26],
-                mod_consts[18]
+                mod_consts[17]
             );
         } else {
             tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[26]);
@@ -13270,47 +12657,39 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     // Tried code:
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[102];
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[100];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[102];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 13;
-
-            goto try_except_handler_1;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[100];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
         goto condexpr_end_1;
         condexpr_false_1:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
         condexpr_end_1:;
-        tmp_bases_name_1 = mod_consts[103];
-        tmp_assign_source_10 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = mod_consts[101];
+        tmp_assign_source_10 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13325,16 +12704,16 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_1__metaclass = tmp_assign_source_10;
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[102];
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[100];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -13343,7 +12722,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[102];
+    tmp_dictdel_key = mod_consts[100];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -13358,10 +12737,10 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_1 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_1, mod_consts[104]);
+        tmp_expression_value_1 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_1, mod_consts[102]);
         tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -13372,14 +12751,14 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[104]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[102]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13389,12 +12768,12 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        tmp_args_name_1 = mod_consts[105];
+        tmp_args_value_1 = mod_consts[103];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 13;
-        tmp_assign_source_11 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_11 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13409,14 +12788,14 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         tmp_class_creation_1__prepared = tmp_assign_source_11;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_3;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_3 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[106]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_3 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[104]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -13427,8 +12806,8 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -13438,18 +12817,18 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[107];
+        tmp_left_value_1 = mod_consts[105];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[108];
-        tmp_getattr_default_1 = mod_consts[109];
+        tmp_getattr_attr_1 = mod_consts[106];
+        tmp_getattr_default_1 = mod_consts[107];
         tmp_tuple_element_1 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13461,17 +12840,17 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_1;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_4;
+            PyObject *tmp_expression_value_4;
             PyObject *tmp_type_arg_1;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_1 = tmp_class_creation_1__prepared;
-            tmp_expression_name_4 = BUILTIN_TYPE1(tmp_type_arg_1);
-            assert(!(tmp_expression_name_4 == NULL));
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[108]);
-            Py_DECREF(tmp_expression_name_4);
+            tmp_expression_value_4 = BUILTIN_TYPE1(tmp_type_arg_1);
+            assert(!(tmp_expression_value_4 == NULL));
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[106]);
+            Py_DECREF(tmp_expression_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -13482,17 +12861,17 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13532,8 +12911,8 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[110];
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[111], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[108];
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[109], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -13544,8 +12923,8 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
             goto try_except_handler_3;
         }
-        tmp_dictset_value = mod_consts[112];
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[113], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[110];
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[111], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -13587,7 +12966,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__1___init__();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[114], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[112], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13603,7 +12982,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__2_setTemperatureUnits();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[116], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[114], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13619,7 +12998,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__3_setPressureUnits();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[118], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[116], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13635,7 +13014,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__4_setSelectedThermocouples();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[120], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[118], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13651,7 +13030,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__5_setSelectedPressureSensors();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[122], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[120], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13667,7 +13046,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__6_attachSelectedThermocouples();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[124], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[122], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13683,7 +13062,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__7_listAttachedThermoocouples();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[126], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[124], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13699,7 +13078,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__8_isThermocoupleAttached();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[128], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[126], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13715,7 +13094,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__9_attachSelectedPressureSensors();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[130], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[128], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13731,7 +13110,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__10_listAttachedPressureSensors();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[132], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[130], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13747,7 +13126,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__11_isPressureSensorAttached();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[134], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[132], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13763,7 +13142,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__12_closeAllTCChannels();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[136], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[134], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13779,7 +13158,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__13_closeAllPressureChannels();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[138], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[136], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13795,7 +13174,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__14_tryToGatherTemperature();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[140], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[138], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13811,7 +13190,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__15_getInternalTemperature();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[142], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[140], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13827,7 +13206,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__16_closeInternalTemperature();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[144], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[142], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13843,7 +13222,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__17_attachInternalTemperature();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[146], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[144], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13859,7 +13238,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__18_tryToGatherPressure();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[148], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[146], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13875,7 +13254,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__19_getPressure();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[150], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[148], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13891,7 +13270,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__20_getPressureGainOffset();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[152], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[150], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13907,7 +13286,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__21_initThermocoupleAddresses();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[154], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[152], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13923,7 +13302,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__22_initThermocoupleAddressesReverse();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[156], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[154], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -13939,7 +13318,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
 
         tmp_dictset_value = MAKE_FUNCTION_DAQ$DataAcquisition$$$function__23_initPressureAddresses();
 
-        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[11], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13, mod_consts[10], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -14008,24 +13387,24 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         skip_nested_handling_1:;
         {
             PyObject *tmp_assign_source_14;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_2;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_2 = mod_consts[112];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-            tmp_tuple_element_2 = mod_consts[103];
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_2 = mod_consts[110];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_2);
+            tmp_tuple_element_2 = mod_consts[101];
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_2);
             tmp_tuple_element_2 = locals_DAQ$DataAcquisition$$$class__1_DataAcquisition_13;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_2);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_4bfca3acda777e4672cc0cacb05715c1->m_frame.f_lineno = 13;
-            tmp_assign_source_14 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_14 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_14 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -14104,7 +13483,7 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
         exception_lineno = 13;
         goto try_except_handler_1;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[112], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)mod_consts[110], tmp_assign_source_13);
     }
     goto try_end_1;
     // Exception handler code:
@@ -14118,7 +13497,8 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
     Py_XDECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
@@ -14162,17 +13542,33 @@ PyObject *modulecode_DAQ$DataAcquisition(PyObject *module, struct Nuitka_MetaPat
     goto module_exception_exit;
 
     frame_no_exception_2:;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("DAQ.DataAcquisition", false);
+
     return module_DAQ$DataAcquisition;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_DAQ$DataAcquisition, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("DAQ$DataAcquisition", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

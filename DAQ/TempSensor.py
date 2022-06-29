@@ -46,4 +46,5 @@ class ThermocoupleSensor(BaseSensor):
         if units == "F": #The value given by the daq is in celsius by default
             numeric = celsiusToFahrenheit(numeric)
 
-        return "{0:4.1f}".format(numeric), numeric
+        #return "{0:4.1f}".format(numeric), numeric
+        return "{0:.0f}".format(numeric), numeric # No need for tenths of a degree

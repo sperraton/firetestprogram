@@ -72,6 +72,7 @@ class MainFrame(wx.Frame):
         # self.warnToggle = True
         self.detachedWarn = False # Stop additional triggers of the warn dialog
         self.channelErrorWarn = False # Stop additional triggers of the warn dialog
+        self.acknowledgedChannelError = [] # Keep track of which channels we have shown a warning dialog
 
         # ensure the parent's __init__ is called
         super(MainFrame, self).__init__(*args, **kw)
@@ -175,7 +176,7 @@ class MainFrame(wx.Frame):
         #------------------------------------------------------------
         self.fileMenu = wx.Menu()
         self.startItem = self.fileMenu.Append(-1, "&New Test ...\tCtrl-N", "Begin capturing. data from sensors")
-        self.stopItem = self.fileMenu.Append(-1, "Stop Current Test", "Halt the current test")
+        self.stopItem = self.fileMenu.Append(-1, "Stop Current Test", "Halt the currently running test")
         self.stopItem.Enable(False)
         self.extendItem = self.fileMenu.Append(-1, "Extend test time")
         self.extendItem.Enable(False)
@@ -576,7 +577,7 @@ class MainFrame(wx.Frame):
 
         self.controller.testSettings.testTimeMinutes += amtMinutes
         self.graphNotebook.graphTab.setTimeAxis(self.controller.testSettings.testTimeMinutes)
-        self.createTargetCurveArray(self.controller.testSettings.testTimeMinutes)
+        #self.createTargetCurveArray(self.controller.testSettings.testTimeMinutes)
 
 
     def lostChannelWarning(self, sensorType, channel):
@@ -588,7 +589,7 @@ class MainFrame(wx.Frame):
         # TODO replace this with a notify component and not a dialog.
         self.detachedWarn = True
         self.dlg = wx.MessageDialog(self, "The computer has lost connection with one or more of the sensor channels.", "Warning!", wx.OK | wx.ICON_WARNING)
-        self.dlg.ShowModal()
+        self.dlg.Show()
         self.dlg.Destroy()
         self.detachedWarn = False
 
@@ -599,15 +600,28 @@ class MainFrame(wx.Frame):
         """
         if self.channelErrorWarn: return # Don't fire a bunch of dialogs in response to several error events
 
-        # TODO replace this with a notify component and not a dialog.
         if sensorType == "TC":
+            if channel >= self.controller.getNumThermocouples():
+                return
+            if not self.controller.isChannelInSelectedThermocouples(channel):
+                return
             sensType = "thermocouple"
-        else:
+
+        elif sensorType == "PRESS":
+            if channel >= self.controller.getNumPressure():
+                return
+            if not self.controller.isChannelInSelectedPressure(channel):
+                return
             sensType = "pressure sensor"
 
+        else:
+            # Do nothin
+            return
+
+        # TODO replace this with a notify component and not a dialog.
         self.channelErrorWarn = True
         self.dlg = wx.MessageDialog(self, f"The {sensType} channel {channel} measurement is out of range. Check the senor wiring.", "Warning!", wx.OK | wx.ICON_WARNING)
-        self.dlg.ShowModal()
+        self.dlg.Show()
         self.dlg.Destroy()
         self.channelErrorWarn = False
 

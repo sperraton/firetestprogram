@@ -1,5 +1,5 @@
 /* Generated code for Python module 'wx.lib.dialogs'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_wx$lib$dialogs;
 PyDictObject *moduledict_wx$lib$dialogs;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[316];
+static PyObject *mod_consts[302];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[302];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("wx.lib.dialogs"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 302; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_wx$lib$dialogs(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "wx.lib.dialogs");
+    for (int i = 0; i < 302; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -99,38 +111,38 @@ static PyCodeObject *codeobj_6045582912d31d189ae691d21125c773;
 static PyCodeObject *codeobj_8c1cc27bfbfc327aa91aea25682f146e;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[288]); CHECK_OBJECT(module_filename_obj);
-    codeobj_e8988418a56cc5ae0d2c031e0bdbfe19 = MAKE_CODEOBJECT(module_filename_obj, 332, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[289], mod_consts[290], NULL, 1, 0, 0);
-    codeobj_dc55c18e9540cdcf3af9f8f80b382550 = MAKE_CODEOBJECT(module_filename_obj, 88, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[289], mod_consts[291], NULL, 1, 0, 0);
-    codeobj_bbd2b86034d70864b6354653fd63ca1e = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[292], NULL, NULL, 0, 0, 0);
-    codeobj_8e711e1d17c5dc44a2d1582e8b1515dd = MAKE_CODEOBJECT(module_filename_obj, 121, CO_NOFREE, mod_consts[82], mod_consts[293], NULL, 0, 0, 0);
-    codeobj_a73dac51d2bf7110dbc3fe03a006664d = MAKE_CODEOBJECT(module_filename_obj, 83, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[80], mod_consts[294], NULL, 1, 0, 0);
-    codeobj_39a1cc9e21bbb5374eee34677c7c498c = MAKE_CODEOBJECT(module_filename_obj, 86, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[247], mod_consts[295], NULL, 1, 0, 0);
-    codeobj_bfcc903229d29b2fde04fa9bdba80bac = MAKE_CODEOBJECT(module_filename_obj, 475, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[287], mod_consts[296], NULL, 7, 0, 0);
-    codeobj_2eee4c7a3db578544197e5fab7580b1b = MAKE_CODEOBJECT(module_filename_obj, 349, CO_NOFREE, mod_consts[215], mod_consts[293], NULL, 0, 0, 0);
-    codeobj_e7894c67cb5df39bb6c999c30e7f794a = MAKE_CODEOBJECT(module_filename_obj, 50, CO_NOFREE, mod_consts[243], mod_consts[293], NULL, 0, 0, 0);
-    codeobj_fee1167259a37f75bcac3bbf20d83d7f = MAKE_CODEOBJECT(module_filename_obj, 466, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[195], mod_consts[297], NULL, 2, 0, 0);
-    codeobj_0dc973a47349253c61f3d3e24555aae0 = MAKE_CODEOBJECT(module_filename_obj, 28, CO_NOFREE, mod_consts[116], mod_consts[293], NULL, 0, 0, 0);
-    codeobj_8b7cc34082d1f4d313d0ee627a5f5d93 = MAKE_CODEOBJECT(module_filename_obj, 360, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[298], NULL, 9, 0, 0);
-    codeobj_9e19b3d03fc1d947a08f42cc610223a1 = MAKE_CODEOBJECT(module_filename_obj, 29, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[299], NULL, 7, 0, 0);
-    codeobj_4275fc9af4339977835fe83fd6989824 = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[300], NULL, 8, 0, 0);
-    codeobj_1277f6eab2304286114d17d1124b5538 = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[301], NULL, 2, 0, 0);
-    codeobj_2ed8aca840d6f27357092490abe4e327 = MAKE_CODEOBJECT(module_filename_obj, 127, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[252], mod_consts[294], NULL, 1, 0, 0);
-    codeobj_040a7744b0bfba8c48213cb48b07c4a2 = MAKE_CODEOBJECT(module_filename_obj, 261, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[264], mod_consts[302], NULL, 4, 0, 0);
-    codeobj_4425cb7f2fefba044e45ed844fe1c6eb = MAKE_CODEOBJECT(module_filename_obj, 177, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[303], NULL, 3, 0, 0);
-    codeobj_9e36103939176f702db473637800efa1 = MAKE_CODEOBJECT(module_filename_obj, 196, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[258], mod_consts[304], NULL, 3, 0, 0);
-    codeobj_c204e5a7af9d2c9d247cb8456f77a4fa = MAKE_CODEOBJECT(module_filename_obj, 302, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[277], mod_consts[305], NULL, 6, 0, 0);
-    codeobj_f37c6ff84ca90fc8b58271c15aee2354 = MAKE_CODEOBJECT(module_filename_obj, 274, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[120], mod_consts[306], NULL, 6, 0, 0);
-    codeobj_f60094791f731b3ab327d32cfdf6a3e0 = MAKE_CODEOBJECT(module_filename_obj, 146, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[255], mod_consts[307], NULL, 4, 0, 0);
-    codeobj_d7762a8d6adbb5a222eeead2a9cfe10f = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[259], mod_consts[308], NULL, 3, 0, 0);
-    codeobj_b3ee13d2ba477cad74cec60079400461 = MAKE_CODEOBJECT(module_filename_obj, 249, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[114], mod_consts[309], NULL, 5, 0, 0);
-    codeobj_1803ef2ceafae27215a2bc007f9f303f = MAKE_CODEOBJECT(module_filename_obj, 326, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[280], mod_consts[310], NULL, 6, 0, 0);
-    codeobj_67ccc0b84d8013ce858aea6c0d91bda9 = MAKE_CODEOBJECT(module_filename_obj, 290, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[271], mod_consts[311], NULL, 6, 0, 0);
-    codeobj_e089bfaeca1e9f5497fc0534a832a2a5 = MAKE_CODEOBJECT(module_filename_obj, 130, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[55], mod_consts[312], NULL, 1, 0, 0);
-    codeobj_e9dca28e9b0af14399ad7ab5f79d353c = MAKE_CODEOBJECT(module_filename_obj, 296, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[275], mod_consts[311], NULL, 6, 0, 0);
-    codeobj_4d02958583cfe9ede3af83a4da6d0e22 = MAKE_CODEOBJECT(module_filename_obj, 265, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[265], mod_consts[313], NULL, 5, 0, 0);
-    codeobj_6045582912d31d189ae691d21125c773 = MAKE_CODEOBJECT(module_filename_obj, 317, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[279], mod_consts[314], NULL, 5, 0, 0);
-    codeobj_8c1cc27bfbfc327aa91aea25682f146e = MAKE_CODEOBJECT(module_filename_obj, 240, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[260], mod_consts[315], NULL, 5, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[274]); CHECK_OBJECT(module_filename_obj);
+    codeobj_e8988418a56cc5ae0d2c031e0bdbfe19 = MAKE_CODEOBJECT(module_filename_obj, 332, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[275], mod_consts[276], NULL, 1, 0, 0);
+    codeobj_dc55c18e9540cdcf3af9f8f80b382550 = MAKE_CODEOBJECT(module_filename_obj, 88, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[275], mod_consts[277], NULL, 1, 0, 0);
+    codeobj_bbd2b86034d70864b6354653fd63ca1e = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[278], NULL, NULL, 0, 0, 0);
+    codeobj_8e711e1d17c5dc44a2d1582e8b1515dd = MAKE_CODEOBJECT(module_filename_obj, 121, CO_NOFREE, mod_consts[74], mod_consts[279], NULL, 0, 0, 0);
+    codeobj_a73dac51d2bf7110dbc3fe03a006664d = MAKE_CODEOBJECT(module_filename_obj, 83, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[280], NULL, 1, 0, 0);
+    codeobj_39a1cc9e21bbb5374eee34677c7c498c = MAKE_CODEOBJECT(module_filename_obj, 86, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[233], mod_consts[281], NULL, 1, 0, 0);
+    codeobj_bfcc903229d29b2fde04fa9bdba80bac = MAKE_CODEOBJECT(module_filename_obj, 475, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[273], mod_consts[282], NULL, 7, 0, 0);
+    codeobj_2eee4c7a3db578544197e5fab7580b1b = MAKE_CODEOBJECT(module_filename_obj, 349, CO_NOFREE, mod_consts[201], mod_consts[279], NULL, 0, 0, 0);
+    codeobj_e7894c67cb5df39bb6c999c30e7f794a = MAKE_CODEOBJECT(module_filename_obj, 50, CO_NOFREE, mod_consts[229], mod_consts[279], NULL, 0, 0, 0);
+    codeobj_fee1167259a37f75bcac3bbf20d83d7f = MAKE_CODEOBJECT(module_filename_obj, 466, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[182], mod_consts[283], NULL, 2, 0, 0);
+    codeobj_0dc973a47349253c61f3d3e24555aae0 = MAKE_CODEOBJECT(module_filename_obj, 28, CO_NOFREE, mod_consts[108], mod_consts[279], NULL, 0, 0, 0);
+    codeobj_8b7cc34082d1f4d313d0ee627a5f5d93 = MAKE_CODEOBJECT(module_filename_obj, 360, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[284], NULL, 9, 0, 0);
+    codeobj_9e19b3d03fc1d947a08f42cc610223a1 = MAKE_CODEOBJECT(module_filename_obj, 29, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[285], NULL, 7, 0, 0);
+    codeobj_4275fc9af4339977835fe83fd6989824 = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[286], NULL, 8, 0, 0);
+    codeobj_1277f6eab2304286114d17d1124b5538 = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[287], NULL, 2, 0, 0);
+    codeobj_2ed8aca840d6f27357092490abe4e327 = MAKE_CODEOBJECT(module_filename_obj, 127, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[238], mod_consts[280], NULL, 1, 0, 0);
+    codeobj_040a7744b0bfba8c48213cb48b07c4a2 = MAKE_CODEOBJECT(module_filename_obj, 261, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[250], mod_consts[288], NULL, 4, 0, 0);
+    codeobj_4425cb7f2fefba044e45ed844fe1c6eb = MAKE_CODEOBJECT(module_filename_obj, 177, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[243], mod_consts[289], NULL, 3, 0, 0);
+    codeobj_9e36103939176f702db473637800efa1 = MAKE_CODEOBJECT(module_filename_obj, 196, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[244], mod_consts[290], NULL, 3, 0, 0);
+    codeobj_c204e5a7af9d2c9d247cb8456f77a4fa = MAKE_CODEOBJECT(module_filename_obj, 302, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[263], mod_consts[291], NULL, 6, 0, 0);
+    codeobj_f37c6ff84ca90fc8b58271c15aee2354 = MAKE_CODEOBJECT(module_filename_obj, 274, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[112], mod_consts[292], NULL, 6, 0, 0);
+    codeobj_f60094791f731b3ab327d32cfdf6a3e0 = MAKE_CODEOBJECT(module_filename_obj, 146, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[241], mod_consts[293], NULL, 4, 0, 0);
+    codeobj_d7762a8d6adbb5a222eeead2a9cfe10f = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[245], mod_consts[294], NULL, 3, 0, 0);
+    codeobj_b3ee13d2ba477cad74cec60079400461 = MAKE_CODEOBJECT(module_filename_obj, 249, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[106], mod_consts[295], NULL, 5, 0, 0);
+    codeobj_1803ef2ceafae27215a2bc007f9f303f = MAKE_CODEOBJECT(module_filename_obj, 326, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[266], mod_consts[296], NULL, 6, 0, 0);
+    codeobj_67ccc0b84d8013ce858aea6c0d91bda9 = MAKE_CODEOBJECT(module_filename_obj, 290, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[297], NULL, 6, 0, 0);
+    codeobj_e089bfaeca1e9f5497fc0534a832a2a5 = MAKE_CODEOBJECT(module_filename_obj, 130, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[50], mod_consts[298], NULL, 1, 0, 0);
+    codeobj_e9dca28e9b0af14399ad7ab5f79d353c = MAKE_CODEOBJECT(module_filename_obj, 296, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[261], mod_consts[297], NULL, 6, 0, 0);
+    codeobj_4d02958583cfe9ede3af83a4da6d0e22 = MAKE_CODEOBJECT(module_filename_obj, 265, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[251], mod_consts[299], NULL, 5, 0, 0);
+    codeobj_6045582912d31d189ae691d21125c773 = MAKE_CODEOBJECT(module_filename_obj, 317, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[265], mod_consts[300], NULL, 5, 0, 0);
+    codeobj_8c1cc27bfbfc327aa91aea25682f146e = MAKE_CODEOBJECT(module_filename_obj, 240, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[246], mod_consts[301], NULL, 5, 0, 0);
 }
 
 // The module function declarations.
@@ -249,7 +261,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    int tmp_res;
     bool tmp_result;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
@@ -293,22 +304,22 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -318,7 +329,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -330,21 +341,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_2 = par_parent;
-        tmp_args_element_name_3 = mod_consts[3];
+        tmp_args_element_value_2 = par_parent;
+        tmp_args_element_value_3 = mod_consts[3];
         CHECK_OBJECT(par_caption);
-        tmp_args_element_name_4 = par_caption;
+        tmp_args_element_value_4 = par_caption;
         CHECK_OBJECT(par_pos);
-        tmp_args_element_name_5 = par_pos;
+        tmp_args_element_value_5 = par_pos;
         CHECK_OBJECT(par_size);
-        tmp_args_element_name_6 = par_size;
+        tmp_args_element_value_6 = par_size;
         CHECK_OBJECT(par_style);
-        tmp_args_element_name_7 = par_style;
+        tmp_args_element_value_7 = par_style;
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 32;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS7(
                 tmp_called_instance_1,
                 mod_consts[2],
@@ -369,18 +380,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        if (par_pos == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[4]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 33;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_pos);
         tmp_iter_arg_1 = par_pos;
         tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
@@ -473,7 +473,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[5];
+            exception_value = mod_consts[4];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -494,7 +494,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -530,7 +531,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -554,28 +556,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         nuitka_bool tmp_condition_result_1;
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_and_left_value_1_object_1;
-        int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_and_right_value_1_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_x);
-        tmp_compexpr_left_1 = var_x;
-        tmp_compexpr_right_1 = mod_consts[3];
-        tmp_tmp_and_left_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_and_left_value_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_x;
+        tmp_cmp_expr_right_1 = mod_consts[3];
+        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_and_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -585,25 +579,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_and_left_value_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_left_value_1_object_1);
-
-            exception_lineno = 34;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_and_left_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_1_object_1);
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_and_left_value_1);
 
             exception_lineno = 34;
             type_description_1 = "oooooooooooo";
@@ -615,11 +596,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             goto and_left_1;
         }
         and_right_1:;
+        assert(tmp_and_left_value_1 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(var_y);
-        tmp_compexpr_left_2 = var_y;
-        tmp_compexpr_right_2 = mod_consts[3];
-        tmp_tmp_and_right_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_and_right_value_1_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_y;
+        tmp_cmp_expr_right_2 = mod_consts[3];
+        tmp_and_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_and_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -629,19 +611,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_and_right_value_1_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_right_value_1_object_1);
-
-            exception_lineno = 34;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_and_right_value_1 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_right_value_1_object_1);
         tmp_condition_result_1 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
@@ -652,29 +621,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 35;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[7]);
-        if (tmp_called_name_1 == NULL) {
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[5]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -684,37 +643,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 35;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[8]);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_args_element_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[6]);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 35;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 35;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_8);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_8);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_8);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_8);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -731,24 +690,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     // Tried code:
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_6;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_kw_call_arg_value_2_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_6;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -758,8 +716,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[9]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[7]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -769,110 +727,89 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto try_except_handler_4;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 37;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_tuple_element_1 = mod_consts[3];
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        CHECK_OBJECT(par_self);
+        tmp_kw_call_arg_value_0_1 = par_self;
+        tmp_kw_call_arg_value_1_1 = mod_consts[3];
         CHECK_OBJECT(par_msg);
-        tmp_tuple_element_1 = par_msg;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[10];
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_kw_call_arg_value_2_1 = par_msg;
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 38;
             type_description_1 = "oooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[11]);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[8]);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 38;
             type_description_1 = "oooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 38;
             type_description_1 = "oooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[12]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[9]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 38;
             type_description_1 = "oooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_dict_value_1 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_dict_value_1 == NULL) {
+        tmp_kw_call_dict_value_0_1 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 38;
             type_description_1 = "oooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 37;
-        tmp_assign_source_6 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1, tmp_kw_call_arg_value_2_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS3_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[10]);
+        }
+
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -887,24 +824,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         tmp_assign_unpack_1__assign_source = tmp_assign_source_6;
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(tmp_assign_unpack_1__assign_source);
-        tmp_assattr_name_1 = tmp_assign_unpack_1__assign_source;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 37;
-            type_description_1 = "oooooooooooo";
-            goto try_except_handler_4;
-        }
-
+        tmp_assattr_value_1 = tmp_assign_unpack_1__assign_source;
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[13], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[11], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -952,19 +878,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     tmp_assign_unpack_1__assign_source = NULL;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_11;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_11;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -974,8 +900,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[14]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[12]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -985,55 +911,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_9 = par_self;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            exception_lineno = 40;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_args_element_name_9 = par_self;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 40;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[15]);
-        if (tmp_args_element_name_10 == NULL) {
+        tmp_args_element_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[13]);
+        if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 40;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_11 = mod_consts[16];
+        tmp_args_element_value_11 = mod_consts[14];
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 40;
         {
-            PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10, tmp_args_element_name_11};
-            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_9, tmp_args_element_value_10, tmp_args_element_value_11};
+            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_10);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_10);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1053,7 +968,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         CHECK_OBJECT(var_ok);
         tmp_called_instance_2 = var_ok;
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 41;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[17]);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[15]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1068,17 +983,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_10;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_expression_value_10;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1088,8 +1003,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[18]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[16]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1099,37 +1014,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 43;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[19]);
-        if (tmp_args_element_name_12 == NULL) {
+        tmp_args_element_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[17]);
+        if (tmp_args_element_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 43;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 43;
-        tmp_assign_source_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_12);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_12);
+        tmp_assign_source_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_12);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_12);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1144,19 +1059,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         var_sizer = tmp_assign_source_9;
     }
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_14;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_args_element_value_14;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_called_instance_4;
         PyObject *tmp_called_instance_5;
         CHECK_OBJECT(var_sizer);
-        tmp_expression_name_11 = var_sizer;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[20]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_11 = var_sizer;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[18]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1166,25 +1081,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 44;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_12 = par_self;
-        tmp_args_element_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[13]);
-        if (tmp_args_element_name_13 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_12 = par_self;
+        tmp_args_element_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[11]);
+        if (tmp_args_element_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 44;
             type_description_1 = "oooooooooooo";
@@ -1200,54 +1104,54 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_13);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_13);
 
             exception_lineno = 44;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 44;
-        tmp_called_instance_4 = CALL_METHOD_WITH_ARGS1(
+        tmp_called_instance_4 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_5,
-            mod_consts[21],
-            &PyTuple_GET_ITEM(mod_consts[22], 0)
+            mod_consts[19],
+            PyTuple_GET_ITEM(mod_consts[20], 0)
         );
 
         if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_13);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_13);
 
             exception_lineno = 44;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 44;
-        tmp_called_instance_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[23]);
+        tmp_called_instance_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[21]);
         Py_DECREF(tmp_called_instance_4);
         if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_13);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_13);
 
             exception_lineno = 44;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 44;
-        tmp_args_element_name_14 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[24]);
+        tmp_args_element_value_14 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[22]);
         Py_DECREF(tmp_called_instance_3);
-        if (tmp_args_element_name_14 == NULL) {
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_13);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_13);
 
             exception_lineno = 44;
             type_description_1 = "oooooooooooo";
@@ -1255,13 +1159,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 44;
         {
-            PyObject *call_args[] = {tmp_args_element_name_13, tmp_args_element_name_14};
-            tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_13, tmp_args_element_value_14};
+            tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_13);
-        Py_DECREF(tmp_args_element_name_14);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_13);
+        Py_DECREF(tmp_args_element_value_14);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1275,29 +1179,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_4);
     }
     {
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_args_element_value_16;
         PyObject *tmp_called_instance_6;
         PyObject *tmp_called_instance_7;
         PyObject *tmp_called_instance_8;
-        if (var_sizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 45;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_13 = var_sizer;
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[20]);
-        if (tmp_called_name_6 == NULL) {
+        CHECK_OBJECT(var_sizer);
+        tmp_expression_value_13 = var_sizer;
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[18]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1307,19 +1200,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_ok == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[26]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 45;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_15 = var_ok;
+        CHECK_OBJECT(var_ok);
+        tmp_args_element_value_15 = var_ok;
         tmp_called_instance_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_8 == NULL)) {
@@ -1330,45 +1212,45 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 45;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 45;
-        tmp_called_instance_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[21]);
+        tmp_called_instance_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[19]);
         if (tmp_called_instance_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 45;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 45;
-        tmp_called_instance_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[23]);
+        tmp_called_instance_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[21]);
         Py_DECREF(tmp_called_instance_7);
         if (tmp_called_instance_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 45;
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 45;
-        tmp_args_element_name_16 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[27]);
+        tmp_args_element_value_16 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[23]);
         Py_DECREF(tmp_called_instance_6);
-        if (tmp_args_element_name_16 == NULL) {
+        if (tmp_args_element_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 45;
             type_description_1 = "oooooooooooo";
@@ -1376,12 +1258,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         }
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 45;
         {
-            PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16};
-            tmp_call_result_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_15, tmp_args_element_value_16};
+            tmp_call_result_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_16);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_16);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1395,50 +1277,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_5);
     }
     {
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_called_instance_9;
         PyObject *tmp_call_result_6;
-        PyObject *tmp_args_element_name_17;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 46;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_14 = par_self;
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[28]);
-        if (tmp_called_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 46;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_sizer == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 46;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_17 = var_sizer;
+        PyObject *tmp_args_element_value_17;
+        CHECK_OBJECT(par_self);
+        tmp_called_instance_9 = par_self;
+        CHECK_OBJECT(var_sizer);
+        tmp_args_element_value_17 = var_sizer;
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 46;
-        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_17);
-        Py_DECREF(tmp_called_name_7);
+        tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_9, mod_consts[24], tmp_args_element_value_17);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1452,23 +1299,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_6);
     }
     {
-        PyObject *tmp_called_instance_9;
+        PyObject *tmp_called_instance_10;
         PyObject *tmp_call_result_7;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 47;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_9 = par_self;
+        CHECK_OBJECT(par_self);
+        tmp_called_instance_10 = par_self;
         frame_9e19b3d03fc1d947a08f42cc610223a1->m_frame.f_lineno = 47;
-        tmp_call_result_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[29]);
+        tmp_call_result_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[25]);
         if (tmp_call_result_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1549,20 +1385,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_msg);
-    par_msg = NULL;
-    Py_XDECREF(par_caption);
-    par_caption = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
     CHECK_OBJECT(var_x);
     Py_DECREF(var_x);
     var_x = NULL;
@@ -1572,9 +1394,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     CHECK_OBJECT(var_text);
     Py_DECREF(var_text);
     var_text = NULL;
-    Py_XDECREF(var_ok);
+    CHECK_OBJECT(var_ok);
+    Py_DECREF(var_ok);
     var_ok = NULL;
-    Py_XDECREF(var_sizer);
+    CHECK_OBJECT(var_sizer);
+    Py_DECREF(var_sizer);
     var_sizer = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -1588,20 +1412,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_msg);
-    par_msg = NULL;
-    Py_XDECREF(par_caption);
-    par_caption = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
     Py_XDECREF(var_x);
     var_x = NULL;
     Py_XDECREF(var_y);
@@ -1625,14 +1435,40 @@ static PyObject *impl_wx$lib$dialogs$$$function__1___init__(struct Nuitka_Functi
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_msg);
+    Py_DECREF(par_msg);
+    CHECK_OBJECT(par_caption);
+    Py_DECREF(par_caption);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_msg);
+    Py_DECREF(par_msg);
+    CHECK_OBJECT(par_caption);
+    Py_DECREF(par_caption);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -1722,22 +1558,22 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1747,7 +1583,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1759,21 +1595,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_2 = par_parent;
-        tmp_args_element_name_3 = mod_consts[3];
+        tmp_args_element_value_2 = par_parent;
+        tmp_args_element_value_3 = mod_consts[3];
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_4 = par_title;
+        tmp_args_element_value_4 = par_title;
         CHECK_OBJECT(par_pos);
-        tmp_args_element_name_5 = par_pos;
+        tmp_args_element_value_5 = par_pos;
         CHECK_OBJECT(par_size);
-        tmp_args_element_name_6 = par_size;
+        tmp_args_element_value_6 = par_size;
         CHECK_OBJECT(par_style);
-        tmp_args_element_name_7 = par_style;
+        tmp_args_element_value_7 = par_style;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 53;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS7(
                 tmp_called_instance_1,
                 mod_consts[2],
@@ -1798,18 +1634,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        if (par_pos == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[4]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 55;
-            type_description_1 = "ooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_pos);
         tmp_iter_arg_1 = par_pos;
         tmp_assign_source_1 = MAKE_UNPACK_ITERATOR(tmp_iter_arg_1);
         if (tmp_assign_source_1 == NULL) {
@@ -1902,7 +1727,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[5];
+            exception_value = mod_consts[4];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -1923,7 +1748,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -1959,7 +1785,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -1983,28 +1810,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         nuitka_bool tmp_condition_result_1;
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_and_left_value_1_object_1;
-        int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_and_right_value_1_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_x);
-        tmp_compexpr_left_1 = var_x;
-        tmp_compexpr_right_1 = mod_consts[3];
-        tmp_tmp_and_left_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_and_left_value_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_x;
+        tmp_cmp_expr_right_1 = mod_consts[3];
+        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_and_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2014,25 +1833,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_and_left_value_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_left_value_1_object_1);
-
-            exception_lineno = 56;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_and_left_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_1_object_1);
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+            Py_DECREF(tmp_and_left_value_1);
 
             exception_lineno = 56;
             type_description_1 = "ooooooooooooooo";
@@ -2044,11 +1850,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             goto and_left_1;
         }
         and_right_1:;
+        assert(tmp_and_left_value_1 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(var_y);
-        tmp_compexpr_left_2 = var_y;
-        tmp_compexpr_right_2 = mod_consts[3];
-        tmp_tmp_and_right_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_and_right_value_1_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_y;
+        tmp_cmp_expr_right_2 = mod_consts[3];
+        tmp_and_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_and_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2058,19 +1865,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_and_right_value_1_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_right_value_1_object_1);
-
-            exception_lineno = 56;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_and_right_value_1 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_right_value_1_object_1);
         tmp_condition_result_1 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
@@ -2081,29 +1875,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 57;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[7]);
-        if (tmp_called_name_1 == NULL) {
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[5]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2113,37 +1897,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 57;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[8]);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_args_element_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[6]);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 57;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 57;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_8);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_8);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_8);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_8);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2159,18 +1943,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     branch_no_1:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_instance_2 == NULL)) {
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2180,40 +1963,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[30]);
-        if (tmp_called_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 59;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 59;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_9 = par_self;
-        tmp_args_element_name_10 = mod_consts[3];
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_9 = par_self;
+        tmp_args_element_value_10 = mod_consts[3];
         CHECK_OBJECT(par_msg);
-        tmp_args_element_name_11 = par_msg;
+        tmp_args_element_value_11 = par_msg;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 59;
         {
-            PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10, tmp_args_element_name_11};
-            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_9, tmp_args_element_value_10, tmp_args_element_value_11};
+            tmp_assign_source_6 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_2,
+                mod_consts[26],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2228,26 +1992,26 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         var_stat = tmp_assign_source_6;
     }
     {
-        PyObject *tmp_assattr_name_1;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_assattr_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_assattr_target_1;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2257,8 +2021,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[31]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[27]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2268,104 +2032,93 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_12 = par_self;
+        tmp_args_element_value_13 = mod_consts[28];
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 60;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_args_element_name_12 = par_self;
-        tmp_args_element_name_13 = mod_consts[32];
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_6 == NULL) {
+        tmp_args_element_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[29]);
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 60;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[33]);
-        if (tmp_args_element_name_14 == NULL) {
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_14);
 
             exception_lineno = 60;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_7 == NULL) {
+        tmp_args_element_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[30]);
+        if (tmp_args_element_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_14);
-
-            exception_lineno = 60;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[34]);
-        if (tmp_args_element_name_15 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_14);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_14);
 
             exception_lineno = 60;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_lst);
-        tmp_args_element_name_16 = par_lst;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_16 = par_lst;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_14);
-            Py_DECREF(tmp_args_element_name_15);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_14);
+            Py_DECREF(tmp_args_element_value_15);
 
             exception_lineno = 61;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[35]);
-        if (tmp_args_element_name_17 == NULL) {
+        tmp_args_element_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[31]);
+        if (tmp_args_element_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_14);
-            Py_DECREF(tmp_args_element_name_15);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_14);
+            Py_DECREF(tmp_args_element_value_15);
 
             exception_lineno = 61;
             type_description_1 = "ooooooooooooooo";
@@ -2373,15 +2126,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         }
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 60;
         {
-            PyObject *call_args[] = {tmp_args_element_name_12, tmp_args_element_name_13, tmp_args_element_name_14, tmp_args_element_name_15, tmp_args_element_name_16, tmp_args_element_name_17};
-            tmp_assattr_name_1 = CALL_FUNCTION_WITH_ARGS6(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_12, tmp_args_element_value_13, tmp_args_element_value_14, tmp_args_element_value_15, tmp_args_element_value_16, tmp_args_element_value_17};
+            tmp_assattr_value_1 = CALL_FUNCTION_WITH_ARGS6(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_14);
-        Py_DECREF(tmp_args_element_name_15);
-        Py_DECREF(tmp_args_element_name_17);
-        if (tmp_assattr_name_1 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_14);
+        Py_DECREF(tmp_args_element_value_15);
+        Py_DECREF(tmp_args_element_value_17);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2391,21 +2144,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 60;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[36], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[32], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2419,19 +2161,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_element_name_18;
-        PyObject *tmp_args_element_name_19;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_element_name_20;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_args_element_value_19;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_args_element_value_20;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2441,8 +2183,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[14]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[12]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2452,55 +2194,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_18 = par_self;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            exception_lineno = 63;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_args_element_name_18 = par_self;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 63;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[15]);
-        if (tmp_args_element_name_19 == NULL) {
+        tmp_args_element_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[13]);
+        if (tmp_args_element_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 63;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_20 = mod_consts[16];
+        tmp_args_element_value_20 = mod_consts[14];
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 63;
         {
-            PyObject *call_args[] = {tmp_args_element_name_18, tmp_args_element_name_19, tmp_args_element_name_20};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_18, tmp_args_element_value_19, tmp_args_element_value_20};
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_19);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_19);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2515,12 +2246,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         var_ok = tmp_assign_source_7;
     }
     {
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_3;
         CHECK_OBJECT(var_ok);
-        tmp_called_instance_2 = var_ok;
+        tmp_called_instance_3 = var_ok;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 64;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[17]);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[15]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2535,19 +2266,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_23;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_args_element_value_23;
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2557,8 +2288,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[14]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[12]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2568,55 +2299,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_21 = par_self;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            exception_lineno = 65;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_args_element_name_21 = par_self;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 65;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[37]);
-        if (tmp_args_element_name_22 == NULL) {
+        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[33]);
+        if (tmp_args_element_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 65;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_23 = mod_consts[38];
+        tmp_args_element_value_23 = mod_consts[34];
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 65;
         {
-            PyObject *call_args[] = {tmp_args_element_name_21, tmp_args_element_name_22, tmp_args_element_name_23};
-            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_21, tmp_args_element_value_22, tmp_args_element_value_23};
+            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_22);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_22);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2632,17 +2352,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_element_name_24;
-        PyObject *tmp_expression_name_14;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_args_element_value_24;
+        PyObject *tmp_expression_value_13;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2652,8 +2372,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[18]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[16]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2663,37 +2383,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 67;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_24 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[19]);
-        if (tmp_args_element_name_24 == NULL) {
+        tmp_args_element_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[17]);
+        if (tmp_args_element_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 67;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 67;
-        tmp_assign_source_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_24);
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_24);
+        tmp_assign_source_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_24);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_24);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2708,18 +2428,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         var_dlgsizer = tmp_assign_source_9;
     }
     {
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_14;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_25;
-        PyObject *tmp_args_element_name_26;
-        PyObject *tmp_args_element_name_27;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_args_element_name_28;
+        PyObject *tmp_args_element_value_25;
+        PyObject *tmp_args_element_value_26;
+        PyObject *tmp_args_element_value_27;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_args_element_value_28;
         CHECK_OBJECT(var_dlgsizer);
-        tmp_expression_name_15 = var_dlgsizer;
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[20]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_14 = var_dlgsizer;
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[18]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2730,44 +2450,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_stat);
-        tmp_args_element_name_25 = var_stat;
-        tmp_args_element_name_26 = mod_consts[39];
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_25 = var_stat;
+        tmp_args_element_value_26 = mod_consts[35];
+        tmp_expression_value_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_15 == NULL)) {
+            tmp_expression_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 68;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[40]);
-        if (tmp_args_element_name_27 == NULL) {
+        tmp_args_element_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[36]);
+        if (tmp_args_element_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 68;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_28 = mod_consts[41];
+        tmp_args_element_value_28 = mod_consts[37];
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 68;
         {
-            PyObject *call_args[] = {tmp_args_element_name_25, tmp_args_element_name_26, tmp_args_element_name_27, tmp_args_element_name_28};
-            tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_25, tmp_args_element_value_26, tmp_args_element_value_27, tmp_args_element_value_28};
+            tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_element_name_27);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_27);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2781,33 +2501,22 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_4);
     }
     {
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_16;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_29;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_args_element_name_30;
-        PyObject *tmp_args_element_name_31;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_args_element_name_32;
-        if (var_dlgsizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[42]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 69;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_17 = var_dlgsizer;
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[20]);
-        if (tmp_called_name_8 == NULL) {
+        PyObject *tmp_args_element_value_29;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_args_element_value_30;
+        PyObject *tmp_args_element_value_31;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_args_element_value_32;
+        CHECK_OBJECT(var_dlgsizer);
+        tmp_expression_value_16 = var_dlgsizer;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[18]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2817,115 +2526,104 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 69;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_18 = par_self;
-        tmp_args_element_name_29 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[36]);
-        if (tmp_args_element_name_29 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_17 = par_self;
+        tmp_args_element_value_29 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[32]);
+        if (tmp_args_element_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 69;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_30 = mod_consts[43];
-        tmp_expression_name_19 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_30 = mod_consts[38];
+        tmp_expression_value_18 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_19 == NULL)) {
-            tmp_expression_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_18 == NULL)) {
+            tmp_expression_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_19 == NULL) {
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_29);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_29);
 
             exception_lineno = 69;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[44]);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[39]);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_29);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_29);
 
             exception_lineno = 69;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_19 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_20 == NULL)) {
-            tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_19 == NULL)) {
+            tmp_expression_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_20 == NULL) {
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_29);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_29);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 69;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[40]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[36]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_29);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_29);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 69;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_31 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_31 == NULL) {
+        tmp_args_element_value_31 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_29);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_29);
 
             exception_lineno = 69;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_32 = mod_consts[41];
+        tmp_args_element_value_32 = mod_consts[37];
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 69;
         {
-            PyObject *call_args[] = {tmp_args_element_name_29, tmp_args_element_name_30, tmp_args_element_name_31, tmp_args_element_name_32};
-            tmp_call_result_5 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_8, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_29, tmp_args_element_value_30, tmp_args_element_value_31, tmp_args_element_value_32};
+            tmp_call_result_5 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_29);
-        Py_DECREF(tmp_args_element_name_31);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_element_value_29);
+        Py_DECREF(tmp_args_element_value_31);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2940,14 +2638,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_instance_4;
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_instance_4 == NULL)) {
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2958,7 +2656,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 71;
-        tmp_assign_source_10 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[45]);
+        tmp_assign_source_10 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[40]);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2973,39 +2671,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         var_btnsizer = tmp_assign_source_10;
     }
     {
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_21;
+        PyObject *tmp_called_instance_5;
         PyObject *tmp_call_result_6;
-        PyObject *tmp_args_element_name_33;
+        PyObject *tmp_args_element_value_33;
         CHECK_OBJECT(var_btnsizer);
-        tmp_expression_name_21 = var_btnsizer;
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[46]);
-        if (tmp_called_name_9 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 72;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_ok == NULL) {
-            Py_DECREF(tmp_called_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[26]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 72;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_33 = var_ok;
+        tmp_called_instance_5 = var_btnsizer;
+        CHECK_OBJECT(var_ok);
+        tmp_args_element_value_33 = var_ok;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 72;
-        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_33);
-        Py_DECREF(tmp_called_name_9);
+        tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[41], tmp_args_element_value_33);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3019,26 +2693,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_6);
     }
     {
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_instance_6;
         PyObject *tmp_call_result_7;
-        PyObject *tmp_args_element_name_34;
-        if (var_btnsizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 73;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_4 = var_btnsizer;
+        PyObject *tmp_args_element_value_34;
+        CHECK_OBJECT(var_btnsizer);
+        tmp_called_instance_6 = var_btnsizer;
         CHECK_OBJECT(var_cancel);
-        tmp_args_element_name_34 = var_cancel;
+        tmp_args_element_value_34 = var_cancel;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 73;
-        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[46], tmp_args_element_name_34);
+        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[41], tmp_args_element_value_34);
         if (tmp_call_result_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3052,23 +2715,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_7);
     }
     {
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_instance_7;
         PyObject *tmp_call_result_8;
-        if (var_btnsizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 74;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_5 = var_btnsizer;
+        CHECK_OBJECT(var_btnsizer);
+        tmp_called_instance_7 = var_btnsizer;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 74;
-        tmp_call_result_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[48]);
+        tmp_call_result_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[42]);
         if (tmp_call_result_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3082,32 +2734,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_8);
     }
     {
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_22;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_20;
         PyObject *tmp_call_result_9;
-        PyObject *tmp_args_element_name_35;
-        PyObject *tmp_args_element_name_36;
-        PyObject *tmp_args_element_name_37;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_expression_name_24;
-        PyObject *tmp_args_element_name_38;
-        if (var_dlgsizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[42]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 76;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_22 = var_dlgsizer;
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[20]);
-        if (tmp_called_name_10 == NULL) {
+        PyObject *tmp_args_element_value_35;
+        PyObject *tmp_args_element_value_36;
+        PyObject *tmp_args_element_value_37;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_args_element_value_38;
+        CHECK_OBJECT(var_dlgsizer);
+        tmp_expression_value_20 = var_dlgsizer;
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[18]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3117,98 +2758,87 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_btnsizer == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[47]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(var_btnsizer);
+        tmp_args_element_value_35 = var_btnsizer;
+        tmp_args_element_value_36 = mod_consts[35];
+        tmp_expression_value_21 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            exception_lineno = 76;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_21 == NULL)) {
+            tmp_expression_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_args_element_name_35 = var_btnsizer;
-        tmp_args_element_name_36 = mod_consts[39];
-        tmp_expression_name_23 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_23 == NULL)) {
-            tmp_expression_name_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_23 == NULL) {
+        if (tmp_expression_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 76;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[40]);
-        if (tmp_left_name_2 == NULL) {
+        tmp_left_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[36]);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 76;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_24 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_22 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_24 == NULL)) {
-            tmp_expression_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_22 == NULL)) {
+            tmp_expression_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_24 == NULL) {
+        if (tmp_expression_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 76;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[49]);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[43]);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 76;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_37 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
-        Py_DECREF(tmp_right_name_2);
-        if (tmp_args_element_name_37 == NULL) {
+        tmp_args_element_value_37 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
+        Py_DECREF(tmp_right_value_2);
+        if (tmp_args_element_value_37 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 76;
             type_description_1 = "ooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_38 = mod_consts[41];
+        tmp_args_element_value_38 = mod_consts[37];
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 76;
         {
-            PyObject *call_args[] = {tmp_args_element_name_35, tmp_args_element_name_36, tmp_args_element_name_37, tmp_args_element_name_38};
-            tmp_call_result_9 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_10, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_35, tmp_args_element_value_36, tmp_args_element_value_37, tmp_args_element_value_38};
+            tmp_call_result_9 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_10);
-        Py_DECREF(tmp_args_element_name_37);
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_element_value_37);
         if (tmp_call_result_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3222,50 +2852,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_9);
     }
     {
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_25;
+        PyObject *tmp_called_instance_8;
         PyObject *tmp_call_result_10;
-        PyObject *tmp_args_element_name_39;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 78;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_25 = par_self;
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[28]);
-        if (tmp_called_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 78;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_dlgsizer == NULL) {
-            Py_DECREF(tmp_called_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[42]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 78;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_39 = var_dlgsizer;
+        PyObject *tmp_args_element_value_39;
+        CHECK_OBJECT(par_self);
+        tmp_called_instance_8 = par_self;
+        CHECK_OBJECT(var_dlgsizer);
+        tmp_args_element_value_39 = var_dlgsizer;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 78;
-        tmp_call_result_10 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_39);
-        Py_DECREF(tmp_called_name_11);
+        tmp_call_result_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[24], tmp_args_element_value_39);
         if (tmp_call_result_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3279,35 +2874,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         Py_DECREF(tmp_call_result_10);
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        if (par_lst == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[50]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 80;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_assattr_name_2 = par_lst;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 80;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_lst);
+        tmp_assattr_value_2 = par_lst;
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[50], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[44], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3320,23 +2893,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
         }
     }
     {
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_instance_9;
         PyObject *tmp_call_result_11;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 81;
-            type_description_1 = "ooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_6 = par_self;
+        CHECK_OBJECT(par_self);
+        tmp_called_instance_9 = par_self;
         frame_4275fc9af4339977835fe83fd6989824->m_frame.f_lineno = 81;
-        tmp_call_result_11 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[29]);
+        tmp_call_result_11 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[25]);
         if (tmp_call_result_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3420,37 +2982,26 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_msg);
-    par_msg = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_lst);
-    par_lst = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
     CHECK_OBJECT(var_x);
     Py_DECREF(var_x);
     var_x = NULL;
     CHECK_OBJECT(var_y);
     Py_DECREF(var_y);
     var_y = NULL;
-    Py_XDECREF(var_stat);
+    CHECK_OBJECT(var_stat);
+    Py_DECREF(var_stat);
     var_stat = NULL;
-    Py_XDECREF(var_ok);
+    CHECK_OBJECT(var_ok);
+    Py_DECREF(var_ok);
     var_ok = NULL;
-    Py_XDECREF(var_cancel);
+    CHECK_OBJECT(var_cancel);
+    Py_DECREF(var_cancel);
     var_cancel = NULL;
-    Py_XDECREF(var_dlgsizer);
+    CHECK_OBJECT(var_dlgsizer);
+    Py_DECREF(var_dlgsizer);
     var_dlgsizer = NULL;
-    Py_XDECREF(var_btnsizer);
+    CHECK_OBJECT(var_btnsizer);
+    Py_DECREF(var_btnsizer);
     var_btnsizer = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -3464,22 +3015,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_msg);
-    par_msg = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_lst);
-    par_lst = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
     Py_XDECREF(var_x);
     var_x = NULL;
     Py_XDECREF(var_y);
@@ -3507,14 +3042,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__2___init__(struct Nuitka_Functi
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_msg);
+    Py_DECREF(par_msg);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_lst);
+    Py_DECREF(par_lst);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_msg);
+    Py_DECREF(par_msg);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_lst);
+    Py_DECREF(par_lst);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3540,13 +3105,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__3_GetValue(struct Nuitka_Functi
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_a73dac51d2bf7110dbc3fe03a006664d = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_a73dac51d2bf7110dbc3fe03a006664d)) {
         Py_XDECREF(cache_frame_a73dac51d2bf7110dbc3fe03a006664d);
 
@@ -3576,10 +3136,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__3_GetValue(struct Nuitka_Functi
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[36]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3591,7 +3151,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__3_GetValue(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         frame_a73dac51d2bf7110dbc3fe03a006664d->m_frame.f_lineno = 84;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[51]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[45]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -3623,7 +3183,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__3_GetValue(struct Nuitka_Functi
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -3662,50 +3222,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__3_GetValue(struct Nuitka_Functi
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3786,10 +3320,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[36]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3801,7 +3335,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
             goto frame_exception_exit_1;
         }
         frame_39a1cc9e21bbb5374eee34677c7c498c->m_frame.f_lineno = 87;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[51]);
+        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[45]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3914,14 +3448,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
         {
             PyObject *tmp_append_list_1;
             PyObject *tmp_append_value_1;
-            PyObject *tmp_expression_name_2;
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_subscript_name_1;
+            PyObject *tmp_expression_value_2;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_subscript_value_1;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
             if (par_self == NULL) {
 
-                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[6]);
+                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[46]);
                 exception_tb = NULL;
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
@@ -3931,9 +3465,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
                 goto try_except_handler_3;
             }
 
-            tmp_expression_name_3 = par_self;
-            tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[50]);
-            if (tmp_expression_name_2 == NULL) {
+            tmp_expression_value_3 = par_self;
+            tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[44]);
+            if (tmp_expression_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3944,9 +3478,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
                 goto try_except_handler_3;
             }
             CHECK_OBJECT(outline_0_var_i);
-            tmp_subscript_name_1 = outline_0_var_i;
-            tmp_append_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-            Py_DECREF(tmp_expression_name_2);
+            tmp_subscript_value_1 = outline_0_var_i;
+            tmp_append_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+            Py_DECREF(tmp_expression_value_2);
             if (tmp_append_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3990,7 +3524,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
         return NULL;
         // Return handler code:
         try_return_handler_3:;
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -4009,7 +3544,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
         exception_tb = NULL;
         exception_lineno = 0;
 
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -4210,9 +3746,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(var_sel);
+    CHECK_OBJECT(var_sel);
+    Py_DECREF(var_sel);
     var_sel = NULL;
     CHECK_OBJECT(var_val);
     Py_DECREF(var_val);
@@ -4229,8 +3764,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
     Py_XDECREF(var_sel);
     var_sel = NULL;
     Py_XDECREF(var_val);
@@ -4248,14 +3781,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__4_GetValueString(struct Nuitka_
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4284,13 +3819,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
     int tmp_res;
     static struct Nuitka_FrameObject *cache_frame_1277f6eab2304286114d17d1124b5538 = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_1277f6eab2304286114d17d1124b5538)) {
         Py_XDECREF(cache_frame_1277f6eab2304286114d17d1124b5538);
 
@@ -4319,13 +3849,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_returned);
-        tmp_assattr_name_1 = par_returned;
+        tmp_assattr_value_1 = par_returned;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[52], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[47], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4338,21 +3868,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_assattr_value_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_returned);
-        tmp_compexpr_left_1 = par_returned;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_1 = par_returned;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4362,7 +3892,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[15]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[13]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4373,17 +3903,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = PyTuple_New(2);
+        tmp_cmp_expr_right_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_2;
-            PyTuple_SET_ITEM(tmp_compexpr_right_1, 0, tmp_tuple_element_1);
-            tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            PyObject *tmp_expression_value_2;
+            PyTuple_SET_ITEM(tmp_cmp_expr_right_1, 0, tmp_tuple_element_1);
+            tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_2 == NULL)) {
-                tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_2 == NULL)) {
+                tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_2 == NULL) {
+            if (tmp_expression_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4393,7 +3923,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
                 type_description_1 = "oo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[53]);
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[48]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -4404,17 +3934,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
                 type_description_1 = "oo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_compexpr_right_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_cmp_expr_right_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_compexpr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -4425,10 +3955,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_assattr_name_2 = (tmp_res == 1) ? Py_True : Py_False;
+        tmp_assattr_value_2 = (tmp_res == 1) ? Py_True : Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[54], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[49], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4441,17 +3971,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
         }
     }
     {
-        PyObject *tmp_assattr_name_3;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_assattr_value_3;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_assattr_target_3;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4462,10 +3992,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_returned);
-        tmp_args_element_name_1 = par_returned;
+        tmp_args_element_value_1 = par_returned;
         frame_1277f6eab2304286114d17d1124b5538->m_frame.f_lineno = 125;
-        tmp_assattr_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        if (tmp_assattr_name_3 == NULL) {
+        tmp_assattr_value_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4477,8 +4007,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[55], tmp_assattr_name_3);
-        Py_DECREF(tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[50], tmp_assattr_value_3);
+        Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4538,59 +4068,31 @@ static PyObject *impl_wx$lib$dialogs$$$function__5___init__(struct Nuitka_Functi
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_returned);
-    par_returned = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_self);
-    Py_DECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_returned);
-    par_returned = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_returned);
+    Py_DECREF(par_returned);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_returned);
+    Py_DECREF(par_returned);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4616,13 +4118,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__6___repr__(struct Nuitka_Functi
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_2ed8aca840d6f27357092490abe4e327 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_2ed8aca840d6f27357092490abe4e327)) {
         Py_XDECREF(cache_frame_2ed8aca840d6f27357092490abe4e327);
 
@@ -4652,10 +4149,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__6___repr__(struct Nuitka_Functi
     // Framed code:
     {
         PyObject *tmp_unicode_arg_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_unicode_arg_1 = LOOKUP_ATTRIBUTE_DICT_SLOT(tmp_expression_name_1);
+        tmp_expression_value_1 = par_self;
+        tmp_unicode_arg_1 = LOOKUP_ATTRIBUTE_DICT_SLOT(tmp_expression_value_1);
         if (tmp_unicode_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4698,7 +4195,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__6___repr__(struct Nuitka_Functi
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -4737,50 +4234,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__6___repr__(struct Nuitka_Functi
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -4806,13 +4277,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_e089bfaeca1e9f5497fc0534a832a2a5 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_e089bfaeca1e9f5497fc0534a832a2a5)) {
         Py_XDECREF(cache_frame_e089bfaeca1e9f5497fc0534a832a2a5);
 
@@ -4842,18 +4308,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_ret);
-        tmp_compexpr_left_1 = par_ret;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_1 = par_ret;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4863,8 +4329,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[15]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[13]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4874,8 +4340,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -4894,25 +4360,25 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
         assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
-    tmp_return_value = mod_consts[56];
+    tmp_return_value = mod_consts[51];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     goto branch_end_1;
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_ret);
-        tmp_compexpr_left_2 = par_ret;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_2 = par_ret;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4922,8 +4388,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[37]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[33]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4933,8 +4399,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_condition_result_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -4953,25 +4419,25 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
         assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
-    tmp_return_value = mod_consts[38];
+    tmp_return_value = mod_consts[34];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     goto branch_end_2;
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_ret);
-        tmp_compexpr_left_3 = par_ret;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_3 = par_ret;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4981,8 +4447,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[53]);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[48]);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4992,8 +4458,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -5012,25 +4478,25 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
         assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
-    tmp_return_value = mod_consts[57];
+    tmp_return_value = mod_consts[52];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     goto branch_end_3;
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(par_ret);
-        tmp_compexpr_left_4 = par_ret;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_4 = par_ret;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5040,8 +4506,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[58]);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[53]);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5051,8 +4517,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -5071,7 +4537,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
         assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
-    tmp_return_value = mod_consts[59];
+    tmp_return_value = mod_consts[54];
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     branch_no_4:;
@@ -5096,7 +4562,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -5135,55 +4601,27 @@ static PyObject *impl_wx$lib$dialogs$$$function__7_returnedString(struct Nuitka_
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    CHECK_OBJECT(par_ret);
-    Py_DECREF(par_ret);
-    par_ret = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    CHECK_OBJECT(par_ret);
-    Py_DECREF(par_ret);
-    par_ret = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_ret);
+    Py_DECREF(par_ret);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_ret);
+    Py_DECREF(par_ret);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -5255,21 +4693,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_5;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_5;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5279,8 +4717,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5291,45 +4729,45 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
-        tmp_args_element_name_2 = mod_consts[3];
-        tmp_args_element_name_3 = mod_consts[60];
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_1 = par_parent;
+        tmp_args_element_value_2 = mod_consts[3];
+        tmp_args_element_value_3 = mod_consts[55];
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 147;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[33]);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[29]);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 147;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[61];
+        tmp_args_element_value_5 = mod_consts[56];
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 147;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_4);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5346,10 +4784,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -5367,16 +4805,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_dlg);
-        tmp_args_element_name_6 = var_dlg;
-        tmp_args_element_name_7 = mod_consts[3];
-        tmp_args_element_name_8 = mod_consts[62];
-        tmp_args_element_name_9 = mod_consts[63];
+        tmp_args_element_value_6 = var_dlg;
+        tmp_args_element_value_7 = mod_consts[3];
+        tmp_args_element_value_8 = mod_consts[57];
+        tmp_args_element_value_9 = mod_consts[58];
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 149;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7, tmp_args_element_name_8, tmp_args_element_name_9};
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8, tmp_args_element_value_9};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS4(
                 tmp_called_instance_1,
-                mod_consts[30],
+                mod_consts[26],
                 call_args
             );
         }
@@ -5395,20 +4833,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_args_element_name_14;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_args_element_value_14;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_instance_2 == NULL)) {
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5418,42 +4855,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[9]);
-        if (tmp_called_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 150;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_dlg == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 150;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_10 = var_dlg;
-        tmp_args_element_name_11 = mod_consts[3];
+        CHECK_OBJECT(var_dlg);
+        tmp_args_element_value_10 = var_dlg;
+        tmp_args_element_value_11 = mod_consts[3];
         CHECK_OBJECT(par_searchText);
-        tmp_args_element_name_12 = par_searchText;
-        tmp_args_element_name_13 = mod_consts[65];
-        tmp_args_element_name_14 = mod_consts[66];
+        tmp_args_element_value_12 = par_searchText;
+        tmp_args_element_value_13 = mod_consts[59];
+        tmp_args_element_value_14 = mod_consts[60];
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 150;
         {
-            PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11, tmp_args_element_name_12, tmp_args_element_name_13, tmp_args_element_name_14};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11, tmp_args_element_value_12, tmp_args_element_value_13, tmp_args_element_value_14};
+            tmp_assign_source_2 = CALL_METHOD_WITH_ARGS5(
+                tmp_called_instance_2,
+                mod_consts[7],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5468,39 +4886,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         var_wSearchText = tmp_assign_source_2;
     }
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_15;
+        PyObject *tmp_args_element_value_15;
         CHECK_OBJECT(var_wSearchText);
-        tmp_expression_name_4 = var_wSearchText;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[67]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 151;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_searchText == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 151;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_15 = par_searchText;
+        tmp_called_instance_3 = var_wSearchText;
+        CHECK_OBJECT(par_searchText);
+        tmp_args_element_value_15 = par_searchText;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 151;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_15);
-        Py_DECREF(tmp_called_name_3);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[61], tmp_args_element_value_15);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5514,24 +4908,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_18;
-        PyObject *tmp_args_element_name_19;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_args_element_value_19;
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_3;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5541,8 +4935,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[14]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[12]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5552,72 +4946,61 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_dlg == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(var_dlg);
+        tmp_args_element_value_16 = var_dlg;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 152;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_args_element_name_16 = var_dlg;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_6 == NULL) {
+        tmp_args_element_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[13]);
+        if (tmp_args_element_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 152;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[15]);
-        if (tmp_args_element_name_17 == NULL) {
+        tmp_args_element_value_18 = mod_consts[62];
+        tmp_args_element_value_19 = mod_consts[63];
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_17);
 
             exception_lineno = 152;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_18 = mod_consts[69];
-        tmp_args_element_name_19 = mod_consts[70];
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_7 == NULL) {
+        tmp_args_element_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[30]);
+        if (tmp_args_element_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_17);
-
-            exception_lineno = 152;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[34]);
-        if (tmp_args_element_name_20 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_17);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_17);
 
             exception_lineno = 152;
             type_description_1 = "ooooooooo";
@@ -5625,14 +5008,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 152;
         {
-            PyObject *call_args[] = {tmp_args_element_name_16, tmp_args_element_name_17, tmp_args_element_name_18, tmp_args_element_name_19, tmp_args_element_name_20};
-            tmp_called_instance_2 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_16, tmp_args_element_value_17, tmp_args_element_value_18, tmp_args_element_value_19, tmp_args_element_value_20};
+            tmp_called_instance_4 = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_17);
-        Py_DECREF(tmp_args_element_name_20);
-        if (tmp_called_instance_2 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_17);
+        Py_DECREF(tmp_args_element_value_20);
+        if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5643,8 +5026,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 152;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[17]);
-        Py_DECREF(tmp_called_instance_2);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[15]);
+        Py_DECREF(tmp_called_instance_4);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5658,23 +5041,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         Py_DECREF(tmp_call_result_3);
     }
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_element_name_23;
-        PyObject *tmp_args_element_name_24;
-        PyObject *tmp_args_element_name_25;
-        PyObject *tmp_expression_name_10;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_23;
+        PyObject *tmp_args_element_value_24;
+        PyObject *tmp_args_element_value_25;
+        PyObject *tmp_expression_value_8;
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5684,8 +5067,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[14]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[12]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5695,72 +5078,61 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_dlg == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(var_dlg);
+        tmp_args_element_value_21 = var_dlg;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_7 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 153;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_args_element_name_21 = var_dlg;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_9 == NULL) {
+        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[33]);
+        if (tmp_args_element_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 153;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[37]);
-        if (tmp_args_element_name_22 == NULL) {
+        tmp_args_element_value_23 = mod_consts[34];
+        tmp_args_element_value_24 = mod_consts[64];
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_22);
 
             exception_lineno = 153;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_23 = mod_consts[38];
-        tmp_args_element_name_24 = mod_consts[71];
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_10 == NULL) {
+        tmp_args_element_value_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[30]);
+        if (tmp_args_element_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_22);
-
-            exception_lineno = 153;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_25 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[34]);
-        if (tmp_args_element_name_25 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_22);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_22);
 
             exception_lineno = 153;
             type_description_1 = "ooooooooo";
@@ -5768,13 +5140,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 153;
         {
-            PyObject *call_args[] = {tmp_args_element_name_21, tmp_args_element_name_22, tmp_args_element_name_23, tmp_args_element_name_24, tmp_args_element_name_25};
-            tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_21, tmp_args_element_value_22, tmp_args_element_value_23, tmp_args_element_value_24, tmp_args_element_value_25};
+            tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_22);
-        Py_DECREF(tmp_args_element_name_25);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_22);
+        Py_DECREF(tmp_args_element_value_25);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5789,23 +5161,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_args_element_name_26;
-        PyObject *tmp_args_element_name_27;
-        PyObject *tmp_args_element_name_28;
-        PyObject *tmp_args_element_name_29;
-        PyObject *tmp_args_element_name_30;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_31;
-        PyObject *tmp_expression_name_13;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_args_element_value_26;
+        PyObject *tmp_args_element_value_27;
+        PyObject *tmp_args_element_value_28;
+        PyObject *tmp_args_element_value_29;
+        PyObject *tmp_args_element_value_30;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_args_element_value_31;
+        PyObject *tmp_expression_value_11;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5815,8 +5187,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[72]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[65]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5826,73 +5198,62 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_dlg == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(var_dlg);
+        tmp_args_element_value_26 = var_dlg;
+        tmp_args_element_value_27 = mod_consts[3];
+        tmp_args_element_value_28 = mod_consts[66];
+        tmp_args_element_value_29 = mod_consts[67];
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            exception_lineno = 155;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_args_element_name_26 = var_dlg;
-        tmp_args_element_name_27 = mod_consts[3];
-        tmp_args_element_name_28 = mod_consts[73];
-        tmp_args_element_name_29 = mod_consts[74];
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 156;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_30 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[34]);
-        if (tmp_args_element_name_30 == NULL) {
+        tmp_args_element_value_30 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[30]);
+        if (tmp_args_element_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 156;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_30);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_30);
 
             exception_lineno = 156;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_31 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[75]);
-        if (tmp_args_element_name_31 == NULL) {
+        tmp_args_element_value_31 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[68]);
+        if (tmp_args_element_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_30);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_30);
 
             exception_lineno = 156;
             type_description_1 = "ooooooooo";
@@ -5900,13 +5261,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 155;
         {
-            PyObject *call_args[] = {tmp_args_element_name_26, tmp_args_element_name_27, tmp_args_element_name_28, tmp_args_element_name_29, tmp_args_element_name_30, tmp_args_element_name_31};
-            tmp_assign_source_3 = CALL_FUNCTION_WITH_ARGS6(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_26, tmp_args_element_value_27, tmp_args_element_value_28, tmp_args_element_value_29, tmp_args_element_value_30, tmp_args_element_value_31};
+            tmp_assign_source_3 = CALL_FUNCTION_WITH_ARGS6(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_30);
-        Py_DECREF(tmp_args_element_name_31);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_30);
+        Py_DECREF(tmp_args_element_value_31);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5944,15 +5305,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_instance_5;
         PyObject *tmp_call_result_5;
         CHECK_OBJECT(var_wWholeWord);
-        tmp_called_instance_3 = var_wWholeWord;
+        tmp_called_instance_5 = var_wWholeWord;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 159;
-        tmp_call_result_5 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_3,
-            mod_consts[67],
-            &PyTuple_GET_ITEM(mod_consts[22], 0)
+        tmp_call_result_5 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_5,
+            mod_consts[61],
+            PyTuple_GET_ITEM(mod_consts[20], 0)
         );
 
         if (tmp_call_result_5 == NULL) {
@@ -5970,23 +5331,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     branch_no_1:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_element_name_32;
-        PyObject *tmp_args_element_name_33;
-        PyObject *tmp_args_element_name_34;
-        PyObject *tmp_args_element_name_35;
-        PyObject *tmp_args_element_name_36;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_args_element_name_37;
-        PyObject *tmp_expression_name_16;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_args_element_value_32;
+        PyObject *tmp_args_element_value_33;
+        PyObject *tmp_args_element_value_34;
+        PyObject *tmp_args_element_value_35;
+        PyObject *tmp_args_element_value_36;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_args_element_value_37;
+        PyObject *tmp_expression_value_14;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5996,8 +5357,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[72]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[65]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6007,73 +5368,62 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_dlg == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(var_dlg);
+        tmp_args_element_value_32 = var_dlg;
+        tmp_args_element_value_33 = mod_consts[3];
+        tmp_args_element_value_34 = mod_consts[69];
+        tmp_args_element_value_35 = mod_consts[70];
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_13 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 161;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_args_element_name_32 = var_dlg;
-        tmp_args_element_name_33 = mod_consts[3];
-        tmp_args_element_name_34 = mod_consts[76];
-        tmp_args_element_name_35 = mod_consts[77];
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_15 == NULL) {
+        tmp_args_element_value_36 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[30]);
+        if (tmp_args_element_value_36 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 161;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_36 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[34]);
-        if (tmp_args_element_name_36 == NULL) {
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_36);
 
             exception_lineno = 161;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_16 == NULL) {
+        tmp_args_element_value_37 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[68]);
+        if (tmp_args_element_value_37 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
-            Py_DECREF(tmp_args_element_name_36);
-
-            exception_lineno = 161;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_37 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[75]);
-        if (tmp_args_element_name_37 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
-            Py_DECREF(tmp_args_element_name_36);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_36);
 
             exception_lineno = 161;
             type_description_1 = "ooooooooo";
@@ -6081,13 +5431,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 161;
         {
-            PyObject *call_args[] = {tmp_args_element_name_32, tmp_args_element_name_33, tmp_args_element_name_34, tmp_args_element_name_35, tmp_args_element_name_36, tmp_args_element_name_37};
-            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS6(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_32, tmp_args_element_value_33, tmp_args_element_value_34, tmp_args_element_value_35, tmp_args_element_value_36, tmp_args_element_value_37};
+            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS6(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_element_name_36);
-        Py_DECREF(tmp_args_element_name_37);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_36);
+        Py_DECREF(tmp_args_element_value_37);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6125,15 +5475,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_instance_6;
         PyObject *tmp_call_result_6;
         CHECK_OBJECT(var_wCase);
-        tmp_called_instance_4 = var_wCase;
+        tmp_called_instance_6 = var_wCase;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 164;
-        tmp_call_result_6 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_4,
-            mod_consts[67],
-            &PyTuple_GET_ITEM(mod_consts[22], 0)
+        tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_6,
+            mod_consts[61],
+            PyTuple_GET_ITEM(mod_consts[20], 0)
         );
 
         if (tmp_call_result_6 == NULL) {
@@ -6150,28 +5500,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     }
     branch_no_2:;
     {
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_call_result_7;
-        PyObject *tmp_args_element_name_38;
-        PyObject *tmp_args_element_name_39;
+        PyObject *tmp_args_element_value_38;
+        PyObject *tmp_args_element_value_39;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        if (var_wSearchText == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 166;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_17 = var_wSearchText;
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[79]);
-        if (tmp_called_name_8 == NULL) {
+        PyObject *tmp_called_instance_7;
+        CHECK_OBJECT(var_wSearchText);
+        tmp_expression_value_15 = var_wSearchText;
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[71]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6181,39 +5520,28 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_38 = mod_consts[39];
-        if (var_wSearchText == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 166;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_5 = var_wSearchText;
+        tmp_args_element_value_38 = mod_consts[35];
+        CHECK_OBJECT(var_wSearchText);
+        tmp_called_instance_7 = var_wSearchText;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 166;
-        tmp_len_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[80]);
+        tmp_len_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[72]);
         if (tmp_len_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 166;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_39 = BUILTIN_LEN(tmp_len_arg_1);
+        tmp_args_element_value_39 = BUILTIN_LEN(tmp_len_arg_1);
         Py_DECREF(tmp_len_arg_1);
-        if (tmp_args_element_name_39 == NULL) {
+        if (tmp_args_element_value_39 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 166;
             type_description_1 = "ooooooooo";
@@ -6221,12 +5549,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 166;
         {
-            PyObject *call_args[] = {tmp_args_element_name_38, tmp_args_element_name_39};
-            tmp_call_result_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_38, tmp_args_element_value_39};
+            tmp_call_result_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_39);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_39);
         if (tmp_call_result_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6240,23 +5568,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         Py_DECREF(tmp_call_result_7);
     }
     {
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_instance_8;
         PyObject *tmp_call_result_8;
-        if (var_wSearchText == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 167;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_6 = var_wSearchText;
+        CHECK_OBJECT(var_wSearchText);
+        tmp_called_instance_8 = var_wSearchText;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 167;
-        tmp_call_result_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[81]);
+        tmp_call_result_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[73]);
         if (tmp_call_result_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6271,16 +5588,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_args_element_name_40;
-        PyObject *tmp_called_instance_7;
-        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_40;
+        PyObject *tmp_called_instance_9;
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_9 == NULL)) {
-            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_9 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6290,22 +5607,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_dlg == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 169;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_7 = var_dlg;
+        CHECK_OBJECT(var_dlg);
+        tmp_called_instance_9 = var_dlg;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 169;
-        tmp_args_element_name_40 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[83]);
-        if (tmp_args_element_name_40 == NULL) {
+        tmp_args_element_value_40 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[75]);
+        if (tmp_args_element_value_40 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6316,8 +5622,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 169;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_40);
-        Py_DECREF(tmp_args_element_name_40);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_40);
+        Py_DECREF(tmp_args_element_value_40);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6332,25 +5638,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         var_result = tmp_assign_source_5;
     }
     {
-        PyObject *tmp_assattr_name_1;
-        PyObject *tmp_called_instance_8;
+        PyObject *tmp_assattr_value_1;
+        PyObject *tmp_called_instance_10;
         PyObject *tmp_assattr_target_1;
-        if (var_wSearchText == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 170;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_8 = var_wSearchText;
+        CHECK_OBJECT(var_wSearchText);
+        tmp_called_instance_10 = var_wSearchText;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 170;
-        tmp_assattr_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[80]);
-        if (tmp_assattr_name_1 == NULL) {
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[72]);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6362,8 +5657,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[68], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[76], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -6376,12 +5671,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
-        PyObject *tmp_called_instance_9;
+        PyObject *tmp_assattr_value_2;
+        PyObject *tmp_called_instance_11;
         PyObject *tmp_assattr_target_2;
         if (var_wWholeWord == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[84]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6391,10 +5686,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_9 = var_wWholeWord;
+        tmp_called_instance_11 = var_wWholeWord;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 171;
-        tmp_assattr_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[80]);
-        if (tmp_assattr_name_2 == NULL) {
+        tmp_assattr_value_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_11, mod_consts[72]);
+        if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6406,8 +5701,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_2 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[85], tmp_assattr_name_2);
-        Py_DECREF(tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[78], tmp_assattr_value_2);
+        Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -6420,12 +5715,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
     }
     {
-        PyObject *tmp_assattr_name_3;
-        PyObject *tmp_called_instance_10;
+        PyObject *tmp_assattr_value_3;
+        PyObject *tmp_called_instance_12;
         PyObject *tmp_assattr_target_3;
         if (var_wCase == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[86]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6435,10 +5730,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_10 = var_wCase;
+        tmp_called_instance_12 = var_wCase;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 172;
-        tmp_assattr_name_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[80]);
-        if (tmp_assattr_name_3 == NULL) {
+        tmp_assattr_value_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_12, mod_consts[72]);
+        if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6450,8 +5745,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_3 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[87], tmp_assattr_name_3);
-        Py_DECREF(tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[80], tmp_assattr_value_3);
+        Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -6464,23 +5759,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
         }
     }
     {
-        PyObject *tmp_called_instance_11;
+        PyObject *tmp_called_instance_13;
         PyObject *tmp_call_result_9;
-        if (var_dlg == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 173;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_11 = var_dlg;
+        CHECK_OBJECT(var_dlg);
+        tmp_called_instance_13 = var_dlg;
         frame_f60094791f731b3ab327d32cfdf6a3e0->m_frame.f_lineno = 173;
-        tmp_call_result_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_11, mod_consts[88]);
+        tmp_call_result_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_13, mod_consts[81]);
         if (tmp_call_result_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6559,19 +5843,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_searchText);
-    par_searchText = NULL;
-    CHECK_OBJECT(par_wholeWordsOnly);
-    Py_DECREF(par_wholeWordsOnly);
-    par_wholeWordsOnly = NULL;
-    CHECK_OBJECT(par_caseSensitive);
-    Py_DECREF(par_caseSensitive);
-    par_caseSensitive = NULL;
-    Py_XDECREF(var_dlg);
+    CHECK_OBJECT(var_dlg);
+    Py_DECREF(var_dlg);
     var_dlg = NULL;
-    Py_XDECREF(var_wSearchText);
+    CHECK_OBJECT(var_wSearchText);
+    Py_DECREF(var_wSearchText);
     var_wSearchText = NULL;
     Py_XDECREF(var_wWholeWord);
     var_wWholeWord = NULL;
@@ -6592,16 +5868,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_searchText);
-    par_searchText = NULL;
-    CHECK_OBJECT(par_wholeWordsOnly);
-    Py_DECREF(par_wholeWordsOnly);
-    par_wholeWordsOnly = NULL;
-    CHECK_OBJECT(par_caseSensitive);
-    Py_DECREF(par_caseSensitive);
-    par_caseSensitive = NULL;
     Py_XDECREF(var_dlg);
     var_dlg = NULL;
     Py_XDECREF(var_wSearchText);
@@ -6625,14 +5891,28 @@ static PyObject *impl_wx$lib$dialogs$$$function__8_findDialog(struct Nuitka_Func
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_searchText);
+    Py_DECREF(par_searchText);
+    CHECK_OBJECT(par_wholeWordsOnly);
+    Py_DECREF(par_wholeWordsOnly);
+    CHECK_OBJECT(par_caseSensitive);
+    Py_DECREF(par_caseSensitive);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_searchText);
+    Py_DECREF(par_searchText);
+    CHECK_OBJECT(par_wholeWordsOnly);
+    Py_DECREF(par_wholeWordsOnly);
+    CHECK_OBJECT(par_caseSensitive);
+    Py_DECREF(par_caseSensitive);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6662,8 +5942,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     bool tmp_result;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_4425cb7f2fefba044e45ed844fe1c6eb = NULL;
+    PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -6724,8 +6004,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -6743,15 +6023,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_colorData);
-        tmp_args_element_name_2 = par_colorData;
+        tmp_args_element_value_2 = par_colorData;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 179;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[89],
+                mod_consts[82],
                 call_args
             );
         }
@@ -6774,7 +6054,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
@@ -6792,9 +6072,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_3 = par_parent;
+        tmp_args_element_value_3 = par_parent;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 181;
-        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[89], tmp_args_element_name_3);
+        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[82], tmp_args_element_value_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6815,7 +6095,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_4 = var_dialog;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 182;
-        tmp_called_instance_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[90]);
+        tmp_called_instance_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[83]);
         if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6827,10 +6107,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 182;
-        tmp_call_result_1 = CALL_METHOD_WITH_ARGS1(
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_3,
-            mod_consts[91],
-            &PyTuple_GET_ITEM(mod_consts[22], 0)
+            mod_consts[84],
+            PyTuple_GET_ITEM(mod_consts[20], 0)
         );
 
         Py_DECREF(tmp_called_instance_3);
@@ -6849,12 +6129,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     branch_end_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_color);
-        tmp_compexpr_left_1 = par_color;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_color;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -6866,10 +6146,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         PyObject *tmp_called_instance_5;
         PyObject *tmp_called_instance_6;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6881,7 +6161,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
 
         tmp_called_instance_6 = var_dialog;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 185;
-        tmp_called_instance_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[90]);
+        tmp_called_instance_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[83]);
         if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6893,9 +6173,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_color);
-        tmp_args_element_name_4 = par_color;
+        tmp_args_element_value_4 = par_color;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 185;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[93], tmp_args_element_name_4);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[86], tmp_args_element_value_4);
         Py_DECREF(tmp_called_instance_5);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6912,16 +6192,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     branch_no_2:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_5;
         PyObject *tmp_called_instance_7;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6933,7 +6213,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         }
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6945,8 +6225,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
 
         tmp_called_instance_7 = var_dialog;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 187;
-        tmp_args_element_name_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[83]);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_args_element_value_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[75]);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6957,8 +6237,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 187;
-        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_5);
-        Py_DECREF(tmp_args_element_name_5);
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6973,12 +6253,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         var_result = tmp_assign_source_3;
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_8;
         PyObject *tmp_assattr_target_1;
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6990,8 +6270,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
 
         tmp_called_instance_8 = var_dialog;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 188;
-        tmp_assattr_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[90]);
-        if (tmp_assattr_name_1 == NULL) {
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[83]);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7003,8 +6283,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[94], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[87], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7017,14 +6297,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_called_instance_9;
         PyObject *tmp_called_instance_10;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(var_result);
-        tmp_expression_name_1 = var_result;
-        tmp_called_instance_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[94]);
+        tmp_expression_value_1 = var_result;
+        tmp_called_instance_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[87]);
         if (tmp_called_instance_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7036,7 +6316,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 189;
-        tmp_called_instance_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[95]);
+        tmp_called_instance_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[88]);
         Py_DECREF(tmp_called_instance_10);
         if (tmp_called_instance_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7049,9 +6329,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 189;
-        tmp_assattr_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[96]);
+        tmp_assattr_value_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[89]);
         Py_DECREF(tmp_called_instance_9);
-        if (tmp_assattr_name_2 == NULL) {
+        if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7061,21 +6341,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (var_result == NULL) {
-            Py_DECREF(tmp_assattr_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 189;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_2 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[98], tmp_assattr_name_2);
-        Py_DECREF(tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[90], tmp_assattr_value_2);
+        Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7092,7 +6361,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         PyObject *tmp_call_result_3;
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7104,7 +6373,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
 
         tmp_called_instance_11 = var_dialog;
         frame_4425cb7f2fefba044e45ed844fe1c6eb->m_frame.f_lineno = 190;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_11, mod_consts[88]);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_11, mod_consts[81]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7117,21 +6386,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
         }
         Py_DECREF(tmp_call_result_3);
     }
-    if (var_result == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 191;
-        type_description_1 = "ooooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_result;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_4425cb7f2fefba044e45ed844fe1c6eb);
@@ -7141,16 +6395,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_4425cb7f2fefba044e45ed844fe1c6eb);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -7196,19 +6440,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_result);
+    tmp_return_value = var_result;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_colorData);
-    par_colorData = NULL;
-    Py_XDECREF(par_color);
-    par_color = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
-    Py_XDECREF(var_result);
+    CHECK_OBJECT(var_result);
+    Py_DECREF(var_result);
     var_result = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -7222,12 +6465,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_colorData);
-    par_colorData = NULL;
-    Py_XDECREF(par_color);
-    par_color = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -7245,14 +6482,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__9_colorDialog(struct Nuitka_Fun
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_colorData);
+    Py_DECREF(par_colorData);
+    CHECK_OBJECT(par_color);
+    Py_DECREF(par_color);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_colorData);
+    Py_DECREF(par_colorData);
+    CHECK_OBJECT(par_color);
+    Py_DECREF(par_color);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7282,8 +6529,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     bool tmp_result;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_9e36103939176f702db473637800efa1 = NULL;
+    PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7344,8 +6591,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -7363,15 +6610,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_colourData);
-        tmp_args_element_name_2 = par_colourData;
+        tmp_args_element_value_2 = par_colourData;
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 198;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[89],
+                mod_consts[82],
                 call_args
             );
         }
@@ -7394,7 +6641,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
@@ -7412,9 +6659,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_3 = par_parent;
+        tmp_args_element_value_3 = par_parent;
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 200;
-        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[89], tmp_args_element_name_3);
+        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[82], tmp_args_element_value_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7435,7 +6682,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_4 = var_dialog;
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 201;
-        tmp_called_instance_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[90]);
+        tmp_called_instance_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[83]);
         if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7447,10 +6694,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 201;
-        tmp_call_result_1 = CALL_METHOD_WITH_ARGS1(
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_3,
-            mod_consts[91],
-            &PyTuple_GET_ITEM(mod_consts[22], 0)
+            mod_consts[84],
+            PyTuple_GET_ITEM(mod_consts[20], 0)
         );
 
         Py_DECREF(tmp_called_instance_3);
@@ -7469,12 +6716,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     branch_end_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_colour);
-        tmp_compexpr_left_1 = par_colour;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_colour;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -7483,14 +6730,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_called_instance_5;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7502,8 +6749,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
 
         tmp_called_instance_5 = var_dialog;
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 204;
-        tmp_expression_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[90]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[83]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7513,9 +6760,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[93]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[86]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7525,25 +6772,25 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[98]);
+        tmp_args_element_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[90]);
 
-        if (unlikely(tmp_args_element_name_4 == NULL)) {
-            tmp_args_element_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[98]);
+        if (unlikely(tmp_args_element_value_4 == NULL)) {
+            tmp_args_element_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
         }
 
-        if (tmp_args_element_name_4 == NULL) {
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 204;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 204;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_1);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7559,16 +6806,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     branch_no_2:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_5;
         PyObject *tmp_called_instance_6;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7580,7 +6827,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
         }
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7592,8 +6839,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
 
         tmp_called_instance_6 = var_dialog;
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 206;
-        tmp_args_element_name_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[83]);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_args_element_value_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[75]);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7604,8 +6851,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 206;
-        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_5);
-        Py_DECREF(tmp_args_element_name_5);
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7620,12 +6867,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
         var_result = tmp_assign_source_3;
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_7;
         PyObject *tmp_assattr_target_1;
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7637,8 +6884,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
 
         tmp_called_instance_7 = var_dialog;
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 207;
-        tmp_assattr_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[90]);
-        if (tmp_assattr_name_1 == NULL) {
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[83]);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7650,8 +6897,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[99], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[91], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7664,14 +6911,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_called_instance_8;
         PyObject *tmp_called_instance_9;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(var_result);
-        tmp_expression_name_2 = var_result;
-        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_expression_value_2 = var_result;
+        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[91]);
         if (tmp_called_instance_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7683,7 +6930,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 208;
-        tmp_called_instance_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[95]);
+        tmp_called_instance_8 = CALL_METHOD_NO_ARGS(tmp_called_instance_9, mod_consts[88]);
         Py_DECREF(tmp_called_instance_9);
         if (tmp_called_instance_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7696,9 +6943,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 208;
-        tmp_assattr_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[96]);
+        tmp_assattr_value_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[89]);
         Py_DECREF(tmp_called_instance_8);
-        if (tmp_assattr_name_2 == NULL) {
+        if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7708,21 +6955,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (var_result == NULL) {
-            Py_DECREF(tmp_assattr_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 208;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_2 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[100], tmp_assattr_name_2);
-        Py_DECREF(tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[92], tmp_assattr_value_2);
+        Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7739,7 +6975,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
         PyObject *tmp_call_result_3;
         if (var_dialog == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7751,7 +6987,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
 
         tmp_called_instance_10 = var_dialog;
         frame_9e36103939176f702db473637800efa1->m_frame.f_lineno = 209;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[88]);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[81]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7764,21 +7000,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
         }
         Py_DECREF(tmp_call_result_3);
     }
-    if (var_result == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 210;
-        type_description_1 = "ooooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_result;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_9e36103939176f702db473637800efa1);
@@ -7788,16 +7009,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_9e36103939176f702db473637800efa1);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -7843,20 +7054,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_result);
+    tmp_return_value = var_result;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_colourData);
-    par_colourData = NULL;
-    CHECK_OBJECT(par_colour);
-    Py_DECREF(par_colour);
-    par_colour = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
-    Py_XDECREF(var_result);
+    CHECK_OBJECT(var_result);
+    Py_DECREF(var_result);
     var_result = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -7870,13 +7079,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_colourData);
-    par_colourData = NULL;
-    CHECK_OBJECT(par_colour);
-    Py_DECREF(par_colour);
-    par_colour = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -7894,14 +7096,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__10_colourDialog(struct Nuitka_F
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_colourData);
+    Py_DECREF(par_colourData);
+    CHECK_OBJECT(par_colour);
+    Py_DECREF(par_colour);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_colourData);
+    Py_DECREF(par_colourData);
+    CHECK_OBJECT(par_colour);
+    Py_DECREF(par_colour);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -7931,8 +7143,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     bool tmp_result;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_d7762a8d6adbb5a222eeead2a9cfe10f = NULL;
+    PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7969,12 +7181,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_fontData);
-        tmp_compexpr_left_1 = par_fontData;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_fontData;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -8002,7 +7214,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 215;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[101]);
+        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[93]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8022,15 +7234,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_fontData);
-        tmp_expression_name_1 = par_fontData;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[93]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = par_fontData;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[86]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8040,37 +7252,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 216;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[102]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[94]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 216;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 216;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8084,30 +7296,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_6;
-        if (par_fontData == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[103]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 217;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_fontData;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[104]);
-        if (tmp_called_name_2 == NULL) {
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_6;
+        CHECK_OBJECT(par_fontData);
+        tmp_expression_value_3 = par_fontData;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[95]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8117,92 +7318,92 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 217;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[105]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[96]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 217;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[106]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[97]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 217;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 217;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[107]);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[98]);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 217;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 217;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 217;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 217;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8218,12 +7419,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_font);
-        tmp_compexpr_left_2 = par_font;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_font;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -8234,10 +7435,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         if (par_fontData == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[103]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8249,9 +7450,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
 
         tmp_called_instance_2 = par_fontData;
         CHECK_OBJECT(par_font);
-        tmp_args_element_name_4 = par_font;
+        tmp_args_element_value_4 = par_font;
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 220;
-        tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[104], tmp_args_element_name_4);
+        tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[95], tmp_args_element_value_4);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8267,17 +7468,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     branch_no_2:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8287,8 +7488,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[108]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[100]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8299,10 +7500,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_5 = par_parent;
+        tmp_args_element_value_5 = par_parent;
         if (par_fontData == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[103]);
+            Py_DECREF(tmp_called_value_4);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8312,14 +7513,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_6 = par_fontData;
+        tmp_args_element_value_6 = par_fontData;
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 222;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8335,16 +7536,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_7;
         PyObject *tmp_called_instance_3;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8357,8 +7558,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_3 = var_dialog;
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 223;
-        tmp_args_element_name_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[83]);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_args_element_value_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[75]);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8369,8 +7570,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 223;
-        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_7);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_7);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8386,12 +7587,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(var_result);
-        tmp_expression_name_8 = var_result;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[54]);
+        tmp_expression_value_8 = var_result;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[49]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8425,21 +7626,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_called_instance_4;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 226;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_4 = var_dialog;
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 226;
-        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[109]);
+        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[101]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8458,24 +7648,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
 
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_fontData);
-        tmp_assattr_name_1 = par_fontData;
-        if (var_result == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 227;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_1 = par_fontData;
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[103], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[99], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8488,14 +7667,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_called_instance_5;
         PyObject *tmp_called_instance_6;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_fontData);
         tmp_called_instance_6 = par_fontData;
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 228;
-        tmp_called_instance_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[95]);
+        tmp_called_instance_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[88]);
         if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8507,9 +7686,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 228;
-        tmp_assattr_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[96]);
+        tmp_assattr_value_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[89]);
         Py_DECREF(tmp_called_instance_5);
-        if (tmp_assattr_name_2 == NULL) {
+        if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8519,21 +7698,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (var_result == NULL) {
-            Py_DECREF(tmp_assattr_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 228;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_2 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[98], tmp_assattr_name_2);
-        Py_DECREF(tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[90], tmp_assattr_value_2);
+        Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8546,24 +7714,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         }
     }
     {
-        PyObject *tmp_assattr_name_3;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_assattr_value_3;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_assattr_target_3;
-        if (var_result == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 229;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_9 = var_result;
-        tmp_assattr_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[98]);
-        if (tmp_assattr_name_3 == NULL) {
+        CHECK_OBJECT(var_result);
+        tmp_expression_value_9 = var_result;
+        tmp_assattr_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[90]);
+        if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8573,21 +7730,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (var_result == NULL) {
-            Py_DECREF(tmp_assattr_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 229;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_3 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[100], tmp_assattr_name_3);
-        Py_DECREF(tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[92], tmp_assattr_value_3);
+        Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8600,25 +7746,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         }
     }
     {
-        PyObject *tmp_assattr_name_4;
+        PyObject *tmp_assattr_value_4;
         PyObject *tmp_called_instance_7;
         PyObject *tmp_assattr_target_4;
-        if (par_fontData == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[103]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 230;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_fontData);
         tmp_called_instance_7 = par_fontData;
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 230;
-        tmp_assattr_name_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[110]);
-        if (tmp_assattr_name_4 == NULL) {
+        tmp_assattr_value_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[102]);
+        if (tmp_assattr_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8628,21 +7763,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        if (var_result == NULL) {
-            Py_DECREF(tmp_assattr_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 230;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_4 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[111], tmp_assattr_name_4);
-        Py_DECREF(tmp_assattr_name_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[103], tmp_assattr_value_4);
+        Py_DECREF(tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8657,23 +7781,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     goto branch_end_3;
     branch_no_3:;
     {
-        PyObject *tmp_assattr_name_5;
+        PyObject *tmp_assattr_value_5;
         PyObject *tmp_assattr_target_5;
-        tmp_assattr_name_5 = Py_None;
-        if (var_result == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 232;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_5 = Py_None;
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_5 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[98], tmp_assattr_name_5);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[90], tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8686,23 +7799,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         }
     }
     {
-        PyObject *tmp_assattr_name_6;
+        PyObject *tmp_assattr_value_6;
         PyObject *tmp_assattr_target_6;
-        tmp_assattr_name_6 = Py_None;
-        if (var_result == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 233;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_6 = Py_None;
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_6 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[100], tmp_assattr_name_6);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_6, mod_consts[92], tmp_assattr_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8715,23 +7817,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         }
     }
     {
-        PyObject *tmp_assattr_name_7;
+        PyObject *tmp_assattr_value_7;
         PyObject *tmp_assattr_target_7;
-        tmp_assattr_name_7 = Py_None;
-        if (var_result == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 234;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_7 = Py_None;
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_7 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[111], tmp_assattr_name_7);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_7, mod_consts[103], tmp_assattr_value_7);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8747,21 +7838,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     {
         PyObject *tmp_called_instance_8;
         PyObject *tmp_call_result_4;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 236;
-            type_description_1 = "ooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_8 = var_dialog;
         frame_d7762a8d6adbb5a222eeead2a9cfe10f->m_frame.f_lineno = 236;
-        tmp_call_result_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[88]);
+        tmp_call_result_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[81]);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8774,21 +7854,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
         }
         Py_DECREF(tmp_call_result_4);
     }
-    if (var_result == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 237;
-        type_description_1 = "ooooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_result;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_d7762a8d6adbb5a222eeead2a9cfe10f);
@@ -8798,16 +7863,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_d7762a8d6adbb5a222eeead2a9cfe10f);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -8853,19 +7908,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_result);
+    tmp_return_value = var_result;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
     Py_XDECREF(par_fontData);
     par_fontData = NULL;
-    Py_XDECREF(par_font);
-    par_font = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
-    Py_XDECREF(var_result);
+    CHECK_OBJECT(var_result);
+    Py_DECREF(var_result);
     var_result = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -8879,12 +7936,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
     Py_XDECREF(par_fontData);
     par_fontData = NULL;
-    Py_XDECREF(par_font);
-    par_font = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -8902,14 +7955,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__11_fontDialog(struct Nuitka_Fun
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_font);
+    Py_DECREF(par_font);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_font);
+    Py_DECREF(par_font);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8980,11 +8039,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -9002,21 +8061,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_2 = par_message;
+        tmp_args_element_value_2 = par_message;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_3 = par_title;
+        tmp_args_element_value_3 = par_title;
         CHECK_OBJECT(par_defaultText);
-        tmp_args_element_name_4 = par_defaultText;
+        tmp_args_element_value_4 = par_defaultText;
         CHECK_OBJECT(par_style);
-        tmp_args_element_name_5 = par_style;
+        tmp_args_element_value_5 = par_style;
         frame_8c1cc27bfbfc327aa91aea25682f146e->m_frame.f_lineno = 242;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS5(
                 tmp_called_instance_1,
-                mod_consts[112],
+                mod_consts[104],
                 call_args
             );
         }
@@ -9036,16 +8095,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_6;
         PyObject *tmp_called_instance_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9058,8 +8117,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_2 = var_dialog;
         frame_8c1cc27bfbfc327aa91aea25682f146e->m_frame.f_lineno = 243;
-        tmp_args_element_name_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[83]);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_args_element_value_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[75]);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9070,8 +8129,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
             goto frame_exception_exit_1;
         }
         frame_8c1cc27bfbfc327aa91aea25682f146e->m_frame.f_lineno = 243;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_6);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_6);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9086,25 +8145,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
         var_result = tmp_assign_source_2;
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_assattr_target_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 244;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_3 = var_dialog;
         frame_8c1cc27bfbfc327aa91aea25682f146e->m_frame.f_lineno = 244;
-        tmp_assattr_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[80]);
-        if (tmp_assattr_name_1 == NULL) {
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[72]);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9116,8 +8164,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[13], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[11], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -9132,21 +8180,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
     {
         PyObject *tmp_called_instance_4;
         PyObject *tmp_call_result_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 245;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_4 = var_dialog;
         frame_8c1cc27bfbfc327aa91aea25682f146e->m_frame.f_lineno = 245;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9223,17 +8260,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_defaultText);
-    par_defaultText = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
     CHECK_OBJECT(var_result);
     Py_DECREF(var_result);
@@ -9250,16 +8278,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_defaultText);
-    par_defaultText = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -9277,14 +8295,32 @@ static PyObject *impl_wx$lib$dialogs$$$function__12_textEntryDialog(struct Nuitk
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_defaultText);
+    Py_DECREF(par_defaultText);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_defaultText);
+    Py_DECREF(par_defaultText);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9354,11 +8390,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -9376,21 +8412,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_2 = par_message;
+        tmp_args_element_value_2 = par_message;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_3 = par_title;
+        tmp_args_element_value_3 = par_title;
         CHECK_OBJECT(par_aStyle);
-        tmp_args_element_name_4 = par_aStyle;
+        tmp_args_element_value_4 = par_aStyle;
         CHECK_OBJECT(par_pos);
-        tmp_args_element_name_5 = par_pos;
+        tmp_args_element_value_5 = par_pos;
         frame_b3ee13d2ba477cad74cec60079400461->m_frame.f_lineno = 252;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS5(
                 tmp_called_instance_1,
-                mod_consts[113],
+                mod_consts[105],
                 call_args
             );
         }
@@ -9410,16 +8446,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_6;
         PyObject *tmp_called_instance_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9432,8 +8468,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_2 = var_dialog;
         frame_b3ee13d2ba477cad74cec60079400461->m_frame.f_lineno = 253;
-        tmp_args_element_name_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[83]);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_args_element_value_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[75]);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9444,8 +8480,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
             goto frame_exception_exit_1;
         }
         frame_b3ee13d2ba477cad74cec60079400461->m_frame.f_lineno = 253;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_6);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_6);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9462,21 +8498,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
     {
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 254;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_3 = var_dialog;
         frame_b3ee13d2ba477cad74cec60079400461->m_frame.f_lineno = 254;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9553,17 +8578,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_aStyle);
-    par_aStyle = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
     CHECK_OBJECT(var_result);
     Py_DECREF(var_result);
@@ -9580,16 +8596,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_aStyle);
-    par_aStyle = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -9607,14 +8613,32 @@ static PyObject *impl_wx$lib$dialogs$$$function__13_messageDialog(struct Nuitka_
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_aStyle);
+    Py_DECREF(par_aStyle);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_aStyle);
+    Py_DECREF(par_aStyle);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9643,13 +8667,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_040a7744b0bfba8c48213cb48b07c4a2 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_040a7744b0bfba8c48213cb48b07c4a2)) {
         Py_XDECREF(cache_frame_040a7744b0bfba8c48213cb48b07c4a2);
 
@@ -9678,23 +8697,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[114]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[106]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[114]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[106]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9705,18 +8724,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_2 = par_message;
+        tmp_args_element_value_2 = par_message;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_3 = par_title;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_3 = par_title;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9726,8 +8745,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[115]);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[107]);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9737,37 +8756,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 262;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[16]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[14]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 262;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9778,14 +8797,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_pos);
-        tmp_args_element_name_5 = par_pos;
+        tmp_args_element_value_5 = par_pos;
         frame_040a7744b0bfba8c48213cb48b07c4a2->m_frame.f_lineno = 262;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_4);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9816,7 +8835,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -9858,62 +8877,36 @@ static PyObject *impl_wx$lib$dialogs$$$function__14_alertDialog(struct Nuitka_Fu
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -9982,19 +8975,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[116]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[108]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[116]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[108]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10005,19 +8998,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_2 = par_message;
+        tmp_args_element_value_2 = par_message;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_3 = par_title;
+        tmp_args_element_value_3 = par_title;
         CHECK_OBJECT(par_pos);
-        tmp_args_element_name_4 = par_pos;
+        tmp_args_element_value_4 = par_pos;
         CHECK_OBJECT(par_size);
-        tmp_args_element_name_5 = par_size;
+        tmp_args_element_value_5 = par_size;
         frame_4d02958583cfe9ede3af83a4da6d0e22->m_frame.f_lineno = 268;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_1, call_args);
         }
 
         if (tmp_assign_source_1 == NULL) {
@@ -10035,16 +9028,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_6;
         PyObject *tmp_called_instance_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10057,8 +9050,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_1 = var_dialog;
         frame_4d02958583cfe9ede3af83a4da6d0e22->m_frame.f_lineno = 269;
-        tmp_args_element_name_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[83]);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_args_element_value_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[75]);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10069,8 +9062,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
             goto frame_exception_exit_1;
         }
         frame_4d02958583cfe9ede3af83a4da6d0e22->m_frame.f_lineno = 269;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_6);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_6);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10087,21 +9080,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 270;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_2 = var_dialog;
         frame_4d02958583cfe9ede3af83a4da6d0e22->m_frame.f_lineno = 270;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10178,17 +9160,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
     CHECK_OBJECT(var_result);
     Py_DECREF(var_result);
@@ -10205,16 +9178,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -10232,14 +9195,32 @@ static PyObject *impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog(struct
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10272,8 +9253,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_f37c6ff84ca90fc8b58271c15aee2354 = NULL;
+    PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -10311,12 +9292,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -10334,23 +9315,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_2 = par_title;
+        tmp_args_element_value_2 = par_title;
         CHECK_OBJECT(par_directory);
-        tmp_args_element_name_3 = par_directory;
+        tmp_args_element_value_3 = par_directory;
         CHECK_OBJECT(par_filename);
-        tmp_args_element_name_4 = par_filename;
+        tmp_args_element_value_4 = par_filename;
         CHECK_OBJECT(par_wildcard);
-        tmp_args_element_name_5 = par_wildcard;
+        tmp_args_element_value_5 = par_wildcard;
         CHECK_OBJECT(par_style);
-        tmp_args_element_name_6 = par_style;
+        tmp_args_element_value_6 = par_style;
         frame_f37c6ff84ca90fc8b58271c15aee2354->m_frame.f_lineno = 277;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS6(
                 tmp_called_instance_1,
-                mod_consts[117],
+                mod_consts[109],
                 call_args
             );
         }
@@ -10370,16 +9351,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_7;
         PyObject *tmp_called_instance_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10392,8 +9373,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_2 = var_dialog;
         frame_f37c6ff84ca90fc8b58271c15aee2354->m_frame.f_lineno = 278;
-        tmp_args_element_name_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[83]);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_args_element_value_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[75]);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10404,8 +9385,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_f37c6ff84ca90fc8b58271c15aee2354->m_frame.f_lineno = 278;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_7);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_7);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10421,12 +9402,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(var_result);
-        tmp_expression_name_1 = var_result;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[54]);
+        tmp_expression_value_1 = var_result;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[49]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10458,25 +9439,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     }
     branch_yes_1:;
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_assattr_target_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 280;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_3 = var_dialog;
         frame_f37c6ff84ca90fc8b58271c15aee2354->m_frame.f_lineno = 280;
-        tmp_assattr_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[118]);
-        if (tmp_assattr_name_1 == NULL) {
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[110]);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10486,21 +9456,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_result == NULL) {
-            Py_DECREF(tmp_assattr_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 280;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[119], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[111], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -10515,23 +9474,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     goto branch_end_1;
     branch_no_1:;
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_None;
-        if (var_result == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 282;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_2 = Py_None;
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_2 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[119], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[111], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -10547,21 +9495,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     {
         PyObject *tmp_called_instance_4;
         PyObject *tmp_call_result_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 283;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_4 = var_dialog;
         frame_f37c6ff84ca90fc8b58271c15aee2354->m_frame.f_lineno = 283;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10574,21 +9511,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
         }
         Py_DECREF(tmp_call_result_1);
     }
-    if (var_result == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 284;
-        type_description_1 = "oooooooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_result;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_f37c6ff84ca90fc8b58271c15aee2354);
@@ -10598,16 +9520,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_f37c6ff84ca90fc8b58271c15aee2354);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -10656,25 +9568,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_result);
+    tmp_return_value = var_result;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_directory);
-    par_directory = NULL;
-    Py_XDECREF(par_filename);
-    par_filename = NULL;
-    Py_XDECREF(par_wildcard);
-    par_wildcard = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
-    Py_XDECREF(var_result);
+    CHECK_OBJECT(var_result);
+    Py_DECREF(var_result);
     var_result = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -10688,18 +9594,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_directory);
-    par_directory = NULL;
-    Py_XDECREF(par_filename);
-    par_filename = NULL;
-    Py_XDECREF(par_wildcard);
-    par_wildcard = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -10717,14 +9611,36 @@ static PyObject *impl_wx$lib$dialogs$$$function__16_fileDialog(struct Nuitka_Fun
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_directory);
+    Py_DECREF(par_directory);
+    CHECK_OBJECT(par_filename);
+    Py_DECREF(par_filename);
+    CHECK_OBJECT(par_wildcard);
+    Py_DECREF(par_wildcard);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_directory);
+    Py_DECREF(par_directory);
+    CHECK_OBJECT(par_filename);
+    Py_DECREF(par_filename);
+    CHECK_OBJECT(par_wildcard);
+    Py_DECREF(par_wildcard);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10755,13 +9671,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__17_openFileDialog(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_67ccc0b84d8013ce858aea6c0d91bda9 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_67ccc0b84d8013ce858aea6c0d91bda9)) {
         Py_XDECREF(cache_frame_67ccc0b84d8013ce858aea6c0d91bda9);
 
@@ -10790,20 +9701,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__17_openFileDialog(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[120]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[112]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[120]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[112]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10814,21 +9725,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__17_openFileDialog(struct Nuitka
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_2 = par_title;
+        tmp_args_element_value_2 = par_title;
         CHECK_OBJECT(par_directory);
-        tmp_args_element_name_3 = par_directory;
+        tmp_args_element_value_3 = par_directory;
         CHECK_OBJECT(par_filename);
-        tmp_args_element_name_4 = par_filename;
+        tmp_args_element_value_4 = par_filename;
         CHECK_OBJECT(par_wildcard);
-        tmp_args_element_name_5 = par_wildcard;
+        tmp_args_element_value_5 = par_wildcard;
         CHECK_OBJECT(par_style);
-        tmp_args_element_name_6 = par_style;
+        tmp_args_element_value_6 = par_style;
         frame_67ccc0b84d8013ce858aea6c0d91bda9->m_frame.f_lineno = 293;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS6(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS6(tmp_called_value_1, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -10861,7 +9772,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__17_openFileDialog(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -10905,70 +9816,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__17_openFileDialog(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_directory);
-    par_directory = NULL;
-    Py_XDECREF(par_filename);
-    par_filename = NULL;
-    Py_XDECREF(par_wildcard);
-    par_wildcard = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_directory);
-    par_directory = NULL;
-    Py_XDECREF(par_filename);
-    par_filename = NULL;
-    Py_XDECREF(par_wildcard);
-    par_wildcard = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_directory);
+    Py_DECREF(par_directory);
+    CHECK_OBJECT(par_filename);
+    Py_DECREF(par_filename);
+    CHECK_OBJECT(par_wildcard);
+    Py_DECREF(par_wildcard);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_directory);
+    Py_DECREF(par_directory);
+    CHECK_OBJECT(par_filename);
+    Py_DECREF(par_filename);
+    CHECK_OBJECT(par_wildcard);
+    Py_DECREF(par_wildcard);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -10999,13 +9884,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__18_saveFileDialog(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_e9dca28e9b0af14399ad7ab5f79d353c = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_e9dca28e9b0af14399ad7ab5f79d353c)) {
         Py_XDECREF(cache_frame_e9dca28e9b0af14399ad7ab5f79d353c);
 
@@ -11034,20 +9914,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__18_saveFileDialog(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[120]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[112]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[120]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[112]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11058,21 +9938,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__18_saveFileDialog(struct Nuitka
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_2 = par_title;
+        tmp_args_element_value_2 = par_title;
         CHECK_OBJECT(par_directory);
-        tmp_args_element_name_3 = par_directory;
+        tmp_args_element_value_3 = par_directory;
         CHECK_OBJECT(par_filename);
-        tmp_args_element_name_4 = par_filename;
+        tmp_args_element_value_4 = par_filename;
         CHECK_OBJECT(par_wildcard);
-        tmp_args_element_name_5 = par_wildcard;
+        tmp_args_element_value_5 = par_wildcard;
         CHECK_OBJECT(par_style);
-        tmp_args_element_name_6 = par_style;
+        tmp_args_element_value_6 = par_style;
         frame_e9dca28e9b0af14399ad7ab5f79d353c->m_frame.f_lineno = 299;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS6(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS6(tmp_called_value_1, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -11105,7 +9985,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__18_saveFileDialog(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -11149,70 +10029,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__18_saveFileDialog(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_directory);
-    par_directory = NULL;
-    Py_XDECREF(par_filename);
-    par_filename = NULL;
-    Py_XDECREF(par_wildcard);
-    par_wildcard = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_directory);
-    par_directory = NULL;
-    Py_XDECREF(par_filename);
-    par_filename = NULL;
-    Py_XDECREF(par_wildcard);
-    par_wildcard = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_directory);
+    Py_DECREF(par_directory);
+    CHECK_OBJECT(par_filename);
+    Py_DECREF(par_filename);
+    CHECK_OBJECT(par_wildcard);
+    Py_DECREF(par_wildcard);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_directory);
+    Py_DECREF(par_directory);
+    CHECK_OBJECT(par_filename);
+    Py_DECREF(par_filename);
+    CHECK_OBJECT(par_wildcard);
+    Py_DECREF(par_wildcard);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11245,8 +10099,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_c204e5a7af9d2c9d247cb8456f77a4fa = NULL;
+    PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -11284,12 +10138,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -11307,23 +10161,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_2 = par_message;
+        tmp_args_element_value_2 = par_message;
         CHECK_OBJECT(par_path);
-        tmp_args_element_name_3 = par_path;
+        tmp_args_element_value_3 = par_path;
         CHECK_OBJECT(par_style);
-        tmp_args_element_name_4 = par_style;
+        tmp_args_element_value_4 = par_style;
         CHECK_OBJECT(par_pos);
-        tmp_args_element_name_5 = par_pos;
+        tmp_args_element_value_5 = par_pos;
         CHECK_OBJECT(par_size);
-        tmp_args_element_name_6 = par_size;
+        tmp_args_element_value_6 = par_size;
         frame_c204e5a7af9d2c9d247cb8456f77a4fa->m_frame.f_lineno = 305;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS6(
                 tmp_called_instance_1,
-                mod_consts[121],
+                mod_consts[113],
                 call_args
             );
         }
@@ -11343,16 +10197,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_7;
         PyObject *tmp_called_instance_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11365,8 +10219,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_2 = var_dialog;
         frame_c204e5a7af9d2c9d247cb8456f77a4fa->m_frame.f_lineno = 306;
-        tmp_args_element_name_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[83]);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_args_element_value_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[75]);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11377,8 +10231,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         frame_c204e5a7af9d2c9d247cb8456f77a4fa->m_frame.f_lineno = 306;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_7);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_7);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11394,12 +10248,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(var_result);
-        tmp_expression_name_1 = var_result;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[54]);
+        tmp_expression_value_1 = var_result;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[49]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11431,25 +10285,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     }
     branch_yes_1:;
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_assattr_target_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 308;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_3 = var_dialog;
         frame_c204e5a7af9d2c9d247cb8456f77a4fa->m_frame.f_lineno = 308;
-        tmp_assattr_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[122]);
-        if (tmp_assattr_name_1 == NULL) {
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[114]);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11459,21 +10302,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_result == NULL) {
-            Py_DECREF(tmp_assattr_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 308;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[123], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[115], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11488,23 +10320,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     goto branch_end_1;
     branch_no_1:;
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_None;
-        if (var_result == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 310;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        tmp_assattr_value_2 = Py_None;
+        CHECK_OBJECT(var_result);
         tmp_assattr_target_2 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[123], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[115], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11520,21 +10341,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     {
         PyObject *tmp_called_instance_4;
         PyObject *tmp_call_result_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 311;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_4 = var_dialog;
         frame_c204e5a7af9d2c9d247cb8456f77a4fa->m_frame.f_lineno = 311;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11547,21 +10357,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
         }
         Py_DECREF(tmp_call_result_1);
     }
-    if (var_result == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 312;
-        type_description_1 = "oooooooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_result;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_c204e5a7af9d2c9d247cb8456f77a4fa);
@@ -11571,16 +10366,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     popFrameStack();
 
     goto frame_no_exception_1;
-
-    frame_return_exit_1:;
-#if 0
-    RESTORE_FRAME_EXCEPTION(frame_c204e5a7af9d2c9d247cb8456f77a4fa);
-#endif
-
-    // Put the previous frame back on top.
-    popFrameStack();
-
-    goto try_return_handler_1;
 
     frame_exception_exit_1:;
 
@@ -11629,25 +10414,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_result);
+    tmp_return_value = var_result;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_path);
-    par_path = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
-    Py_XDECREF(var_result);
+    CHECK_OBJECT(var_result);
+    Py_DECREF(var_result);
     var_result = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -11661,18 +10440,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_path);
-    par_path = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_size);
-    par_size = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -11690,14 +10457,36 @@ static PyObject *impl_wx$lib$dialogs$$$function__19_dirDialog(struct Nuitka_Func
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_path);
+    Py_DECREF(par_path);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_path);
+    Py_DECREF(par_path);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11767,24 +10556,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_list_arg_1;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11794,8 +10583,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[124]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[116]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11806,63 +10595,63 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_2 = par_message;
+        tmp_args_element_value_2 = par_message;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_3 = par_title;
+        tmp_args_element_value_3 = par_title;
         CHECK_OBJECT(par_lst);
         tmp_list_arg_1 = par_lst;
-        tmp_args_element_name_4 = MAKE_LIST(tmp_list_arg_1);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = MAKE_LIST(tmp_list_arg_1);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 319;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_style);
-        tmp_left_name_1 = par_style;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_left_value_1 = par_style;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_4);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_4);
 
             exception_lineno = 319;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[125]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[117]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_4);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_4);
 
             exception_lineno = 319;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_args_element_value_5 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_4);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_4);
 
             exception_lineno = 319;
             type_description_1 = "ooooooo";
@@ -11870,13 +10659,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
         }
         frame_6045582912d31d189ae691d21125c773->m_frame.f_lineno = 319;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_4);
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_4);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11892,16 +10681,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_6;
         PyObject *tmp_called_instance_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11914,8 +10703,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_1 = var_dialog;
         frame_6045582912d31d189ae691d21125c773->m_frame.f_lineno = 320;
-        tmp_args_element_name_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[83]);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_args_element_value_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[75]);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11926,8 +10715,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
             goto frame_exception_exit_1;
         }
         frame_6045582912d31d189ae691d21125c773->m_frame.f_lineno = 320;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_6);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_6);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11942,25 +10731,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
         var_result = tmp_assign_source_2;
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_called_instance_2;
         PyObject *tmp_assattr_target_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 321;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_2 = var_dialog;
         frame_6045582912d31d189ae691d21125c773->m_frame.f_lineno = 321;
-        tmp_assattr_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[126]);
-        if (tmp_assattr_name_1 == NULL) {
+        tmp_assattr_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[118]);
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11972,8 +10750,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[127], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[119], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11988,21 +10766,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
     {
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 322;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_3 = var_dialog;
         frame_6045582912d31d189ae691d21125c773->m_frame.f_lineno = 322;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12079,18 +10846,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    CHECK_OBJECT(par_lst);
-    Py_DECREF(par_lst);
-    par_lst = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
     CHECK_OBJECT(var_result);
     Py_DECREF(var_result);
@@ -12107,17 +10864,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    CHECK_OBJECT(par_lst);
-    Py_DECREF(par_lst);
-    par_lst = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -12135,14 +10881,32 @@ static PyObject *impl_wx$lib$dialogs$$$function__20_singleChoiceDialog(struct Nu
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_lst);
+    Py_DECREF(par_lst);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_lst);
+    Py_DECREF(par_lst);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -12228,22 +10992,22 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_6;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_6;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12253,8 +11017,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[128]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[120]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12265,50 +11029,50 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_args_element_name_1 = par_parent;
+        tmp_args_element_value_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_2 = par_message;
+        tmp_args_element_value_2 = par_message;
         CHECK_OBJECT(par_title);
-        tmp_args_element_name_3 = par_title;
+        tmp_args_element_value_3 = par_title;
         CHECK_OBJECT(par_lst);
-        tmp_args_element_name_4 = par_lst;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_4 = par_lst;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 330;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[129]);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_args_element_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[121]);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 330;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_pos);
-        tmp_args_element_name_6 = par_pos;
+        tmp_args_element_value_6 = par_pos;
         frame_1803ef2ceafae27215a2bc007f9f303f->m_frame.f_lineno = 329;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS6(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS6(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12324,16 +11088,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_7;
         PyObject *tmp_called_instance_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[74]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12346,8 +11110,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
         CHECK_OBJECT(var_dialog);
         tmp_called_instance_1 = var_dialog;
         frame_1803ef2ceafae27215a2bc007f9f303f->m_frame.f_lineno = 331;
-        tmp_args_element_name_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[83]);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_args_element_value_7 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[75]);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12358,8 +11122,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
             goto frame_exception_exit_1;
         }
         frame_1803ef2ceafae27215a2bc007f9f303f->m_frame.f_lineno = 331;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_7);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_7);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12374,7 +11138,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
         var_result = tmp_assign_source_2;
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_tuple_arg_1;
         PyObject *tmp_assattr_target_1;
         // Tried code:
@@ -12382,21 +11146,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
             PyObject *tmp_assign_source_3;
             PyObject *tmp_iter_arg_1;
             PyObject *tmp_called_instance_2;
-            if (var_dialog == NULL) {
-
-                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[92]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 332;
-                type_description_1 = "oooooooo";
-                goto try_except_handler_2;
-            }
-
+            CHECK_OBJECT(var_dialog);
             tmp_called_instance_2 = var_dialog;
             frame_1803ef2ceafae27215a2bc007f9f303f->m_frame.f_lineno = 332;
-            tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[51]);
+            tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[45]);
             if (tmp_iter_arg_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -12498,26 +11251,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
         {
             PyObject *tmp_append_list_1;
             PyObject *tmp_append_value_1;
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_subscript_name_1;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_subscript_value_1;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
-            if (par_lst == NULL) {
-
-                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[50]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 332;
-                type_description_2 = "oo";
-                goto try_except_handler_3;
-            }
-
-            tmp_expression_name_3 = par_lst;
+            CHECK_OBJECT(par_lst);
+            tmp_expression_value_3 = par_lst;
             CHECK_OBJECT(outline_0_var_i);
-            tmp_subscript_name_1 = outline_0_var_i;
-            tmp_append_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+            tmp_subscript_value_1 = outline_0_var_i;
+            tmp_append_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
             if (tmp_append_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -12561,7 +11303,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
         return NULL;
         // Return handler code:
         try_return_handler_3:;
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -12580,7 +11323,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
         exception_tb = NULL;
         exception_lineno = 0;
 
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -12695,9 +11439,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
         exception_lineno = 332;
         goto frame_exception_exit_1;
         outline_result_1:;
-        tmp_assattr_name_1 = PySequence_Tuple(tmp_tuple_arg_1);
+        tmp_assattr_value_1 = PySequence_Tuple(tmp_tuple_arg_1);
         Py_DECREF(tmp_tuple_arg_1);
-        if (tmp_assattr_name_1 == NULL) {
+        if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12709,8 +11453,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
         }
         CHECK_OBJECT(var_result);
         tmp_assattr_target_1 = var_result;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[127], tmp_assattr_name_1);
-        Py_DECREF(tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[119], tmp_assattr_value_1);
+        Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -12725,21 +11469,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
     {
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        if (var_dialog == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[92]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 333;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dialog);
         tmp_called_instance_3 = var_dialog;
         frame_1803ef2ceafae27215a2bc007f9f303f->m_frame.f_lineno = 333;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12817,20 +11550,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_lst);
-    par_lst = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    CHECK_OBJECT(par_size);
-    Py_DECREF(par_size);
-    par_size = NULL;
-    Py_XDECREF(var_dialog);
+    CHECK_OBJECT(var_dialog);
+    Py_DECREF(var_dialog);
     var_dialog = NULL;
     CHECK_OBJECT(var_result);
     Py_DECREF(var_result);
@@ -12847,19 +11568,6 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_title);
-    par_title = NULL;
-    Py_XDECREF(par_lst);
-    par_lst = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    CHECK_OBJECT(par_size);
-    Py_DECREF(par_size);
-    par_size = NULL;
     Py_XDECREF(var_dialog);
     var_dialog = NULL;
     Py_XDECREF(var_result);
@@ -12877,14 +11585,36 @@ static PyObject *impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog(struct 
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_lst);
+    Py_DECREF(par_lst);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_title);
+    Py_DECREF(par_title);
+    CHECK_OBJECT(par_lst);
+    Py_DECREF(par_lst);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_size);
+    Py_DECREF(par_size);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -13009,17 +11739,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        tmp_compexpr_left_1 = mod_consts[130];
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
+        tmp_cmp_expr_left_1 = mod_consts[122];
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13029,8 +11759,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[131]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[123]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13040,8 +11770,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -13072,38 +11802,39 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[132];
+        tmp_assign_source_2 = mod_consts[124];
         assert(var_title == NULL);
         Py_INCREF(tmp_assign_source_2);
         var_title = tmp_assign_source_2;
     }
     branch_end_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_expression_name_6;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_kw_call_arg_value_2_1;
+        PyObject *tmp_kw_call_arg_value_3_1;
+        PyObject *tmp_kw_call_arg_value_4_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_expression_value_6;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13113,8 +11844,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[1]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[1]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13124,9 +11855,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[2]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[2]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13137,168 +11868,152 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(5);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_kw_call_arg_value_0_1 = par_self;
         CHECK_OBJECT(par_parent);
-        tmp_tuple_element_1 = par_parent;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
-        tmp_tuple_element_1 = mod_consts[3];
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        tmp_kw_call_arg_value_1_1 = par_parent;
+        tmp_kw_call_arg_value_2_1 = mod_consts[3];
         CHECK_OBJECT(var_title);
-        tmp_tuple_element_1 = var_title;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 3, tmp_tuple_element_1);
+        tmp_kw_call_arg_value_3_1 = var_title;
         CHECK_OBJECT(par_pos);
-        tmp_tuple_element_1 = par_pos;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 4, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[10];
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_kw_call_arg_value_4_1 = par_pos;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[125]);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[117]);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_style);
-        tmp_left_name_2 = par_style;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_left_value_2 = par_style;
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[133]);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[125]);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_3);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_left_value_3);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[134]);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[126]);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_3);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_left_value_3);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_3);
-        Py_DECREF(tmp_right_name_3);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_2 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_3);
+        Py_DECREF(tmp_right_value_3);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_dict_value_1 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_dict_value_1 == NULL) {
+        tmp_kw_call_dict_value_0_1 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 369;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 368;
-        tmp_call_result_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1, tmp_kw_call_arg_value_2_1, tmp_kw_call_arg_value_3_1, tmp_kw_call_arg_value_4_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS5_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[10]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13320,19 +12035,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = mod_consts[135];
+        tmp_assign_source_4 = mod_consts[127];
         assert(var_isize == NULL);
         Py_INCREF(tmp_assign_source_4);
         var_isize = tmp_assign_source_4;
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_icon);
-        tmp_compexpr_left_2 = par_icon;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_icon;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -13344,16 +12059,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         nuitka_bool tmp_condition_result_3;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(par_icon);
         tmp_isinstance_inst_1 = par_icon;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13363,7 +12078,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[136]);
+        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[128]);
         if (tmp_isinstance_cls_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13374,7 +12089,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -13414,7 +12129,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 377;
-        tmp_assign_source_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[137]);
+        tmp_assign_source_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[129]);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13436,13 +12151,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(var_bitmap);
         tmp_called_instance_2 = var_bitmap;
         CHECK_OBJECT(par_icon);
-        tmp_args_element_name_1 = par_icon;
+        tmp_args_element_value_1 = par_icon;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 378;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[138], tmp_args_element_name_1);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[130], tmp_args_element_value_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13461,16 +12176,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         nuitka_bool tmp_condition_result_4;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(par_icon);
         tmp_isinstance_inst_2 = par_icon;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13480,7 +12195,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[139]);
+        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[131]);
         if (tmp_isinstance_cls_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13491,7 +12206,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         Py_DECREF(tmp_isinstance_cls_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -13514,7 +12229,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_3 == NULL)) {
@@ -13532,9 +12247,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_icon);
-        tmp_args_element_name_2 = par_icon;
+        tmp_args_element_value_2 = par_icon;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 380;
-        tmp_assign_source_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[137], tmp_args_element_name_2);
+        tmp_assign_source_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[129], tmp_args_element_value_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13556,20 +12271,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     goto branch_end_4;
     branch_no_4:;
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_3;
         PyObject *tmp_isinstance_cls_3;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(par_icon);
         tmp_isinstance_inst_3 = par_icon;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13579,7 +12294,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[137]);
+        tmp_isinstance_cls_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[129]);
         if (tmp_isinstance_cls_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13590,7 +12305,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_3, tmp_isinstance_cls_3);
         Py_DECREF(tmp_isinstance_cls_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -13602,8 +12317,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -13614,8 +12329,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
@@ -13662,32 +12377,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_expression_name_11;
-        if (par_style == NULL) {
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_expression_value_11;
+        CHECK_OBJECT(par_style);
+        tmp_left_value_4 = par_style;
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 388;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_4 = par_style;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13697,8 +12401,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[140]);
-        if (tmp_right_name_4 == NULL) {
+        tmp_right_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[132]);
+        if (tmp_right_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13708,8 +12412,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_left_value_1 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_or_left_value_1 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_or_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -13738,26 +12442,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         or_right_1:;
         assert(tmp_or_left_value_1 != NUITKA_BOOL_UNASSIGNED);
-        if (par_style == NULL) {
+        CHECK_OBJECT(par_style);
+        tmp_left_value_5 = par_style;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 388;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_5 = par_style;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13767,8 +12460,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[141]);
-        if (tmp_right_name_5 == NULL) {
+        tmp_right_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[133]);
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13778,8 +12471,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_or_right_value_1 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_right_name_5);
+        tmp_or_right_value_1 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_right_value_5);
         if (tmp_or_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -13805,14 +12498,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_expression_name_12;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_12;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13822,7 +12515,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[142]);
+        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[134]);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13845,29 +12538,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_no_6:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_expression_name_13;
-        if (par_style == NULL) {
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_expression_value_13;
+        CHECK_OBJECT(par_style);
+        tmp_left_value_6 = par_style;
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 390;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_6 = par_style;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13877,8 +12559,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[115]);
-        if (tmp_right_name_6 == NULL) {
+        tmp_right_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[107]);
+        if (tmp_right_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13888,8 +12570,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_7 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_right_name_6);
+        tmp_condition_result_7 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_right_value_6);
         if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -13910,14 +12592,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_yes_7:;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_expression_name_14;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_14;
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13927,7 +12609,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[143]);
+        tmp_assign_source_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[135]);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13950,29 +12632,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_no_7:;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_expression_name_15;
-        if (par_style == NULL) {
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_expression_value_15;
+        CHECK_OBJECT(par_style);
+        tmp_left_value_7 = par_style;
+        tmp_expression_value_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 392;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_15 == NULL)) {
+            tmp_expression_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_7 = par_style;
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_15 == NULL) {
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13982,8 +12653,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[144]);
-        if (tmp_right_name_7 == NULL) {
+        tmp_right_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[136]);
+        if (tmp_right_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13993,8 +12664,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_8 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_7);
-        Py_DECREF(tmp_right_name_7);
+        tmp_condition_result_8 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_7);
+        Py_DECREF(tmp_right_value_7);
         if (tmp_condition_result_8 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -14015,14 +12686,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_yes_8:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_expression_name_16;
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_16;
+        tmp_expression_value_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_16 == NULL)) {
+            tmp_expression_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14032,7 +12703,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[145]);
+        tmp_assign_source_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[137]);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14055,29 +12726,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_no_8:;
     {
         nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_expression_name_17;
-        if (par_style == NULL) {
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_expression_value_17;
+        CHECK_OBJECT(par_style);
+        tmp_left_value_8 = par_style;
+        tmp_expression_value_17 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 394;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_17 == NULL)) {
+            tmp_expression_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_8 = par_style;
-        tmp_expression_name_17 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_17 == NULL)) {
-            tmp_expression_name_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_17 == NULL) {
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14087,8 +12747,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[146]);
-        if (tmp_right_name_8 == NULL) {
+        tmp_right_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[138]);
+        if (tmp_right_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14098,8 +12758,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_9 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_8);
-        Py_DECREF(tmp_right_name_8);
+        tmp_condition_result_9 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_8);
+        Py_DECREF(tmp_right_value_8);
         if (tmp_condition_result_9 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -14120,14 +12780,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_yes_9:;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_expression_name_18;
-        tmp_expression_name_18 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_18;
+        tmp_expression_value_18 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_18 == NULL)) {
-            tmp_expression_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_18 == NULL)) {
+            tmp_expression_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_18 == NULL) {
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14137,7 +12797,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[147]);
+        tmp_assign_source_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[139]);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14162,11 +12822,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_end_6:;
     {
         bool tmp_condition_result_10;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         if (var_artid == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[140]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14176,9 +12836,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_3 = var_artid;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_10 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = var_artid;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_10 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_10 != false) {
             goto branch_yes_10;
         } else {
@@ -14188,20 +12848,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_yes_10:;
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_args_element_name_5;
-        tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_args_element_value_5;
+        tmp_expression_value_20 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_20 == NULL)) {
-            tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_20 == NULL)) {
+            tmp_expression_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_20 == NULL) {
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14211,8 +12871,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[149]);
-        if (tmp_expression_name_19 == NULL) {
+        tmp_expression_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[141]);
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14222,9 +12882,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[150]);
-        Py_DECREF(tmp_expression_name_19);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[142]);
+        Py_DECREF(tmp_expression_value_19);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14235,8 +12895,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         if (var_artid == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[148]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[140]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14246,44 +12906,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = var_artid;
-        tmp_expression_name_21 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_3 = var_artid;
+        tmp_expression_value_21 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_21 == NULL)) {
-            tmp_expression_name_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_21 == NULL)) {
+            tmp_expression_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_21 == NULL) {
+        if (tmp_expression_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 398;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[151]);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[143]);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 398;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_isize);
-        tmp_args_element_name_5 = var_isize;
+        tmp_args_element_value_5 = var_isize;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 398;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_13 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_13 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_4);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14309,7 +12969,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         int tmp_truth_name_1;
         if (var_bitmap == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14340,18 +13000,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_yes_11:;
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_22;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        tmp_expression_name_22 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        tmp_expression_value_22 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_22 == NULL)) {
-            tmp_expression_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_22 == NULL)) {
+            tmp_expression_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_22 == NULL) {
+        if (tmp_expression_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14361,8 +13021,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[153]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[145]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14372,23 +13032,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 401;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_6 = par_self;
-        tmp_args_element_name_7 = mod_consts[3];
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_6 = par_self;
+        tmp_args_element_value_7 = mod_consts[3];
         if (var_bitmap == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14398,14 +13047,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_8 = var_bitmap;
+        tmp_args_element_value_8 = var_bitmap;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 401;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14429,7 +13078,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         PyObject *tmp_assign_source_15;
         if (var_isize == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14451,17 +13100,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_end_11:;
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_expression_name_24;
-        tmp_expression_name_23 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_expression_value_24;
+        tmp_expression_value_23 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_23 == NULL)) {
-            tmp_expression_name_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_23 == NULL)) {
+            tmp_expression_value_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_23 == NULL) {
+        if (tmp_expression_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14471,8 +13120,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[18]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[16]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14482,37 +13131,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_24 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_24 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_24 == NULL)) {
-            tmp_expression_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_24 == NULL)) {
+            tmp_expression_value_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_24 == NULL) {
+        if (tmp_expression_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 406;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[155]);
-        if (tmp_args_element_name_9 == NULL) {
+        tmp_args_element_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[147]);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 406;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 406;
-        tmp_assign_source_16 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_9);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_9);
+        tmp_assign_source_16 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_9);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14527,21 +13176,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         var_sizer = tmp_assign_source_16;
     }
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_25;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_25;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_expression_name_26;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_expression_name_27;
-        PyObject *tmp_args_element_name_13;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_expression_value_27;
+        PyObject *tmp_args_element_value_13;
         CHECK_OBJECT(var_sizer);
-        tmp_expression_name_25 = var_sizer;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[20]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_25 = var_sizer;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[18]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14552,86 +13201,86 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_bitmap);
-        tmp_args_element_name_10 = var_bitmap;
-        tmp_args_element_name_11 = mod_consts[39];
-        tmp_expression_name_26 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_10 = var_bitmap;
+        tmp_args_element_value_11 = mod_consts[35];
+        tmp_expression_value_26 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_26 == NULL)) {
-            tmp_expression_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_26 == NULL)) {
+            tmp_expression_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_26 == NULL) {
+        if (tmp_expression_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 407;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[156]);
-        if (tmp_left_name_9 == NULL) {
+        tmp_left_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[148]);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 407;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_27 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_27 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_27 == NULL)) {
-            tmp_expression_name_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_27 == NULL)) {
+            tmp_expression_value_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_27 == NULL) {
+        if (tmp_expression_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 407;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[157]);
-        if (tmp_right_name_9 == NULL) {
+        tmp_right_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[149]);
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 407;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_12 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_9);
-        Py_DECREF(tmp_right_name_9);
-        if (tmp_args_element_name_12 == NULL) {
+        tmp_args_element_value_12 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_9);
+        Py_DECREF(tmp_right_value_9);
+        if (tmp_args_element_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 407;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_13 = mod_consts[158];
+        tmp_args_element_value_13 = mod_consts[150];
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 407;
         {
-            PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11, tmp_args_element_name_12, tmp_args_element_name_13};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11, tmp_args_element_value_12, tmp_args_element_value_13};
+            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_12);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_12);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14647,24 +13296,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     {
         PyObject *tmp_called_instance_4;
         PyObject *tmp_call_result_4;
-        if (var_sizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 408;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_sizer);
         tmp_called_instance_4 = var_sizer;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 408;
-        tmp_call_result_4 = CALL_METHOD_WITH_ARGS1(
+        tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_4,
-            mod_consts[20],
-            &PyTuple_GET_ITEM(mod_consts[159], 0)
+            mod_consts[18],
+            PyTuple_GET_ITEM(mod_consts[151], 0)
         );
 
         if (tmp_call_result_4 == NULL) {
@@ -14681,17 +13319,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_expression_name_29;
-        tmp_expression_name_28 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_expression_value_29;
+        tmp_expression_value_28 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_28 == NULL)) {
-            tmp_expression_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_28 == NULL)) {
+            tmp_expression_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_28 == NULL) {
+        if (tmp_expression_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14701,8 +13339,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[18]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[16]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14712,37 +13350,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_29 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_29 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_29 == NULL)) {
-            tmp_expression_name_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_29 == NULL)) {
+            tmp_expression_value_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_29 == NULL) {
+        if (tmp_expression_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 411;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[19]);
-        if (tmp_args_element_name_14 == NULL) {
+        tmp_args_element_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[17]);
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 411;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 411;
-        tmp_assign_source_17 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_14);
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_14);
+        tmp_assign_source_17 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_14);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_14);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14761,18 +13399,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_30;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_30;
         int tmp_truth_name_2;
-        tmp_compexpr_left_4 = mod_consts[130];
-        tmp_expression_name_30 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_4 = mod_consts[122];
+        tmp_expression_value_30 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_30 == NULL)) {
-            tmp_expression_name_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_30 == NULL)) {
+            tmp_expression_value_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_30 == NULL) {
+        if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14782,8 +13420,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[131]);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[123]);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14793,8 +13431,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14840,18 +13478,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_yes_12:;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_31;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_args_element_name_17;
-        tmp_expression_name_31 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_instance_5;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_17;
+        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_31 == NULL)) {
-            tmp_expression_name_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_instance_5 == NULL)) {
+            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_31 == NULL) {
+        if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14861,40 +13498,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_31, mod_consts[30]);
-        if (tmp_called_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 413;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 413;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_15 = par_self;
-        tmp_args_element_name_16 = mod_consts[3];
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_15 = par_self;
+        tmp_args_element_value_16 = mod_consts[3];
         CHECK_OBJECT(par_caption);
-        tmp_args_element_name_17 = par_caption;
+        tmp_args_element_value_17 = par_caption;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 413;
         {
-            PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16, tmp_args_element_name_17};
-            tmp_assign_source_18 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_15, tmp_args_element_value_16, tmp_args_element_value_17};
+            tmp_assign_source_18 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_5,
+                mod_consts[26],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_7);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14907,29 +13525,30 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         {
             PyObject *old = par_caption;
+            assert(old != NULL);
             par_caption = tmp_assign_source_18;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_32;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_31;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_18;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_33;
-        PyObject *tmp_args_element_name_19;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_expression_name_34;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_expression_name_35;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_expression_name_36;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_32;
+        PyObject *tmp_args_element_value_19;
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_expression_value_33;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_expression_value_34;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_expression_value_35;
         CHECK_OBJECT(par_caption);
-        tmp_expression_name_32 = par_caption;
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[160]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_expression_value_31 = par_caption;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[152]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14939,122 +13558,122 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_33 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_32 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_33 == NULL)) {
-            tmp_expression_name_33 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_32 == NULL)) {
+            tmp_expression_value_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_33 == NULL) {
+        if (tmp_expression_value_32 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[161]);
-        if (tmp_called_name_9 == NULL) {
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[153]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_19 = mod_consts[162];
-        tmp_expression_name_34 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_19 = mod_consts[154];
+        tmp_expression_value_33 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_34 == NULL)) {
-            tmp_expression_name_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_33 == NULL)) {
+            tmp_expression_value_33 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_34 == NULL) {
+        if (tmp_expression_value_33 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_34, mod_consts[163]);
-        if (tmp_args_element_name_20 == NULL) {
+        tmp_args_element_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[155]);
+        if (tmp_args_element_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_35 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_34 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_35 == NULL)) {
-            tmp_expression_name_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_34 == NULL)) {
+            tmp_expression_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_35 == NULL) {
+        if (tmp_expression_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
-            Py_DECREF(tmp_args_element_name_20);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_20);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_35, mod_consts[164]);
-        if (tmp_args_element_name_21 == NULL) {
+        tmp_args_element_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[156]);
+        if (tmp_args_element_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
-            Py_DECREF(tmp_args_element_name_20);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_20);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_36 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_35 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_36 == NULL)) {
-            tmp_expression_name_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_35 == NULL)) {
+            tmp_expression_value_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_36 == NULL) {
+        if (tmp_expression_value_35 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
-            Py_DECREF(tmp_args_element_name_20);
-            Py_DECREF(tmp_args_element_name_21);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_20);
+            Py_DECREF(tmp_args_element_value_21);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[165]);
-        if (tmp_args_element_name_22 == NULL) {
+        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[157]);
+        if (tmp_args_element_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
-            Py_DECREF(tmp_args_element_name_20);
-            Py_DECREF(tmp_args_element_name_21);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_20);
+            Py_DECREF(tmp_args_element_value_21);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
@@ -15062,28 +13681,28 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 414;
         {
-            PyObject *call_args[] = {tmp_args_element_name_19, tmp_args_element_name_20, tmp_args_element_name_21, tmp_args_element_name_22};
-            tmp_args_element_name_18 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_9, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_19, tmp_args_element_value_20, tmp_args_element_value_21, tmp_args_element_value_22};
+            tmp_args_element_value_18 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_9);
-        Py_DECREF(tmp_args_element_name_20);
-        Py_DECREF(tmp_args_element_name_21);
-        Py_DECREF(tmp_args_element_name_22);
-        if (tmp_args_element_name_18 == NULL) {
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_element_value_20);
+        Py_DECREF(tmp_args_element_value_21);
+        Py_DECREF(tmp_args_element_value_22);
+        if (tmp_args_element_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 414;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 414;
-        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_18);
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_18);
+        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_18);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_element_value_18);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15097,39 +13716,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_5);
     }
     {
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_37;
+        PyObject *tmp_called_instance_6;
         PyObject *tmp_call_result_6;
-        PyObject *tmp_args_element_name_23;
+        PyObject *tmp_args_element_value_23;
         CHECK_OBJECT(var_messageSizer);
-        tmp_expression_name_37 = var_messageSizer;
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_37, mod_consts[20]);
-        if (tmp_called_name_10 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 415;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_caption == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[166]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 415;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_23 = par_caption;
+        tmp_called_instance_6 = var_messageSizer;
+        CHECK_OBJECT(par_caption);
+        tmp_args_element_value_23 = par_caption;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 415;
-        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_23);
-        Py_DECREF(tmp_called_name_10);
+        tmp_call_result_6 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[18], tmp_args_element_value_23);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15143,26 +13738,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_6);
     }
     {
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_instance_7;
         PyObject *tmp_call_result_7;
-        if (var_messageSizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 416;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_5 = var_messageSizer;
+        CHECK_OBJECT(var_messageSizer);
+        tmp_called_instance_7 = var_messageSizer;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 416;
-        tmp_call_result_7 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_5,
-            mod_consts[20],
-            &PyTuple_GET_ITEM(mod_consts[159], 0)
+        tmp_call_result_7 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_7,
+            mod_consts[18],
+            PyTuple_GET_ITEM(mod_consts[151], 0)
         );
 
         if (tmp_call_result_7 == NULL) {
@@ -15180,18 +13764,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_no_12:;
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_38;
-        PyObject *tmp_args_element_name_24;
-        PyObject *tmp_args_element_name_25;
-        PyObject *tmp_args_element_name_26;
-        tmp_expression_name_38 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_instance_8;
+        PyObject *tmp_args_element_value_24;
+        PyObject *tmp_args_element_value_25;
+        PyObject *tmp_args_element_value_26;
+        tmp_called_instance_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_38 == NULL)) {
-            tmp_expression_name_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_instance_8 == NULL)) {
+            tmp_called_instance_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_38 == NULL) {
+        if (tmp_called_instance_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15201,40 +13784,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[30]);
-        if (tmp_called_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 418;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 418;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_24 = par_self;
-        tmp_args_element_name_25 = mod_consts[3];
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_24 = par_self;
+        tmp_args_element_value_25 = mod_consts[3];
         CHECK_OBJECT(par_message);
-        tmp_args_element_name_26 = par_message;
+        tmp_args_element_value_26 = par_message;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 418;
         {
-            PyObject *call_args[] = {tmp_args_element_name_24, tmp_args_element_name_25, tmp_args_element_name_26};
-            tmp_assign_source_19 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_11, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_24, tmp_args_element_value_25, tmp_args_element_value_26};
+            tmp_assign_source_19 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_8,
+                mod_consts[26],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_11);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15249,15 +13813,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         var_stext = tmp_assign_source_19;
     }
     {
-        PyObject *tmp_called_name_12;
-        PyObject *tmp_expression_name_39;
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_expression_value_36;
         PyObject *tmp_call_result_8;
-        PyObject *tmp_args_element_name_27;
-        PyObject *tmp_expression_name_40;
+        PyObject *tmp_args_element_value_27;
+        PyObject *tmp_expression_value_37;
         CHECK_OBJECT(var_stext);
-        tmp_expression_name_39 = var_stext;
-        tmp_called_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_39, mod_consts[168]);
-        if (tmp_called_name_12 == NULL) {
+        tmp_expression_value_36 = var_stext;
+        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[158]);
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15267,34 +13831,23 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 420;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_40 = par_self;
-        tmp_args_element_name_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_40, mod_consts[169]);
-        if (tmp_args_element_name_27 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_37 = par_self;
+        tmp_args_element_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[159]);
+        if (tmp_args_element_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_9);
 
             exception_lineno = 420;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 420;
-        tmp_call_result_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_27);
-        Py_DECREF(tmp_called_name_12);
-        Py_DECREF(tmp_args_element_name_27);
+        tmp_call_result_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_27);
+        Py_DECREF(tmp_called_value_9);
+        Py_DECREF(tmp_args_element_value_27);
         if (tmp_call_result_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15308,13 +13861,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_8);
     }
     {
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_expression_name_41;
+        PyObject *tmp_called_instance_9;
         PyObject *tmp_call_result_9;
-        PyObject *tmp_args_element_name_28;
+        PyObject *tmp_args_element_value_28;
         if (var_messageSizer == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15324,34 +13876,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_41 = var_messageSizer;
-        tmp_called_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_41, mod_consts[20]);
-        if (tmp_called_name_13 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 421;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_stext == NULL) {
-            Py_DECREF(tmp_called_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[170]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 421;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_28 = var_stext;
+        tmp_called_instance_9 = var_messageSizer;
+        CHECK_OBJECT(var_stext);
+        tmp_args_element_value_28 = var_stext;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 421;
-        tmp_call_result_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, tmp_args_element_name_28);
-        Py_DECREF(tmp_called_name_13);
+        tmp_call_result_9 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_9, mod_consts[18], tmp_args_element_value_28);
         if (tmp_call_result_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15388,11 +13917,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     branch_yes_13:;
     {
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_instance_10;
         PyObject *tmp_call_result_10;
         if (var_messageSizer == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15402,12 +13931,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_6 = var_messageSizer;
+        tmp_called_instance_10 = var_messageSizer;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 424;
-        tmp_call_result_10 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_6,
-            mod_consts[20],
-            &PyTuple_GET_ITEM(mod_consts[171], 0)
+        tmp_call_result_10 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_10,
+            mod_consts[18],
+            PyTuple_GET_ITEM(mod_consts[161], 0)
         );
 
         if (tmp_call_result_10 == NULL) {
@@ -15424,30 +13953,27 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     {
         PyObject *tmp_assign_source_20;
-        PyObject *tmp_called_name_14;
-        PyObject *tmp_expression_name_42;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_2;
-        PyObject *tmp_dict_value_2;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_expression_name_43;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_expression_name_44;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_expression_name_45;
-        PyObject *tmp_right_name_12;
-        PyObject *tmp_expression_name_46;
-        tmp_expression_name_42 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_38;
+        PyObject *tmp_kw_call_arg_value_0_2;
+        PyObject *tmp_kw_call_dict_value_0_2;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_expression_value_39;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_expression_value_41;
+        PyObject *tmp_right_value_12;
+        PyObject *tmp_expression_value_42;
+        tmp_expression_value_38 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_42 == NULL)) {
-            tmp_expression_name_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_38 == NULL)) {
+            tmp_expression_value_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_42 == NULL) {
+        if (tmp_expression_value_38 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15457,8 +13983,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_42, mod_consts[9]);
-        if (tmp_called_name_14 == NULL) {
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[7]);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15468,195 +13994,170 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(par_self);
+        tmp_kw_call_arg_value_0_2 = par_self;
+        tmp_expression_value_39 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            exception_lineno = 425;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_39 == NULL)) {
+            tmp_expression_value_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_tuple_element_2 = par_self;
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_dict_key_2 = mod_consts[10];
-        tmp_expression_name_43 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_43 == NULL)) {
-            tmp_expression_name_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_43 == NULL) {
+        if (tmp_expression_value_39 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_43, mod_consts[11]);
-        if (tmp_left_name_12 == NULL) {
+        tmp_left_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[8]);
+        if (tmp_left_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_44 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_40 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_44 == NULL)) {
-            tmp_expression_name_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_40 == NULL)) {
+            tmp_expression_value_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_44 == NULL) {
+        if (tmp_expression_value_40 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
-            Py_DECREF(tmp_left_name_12);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_left_value_12);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_44, mod_consts[12]);
-        if (tmp_right_name_10 == NULL) {
+        tmp_right_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[9]);
+        if (tmp_right_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
-            Py_DECREF(tmp_left_name_12);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_left_value_12);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_11 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_12, tmp_right_name_10);
-        Py_DECREF(tmp_left_name_12);
-        Py_DECREF(tmp_right_name_10);
-        if (tmp_left_name_11 == NULL) {
+        tmp_left_value_11 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_12, tmp_right_value_10);
+        Py_DECREF(tmp_left_value_12);
+        Py_DECREF(tmp_right_value_10);
+        if (tmp_left_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_45 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_41 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_45 == NULL)) {
-            tmp_expression_name_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_41 == NULL)) {
+            tmp_expression_value_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_45 == NULL) {
+        if (tmp_expression_value_41 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
-            Py_DECREF(tmp_left_name_11);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_left_value_11);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_45, mod_consts[172]);
-        if (tmp_right_name_11 == NULL) {
+        tmp_right_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[162]);
+        if (tmp_right_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
-            Py_DECREF(tmp_left_name_11);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_left_value_11);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_11, tmp_right_name_11);
-        Py_DECREF(tmp_left_name_11);
-        Py_DECREF(tmp_right_name_11);
-        if (tmp_left_name_10 == NULL) {
+        tmp_left_value_10 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_11, tmp_right_value_11);
+        Py_DECREF(tmp_left_value_11);
+        Py_DECREF(tmp_right_value_11);
+        if (tmp_left_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_46 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_42 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_46 == NULL)) {
-            tmp_expression_name_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_42 == NULL)) {
+            tmp_expression_value_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_46 == NULL) {
+        if (tmp_expression_value_42 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
-            Py_DECREF(tmp_left_name_10);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_left_value_10);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_46, mod_consts[173]);
-        if (tmp_right_name_12 == NULL) {
+        tmp_right_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[163]);
+        if (tmp_right_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
-            Py_DECREF(tmp_left_name_10);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_left_value_10);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_dict_value_2 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_10);
-        Py_DECREF(tmp_right_name_12);
-        if (tmp_dict_value_2 == NULL) {
+        tmp_kw_call_dict_value_0_2 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_10);
+        Py_DECREF(tmp_right_value_12);
+        if (tmp_kw_call_dict_value_0_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_10);
 
             exception_lineno = 425;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_2, tmp_dict_value_2);
-        Py_DECREF(tmp_dict_value_2);
-        assert(!(tmp_res != 0));
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 425;
-        tmp_assign_source_20 = CALL_FUNCTION(tmp_called_name_14, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_14);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_2};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_2};
+            tmp_assign_source_20 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_10, args, kw_values, mod_consts[10]);
+        }
+
+        Py_DECREF(tmp_called_value_10);
+        Py_DECREF(tmp_kw_call_dict_value_0_2);
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15671,15 +14172,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         var_t = tmp_assign_source_20;
     }
     {
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_11;
         PyObject *tmp_call_result_11;
-        PyObject *tmp_args_element_name_29;
+        PyObject *tmp_args_element_value_29;
         CHECK_OBJECT(var_t);
-        tmp_called_instance_7 = var_t;
+        tmp_called_instance_11 = var_t;
         CHECK_OBJECT(par_msg2);
-        tmp_args_element_name_29 = par_msg2;
+        tmp_args_element_value_29 = par_msg2;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 426;
-        tmp_call_result_11 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[67], tmp_args_element_name_29);
+        tmp_call_result_11 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_11, mod_consts[61], tmp_args_element_value_29);
         if (tmp_call_result_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15694,16 +14195,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_called_name_15;
-        PyObject *tmp_expression_name_47;
-        PyObject *tmp_args_element_name_30;
-        tmp_expression_name_47 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_instance_12;
+        PyObject *tmp_args_element_value_30;
+        tmp_called_instance_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_47 == NULL)) {
-            tmp_expression_name_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_instance_12 == NULL)) {
+            tmp_called_instance_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_47 == NULL) {
+        if (tmp_called_instance_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15713,33 +14213,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_47, mod_consts[174]);
-        if (tmp_called_name_15 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 430;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_t == NULL) {
-            Py_DECREF(tmp_called_name_15);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 430;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_30 = var_t;
+        CHECK_OBJECT(var_t);
+        tmp_args_element_value_30 = var_t;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 430;
-        tmp_assign_source_21 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, tmp_args_element_name_30);
-        Py_DECREF(tmp_called_name_15);
+        tmp_assign_source_21 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_12, mod_consts[164], tmp_args_element_value_30);
         if (tmp_assign_source_21 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15754,15 +14231,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         var_dc = tmp_assign_source_21;
     }
     {
-        PyObject *tmp_called_name_16;
-        PyObject *tmp_expression_name_48;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_43;
         PyObject *tmp_call_result_12;
-        PyObject *tmp_args_element_name_31;
-        PyObject *tmp_called_instance_8;
+        PyObject *tmp_args_element_value_31;
+        PyObject *tmp_called_instance_13;
         CHECK_OBJECT(var_dc);
-        tmp_expression_name_48 = var_dc;
-        tmp_called_name_16 = LOOKUP_ATTRIBUTE(tmp_expression_name_48, mod_consts[160]);
-        if (tmp_called_name_16 == NULL) {
+        tmp_expression_value_43 = var_dc;
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_43, mod_consts[152]);
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15772,35 +14249,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_t == NULL) {
-            Py_DECREF(tmp_called_name_16);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 431;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_8 = var_t;
+        CHECK_OBJECT(var_t);
+        tmp_called_instance_13 = var_t;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 431;
-        tmp_args_element_name_31 = CALL_METHOD_NO_ARGS(tmp_called_instance_8, mod_consts[106]);
-        if (tmp_args_element_name_31 == NULL) {
+        tmp_args_element_value_31 = CALL_METHOD_NO_ARGS(tmp_called_instance_13, mod_consts[97]);
+        if (tmp_args_element_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_16);
+            Py_DECREF(tmp_called_value_11);
 
             exception_lineno = 431;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 431;
-        tmp_call_result_12 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_16, tmp_args_element_name_31);
-        Py_DECREF(tmp_called_name_16);
-        Py_DECREF(tmp_args_element_name_31);
+        tmp_call_result_12 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_31);
+        Py_DECREF(tmp_called_value_11);
+        Py_DECREF(tmp_args_element_value_31);
         if (tmp_call_result_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15817,49 +14283,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     {
         PyObject *tmp_assign_source_22;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_name_17;
-        PyObject *tmp_expression_name_49;
-        PyObject *tmp_args_element_name_32;
-        if (var_dc == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[176]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 432;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_49 = var_dc;
-        tmp_called_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_49, mod_consts[177]);
-        if (tmp_called_name_17 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 432;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        if (par_msg2 == NULL) {
-            Py_DECREF(tmp_called_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[178]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 432;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_args_element_name_32 = par_msg2;
+        PyObject *tmp_called_instance_14;
+        PyObject *tmp_args_element_value_32;
+        CHECK_OBJECT(var_dc);
+        tmp_called_instance_14 = var_dc;
+        CHECK_OBJECT(par_msg2);
+        tmp_args_element_value_32 = par_msg2;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 432;
-        tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_17, tmp_args_element_name_32);
-        Py_DECREF(tmp_called_name_17);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_14, mod_consts[165], tmp_args_element_value_32);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15986,7 +14417,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[179];
+            exception_value = mod_consts[166];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -16007,7 +14438,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -16045,7 +14477,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_26;
@@ -16080,44 +14513,27 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     Py_XDECREF(tmp_tuple_unpack_1__element_3);
     tmp_tuple_unpack_1__element_3 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_3);
-    tmp_tuple_unpack_1__element_3 = NULL;
     {
         PyObject *tmp_assign_source_29;
-        PyObject *tmp_called_name_18;
-        PyObject *tmp_args_element_name_33;
-        PyObject *tmp_expression_name_50;
-        PyObject *tmp_args_element_name_34;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_right_name_13;
-        PyObject *tmp_right_name_14;
-        PyObject *tmp_called_name_19;
-        PyObject *tmp_expression_name_51;
-        PyObject *tmp_expression_name_52;
-        PyObject *tmp_args_element_name_35;
-        PyObject *tmp_expression_name_53;
-        tmp_called_name_18 = LOOKUP_BUILTIN(mod_consts[180]);
-        assert(tmp_called_name_18 != NULL);
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 433;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_50 = par_self;
-        tmp_args_element_name_33 = LOOKUP_ATTRIBUTE(tmp_expression_name_50, mod_consts[169]);
-        if (tmp_args_element_name_33 == NULL) {
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_args_element_value_33;
+        PyObject *tmp_expression_value_44;
+        PyObject *tmp_args_element_value_34;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_right_value_13;
+        PyObject *tmp_right_value_14;
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_expression_value_45;
+        PyObject *tmp_expression_value_46;
+        PyObject *tmp_args_element_value_35;
+        PyObject *tmp_expression_value_47;
+        tmp_called_value_12 = LOOKUP_BUILTIN(mod_consts[167]);
+        assert(tmp_called_value_12 != NULL);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_44 = par_self;
+        tmp_args_element_value_33 = LOOKUP_ATTRIBUTE(tmp_expression_value_44, mod_consts[159]);
+        if (tmp_args_element_value_33 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16127,116 +14543,116 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_14 = mod_consts[181];
+        tmp_left_value_14 = mod_consts[168];
         CHECK_OBJECT(var_w);
-        tmp_right_name_13 = var_w;
-        tmp_left_name_13 = BINARY_OPERATION_ADD_OBJECT_LONG_OBJECT(tmp_left_name_14, tmp_right_name_13);
-        if (tmp_left_name_13 == NULL) {
+        tmp_right_value_13 = var_w;
+        tmp_left_value_13 = BINARY_OPERATION_ADD_OBJECT_LONG_OBJECT(tmp_left_value_14, tmp_right_value_13);
+        if (tmp_left_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
+            Py_DECREF(tmp_args_element_value_33);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_52 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_46 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_52 == NULL)) {
-            tmp_expression_name_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_46 == NULL)) {
+            tmp_expression_value_46 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_52 == NULL) {
+        if (tmp_expression_value_46 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_args_element_value_33);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_51 = LOOKUP_ATTRIBUTE(tmp_expression_name_52, mod_consts[105]);
-        if (tmp_expression_name_51 == NULL) {
+        tmp_expression_value_45 = LOOKUP_ATTRIBUTE(tmp_expression_value_46, mod_consts[96]);
+        if (tmp_expression_value_45 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_args_element_value_33);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_51, mod_consts[182]);
-        Py_DECREF(tmp_expression_name_51);
-        if (tmp_called_name_19 == NULL) {
+        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_45, mod_consts[169]);
+        Py_DECREF(tmp_expression_value_45);
+        if (tmp_called_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_args_element_value_33);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_53 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_47 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_53 == NULL)) {
-            tmp_expression_name_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_47 == NULL)) {
+            tmp_expression_value_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_53 == NULL) {
+        if (tmp_expression_value_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
-            Py_DECREF(tmp_left_name_13);
-            Py_DECREF(tmp_called_name_19);
+            Py_DECREF(tmp_args_element_value_33);
+            Py_DECREF(tmp_left_value_13);
+            Py_DECREF(tmp_called_value_13);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_35 = LOOKUP_ATTRIBUTE(tmp_expression_name_53, mod_consts[183]);
-        if (tmp_args_element_name_35 == NULL) {
+        tmp_args_element_value_35 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[170]);
+        if (tmp_args_element_value_35 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
-            Py_DECREF(tmp_left_name_13);
-            Py_DECREF(tmp_called_name_19);
+            Py_DECREF(tmp_args_element_value_33);
+            Py_DECREF(tmp_left_value_13);
+            Py_DECREF(tmp_called_value_13);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 433;
-        tmp_right_name_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_19, tmp_args_element_name_35);
-        Py_DECREF(tmp_called_name_19);
-        Py_DECREF(tmp_args_element_name_35);
-        if (tmp_right_name_14 == NULL) {
+        tmp_right_value_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_35);
+        Py_DECREF(tmp_called_value_13);
+        Py_DECREF(tmp_args_element_value_35);
+        if (tmp_right_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_args_element_value_33);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_34 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_13, tmp_right_name_14);
-        Py_DECREF(tmp_left_name_13);
-        Py_DECREF(tmp_right_name_14);
-        if (tmp_args_element_name_34 == NULL) {
+        tmp_args_element_value_34 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_13, tmp_right_value_14);
+        Py_DECREF(tmp_left_value_13);
+        Py_DECREF(tmp_right_value_14);
+        if (tmp_args_element_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_33);
+            Py_DECREF(tmp_args_element_value_33);
 
             exception_lineno = 433;
             type_description_1 = "oooooooooooooooooooooooooo";
@@ -16244,12 +14660,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 433;
         {
-            PyObject *call_args[] = {tmp_args_element_name_33, tmp_args_element_name_34};
-            tmp_assign_source_29 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_18, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_33, tmp_args_element_value_34};
+            tmp_assign_source_29 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_12, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_33);
-        Py_DECREF(tmp_args_element_name_34);
+        Py_DECREF(tmp_args_element_value_33);
+        Py_DECREF(tmp_args_element_value_34);
         if (tmp_assign_source_29 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16262,36 +14678,26 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         {
             PyObject *old = var_w;
+            assert(old != NULL);
             var_w = tmp_assign_source_29;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_30;
-        PyObject *tmp_called_name_20;
-        PyObject *tmp_args_element_name_36;
-        PyObject *tmp_expression_name_54;
-        PyObject *tmp_args_element_name_37;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_15;
-        tmp_called_name_20 = LOOKUP_BUILTIN(mod_consts[180]);
-        assert(tmp_called_name_20 != NULL);
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 434;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_54 = par_self;
-        tmp_args_element_name_36 = LOOKUP_ATTRIBUTE(tmp_expression_name_54, mod_consts[184]);
-        if (tmp_args_element_name_36 == NULL) {
+        PyObject *tmp_called_value_14;
+        PyObject *tmp_args_element_value_36;
+        PyObject *tmp_expression_value_48;
+        PyObject *tmp_args_element_value_37;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_15;
+        tmp_called_value_14 = LOOKUP_BUILTIN(mod_consts[167]);
+        assert(tmp_called_value_14 != NULL);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_48 = par_self;
+        tmp_args_element_value_36 = LOOKUP_ATTRIBUTE(tmp_expression_value_48, mod_consts[171]);
+        if (tmp_args_element_value_36 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16301,15 +14707,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_15 = mod_consts[181];
+        tmp_left_value_15 = mod_consts[168];
         CHECK_OBJECT(var_h);
-        tmp_right_name_15 = var_h;
-        tmp_args_element_name_37 = BINARY_OPERATION_ADD_OBJECT_LONG_OBJECT(tmp_left_name_15, tmp_right_name_15);
-        if (tmp_args_element_name_37 == NULL) {
+        tmp_right_value_15 = var_h;
+        tmp_args_element_value_37 = BINARY_OPERATION_ADD_OBJECT_LONG_OBJECT(tmp_left_value_15, tmp_right_value_15);
+        if (tmp_args_element_value_37 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_36);
+            Py_DECREF(tmp_args_element_value_36);
 
             exception_lineno = 434;
             type_description_1 = "oooooooooooooooooooooooooo";
@@ -16317,12 +14723,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 434;
         {
-            PyObject *call_args[] = {tmp_args_element_name_36, tmp_args_element_name_37};
-            tmp_assign_source_30 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_20, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_36, tmp_args_element_value_37};
+            tmp_assign_source_30 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_14, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_36);
-        Py_DECREF(tmp_args_element_name_37);
+        Py_DECREF(tmp_args_element_value_36);
+        Py_DECREF(tmp_args_element_value_37);
         if (tmp_assign_source_30 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16335,39 +14741,29 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         {
             PyObject *old = var_h;
+            assert(old != NULL);
             var_h = tmp_assign_source_30;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
-        PyObject *tmp_called_instance_9;
+        PyObject *tmp_called_instance_15;
         PyObject *tmp_call_result_13;
-        PyObject *tmp_args_element_name_38;
-        PyObject *tmp_tuple_element_3;
-        if (var_t == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 435;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_9 = var_t;
+        PyObject *tmp_args_element_value_38;
+        PyObject *tmp_tuple_element_1;
+        CHECK_OBJECT(var_t);
+        tmp_called_instance_15 = var_t;
         CHECK_OBJECT(var_w);
-        tmp_tuple_element_3 = var_w;
-        tmp_args_element_name_38 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_element_name_38, 0, tmp_tuple_element_3);
+        tmp_tuple_element_1 = var_w;
+        tmp_args_element_value_38 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_38, 0, tmp_tuple_element_1);
         CHECK_OBJECT(var_h);
-        tmp_tuple_element_3 = var_h;
-        PyTuple_SET_ITEM0(tmp_args_element_name_38, 1, tmp_tuple_element_3);
+        tmp_tuple_element_1 = var_h;
+        PyTuple_SET_ITEM0(tmp_args_element_value_38, 1, tmp_tuple_element_1);
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 435;
-        tmp_call_result_13 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_9, mod_consts[185], tmp_args_element_name_38);
-        Py_DECREF(tmp_args_element_name_38);
+        tmp_call_result_13 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_15, mod_consts[172], tmp_args_element_value_38);
+        Py_DECREF(tmp_args_element_value_38);
         if (tmp_call_result_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16381,16 +14777,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_13);
     }
     {
-        PyObject *tmp_called_name_21;
-        PyObject *tmp_expression_name_55;
+        PyObject *tmp_called_value_15;
+        PyObject *tmp_expression_value_49;
         PyObject *tmp_call_result_14;
-        PyObject *tmp_args_element_name_39;
-        PyObject *tmp_args_element_name_40;
-        PyObject *tmp_args_element_name_41;
-        PyObject *tmp_expression_name_56;
+        PyObject *tmp_args_element_value_39;
+        PyObject *tmp_args_element_value_40;
+        PyObject *tmp_args_element_value_41;
+        PyObject *tmp_expression_value_50;
         if (var_messageSizer == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16400,9 +14796,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_55 = var_messageSizer;
-        tmp_called_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_55, mod_consts[20]);
-        if (tmp_called_name_21 == NULL) {
+        tmp_expression_value_49 = var_messageSizer;
+        tmp_called_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_49, mod_consts[18]);
+        if (tmp_called_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16412,42 +14808,31 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_t == NULL) {
-            Py_DECREF(tmp_called_name_21);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[175]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(var_t);
+        tmp_args_element_value_39 = var_t;
+        tmp_args_element_value_40 = mod_consts[35];
+        tmp_expression_value_50 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_50 == NULL)) {
+            tmp_expression_value_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_50 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_15);
 
             exception_lineno = 436;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_args_element_name_39 = var_t;
-        tmp_args_element_name_40 = mod_consts[39];
-        tmp_expression_name_56 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_56 == NULL)) {
-            tmp_expression_name_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_56 == NULL) {
+        tmp_args_element_value_41 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[39]);
+        if (tmp_args_element_value_41 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_21);
-
-            exception_lineno = 436;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_41 = LOOKUP_ATTRIBUTE(tmp_expression_name_56, mod_consts[44]);
-        if (tmp_args_element_name_41 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_21);
+            Py_DECREF(tmp_called_value_15);
 
             exception_lineno = 436;
             type_description_1 = "oooooooooooooooooooooooooo";
@@ -16455,12 +14840,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 436;
         {
-            PyObject *call_args[] = {tmp_args_element_name_39, tmp_args_element_name_40, tmp_args_element_name_41};
-            tmp_call_result_14 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_21, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_39, tmp_args_element_value_40, tmp_args_element_value_41};
+            tmp_call_result_14 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_15, call_args);
         }
 
-        Py_DECREF(tmp_called_name_21);
-        Py_DECREF(tmp_args_element_name_41);
+        Py_DECREF(tmp_called_value_15);
+        Py_DECREF(tmp_args_element_value_41);
         if (tmp_call_result_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16476,45 +14861,34 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     branch_no_13:;
     {
         PyObject *tmp_assign_source_31;
-        PyObject *tmp_called_name_22;
-        PyObject *tmp_expression_name_57;
-        PyObject *tmp_args_element_name_42;
-        PyObject *tmp_left_name_16;
-        PyObject *tmp_right_name_16;
-        PyObject *tmp_left_name_17;
-        PyObject *tmp_left_name_18;
-        PyObject *tmp_left_name_19;
-        PyObject *tmp_left_name_20;
-        PyObject *tmp_left_name_21;
-        PyObject *tmp_left_name_22;
-        PyObject *tmp_expression_name_58;
-        PyObject *tmp_right_name_17;
-        PyObject *tmp_expression_name_59;
-        PyObject *tmp_right_name_18;
-        PyObject *tmp_expression_name_60;
-        PyObject *tmp_right_name_19;
-        PyObject *tmp_expression_name_61;
-        PyObject *tmp_right_name_20;
-        PyObject *tmp_expression_name_62;
-        PyObject *tmp_right_name_21;
-        PyObject *tmp_expression_name_63;
-        PyObject *tmp_right_name_22;
-        PyObject *tmp_expression_name_64;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 439;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_57 = par_self;
-        tmp_called_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_57, mod_consts[186]);
-        if (tmp_called_name_22 == NULL) {
+        PyObject *tmp_called_value_16;
+        PyObject *tmp_expression_value_51;
+        PyObject *tmp_args_element_value_42;
+        PyObject *tmp_left_value_16;
+        PyObject *tmp_right_value_16;
+        PyObject *tmp_left_value_17;
+        PyObject *tmp_left_value_18;
+        PyObject *tmp_left_value_19;
+        PyObject *tmp_left_value_20;
+        PyObject *tmp_left_value_21;
+        PyObject *tmp_left_value_22;
+        PyObject *tmp_expression_value_52;
+        PyObject *tmp_right_value_17;
+        PyObject *tmp_expression_value_53;
+        PyObject *tmp_right_value_18;
+        PyObject *tmp_expression_value_54;
+        PyObject *tmp_right_value_19;
+        PyObject *tmp_expression_value_55;
+        PyObject *tmp_right_value_20;
+        PyObject *tmp_expression_value_56;
+        PyObject *tmp_right_value_21;
+        PyObject *tmp_expression_value_57;
+        PyObject *tmp_right_value_22;
+        PyObject *tmp_expression_value_58;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_51 = par_self;
+        tmp_called_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_51, mod_consts[173]);
+        if (tmp_called_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16524,314 +14898,303 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_style == NULL) {
-            Py_DECREF(tmp_called_name_22);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        CHECK_OBJECT(par_style);
+        tmp_left_value_16 = par_style;
+        tmp_expression_value_52 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_52 == NULL)) {
+            tmp_expression_value_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_52 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_left_name_16 = par_style;
-        tmp_expression_name_58 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_58 == NULL)) {
-            tmp_expression_name_58 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_58 == NULL) {
+        tmp_left_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_52, mod_consts[14]);
+        if (tmp_left_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_58, mod_consts[16]);
-        if (tmp_left_name_22 == NULL) {
+        tmp_expression_value_53 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_53 == NULL)) {
+            tmp_expression_value_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_53 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_22);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_59 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_59 == NULL)) {
-            tmp_expression_name_59 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_59 == NULL) {
+        tmp_right_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_53, mod_consts[174]);
+        if (tmp_right_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_22);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_22);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_59, mod_consts[187]);
-        if (tmp_right_name_17 == NULL) {
+        tmp_left_value_21 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_22, tmp_right_value_17);
+        Py_DECREF(tmp_left_value_22);
+        Py_DECREF(tmp_right_value_17);
+        if (tmp_left_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_22);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_21 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_22, tmp_right_name_17);
-        Py_DECREF(tmp_left_name_22);
-        Py_DECREF(tmp_right_name_17);
-        if (tmp_left_name_21 == NULL) {
+        tmp_expression_value_54 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_54 == NULL)) {
+            tmp_expression_value_54 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_54 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_21);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_60 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_60 == NULL)) {
-            tmp_expression_name_60 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_60 == NULL) {
+        tmp_right_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_54, mod_consts[175]);
+        if (tmp_right_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_21);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_21);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_18 = LOOKUP_ATTRIBUTE(tmp_expression_name_60, mod_consts[188]);
-        if (tmp_right_name_18 == NULL) {
+        tmp_left_value_20 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_21, tmp_right_value_18);
+        Py_DECREF(tmp_left_value_21);
+        Py_DECREF(tmp_right_value_18);
+        if (tmp_left_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_21);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_20 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_21, tmp_right_name_18);
-        Py_DECREF(tmp_left_name_21);
-        Py_DECREF(tmp_right_name_18);
-        if (tmp_left_name_20 == NULL) {
+        tmp_expression_value_55 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_55 == NULL)) {
+            tmp_expression_value_55 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_55 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_20);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_61 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_61 == NULL)) {
-            tmp_expression_name_61 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_61 == NULL) {
+        tmp_right_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_55, mod_consts[176]);
+        if (tmp_right_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_20);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_20);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_61, mod_consts[189]);
-        if (tmp_right_name_19 == NULL) {
+        tmp_left_value_19 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_20, tmp_right_value_19);
+        Py_DECREF(tmp_left_value_20);
+        Py_DECREF(tmp_right_value_19);
+        if (tmp_left_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_20);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_19 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_20, tmp_right_name_19);
-        Py_DECREF(tmp_left_name_20);
-        Py_DECREF(tmp_right_name_19);
-        if (tmp_left_name_19 == NULL) {
+        tmp_expression_value_56 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_56 == NULL)) {
+            tmp_expression_value_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_56 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-
-            exception_lineno = 440;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_name_62 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_62 == NULL)) {
-            tmp_expression_name_62 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_62 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_19);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_19);
 
             exception_lineno = 441;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_62, mod_consts[190]);
-        if (tmp_right_name_20 == NULL) {
+        tmp_right_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_56, mod_consts[177]);
+        if (tmp_right_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_19);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_19);
 
             exception_lineno = 441;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_18 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_19, tmp_right_name_20);
-        Py_DECREF(tmp_left_name_19);
-        Py_DECREF(tmp_right_name_20);
-        if (tmp_left_name_18 == NULL) {
+        tmp_left_value_18 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_19, tmp_right_value_20);
+        Py_DECREF(tmp_left_value_19);
+        Py_DECREF(tmp_right_value_20);
+        if (tmp_left_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-
-            exception_lineno = 440;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_name_63 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_63 == NULL)) {
-            tmp_expression_name_63 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_63 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_18);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 441;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_63, mod_consts[191]);
-        if (tmp_right_name_21 == NULL) {
+        tmp_expression_value_57 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_57 == NULL)) {
+            tmp_expression_value_57 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_57 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_18);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_18);
 
             exception_lineno = 441;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_17 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_18, tmp_right_name_21);
-        Py_DECREF(tmp_left_name_18);
-        Py_DECREF(tmp_right_name_21);
-        if (tmp_left_name_17 == NULL) {
+        tmp_right_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_57, mod_consts[178]);
+        if (tmp_right_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-
-            exception_lineno = 440;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_name_64 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_64 == NULL)) {
-            tmp_expression_name_64 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_64 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_17);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_18);
 
             exception_lineno = 441;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_64, mod_consts[192]);
-        if (tmp_right_name_22 == NULL) {
+        tmp_left_value_17 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_18, tmp_right_value_21);
+        Py_DECREF(tmp_left_value_18);
+        Py_DECREF(tmp_right_value_21);
+        if (tmp_left_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
-            Py_DECREF(tmp_left_name_17);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 441;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_16 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_17, tmp_right_name_22);
-        Py_DECREF(tmp_left_name_17);
-        Py_DECREF(tmp_right_name_22);
-        if (tmp_right_name_16 == NULL) {
+        tmp_expression_value_58 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+
+        if (unlikely(tmp_expression_value_58 == NULL)) {
+            tmp_expression_value_58 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        }
+
+        if (tmp_expression_value_58 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_17);
 
-            exception_lineno = 440;
+            exception_lineno = 441;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_42 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_name_16, tmp_right_name_16);
-        Py_DECREF(tmp_right_name_16);
-        if (tmp_args_element_name_42 == NULL) {
+        tmp_right_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_58, mod_consts[179]);
+        if (tmp_right_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_22);
+            Py_DECREF(tmp_called_value_16);
+            Py_DECREF(tmp_left_value_17);
+
+            exception_lineno = 441;
+            type_description_1 = "oooooooooooooooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_right_value_16 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_17, tmp_right_value_22);
+        Py_DECREF(tmp_left_value_17);
+        Py_DECREF(tmp_right_value_22);
+        if (tmp_right_value_16 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_16);
+
+            exception_lineno = 441;
+            type_description_1 = "oooooooooooooooooooooooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_42 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_value_16, tmp_right_value_16);
+        Py_DECREF(tmp_right_value_16);
+        if (tmp_args_element_value_42 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_16);
 
             exception_lineno = 440;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 439;
-        tmp_assign_source_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_22, tmp_args_element_name_42);
-        Py_DECREF(tmp_called_name_22);
-        Py_DECREF(tmp_args_element_name_42);
+        tmp_assign_source_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_16, tmp_args_element_value_42);
+        Py_DECREF(tmp_called_value_16);
+        Py_DECREF(tmp_args_element_value_42);
         if (tmp_assign_source_31 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16846,28 +15209,17 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         var_buttonSizer = tmp_assign_source_31;
     }
     {
-        PyObject *tmp_called_name_23;
-        PyObject *tmp_expression_name_65;
+        PyObject *tmp_called_value_17;
+        PyObject *tmp_expression_value_59;
         PyObject *tmp_call_result_15;
-        PyObject *tmp_args_element_name_43;
-        PyObject *tmp_expression_name_66;
-        PyObject *tmp_args_element_name_44;
-        PyObject *tmp_expression_name_67;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 443;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_65 = par_self;
-        tmp_called_name_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_65, mod_consts[193]);
-        if (tmp_called_name_23 == NULL) {
+        PyObject *tmp_args_element_value_43;
+        PyObject *tmp_expression_value_60;
+        PyObject *tmp_args_element_value_44;
+        PyObject *tmp_expression_value_61;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_59 = par_self;
+        tmp_called_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_59, mod_consts[180]);
+        if (tmp_called_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16877,54 +15229,42 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_66 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_60 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_66 == NULL)) {
-            tmp_expression_name_66 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_60 == NULL)) {
+            tmp_expression_value_60 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_66 == NULL) {
+        if (tmp_expression_value_60 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_23);
+            Py_DECREF(tmp_called_value_17);
 
             exception_lineno = 443;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_43 = LOOKUP_ATTRIBUTE(tmp_expression_name_66, mod_consts[194]);
-        if (tmp_args_element_name_43 == NULL) {
+        tmp_args_element_value_43 = LOOKUP_ATTRIBUTE(tmp_expression_value_60, mod_consts[181]);
+        if (tmp_args_element_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_23);
+            Py_DECREF(tmp_called_value_17);
 
             exception_lineno = 443;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_23);
-            Py_DECREF(tmp_args_element_name_43);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 443;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_67 = par_self;
-        tmp_args_element_name_44 = LOOKUP_ATTRIBUTE(tmp_expression_name_67, mod_consts[195]);
-        if (tmp_args_element_name_44 == NULL) {
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_61 = par_self;
+        tmp_args_element_value_44 = LOOKUP_ATTRIBUTE(tmp_expression_value_61, mod_consts[182]);
+        if (tmp_args_element_value_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_23);
-            Py_DECREF(tmp_args_element_name_43);
+            Py_DECREF(tmp_called_value_17);
+            Py_DECREF(tmp_args_element_value_43);
 
             exception_lineno = 443;
             type_description_1 = "oooooooooooooooooooooooooo";
@@ -16932,13 +15272,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 443;
         {
-            PyObject *call_args[] = {tmp_args_element_name_43, tmp_args_element_name_44};
-            tmp_call_result_15 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_23, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_43, tmp_args_element_value_44};
+            tmp_call_result_15 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_17, call_args);
         }
 
-        Py_DECREF(tmp_called_name_23);
-        Py_DECREF(tmp_args_element_name_43);
-        Py_DECREF(tmp_args_element_name_44);
+        Py_DECREF(tmp_called_value_17);
+        Py_DECREF(tmp_args_element_value_43);
+        Py_DECREF(tmp_args_element_value_44);
         if (tmp_call_result_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16977,11 +15317,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     {
         PyObject *tmp_assign_source_32;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_instance_10;
+        PyObject *tmp_called_value_18;
+        PyObject *tmp_expression_value_62;
         CHECK_OBJECT(par_btnLabels);
-        tmp_called_instance_10 = par_btnLabels;
+        tmp_expression_value_62 = par_btnLabels;
+        tmp_called_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_62, mod_consts[183]);
+        if (tmp_called_value_18 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 445;
+            type_description_1 = "oooooooooooooooooooooooooo";
+            goto frame_exception_exit_1;
+        }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 445;
-        tmp_iter_arg_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_10, mod_consts[196]);
+        tmp_iter_arg_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_18);
+        Py_DECREF(tmp_called_value_18);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17144,7 +15497,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[5];
+            exception_value = mod_consts[4];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -17165,7 +15518,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -17201,7 +15555,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     goto try_except_handler_4;
     // End of try:
     try_end_4:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_37;
@@ -17233,17 +15588,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     Py_XDECREF(tmp_tuple_unpack_2__element_2);
     tmp_tuple_unpack_2__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
     {
         PyObject *tmp_assign_source_39;
-        PyObject *tmp_called_instance_11;
-        PyObject *tmp_args_element_name_45;
+        PyObject *tmp_called_instance_16;
+        PyObject *tmp_args_element_value_45;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[46]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17253,11 +15604,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto try_except_handler_4;
         }
 
-        tmp_called_instance_11 = par_self;
+        tmp_called_instance_16 = par_self;
         CHECK_OBJECT(var_sid);
-        tmp_args_element_name_45 = var_sid;
+        tmp_args_element_value_45 = var_sid;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 446;
-        tmp_assign_source_39 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_11, mod_consts[197], tmp_args_element_name_45);
+        tmp_assign_source_39 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_16, mod_consts[184], tmp_args_element_value_45);
         if (tmp_assign_source_39 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17299,15 +15650,15 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     branch_yes_15:;
     {
-        PyObject *tmp_called_instance_12;
+        PyObject *tmp_called_instance_17;
         PyObject *tmp_call_result_16;
-        PyObject *tmp_args_element_name_46;
+        PyObject *tmp_args_element_value_46;
         CHECK_OBJECT(var_btn);
-        tmp_called_instance_12 = var_btn;
+        tmp_called_instance_17 = var_btn;
         CHECK_OBJECT(var_label);
-        tmp_args_element_name_46 = var_label;
+        tmp_args_element_value_46 = var_label;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 448;
-        tmp_call_result_16 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_12, mod_consts[198], tmp_args_element_name_46);
+        tmp_call_result_16 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_17, mod_consts[185], tmp_args_element_value_46);
         if (tmp_call_result_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17347,7 +15698,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_5;
@@ -17360,18 +15712,19 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     try_end_5:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_14:;
     {
-        PyObject *tmp_called_name_24;
-        PyObject *tmp_expression_name_68;
+        PyObject *tmp_called_value_19;
+        PyObject *tmp_expression_value_63;
         PyObject *tmp_call_result_17;
-        PyObject *tmp_args_element_name_47;
-        PyObject *tmp_called_instance_13;
+        PyObject *tmp_args_element_value_47;
+        PyObject *tmp_called_instance_18;
         if (var_messageSizer == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17381,9 +15734,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_68 = var_messageSizer;
-        tmp_called_name_24 = LOOKUP_ATTRIBUTE(tmp_expression_name_68, mod_consts[20]);
-        if (tmp_called_name_24 == NULL) {
+        tmp_expression_value_63 = var_messageSizer;
+        tmp_called_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_63, mod_consts[18]);
+        if (tmp_called_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17393,43 +15746,43 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_called_instance_18 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_called_instance_13 == NULL)) {
-            tmp_called_instance_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_instance_18 == NULL)) {
+            tmp_called_instance_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_called_instance_13 == NULL) {
+        if (tmp_called_instance_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_24);
+            Py_DECREF(tmp_called_value_19);
 
             exception_lineno = 449;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 449;
-        tmp_args_element_name_47 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_13,
-            mod_consts[199],
-            &PyTuple_GET_ITEM(mod_consts[200], 0)
+        tmp_args_element_value_47 = CALL_METHOD_WITH_ARGS2(
+            tmp_called_instance_18,
+            mod_consts[186],
+            &PyTuple_GET_ITEM(mod_consts[187], 0)
         );
 
-        if (tmp_args_element_name_47 == NULL) {
+        if (tmp_args_element_value_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_24);
+            Py_DECREF(tmp_called_value_19);
 
             exception_lineno = 449;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 449;
-        tmp_call_result_17 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_24, tmp_args_element_name_47);
-        Py_DECREF(tmp_called_name_24);
-        Py_DECREF(tmp_args_element_name_47);
+        tmp_call_result_17 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_19, tmp_args_element_value_47);
+        Py_DECREF(tmp_called_value_19);
+        Py_DECREF(tmp_args_element_value_47);
         if (tmp_call_result_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17443,26 +15796,26 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_17);
     }
     {
-        PyObject *tmp_called_name_25;
-        PyObject *tmp_expression_name_69;
+        PyObject *tmp_called_value_20;
+        PyObject *tmp_expression_value_64;
         PyObject *tmp_call_result_18;
-        PyObject *tmp_args_element_name_48;
-        PyObject *tmp_args_element_name_49;
-        PyObject *tmp_args_element_name_50;
-        PyObject *tmp_left_name_23;
-        PyObject *tmp_left_name_24;
-        PyObject *tmp_left_name_25;
-        PyObject *tmp_expression_name_70;
-        PyObject *tmp_right_name_23;
-        PyObject *tmp_expression_name_71;
-        PyObject *tmp_right_name_24;
-        PyObject *tmp_expression_name_72;
-        PyObject *tmp_right_name_25;
-        PyObject *tmp_expression_name_73;
-        PyObject *tmp_args_element_name_51;
+        PyObject *tmp_args_element_value_48;
+        PyObject *tmp_args_element_value_49;
+        PyObject *tmp_args_element_value_50;
+        PyObject *tmp_left_value_23;
+        PyObject *tmp_left_value_24;
+        PyObject *tmp_left_value_25;
+        PyObject *tmp_expression_value_65;
+        PyObject *tmp_right_value_23;
+        PyObject *tmp_expression_value_66;
+        PyObject *tmp_right_value_24;
+        PyObject *tmp_expression_value_67;
+        PyObject *tmp_right_value_25;
+        PyObject *tmp_expression_value_68;
+        PyObject *tmp_args_element_value_51;
         if (var_messageSizer == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17472,9 +15825,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_69 = var_messageSizer;
-        tmp_called_name_25 = LOOKUP_ATTRIBUTE(tmp_expression_name_69, mod_consts[20]);
-        if (tmp_called_name_25 == NULL) {
+        tmp_expression_value_64 = var_messageSizer;
+        tmp_called_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_64, mod_consts[18]);
+        if (tmp_called_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17485,170 +15838,170 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_buttonSizer);
-        tmp_args_element_name_48 = var_buttonSizer;
-        tmp_args_element_name_49 = mod_consts[39];
-        tmp_expression_name_70 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_48 = var_buttonSizer;
+        tmp_args_element_value_49 = mod_consts[35];
+        tmp_expression_value_65 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_70 == NULL)) {
-            tmp_expression_name_70 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_65 == NULL)) {
+            tmp_expression_value_65 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_70 == NULL) {
+        if (tmp_expression_value_65 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_20);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_25 = LOOKUP_ATTRIBUTE(tmp_expression_name_70, mod_consts[157]);
-        if (tmp_left_name_25 == NULL) {
+        tmp_left_value_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_65, mod_consts[149]);
+        if (tmp_left_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_20);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_71 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_66 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_71 == NULL)) {
-            tmp_expression_name_71 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_66 == NULL)) {
+            tmp_expression_value_66 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_71 == NULL) {
+        if (tmp_expression_value_66 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
-            Py_DECREF(tmp_left_name_25);
+            Py_DECREF(tmp_called_value_20);
+            Py_DECREF(tmp_left_value_25);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_71, mod_consts[201]);
-        if (tmp_right_name_23 == NULL) {
+        tmp_right_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_66, mod_consts[188]);
+        if (tmp_right_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
-            Py_DECREF(tmp_left_name_25);
+            Py_DECREF(tmp_called_value_20);
+            Py_DECREF(tmp_left_value_25);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_24 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_25, tmp_right_name_23);
-        Py_DECREF(tmp_left_name_25);
-        Py_DECREF(tmp_right_name_23);
-        if (tmp_left_name_24 == NULL) {
+        tmp_left_value_24 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_25, tmp_right_value_23);
+        Py_DECREF(tmp_left_value_25);
+        Py_DECREF(tmp_right_value_23);
+        if (tmp_left_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_20);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_72 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_67 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_72 == NULL)) {
-            tmp_expression_name_72 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_67 == NULL)) {
+            tmp_expression_value_67 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_72 == NULL) {
+        if (tmp_expression_value_67 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
-            Py_DECREF(tmp_left_name_24);
+            Py_DECREF(tmp_called_value_20);
+            Py_DECREF(tmp_left_value_24);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_24 = LOOKUP_ATTRIBUTE(tmp_expression_name_72, mod_consts[202]);
-        if (tmp_right_name_24 == NULL) {
+        tmp_right_value_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_67, mod_consts[189]);
+        if (tmp_right_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
-            Py_DECREF(tmp_left_name_24);
+            Py_DECREF(tmp_called_value_20);
+            Py_DECREF(tmp_left_value_24);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_23 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_24, tmp_right_name_24);
-        Py_DECREF(tmp_left_name_24);
-        Py_DECREF(tmp_right_name_24);
-        if (tmp_left_name_23 == NULL) {
+        tmp_left_value_23 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_24, tmp_right_value_24);
+        Py_DECREF(tmp_left_value_24);
+        Py_DECREF(tmp_right_value_24);
+        if (tmp_left_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_20);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_73 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_68 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_73 == NULL)) {
-            tmp_expression_name_73 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_68 == NULL)) {
+            tmp_expression_value_68 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_73 == NULL) {
+        if (tmp_expression_value_68 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
-            Py_DECREF(tmp_left_name_23);
+            Py_DECREF(tmp_called_value_20);
+            Py_DECREF(tmp_left_value_23);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_25 = LOOKUP_ATTRIBUTE(tmp_expression_name_73, mod_consts[44]);
-        if (tmp_right_name_25 == NULL) {
+        tmp_right_value_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_68, mod_consts[39]);
+        if (tmp_right_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
-            Py_DECREF(tmp_left_name_23);
+            Py_DECREF(tmp_called_value_20);
+            Py_DECREF(tmp_left_value_23);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_50 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_23, tmp_right_name_25);
-        Py_DECREF(tmp_left_name_23);
-        Py_DECREF(tmp_right_name_25);
-        if (tmp_args_element_name_50 == NULL) {
+        tmp_args_element_value_50 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_23, tmp_right_value_25);
+        Py_DECREF(tmp_left_value_23);
+        Py_DECREF(tmp_right_value_25);
+        if (tmp_args_element_value_50 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_25);
+            Py_DECREF(tmp_called_value_20);
 
             exception_lineno = 450;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_51 = mod_consts[158];
+        tmp_args_element_value_51 = mod_consts[150];
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 450;
         {
-            PyObject *call_args[] = {tmp_args_element_name_48, tmp_args_element_name_49, tmp_args_element_name_50, tmp_args_element_name_51};
-            tmp_call_result_18 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_25, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_48, tmp_args_element_value_49, tmp_args_element_value_50, tmp_args_element_value_51};
+            tmp_call_result_18 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_20, call_args);
         }
 
-        Py_DECREF(tmp_called_name_25);
-        Py_DECREF(tmp_args_element_name_50);
+        Py_DECREF(tmp_called_value_20);
+        Py_DECREF(tmp_args_element_value_50);
         if (tmp_call_result_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17662,35 +16015,24 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_18);
     }
     {
-        PyObject *tmp_called_name_26;
-        PyObject *tmp_expression_name_74;
+        PyObject *tmp_called_value_21;
+        PyObject *tmp_expression_value_69;
         PyObject *tmp_call_result_19;
-        PyObject *tmp_args_element_name_52;
-        PyObject *tmp_args_element_name_53;
-        PyObject *tmp_args_element_name_54;
-        PyObject *tmp_left_name_26;
-        PyObject *tmp_left_name_27;
-        PyObject *tmp_expression_name_75;
-        PyObject *tmp_right_name_26;
-        PyObject *tmp_expression_name_76;
-        PyObject *tmp_right_name_27;
-        PyObject *tmp_expression_name_77;
-        PyObject *tmp_args_element_name_55;
-        if (var_sizer == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 452;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_74 = var_sizer;
-        tmp_called_name_26 = LOOKUP_ATTRIBUTE(tmp_expression_name_74, mod_consts[20]);
-        if (tmp_called_name_26 == NULL) {
+        PyObject *tmp_args_element_value_52;
+        PyObject *tmp_args_element_value_53;
+        PyObject *tmp_args_element_value_54;
+        PyObject *tmp_left_value_26;
+        PyObject *tmp_left_value_27;
+        PyObject *tmp_expression_value_70;
+        PyObject *tmp_right_value_26;
+        PyObject *tmp_expression_value_71;
+        PyObject *tmp_right_value_27;
+        PyObject *tmp_expression_value_72;
+        PyObject *tmp_args_element_value_55;
+        CHECK_OBJECT(var_sizer);
+        tmp_expression_value_69 = var_sizer;
+        tmp_called_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_69, mod_consts[18]);
+        if (tmp_called_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17701,8 +16043,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         if (var_messageSizer == NULL) {
-            Py_DECREF(tmp_called_name_26);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[167]);
+            Py_DECREF(tmp_called_value_21);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17712,128 +16054,128 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_52 = var_messageSizer;
-        tmp_args_element_name_53 = mod_consts[39];
-        tmp_expression_name_75 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_args_element_value_52 = var_messageSizer;
+        tmp_args_element_value_53 = mod_consts[35];
+        tmp_expression_value_70 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_75 == NULL)) {
-            tmp_expression_name_75 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_70 == NULL)) {
+            tmp_expression_value_70 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_75 == NULL) {
+        if (tmp_expression_value_70 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
+            Py_DECREF(tmp_called_value_21);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_75, mod_consts[157]);
-        if (tmp_left_name_27 == NULL) {
+        tmp_left_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_70, mod_consts[149]);
+        if (tmp_left_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
+            Py_DECREF(tmp_called_value_21);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_76 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_71 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_76 == NULL)) {
-            tmp_expression_name_76 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_71 == NULL)) {
+            tmp_expression_value_71 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_76 == NULL) {
+        if (tmp_expression_value_71 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
-            Py_DECREF(tmp_left_name_27);
+            Py_DECREF(tmp_called_value_21);
+            Py_DECREF(tmp_left_value_27);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_26 = LOOKUP_ATTRIBUTE(tmp_expression_name_76, mod_consts[201]);
-        if (tmp_right_name_26 == NULL) {
+        tmp_right_value_26 = LOOKUP_ATTRIBUTE(tmp_expression_value_71, mod_consts[188]);
+        if (tmp_right_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
-            Py_DECREF(tmp_left_name_27);
+            Py_DECREF(tmp_called_value_21);
+            Py_DECREF(tmp_left_value_27);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_26 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_27, tmp_right_name_26);
-        Py_DECREF(tmp_left_name_27);
-        Py_DECREF(tmp_right_name_26);
-        if (tmp_left_name_26 == NULL) {
+        tmp_left_value_26 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_27, tmp_right_value_26);
+        Py_DECREF(tmp_left_value_27);
+        Py_DECREF(tmp_right_value_26);
+        if (tmp_left_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
+            Py_DECREF(tmp_called_value_21);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_77 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_72 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_77 == NULL)) {
-            tmp_expression_name_77 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_72 == NULL)) {
+            tmp_expression_value_72 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_77 == NULL) {
+        if (tmp_expression_value_72 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
-            Py_DECREF(tmp_left_name_26);
+            Py_DECREF(tmp_called_value_21);
+            Py_DECREF(tmp_left_value_26);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_77, mod_consts[156]);
-        if (tmp_right_name_27 == NULL) {
+        tmp_right_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_72, mod_consts[148]);
+        if (tmp_right_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
-            Py_DECREF(tmp_left_name_26);
+            Py_DECREF(tmp_called_value_21);
+            Py_DECREF(tmp_left_value_26);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_54 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_26, tmp_right_name_27);
-        Py_DECREF(tmp_left_name_26);
-        Py_DECREF(tmp_right_name_27);
-        if (tmp_args_element_name_54 == NULL) {
+        tmp_args_element_value_54 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_26, tmp_right_value_27);
+        Py_DECREF(tmp_left_value_26);
+        Py_DECREF(tmp_right_value_27);
+        if (tmp_args_element_value_54 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_26);
+            Py_DECREF(tmp_called_value_21);
 
             exception_lineno = 452;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_55 = mod_consts[158];
+        tmp_args_element_value_55 = mod_consts[150];
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 452;
         {
-            PyObject *call_args[] = {tmp_args_element_name_52, tmp_args_element_name_53, tmp_args_element_name_54, tmp_args_element_name_55};
-            tmp_call_result_19 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_26, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_52, tmp_args_element_value_53, tmp_args_element_value_54, tmp_args_element_value_55};
+            tmp_call_result_19 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_21, call_args);
         }
 
-        Py_DECREF(tmp_called_name_26);
-        Py_DECREF(tmp_args_element_name_54);
+        Py_DECREF(tmp_called_value_21);
+        Py_DECREF(tmp_args_element_value_54);
         if (tmp_call_result_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17847,13 +16189,12 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_19);
     }
     {
-        PyObject *tmp_called_name_27;
-        PyObject *tmp_expression_name_78;
+        PyObject *tmp_called_instance_19;
         PyObject *tmp_call_result_20;
-        PyObject *tmp_args_element_name_56;
+        PyObject *tmp_args_element_value_56;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[46]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17863,34 +16204,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_78 = par_self;
-        tmp_called_name_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_78, mod_consts[28]);
-        if (tmp_called_name_27 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 453;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_sizer == NULL) {
-            Py_DECREF(tmp_called_name_27);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 453;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_56 = var_sizer;
+        tmp_called_instance_19 = par_self;
+        CHECK_OBJECT(var_sizer);
+        tmp_args_element_value_56 = var_sizer;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 453;
-        tmp_call_result_20 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_27, tmp_args_element_name_56);
-        Py_DECREF(tmp_called_name_27);
+        tmp_call_result_20 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_19, mod_consts[24], tmp_args_element_value_56);
         if (tmp_call_result_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17904,11 +16222,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         Py_DECREF(tmp_call_result_20);
     }
     {
-        PyObject *tmp_called_instance_14;
+        PyObject *tmp_called_instance_20;
         PyObject *tmp_call_result_21;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[46]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17918,9 +16236,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_14 = par_self;
+        tmp_called_instance_20 = par_self;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 454;
-        tmp_call_result_21 = CALL_METHOD_NO_ARGS(tmp_called_instance_14, mod_consts[203]);
+        tmp_call_result_21 = CALL_METHOD_NO_ARGS(tmp_called_instance_20, mod_consts[190]);
         if (tmp_call_result_21 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17936,18 +16254,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     {
         nuitka_bool tmp_condition_result_16;
         int tmp_truth_name_6;
-        if (par_parent == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[204]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 455;
-            type_description_1 = "oooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_parent);
         tmp_truth_name_6 = CHECK_IF_TRUE(par_parent);
         if (tmp_truth_name_6 == -1) {
             assert(ERROR_OCCURRED());
@@ -17968,11 +16275,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     branch_yes_16:;
     {
-        PyObject *tmp_called_instance_15;
+        PyObject *tmp_called_instance_21;
         PyObject *tmp_call_result_22;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[46]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17982,9 +16289,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_15 = par_self;
+        tmp_called_instance_21 = par_self;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 456;
-        tmp_call_result_22 = CALL_METHOD_NO_ARGS(tmp_called_instance_15, mod_consts[205]);
+        tmp_call_result_22 = CALL_METHOD_NO_ARGS(tmp_called_instance_21, mod_consts[191]);
         if (tmp_call_result_22 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18000,11 +16307,11 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     goto branch_end_16;
     branch_no_16:;
     {
-        PyObject *tmp_called_instance_16;
+        PyObject *tmp_called_instance_22;
         PyObject *tmp_call_result_23;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[46]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -18014,9 +16321,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_16 = par_self;
+        tmp_called_instance_22 = par_self;
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 458;
-        tmp_call_result_23 = CALL_METHOD_NO_ARGS(tmp_called_instance_16, mod_consts[7]);
+        tmp_call_result_23 = CALL_METHOD_NO_ARGS(tmp_called_instance_22, mod_consts[5]);
         if (tmp_call_result_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18033,10 +16340,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     {
         PyObject *tmp_assign_source_40;
         PyObject *tmp_iter_arg_4;
-        PyObject *tmp_expression_name_79;
+        PyObject *tmp_expression_value_73;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[46]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -18046,8 +16353,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_79 = par_self;
-        tmp_iter_arg_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_79, mod_consts[206]);
+        tmp_expression_value_73 = par_self;
+        tmp_iter_arg_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_73, mod_consts[192]);
         if (tmp_iter_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18117,16 +16424,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
         nuitka_bool tmp_condition_result_17;
         PyObject *tmp_isinstance_inst_4;
         PyObject *tmp_isinstance_cls_4;
-        PyObject *tmp_expression_name_80;
+        PyObject *tmp_expression_value_74;
         CHECK_OBJECT(var_c);
         tmp_isinstance_inst_4 = var_c;
-        tmp_expression_name_80 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_74 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_80 == NULL)) {
-            tmp_expression_name_80 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_74 == NULL)) {
+            tmp_expression_value_74 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_80 == NULL) {
+        if (tmp_expression_value_74 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18136,7 +16443,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto try_except_handler_7;
         }
-        tmp_isinstance_cls_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_80, mod_consts[14]);
+        tmp_isinstance_cls_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_74, mod_consts[12]);
         if (tmp_isinstance_cls_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18147,7 +16454,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto try_except_handler_7;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_4, tmp_isinstance_cls_4);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_4, tmp_isinstance_cls_4);
         Py_DECREF(tmp_isinstance_cls_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -18168,18 +16475,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     }
     branch_yes_17:;
     {
-        PyObject *tmp_called_name_28;
-        PyObject *tmp_expression_name_81;
+        PyObject *tmp_called_value_22;
+        PyObject *tmp_expression_value_75;
         PyObject *tmp_call_result_24;
-        PyObject *tmp_args_element_name_57;
-        PyObject *tmp_expression_name_82;
-        tmp_expression_name_81 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_57;
+        PyObject *tmp_expression_value_76;
+        tmp_expression_value_75 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_81 == NULL)) {
-            tmp_expression_name_81 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_75 == NULL)) {
+            tmp_expression_value_75 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_81 == NULL) {
+        if (tmp_expression_value_75 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18189,8 +16496,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             type_description_1 = "oooooooooooooooooooooooooo";
             goto try_except_handler_7;
         }
-        tmp_called_name_28 = LOOKUP_ATTRIBUTE(tmp_expression_name_81, mod_consts[207]);
-        if (tmp_called_name_28 == NULL) {
+        tmp_called_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_75, mod_consts[193]);
+        if (tmp_called_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18201,22 +16508,22 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
             goto try_except_handler_7;
         }
         CHECK_OBJECT(var_c);
-        tmp_expression_name_82 = var_c;
-        tmp_args_element_name_57 = LOOKUP_ATTRIBUTE(tmp_expression_name_82, mod_consts[81]);
-        if (tmp_args_element_name_57 == NULL) {
+        tmp_expression_value_76 = var_c;
+        tmp_args_element_value_57 = LOOKUP_ATTRIBUTE(tmp_expression_value_76, mod_consts[73]);
+        if (tmp_args_element_value_57 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_28);
+            Py_DECREF(tmp_called_value_22);
 
             exception_lineno = 462;
             type_description_1 = "oooooooooooooooooooooooooo";
             goto try_except_handler_7;
         }
         frame_8b7cc34082d1f4d313d0ee627a5f5d93->m_frame.f_lineno = 462;
-        tmp_call_result_24 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_28, tmp_args_element_name_57);
-        Py_DECREF(tmp_called_name_28);
-        Py_DECREF(tmp_args_element_name_57);
+        tmp_call_result_24 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_22, tmp_args_element_value_57);
+        Py_DECREF(tmp_called_value_22);
+        Py_DECREF(tmp_args_element_value_57);
         if (tmp_call_result_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18257,7 +16564,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_6;
@@ -18345,7 +16653,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     frame_no_exception_1:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
@@ -18354,37 +16663,25 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
     Py_XDECREF(par_caption);
     par_caption = NULL;
-    Py_XDECREF(par_msg2);
-    par_msg2 = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_icon);
-    par_icon = NULL;
-    Py_XDECREF(par_btnLabels);
-    par_btnLabels = NULL;
-    Py_XDECREF(var_title);
+    CHECK_OBJECT(var_title);
+    Py_DECREF(var_title);
     var_title = NULL;
-    Py_XDECREF(var_bitmap);
+    CHECK_OBJECT(var_bitmap);
+    Py_DECREF(var_bitmap);
     var_bitmap = NULL;
     Py_XDECREF(var_isize);
     var_isize = NULL;
     Py_XDECREF(var_artid);
     var_artid = NULL;
-    Py_XDECREF(var_sizer);
+    CHECK_OBJECT(var_sizer);
+    Py_DECREF(var_sizer);
     var_sizer = NULL;
     Py_XDECREF(var_messageSizer);
     var_messageSizer = NULL;
-    Py_XDECREF(var_stext);
+    CHECK_OBJECT(var_stext);
+    Py_DECREF(var_stext);
     var_stext = NULL;
     Py_XDECREF(var_t);
     var_t = NULL;
@@ -18396,7 +16693,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     var_h = NULL;
     Py_XDECREF(var__);
     var__ = NULL;
-    Py_XDECREF(var_buttonSizer);
+    CHECK_OBJECT(var_buttonSizer);
+    Py_DECREF(var_buttonSizer);
     var_buttonSizer = NULL;
     Py_XDECREF(var_sid);
     var_sid = NULL;
@@ -18418,24 +16716,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_message);
-    par_message = NULL;
     Py_XDECREF(par_caption);
     par_caption = NULL;
-    Py_XDECREF(par_msg2);
-    par_msg2 = NULL;
-    Py_XDECREF(par_style);
-    par_style = NULL;
-    Py_XDECREF(par_pos);
-    par_pos = NULL;
-    Py_XDECREF(par_icon);
-    par_icon = NULL;
-    Py_XDECREF(par_btnLabels);
-    par_btnLabels = NULL;
     Py_XDECREF(var_title);
     var_title = NULL;
     Py_XDECREF(var_bitmap);
@@ -18483,14 +16765,44 @@ static PyObject *impl_wx$lib$dialogs$$$function__22___init__(struct Nuitka_Funct
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_msg2);
+    Py_DECREF(par_msg2);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_icon);
+    Py_DECREF(par_icon);
+    CHECK_OBJECT(par_btnLabels);
+    Py_DECREF(par_btnLabels);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_msg2);
+    Py_DECREF(par_msg2);
+    CHECK_OBJECT(par_style);
+    Py_DECREF(par_style);
+    CHECK_OBJECT(par_pos);
+    Py_DECREF(par_pos);
+    CHECK_OBJECT(par_icon);
+    Py_DECREF(par_icon);
+    CHECK_OBJECT(par_btnLabels);
+    Py_DECREF(par_btnLabels);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -18518,13 +16830,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__23_OnButton(struct Nuitka_Funct
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     static struct Nuitka_FrameObject *cache_frame_fee1167259a37f75bcac3bbf20d83d7f = NULL;
     PyObject *tmp_return_value = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_fee1167259a37f75bcac3bbf20d83d7f)) {
         Py_XDECREF(cache_frame_fee1167259a37f75bcac3bbf20d83d7f);
 
@@ -18560,7 +16867,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__23_OnButton(struct Nuitka_Funct
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_fee1167259a37f75bcac3bbf20d83d7f->m_frame.f_lineno = 467;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[208]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[194]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18592,27 +16899,16 @@ static PyObject *impl_wx$lib$dialogs$$$function__23_OnButton(struct Nuitka_Funct
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 468;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_1 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[209]);
-        if (tmp_called_name_1 == NULL) {
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[195]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18623,34 +16919,34 @@ static PyObject *impl_wx$lib$dialogs$$$function__23_OnButton(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_evt);
-        tmp_expression_name_3 = par_evt;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[210]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_evt;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[196]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 468;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[211]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[197]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 468;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_fee1167259a37f75bcac3bbf20d83d7f->m_frame.f_lineno = 468;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18668,21 +16964,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__23_OnButton(struct Nuitka_Funct
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_3;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 470;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         frame_fee1167259a37f75bcac3bbf20d83d7f->m_frame.f_lineno = 470;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[212]);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[198]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18744,57 +17029,31 @@ static PyObject *impl_wx$lib$dialogs$$$function__23_OnButton(struct Nuitka_Funct
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
     tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_evt);
-    par_evt = NULL;
     goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_self);
-    par_self = NULL;
-    Py_XDECREF(par_evt);
-    par_evt = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_evt);
+    Py_DECREF(par_evt);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_self);
+    Py_DECREF(par_self);
+    CHECK_OBJECT(par_evt);
+    Py_DECREF(par_evt);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -18866,20 +17125,20 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_style);
-        tmp_left_name_1 = par_style;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_left_value_1 = par_style;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18889,8 +17148,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[213]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[199]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18900,9 +17159,9 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = BINARY_OPERATION_BITAND_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18912,8 +17171,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18924,8 +17183,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -18934,29 +17193,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_yes_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_expression_name_2;
-        if (par_style == NULL) {
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_expression_value_2;
+        CHECK_OBJECT(par_style);
+        tmp_left_value_2 = par_style;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 482;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_2 = par_style;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18966,8 +17214,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[214]);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[200]);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18977,8 +17225,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_condition_result_2 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -18999,29 +17247,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_expression_name_3;
-        if (par_style == NULL) {
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_style);
+        tmp_left_value_3 = par_style;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 483;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_3 = par_style;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19031,8 +17268,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[144]);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[136]);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19042,8 +17279,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -19054,7 +17291,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_1 = tmp_left_name_3;
+        tmp_assign_source_1 = tmp_left_value_3;
         par_style = tmp_assign_source_1;
 
     }
@@ -19062,29 +17299,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_no_2:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_expression_name_4;
-        if (par_style == NULL) {
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_expression_value_4;
+        CHECK_OBJECT(par_style);
+        tmp_left_value_4 = par_style;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 485;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        tmp_left_name_4 = par_style;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
-
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
-        }
-
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19094,8 +17320,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[146]);
-        if (tmp_right_name_4 == NULL) {
+        tmp_right_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[138]);
+        if (tmp_right_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19105,8 +17331,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -19117,7 +17343,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_2 = tmp_left_name_4;
+        tmp_assign_source_2 = tmp_left_value_4;
         par_style = tmp_assign_source_2;
 
     }
@@ -19125,19 +17351,21 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_no_1:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[215]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_arg_value_1_1;
+        PyObject *tmp_kw_call_arg_value_2_1;
+        PyObject *tmp_kw_call_arg_value_3_1;
+        PyObject *tmp_kw_call_arg_value_4_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_kw_call_dict_value_1_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[201]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[215]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[201]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19148,54 +17376,37 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_parent);
-        tmp_tuple_element_1 = par_parent;
-        tmp_args_name_1 = PyTuple_New(5);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_kw_call_arg_value_0_1 = par_parent;
         CHECK_OBJECT(par_message);
-        tmp_tuple_element_1 = par_message;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        tmp_kw_call_arg_value_1_1 = par_message;
         CHECK_OBJECT(par_caption);
-        tmp_tuple_element_1 = par_caption;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
+        tmp_kw_call_arg_value_2_1 = par_caption;
         CHECK_OBJECT(par_msg2);
-        tmp_tuple_element_1 = par_msg2;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 3, tmp_tuple_element_1);
+        tmp_kw_call_arg_value_3_1 = par_msg2;
         if (par_style == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[10]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[202]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 487;
             type_description_1 = "ooooooooo";
-            goto tuple_build_exception_1;
+            goto frame_exception_exit_1;
         }
 
-        tmp_tuple_element_1 = par_style;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 4, tmp_tuple_element_1);
-        goto tuple_build_noexception_1;
-        // Exception handling pass through code for tuple_build:
-        tuple_build_exception_1:;
-        Py_DECREF(tmp_args_name_1);
-        goto frame_exception_exit_1;
-        // Finished with no exception for tuple_build:
-        tuple_build_noexception_1:;
-        tmp_dict_key_1 = mod_consts[216];
+        tmp_kw_call_arg_value_4_1 = par_style;
         CHECK_OBJECT(par_icon);
-        tmp_dict_value_1 = par_icon;
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 2 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[217];
+        tmp_kw_call_dict_value_0_1 = par_icon;
         CHECK_OBJECT(par_btnLabels);
-        tmp_dict_value_1 = par_btnLabels;
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_1_1 = par_btnLabels;
         frame_bfcc903229d29b2fde04fa9bdba80bac->m_frame.f_lineno = 487;
-        tmp_assign_source_3 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1, tmp_kw_call_arg_value_2_1, tmp_kw_call_arg_value_3_1, tmp_kw_call_arg_value_4_1};
+            PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
+            tmp_assign_source_3 = CALL_FUNCTION_WITH_ARGS5_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[203]);
+        }
+
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19215,7 +17426,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
         CHECK_OBJECT(var_dlg);
         tmp_called_instance_1 = var_dlg;
         frame_bfcc903229d29b2fde04fa9bdba80bac->m_frame.f_lineno = 489;
-        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[83]);
+        tmp_assign_source_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[75]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19232,21 +17443,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_1;
-        if (var_dlg == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 490;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_dlg);
         tmp_called_instance_2 = var_dlg;
         frame_bfcc903229d29b2fde04fa9bdba80bac->m_frame.f_lineno = 490;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[88]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[81]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19261,18 +17461,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(var_ans);
-        tmp_compexpr_left_1 = var_ans;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_1 = var_ans;
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19282,8 +17482,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[13]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19293,8 +17493,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19314,14 +17514,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     }
     branch_yes_3:;
     {
-        PyObject *tmp_expression_name_6;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_6;
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19331,7 +17531,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[16]);
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[14]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19348,18 +17548,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(var_ans);
-        tmp_compexpr_left_2 = var_ans;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_2 = var_ans;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19369,8 +17569,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[53]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[48]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19380,8 +17580,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19401,14 +17601,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     }
     branch_yes_4:;
     {
-        PyObject *tmp_expression_name_8;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_8;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19418,7 +17618,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[214]);
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[200]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19435,18 +17635,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(var_ans);
-        tmp_compexpr_left_3 = var_ans;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_3 = var_ans;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19456,8 +17656,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[58]);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[53]);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19467,8 +17667,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_5 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_condition_result_5 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_condition_result_5 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19488,14 +17688,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     }
     branch_yes_5:;
     {
-        PyObject *tmp_expression_name_10;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_10;
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19505,7 +17705,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[218]);
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[204]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19522,18 +17722,18 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_11;
         CHECK_OBJECT(var_ans);
-        tmp_compexpr_left_4 = var_ans;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_cmp_expr_left_4 = var_ans;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19543,8 +17743,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[37]);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[33]);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19554,8 +17754,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19575,14 +17775,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     }
     branch_yes_6:;
     {
-        PyObject *tmp_expression_name_12;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_12;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19592,7 +17792,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[187]);
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[174]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19610,12 +17810,13 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     branch_end_4:;
     branch_end_3:;
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_2;
-        tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[219]);
-        assert(tmp_called_name_2 != NULL);
+        tmp_called_value_2 = LOOKUP_BUILTIN(mod_consts[205]);
+        assert(tmp_called_value_2 != NULL);
         frame_bfcc903229d29b2fde04fa9bdba80bac->m_frame.f_lineno = 501;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, mod_consts[220]);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[206]);
+
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19629,14 +17830,14 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
         Py_DECREF(tmp_call_result_2);
     }
     {
-        PyObject *tmp_expression_name_13;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_13;
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19646,7 +17847,7 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[187]);
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[174]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19731,21 +17932,10 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_caption);
-    par_caption = NULL;
-    Py_XDECREF(par_msg2);
-    par_msg2 = NULL;
     Py_XDECREF(par_style);
     par_style = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_icon);
-    par_icon = NULL;
-    Py_XDECREF(par_btnLabels);
-    par_btnLabels = NULL;
-    Py_XDECREF(var_dlg);
+    CHECK_OBJECT(var_dlg);
+    Py_DECREF(var_dlg);
     var_dlg = NULL;
     CHECK_OBJECT(var_ans);
     Py_DECREF(var_ans);
@@ -19762,20 +17952,8 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_message);
-    par_message = NULL;
-    Py_XDECREF(par_caption);
-    par_caption = NULL;
-    Py_XDECREF(par_msg2);
-    par_msg2 = NULL;
     Py_XDECREF(par_style);
     par_style = NULL;
-    Py_XDECREF(par_parent);
-    par_parent = NULL;
-    Py_XDECREF(par_icon);
-    par_icon = NULL;
-    Py_XDECREF(par_btnLabels);
-    par_btnLabels = NULL;
     Py_XDECREF(var_dlg);
     var_dlg = NULL;
     Py_XDECREF(var_ans);
@@ -19793,14 +17971,36 @@ static PyObject *impl_wx$lib$dialogs$$$function__24_MultiMessageBox(struct Nuitk
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_caption);
+    Py_DECREF(par_caption);
+    CHECK_OBJECT(par_msg2);
+    Py_DECREF(par_msg2);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_icon);
+    Py_DECREF(par_icon);
+    CHECK_OBJECT(par_btnLabels);
+    Py_DECREF(par_btnLabels);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_message);
+    Py_DECREF(par_message);
+    CHECK_OBJECT(par_caption);
+    Py_DECREF(par_caption);
+    CHECK_OBJECT(par_msg2);
+    Py_DECREF(par_msg2);
+    CHECK_OBJECT(par_parent);
+    Py_DECREF(par_parent);
+    CHECK_OBJECT(par_icon);
+    Py_DECREF(par_icon);
+    CHECK_OBJECT(par_btnLabels);
+    Py_DECREF(par_btnLabels);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -19814,7 +18014,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__10_colourDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__10_colourDialog,
-        mod_consts[258],
+        mod_consts[244],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19839,7 +18039,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__10_colourDialog(PyObje
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__11_fontDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__11_fontDialog,
-        mod_consts[259],
+        mod_consts[245],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19864,7 +18064,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__11_fontDialog(PyObject
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__12_textEntryDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__12_textEntryDialog,
-        mod_consts[260],
+        mod_consts[246],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19889,7 +18089,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__12_textEntryDialog(PyO
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__13_messageDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__13_messageDialog,
-        mod_consts[114],
+        mod_consts[106],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19914,7 +18114,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__13_messageDialog(PyObj
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__14_alertDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__14_alertDialog,
-        mod_consts[264],
+        mod_consts[250],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19939,7 +18139,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__14_alertDialog(PyObjec
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__15_scrolledMessageDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__15_scrolledMessageDialog,
-        mod_consts[265],
+        mod_consts[251],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19964,7 +18164,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__15_scrolledMessageDial
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__16_fileDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__16_fileDialog,
-        mod_consts[120],
+        mod_consts[112],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19989,7 +18189,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__16_fileDialog(PyObject
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__17_openFileDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__17_openFileDialog,
-        mod_consts[271],
+        mod_consts[257],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20014,7 +18214,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__17_openFileDialog(PyOb
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__18_saveFileDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__18_saveFileDialog,
-        mod_consts[275],
+        mod_consts[261],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20039,7 +18239,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__18_saveFileDialog(PyOb
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__19_dirDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__19_dirDialog,
-        mod_consts[277],
+        mod_consts[263],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20066,7 +18266,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__1___init__(PyObject *d
         impl_wx$lib$dialogs$$$function__1___init__,
         mod_consts[2],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[241],
+        mod_consts[227],
 #endif
         codeobj_9e19b3d03fc1d947a08f42cc610223a1,
         defaults,
@@ -20089,7 +18289,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__1___init__(PyObject *d
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__20_singleChoiceDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__20_singleChoiceDialog,
-        mod_consts[279],
+        mod_consts[265],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20114,7 +18314,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__20_singleChoiceDialog(
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__21_multipleChoiceDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__21_multipleChoiceDialog,
-        mod_consts[280],
+        mod_consts[266],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20141,7 +18341,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__22___init__(PyObject *
         impl_wx$lib$dialogs$$$function__22___init__,
         mod_consts[2],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[285],
+        mod_consts[271],
 #endif
         codeobj_8b7cc34082d1f4d313d0ee627a5f5d93,
         defaults,
@@ -20164,9 +18364,9 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__22___init__(PyObject *
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__23_OnButton() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__23_OnButton,
-        mod_consts[195],
+        mod_consts[182],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[286],
+        mod_consts[272],
 #endif
         codeobj_fee1167259a37f75bcac3bbf20d83d7f,
         NULL,
@@ -20189,7 +18389,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__23_OnButton() {
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__24_MultiMessageBox(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__24_MultiMessageBox,
-        mod_consts[287],
+        mod_consts[273],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20200,7 +18400,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__24_MultiMessageBox(PyO
         NULL,
 #endif
         module_wx$lib$dialogs,
-        mod_consts[221],
+        mod_consts[207],
         NULL,
         0
     );
@@ -20216,7 +18416,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__2___init__(PyObject *d
         impl_wx$lib$dialogs$$$function__2___init__,
         mod_consts[2],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[245],
+        mod_consts[231],
 #endif
         codeobj_4275fc9af4339977835fe83fd6989824,
         defaults,
@@ -20239,9 +18439,9 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__2___init__(PyObject *d
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__3_GetValue() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__3_GetValue,
-        mod_consts[80],
+        mod_consts[72],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[246],
+        mod_consts[232],
 #endif
         codeobj_a73dac51d2bf7110dbc3fe03a006664d,
         NULL,
@@ -20264,9 +18464,9 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__3_GetValue() {
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__4_GetValueString() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__4_GetValueString,
-        mod_consts[247],
+        mod_consts[233],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[248],
+        mod_consts[234],
 #endif
         codeobj_39a1cc9e21bbb5374eee34677c7c498c,
         NULL,
@@ -20291,7 +18491,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__5___init__() {
         impl_wx$lib$dialogs$$$function__5___init__,
         mod_consts[2],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[251],
+        mod_consts[237],
 #endif
         codeobj_1277f6eab2304286114d17d1124b5538,
         NULL,
@@ -20314,9 +18514,9 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__5___init__() {
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__6___repr__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__6___repr__,
-        mod_consts[252],
+        mod_consts[238],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[253],
+        mod_consts[239],
 #endif
         codeobj_2ed8aca840d6f27357092490abe4e327,
         NULL,
@@ -20339,7 +18539,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__6___repr__() {
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__7_returnedString() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__7_returnedString,
-        mod_consts[55],
+        mod_consts[50],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20364,7 +18564,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__7_returnedString() {
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__8_findDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__8_findDialog,
-        mod_consts[255],
+        mod_consts[241],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20389,7 +18589,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__8_findDialog(PyObject 
 static PyObject *MAKE_FUNCTION_wx$lib$dialogs$$$function__9_colorDialog(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$dialogs$$$function__9_colorDialog,
-        mod_consts[257],
+        mod_consts[243],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20600,71 +18800,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("wx.lib.dialogs");
+
+    // Store the module for future use.
     module_wx$lib$dialogs = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.dialogs: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("wx.lib.dialogs: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.dialogs: Calling createModuleConstants().\n");
+        PRINT_STRING("wx.lib.dialogs: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.dialogs: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("wx.lib.dialogs: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initwx$lib$dialogs\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_wx$lib$dialogs = MODULE_DICT(module_wx$lib$dialogs);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -20680,7 +18882,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT0(
             moduledict_wx$lib$dialogs,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[124]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)const_str_plain___name__);
@@ -20730,7 +18932,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -20890,12 +19092,12 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[222], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[208], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[223], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[209], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_bbd2b86034d70864b6354653fd63ca1e = MAKE_MODULE_FRAME(codeobj_bbd2b86034d70864b6354653fd63ca1e, module_wx$lib$dialogs);
@@ -20907,17 +19109,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[224]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[210]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[224]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[210]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[225], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[211], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -20930,17 +19132,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[224]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[210]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[224]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[210]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[226], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[212], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -20955,22 +19157,22 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[227], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[213], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[0];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_wx$lib$dialogs;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[39];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[0];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_wx$lib$dialogs;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[35];
         frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 23;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20987,18 +19189,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[228];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_wx$lib$dialogs;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[39];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[214];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_wx$lib$dialogs;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[35];
         frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 24;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21013,11 +19215,11 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
             tmp_import_name_from_1 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_wx$lib$dialogs,
-                mod_consts[229],
-                mod_consts[39]
+                mod_consts[215],
+                mod_consts[35]
             );
         } else {
-            tmp_import_name_from_1 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[229]);
+            tmp_import_name_from_1 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[215]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -21035,11 +19237,11 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_wx$lib$dialogs,
-                mod_consts[230],
-                mod_consts[39]
+                mod_consts[216],
+                mod_consts[35]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[230]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[216]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -21053,20 +19255,20 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[230], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[216], tmp_assign_source_5);
     }
     // Tried code:
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21076,7 +19278,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21124,44 +19326,39 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[231];
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[231];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 28;
-
-            goto try_except_handler_1;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[217];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -21184,9 +19381,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_2 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[39];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
+        tmp_expression_value_2 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[35];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21197,9 +19394,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21211,14 +19408,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_9 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_9 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21233,16 +19430,16 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_1__metaclass = tmp_assign_source_9;
     }
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[231];
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_3 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -21251,7 +19448,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[231];
+    tmp_dictdel_key = mod_consts[217];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -21266,10 +19463,10 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[232]);
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[218]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -21280,15 +19477,15 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_4 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[232]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_4 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[218]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21298,18 +19495,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        tmp_tuple_element_2 = mod_consts[116];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
+        tmp_tuple_element_2 = mod_consts[108];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_2 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 28;
-        tmp_assign_source_10 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_10 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21324,14 +19521,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_1__prepared = tmp_assign_source_10;
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_5;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_5 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[233]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_5 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[219]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -21342,8 +19539,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -21353,18 +19550,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[234];
+        tmp_left_value_1 = mod_consts[220];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[235];
-        tmp_getattr_default_1 = mod_consts[236];
+        tmp_getattr_attr_1 = mod_consts[221];
+        tmp_getattr_default_1 = mod_consts[222];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21376,17 +19573,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_6;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_6 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_6 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[235]);
-            Py_DECREF(tmp_expression_name_6);
+            tmp_expression_value_6 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_6 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[221]);
+            Py_DECREF(tmp_expression_value_6);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21397,17 +19594,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21447,8 +19644,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[237];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[238], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[223];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[224], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21459,8 +19656,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_3;
         }
-        tmp_dictset_value = mod_consts[116];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[239], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[108];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[225], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21501,18 +19698,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         {
             PyObject *tmp_defaults_1;
             PyObject *tmp_tuple_element_4;
-            PyObject *tmp_expression_name_7;
-            tmp_expression_name_7 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[0]);
+            PyObject *tmp_expression_value_7;
+            tmp_expression_value_7 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[0]);
 
-            if (tmp_expression_name_7 == NULL) {
+            if (tmp_expression_value_7 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+                    tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-                    if (unlikely(tmp_expression_name_7 == NULL)) {
-                        tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+                    if (unlikely(tmp_expression_value_7 == NULL)) {
+                        tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
                     }
 
-                    if (tmp_expression_name_7 == NULL) {
+                    if (tmp_expression_value_7 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21522,12 +19719,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_7);
+                    Py_INCREF(tmp_expression_value_7);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
-            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[33]);
-            Py_DECREF(tmp_expression_name_7);
+            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[29]);
+            Py_DECREF(tmp_expression_value_7);
             if (tmp_tuple_element_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21540,21 +19739,21 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
             }
             tmp_defaults_1 = PyTuple_New(3);
             {
-                PyObject *tmp_expression_name_8;
+                PyObject *tmp_expression_value_8;
                 PyTuple_SET_ITEM(tmp_defaults_1, 0, tmp_tuple_element_4);
-                tmp_tuple_element_4 = mod_consts[240];
+                tmp_tuple_element_4 = mod_consts[226];
                 PyTuple_SET_ITEM0(tmp_defaults_1, 1, tmp_tuple_element_4);
-                tmp_expression_name_8 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[0]);
+                tmp_expression_value_8 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[0]);
 
-                if (tmp_expression_name_8 == NULL) {
+                if (tmp_expression_value_8 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+                        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-                        if (unlikely(tmp_expression_name_8 == NULL)) {
-                            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+                        if (unlikely(tmp_expression_value_8 == NULL)) {
+                            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
                         }
 
-                        if (tmp_expression_name_8 == NULL) {
+                        if (tmp_expression_value_8 == NULL) {
                             assert(ERROR_OCCURRED());
 
                             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21564,12 +19763,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                             type_description_2 = "o";
                             goto tuple_build_exception_2;
                         }
-                        Py_INCREF(tmp_expression_name_8);
+                        Py_INCREF(tmp_expression_value_8);
+                    } else {
+                        goto tuple_build_exception_2;
                     }
                 }
 
-                tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[125]);
-                Py_DECREF(tmp_expression_name_8);
+                tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[117]);
+                Py_DECREF(tmp_expression_value_8);
                 if (tmp_tuple_element_4 == NULL) {
                     assert(ERROR_OCCURRED());
 
@@ -21663,13 +19864,13 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_6;
-            PyObject *tmp_compexpr_left_1;
-            PyObject *tmp_compexpr_right_1;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_1 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
             CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-            tmp_compexpr_right_1 = tmp_class_creation_1__bases_orig;
-            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+            tmp_cmp_expr_right_1 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -21690,7 +19891,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         branch_yes_4:;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[242], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28, mod_consts[228], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21704,25 +19905,25 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         branch_no_4:;
         {
             PyObject *tmp_assign_source_13;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_5;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_5 = mod_consts[116];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_5);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_5 = mod_consts[108];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_5 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_5);
             tmp_tuple_element_5 = locals_wx$lib$dialogs$$$class__1_ScrolledMessageDialog_28;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 28;
-            tmp_assign_source_13 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_13 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_13 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21801,7 +20002,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         exception_lineno = 28;
         goto try_except_handler_1;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[116], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[108], tmp_assign_source_12);
     }
     goto try_end_1;
     // Exception handler code:
@@ -21837,11 +20038,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);
     tmp_class_creation_1__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -21850,14 +20054,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_14;
         PyObject *tmp_tuple_element_6;
-        PyObject *tmp_expression_name_9;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_9;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21867,7 +20071,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_4;
         }
-        tmp_tuple_element_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[1]);
+        tmp_tuple_element_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[1]);
         if (tmp_tuple_element_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21915,44 +20119,39 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_metaclass_name_2;
-        nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_key_name_4;
-        PyObject *tmp_dict_arg_name_4;
-        PyObject *tmp_dict_arg_name_5;
-        PyObject *tmp_key_name_5;
+        PyObject *tmp_metaclass_value_2;
+        bool tmp_condition_result_7;
+        PyObject *tmp_key_value_4;
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
         nuitka_bool tmp_condition_result_8;
         int tmp_truth_name_2;
         PyObject *tmp_type_arg_3;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[231];
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_bases_value_2;
+        tmp_key_value_4 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
+        tmp_dict_arg_value_4 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_4, tmp_key_value_4);
         assert(!(tmp_res == -1));
-        tmp_condition_result_7 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_7 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_7 != false) {
             goto condexpr_true_3;
         } else {
             goto condexpr_false_3;
         }
         condexpr_true_3:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[231];
-        tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
-        if (tmp_metaclass_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 50;
-
-            goto try_except_handler_4;
+        tmp_dict_arg_value_5 = tmp_class_creation_2__class_decl_dict;
+        tmp_key_value_5 = mod_consts[217];
+        tmp_metaclass_value_2 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
+        if (tmp_metaclass_value_2 == NULL) {
+            tmp_metaclass_value_2 = Py_None;
         }
+        assert(!(tmp_metaclass_value_2 == NULL));
+        Py_INCREF(tmp_metaclass_value_2);
         goto condexpr_end_3;
         condexpr_false_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
@@ -21975,9 +20174,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         condexpr_true_4:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_expression_name_10 = tmp_class_creation_2__bases;
-        tmp_subscript_name_2 = mod_consts[39];
-        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_2, 0);
+        tmp_expression_value_10 = tmp_class_creation_2__bases;
+        tmp_subscript_value_2 = mod_consts[35];
+        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_10, tmp_subscript_value_2, 0);
         if (tmp_type_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21988,9 +20187,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_4;
         }
-        tmp_metaclass_name_2 = BUILTIN_TYPE1(tmp_type_arg_3);
+        tmp_metaclass_value_2 = BUILTIN_TYPE1(tmp_type_arg_3);
         Py_DECREF(tmp_type_arg_3);
-        if (tmp_metaclass_name_2 == NULL) {
+        if (tmp_metaclass_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22002,14 +20201,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         goto condexpr_end_4;
         condexpr_false_4:;
-        tmp_metaclass_name_2 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_2);
+        tmp_metaclass_value_2 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_2);
         condexpr_end_4:;
         condexpr_end_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_bases_name_2 = tmp_class_creation_2__bases;
-        tmp_assign_source_17 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
-        Py_DECREF(tmp_metaclass_name_2);
+        tmp_bases_value_2 = tmp_class_creation_2__bases;
+        tmp_assign_source_17 = SELECT_METACLASS(tmp_metaclass_value_2, tmp_bases_value_2);
+        Py_DECREF(tmp_metaclass_value_2);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22024,16 +20223,16 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_2__metaclass = tmp_assign_source_17;
     }
     {
-        nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_key_name_6;
-        PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[231];
+        bool tmp_condition_result_9;
+        PyObject *tmp_key_value_6;
+        PyObject *tmp_dict_arg_value_6;
+        tmp_key_value_6 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
+        tmp_dict_arg_value_6 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_6, tmp_key_value_6);
         assert(!(tmp_res == -1));
-        tmp_condition_result_9 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_9 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_9 != false) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
@@ -22042,7 +20241,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_5:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[231];
+    tmp_dictdel_key = mod_consts[217];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -22057,10 +20256,10 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_10;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_value_11;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_11 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_11, mod_consts[232]);
+        tmp_expression_value_11 = tmp_class_creation_2__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_11, mod_consts[218]);
         tmp_condition_result_10 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_10 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
@@ -22071,15 +20270,15 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_args_value_3;
         PyObject *tmp_tuple_element_7;
-        PyObject *tmp_kwargs_name_3;
+        PyObject *tmp_kwargs_value_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_12 = tmp_class_creation_2__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[232]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_12 = tmp_class_creation_2__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[218]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22089,18 +20288,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_4;
         }
-        tmp_tuple_element_7 = mod_consts[243];
-        tmp_args_name_3 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_7);
+        tmp_tuple_element_7 = mod_consts[229];
+        tmp_args_value_3 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 0, tmp_tuple_element_7);
         CHECK_OBJECT(tmp_class_creation_2__bases);
         tmp_tuple_element_7 = tmp_class_creation_2__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_3, 1, tmp_tuple_element_7);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 1, tmp_tuple_element_7);
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
+        tmp_kwargs_value_3 = tmp_class_creation_2__class_decl_dict;
         frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 50;
-        tmp_assign_source_18 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_3);
+        tmp_assign_source_18 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_3);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22115,14 +20314,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_2__prepared = tmp_assign_source_18;
     }
     {
-        nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_expression_name_13;
+        bool tmp_condition_result_11;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_expression_value_13;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
-        tmp_expression_name_13 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_13, mod_consts[233]);
-        tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_expression_value_13 = tmp_class_creation_2__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_13, mod_consts[219]);
+        tmp_operand_value_2 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -22133,8 +20332,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_4;
         }
-        tmp_condition_result_11 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_11 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_11 != false) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
@@ -22144,18 +20343,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_raise_value_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_tuple_element_8;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_2 = mod_consts[234];
+        tmp_left_value_2 = mod_consts[220];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[235];
-        tmp_getattr_default_2 = mod_consts[236];
+        tmp_getattr_attr_2 = mod_consts[221];
+        tmp_getattr_default_2 = mod_consts[222];
         tmp_tuple_element_8 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22167,17 +20366,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_4;
         }
-        tmp_right_name_2 = PyTuple_New(2);
+        tmp_right_value_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_14;
+            PyObject *tmp_expression_value_14;
             PyObject *tmp_type_arg_4;
-            PyTuple_SET_ITEM(tmp_right_name_2, 0, tmp_tuple_element_8);
+            PyTuple_SET_ITEM(tmp_right_value_2, 0, tmp_tuple_element_8);
             CHECK_OBJECT(tmp_class_creation_2__prepared);
             tmp_type_arg_4 = tmp_class_creation_2__prepared;
-            tmp_expression_name_14 = BUILTIN_TYPE1(tmp_type_arg_4);
-            assert(!(tmp_expression_name_14 == NULL));
-            tmp_tuple_element_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[235]);
-            Py_DECREF(tmp_expression_name_14);
+            tmp_expression_value_14 = BUILTIN_TYPE1(tmp_type_arg_4);
+            assert(!(tmp_expression_value_14 == NULL));
+            tmp_tuple_element_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[221]);
+            Py_DECREF(tmp_expression_value_14);
             if (tmp_tuple_element_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22188,17 +20387,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_3;
             }
-            PyTuple_SET_ITEM(tmp_right_name_2, 1, tmp_tuple_element_8);
+            PyTuple_SET_ITEM(tmp_right_value_2, 1, tmp_tuple_element_8);
         }
         goto tuple_build_noexception_3;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_3:;
-        Py_DECREF(tmp_right_name_2);
+        Py_DECREF(tmp_right_value_2);
         goto try_except_handler_4;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_3:;
-        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_raise_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22238,8 +20437,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[237];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[238], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[223];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[224], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -22250,8 +20449,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_6;
         }
-        tmp_dictset_value = mod_consts[243];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[239], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[229];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[225], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -22292,18 +20491,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         {
             PyObject *tmp_defaults_2;
             PyObject *tmp_tuple_element_9;
-            PyObject *tmp_expression_name_15;
-            tmp_expression_name_15 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[0]);
+            PyObject *tmp_expression_value_15;
+            tmp_expression_value_15 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[0]);
 
-            if (tmp_expression_name_15 == NULL) {
+            if (tmp_expression_value_15 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+                    tmp_expression_value_15 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-                    if (unlikely(tmp_expression_name_15 == NULL)) {
-                        tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+                    if (unlikely(tmp_expression_value_15 == NULL)) {
+                        tmp_expression_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
                     }
 
-                    if (tmp_expression_name_15 == NULL) {
+                    if (tmp_expression_value_15 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22313,12 +20512,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_15);
+                    Py_INCREF(tmp_expression_value_15);
+                } else {
+                    goto frame_exception_exit_3;
                 }
             }
 
-            tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[33]);
-            Py_DECREF(tmp_expression_name_15);
+            tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[29]);
+            Py_DECREF(tmp_expression_value_15);
             if (tmp_tuple_element_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22331,21 +20532,21 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
             }
             tmp_defaults_2 = PyTuple_New(3);
             {
-                PyObject *tmp_expression_name_16;
+                PyObject *tmp_expression_value_16;
                 PyTuple_SET_ITEM(tmp_defaults_2, 0, tmp_tuple_element_9);
-                tmp_tuple_element_9 = mod_consts[244];
+                tmp_tuple_element_9 = mod_consts[230];
                 PyTuple_SET_ITEM0(tmp_defaults_2, 1, tmp_tuple_element_9);
-                tmp_expression_name_16 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[0]);
+                tmp_expression_value_16 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[0]);
 
-                if (tmp_expression_name_16 == NULL) {
+                if (tmp_expression_value_16 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+                        tmp_expression_value_16 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-                        if (unlikely(tmp_expression_name_16 == NULL)) {
-                            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+                        if (unlikely(tmp_expression_value_16 == NULL)) {
+                            tmp_expression_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
                         }
 
-                        if (tmp_expression_name_16 == NULL) {
+                        if (tmp_expression_value_16 == NULL) {
                             assert(ERROR_OCCURRED());
 
                             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22355,12 +20556,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                             type_description_2 = "o";
                             goto tuple_build_exception_4;
                         }
-                        Py_INCREF(tmp_expression_name_16);
+                        Py_INCREF(tmp_expression_value_16);
+                    } else {
+                        goto tuple_build_exception_4;
                     }
                 }
 
-                tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[125]);
-                Py_DECREF(tmp_expression_name_16);
+                tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[117]);
+                Py_DECREF(tmp_expression_value_16);
                 if (tmp_tuple_element_9 == NULL) {
                     assert(ERROR_OCCURRED());
 
@@ -22401,7 +20604,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_wx$lib$dialogs$$$function__3_GetValue();
 
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[80], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[72], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -22417,7 +20620,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_wx$lib$dialogs$$$function__4_GetValueString();
 
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[247], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[233], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -22486,13 +20689,13 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_2:;
         {
             nuitka_bool tmp_condition_result_12;
-            PyObject *tmp_compexpr_left_2;
-            PyObject *tmp_compexpr_right_2;
+            PyObject *tmp_cmp_expr_left_2;
+            PyObject *tmp_cmp_expr_right_2;
             CHECK_OBJECT(tmp_class_creation_2__bases);
-            tmp_compexpr_left_2 = tmp_class_creation_2__bases;
+            tmp_cmp_expr_left_2 = tmp_class_creation_2__bases;
             CHECK_OBJECT(tmp_class_creation_2__bases_orig);
-            tmp_compexpr_right_2 = tmp_class_creation_2__bases_orig;
-            tmp_condition_result_12 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
+            tmp_cmp_expr_right_2 = tmp_class_creation_2__bases_orig;
+            tmp_condition_result_12 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
             if (tmp_condition_result_12 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -22513,7 +20716,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         branch_yes_8:;
         CHECK_OBJECT(tmp_class_creation_2__bases_orig);
         tmp_dictset_value = tmp_class_creation_2__bases_orig;
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[242], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50, mod_consts[228], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -22527,25 +20730,25 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         branch_no_8:;
         {
             PyObject *tmp_assign_source_21;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_name_4;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_value_4;
             PyObject *tmp_tuple_element_10;
-            PyObject *tmp_kwargs_name_4;
+            PyObject *tmp_kwargs_value_4;
             CHECK_OBJECT(tmp_class_creation_2__metaclass);
-            tmp_called_name_4 = tmp_class_creation_2__metaclass;
-            tmp_tuple_element_10 = mod_consts[243];
-            tmp_args_name_4 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_10);
+            tmp_called_value_4 = tmp_class_creation_2__metaclass;
+            tmp_tuple_element_10 = mod_consts[229];
+            tmp_args_value_4 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_10);
             CHECK_OBJECT(tmp_class_creation_2__bases);
             tmp_tuple_element_10 = tmp_class_creation_2__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_10);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_10);
             tmp_tuple_element_10 = locals_wx$lib$dialogs$$$class__2_MultipleChoiceDialog_50;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_10);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 2, tmp_tuple_element_10);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-            tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
+            tmp_kwargs_value_4 = tmp_class_creation_2__class_decl_dict;
             frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 50;
-            tmp_assign_source_21 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_4, tmp_kwargs_name_4);
-            Py_DECREF(tmp_args_name_4);
+            tmp_assign_source_21 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_4, tmp_kwargs_value_4);
+            Py_DECREF(tmp_args_value_4);
             if (tmp_assign_source_21 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22624,7 +20827,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         exception_lineno = 50;
         goto try_except_handler_4;
         outline_result_2:;
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[243], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[229], tmp_assign_source_20);
     }
     goto try_end_2;
     // Exception handler code:
@@ -22660,11 +20863,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     CHECK_OBJECT(tmp_class_creation_2__bases_orig);
     Py_DECREF(tmp_class_creation_2__bases_orig);
     tmp_class_creation_2__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_2__bases);
+    CHECK_OBJECT(tmp_class_creation_2__bases);
+    Py_DECREF(tmp_class_creation_2__bases);
     tmp_class_creation_2__bases = NULL;
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_2__prepared);
     Py_DECREF(tmp_class_creation_2__prepared);
@@ -22678,47 +20884,39 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     // Tried code:
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_metaclass_name_3;
-        nuitka_bool tmp_condition_result_13;
-        PyObject *tmp_key_name_7;
-        PyObject *tmp_dict_arg_name_7;
-        PyObject *tmp_dict_arg_name_8;
-        PyObject *tmp_key_name_8;
-        PyObject *tmp_bases_name_3;
-        tmp_key_name_7 = mod_consts[231];
+        PyObject *tmp_metaclass_value_3;
+        bool tmp_condition_result_13;
+        PyObject *tmp_key_value_7;
+        PyObject *tmp_dict_arg_value_7;
+        PyObject *tmp_dict_arg_value_8;
+        PyObject *tmp_key_value_8;
+        PyObject *tmp_bases_value_3;
+        tmp_key_value_7 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_7 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_7, tmp_key_name_7);
+        tmp_dict_arg_value_7 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_7, tmp_key_value_7);
         assert(!(tmp_res == -1));
-        tmp_condition_result_13 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_13 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_13 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_13 != false) {
             goto condexpr_true_5;
         } else {
             goto condexpr_false_5;
         }
         condexpr_true_5:;
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_8 = tmp_class_creation_3__class_decl_dict;
-        tmp_key_name_8 = mod_consts[231];
-        tmp_metaclass_name_3 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_8, tmp_key_name_8);
-        if (tmp_metaclass_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 121;
-
-            goto try_except_handler_7;
+        tmp_dict_arg_value_8 = tmp_class_creation_3__class_decl_dict;
+        tmp_key_value_8 = mod_consts[217];
+        tmp_metaclass_value_3 = DICT_GET_ITEM0(tmp_dict_arg_value_8, tmp_key_value_8);
+        if (tmp_metaclass_value_3 == NULL) {
+            tmp_metaclass_value_3 = Py_None;
         }
+        assert(!(tmp_metaclass_value_3 == NULL));
         goto condexpr_end_5;
         condexpr_false_5:;
-        tmp_metaclass_name_3 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_3);
+        tmp_metaclass_value_3 = (PyObject *)&PyType_Type;
         condexpr_end_5:;
-        tmp_bases_name_3 = mod_consts[249];
-        tmp_assign_source_23 = SELECT_METACLASS(tmp_metaclass_name_3, tmp_bases_name_3);
-        Py_DECREF(tmp_metaclass_name_3);
+        tmp_bases_value_3 = mod_consts[235];
+        tmp_assign_source_23 = SELECT_METACLASS(tmp_metaclass_value_3, tmp_bases_value_3);
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22733,16 +20931,16 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_3__metaclass = tmp_assign_source_23;
     }
     {
-        nuitka_bool tmp_condition_result_14;
-        PyObject *tmp_key_name_9;
-        PyObject *tmp_dict_arg_name_9;
-        tmp_key_name_9 = mod_consts[231];
+        bool tmp_condition_result_14;
+        PyObject *tmp_key_value_9;
+        PyObject *tmp_dict_arg_value_9;
+        tmp_key_value_9 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_9 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_9, tmp_key_name_9);
+        tmp_dict_arg_value_9 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_9, tmp_key_value_9);
         assert(!(tmp_res == -1));
-        tmp_condition_result_14 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_14 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_14 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_14 != false) {
             goto branch_yes_9;
         } else {
             goto branch_no_9;
@@ -22751,7 +20949,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_9:;
     CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_3__class_decl_dict;
-    tmp_dictdel_key = mod_consts[231];
+    tmp_dictdel_key = mod_consts[217];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -22766,10 +20964,10 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_9:;
     {
         nuitka_bool tmp_condition_result_15;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_value_17;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_17 = tmp_class_creation_3__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_17, mod_consts[232]);
+        tmp_expression_value_17 = tmp_class_creation_3__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_17, mod_consts[218]);
         tmp_condition_result_15 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_15 == NUITKA_BOOL_TRUE) {
             goto branch_yes_10;
@@ -22780,14 +20978,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_10:;
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_args_name_5;
-        PyObject *tmp_kwargs_name_5;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_args_value_5;
+        PyObject *tmp_kwargs_value_5;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_18 = tmp_class_creation_3__metaclass;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[232]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_18 = tmp_class_creation_3__metaclass;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[218]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22797,12 +20995,12 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_7;
         }
-        tmp_args_name_5 = mod_consts[250];
+        tmp_args_value_5 = mod_consts[236];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_kwargs_name_5 = tmp_class_creation_3__class_decl_dict;
+        tmp_kwargs_value_5 = tmp_class_creation_3__class_decl_dict;
         frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 121;
-        tmp_assign_source_24 = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_5, tmp_kwargs_name_5);
-        Py_DECREF(tmp_called_name_5);
+        tmp_assign_source_24 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_5, tmp_kwargs_value_5);
+        Py_DECREF(tmp_called_value_5);
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22817,14 +21015,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_3__prepared = tmp_assign_source_24;
     }
     {
-        nuitka_bool tmp_condition_result_16;
-        PyObject *tmp_operand_name_3;
-        PyObject *tmp_expression_name_19;
+        bool tmp_condition_result_16;
+        PyObject *tmp_operand_value_3;
+        PyObject *tmp_expression_value_19;
         CHECK_OBJECT(tmp_class_creation_3__prepared);
-        tmp_expression_name_19 = tmp_class_creation_3__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_19, mod_consts[233]);
-        tmp_operand_name_3 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_3);
+        tmp_expression_value_19 = tmp_class_creation_3__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_19, mod_consts[219]);
+        tmp_operand_value_3 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -22835,8 +21033,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_7;
         }
-        tmp_condition_result_16 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_16 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_16 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_16 != false) {
             goto branch_yes_11;
         } else {
             goto branch_no_11;
@@ -22846,18 +21044,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_raise_value_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_tuple_element_11;
         PyObject *tmp_getattr_target_3;
         PyObject *tmp_getattr_attr_3;
         PyObject *tmp_getattr_default_3;
         tmp_raise_type_3 = PyExc_TypeError;
-        tmp_left_name_3 = mod_consts[234];
+        tmp_left_value_3 = mod_consts[220];
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
         tmp_getattr_target_3 = tmp_class_creation_3__metaclass;
-        tmp_getattr_attr_3 = mod_consts[235];
-        tmp_getattr_default_3 = mod_consts[236];
+        tmp_getattr_attr_3 = mod_consts[221];
+        tmp_getattr_default_3 = mod_consts[222];
         tmp_tuple_element_11 = BUILTIN_GETATTR(tmp_getattr_target_3, tmp_getattr_attr_3, tmp_getattr_default_3);
         if (tmp_tuple_element_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22869,17 +21067,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_7;
         }
-        tmp_right_name_3 = PyTuple_New(2);
+        tmp_right_value_3 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_20;
+            PyObject *tmp_expression_value_20;
             PyObject *tmp_type_arg_5;
-            PyTuple_SET_ITEM(tmp_right_name_3, 0, tmp_tuple_element_11);
+            PyTuple_SET_ITEM(tmp_right_value_3, 0, tmp_tuple_element_11);
             CHECK_OBJECT(tmp_class_creation_3__prepared);
             tmp_type_arg_5 = tmp_class_creation_3__prepared;
-            tmp_expression_name_20 = BUILTIN_TYPE1(tmp_type_arg_5);
-            assert(!(tmp_expression_name_20 == NULL));
-            tmp_tuple_element_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[235]);
-            Py_DECREF(tmp_expression_name_20);
+            tmp_expression_value_20 = BUILTIN_TYPE1(tmp_type_arg_5);
+            assert(!(tmp_expression_value_20 == NULL));
+            tmp_tuple_element_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[221]);
+            Py_DECREF(tmp_expression_value_20);
             if (tmp_tuple_element_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22890,17 +21088,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_5;
             }
-            PyTuple_SET_ITEM(tmp_right_name_3, 1, tmp_tuple_element_11);
+            PyTuple_SET_ITEM(tmp_right_value_3, 1, tmp_tuple_element_11);
         }
         goto tuple_build_noexception_5;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_5:;
-        Py_DECREF(tmp_right_name_3);
+        Py_DECREF(tmp_right_value_3);
         goto try_except_handler_7;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_5:;
-        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_raise_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22940,8 +21138,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[237];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__3_DialogResults_121, mod_consts[238], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[223];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__3_DialogResults_121, mod_consts[224], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -22952,8 +21150,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_9;
         }
-        tmp_dictset_value = mod_consts[82];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__3_DialogResults_121, mod_consts[239], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[74];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__3_DialogResults_121, mod_consts[225], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -23011,7 +21209,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_wx$lib$dialogs$$$function__6___repr__();
 
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__3_DialogResults_121, mod_consts[252], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__3_DialogResults_121, mod_consts[238], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -23080,24 +21278,24 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_3:;
         {
             PyObject *tmp_assign_source_27;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_name_6;
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_value_6;
             PyObject *tmp_tuple_element_12;
-            PyObject *tmp_kwargs_name_6;
+            PyObject *tmp_kwargs_value_6;
             CHECK_OBJECT(tmp_class_creation_3__metaclass);
-            tmp_called_name_6 = tmp_class_creation_3__metaclass;
-            tmp_tuple_element_12 = mod_consts[82];
-            tmp_args_name_6 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_6, 0, tmp_tuple_element_12);
-            tmp_tuple_element_12 = mod_consts[249];
-            PyTuple_SET_ITEM0(tmp_args_name_6, 1, tmp_tuple_element_12);
+            tmp_called_value_6 = tmp_class_creation_3__metaclass;
+            tmp_tuple_element_12 = mod_consts[74];
+            tmp_args_value_6 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 0, tmp_tuple_element_12);
+            tmp_tuple_element_12 = mod_consts[235];
+            PyTuple_SET_ITEM0(tmp_args_value_6, 1, tmp_tuple_element_12);
             tmp_tuple_element_12 = locals_wx$lib$dialogs$$$class__3_DialogResults_121;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 2, tmp_tuple_element_12);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 2, tmp_tuple_element_12);
             CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-            tmp_kwargs_name_6 = tmp_class_creation_3__class_decl_dict;
+            tmp_kwargs_value_6 = tmp_class_creation_3__class_decl_dict;
             frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 121;
-            tmp_assign_source_27 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_6, tmp_kwargs_name_6);
-            Py_DECREF(tmp_args_name_6);
+            tmp_assign_source_27 = CALL_FUNCTION(tmp_called_value_6, tmp_args_value_6, tmp_kwargs_value_6);
+            Py_DECREF(tmp_args_value_6);
             if (tmp_assign_source_27 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23176,7 +21374,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         exception_lineno = 121;
         goto try_except_handler_7;
         outline_result_3:;
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[74], tmp_assign_source_26);
     }
     goto try_end_3;
     // Exception handler code:
@@ -23190,7 +21388,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_3__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+    Py_DECREF(tmp_class_creation_3__class_decl_dict);
     tmp_class_creation_3__class_decl_dict = NULL;
     Py_XDECREF(tmp_class_creation_3__metaclass);
     tmp_class_creation_3__metaclass = NULL;
@@ -23205,9 +21404,11 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     goto frame_exception_exit_1;
     // End of try:
     try_end_3:;
-    Py_XDECREF(tmp_class_creation_3__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+    Py_DECREF(tmp_class_creation_3__class_decl_dict);
     tmp_class_creation_3__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_3__metaclass);
+    CHECK_OBJECT(tmp_class_creation_3__metaclass);
+    Py_DECREF(tmp_class_creation_3__metaclass);
     tmp_class_creation_3__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_3__prepared);
     Py_DECREF(tmp_class_creation_3__prepared);
@@ -23218,51 +21419,51 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_28 = MAKE_FUNCTION_wx$lib$dialogs$$$function__7_returnedString();
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_28);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[50], tmp_assign_source_28);
     }
     {
         PyObject *tmp_assign_source_29;
         PyObject *tmp_defaults_3;
-        tmp_defaults_3 = mod_consts[254];
+        tmp_defaults_3 = mod_consts[240];
         Py_INCREF(tmp_defaults_3);
 
 
         tmp_assign_source_29 = MAKE_FUNCTION_wx$lib$dialogs$$$function__8_findDialog(tmp_defaults_3);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[255], tmp_assign_source_29);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[241], tmp_assign_source_29);
     }
     {
         PyObject *tmp_assign_source_30;
         PyObject *tmp_defaults_4;
-        tmp_defaults_4 = mod_consts[256];
+        tmp_defaults_4 = mod_consts[242];
         Py_INCREF(tmp_defaults_4);
 
 
         tmp_assign_source_30 = MAKE_FUNCTION_wx$lib$dialogs$$$function__9_colorDialog(tmp_defaults_4);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[257], tmp_assign_source_30);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[243], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
         PyObject *tmp_defaults_5;
-        tmp_defaults_5 = mod_consts[256];
+        tmp_defaults_5 = mod_consts[242];
         Py_INCREF(tmp_defaults_5);
 
 
         tmp_assign_source_31 = MAKE_FUNCTION_wx$lib$dialogs$$$function__10_colourDialog(tmp_defaults_5);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[258], tmp_assign_source_31);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[244], tmp_assign_source_31);
     }
     {
         PyObject *tmp_assign_source_32;
         PyObject *tmp_defaults_6;
-        tmp_defaults_6 = mod_consts[256];
+        tmp_defaults_6 = mod_consts[242];
         Py_INCREF(tmp_defaults_6);
 
 
         tmp_assign_source_32 = MAKE_FUNCTION_wx$lib$dialogs$$$function__11_fontDialog(tmp_defaults_6);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[259], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[245], tmp_assign_source_32);
     }
     {
         PyObject *tmp_assign_source_33;
@@ -23271,24 +21472,24 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_13 = Py_None;
         tmp_defaults_7 = PyTuple_New(5);
         {
-            PyObject *tmp_left_name_4;
-            PyObject *tmp_expression_name_21;
-            PyObject *tmp_right_name_4;
-            PyObject *tmp_expression_name_22;
+            PyObject *tmp_left_value_4;
+            PyObject *tmp_expression_value_21;
+            PyObject *tmp_right_value_4;
+            PyObject *tmp_expression_value_22;
             PyTuple_SET_ITEM0(tmp_defaults_7, 0, tmp_tuple_element_13);
-            tmp_tuple_element_13 = mod_consts[132];
+            tmp_tuple_element_13 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_7, 1, tmp_tuple_element_13);
-            tmp_tuple_element_13 = mod_consts[132];
+            tmp_tuple_element_13 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_7, 2, tmp_tuple_element_13);
-            tmp_tuple_element_13 = mod_consts[132];
+            tmp_tuple_element_13 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_7, 3, tmp_tuple_element_13);
-            tmp_expression_name_21 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_21 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_21 == NULL)) {
-                tmp_expression_name_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_21 == NULL)) {
+                tmp_expression_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_21 == NULL) {
+            if (tmp_expression_value_21 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23298,8 +21499,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_6;
             }
-            tmp_left_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[16]);
-            if (tmp_left_name_4 == NULL) {
+            tmp_left_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[14]);
+            if (tmp_left_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23309,36 +21510,36 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_6;
             }
-            tmp_expression_name_22 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_22 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_22 == NULL)) {
-                tmp_expression_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_22 == NULL)) {
+                tmp_expression_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_22 == NULL) {
+            if (tmp_expression_value_22 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_4);
+                Py_DECREF(tmp_left_value_4);
 
                 exception_lineno = 241;
 
                 goto tuple_build_exception_6;
             }
-            tmp_right_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[187]);
-            if (tmp_right_name_4 == NULL) {
+            tmp_right_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[174]);
+            if (tmp_right_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_4);
+                Py_DECREF(tmp_left_value_4);
 
                 exception_lineno = 241;
 
                 goto tuple_build_exception_6;
             }
-            tmp_tuple_element_13 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_4);
-            Py_DECREF(tmp_left_name_4);
-            Py_DECREF(tmp_right_name_4);
+            tmp_tuple_element_13 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_4);
+            Py_DECREF(tmp_left_value_4);
+            Py_DECREF(tmp_right_value_4);
             if (tmp_tuple_element_13 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23362,7 +21563,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_33 = MAKE_FUNCTION_wx$lib$dialogs$$$function__12_textEntryDialog(tmp_defaults_7);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[260], tmp_assign_source_33);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[246], tmp_assign_source_33);
     }
     {
         PyObject *tmp_assign_source_34;
@@ -23371,26 +21572,26 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_14 = Py_None;
         tmp_defaults_8 = PyTuple_New(5);
         {
-            PyObject *tmp_left_name_5;
-            PyObject *tmp_left_name_6;
-            PyObject *tmp_expression_name_23;
-            PyObject *tmp_right_name_5;
-            PyObject *tmp_expression_name_24;
-            PyObject *tmp_right_name_6;
-            PyObject *tmp_expression_name_25;
-            PyObject *tmp_expression_name_26;
+            PyObject *tmp_left_value_5;
+            PyObject *tmp_left_value_6;
+            PyObject *tmp_expression_value_23;
+            PyObject *tmp_right_value_5;
+            PyObject *tmp_expression_value_24;
+            PyObject *tmp_right_value_6;
+            PyObject *tmp_expression_value_25;
+            PyObject *tmp_expression_value_26;
             PyTuple_SET_ITEM0(tmp_defaults_8, 0, tmp_tuple_element_14);
-            tmp_tuple_element_14 = mod_consts[132];
+            tmp_tuple_element_14 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_8, 1, tmp_tuple_element_14);
-            tmp_tuple_element_14 = mod_consts[261];
+            tmp_tuple_element_14 = mod_consts[247];
             PyTuple_SET_ITEM0(tmp_defaults_8, 2, tmp_tuple_element_14);
-            tmp_expression_name_23 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_23 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_23 == NULL)) {
-                tmp_expression_name_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_23 == NULL)) {
+                tmp_expression_value_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_23 == NULL) {
+            if (tmp_expression_value_23 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23400,8 +21601,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_7;
             }
-            tmp_left_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[16]);
-            if (tmp_left_name_6 == NULL) {
+            tmp_left_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[14]);
+            if (tmp_left_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23411,37 +21612,37 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_7;
             }
-            tmp_expression_name_24 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_24 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_24 == NULL)) {
-                tmp_expression_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_24 == NULL)) {
+                tmp_expression_value_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_24 == NULL) {
+            if (tmp_expression_value_24 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_6);
+                Py_DECREF(tmp_left_value_6);
 
                 exception_lineno = 250;
 
                 goto tuple_build_exception_7;
             }
-            tmp_right_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[187]);
-            if (tmp_right_name_5 == NULL) {
+            tmp_right_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[174]);
+            if (tmp_right_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_6);
+                Py_DECREF(tmp_left_value_6);
 
                 exception_lineno = 250;
 
                 goto tuple_build_exception_7;
             }
-            tmp_left_name_5 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_6, tmp_right_name_5);
-            Py_DECREF(tmp_left_name_6);
-            Py_DECREF(tmp_right_name_5);
-            if (tmp_left_name_5 == NULL) {
+            tmp_left_value_5 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_6, tmp_right_value_5);
+            Py_DECREF(tmp_left_value_6);
+            Py_DECREF(tmp_right_value_5);
+            if (tmp_left_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23451,36 +21652,36 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_7;
             }
-            tmp_expression_name_25 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_25 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_25 == NULL)) {
-                tmp_expression_name_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_25 == NULL)) {
+                tmp_expression_value_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_25 == NULL) {
+            if (tmp_expression_value_25 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_5);
+                Py_DECREF(tmp_left_value_5);
 
                 exception_lineno = 250;
 
                 goto tuple_build_exception_7;
             }
-            tmp_right_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[262]);
-            if (tmp_right_name_6 == NULL) {
+            tmp_right_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[248]);
+            if (tmp_right_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_5);
+                Py_DECREF(tmp_left_value_5);
 
                 exception_lineno = 250;
 
                 goto tuple_build_exception_7;
             }
-            tmp_tuple_element_14 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_6);
-            Py_DECREF(tmp_left_name_5);
-            Py_DECREF(tmp_right_name_6);
+            tmp_tuple_element_14 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_6);
+            Py_DECREF(tmp_left_value_5);
+            Py_DECREF(tmp_right_value_6);
             if (tmp_tuple_element_14 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23492,13 +21693,13 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                 goto tuple_build_exception_7;
             }
             PyTuple_SET_ITEM(tmp_defaults_8, 3, tmp_tuple_element_14);
-            tmp_expression_name_26 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_26 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_26 == NULL)) {
-                tmp_expression_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_26 == NULL)) {
+                tmp_expression_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_26 == NULL) {
+            if (tmp_expression_value_26 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23508,7 +21709,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_7;
             }
-            tmp_tuple_element_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[33]);
+            tmp_tuple_element_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[29]);
             if (tmp_tuple_element_14 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23532,7 +21733,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_34 = MAKE_FUNCTION_wx$lib$dialogs$$$function__13_messageDialog(tmp_defaults_8);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[114], tmp_assign_source_34);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[106], tmp_assign_source_34);
     }
     {
         PyObject *tmp_assign_source_35;
@@ -23541,19 +21742,19 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_15 = Py_None;
         tmp_defaults_9 = PyTuple_New(4);
         {
-            PyObject *tmp_expression_name_27;
+            PyObject *tmp_expression_value_27;
             PyTuple_SET_ITEM0(tmp_defaults_9, 0, tmp_tuple_element_15);
-            tmp_tuple_element_15 = mod_consts[132];
+            tmp_tuple_element_15 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_9, 1, tmp_tuple_element_15);
-            tmp_tuple_element_15 = mod_consts[263];
+            tmp_tuple_element_15 = mod_consts[249];
             PyTuple_SET_ITEM0(tmp_defaults_9, 2, tmp_tuple_element_15);
-            tmp_expression_name_27 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_27 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_27 == NULL)) {
-                tmp_expression_name_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_27 == NULL)) {
+                tmp_expression_value_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_27 == NULL) {
+            if (tmp_expression_value_27 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23563,7 +21764,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_8;
             }
-            tmp_tuple_element_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[33]);
+            tmp_tuple_element_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[29]);
             if (tmp_tuple_element_15 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23587,7 +21788,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_35 = MAKE_FUNCTION_wx$lib$dialogs$$$function__14_alertDialog(tmp_defaults_9);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[264], tmp_assign_source_35);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[250], tmp_assign_source_35);
     }
     {
         PyObject *tmp_assign_source_36;
@@ -23596,19 +21797,19 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_16 = Py_None;
         tmp_defaults_10 = PyTuple_New(5);
         {
-            PyObject *tmp_expression_name_28;
+            PyObject *tmp_expression_value_28;
             PyTuple_SET_ITEM0(tmp_defaults_10, 0, tmp_tuple_element_16);
-            tmp_tuple_element_16 = mod_consts[132];
+            tmp_tuple_element_16 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_10, 1, tmp_tuple_element_16);
-            tmp_tuple_element_16 = mod_consts[132];
+            tmp_tuple_element_16 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_10, 2, tmp_tuple_element_16);
-            tmp_expression_name_28 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_28 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_28 == NULL)) {
-                tmp_expression_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_28 == NULL)) {
+                tmp_expression_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_28 == NULL) {
+            if (tmp_expression_value_28 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23618,7 +21819,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_9;
             }
-            tmp_tuple_element_16 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[33]);
+            tmp_tuple_element_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[29]);
             if (tmp_tuple_element_16 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23630,7 +21831,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                 goto tuple_build_exception_9;
             }
             PyTuple_SET_ITEM(tmp_defaults_10, 3, tmp_tuple_element_16);
-            tmp_tuple_element_16 = mod_consts[240];
+            tmp_tuple_element_16 = mod_consts[226];
             PyTuple_SET_ITEM0(tmp_defaults_10, 4, tmp_tuple_element_16);
         }
         goto tuple_build_noexception_9;
@@ -23644,7 +21845,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_36 = MAKE_FUNCTION_wx$lib$dialogs$$$function__15_scrolledMessageDialog(tmp_defaults_10);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[265], tmp_assign_source_36);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[251], tmp_assign_source_36);
     }
     {
         PyObject *tmp_assign_source_37;
@@ -23653,26 +21854,26 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_17 = Py_None;
         tmp_defaults_11 = PyTuple_New(6);
         {
-            PyObject *tmp_left_name_7;
-            PyObject *tmp_expression_name_29;
-            PyObject *tmp_right_name_7;
-            PyObject *tmp_expression_name_30;
+            PyObject *tmp_left_value_7;
+            PyObject *tmp_expression_value_29;
+            PyObject *tmp_right_value_7;
+            PyObject *tmp_expression_value_30;
             PyTuple_SET_ITEM0(tmp_defaults_11, 0, tmp_tuple_element_17);
-            tmp_tuple_element_17 = mod_consts[266];
+            tmp_tuple_element_17 = mod_consts[252];
             PyTuple_SET_ITEM0(tmp_defaults_11, 1, tmp_tuple_element_17);
-            tmp_tuple_element_17 = mod_consts[132];
+            tmp_tuple_element_17 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_11, 2, tmp_tuple_element_17);
-            tmp_tuple_element_17 = mod_consts[132];
+            tmp_tuple_element_17 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_11, 3, tmp_tuple_element_17);
-            tmp_tuple_element_17 = mod_consts[267];
+            tmp_tuple_element_17 = mod_consts[253];
             PyTuple_SET_ITEM0(tmp_defaults_11, 4, tmp_tuple_element_17);
-            tmp_expression_name_29 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_29 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_29 == NULL)) {
-                tmp_expression_name_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_29 == NULL)) {
+                tmp_expression_value_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_29 == NULL) {
+            if (tmp_expression_value_29 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23682,8 +21883,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_10;
             }
-            tmp_left_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[268]);
-            if (tmp_left_name_7 == NULL) {
+            tmp_left_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[254]);
+            if (tmp_left_value_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23693,36 +21894,36 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_10;
             }
-            tmp_expression_name_30 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_30 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_30 == NULL)) {
-                tmp_expression_name_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_30 == NULL)) {
+                tmp_expression_value_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_30 == NULL) {
+            if (tmp_expression_value_30 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_7);
+                Py_DECREF(tmp_left_value_7);
 
                 exception_lineno = 275;
 
                 goto tuple_build_exception_10;
             }
-            tmp_right_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[269]);
-            if (tmp_right_name_7 == NULL) {
+            tmp_right_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[255]);
+            if (tmp_right_value_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_7);
+                Py_DECREF(tmp_left_value_7);
 
                 exception_lineno = 275;
 
                 goto tuple_build_exception_10;
             }
-            tmp_tuple_element_17 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_7);
-            Py_DECREF(tmp_left_name_7);
-            Py_DECREF(tmp_right_name_7);
+            tmp_tuple_element_17 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_7);
+            Py_DECREF(tmp_left_value_7);
+            Py_DECREF(tmp_right_value_7);
             if (tmp_tuple_element_17 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23746,7 +21947,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_37 = MAKE_FUNCTION_wx$lib$dialogs$$$function__16_fileDialog(tmp_defaults_11);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[120], tmp_assign_source_37);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[112], tmp_assign_source_37);
     }
     {
         PyObject *tmp_assign_source_38;
@@ -23755,26 +21956,26 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_18 = Py_None;
         tmp_defaults_12 = PyTuple_New(6);
         {
-            PyObject *tmp_left_name_8;
-            PyObject *tmp_expression_name_31;
-            PyObject *tmp_right_name_8;
-            PyObject *tmp_expression_name_32;
+            PyObject *tmp_left_value_8;
+            PyObject *tmp_expression_value_31;
+            PyObject *tmp_right_value_8;
+            PyObject *tmp_expression_value_32;
             PyTuple_SET_ITEM0(tmp_defaults_12, 0, tmp_tuple_element_18);
-            tmp_tuple_element_18 = mod_consts[266];
+            tmp_tuple_element_18 = mod_consts[252];
             PyTuple_SET_ITEM0(tmp_defaults_12, 1, tmp_tuple_element_18);
-            tmp_tuple_element_18 = mod_consts[132];
+            tmp_tuple_element_18 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_12, 2, tmp_tuple_element_18);
-            tmp_tuple_element_18 = mod_consts[132];
+            tmp_tuple_element_18 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_12, 3, tmp_tuple_element_18);
-            tmp_tuple_element_18 = mod_consts[270];
+            tmp_tuple_element_18 = mod_consts[256];
             PyTuple_SET_ITEM0(tmp_defaults_12, 4, tmp_tuple_element_18);
-            tmp_expression_name_31 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_31 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_31 == NULL)) {
-                tmp_expression_name_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_31 == NULL)) {
+                tmp_expression_value_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_31 == NULL) {
+            if (tmp_expression_value_31 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23784,8 +21985,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_11;
             }
-            tmp_left_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_31, mod_consts[268]);
-            if (tmp_left_name_8 == NULL) {
+            tmp_left_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[254]);
+            if (tmp_left_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23795,36 +21996,36 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_11;
             }
-            tmp_expression_name_32 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_32 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_32 == NULL)) {
-                tmp_expression_name_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_32 == NULL)) {
+                tmp_expression_value_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_32 == NULL) {
+            if (tmp_expression_value_32 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_8);
+                Py_DECREF(tmp_left_value_8);
 
                 exception_lineno = 292;
 
                 goto tuple_build_exception_11;
             }
-            tmp_right_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[269]);
-            if (tmp_right_name_8 == NULL) {
+            tmp_right_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[255]);
+            if (tmp_right_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_8);
+                Py_DECREF(tmp_left_value_8);
 
                 exception_lineno = 292;
 
                 goto tuple_build_exception_11;
             }
-            tmp_tuple_element_18 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_8);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_right_name_8);
+            tmp_tuple_element_18 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_8);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_right_value_8);
             if (tmp_tuple_element_18 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23848,7 +22049,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_38 = MAKE_FUNCTION_wx$lib$dialogs$$$function__17_openFileDialog(tmp_defaults_12);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[271], tmp_assign_source_38);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[257], tmp_assign_source_38);
     }
     {
         PyObject *tmp_assign_source_39;
@@ -23857,26 +22058,26 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_19 = Py_None;
         tmp_defaults_13 = PyTuple_New(6);
         {
-            PyObject *tmp_left_name_9;
-            PyObject *tmp_expression_name_33;
-            PyObject *tmp_right_name_9;
-            PyObject *tmp_expression_name_34;
+            PyObject *tmp_left_value_9;
+            PyObject *tmp_expression_value_33;
+            PyObject *tmp_right_value_9;
+            PyObject *tmp_expression_value_34;
             PyTuple_SET_ITEM0(tmp_defaults_13, 0, tmp_tuple_element_19);
-            tmp_tuple_element_19 = mod_consts[272];
+            tmp_tuple_element_19 = mod_consts[258];
             PyTuple_SET_ITEM0(tmp_defaults_13, 1, tmp_tuple_element_19);
-            tmp_tuple_element_19 = mod_consts[132];
+            tmp_tuple_element_19 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_13, 2, tmp_tuple_element_19);
-            tmp_tuple_element_19 = mod_consts[132];
+            tmp_tuple_element_19 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_13, 3, tmp_tuple_element_19);
-            tmp_tuple_element_19 = mod_consts[270];
+            tmp_tuple_element_19 = mod_consts[256];
             PyTuple_SET_ITEM0(tmp_defaults_13, 4, tmp_tuple_element_19);
-            tmp_expression_name_33 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_33 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_33 == NULL)) {
-                tmp_expression_name_33 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_33 == NULL)) {
+                tmp_expression_value_33 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_33 == NULL) {
+            if (tmp_expression_value_33 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23886,8 +22087,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_12;
             }
-            tmp_left_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[273]);
-            if (tmp_left_name_9 == NULL) {
+            tmp_left_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[259]);
+            if (tmp_left_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23897,36 +22098,36 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_12;
             }
-            tmp_expression_name_34 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_34 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_34 == NULL)) {
-                tmp_expression_name_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_34 == NULL)) {
+                tmp_expression_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_34 == NULL) {
+            if (tmp_expression_value_34 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_9);
+                Py_DECREF(tmp_left_value_9);
 
                 exception_lineno = 298;
 
                 goto tuple_build_exception_12;
             }
-            tmp_right_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_34, mod_consts[274]);
-            if (tmp_right_name_9 == NULL) {
+            tmp_right_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[260]);
+            if (tmp_right_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_9);
+                Py_DECREF(tmp_left_value_9);
 
                 exception_lineno = 298;
 
                 goto tuple_build_exception_12;
             }
-            tmp_tuple_element_19 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_9);
-            Py_DECREF(tmp_left_name_9);
-            Py_DECREF(tmp_right_name_9);
+            tmp_tuple_element_19 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_9);
+            Py_DECREF(tmp_left_value_9);
+            Py_DECREF(tmp_right_value_9);
             if (tmp_tuple_element_19 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23950,7 +22151,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_39 = MAKE_FUNCTION_wx$lib$dialogs$$$function__18_saveFileDialog(tmp_defaults_13);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[275], tmp_assign_source_39);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[261], tmp_assign_source_39);
     }
     {
         PyObject *tmp_assign_source_40;
@@ -23959,22 +22160,22 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_20 = Py_None;
         tmp_defaults_14 = PyTuple_New(6);
         {
-            PyObject *tmp_expression_name_35;
-            PyObject *tmp_expression_name_36;
+            PyObject *tmp_expression_value_35;
+            PyObject *tmp_expression_value_36;
             PyTuple_SET_ITEM0(tmp_defaults_14, 0, tmp_tuple_element_20);
-            tmp_tuple_element_20 = mod_consts[276];
+            tmp_tuple_element_20 = mod_consts[262];
             PyTuple_SET_ITEM0(tmp_defaults_14, 1, tmp_tuple_element_20);
-            tmp_tuple_element_20 = mod_consts[132];
+            tmp_tuple_element_20 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_14, 2, tmp_tuple_element_20);
-            tmp_tuple_element_20 = mod_consts[39];
+            tmp_tuple_element_20 = mod_consts[35];
             PyTuple_SET_ITEM0(tmp_defaults_14, 3, tmp_tuple_element_20);
-            tmp_expression_name_35 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_35 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_35 == NULL)) {
-                tmp_expression_name_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_35 == NULL)) {
+                tmp_expression_value_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_35 == NULL) {
+            if (tmp_expression_value_35 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23984,7 +22185,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_13;
             }
-            tmp_tuple_element_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_35, mod_consts[33]);
+            tmp_tuple_element_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[29]);
             if (tmp_tuple_element_20 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23996,13 +22197,13 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                 goto tuple_build_exception_13;
             }
             PyTuple_SET_ITEM(tmp_defaults_14, 4, tmp_tuple_element_20);
-            tmp_expression_name_36 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_36 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_36 == NULL)) {
-                tmp_expression_name_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_36 == NULL)) {
+                tmp_expression_value_36 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_36 == NULL) {
+            if (tmp_expression_value_36 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24012,7 +22213,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_13;
             }
-            tmp_tuple_element_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[34]);
+            tmp_tuple_element_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[30]);
             if (tmp_tuple_element_20 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -24036,18 +22237,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_40 = MAKE_FUNCTION_wx$lib$dialogs$$$function__19_dirDialog(tmp_defaults_14);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[277], tmp_assign_source_40);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[263], tmp_assign_source_40);
     }
     {
         PyObject *tmp_assign_source_41;
-        tmp_assign_source_41 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[277]);
+        tmp_assign_source_41 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[263]);
 
         if (unlikely(tmp_assign_source_41 == NULL)) {
-            tmp_assign_source_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[277]);
+            tmp_assign_source_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[263]);
         }
 
         assert(!(tmp_assign_source_41 == NULL));
-        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[278], tmp_assign_source_41);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[264], tmp_assign_source_41);
     }
     {
         PyObject *tmp_assign_source_42;
@@ -24056,27 +22257,27 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_21 = Py_None;
         tmp_defaults_15 = PyTuple_New(5);
         {
-            PyObject *tmp_left_name_10;
-            PyObject *tmp_left_name_11;
-            PyObject *tmp_expression_name_37;
-            PyObject *tmp_right_name_10;
-            PyObject *tmp_expression_name_38;
-            PyObject *tmp_right_name_11;
-            PyObject *tmp_expression_name_39;
+            PyObject *tmp_left_value_10;
+            PyObject *tmp_left_value_11;
+            PyObject *tmp_expression_value_37;
+            PyObject *tmp_right_value_10;
+            PyObject *tmp_expression_value_38;
+            PyObject *tmp_right_value_11;
+            PyObject *tmp_expression_value_39;
             PyTuple_SET_ITEM0(tmp_defaults_15, 0, tmp_tuple_element_21);
-            tmp_tuple_element_21 = mod_consts[132];
+            tmp_tuple_element_21 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_15, 1, tmp_tuple_element_21);
-            tmp_tuple_element_21 = mod_consts[132];
+            tmp_tuple_element_21 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_15, 2, tmp_tuple_element_21);
             tmp_tuple_element_21 = PyList_New(0);
             PyTuple_SET_ITEM(tmp_defaults_15, 3, tmp_tuple_element_21);
-            tmp_expression_name_37 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_37 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_37 == NULL)) {
-                tmp_expression_name_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_37 == NULL)) {
+                tmp_expression_value_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_37 == NULL) {
+            if (tmp_expression_value_37 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24086,8 +22287,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_14;
             }
-            tmp_left_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_37, mod_consts[16]);
-            if (tmp_left_name_11 == NULL) {
+            tmp_left_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[14]);
+            if (tmp_left_value_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24097,37 +22298,37 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_14;
             }
-            tmp_expression_name_38 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_38 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_38 == NULL)) {
-                tmp_expression_name_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_38 == NULL)) {
+                tmp_expression_value_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_38 == NULL) {
+            if (tmp_expression_value_38 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_11);
+                Py_DECREF(tmp_left_value_11);
 
                 exception_lineno = 318;
 
                 goto tuple_build_exception_14;
             }
-            tmp_right_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[187]);
-            if (tmp_right_name_10 == NULL) {
+            tmp_right_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[174]);
+            if (tmp_right_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_11);
+                Py_DECREF(tmp_left_value_11);
 
                 exception_lineno = 318;
 
                 goto tuple_build_exception_14;
             }
-            tmp_left_name_10 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_11, tmp_right_name_10);
-            Py_DECREF(tmp_left_name_11);
-            Py_DECREF(tmp_right_name_10);
-            if (tmp_left_name_10 == NULL) {
+            tmp_left_value_10 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_11, tmp_right_value_10);
+            Py_DECREF(tmp_left_value_11);
+            Py_DECREF(tmp_right_value_10);
+            if (tmp_left_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24137,36 +22338,36 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_14;
             }
-            tmp_expression_name_39 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_39 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_39 == NULL)) {
-                tmp_expression_name_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_39 == NULL)) {
+                tmp_expression_value_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_39 == NULL) {
+            if (tmp_expression_value_39 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_10);
+                Py_DECREF(tmp_left_value_10);
 
                 exception_lineno = 318;
 
                 goto tuple_build_exception_14;
             }
-            tmp_right_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_39, mod_consts[262]);
-            if (tmp_right_name_11 == NULL) {
+            tmp_right_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[248]);
+            if (tmp_right_value_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_left_name_10);
+                Py_DECREF(tmp_left_value_10);
 
                 exception_lineno = 318;
 
                 goto tuple_build_exception_14;
             }
-            tmp_tuple_element_21 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_11);
-            Py_DECREF(tmp_left_name_10);
-            Py_DECREF(tmp_right_name_11);
+            tmp_tuple_element_21 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_11);
+            Py_DECREF(tmp_left_value_10);
+            Py_DECREF(tmp_right_value_11);
             if (tmp_tuple_element_21 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -24190,7 +22391,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_42 = MAKE_FUNCTION_wx$lib$dialogs$$$function__20_singleChoiceDialog(tmp_defaults_15);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[279], tmp_assign_source_42);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[265], tmp_assign_source_42);
     }
     {
         PyObject *tmp_assign_source_43;
@@ -24199,22 +22400,22 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_tuple_element_22 = Py_None;
         tmp_defaults_16 = PyTuple_New(6);
         {
-            PyObject *tmp_expression_name_40;
-            PyObject *tmp_expression_name_41;
+            PyObject *tmp_expression_value_40;
+            PyObject *tmp_expression_value_41;
             PyTuple_SET_ITEM0(tmp_defaults_16, 0, tmp_tuple_element_22);
-            tmp_tuple_element_22 = mod_consts[132];
+            tmp_tuple_element_22 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_16, 1, tmp_tuple_element_22);
-            tmp_tuple_element_22 = mod_consts[132];
+            tmp_tuple_element_22 = mod_consts[124];
             PyTuple_SET_ITEM0(tmp_defaults_16, 2, tmp_tuple_element_22);
             tmp_tuple_element_22 = PyList_New(0);
             PyTuple_SET_ITEM(tmp_defaults_16, 3, tmp_tuple_element_22);
-            tmp_expression_name_40 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_40 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_40 == NULL)) {
-                tmp_expression_name_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_40 == NULL)) {
+                tmp_expression_value_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_40 == NULL) {
+            if (tmp_expression_value_40 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24224,7 +22425,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_15;
             }
-            tmp_tuple_element_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_40, mod_consts[33]);
+            tmp_tuple_element_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[29]);
             if (tmp_tuple_element_22 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -24236,13 +22437,13 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                 goto tuple_build_exception_15;
             }
             PyTuple_SET_ITEM(tmp_defaults_16, 4, tmp_tuple_element_22);
-            tmp_expression_name_41 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_41 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_41 == NULL)) {
-                tmp_expression_name_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_41 == NULL)) {
+                tmp_expression_value_41 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_41 == NULL) {
+            if (tmp_expression_value_41 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24252,7 +22453,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_15;
             }
-            tmp_tuple_element_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_41, mod_consts[34]);
+            tmp_tuple_element_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[30]);
             if (tmp_tuple_element_22 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -24276,19 +22477,19 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_43 = MAKE_FUNCTION_wx$lib$dialogs$$$function__21_multipleChoiceDialog(tmp_defaults_16);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[280], tmp_assign_source_43);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[266], tmp_assign_source_43);
     }
     // Tried code:
     {
-        PyObject *tmp_expression_name_42;
+        PyObject *tmp_expression_value_42;
         PyObject *tmp_attribute_value_1;
-        tmp_expression_name_42 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_42 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_42 == NULL)) {
-            tmp_expression_name_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_42 == NULL)) {
+            tmp_expression_value_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_42 == NULL) {
+        if (tmp_expression_value_42 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24298,7 +22499,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_10;
         }
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_42, mod_consts[190]);
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[177]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24312,15 +22513,15 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         Py_DECREF(tmp_attribute_value_1);
     }
     {
-        PyObject *tmp_expression_name_43;
+        PyObject *tmp_expression_value_43;
         PyObject *tmp_attribute_value_2;
-        tmp_expression_name_43 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_43 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_43 == NULL)) {
-            tmp_expression_name_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_43 == NULL)) {
+            tmp_expression_value_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_43 == NULL) {
+        if (tmp_expression_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24330,7 +22531,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_10;
         }
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_43, mod_consts[192]);
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_43, mod_consts[179]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24370,11 +22571,11 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     // Tried code:
     {
         bool tmp_condition_result_17;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_3 = PyExc_AttributeError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_3 = PyExc_AttributeError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
         assert(!(tmp_res == -1));
         tmp_condition_result_17 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_17 != false) {
@@ -24385,9 +22586,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     }
     branch_yes_12:;
     {
-        PyObject *tmp_assattr_name_3;
+        PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_name_3 = mod_consts[39];
+        tmp_assattr_value_3 = mod_consts[35];
         tmp_assattr_target_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_assattr_target_3 == NULL)) {
@@ -24404,7 +22605,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_11;
         }
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[190], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[177], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -24417,9 +22618,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
     }
     {
-        PyObject *tmp_assattr_name_4;
+        PyObject *tmp_assattr_value_4;
         PyObject *tmp_assattr_target_4;
-        tmp_assattr_name_4 = mod_consts[39];
+        tmp_assattr_value_4 = mod_consts[35];
         tmp_assattr_target_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_assattr_target_4 == NULL)) {
@@ -24436,7 +22637,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_11;
         }
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[192], tmp_assattr_name_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[179], tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -24495,14 +22696,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_44;
         PyObject *tmp_tuple_element_23;
-        PyObject *tmp_expression_name_44;
-        tmp_expression_name_44 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_44;
+        tmp_expression_value_44 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_44 == NULL)) {
-            tmp_expression_name_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_44 == NULL)) {
+            tmp_expression_value_44 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_44 == NULL) {
+        if (tmp_expression_value_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24512,7 +22713,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_12;
         }
-        tmp_tuple_element_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_44, mod_consts[1]);
+        tmp_tuple_element_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_44, mod_consts[1]);
         if (tmp_tuple_element_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24560,44 +22761,39 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     }
     {
         PyObject *tmp_assign_source_47;
-        PyObject *tmp_metaclass_name_4;
-        nuitka_bool tmp_condition_result_18;
-        PyObject *tmp_key_name_10;
-        PyObject *tmp_dict_arg_name_10;
-        PyObject *tmp_dict_arg_name_11;
-        PyObject *tmp_key_name_11;
+        PyObject *tmp_metaclass_value_4;
+        bool tmp_condition_result_18;
+        PyObject *tmp_key_value_10;
+        PyObject *tmp_dict_arg_value_10;
+        PyObject *tmp_dict_arg_value_11;
+        PyObject *tmp_key_value_11;
         nuitka_bool tmp_condition_result_19;
         int tmp_truth_name_3;
         PyObject *tmp_type_arg_6;
-        PyObject *tmp_expression_name_45;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_bases_name_4;
-        tmp_key_name_10 = mod_consts[231];
+        PyObject *tmp_expression_value_45;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_bases_value_4;
+        tmp_key_value_10 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_10 = tmp_class_creation_4__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_10, tmp_key_name_10);
+        tmp_dict_arg_value_10 = tmp_class_creation_4__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_10, tmp_key_value_10);
         assert(!(tmp_res == -1));
-        tmp_condition_result_18 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_18 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_18 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_18 != false) {
             goto condexpr_true_6;
         } else {
             goto condexpr_false_6;
         }
         condexpr_true_6:;
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_11 = tmp_class_creation_4__class_decl_dict;
-        tmp_key_name_11 = mod_consts[231];
-        tmp_metaclass_name_4 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_11, tmp_key_name_11);
-        if (tmp_metaclass_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 349;
-
-            goto try_except_handler_12;
+        tmp_dict_arg_value_11 = tmp_class_creation_4__class_decl_dict;
+        tmp_key_value_11 = mod_consts[217];
+        tmp_metaclass_value_4 = DICT_GET_ITEM0(tmp_dict_arg_value_11, tmp_key_value_11);
+        if (tmp_metaclass_value_4 == NULL) {
+            tmp_metaclass_value_4 = Py_None;
         }
+        assert(!(tmp_metaclass_value_4 == NULL));
+        Py_INCREF(tmp_metaclass_value_4);
         goto condexpr_end_6;
         condexpr_false_6:;
         CHECK_OBJECT(tmp_class_creation_4__bases);
@@ -24620,9 +22816,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         condexpr_true_7:;
         CHECK_OBJECT(tmp_class_creation_4__bases);
-        tmp_expression_name_45 = tmp_class_creation_4__bases;
-        tmp_subscript_name_3 = mod_consts[39];
-        tmp_type_arg_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_45, tmp_subscript_name_3, 0);
+        tmp_expression_value_45 = tmp_class_creation_4__bases;
+        tmp_subscript_value_3 = mod_consts[35];
+        tmp_type_arg_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_45, tmp_subscript_value_3, 0);
         if (tmp_type_arg_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24633,9 +22829,9 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_12;
         }
-        tmp_metaclass_name_4 = BUILTIN_TYPE1(tmp_type_arg_6);
+        tmp_metaclass_value_4 = BUILTIN_TYPE1(tmp_type_arg_6);
         Py_DECREF(tmp_type_arg_6);
-        if (tmp_metaclass_name_4 == NULL) {
+        if (tmp_metaclass_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24647,14 +22843,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         goto condexpr_end_7;
         condexpr_false_7:;
-        tmp_metaclass_name_4 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_4);
+        tmp_metaclass_value_4 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_4);
         condexpr_end_7:;
         condexpr_end_6:;
         CHECK_OBJECT(tmp_class_creation_4__bases);
-        tmp_bases_name_4 = tmp_class_creation_4__bases;
-        tmp_assign_source_47 = SELECT_METACLASS(tmp_metaclass_name_4, tmp_bases_name_4);
-        Py_DECREF(tmp_metaclass_name_4);
+        tmp_bases_value_4 = tmp_class_creation_4__bases;
+        tmp_assign_source_47 = SELECT_METACLASS(tmp_metaclass_value_4, tmp_bases_value_4);
+        Py_DECREF(tmp_metaclass_value_4);
         if (tmp_assign_source_47 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24669,16 +22865,16 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_4__metaclass = tmp_assign_source_47;
     }
     {
-        nuitka_bool tmp_condition_result_20;
-        PyObject *tmp_key_name_12;
-        PyObject *tmp_dict_arg_name_12;
-        tmp_key_name_12 = mod_consts[231];
+        bool tmp_condition_result_20;
+        PyObject *tmp_key_value_12;
+        PyObject *tmp_dict_arg_value_12;
+        tmp_key_value_12 = mod_consts[217];
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_dict_arg_name_12 = tmp_class_creation_4__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_12, tmp_key_name_12);
+        tmp_dict_arg_value_12 = tmp_class_creation_4__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_12, tmp_key_value_12);
         assert(!(tmp_res == -1));
-        tmp_condition_result_20 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_20 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_20 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_20 != false) {
             goto branch_yes_13;
         } else {
             goto branch_no_13;
@@ -24687,7 +22883,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_13:;
     CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_4__class_decl_dict;
-    tmp_dictdel_key = mod_consts[231];
+    tmp_dictdel_key = mod_consts[217];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -24702,10 +22898,10 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_13:;
     {
         nuitka_bool tmp_condition_result_21;
-        PyObject *tmp_expression_name_46;
+        PyObject *tmp_expression_value_46;
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
-        tmp_expression_name_46 = tmp_class_creation_4__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_46, mod_consts[232]);
+        tmp_expression_value_46 = tmp_class_creation_4__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_46, mod_consts[218]);
         tmp_condition_result_21 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_21 == NUITKA_BOOL_TRUE) {
             goto branch_yes_14;
@@ -24716,15 +22912,15 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_14:;
     {
         PyObject *tmp_assign_source_48;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_47;
-        PyObject *tmp_args_name_7;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_47;
+        PyObject *tmp_args_value_7;
         PyObject *tmp_tuple_element_24;
-        PyObject *tmp_kwargs_name_7;
+        PyObject *tmp_kwargs_value_7;
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
-        tmp_expression_name_47 = tmp_class_creation_4__metaclass;
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_47, mod_consts[232]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_47 = tmp_class_creation_4__metaclass;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[218]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24734,18 +22930,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_12;
         }
-        tmp_tuple_element_24 = mod_consts[215];
-        tmp_args_name_7 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_7, 0, tmp_tuple_element_24);
+        tmp_tuple_element_24 = mod_consts[201];
+        tmp_args_value_7 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_7, 0, tmp_tuple_element_24);
         CHECK_OBJECT(tmp_class_creation_4__bases);
         tmp_tuple_element_24 = tmp_class_creation_4__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_7, 1, tmp_tuple_element_24);
+        PyTuple_SET_ITEM0(tmp_args_value_7, 1, tmp_tuple_element_24);
         CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-        tmp_kwargs_name_7 = tmp_class_creation_4__class_decl_dict;
+        tmp_kwargs_value_7 = tmp_class_creation_4__class_decl_dict;
         frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 349;
-        tmp_assign_source_48 = CALL_FUNCTION(tmp_called_name_7, tmp_args_name_7, tmp_kwargs_name_7);
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_name_7);
+        tmp_assign_source_48 = CALL_FUNCTION(tmp_called_value_7, tmp_args_value_7, tmp_kwargs_value_7);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_value_7);
         if (tmp_assign_source_48 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24760,14 +22956,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_4__prepared = tmp_assign_source_48;
     }
     {
-        nuitka_bool tmp_condition_result_22;
-        PyObject *tmp_operand_name_4;
-        PyObject *tmp_expression_name_48;
+        bool tmp_condition_result_22;
+        PyObject *tmp_operand_value_4;
+        PyObject *tmp_expression_value_48;
         CHECK_OBJECT(tmp_class_creation_4__prepared);
-        tmp_expression_name_48 = tmp_class_creation_4__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_48, mod_consts[233]);
-        tmp_operand_name_4 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_4);
+        tmp_expression_value_48 = tmp_class_creation_4__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_48, mod_consts[219]);
+        tmp_operand_value_4 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -24778,8 +22974,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_12;
         }
-        tmp_condition_result_22 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_22 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_22 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_22 != false) {
             goto branch_yes_15;
         } else {
             goto branch_no_15;
@@ -24789,18 +22985,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_raise_value_4;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_right_name_12;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_right_value_12;
         PyObject *tmp_tuple_element_25;
         PyObject *tmp_getattr_target_4;
         PyObject *tmp_getattr_attr_4;
         PyObject *tmp_getattr_default_4;
         tmp_raise_type_4 = PyExc_TypeError;
-        tmp_left_name_12 = mod_consts[234];
+        tmp_left_value_12 = mod_consts[220];
         CHECK_OBJECT(tmp_class_creation_4__metaclass);
         tmp_getattr_target_4 = tmp_class_creation_4__metaclass;
-        tmp_getattr_attr_4 = mod_consts[235];
-        tmp_getattr_default_4 = mod_consts[236];
+        tmp_getattr_attr_4 = mod_consts[221];
+        tmp_getattr_default_4 = mod_consts[222];
         tmp_tuple_element_25 = BUILTIN_GETATTR(tmp_getattr_target_4, tmp_getattr_attr_4, tmp_getattr_default_4);
         if (tmp_tuple_element_25 == NULL) {
             assert(ERROR_OCCURRED());
@@ -24812,17 +23008,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_12;
         }
-        tmp_right_name_12 = PyTuple_New(2);
+        tmp_right_value_12 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_49;
+            PyObject *tmp_expression_value_49;
             PyObject *tmp_type_arg_7;
-            PyTuple_SET_ITEM(tmp_right_name_12, 0, tmp_tuple_element_25);
+            PyTuple_SET_ITEM(tmp_right_value_12, 0, tmp_tuple_element_25);
             CHECK_OBJECT(tmp_class_creation_4__prepared);
             tmp_type_arg_7 = tmp_class_creation_4__prepared;
-            tmp_expression_name_49 = BUILTIN_TYPE1(tmp_type_arg_7);
-            assert(!(tmp_expression_name_49 == NULL));
-            tmp_tuple_element_25 = LOOKUP_ATTRIBUTE(tmp_expression_name_49, mod_consts[235]);
-            Py_DECREF(tmp_expression_name_49);
+            tmp_expression_value_49 = BUILTIN_TYPE1(tmp_type_arg_7);
+            assert(!(tmp_expression_value_49 == NULL));
+            tmp_tuple_element_25 = LOOKUP_ATTRIBUTE(tmp_expression_value_49, mod_consts[221]);
+            Py_DECREF(tmp_expression_value_49);
             if (tmp_tuple_element_25 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -24833,17 +23029,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_16;
             }
-            PyTuple_SET_ITEM(tmp_right_name_12, 1, tmp_tuple_element_25);
+            PyTuple_SET_ITEM(tmp_right_value_12, 1, tmp_tuple_element_25);
         }
         goto tuple_build_noexception_16;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_16:;
-        Py_DECREF(tmp_right_name_12);
+        Py_DECREF(tmp_right_value_12);
         goto try_except_handler_12;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_16:;
-        tmp_raise_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_12, tmp_right_name_12);
-        Py_DECREF(tmp_right_name_12);
+        tmp_raise_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_12, tmp_right_value_12);
+        Py_DECREF(tmp_right_value_12);
         if (tmp_raise_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24883,8 +23079,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[237];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[238], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[223];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[224], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -24895,8 +23091,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_14;
         }
-        tmp_dictset_value = mod_consts[281];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[222], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[267];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[208], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -24907,8 +23103,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_14;
         }
-        tmp_dictset_value = mod_consts[215];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[239], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[201];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[225], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -24946,8 +23142,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         assert(Py_REFCNT(frame_2eee4c7a3db578544197e5fab7580b1b_5) == 2); // Frame stack
 
         // Framed code:
-        tmp_dictset_value = mod_consts[282];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[169], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[268];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[159], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -24958,8 +23154,8 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
             type_description_2 = "o";
             goto frame_exception_exit_5;
         }
-        tmp_dictset_value = mod_consts[283];
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[184], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[269];
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[171], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -24973,28 +23169,28 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         {
             PyObject *tmp_defaults_17;
             PyObject *tmp_tuple_element_26;
-            tmp_tuple_element_26 = mod_consts[284];
+            tmp_tuple_element_26 = mod_consts[270];
             tmp_defaults_17 = PyTuple_New(6);
             {
-                PyObject *tmp_left_name_13;
-                PyObject *tmp_expression_name_50;
-                PyObject *tmp_right_name_13;
-                PyObject *tmp_expression_name_51;
-                PyObject *tmp_expression_name_52;
+                PyObject *tmp_left_value_13;
+                PyObject *tmp_expression_value_50;
+                PyObject *tmp_right_value_13;
+                PyObject *tmp_expression_value_51;
+                PyObject *tmp_expression_value_52;
                 PyTuple_SET_ITEM0(tmp_defaults_17, 0, tmp_tuple_element_26);
-                tmp_tuple_element_26 = mod_consts[132];
+                tmp_tuple_element_26 = mod_consts[124];
                 PyTuple_SET_ITEM0(tmp_defaults_17, 1, tmp_tuple_element_26);
-                tmp_expression_name_50 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[0]);
+                tmp_expression_value_50 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[0]);
 
-                if (tmp_expression_name_50 == NULL) {
+                if (tmp_expression_value_50 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_expression_name_50 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+                        tmp_expression_value_50 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-                        if (unlikely(tmp_expression_name_50 == NULL)) {
-                            tmp_expression_name_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+                        if (unlikely(tmp_expression_value_50 == NULL)) {
+                            tmp_expression_value_50 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
                         }
 
-                        if (tmp_expression_name_50 == NULL) {
+                        if (tmp_expression_value_50 == NULL) {
                             assert(ERROR_OCCURRED());
 
                             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25004,13 +23200,15 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                             type_description_2 = "o";
                             goto tuple_build_exception_17;
                         }
-                        Py_INCREF(tmp_expression_name_50);
+                        Py_INCREF(tmp_expression_value_50);
+                    } else {
+                        goto tuple_build_exception_17;
                     }
                 }
 
-                tmp_left_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_50, mod_consts[16]);
-                Py_DECREF(tmp_expression_name_50);
-                if (tmp_left_name_13 == NULL) {
+                tmp_left_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[14]);
+                Py_DECREF(tmp_expression_value_50);
+                if (tmp_left_value_13 == NULL) {
                     assert(ERROR_OCCURRED());
 
                     FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25020,45 +23218,47 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                     type_description_2 = "o";
                     goto tuple_build_exception_17;
                 }
-                tmp_expression_name_51 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[0]);
+                tmp_expression_value_51 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[0]);
 
-                if (tmp_expression_name_51 == NULL) {
+                if (tmp_expression_value_51 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_expression_name_51 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+                        tmp_expression_value_51 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-                        if (unlikely(tmp_expression_name_51 == NULL)) {
-                            tmp_expression_name_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+                        if (unlikely(tmp_expression_value_51 == NULL)) {
+                            tmp_expression_value_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
                         }
 
-                        if (tmp_expression_name_51 == NULL) {
+                        if (tmp_expression_value_51 == NULL) {
                             assert(ERROR_OCCURRED());
 
                             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                            Py_DECREF(tmp_left_name_13);
+                            Py_DECREF(tmp_left_value_13);
 
                             exception_lineno = 361;
                             type_description_2 = "o";
                             goto tuple_build_exception_17;
                         }
-                        Py_INCREF(tmp_expression_name_51);
+                        Py_INCREF(tmp_expression_value_51);
+                    } else {
+                        goto tuple_build_exception_17;
                     }
                 }
 
-                tmp_right_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_51, mod_consts[187]);
-                Py_DECREF(tmp_expression_name_51);
-                if (tmp_right_name_13 == NULL) {
+                tmp_right_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_51, mod_consts[174]);
+                Py_DECREF(tmp_expression_value_51);
+                if (tmp_right_value_13 == NULL) {
                     assert(ERROR_OCCURRED());
 
                     FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                    Py_DECREF(tmp_left_name_13);
+                    Py_DECREF(tmp_left_value_13);
 
                     exception_lineno = 361;
                     type_description_2 = "o";
                     goto tuple_build_exception_17;
                 }
-                tmp_tuple_element_26 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_13, tmp_right_name_13);
-                Py_DECREF(tmp_left_name_13);
-                Py_DECREF(tmp_right_name_13);
+                tmp_tuple_element_26 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_13, tmp_right_value_13);
+                Py_DECREF(tmp_left_value_13);
+                Py_DECREF(tmp_right_value_13);
                 if (tmp_tuple_element_26 == NULL) {
                     assert(ERROR_OCCURRED());
 
@@ -25070,17 +23270,17 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                     goto tuple_build_exception_17;
                 }
                 PyTuple_SET_ITEM(tmp_defaults_17, 2, tmp_tuple_element_26);
-                tmp_expression_name_52 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[0]);
+                tmp_expression_value_52 = PyObject_GetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[0]);
 
-                if (tmp_expression_name_52 == NULL) {
+                if (tmp_expression_value_52 == NULL) {
                     if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                        tmp_expression_name_52 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+                        tmp_expression_value_52 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-                        if (unlikely(tmp_expression_name_52 == NULL)) {
-                            tmp_expression_name_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+                        if (unlikely(tmp_expression_value_52 == NULL)) {
+                            tmp_expression_value_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
                         }
 
-                        if (tmp_expression_name_52 == NULL) {
+                        if (tmp_expression_value_52 == NULL) {
                             assert(ERROR_OCCURRED());
 
                             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25090,12 +23290,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
                             type_description_2 = "o";
                             goto tuple_build_exception_17;
                         }
-                        Py_INCREF(tmp_expression_name_52);
+                        Py_INCREF(tmp_expression_value_52);
+                    } else {
+                        goto tuple_build_exception_17;
                     }
                 }
 
-                tmp_tuple_element_26 = LOOKUP_ATTRIBUTE(tmp_expression_name_52, mod_consts[33]);
-                Py_DECREF(tmp_expression_name_52);
+                tmp_tuple_element_26 = LOOKUP_ATTRIBUTE(tmp_expression_value_52, mod_consts[29]);
+                Py_DECREF(tmp_expression_value_52);
                 if (tmp_tuple_element_26 == NULL) {
                     assert(ERROR_OCCURRED());
 
@@ -25140,7 +23342,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_wx$lib$dialogs$$$function__23_OnButton();
 
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[195], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[182], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -25209,13 +23411,13 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_4:;
         {
             nuitka_bool tmp_condition_result_23;
-            PyObject *tmp_compexpr_left_4;
-            PyObject *tmp_compexpr_right_4;
+            PyObject *tmp_cmp_expr_left_4;
+            PyObject *tmp_cmp_expr_right_4;
             CHECK_OBJECT(tmp_class_creation_4__bases);
-            tmp_compexpr_left_4 = tmp_class_creation_4__bases;
+            tmp_cmp_expr_left_4 = tmp_class_creation_4__bases;
             CHECK_OBJECT(tmp_class_creation_4__bases_orig);
-            tmp_compexpr_right_4 = tmp_class_creation_4__bases_orig;
-            tmp_condition_result_23 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_4, tmp_compexpr_right_4);
+            tmp_cmp_expr_right_4 = tmp_class_creation_4__bases_orig;
+            tmp_condition_result_23 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
             if (tmp_condition_result_23 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -25236,7 +23438,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         branch_yes_16:;
         CHECK_OBJECT(tmp_class_creation_4__bases_orig);
         tmp_dictset_value = tmp_class_creation_4__bases_orig;
-        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[242], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349, mod_consts[228], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -25250,25 +23452,25 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         branch_no_16:;
         {
             PyObject *tmp_assign_source_51;
-            PyObject *tmp_called_name_8;
-            PyObject *tmp_args_name_8;
+            PyObject *tmp_called_value_8;
+            PyObject *tmp_args_value_8;
             PyObject *tmp_tuple_element_27;
-            PyObject *tmp_kwargs_name_8;
+            PyObject *tmp_kwargs_value_8;
             CHECK_OBJECT(tmp_class_creation_4__metaclass);
-            tmp_called_name_8 = tmp_class_creation_4__metaclass;
-            tmp_tuple_element_27 = mod_consts[215];
-            tmp_args_name_8 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_8, 0, tmp_tuple_element_27);
+            tmp_called_value_8 = tmp_class_creation_4__metaclass;
+            tmp_tuple_element_27 = mod_consts[201];
+            tmp_args_value_8 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 0, tmp_tuple_element_27);
             CHECK_OBJECT(tmp_class_creation_4__bases);
             tmp_tuple_element_27 = tmp_class_creation_4__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_8, 1, tmp_tuple_element_27);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 1, tmp_tuple_element_27);
             tmp_tuple_element_27 = locals_wx$lib$dialogs$$$class__4_MultiMessageDialog_349;
-            PyTuple_SET_ITEM0(tmp_args_name_8, 2, tmp_tuple_element_27);
+            PyTuple_SET_ITEM0(tmp_args_value_8, 2, tmp_tuple_element_27);
             CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
-            tmp_kwargs_name_8 = tmp_class_creation_4__class_decl_dict;
+            tmp_kwargs_value_8 = tmp_class_creation_4__class_decl_dict;
             frame_bbd2b86034d70864b6354653fd63ca1e->m_frame.f_lineno = 349;
-            tmp_assign_source_51 = CALL_FUNCTION(tmp_called_name_8, tmp_args_name_8, tmp_kwargs_name_8);
-            Py_DECREF(tmp_args_name_8);
+            tmp_assign_source_51 = CALL_FUNCTION(tmp_called_value_8, tmp_args_value_8, tmp_kwargs_value_8);
+            Py_DECREF(tmp_args_value_8);
             if (tmp_assign_source_51 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -25347,7 +23549,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         exception_lineno = 349;
         goto try_except_handler_12;
         outline_result_4:;
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[215], tmp_assign_source_50);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[201], tmp_assign_source_50);
     }
     goto try_end_6;
     // Exception handler code:
@@ -25383,11 +23585,14 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
     CHECK_OBJECT(tmp_class_creation_4__bases_orig);
     Py_DECREF(tmp_class_creation_4__bases_orig);
     tmp_class_creation_4__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_4__bases);
+    CHECK_OBJECT(tmp_class_creation_4__bases);
+    Py_DECREF(tmp_class_creation_4__bases);
     tmp_class_creation_4__bases = NULL;
-    Py_XDECREF(tmp_class_creation_4__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_4__class_decl_dict);
+    Py_DECREF(tmp_class_creation_4__class_decl_dict);
     tmp_class_creation_4__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_4__metaclass);
+    CHECK_OBJECT(tmp_class_creation_4__metaclass);
+    Py_DECREF(tmp_class_creation_4__metaclass);
     tmp_class_creation_4__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_4__prepared);
     Py_DECREF(tmp_class_creation_4__prepared);
@@ -25396,18 +23601,18 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assign_source_52;
         PyObject *tmp_defaults_18;
         PyObject *tmp_tuple_element_28;
-        tmp_tuple_element_28 = mod_consts[132];
+        tmp_tuple_element_28 = mod_consts[124];
         tmp_defaults_18 = PyTuple_New(5);
         {
-            PyObject *tmp_expression_name_53;
+            PyObject *tmp_expression_value_53;
             PyTuple_SET_ITEM0(tmp_defaults_18, 0, tmp_tuple_element_28);
-            tmp_expression_name_53 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
+            tmp_expression_value_53 = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[0]);
 
-            if (unlikely(tmp_expression_name_53 == NULL)) {
-                tmp_expression_name_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+            if (unlikely(tmp_expression_value_53 == NULL)) {
+                tmp_expression_value_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
             }
 
-            if (tmp_expression_name_53 == NULL) {
+            if (tmp_expression_value_53 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25417,7 +23622,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_18;
             }
-            tmp_tuple_element_28 = LOOKUP_ATTRIBUTE(tmp_expression_name_53, mod_consts[16]);
+            tmp_tuple_element_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_53, mod_consts[14]);
             if (tmp_tuple_element_28 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -25447,7 +23652,7 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_52 = MAKE_FUNCTION_wx$lib$dialogs$$$function__24_MultiMessageBox(tmp_defaults_18);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[287], tmp_assign_source_52);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)mod_consts[273], tmp_assign_source_52);
     }
 
     // Restore frame exception if necessary.
@@ -25479,9 +23684,23 @@ PyObject *modulecode_wx$lib$dialogs(PyObject *module, struct Nuitka_MetaPathBase
 
     frame_no_exception_5:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("wx.lib.dialogs", false);
+
     return module_wx$lib$dialogs;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$dialogs, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("wx$lib$dialogs", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

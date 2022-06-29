@@ -6,7 +6,7 @@ import os
 from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph, AxesSettings
 from DataGrid import DataGrid
 from Controller import Controller
-from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_COLOURMAP, pressurePlacementLabels, DEFAULT_TEST_TIME
+from Enumerations import UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
       
 
 class GraphNotebook(wx.Notebook):
@@ -25,7 +25,7 @@ class GraphNotebook(wx.Notebook):
         
         # Create the tab panels
         self.graphTab = MainGraphPanel(self, self.frame)
-        self.dataGridTab = DataGrid(self, self.frame)
+        self.dataGridTab = DataGrid(self)
 
         # Add them to the notebook
         self.AddPage(self.graphTab, "Graphs")
@@ -35,7 +35,7 @@ class GraphNotebook(wx.Notebook):
         # self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.OnPageChanged)
         # self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGING, self.OnPageChanging)
 
-        pub.subscribe(self.addDataRow, "dataGrid.addRow")
+        #pub.subscribe(self.addDataRow, "dataGrid.addRow")
 
         
     # def OnPageChanged(self, event):
@@ -57,18 +57,17 @@ class GraphNotebook(wx.Notebook):
         Initialise dataGrid object to display raw data.
         """
 
-        numCols = len(self.frame.controller.tableHeader)
-        self.dataGridTab.makeGrid(0, numCols, self.frame.controller.tableHeader)
+        self.dataGridTab.makeGrid(self.frame.controller.tableHeader)
 
-    def addDataRow(self, row=None):
-        """
-        Given the raw data from the controller, update the data grid and the
-        channel monitor.
-        """
-        self.dataGridTab.addDataRow(row)
+    # def addDataRow(self, row=None):
+    #     """
+    #     Given the raw data from the controller, update the data grid and the
+    #     channel monitor.
+    #     """
+    #     self.dataGridTab.addDataRow(row)
 
-    def OnDestroy(self):
-        pub.unsubscribe(self.addDataRow, "dataGrid.addRow")
+    # def OnDestroy(self):
+    #     pub.unsubscribe(self.addDataRow, "dataGrid.addRow")
 
 
 
@@ -84,6 +83,7 @@ class MainGraphPanel(wx.Panel):
 
         # Create splitter widgets
         self.topSplitter = wx.SplitterWindow(self)
+        self.topSplitter.SetInitialSize(self.GetClientSize())
         self.subSplitter = wx.SplitterWindow(self.topSplitter) # Child of topSplitter
 
         # Create the graph panels
@@ -244,20 +244,15 @@ class MainGraphPanel(wx.Panel):
         self.unexposedTempGraph.refreshGraph()
         self.pressureGraph.refreshGraph()
 
-        #wx.PostEvent(self.topSplitter.GetEventHandler(), wx.PyCommandEvent(wx.EVT_SPLITTER_SASH_POS_CHANGED.typeId, self.topSplitter.GetId()))
-        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()+1)
-        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()-1)
+        wx.PostEvent(self.topSplitter.GetEventHandler(), wx.PyCommandEvent(wx.EVT_SPLITTER_SASH_POS_CHANGED.typeId, self.topSplitter.GetId()))
+#        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()+1)
+#        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()-1)
 
         #self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition(), redraw=True)
         
         #self.Layout() #This didn't work
         #self.Refresh() #Neither this
         #self.Update()
-
-        #self.FitInside()
-        #self.Fit() # Figure ths all out. Once I add this in the layout goes haywire.
-        #self.parent.Layout() # But if I do only this then the graph doesn't update
-        #self.parent.Fit()
 
         # Steps into OnSize in wx.plotcanvas
         # Where it gets a too small rectangle from self.canvas.GetClientSize()
@@ -290,8 +285,9 @@ class MainGraphPanel(wx.Panel):
         self.unexposedTempGraph.setTestTimeMinutes(testTime)
         self.pressureGraph.setTestTimeMinutes(testTime)
 
+        # This is now called in setTestTimeMinutes
         # Draw the new target curve
-        self.furnaceTempGraph.createTargetCurveArray(testTime) # Recalc the target to fill up new time
+        # self.furnaceTempGraph.createTargetCurveArray(testTime) # Recalc the target to fill up new time
 
         # Set the y-axis labels to the correct units
         self.furnaceTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.controller.testSettings.temperatureUnits+")")
@@ -327,3 +323,4 @@ class MainGraphPanel(wx.Panel):
         self.furnaceTempGraph.setTestTimeMinutes(amtMinutes)
         self.unexposedTempGraph.setTestTimeMinutes(amtMinutes)
         self.pressureGraph.setTestTimeMinutes(amtMinutes)
+

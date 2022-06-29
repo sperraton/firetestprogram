@@ -1,3 +1,4 @@
+from select import select
 import wx
 from wx.lib import plot as wxplot
 from pubsub import pub
@@ -8,14 +9,16 @@ from wx.lib.plot.plotcanvas import PlotCanvas
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_SAVE_W, GRAPH_SAVE_H, DEFAULT_TEST_TIME, LEGEND_NUM_ROWS
 from Graphing.GraphNavToolbar import CustomNavToolbar
 
-import matplotlib       # Provides the graph figures
-matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
-#matplotlib.interactive(True)
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigCanvas
-from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLocator
+# import matplotlib       # Provides the graph figures
+# matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
+# #matplotlib.interactive(True)
+# from matplotlib.figure import Figure
+# from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigCanvas
+# from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLocator
 #from matplotlib.backends.backend_wxagg import NavigationToolbar2WxAgg as NavigationToolbar
+
 import numpy as np
+SMALL = np.finfo(float).eps * 560
 import colorsys
 
 class PlotSettings():
@@ -64,7 +67,7 @@ class AxesSettings():
 
 
 """
-The base graph should only be concerned with handling the matplotlib graph.
+The base graph should only be concerned with handling the graph.
 We should be able to substitute a different graphing package easily.
 A seperate class should handle passing the test data to the graph.
 Also, make a smart legend object.
@@ -99,8 +102,6 @@ class GraphCanvas(PlotCanvas):
         #minSize = (440, 300) #self.parent.GetClientSize()
         #self.SetMinSize(minSize)
         
-
-        #self.canvas.Id = self.panelID # For keeping track in the swap
         
     ###########################################################################
     # Handlers
@@ -155,15 +156,40 @@ class GraphCanvas(PlotCanvas):
         
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.enableLegend = False
+        self.enableLegend = True
         self.fontSizeTitle = 12
         self.fontSizeLegend = 6
         self.fontSizeAxis = 8
-        #self.xSpec = "none"
-        #self.ySpec = "none"
+        self.xSpec = "auto" #"none"
+        self.ySpec = "auto" #10 #"none" # TODO adjust this to be sensible based on the ymax for the graph
         #self.enableAntiAliasing = True
         #self.enableZoom = True
         #self.enableDrag = True # Only zoom or drag enabled
+
+
+    def scaleTickMarks(self, xmax):
+        """
+        Adjusts the tick marks based on the test length.
+        Assumes that xmax is test time minutes.
+        """
+
+        # Given the test time choose an appropriate tick number
+        minX, maxX = self.xCurrentRange
+
+        # Given the scale, choose the tick resolution
+        minY, maxY = self.yCurrentRange
+
+        # TODO Maybe make it more dynamic to draw a good fit of
+        # ticks for the amount of x-axis shown
+        if xmax >= 240:
+            self.xSpec = int(maxX // 20) # Every 20 minutes
+        elif xmax <= 10:
+            self.xSpec = int(maxX // 1) 
+        elif xmax <= 90:
+            self.xSpec = int(maxX // 5)
+        else:
+            self.xSpec = int(maxX // 10)
+
 
 
     ###########################################################################
@@ -191,10 +217,11 @@ class GraphCanvas(PlotCanvas):
             maxYvalue = yData[-1] # Since we are keeping a running track of the max, let's use the last incoming.
             if maxYvalue > self.graphAxesSettings.ymax:
                 self.graphAxesSettings.ymax = maxYvalue + (GRAPH_VERT_PADDING*maxYvalue)
-                self.drawGraph() # Update the drawn plot
 
             temp = list(zip(timeData, yData))
             self.graphPlots[plotIndex].points = temp #np.append(plot.points, [(timeData[-1], yData[-1])])
+
+
         except Exception as e:
 
             print(f"{self.GetLabel()} channel {plotIndex} updateData failed.")
@@ -208,9 +235,19 @@ class GraphCanvas(PlotCanvas):
         """
         
         # Now redraw, or do the draw at a predetermined time, not just when the data for one object is done.# maybe trigger once all the lines get updated data
-        self.Draw(self.gc, 
-                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
-                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+        if False: #self.enableZoom: !!! DEBUGGING !!!
+            #self.Redraw()
+            minY, maxY = self.yCurrentRange
+            minX, maxX = self.xCurrentRange
+
+            if self.last_draw is not None:
+                self._Draw(self.gc,
+                            xAxis=(minX, maxX),
+                            yAxis=(minY, maxY))
+        else:
+            self.Draw(self.gc, 
+                 xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
+                 yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
 
 
     def clearGraph(self):
@@ -232,6 +269,7 @@ class GraphCanvas(PlotCanvas):
         Adjust the time scale of the graph.
         """
         self.graphAxesSettings.xmax = xmax
+        #self.scaleTickMarks(xmax) This is not working right now, so set the spec to auto for now
         self.drawGraph()
     
 
@@ -315,6 +353,7 @@ class BaseGraph(wx.Panel):
         self.parent = parent
         self.panelID = panelID
 
+        self.toggle = True
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.isExpanded = False # Adding this attribute to keep track of state
         self.Bind(wx.EVT_LEFT_DCLICK, self.callDblClick) # Ugly. use pubsub for this
@@ -379,9 +418,18 @@ class BaseGraph(wx.Panel):
         return  colourList
 
     def refreshGraph(self):
-        self.graphCanvas.Redraw()
+        
+        # All the plots got their new data. Time to draw to screen.
+        if self.toggle:
+            self.graphCanvas.graphAxesSettings.ymax -= SMALL #Ok just trying this out to trick a proper redraw
+            self.toggle = False
+        else:
+            self.graphCanvas.graphAxesSettings.ymax += SMALL
+            self.toggle = True
+
+        self.graphCanvas.drawGraph() # Update the drawn plot
+
 
 
     def callDblClick(self, event):
         pub.sendMessage("graphs.dblClick", panelID=self.panelID)
-        #self.parent.Parent.Parent.panelDblClick(event) # Ugly as all sin.

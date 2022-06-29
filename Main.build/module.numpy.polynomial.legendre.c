@@ -1,5 +1,5 @@
 /* Generated code for Python module 'numpy.polynomial.legendre'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_numpy$polynomial$legendre;
 PyDictObject *moduledict_numpy$polynomial$legendre;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[238];
+static PyObject *mod_consts[227];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[227];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("numpy.polynomial.legendre"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 227; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_numpy$polynomial$legendre(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "numpy.polynomial.legendre");
+    for (int i = 0; i < 227; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -95,34 +107,34 @@ static PyCodeObject *codeobj_0a193356897720960c2425fd828b4a96;
 static PyCodeObject *codeobj_4c43b3c1eb291672ea458fdf67068c61;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[214]); CHECK_OBJECT(module_filename_obj);
-    codeobj_7a5a746d4be64906789f164f3b15351b = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[215], NULL, NULL, 0, 0, 0);
-    codeobj_d5e26e44e3eae65be7b6095e5988387c = MAKE_CODEOBJECT(module_filename_obj, 1618, CO_NOFREE, mod_consts[193], mod_consts[216], NULL, 0, 0, 0);
-    codeobj_c6db6b3acf7dac3ad4c8feba0a866fc0 = MAKE_CODEOBJECT(module_filename_obj, 148, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[166], mod_consts[217], NULL, 1, 0, 0);
-    codeobj_3e91b013a58866e0448e83e31a86891e = MAKE_CODEOBJECT(module_filename_obj, 322, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[6], mod_consts[218], NULL, 2, 0, 0);
-    codeobj_ed4d14e49f3a766cd2c2c9a14d02b963 = MAKE_CODEOBJECT(module_filename_obj, 1414, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[124], mod_consts[219], NULL, 1, 0, 0);
-    codeobj_0be5e555ca425b268cfa903c84e85ca3 = MAKE_CODEOBJECT(module_filename_obj, 612, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[220], NULL, 4, 0, 0);
-    codeobj_d21ce168b8ff5ef2978f7b530b157589 = MAKE_CODEOBJECT(module_filename_obj, 532, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[174], mod_consts[218], NULL, 2, 0, 0);
-    codeobj_16476513b85a0cb8c6181278c8a54db0 = MAKE_CODEOBJECT(module_filename_obj, 1286, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[187], mod_consts[221], NULL, 6, 0, 0);
-    codeobj_c1fa91195afc164735190e76d4bfc912 = MAKE_CODEOBJECT(module_filename_obj, 267, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[173], mod_consts[222], NULL, 1, 0, 0);
-    codeobj_36e7dffa3b906910e76467d6083c5214 = MAKE_CODEOBJECT(module_filename_obj, 1519, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[189], mod_consts[223], NULL, 1, 0, 0);
-    codeobj_0e63366b91b6bfa5ea39536d2c1dca64 = MAKE_CODEOBJECT(module_filename_obj, 966, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[181], mod_consts[224], NULL, 3, 0, 0);
-    codeobj_b7e32b7e69d2cbadcadbc5f01daff07d = MAKE_CODEOBJECT(module_filename_obj, 1070, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[183], mod_consts[225], NULL, 4, 0, 0);
-    codeobj_4046f12a29503a963cfce2e87de1d922 = MAKE_CODEOBJECT(module_filename_obj, 704, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[178], mod_consts[226], NULL, 6, 0, 0);
-    codeobj_9bcd40aab1fb33c5e4f140e6d04912c8 = MAKE_CODEOBJECT(module_filename_obj, 227, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[28], mod_consts[227], NULL, 2, 0, 0);
-    codeobj_3b1f8d6deeb8d061613123576e95b9d2 = MAKE_CODEOBJECT(module_filename_obj, 464, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[29], mod_consts[228], NULL, 2, 0, 0);
-    codeobj_e73a3f60da89ce54841313562b3b693f = MAKE_CODEOBJECT(module_filename_obj, 408, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[7], mod_consts[229], NULL, 1, 0, 0);
-    codeobj_c4a7d8b65a02c219b31a930561e7ff6f = MAKE_CODEOBJECT(module_filename_obj, 581, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[176], mod_consts[230], NULL, 3, 0, 0);
-    codeobj_017a68438f53f1672db0f6b49593bb05 = MAKE_CODEOBJECT(module_filename_obj, 1458, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[188], mod_consts[231], NULL, 1, 0, 0);
-    codeobj_e1377888d27f529e079977972ce203e5 = MAKE_CODEOBJECT(module_filename_obj, 364, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[45], mod_consts[218], NULL, 2, 0, 0);
-    codeobj_01495beb891c183ed8a5cf03c0c4ab59 = MAKE_CODEOBJECT(module_filename_obj, 832, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[82], mod_consts[232], NULL, 3, 0, 0);
-    codeobj_32004e5804c7f2e402699ef6f2d6a82c = MAKE_CODEOBJECT(module_filename_obj, 917, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[180], mod_consts[224], NULL, 3, 0, 0);
-    codeobj_7f31b05f4766882347fe368ea32a4f96 = MAKE_CODEOBJECT(module_filename_obj, 1019, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[182], mod_consts[225], NULL, 4, 0, 0);
-    codeobj_038f886b0b650a18c69868f6191068c5 = MAKE_CODEOBJECT(module_filename_obj, 1126, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[107], mod_consts[233], NULL, 2, 0, 0);
-    codeobj_d80531f48351e217aabdfe546921ecb0 = MAKE_CODEOBJECT(module_filename_obj, 1179, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[184], mod_consts[234], NULL, 3, 0, 0);
-    codeobj_75e281dec0ab1eb77196907195e40afd = MAKE_CODEOBJECT(module_filename_obj, 1232, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[185], mod_consts[235], NULL, 4, 0, 0);
-    codeobj_0a193356897720960c2425fd828b4a96 = MAKE_CODEOBJECT(module_filename_obj, 1587, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[190], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_4c43b3c1eb291672ea458fdf67068c61 = MAKE_CODEOBJECT(module_filename_obj, 100, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[165], mod_consts[237], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[203]); CHECK_OBJECT(module_filename_obj);
+    codeobj_7a5a746d4be64906789f164f3b15351b = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[204], NULL, NULL, 0, 0, 0);
+    codeobj_d5e26e44e3eae65be7b6095e5988387c = MAKE_CODEOBJECT(module_filename_obj, 1618, CO_NOFREE, mod_consts[182], mod_consts[205], NULL, 0, 0, 0);
+    codeobj_c6db6b3acf7dac3ad4c8feba0a866fc0 = MAKE_CODEOBJECT(module_filename_obj, 148, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[155], mod_consts[206], NULL, 1, 0, 0);
+    codeobj_3e91b013a58866e0448e83e31a86891e = MAKE_CODEOBJECT(module_filename_obj, 322, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[6], mod_consts[207], NULL, 2, 0, 0);
+    codeobj_ed4d14e49f3a766cd2c2c9a14d02b963 = MAKE_CODEOBJECT(module_filename_obj, 1414, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[115], mod_consts[208], NULL, 1, 0, 0);
+    codeobj_0be5e555ca425b268cfa903c84e85ca3 = MAKE_CODEOBJECT(module_filename_obj, 612, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[124], mod_consts[209], NULL, 4, 0, 0);
+    codeobj_d21ce168b8ff5ef2978f7b530b157589 = MAKE_CODEOBJECT(module_filename_obj, 532, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[163], mod_consts[207], NULL, 2, 0, 0);
+    codeobj_16476513b85a0cb8c6181278c8a54db0 = MAKE_CODEOBJECT(module_filename_obj, 1286, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[176], mod_consts[210], NULL, 6, 0, 0);
+    codeobj_c1fa91195afc164735190e76d4bfc912 = MAKE_CODEOBJECT(module_filename_obj, 267, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[162], mod_consts[211], NULL, 1, 0, 0);
+    codeobj_36e7dffa3b906910e76467d6083c5214 = MAKE_CODEOBJECT(module_filename_obj, 1519, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[178], mod_consts[212], NULL, 1, 0, 0);
+    codeobj_0e63366b91b6bfa5ea39536d2c1dca64 = MAKE_CODEOBJECT(module_filename_obj, 966, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[170], mod_consts[213], NULL, 3, 0, 0);
+    codeobj_b7e32b7e69d2cbadcadbc5f01daff07d = MAKE_CODEOBJECT(module_filename_obj, 1070, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[172], mod_consts[214], NULL, 4, 0, 0);
+    codeobj_4046f12a29503a963cfce2e87de1d922 = MAKE_CODEOBJECT(module_filename_obj, 704, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[167], mod_consts[215], NULL, 6, 0, 0);
+    codeobj_9bcd40aab1fb33c5e4f140e6d04912c8 = MAKE_CODEOBJECT(module_filename_obj, 227, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[25], mod_consts[216], NULL, 2, 0, 0);
+    codeobj_3b1f8d6deeb8d061613123576e95b9d2 = MAKE_CODEOBJECT(module_filename_obj, 464, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[26], mod_consts[217], NULL, 2, 0, 0);
+    codeobj_e73a3f60da89ce54841313562b3b693f = MAKE_CODEOBJECT(module_filename_obj, 408, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[7], mod_consts[218], NULL, 1, 0, 0);
+    codeobj_c4a7d8b65a02c219b31a930561e7ff6f = MAKE_CODEOBJECT(module_filename_obj, 581, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[165], mod_consts[219], NULL, 3, 0, 0);
+    codeobj_017a68438f53f1672db0f6b49593bb05 = MAKE_CODEOBJECT(module_filename_obj, 1458, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[177], mod_consts[220], NULL, 1, 0, 0);
+    codeobj_e1377888d27f529e079977972ce203e5 = MAKE_CODEOBJECT(module_filename_obj, 364, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[39], mod_consts[207], NULL, 2, 0, 0);
+    codeobj_01495beb891c183ed8a5cf03c0c4ab59 = MAKE_CODEOBJECT(module_filename_obj, 832, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[76], mod_consts[221], NULL, 3, 0, 0);
+    codeobj_32004e5804c7f2e402699ef6f2d6a82c = MAKE_CODEOBJECT(module_filename_obj, 917, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[169], mod_consts[213], NULL, 3, 0, 0);
+    codeobj_7f31b05f4766882347fe368ea32a4f96 = MAKE_CODEOBJECT(module_filename_obj, 1019, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[171], mod_consts[214], NULL, 4, 0, 0);
+    codeobj_038f886b0b650a18c69868f6191068c5 = MAKE_CODEOBJECT(module_filename_obj, 1126, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[100], mod_consts[222], NULL, 2, 0, 0);
+    codeobj_d80531f48351e217aabdfe546921ecb0 = MAKE_CODEOBJECT(module_filename_obj, 1179, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[173], mod_consts[223], NULL, 3, 0, 0);
+    codeobj_75e281dec0ab1eb77196907195e40afd = MAKE_CODEOBJECT(module_filename_obj, 1232, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[174], mod_consts[224], NULL, 4, 0, 0);
+    codeobj_0a193356897720960c2425fd828b4a96 = MAKE_CODEOBJECT(module_filename_obj, 1587, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[179], mod_consts[225], NULL, 1, 0, 0);
+    codeobj_4c43b3c1eb291672ea458fdf67068c61 = MAKE_CODEOBJECT(module_filename_obj, 100, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[154], mod_consts[226], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
@@ -280,7 +292,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -300,11 +312,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
         }
         CHECK_OBJECT(par_pol);
         tmp_list_element_1 = par_pol;
-        tmp_args_element_name_1 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         frame_4c43b3c1eb291672ea458fdf67068c61->m_frame.f_lineno = 140;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -404,7 +416,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -438,7 +451,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_3;
@@ -446,26 +460,25 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
         tmp_assign_source_3 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_pol;
+            assert(old != NULL);
             par_pol = tmp_assign_source_3;
             Py_INCREF(par_pol);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_1);
     tmp_tuple_unpack_1__element_1 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(par_pol);
         tmp_len_arg_1 = par_pol;
-        tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -475,9 +488,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[3];
-        tmp_assign_source_4 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = mod_consts[3];
+        tmp_assign_source_4 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         assert(!(tmp_assign_source_4 == NULL));
         assert(var_deg == NULL);
         var_deg = tmp_assign_source_4;
@@ -567,20 +580,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -590,13 +603,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[7]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[7]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -618,10 +631,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
             goto try_except_handler_4;
         }
 
-        tmp_args_element_name_3 = var_res;
+        tmp_args_element_value_3 = var_res;
         frame_4c43b3c1eb291672ea458fdf67068c61->m_frame.f_lineno = 144;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -631,27 +644,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        if (par_pol == NULL) {
-            Py_DECREF(tmp_args_element_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[9]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 144;
-            type_description_1 = "oooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_expression_name_1 = par_pol;
+        CHECK_OBJECT(par_pol);
+        tmp_expression_value_1 = par_pol;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_1 = var_i;
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_subscript_value_1 = var_i;
+        tmp_args_element_value_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 144;
             type_description_1 = "oooo";
@@ -659,12 +661,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
         }
         frame_4c43b3c1eb291672ea458fdf67068c61->m_frame.f_lineno = 144;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_4};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_4};
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_4);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -708,7 +710,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -721,7 +724,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
     try_end_3:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     if (var_res == NULL) {
 
@@ -805,7 +809,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__1_poly2leg(struct Nu
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_pol);
+    CHECK_OBJECT(par_pol);
+    Py_DECREF(par_pol);
     par_pol = NULL;
     CHECK_OBJECT(var_deg);
     Py_DECREF(var_deg);
@@ -946,18 +951,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[11];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$polynomial$legendre;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[12];
-        tmp_level_name_1 = mod_consts[3];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[10];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_numpy$polynomial$legendre;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[11];
+        tmp_level_value_1 = mod_consts[3];
         frame_c6db6b3acf7dac3ad4c8feba0a866fc0->m_frame.f_lineno = 193;
-        tmp_assign_source_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -981,11 +986,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             tmp_assign_source_2 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_numpy$polynomial$legendre,
-                mod_consts[13],
+                mod_consts[12],
                 mod_consts[4]
             );
         } else {
-            tmp_assign_source_2 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[13]);
+            tmp_assign_source_2 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[12]);
         }
 
         if (tmp_assign_source_2 == NULL) {
@@ -1010,11 +1015,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             tmp_assign_source_3 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_numpy$polynomial$legendre,
-                mod_consts[14],
+                mod_consts[13],
                 mod_consts[4]
             );
         } else {
-            tmp_assign_source_3 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[14]);
+            tmp_assign_source_3 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[13]);
         }
 
         if (tmp_assign_source_3 == NULL) {
@@ -1039,11 +1044,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             tmp_assign_source_4 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_numpy$polynomial$legendre,
-                mod_consts[15],
+                mod_consts[14],
                 mod_consts[4]
             );
         } else {
-            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[15]);
+            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[14]);
         }
 
         if (tmp_assign_source_4 == NULL) {
@@ -1091,7 +1096,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         PyObject *tmp_assign_source_5;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -1111,11 +1116,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         }
         CHECK_OBJECT(par_c);
         tmp_list_element_1 = par_c;
-        tmp_args_element_name_1 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         frame_c6db6b3acf7dac3ad4c8feba0a866fc0->m_frame.f_lineno = 195;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1215,7 +1220,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_2;
@@ -1249,7 +1255,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     goto frame_exception_exit_1;
     // End of try:
     try_end_3:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_7;
@@ -1257,17 +1264,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         tmp_assign_source_7 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_7;
             Py_INCREF(par_c);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_1);
     tmp_tuple_unpack_1__element_1 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_len_arg_1;
@@ -1289,16 +1295,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_n);
-        tmp_compexpr_left_1 = var_n;
-        tmp_compexpr_right_1 = mod_consts[16];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        assert(!(tmp_tmp_condition_result_1_object_1 == NULL));
-        tmp_condition_result_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
+        tmp_cmp_expr_left_1 = var_n;
+        tmp_cmp_expr_right_1 = mod_consts[15];
+        tmp_condition_result_1 = RICH_COMPARE_LT_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -1306,18 +1308,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         }
     }
     branch_yes_1:;
-    if (par_c == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 198;
-        type_description_1 = "ooooooooo";
-        goto frame_exception_exit_1;
-    }
-
+    CHECK_OBJECT(par_c);
     tmp_return_value = par_c;
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
@@ -1325,23 +1316,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     branch_no_1:;
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 200;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_1 = par_c;
-        tmp_subscript_name_1 = mod_consts[18];
-        tmp_assign_source_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, -2);
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_1 = par_c;
+        tmp_subscript_value_1 = mod_consts[16];
+        tmp_assign_source_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, -2);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1357,23 +1337,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 201;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_c;
-        tmp_subscript_name_2 = mod_consts[5];
-        tmp_assign_source_10 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_2, -1);
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_2 = par_c;
+        tmp_subscript_value_2 = mod_consts[5];
+        tmp_assign_source_10 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_2, -1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1391,14 +1360,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         PyObject *tmp_assign_source_11;
         PyObject *tmp_iter_arg_2;
         PyObject *tmp_xrange_low_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_xrange_high_1;
         PyObject *tmp_xrange_step_1;
         CHECK_OBJECT(var_n);
-        tmp_left_name_1 = var_n;
-        tmp_right_name_1 = mod_consts[3];
-        tmp_xrange_low_1 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = var_n;
+        tmp_right_value_1 = mod_consts[3];
+        tmp_xrange_low_1 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_1);
         assert(!(tmp_xrange_low_1 == NULL));
         tmp_xrange_high_1 = mod_consts[3];
         tmp_xrange_step_1 = mod_consts[5];
@@ -1473,7 +1442,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         PyObject *tmp_assign_source_14;
         if (var_c0 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1494,22 +1463,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     }
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_right_name_5;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_right_value_5;
         if (var_polysub == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1519,25 +1488,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto try_except_handler_5;
         }
 
-        tmp_called_name_1 = var_polysub;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 205;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_expression_name_3 = par_c;
+        tmp_called_value_1 = var_polysub;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_3 = par_c;
         CHECK_OBJECT(var_i);
-        tmp_left_name_2 = var_i;
-        tmp_right_name_2 = mod_consts[20];
-        tmp_subscript_name_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_2, tmp_right_name_2);
-        if (tmp_subscript_name_3 == NULL) {
+        tmp_left_value_2 = var_i;
+        tmp_right_value_2 = mod_consts[18];
+        tmp_subscript_value_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_2, tmp_right_value_2);
+        if (tmp_subscript_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1547,9 +1505,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             type_description_1 = "ooooooooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_3);
-        Py_DECREF(tmp_subscript_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_3);
+        Py_DECREF(tmp_subscript_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1560,8 +1518,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto try_except_handler_5;
         }
         if (var_c1 == NULL) {
-            Py_DECREF(tmp_args_element_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            Py_DECREF(tmp_args_element_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1571,65 +1529,42 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto try_except_handler_5;
         }
 
-        tmp_left_name_4 = var_c1;
-        if (var_i == NULL) {
-            Py_DECREF(tmp_args_element_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 205;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_left_name_5 = var_i;
-        tmp_right_name_4 = mod_consts[3];
-        tmp_right_name_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_5, tmp_right_name_4);
-        if (tmp_right_name_3 == NULL) {
+        tmp_left_value_4 = var_c1;
+        CHECK_OBJECT(var_i);
+        tmp_left_value_5 = var_i;
+        tmp_right_value_4 = mod_consts[3];
+        tmp_right_value_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_5, tmp_right_value_4);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 205;
             type_description_1 = "ooooooooo";
             goto try_except_handler_5;
         }
-        tmp_left_name_3 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_3 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 205;
             type_description_1 = "ooooooooo";
             goto try_except_handler_5;
         }
-        if (var_i == NULL) {
-            Py_DECREF(tmp_args_element_name_2);
-            Py_DECREF(tmp_left_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 205;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_right_name_5 = var_i;
-        tmp_args_element_name_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_3);
-        if (tmp_args_element_name_3 == NULL) {
+        CHECK_OBJECT(var_i);
+        tmp_right_value_5 = var_i;
+        tmp_args_element_value_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_3);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 205;
             type_description_1 = "ooooooooo";
@@ -1637,12 +1572,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         }
         frame_c6db6b3acf7dac3ad4c8feba0a866fc0->m_frame.f_lineno = 205;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_15 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_15 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_3);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1662,22 +1597,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     }
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_right_name_9;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_right_value_9;
         if (var_polyadd == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1687,12 +1622,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto try_except_handler_5;
         }
 
-        tmp_called_name_2 = var_polyadd;
+        tmp_called_value_2 = var_polyadd;
         CHECK_OBJECT(var_tmp);
-        tmp_args_element_name_4 = var_tmp;
+        tmp_args_element_value_4 = var_tmp;
         if (var_polymulx == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[15]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1702,10 +1637,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto try_except_handler_5;
         }
 
-        tmp_called_name_3 = var_polymulx;
+        tmp_called_value_3 = var_polymulx;
         if (var_c1 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1715,10 +1650,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_6 = var_c1;
+        tmp_args_element_value_6 = var_c1;
         frame_c6db6b3acf7dac3ad4c8feba0a866fc0->m_frame.f_lineno = 206;
-        tmp_left_name_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_6);
-        if (tmp_left_name_7 == NULL) {
+        tmp_left_value_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_6);
+        if (tmp_left_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1728,48 +1663,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             type_description_1 = "ooooooooo";
             goto try_except_handler_5;
         }
-        tmp_left_name_9 = mod_consts[20];
-        if (var_i == NULL) {
-            Py_DECREF(tmp_left_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 206;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_right_name_7 = var_i;
-        tmp_left_name_8 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_9, tmp_right_name_7);
-        if (tmp_left_name_8 == NULL) {
+        tmp_left_value_9 = mod_consts[18];
+        CHECK_OBJECT(var_i);
+        tmp_right_value_7 = var_i;
+        tmp_left_value_8 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_9, tmp_right_value_7);
+        if (tmp_left_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_7);
+            Py_DECREF(tmp_left_value_7);
 
             exception_lineno = 206;
             type_description_1 = "ooooooooo";
             goto try_except_handler_5;
         }
-        tmp_right_name_8 = mod_consts[3];
-        tmp_right_name_6 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_8, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_8);
-        if (tmp_right_name_6 == NULL) {
+        tmp_right_value_8 = mod_consts[3];
+        tmp_right_value_6 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_8, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_8);
+        if (tmp_right_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_7);
+            Py_DECREF(tmp_left_value_7);
 
             exception_lineno = 206;
             type_description_1 = "ooooooooo";
             goto try_except_handler_5;
         }
-        tmp_left_name_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_7);
-        Py_DECREF(tmp_right_name_6);
-        if (tmp_left_name_6 == NULL) {
+        tmp_left_value_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_7);
+        Py_DECREF(tmp_right_value_6);
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1779,22 +1703,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             type_description_1 = "ooooooooo";
             goto try_except_handler_5;
         }
-        if (var_i == NULL) {
-            Py_DECREF(tmp_left_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 206;
-            type_description_1 = "ooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_right_name_9 = var_i;
-        tmp_args_element_name_5 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_6, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_6);
-        if (tmp_args_element_name_5 == NULL) {
+        CHECK_OBJECT(var_i);
+        tmp_right_value_9 = var_i;
+        tmp_args_element_value_5 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_6, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_6);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1806,11 +1719,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         }
         frame_c6db6b3acf7dac3ad4c8feba0a866fc0->m_frame.f_lineno = 206;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_16 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_16 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1854,7 +1767,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_4;
@@ -1867,17 +1781,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     try_end_4:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_9;
         if (var_polyadd == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1887,8 +1802,34 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto frame_exception_exit_1;
         }
 
-        tmp_called_name_4 = var_polyadd;
+        tmp_called_value_4 = var_polyadd;
         if (var_c0 == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 207;
+            type_description_1 = "ooooooooo";
+            goto frame_exception_exit_1;
+        }
+
+        tmp_args_element_value_7 = var_c0;
+        if (var_polymulx == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[14]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 207;
+            type_description_1 = "ooooooooo";
+            goto frame_exception_exit_1;
+        }
+
+        tmp_called_value_5 = var_polymulx;
+        if (var_c1 == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
@@ -1900,36 +1841,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_7 = var_c0;
-        if (var_polymulx == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[15]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 207;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_name_5 = var_polymulx;
-        if (var_c1 == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 207;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_9 = var_c1;
+        tmp_args_element_value_9 = var_c1;
         frame_c6db6b3acf7dac3ad4c8feba0a866fc0->m_frame.f_lineno = 207;
-        tmp_args_element_name_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_9);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_args_element_value_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_9);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1941,11 +1856,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
         }
         frame_c6db6b3acf7dac3ad4c8feba0a866fc0->m_frame.f_lineno = 207;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_8);
+        Py_DECREF(tmp_args_element_value_8);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2031,7 +1946,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__2_leg2poly(struct Nu
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_c);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
     par_c = NULL;
     Py_XDECREF(var_polyadd);
     var_polyadd = NULL;
@@ -2127,13 +2043,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
     static struct Nuitka_FrameObject *cache_frame_9bcd40aab1fb33c5e4f140e6d04912c8 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_9bcd40aab1fb33c5e4f140e6d04912c8)) {
         Py_XDECREF(cache_frame_9bcd40aab1fb33c5e4f140e6d04912c8);
 
@@ -2163,15 +2074,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_scl);
-        tmp_compexpr_left_1 = par_scl;
-        tmp_compexpr_right_1 = mod_consts[4];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = par_scl;
+        tmp_cmp_expr_right_1 = mod_consts[4];
+        tmp_condition_result_1 = RICH_COMPARE_NE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2181,34 +2090,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 261;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -2223,14 +2120,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
         }
         CHECK_OBJECT(par_off);
         tmp_list_element_1 = par_off;
-        tmp_args_element_name_1 = PyList_New(2);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(2);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         CHECK_OBJECT(par_scl);
         tmp_list_element_1 = par_scl;
-        PyList_SET_ITEM0(tmp_args_element_name_1, 1, tmp_list_element_1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 1, tmp_list_element_1);
         frame_9bcd40aab1fb33c5e4f140e6d04912c8->m_frame.f_lineno = 262;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[25], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[22], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2247,12 +2144,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
     branch_no_1:;
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -2267,11 +2164,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
         }
         CHECK_OBJECT(par_off);
         tmp_list_element_2 = par_off;
-        tmp_args_element_name_2 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_args_element_name_2, 0, tmp_list_element_2);
+        tmp_args_element_value_2 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_args_element_value_2, 0, tmp_list_element_2);
         frame_9bcd40aab1fb33c5e4f140e6d04912c8->m_frame.f_lineno = 264;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[25], tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[22], tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2303,7 +2200,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -2343,54 +2240,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__3_legline(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_off);
-    par_off = NULL;
-    Py_XDECREF(par_scl);
-    par_scl = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_off);
-    par_off = NULL;
-    Py_XDECREF(par_scl);
-    par_scl = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_off);
+    Py_DECREF(par_off);
+    CHECK_OBJECT(par_scl);
+    Py_DECREF(par_scl);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_off);
+    Py_DECREF(par_off);
+    CHECK_OBJECT(par_scl);
+    Py_DECREF(par_scl);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2416,13 +2287,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__4_legfromroots(struc
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_c1fa91195afc164735190e76d4bfc912 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_c1fa91195afc164735190e76d4bfc912)) {
         Py_XDECREF(cache_frame_c1fa91195afc164735190e76d4bfc912);
 
@@ -2451,18 +2317,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__4_legfromroots(struc
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2472,8 +2338,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__4_legfromroots(struc
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[27]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[24]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2483,47 +2349,47 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__4_legfromroots(struc
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[28]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[25]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 319;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[29]);
+        tmp_args_element_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[26]);
 
-        if (unlikely(tmp_args_element_name_2 == NULL)) {
-            tmp_args_element_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+        if (unlikely(tmp_args_element_value_2 == NULL)) {
+            tmp_args_element_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
         }
 
-        if (tmp_args_element_name_2 == NULL) {
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 319;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_roots);
-        tmp_args_element_name_3 = par_roots;
+        tmp_args_element_value_3 = par_roots;
         frame_c1fa91195afc164735190e76d4bfc912->m_frame.f_lineno = 319;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2554,7 +2420,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__4_legfromroots(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -2593,50 +2459,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__4_legfromroots(struc
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_roots);
-    par_roots = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_roots);
-    par_roots = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_roots);
+    Py_DECREF(par_roots);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_roots);
+    Py_DECREF(par_roots);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2663,13 +2503,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__5_legadd(struct Nuit
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_3e91b013a58866e0448e83e31a86891e = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_3e91b013a58866e0448e83e31a86891e)) {
         Py_XDECREF(cache_frame_3e91b013a58866e0448e83e31a86891e);
 
@@ -2699,8 +2534,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__5_legadd(struct Nuit
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -2718,15 +2553,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__5_legadd(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c1);
-        tmp_args_element_name_1 = par_c1;
+        tmp_args_element_value_1 = par_c1;
         CHECK_OBJECT(par_c2);
-        tmp_args_element_name_2 = par_c2;
+        tmp_args_element_value_2 = par_c2;
         frame_3e91b013a58866e0448e83e31a86891e->m_frame.f_lineno = 361;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_return_value = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[31],
+                mod_consts[28],
                 call_args
             );
         }
@@ -2761,7 +2596,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__5_legadd(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -2801,54 +2636,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__5_legadd(struct Nuit
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_c1);
-    par_c1 = NULL;
-    Py_XDECREF(par_c2);
-    par_c2 = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_c1);
-    par_c1 = NULL;
-    Py_XDECREF(par_c2);
-    par_c2 = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_c1);
+    Py_DECREF(par_c1);
+    CHECK_OBJECT(par_c2);
+    Py_DECREF(par_c2);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_c1);
+    Py_DECREF(par_c1);
+    CHECK_OBJECT(par_c2);
+    Py_DECREF(par_c2);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2875,13 +2684,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__6_legsub(struct Nuit
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_e1377888d27f529e079977972ce203e5 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_e1377888d27f529e079977972ce203e5)) {
         Py_XDECREF(cache_frame_e1377888d27f529e079977972ce203e5);
 
@@ -2911,8 +2715,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__6_legsub(struct Nuit
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -2930,15 +2734,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__6_legsub(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c1);
-        tmp_args_element_name_1 = par_c1;
+        tmp_args_element_value_1 = par_c1;
         CHECK_OBJECT(par_c2);
-        tmp_args_element_name_2 = par_c2;
+        tmp_args_element_value_2 = par_c2;
         frame_e1377888d27f529e079977972ce203e5->m_frame.f_lineno = 405;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_return_value = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[33],
+                mod_consts[30],
                 call_args
             );
         }
@@ -2973,7 +2777,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__6_legsub(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -3013,54 +2817,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__6_legsub(struct Nuit
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_c1);
-    par_c1 = NULL;
-    Py_XDECREF(par_c2);
-    par_c2 = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_c1);
-    par_c1 = NULL;
-    Py_XDECREF(par_c2);
-    par_c2 = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_c1);
+    Py_DECREF(par_c1);
+    CHECK_OBJECT(par_c2);
+    Py_DECREF(par_c2);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_c1);
+    Py_DECREF(par_c1);
+    CHECK_OBJECT(par_c2);
+    Py_DECREF(par_c2);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3106,7 +2884,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
     PyObject *tmp_return_value = NULL;
-    int tmp_res;
     bool tmp_result;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
@@ -3156,7 +2933,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -3176,11 +2953,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         }
         CHECK_OBJECT(par_c);
         tmp_list_element_1 = par_c;
-        tmp_args_element_name_1 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         frame_e73a3f60da89ce54841313562b3b693f->m_frame.f_lineno = 447;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3280,7 +3057,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -3314,7 +3092,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_3;
@@ -3322,37 +3101,32 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         tmp_assign_source_3 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_3;
             Py_INCREF(par_c);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_1);
     tmp_tuple_unpack_1__element_1 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
     {
         nuitka_bool tmp_condition_result_1;
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_and_left_value_1_object_1;
-        int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_tmp_and_right_value_1_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_c);
         tmp_len_arg_1 = par_c;
-        tmp_compexpr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3362,14 +3136,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[3];
-        tmp_tmp_and_left_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        assert(!(tmp_tmp_and_left_value_1_object_1 == NULL));
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_and_left_value_1_object_1);
-        assert(!(tmp_truth_name_1 == -1));
-        tmp_and_left_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_1_object_1);
+        tmp_cmp_expr_right_1 = mod_consts[3];
+        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        assert(!(tmp_and_left_value_1 == NUITKA_BOOL_EXCEPTION));
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == 1) {
             goto and_right_1;
@@ -3377,22 +3147,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             goto and_left_1;
         }
         and_right_1:;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 449;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_1 = par_c;
-        tmp_subscript_name_1 = mod_consts[4];
-        tmp_compexpr_left_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
-        if (tmp_compexpr_left_2 == NULL) {
+        assert(tmp_and_left_value_1 != NUITKA_BOOL_UNASSIGNED);
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_1 = par_c;
+        tmp_subscript_value_1 = mod_consts[4];
+        tmp_cmp_expr_left_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3402,10 +3162,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[4];
-        tmp_tmp_and_right_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        if (tmp_tmp_and_right_value_1_object_1 == NULL) {
+        tmp_cmp_expr_right_2 = mod_consts[4];
+        tmp_and_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        if (tmp_and_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3415,19 +3175,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_and_right_value_1_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_and_right_value_1_object_1);
-
-            exception_lineno = 449;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_and_right_value_1 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_right_value_1_object_1);
         tmp_condition_result_1 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
@@ -3438,44 +3185,31 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
-    if (par_c == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 450;
-        type_description_1 = "oooooo";
-        goto frame_exception_exit_1;
-    }
-
+    CHECK_OBJECT(par_c);
     tmp_return_value = par_c;
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
     branch_no_1:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_tuple_element_1;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_3;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_expression_value_3;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3485,8 +3219,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[35]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[32]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3496,72 +3230,47 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 452;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c);
         tmp_len_arg_2 = par_c;
-        tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 452;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[3];
-        tmp_tuple_element_1 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        assert(!(tmp_tuple_element_1 == NULL));
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[36];
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 452;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_c;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[36]);
-        if (tmp_dict_value_1 == NULL) {
+        tmp_right_value_1 = mod_consts[3];
+        tmp_kw_call_arg_value_0_1 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        assert(!(tmp_kw_call_arg_value_0_1 == NULL));
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_3 = par_c;
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[33]);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
 
             exception_lineno = 452;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
         frame_e73a3f60da89ce54841313562b3b693f->m_frame.f_lineno = 452;
-        tmp_assign_source_4 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[34]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_kw_call_arg_value_0_1);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3577,29 +3286,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
         int tmp_ass_subscript_res_1;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 453;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_c;
-        tmp_subscript_name_2 = mod_consts[4];
-        tmp_left_name_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_2, 0);
-        if (tmp_left_name_2 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_4 = par_c;
+        tmp_subscript_value_2 = mod_consts[4];
+        tmp_left_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_2, 0);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3609,9 +3307,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = mod_consts[4];
-        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
+        tmp_right_value_2 = mod_consts[4];
+        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3640,26 +3338,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_3;
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
         int tmp_ass_subscript_res_2;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 454;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = par_c;
-        tmp_subscript_name_3 = mod_consts[4];
-        tmp_ass_subvalue_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_3, 0);
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_5 = par_c;
+        tmp_subscript_value_3 = mod_consts[4];
+        tmp_ass_subvalue_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_3, 0);
         if (tmp_ass_subvalue_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3670,18 +3357,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (var_prd == NULL) {
-            Py_DECREF(tmp_ass_subvalue_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 454;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_prd);
         tmp_ass_subscribed_2 = var_prd;
         tmp_ass_subscript_2 = mod_consts[3];
         tmp_ass_subscript_res_2 = SET_SUBSCRIPT_CONST(tmp_ass_subscribed_2, tmp_ass_subscript_2, 1, tmp_ass_subvalue_2);
@@ -3704,18 +3380,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         PyObject *tmp_xrange_high_1;
         PyObject *tmp_len_arg_3;
         tmp_xrange_low_1 = mod_consts[3];
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 455;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c);
         tmp_len_arg_3 = par_c;
         tmp_xrange_high_1 = BUILTIN_LEN(tmp_len_arg_3);
         if (tmp_xrange_high_1 == NULL) {
@@ -3797,12 +3462,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         CHECK_OBJECT(var_i);
-        tmp_left_name_3 = var_i;
-        tmp_right_name_3 = mod_consts[3];
-        tmp_assign_source_8 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
+        tmp_left_value_3 = var_i;
+        tmp_right_value_3 = mod_consts[3];
+        tmp_assign_source_8 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3822,23 +3487,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 457;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_left_name_4 = var_i;
-        tmp_right_name_4 = mod_consts[3];
-        tmp_assign_source_9 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_4, tmp_right_name_4);
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        CHECK_OBJECT(var_i);
+        tmp_left_value_4 = var_i;
+        tmp_right_value_4 = mod_consts[3];
+        tmp_assign_source_9 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_4, tmp_right_value_4);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3858,24 +3512,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 458;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_left_name_5 = var_i;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
+        CHECK_OBJECT(var_i);
+        tmp_left_value_5 = var_i;
         CHECK_OBJECT(var_j);
-        tmp_right_name_5 = var_j;
-        tmp_assign_source_10 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_5);
+        tmp_right_value_5 = var_j;
+        tmp_assign_source_10 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_5);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3895,42 +3538,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_right_name_7;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_right_value_7;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 459;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_expression_name_6 = par_c;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 459;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_subscript_name_4 = var_i;
-        tmp_left_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_4);
-        if (tmp_left_name_7 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_6 = par_c;
+        CHECK_OBJECT(var_i);
+        tmp_subscript_value_4 = var_i;
+        tmp_left_value_7 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_4);
+        if (tmp_left_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3940,22 +3561,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        if (var_j == NULL) {
-            Py_DECREF(tmp_left_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 459;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_right_name_6 = var_j;
-        tmp_left_name_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_7);
-        if (tmp_left_name_6 == NULL) {
+        CHECK_OBJECT(var_j);
+        tmp_right_value_6 = var_j;
+        tmp_left_value_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_7);
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3966,9 +3576,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_s);
-        tmp_right_name_7 = var_s;
-        tmp_ass_subvalue_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_6, tmp_right_name_7);
-        Py_DECREF(tmp_left_name_6);
+        tmp_right_value_7 = var_s;
+        tmp_ass_subvalue_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_6, tmp_right_value_7);
+        Py_DECREF(tmp_left_value_6);
         if (tmp_ass_subvalue_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3981,7 +3591,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         }
         if (var_prd == NULL) {
             Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[35]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3992,18 +3602,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         }
 
         tmp_ass_subscribed_3 = var_prd;
-        if (var_j == NULL) {
-            Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 459;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
+        CHECK_OBJECT(var_j);
         tmp_ass_subscript_3 = var_j;
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_3, tmp_ass_subscript_3, tmp_ass_subvalue_3);
         Py_DECREF(tmp_ass_subvalue_3);
@@ -4022,7 +3621,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
         PyObject *tmp_assign_source_11;
         if (var_prd == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[35]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4056,13 +3655,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_subscript_name_5;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_5;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_7 = tmp_inplace_assign_subscr_1__target;
+        tmp_expression_value_7 = tmp_inplace_assign_subscr_1__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_5 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_13 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_5);
+        tmp_subscript_value_5 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_assign_source_13 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_5);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4082,44 +3681,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_6;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_right_name_10;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_subscript_value_6;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_right_value_10;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_8 = tmp_inplace_assign_subscr_1__value;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 460;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_expression_name_8 = par_c;
-        if (var_i == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 460;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_subscript_name_6 = var_i;
-        tmp_left_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_6);
-        if (tmp_left_name_10 == NULL) {
+        tmp_left_value_8 = tmp_inplace_assign_subscr_1__value;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_8 = par_c;
+        CHECK_OBJECT(var_i);
+        tmp_subscript_value_6 = var_i;
+        tmp_left_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_6);
+        if (tmp_left_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4129,22 +3706,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        if (var_i == NULL) {
-            Py_DECREF(tmp_left_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 460;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_right_name_9 = var_i;
-        tmp_left_name_9 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_10);
-        if (tmp_left_name_9 == NULL) {
+        CHECK_OBJECT(var_i);
+        tmp_right_value_9 = var_i;
+        tmp_left_value_9 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_10);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4154,22 +3720,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        if (var_s == NULL) {
-            Py_DECREF(tmp_left_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 460;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_right_name_10 = var_s;
-        tmp_right_name_8 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_10);
-        Py_DECREF(tmp_left_name_9);
-        if (tmp_right_name_8 == NULL) {
+        CHECK_OBJECT(var_s);
+        tmp_right_value_10 = var_s;
+        tmp_right_value_8 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_10);
+        Py_DECREF(tmp_left_value_9);
+        if (tmp_right_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4179,8 +3734,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_8, tmp_right_name_8);
-        Py_DECREF(tmp_right_name_8);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_8, tmp_right_value_8);
+        Py_DECREF(tmp_right_value_8);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4191,7 +3746,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        tmp_assign_source_14 = tmp_left_name_8;
+        tmp_assign_source_14 = tmp_left_value_8;
         tmp_inplace_assign_subscr_1__value = tmp_assign_source_14;
 
     }
@@ -4281,7 +3836,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_4;
@@ -4294,11 +3850,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     try_end_4:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     if (var_prd == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[37]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[35]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -4380,7 +3937,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__7_legmulx(struct Nui
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_c);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
     par_c = NULL;
     Py_XDECREF(var_prd);
     var_prd = NULL;
@@ -4526,7 +4084,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -4546,14 +4104,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         CHECK_OBJECT(par_c1);
         tmp_list_element_1 = par_c1;
-        tmp_args_element_name_1 = PyList_New(2);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(2);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         CHECK_OBJECT(par_c2);
         tmp_list_element_1 = par_c2;
-        PyList_SET_ITEM0(tmp_args_element_name_1, 1, tmp_list_element_1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 1, tmp_list_element_1);
         frame_3b1f8d6deeb8d061613123576e95b9d2->m_frame.f_lineno = 505;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4656,7 +4214,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[41];
+            exception_value = mod_consts[37];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -4677,7 +4235,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -4713,7 +4272,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_4;
@@ -4721,9 +4281,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         tmp_assign_source_4 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_c1;
+            assert(old != NULL);
             par_c1 = tmp_assign_source_4;
             Py_INCREF(par_c1);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -4736,30 +4297,26 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         tmp_assign_source_5 = tmp_tuple_unpack_1__element_2;
         {
             PyObject *old = par_c2;
+            assert(old != NULL);
             par_c2 = tmp_assign_source_5;
             Py_INCREF(par_c2);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_2);
     tmp_tuple_unpack_1__element_2 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_1_object_1;
         CHECK_OBJECT(par_c1);
         tmp_len_arg_1 = par_c1;
-        tmp_compexpr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4771,23 +4328,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         CHECK_OBJECT(par_c2);
         tmp_len_arg_2 = par_c2;
-        tmp_compexpr_right_1 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_1);
+            Py_DECREF(tmp_cmp_expr_left_1);
 
             exception_lineno = 507;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
-        assert(!(tmp_tmp_condition_result_1_object_1 == NULL));
-        tmp_condition_result_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
+        tmp_condition_result_1 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -4797,18 +4351,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_6;
-        if (par_c2 == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[42]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 508;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c2);
         tmp_assign_source_6 = par_c2;
         assert(var_c == NULL);
         Py_INCREF(tmp_assign_source_6);
@@ -4816,18 +4359,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_7;
-        if (par_c1 == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 509;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c1);
         tmp_assign_source_7 = par_c1;
         assert(var_xs == NULL);
         Py_INCREF(tmp_assign_source_7);
@@ -4837,18 +4369,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     branch_no_1:;
     {
         PyObject *tmp_assign_source_8;
-        if (par_c1 == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 511;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c1);
         tmp_assign_source_8 = par_c1;
         assert(var_c == NULL);
         Py_INCREF(tmp_assign_source_8);
@@ -4856,18 +4377,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_9;
-        if (par_c2 == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[42]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 512;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c2);
         tmp_assign_source_9 = par_c2;
         assert(var_xs == NULL);
         Py_INCREF(tmp_assign_source_9);
@@ -4876,14 +4386,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     branch_end_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_3;
-        PyObject *tmp_tmp_condition_result_2_object_1;
         CHECK_OBJECT(var_c);
         tmp_len_arg_3 = var_c;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_3);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_3);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4893,12 +4402,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[3];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_2_object_1 == NULL));
-        tmp_condition_result_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[3];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -4908,26 +4414,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_right_name_1;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 515;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_1 = var_c;
-        tmp_subscript_name_1 = mod_consts[4];
-        tmp_left_name_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
-        if (tmp_left_name_1 == NULL) {
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_right_value_1;
+        CHECK_OBJECT(var_c);
+        tmp_expression_value_1 = var_c;
+        tmp_subscript_value_1 = mod_consts[4];
+        tmp_left_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4938,9 +4433,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xs);
-        tmp_right_name_1 = var_xs;
-        tmp_assign_source_10 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = var_xs;
+        tmp_assign_source_10 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4959,9 +4454,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         tmp_assign_source_11 = mod_consts[4];
         {
             PyObject *old = par_c1;
+            assert(old != NULL);
             par_c1 = tmp_assign_source_11;
             Py_INCREF(par_c1);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -4969,25 +4465,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     branch_no_2:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         PyObject *tmp_len_arg_4;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 517;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_c);
         tmp_len_arg_4 = var_c;
-        tmp_compexpr_left_3 = BUILTIN_LEN(tmp_len_arg_4);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = BUILTIN_LEN(tmp_len_arg_4);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4997,12 +4481,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = mod_consts[20];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        assert(!(tmp_tmp_condition_result_3_object_1 == NULL));
-        tmp_condition_result_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
+        tmp_cmp_expr_right_3 = mod_consts[18];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -5012,26 +4493,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_right_name_2;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 518;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = var_c;
-        tmp_subscript_name_2 = mod_consts[4];
-        tmp_left_name_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_2, 0);
-        if (tmp_left_name_2 == NULL) {
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_right_value_2;
+        CHECK_OBJECT(var_c);
+        tmp_expression_value_2 = var_c;
+        tmp_subscript_value_2 = mod_consts[4];
+        tmp_left_value_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_2, 0);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5042,9 +4512,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xs);
-        tmp_right_name_2 = var_xs;
-        tmp_assign_source_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
+        tmp_right_value_2 = var_xs;
+        tmp_assign_source_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5060,26 +4530,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_right_name_3;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 519;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = var_c;
-        tmp_subscript_name_3 = mod_consts[3];
-        tmp_left_name_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_3, 1);
-        if (tmp_left_name_3 == NULL) {
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_right_value_3;
+        CHECK_OBJECT(var_c);
+        tmp_expression_value_3 = var_c;
+        tmp_subscript_value_3 = mod_consts[3];
+        tmp_left_value_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_3, 1);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5089,21 +4548,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_xs == NULL) {
-            Py_DECREF(tmp_left_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 519;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_right_name_3 = var_xs;
-        tmp_assign_source_13 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_3);
+        CHECK_OBJECT(var_xs);
+        tmp_right_value_3 = var_xs;
+        tmp_assign_source_13 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_3);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5116,8 +4564,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         {
             PyObject *old = par_c1;
+            assert(old != NULL);
             par_c1 = tmp_assign_source_13;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -5126,18 +4575,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     {
         PyObject *tmp_assign_source_14;
         PyObject *tmp_len_arg_5;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 521;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_c);
         tmp_len_arg_5 = var_c;
         tmp_assign_source_14 = BUILTIN_LEN(tmp_len_arg_5);
         if (tmp_assign_source_14 == NULL) {
@@ -5155,26 +4593,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_right_name_4;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 522;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = var_c;
-        tmp_subscript_name_4 = mod_consts[18];
-        tmp_left_name_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, -2);
-        if (tmp_left_name_4 == NULL) {
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_right_value_4;
+        CHECK_OBJECT(var_c);
+        tmp_expression_value_4 = var_c;
+        tmp_subscript_value_4 = mod_consts[16];
+        tmp_left_value_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_4, -2);
+        if (tmp_left_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5185,9 +4612,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_xs);
-        tmp_right_name_4 = var_xs;
-        tmp_assign_source_15 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_left_name_4);
+        tmp_right_value_4 = var_xs;
+        tmp_assign_source_15 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_left_value_4);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5203,26 +4630,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_right_name_5;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 523;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = var_c;
-        tmp_subscript_name_5 = mod_consts[5];
-        tmp_left_name_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_5, -1);
-        if (tmp_left_name_5 == NULL) {
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_right_value_5;
+        CHECK_OBJECT(var_c);
+        tmp_expression_value_5 = var_c;
+        tmp_subscript_value_5 = mod_consts[5];
+        tmp_left_value_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_5, -1);
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5232,21 +4648,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_xs == NULL) {
-            Py_DECREF(tmp_left_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 523;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_right_name_5 = var_xs;
-        tmp_assign_source_16 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_5);
+        CHECK_OBJECT(var_xs);
+        tmp_right_value_5 = var_xs;
+        tmp_assign_source_16 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_5);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5259,8 +4664,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         {
             PyObject *old = par_c1;
+            assert(old != NULL);
             par_c1 = tmp_assign_source_16;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -5269,25 +4675,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         PyObject *tmp_iter_arg_2;
         PyObject *tmp_xrange_low_1;
         PyObject *tmp_xrange_high_1;
-        PyObject *tmp_left_name_6;
+        PyObject *tmp_left_value_6;
         PyObject *tmp_len_arg_6;
-        PyObject *tmp_right_name_6;
-        tmp_xrange_low_1 = mod_consts[16];
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 524;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyObject *tmp_right_value_6;
+        tmp_xrange_low_1 = mod_consts[15];
+        CHECK_OBJECT(var_c);
         tmp_len_arg_6 = var_c;
-        tmp_left_name_6 = BUILTIN_LEN(tmp_len_arg_6);
-        if (tmp_left_name_6 == NULL) {
+        tmp_left_value_6 = BUILTIN_LEN(tmp_len_arg_6);
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5297,9 +4692,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_6 = mod_consts[3];
-        tmp_xrange_high_1 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_6);
+        tmp_right_value_6 = mod_consts[3];
+        tmp_xrange_high_1 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_6);
         assert(!(tmp_xrange_high_1 == NULL));
         tmp_iter_arg_2 = BUILTIN_XRANGE2(tmp_xrange_low_1, tmp_xrange_high_1);
         Py_DECREF(tmp_xrange_high_1);
@@ -5372,7 +4767,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         PyObject *tmp_assign_source_20;
         if (var_c0 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5393,11 +4788,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
         if (var_nd == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5407,9 +4802,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto try_except_handler_4;
         }
 
-        tmp_left_name_7 = var_nd;
-        tmp_right_name_7 = mod_consts[3];
-        tmp_assign_source_21 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_7, tmp_right_name_7);
+        tmp_left_value_7 = var_nd;
+        tmp_right_value_7 = mod_consts[3];
+        tmp_assign_source_21 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_7, tmp_right_value_7);
         if (tmp_assign_source_21 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5429,27 +4824,27 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_22;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_6;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_right_name_11;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[45]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_6;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_right_value_11;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[39]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5459,23 +4854,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 527;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_expression_name_6 = var_c;
+        CHECK_OBJECT(var_c);
+        tmp_expression_value_6 = var_c;
         CHECK_OBJECT(var_i);
-        tmp_operand_name_1 = var_i;
-        tmp_subscript_name_6 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
-        if (tmp_subscript_name_6 == NULL) {
+        tmp_operand_value_1 = var_i;
+        tmp_subscript_value_6 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_value_1);
+        if (tmp_subscript_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5485,9 +4869,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_6);
-        Py_DECREF(tmp_subscript_name_6);
-        if (tmp_left_name_8 == NULL) {
+        tmp_left_value_8 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_6);
+        Py_DECREF(tmp_subscript_value_6);
+        if (tmp_left_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5498,8 +4882,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto try_except_handler_4;
         }
         if (var_xs == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[43]);
+            Py_DECREF(tmp_left_value_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[40]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5509,10 +4893,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto try_except_handler_4;
         }
 
-        tmp_right_name_8 = var_xs;
-        tmp_args_element_name_2 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_8);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_right_value_8 = var_xs;
+        tmp_args_element_value_2 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_8);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5523,8 +4907,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto try_except_handler_4;
         }
         if (par_c1 == NULL) {
-            Py_DECREF(tmp_args_element_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            Py_DECREF(tmp_args_element_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5534,54 +4918,42 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto try_except_handler_4;
         }
 
-        tmp_left_name_10 = par_c1;
+        tmp_left_value_10 = par_c1;
         CHECK_OBJECT(var_nd);
-        tmp_left_name_11 = var_nd;
-        tmp_right_name_10 = mod_consts[3];
-        tmp_right_name_9 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_11, tmp_right_name_10);
-        if (tmp_right_name_9 == NULL) {
+        tmp_left_value_11 = var_nd;
+        tmp_right_value_10 = mod_consts[3];
+        tmp_right_value_9 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_11, tmp_right_value_10);
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 527;
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_9 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_9);
-        Py_DECREF(tmp_right_name_9);
-        if (tmp_left_name_9 == NULL) {
+        tmp_left_value_9 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_9);
+        Py_DECREF(tmp_right_value_9);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 527;
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        if (var_nd == NULL) {
-            Py_DECREF(tmp_args_element_name_2);
-            Py_DECREF(tmp_left_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 527;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_right_name_11 = var_nd;
-        tmp_args_element_name_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_11);
-        Py_DECREF(tmp_left_name_9);
-        if (tmp_args_element_name_3 == NULL) {
+        CHECK_OBJECT(var_nd);
+        tmp_right_value_11 = var_nd;
+        tmp_args_element_value_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_11);
+        Py_DECREF(tmp_left_value_9);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 527;
             type_description_1 = "oooooooo";
@@ -5589,12 +4961,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         frame_3b1f8d6deeb8d061613123576e95b9d2->m_frame.f_lineno = 527;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_22 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_22 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_3);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5614,26 +4986,26 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     }
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_right_name_12;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_13;
-        PyObject *tmp_right_name_14;
-        PyObject *tmp_right_name_15;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_right_value_12;
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_13;
+        PyObject *tmp_right_value_14;
+        PyObject *tmp_right_value_15;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5644,14 +5016,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_tmp);
-        tmp_args_element_name_4 = var_tmp;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[7]);
+        tmp_args_element_value_4 = var_tmp;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[7]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5663,7 +5035,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         if (par_c1 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5673,10 +5045,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto try_except_handler_4;
         }
 
-        tmp_args_element_name_6 = par_c1;
+        tmp_args_element_value_6 = par_c1;
         frame_3b1f8d6deeb8d061613123576e95b9d2->m_frame.f_lineno = 528;
-        tmp_left_name_13 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_6);
-        if (tmp_left_name_13 == NULL) {
+        tmp_left_value_13 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_6);
+        if (tmp_left_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5686,48 +5058,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_15 = mod_consts[20];
-        if (var_nd == NULL) {
-            Py_DECREF(tmp_left_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 528;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_right_name_13 = var_nd;
-        tmp_left_name_14 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_15, tmp_right_name_13);
-        if (tmp_left_name_14 == NULL) {
+        tmp_left_value_15 = mod_consts[18];
+        CHECK_OBJECT(var_nd);
+        tmp_right_value_13 = var_nd;
+        tmp_left_value_14 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_15, tmp_right_value_13);
+        if (tmp_left_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 528;
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        tmp_right_name_14 = mod_consts[3];
-        tmp_right_name_12 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_14, tmp_right_name_14);
-        Py_DECREF(tmp_left_name_14);
-        if (tmp_right_name_12 == NULL) {
+        tmp_right_value_14 = mod_consts[3];
+        tmp_right_value_12 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_14, tmp_right_value_14);
+        Py_DECREF(tmp_left_value_14);
+        if (tmp_right_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 528;
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_13, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_13);
-        Py_DECREF(tmp_right_name_12);
-        if (tmp_left_name_12 == NULL) {
+        tmp_left_value_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_13, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_13);
+        Py_DECREF(tmp_right_value_12);
+        if (tmp_left_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5737,22 +5098,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        if (var_nd == NULL) {
-            Py_DECREF(tmp_left_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 528;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_right_name_15 = var_nd;
-        tmp_args_element_name_5 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_12, tmp_right_name_15);
-        Py_DECREF(tmp_left_name_12);
-        if (tmp_args_element_name_5 == NULL) {
+        CHECK_OBJECT(var_nd);
+        tmp_right_value_15 = var_nd;
+        tmp_args_element_value_5 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_12, tmp_right_value_15);
+        Py_DECREF(tmp_left_value_12);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5764,11 +5114,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         frame_3b1f8d6deeb8d061613123576e95b9d2->m_frame.f_lineno = 528;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_23 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_assign_source_23 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5812,7 +5162,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -5825,23 +5176,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     try_end_3:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_end_3:;
     branch_end_2:;
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_9;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_9;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5853,7 +5205,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         if (var_c0 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5863,14 +5215,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_7 = var_c0;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[7]);
+        tmp_args_element_value_7 = var_c0;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[7]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5882,7 +5234,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         if (par_c1 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5892,10 +5244,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_9 = par_c1;
+        tmp_args_element_value_9 = par_c1;
         frame_3b1f8d6deeb8d061613123576e95b9d2->m_frame.f_lineno = 529;
-        tmp_args_element_name_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_9);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_args_element_value_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_9);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5907,11 +5259,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
         }
         frame_3b1f8d6deeb8d061613123576e95b9d2->m_frame.f_lineno = 529;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_8);
+        Py_DECREF(tmp_args_element_value_8);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5997,9 +5349,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__8_legmul(struct Nuit
     try_return_handler_1:;
     Py_XDECREF(par_c1);
     par_c1 = NULL;
-    Py_XDECREF(par_c2);
+    CHECK_OBJECT(par_c2);
+    Py_DECREF(par_c2);
     par_c2 = NULL;
-    Py_XDECREF(var_c);
+    CHECK_OBJECT(var_c);
+    Py_DECREF(var_c);
     var_c = NULL;
     Py_XDECREF(var_xs);
     var_xs = NULL;
@@ -6086,13 +5440,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__9_legdiv(struct Nuit
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_d21ce168b8ff5ef2978f7b530b157589 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_d21ce168b8ff5ef2978f7b530b157589)) {
         Py_XDECREF(cache_frame_d21ce168b8ff5ef2978f7b530b157589);
 
@@ -6121,18 +5470,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__9_legdiv(struct Nuit
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6142,8 +5491,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__9_legdiv(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[47]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[42]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6153,33 +5502,33 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__9_legdiv(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[29]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[26]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 578;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c1);
-        tmp_args_element_name_2 = par_c1;
+        tmp_args_element_value_2 = par_c1;
         CHECK_OBJECT(par_c2);
-        tmp_args_element_name_3 = par_c2;
+        tmp_args_element_value_3 = par_c2;
         frame_d21ce168b8ff5ef2978f7b530b157589->m_frame.f_lineno = 578;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6210,7 +5559,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__9_legdiv(struct Nuit
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -6250,54 +5599,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__9_legdiv(struct Nuit
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_c1);
-    par_c1 = NULL;
-    Py_XDECREF(par_c2);
-    par_c2 = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_c1);
-    par_c1 = NULL;
-    Py_XDECREF(par_c2);
-    par_c2 = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_c1);
+    Py_DECREF(par_c1);
+    CHECK_OBJECT(par_c2);
+    Py_DECREF(par_c2);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_c1);
+    Py_DECREF(par_c1);
+    CHECK_OBJECT(par_c2);
+    Py_DECREF(par_c2);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6325,13 +5648,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__10_legpow(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_c4a7d8b65a02c219b31a930561e7ff6f = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_c4a7d8b65a02c219b31a930561e7ff6f)) {
         Py_XDECREF(cache_frame_c4a7d8b65a02c219b31a930561e7ff6f);
 
@@ -6360,19 +5678,19 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__10_legpow(struct Nui
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6382,8 +5700,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__10_legpow(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[49]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[44]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6393,35 +5711,35 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__10_legpow(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[29]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[26]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 609;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c);
-        tmp_args_element_name_2 = par_c;
+        tmp_args_element_value_2 = par_c;
         CHECK_OBJECT(par_pow);
-        tmp_args_element_name_3 = par_pow;
+        tmp_args_element_value_3 = par_pow;
         CHECK_OBJECT(par_maxpower);
-        tmp_args_element_name_4 = par_maxpower;
+        tmp_args_element_value_4 = par_maxpower;
         frame_c4a7d8b65a02c219b31a930561e7ff6f->m_frame.f_lineno = 609;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6452,7 +5770,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__10_legpow(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -6493,58 +5811,32 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__10_legpow(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    Py_XDECREF(par_pow);
-    par_pow = NULL;
-    Py_XDECREF(par_maxpower);
-    par_maxpower = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    Py_XDECREF(par_pow);
-    par_pow = NULL;
-    Py_XDECREF(par_maxpower);
-    par_maxpower = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
+    CHECK_OBJECT(par_pow);
+    Py_DECREF(par_pow);
+    CHECK_OBJECT(par_maxpower);
+    Py_DECREF(par_maxpower);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
+    CHECK_OBJECT(par_pow);
+    Py_DECREF(par_pow);
+    CHECK_OBJECT(par_maxpower);
+    Py_DECREF(par_maxpower);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -6636,18 +5928,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6657,8 +5949,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[25]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6670,14 +5962,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         CHECK_OBJECT(par_c);
         tmp_tuple_element_1 = par_c;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[51]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[46]);
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 672;
-        tmp_assign_source_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6690,21 +5982,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_1;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_c);
-        tmp_expression_name_3 = par_c;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[36]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_c;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[33]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6714,9 +6007,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[52]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[47]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6726,9 +6019,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[53];
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = mod_consts[48];
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6749,25 +6042,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_5;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 674;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_c;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[54]);
-        if (tmp_called_name_2 == NULL) {
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_5;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_4 = par_c;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[49]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6777,37 +6059,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 674;
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[55]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[50]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 674;
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 674;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6820,8 +6102,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_2;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -6829,8 +6112,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -6848,14 +6131,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_m);
-        tmp_args_element_name_2 = par_m;
-        tmp_args_element_name_3 = mod_consts[57];
+        tmp_args_element_value_2 = par_m;
+        tmp_args_element_value_3 = mod_consts[52];
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 675;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
             tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[56],
+                mod_consts[51],
                 call_args
             );
         }
@@ -6876,8 +6159,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
@@ -6895,14 +6178,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_axis);
-        tmp_args_element_name_4 = par_axis;
-        tmp_args_element_name_5 = mod_consts[58];
+        tmp_args_element_value_4 = par_axis;
+        tmp_args_element_value_5 = mod_consts[53];
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 676;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
             tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_2,
-                mod_consts[56],
+                mod_consts[51],
                 call_args
             );
         }
@@ -6922,15 +6205,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_cnt);
-        tmp_compexpr_left_2 = var_cnt;
-        tmp_compexpr_right_2 = mod_consts[4];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_cnt;
+        tmp_cmp_expr_right_2 = mod_consts[4];
+        tmp_condition_result_2 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6940,30 +6221,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 677;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[59];
+        tmp_make_exception_arg_1 = mod_consts[54];
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 678;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -6976,17 +6245,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     branch_no_2:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_expression_name_6;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[60]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_expression_value_6;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[55]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[60]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6997,10 +6266,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_iaxis);
-        tmp_args_element_name_6 = var_iaxis;
+        tmp_args_element_value_6 = var_iaxis;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7010,9 +6279,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = par_c;
-        tmp_args_element_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[61]);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_expression_value_6 = par_c;
+        tmp_args_element_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[57]);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7024,11 +6293,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 679;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7};
+            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_7);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7041,22 +6310,21 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         {
             PyObject *old = var_iaxis;
+            assert(old != NULL);
             var_iaxis = tmp_assign_source_5;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_cnt);
-        tmp_compexpr_left_3 = var_cnt;
-        tmp_compexpr_right_3 = mod_consts[4];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_cnt;
+        tmp_cmp_expr_right_3 = mod_consts[4];
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7066,29 +6334,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 681;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     if (par_c == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -7104,18 +6360,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     branch_no_3:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_args_element_name_10;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7125,8 +6381,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[62]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[58]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7137,8 +6393,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
         if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            Py_DECREF(tmp_called_value_4);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7148,17 +6404,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_8 = par_c;
+        tmp_args_element_value_8 = par_c;
         CHECK_OBJECT(var_iaxis);
-        tmp_args_element_name_9 = var_iaxis;
-        tmp_args_element_name_10 = mod_consts[4];
+        tmp_args_element_value_9 = var_iaxis;
+        tmp_args_element_value_10 = mod_consts[4];
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 684;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9, tmp_args_element_name_10};
-            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9, tmp_args_element_value_10};
+            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7197,16 +6453,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(var_cnt);
-        tmp_compexpr_left_4 = var_cnt;
+        tmp_cmp_expr_left_4 = var_cnt;
         CHECK_OBJECT(var_n);
-        tmp_compexpr_right_4 = var_n;
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_right_4 = var_n;
+        tmp_condition_result_4 = RICH_COMPARE_GE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7216,48 +6470,25 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 686;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_right_name_1;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 687;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_8 = par_c;
-        tmp_subscript_name_1 = mod_consts[63];
-        tmp_left_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_1);
-        if (tmp_left_name_1 == NULL) {
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_right_value_1;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_8 = par_c;
+        tmp_subscript_value_1 = mod_consts[59];
+        tmp_left_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7267,9 +6498,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[4];
-        tmp_assign_source_8 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = mod_consts[4];
+        tmp_assign_source_8 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7282,8 +6513,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_8;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -7363,11 +6595,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     }
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         if (var_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[60]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7377,9 +6609,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_left_name_2 = var_n;
-        tmp_right_name_2 = mod_consts[3];
-        tmp_assign_source_12 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_2, tmp_right_name_2);
+        tmp_left_value_2 = var_n;
+        tmp_right_value_2 = mod_consts[3];
+        tmp_assign_source_12 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_value_2, tmp_right_value_2);
         assert(!(tmp_assign_source_12 == NULL));
         {
             PyObject *old = var_n;
@@ -7390,11 +6622,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7404,10 +6636,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_left_name_3 = par_c;
+        tmp_left_value_3 = par_c;
         if (par_scl == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[61]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7417,8 +6649,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_right_name_3 = par_scl;
-        tmp_result = BINARY_OPERATION_MULT_OBJECT_OBJECT_INPLACE(&tmp_left_name_3, tmp_right_name_3);
+        tmp_right_value_3 = par_scl;
+        tmp_result = BINARY_OPERATION_MULT_OBJECT_OBJECT_INPLACE(&tmp_left_value_3, tmp_right_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7429,33 +6661,30 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_13 = tmp_left_name_3;
+        tmp_assign_source_13 = tmp_left_value_3;
         par_c = tmp_assign_source_13;
 
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_name_2;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_left_value_4;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_tuple_element_3;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_12;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_expression_value_12;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7465,8 +6694,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[35]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[32]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7477,88 +6706,74 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_n);
-        tmp_tuple_element_3 = var_n;
-        tmp_left_name_4 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_left_name_4, 0, tmp_tuple_element_3);
+        tmp_tuple_element_2 = var_n;
+        tmp_left_value_4 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_left_value_4, 0, tmp_tuple_element_2);
         CHECK_OBJECT(par_c);
-        tmp_expression_name_11 = par_c;
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[66]);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_value_11 = par_c;
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[62]);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_left_name_4);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_left_value_4);
 
             exception_lineno = 692;
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_2 = mod_consts[67];
-        tmp_right_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_10);
-        if (tmp_right_name_4 == NULL) {
+        tmp_subscript_value_2 = mod_consts[63];
+        tmp_right_value_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_right_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_left_name_4);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_left_value_4);
 
             exception_lineno = 692;
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_tuple_element_2 = BINARY_OPERATION_ADD_OBJECT_TUPLE_OBJECT(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_left_name_4);
-        Py_DECREF(tmp_right_name_4);
-        if (tmp_tuple_element_2 == NULL) {
+        tmp_kw_call_arg_value_0_1 = BINARY_OPERATION_ADD_OBJECT_TUPLE_OBJECT(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_left_value_4);
+        Py_DECREF(tmp_right_value_4);
+        if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 692;
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_dict_key_1 = mod_consts[36];
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 692;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_12 = par_c;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[36]);
-        if (tmp_dict_value_1 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_12 = par_c;
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[33]);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
 
             exception_lineno = 692;
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 692;
-        tmp_assign_source_14 = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_14 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_5, args, kw_values, mod_consts[34]);
+        }
+
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_kw_call_arg_value_0_1);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7584,7 +6799,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         PyObject *tmp_xrange_step_1;
         CHECK_OBJECT(var_n);
         tmp_xrange_low_2 = var_n;
-        tmp_xrange_high_1 = mod_consts[20];
+        tmp_xrange_high_1 = mod_consts[18];
         tmp_xrange_step_1 = mod_consts[5];
         tmp_iter_arg_2 = BUILTIN_XRANGE3(tmp_xrange_low_2, tmp_xrange_high_1, tmp_xrange_step_1);
         if (tmp_iter_arg_2 == NULL) {
@@ -7658,23 +6873,23 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_3;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
-        tmp_left_name_7 = mod_consts[20];
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
+        tmp_left_value_7 = mod_consts[18];
         CHECK_OBJECT(var_j);
-        tmp_right_name_5 = var_j;
-        tmp_left_name_6 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_5);
-        if (tmp_left_name_6 == NULL) {
+        tmp_right_value_5 = var_j;
+        tmp_left_value_6 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_7, tmp_right_value_5);
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7684,10 +6899,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto try_except_handler_3;
         }
-        tmp_right_name_6 = mod_consts[3];
-        tmp_left_name_5 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_6);
-        if (tmp_left_name_5 == NULL) {
+        tmp_right_value_6 = mod_consts[3];
+        tmp_left_value_5 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_6);
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7698,8 +6913,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_3;
         }
         if (par_c == NULL) {
-            Py_DECREF(tmp_left_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            Py_DECREF(tmp_left_value_5);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7709,34 +6924,23 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_13 = par_c;
-        if (var_j == NULL) {
-            Py_DECREF(tmp_left_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 694;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_subscript_name_3 = var_j;
-        tmp_right_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_3);
-        if (tmp_right_name_7 == NULL) {
+        tmp_expression_value_13 = par_c;
+        CHECK_OBJECT(var_j);
+        tmp_subscript_value_3 = var_j;
+        tmp_right_value_7 = LOOKUP_SUBSCRIPT(tmp_expression_value_13, tmp_subscript_value_3);
+        if (tmp_right_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_5);
+            Py_DECREF(tmp_left_value_5);
 
             exception_lineno = 694;
             type_description_1 = "oooooooooo";
             goto try_except_handler_3;
         }
-        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_7);
-        Py_DECREF(tmp_left_name_5);
-        Py_DECREF(tmp_right_name_7);
+        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_7);
+        Py_DECREF(tmp_left_value_5);
+        Py_DECREF(tmp_right_value_7);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7749,7 +6953,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         if (var_der == NULL) {
             Py_DECREF(tmp_ass_subvalue_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7760,21 +6964,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
 
         tmp_ass_subscribed_1 = var_der;
-        if (var_j == NULL) {
-            Py_DECREF(tmp_ass_subvalue_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 694;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_left_name_8 = var_j;
-        tmp_right_name_8 = mod_consts[3];
-        tmp_ass_subscript_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_8, tmp_right_name_8);
+        CHECK_OBJECT(var_j);
+        tmp_left_value_8 = var_j;
+        tmp_right_value_8 = mod_consts[3];
+        tmp_ass_subscript_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_8, tmp_right_value_8);
         if (tmp_ass_subscript_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7803,7 +6996,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         PyObject *tmp_assign_source_18;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7825,23 +7018,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_right_name_9;
-        if (var_j == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 695;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_left_name_9 = var_j;
-        tmp_right_name_9 = mod_consts[20];
-        tmp_assign_source_19 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_9, tmp_right_name_9);
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_right_value_9;
+        CHECK_OBJECT(var_j);
+        tmp_left_value_9 = var_j;
+        tmp_right_value_9 = mod_consts[18];
+        tmp_assign_source_19 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_9, tmp_right_value_9);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7861,13 +7043,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     }
     {
         PyObject *tmp_assign_source_20;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_4;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_4;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_14 = tmp_inplace_assign_subscr_1__target;
+        tmp_expression_value_14 = tmp_inplace_assign_subscr_1__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_4 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_20 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_4);
+        tmp_subscript_value_4 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_assign_source_20 = LOOKUP_SUBSCRIPT(tmp_expression_value_14, tmp_subscript_value_4);
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7887,15 +7069,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     }
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_subscript_name_5;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_subscript_value_5;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_10 = tmp_inplace_assign_subscr_1__value;
+        tmp_left_value_10 = tmp_inplace_assign_subscr_1__value;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7905,22 +7087,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_15 = par_c;
-        if (var_j == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 695;
-            type_description_1 = "oooooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_subscript_name_5 = var_j;
-        tmp_right_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_5);
-        if (tmp_right_name_10 == NULL) {
+        tmp_expression_value_15 = par_c;
+        CHECK_OBJECT(var_j);
+        tmp_subscript_value_5 = var_j;
+        tmp_right_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_15, tmp_subscript_value_5);
+        if (tmp_right_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7930,8 +7101,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_10, tmp_right_name_10);
-        Py_DECREF(tmp_right_name_10);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_10, tmp_right_value_10);
+        Py_DECREF(tmp_right_value_10);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -7942,7 +7113,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_assign_source_21 = tmp_left_name_10;
+        tmp_assign_source_21 = tmp_left_value_10;
         tmp_inplace_assign_subscr_1__value = tmp_assign_source_21;
 
     }
@@ -8031,7 +7202,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_2;
@@ -8044,20 +7216,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     try_end_2:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_tmp_condition_result_5_object_1;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_n);
-        tmp_compexpr_left_5 = var_n;
-        tmp_compexpr_right_5 = mod_consts[3];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        assert(!(tmp_tmp_condition_result_5_object_1 == NULL));
-        tmp_condition_result_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
+        tmp_cmp_expr_left_5 = var_n;
+        tmp_cmp_expr_right_5 = mod_consts[3];
+        tmp_condition_result_5 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -8067,17 +7236,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     branch_yes_5:;
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_subscript_name_6;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_subscript_value_6;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
         int tmp_ass_subscript_res_1;
-        tmp_left_name_11 = mod_consts[16];
+        tmp_left_value_11 = mod_consts[15];
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8087,10 +7256,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_16 = par_c;
-        tmp_subscript_name_6 = mod_consts[20];
-        tmp_right_name_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_16, tmp_subscript_name_6, 2);
-        if (tmp_right_name_11 == NULL) {
+        tmp_expression_value_16 = par_c;
+        tmp_subscript_value_6 = mod_consts[18];
+        tmp_right_value_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_16, tmp_subscript_value_6, 2);
+        if (tmp_right_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8100,8 +7269,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_ass_subvalue_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_11);
-        Py_DECREF(tmp_right_name_11);
+        tmp_ass_subvalue_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_11, tmp_right_value_11);
+        Py_DECREF(tmp_right_value_11);
         if (tmp_ass_subvalue_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8114,7 +7283,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         if (var_der == NULL) {
             Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8142,14 +7311,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     branch_no_5:;
     {
         PyObject *tmp_ass_subvalue_4;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_subscript_name_7;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_subscript_value_7;
         PyObject *tmp_ass_subscribed_4;
         PyObject *tmp_ass_subscript_4;
         int tmp_ass_subscript_res_2;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8159,9 +7328,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_17 = par_c;
-        tmp_subscript_name_7 = mod_consts[3];
-        tmp_ass_subvalue_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_17, tmp_subscript_name_7, 1);
+        tmp_expression_value_17 = par_c;
+        tmp_subscript_value_7 = mod_consts[3];
+        tmp_ass_subvalue_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_17, tmp_subscript_value_7, 1);
         if (tmp_ass_subvalue_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8174,7 +7343,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         }
         if (var_der == NULL) {
             Py_DECREF(tmp_ass_subvalue_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8203,7 +7372,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
         PyObject *tmp_assign_source_22;
         if (var_der == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[68]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8248,7 +7417,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -8261,23 +7431,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     try_end_3:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_end_4:;
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        tmp_expression_name_18 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        tmp_expression_value_18 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_18 == NULL)) {
-            tmp_expression_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_18 == NULL)) {
+            tmp_expression_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_18 == NULL) {
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8287,8 +7458,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[62]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[58]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8299,8 +7470,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
         if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            Py_DECREF(tmp_called_value_6);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8310,28 +7481,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_11 = par_c;
-        tmp_args_element_name_12 = mod_consts[4];
-        if (var_iaxis == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 700;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_13 = var_iaxis;
+        tmp_args_element_value_11 = par_c;
+        tmp_args_element_value_12 = mod_consts[4];
+        CHECK_OBJECT(var_iaxis);
+        tmp_args_element_value_13 = var_iaxis;
         frame_0be5e555ca425b268cfa903c84e85ca3->m_frame.f_lineno = 700;
         {
-            PyObject *call_args[] = {tmp_args_element_name_11, tmp_args_element_name_12, tmp_args_element_name_13};
-            tmp_assign_source_23 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_11, tmp_args_element_value_12, tmp_args_element_value_13};
+            tmp_assign_source_23 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
+        Py_DECREF(tmp_called_value_6);
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8428,12 +7588,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     try_return_handler_1:;
     Py_XDECREF(par_c);
     par_c = NULL;
-    Py_XDECREF(par_m);
-    par_m = NULL;
-    Py_XDECREF(par_scl);
-    par_scl = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
     CHECK_OBJECT(var_cnt);
     Py_DECREF(var_cnt);
     var_cnt = NULL;
@@ -8461,12 +7615,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
 
     Py_XDECREF(par_c);
     par_c = NULL;
-    Py_XDECREF(par_m);
-    par_m = NULL;
-    Py_XDECREF(par_scl);
-    par_scl = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
     Py_XDECREF(var_cnt);
     var_cnt = NULL;
     Py_XDECREF(var_iaxis);
@@ -8492,14 +7640,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__11_legder(struct Nui
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_m);
+    Py_DECREF(par_m);
+    CHECK_OBJECT(par_scl);
+    Py_DECREF(par_scl);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_m);
+    Py_DECREF(par_m);
+    CHECK_OBJECT(par_scl);
+    Py_DECREF(par_scl);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -8608,18 +7766,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8629,8 +7787,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[25]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8642,14 +7800,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
         CHECK_OBJECT(par_c);
         tmp_tuple_element_1 = par_c;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[51]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[46]);
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 789;
-        tmp_assign_source_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8662,21 +7820,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_1;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_c);
-        tmp_expression_name_3 = par_c;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[36]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_c;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[33]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8686,9 +7845,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[52]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[47]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8698,9 +7857,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[53];
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = mod_consts[48];
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8721,25 +7880,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_5;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 791;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_c;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[54]);
-        if (tmp_called_name_2 == NULL) {
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_5;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_4 = par_c;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[49]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8749,37 +7897,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 791;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[55]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[50]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 791;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 791;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8792,21 +7940,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_2;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -8820,10 +7969,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_k);
-        tmp_args_element_name_2 = par_k;
+        tmp_args_element_value_2 = par_k;
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 792;
-        tmp_operand_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[71], tmp_args_element_name_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[66], tmp_args_element_value_2);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8833,8 +7982,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8845,8 +7994,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -8856,25 +8005,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_list_element_1;
-        if (par_k == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 793;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_k);
         tmp_list_element_1 = par_k;
         tmp_assign_source_3 = PyList_New(1);
         PyList_SET_ITEM0(tmp_assign_source_3, 0, tmp_list_element_1);
         {
             PyObject *old = par_k;
+            assert(old != NULL);
             par_k = tmp_assign_source_3;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -8882,8 +8021,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
@@ -8901,14 +8040,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_m);
-        tmp_args_element_name_3 = par_m;
-        tmp_args_element_name_4 = mod_consts[73];
+        tmp_args_element_value_3 = par_m;
+        tmp_args_element_value_4 = mod_consts[67];
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 794;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
             tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_2,
-                mod_consts[56],
+                mod_consts[51],
                 call_args
             );
         }
@@ -8929,8 +8068,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
         tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_3 == NULL)) {
@@ -8948,14 +8087,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_axis);
-        tmp_args_element_name_5 = par_axis;
-        tmp_args_element_name_6 = mod_consts[58];
+        tmp_args_element_value_5 = par_axis;
+        tmp_args_element_value_6 = mod_consts[53];
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 795;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
             tmp_assign_source_5 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_3,
-                mod_consts[56],
+                mod_consts[51],
                 call_args
             );
         }
@@ -8975,15 +8114,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_cnt);
-        tmp_compexpr_left_2 = var_cnt;
-        tmp_compexpr_right_2 = mod_consts[4];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_cnt;
+        tmp_cmp_expr_right_2 = mod_consts[4];
+        tmp_condition_result_3 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8993,30 +8130,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 796;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[74];
+        tmp_make_exception_arg_1 = mod_consts[68];
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 797;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -9029,14 +8154,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_2;
         if (par_k == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9047,8 +8170,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
 
         tmp_len_arg_1 = par_k;
-        tmp_compexpr_left_3 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9059,10 +8182,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_cnt);
-        tmp_compexpr_right_3 = var_cnt;
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_right_3 = var_cnt;
+        tmp_condition_result_4 = RICH_COMPARE_GT_NBOOL_LONG_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9072,30 +8195,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 798;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
-        tmp_make_exception_arg_2 = mod_consts[75];
+        tmp_make_exception_arg_2 = mod_consts[70];
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 799;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
@@ -9108,16 +8219,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_tmp_condition_result_5_object_1;
-        int tmp_truth_name_3;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_args_element_value_7;
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_4 == NULL) {
@@ -9131,10 +8240,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_lbnd);
-        tmp_args_element_name_7 = par_lbnd;
+        tmp_args_element_value_7 = par_lbnd;
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 800;
-        tmp_compexpr_left_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[61], tmp_args_element_name_7);
-        if (tmp_compexpr_left_4 == NULL) {
+        tmp_cmp_expr_left_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[57], tmp_args_element_value_7);
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9144,10 +8253,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = mod_consts[4];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_left_4);
-        if (tmp_tmp_condition_result_5_object_1 == NULL) {
+        tmp_cmp_expr_right_4 = mod_consts[4];
+        tmp_condition_result_5 = RICH_COMPARE_NE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
+        if (tmp_condition_result_5 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9157,30 +8266,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_5_object_1);
-
-            exception_lineno = 800;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_5 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
         }
+        assert(tmp_condition_result_5 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_5:;
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_make_exception_arg_3;
-        tmp_make_exception_arg_3 = mod_consts[76];
+        tmp_make_exception_arg_3 = mod_consts[71];
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 801;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_3 == NULL));
@@ -9193,16 +8290,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         PyObject *tmp_called_instance_5;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_tmp_condition_result_6_object_1;
-        int tmp_truth_name_4;
-        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_args_element_value_8;
+        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_5 == NULL)) {
-            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_5 == NULL) {
@@ -9216,10 +8311,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_scl);
-        tmp_args_element_name_8 = par_scl;
+        tmp_args_element_value_8 = par_scl;
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 802;
-        tmp_compexpr_left_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[61], tmp_args_element_name_8);
-        if (tmp_compexpr_left_5 == NULL) {
+        tmp_cmp_expr_left_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[57], tmp_args_element_value_8);
+        if (tmp_cmp_expr_left_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9229,10 +8324,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_5 = mod_consts[4];
-        tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_left_5);
-        if (tmp_tmp_condition_result_6_object_1 == NULL) {
+        tmp_cmp_expr_right_5 = mod_consts[4];
+        tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_left_5);
+        if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9242,30 +8337,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_6_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_6_object_1);
-
-            exception_lineno = 802;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_6 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_6_object_1);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
         }
+        assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_6:;
     {
         PyObject *tmp_raise_type_4;
         PyObject *tmp_make_exception_arg_4;
-        tmp_make_exception_arg_4 = mod_consts[77];
+        tmp_make_exception_arg_4 = mod_consts[72];
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 803;
         tmp_raise_type_4 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_4);
         assert(!(tmp_raise_type_4 == NULL));
@@ -9278,17 +8361,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_no_6:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_6;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[60]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_expression_value_6;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[55]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[60]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9299,10 +8382,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_iaxis);
-        tmp_args_element_name_9 = var_iaxis;
+        tmp_args_element_value_9 = var_iaxis;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9312,9 +8395,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = par_c;
-        tmp_args_element_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[61]);
-        if (tmp_args_element_name_10 == NULL) {
+        tmp_expression_value_6 = par_c;
+        tmp_args_element_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[57]);
+        if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9326,11 +8409,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 804;
         {
-            PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10};
-            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_9, tmp_args_element_value_10};
+            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_10);
+        Py_DECREF(tmp_args_element_value_10);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9343,22 +8426,21 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
         {
             PyObject *old = var_iaxis;
+            assert(old != NULL);
             var_iaxis = tmp_assign_source_6;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_tmp_condition_result_7_object_1;
-        int tmp_truth_name_5;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
         CHECK_OBJECT(var_cnt);
-        tmp_compexpr_left_6 = var_cnt;
-        tmp_compexpr_right_6 = mod_consts[4];
-        tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        if (tmp_tmp_condition_result_7_object_1 == NULL) {
+        tmp_cmp_expr_left_6 = var_cnt;
+        tmp_cmp_expr_right_6 = mod_consts[4];
+        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9368,29 +8450,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_7_object_1);
-        if (tmp_truth_name_5 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_7_object_1);
-
-            exception_lineno = 806;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_7 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_7_object_1);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
         }
+        assert(tmp_condition_result_7 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_7:;
     if (par_c == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -9406,18 +8476,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_no_7:;
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9427,8 +8497,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[62]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[58]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9439,8 +8509,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            Py_DECREF(tmp_called_value_4);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9450,17 +8520,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_11 = par_c;
+        tmp_args_element_value_11 = par_c;
         CHECK_OBJECT(var_iaxis);
-        tmp_args_element_name_12 = var_iaxis;
-        tmp_args_element_name_13 = mod_consts[4];
+        tmp_args_element_value_12 = var_iaxis;
+        tmp_args_element_value_13 = mod_consts[4];
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 809;
         {
-            PyObject *call_args[] = {tmp_args_element_name_11, tmp_args_element_name_12, tmp_args_element_name_13};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_11, tmp_args_element_value_12, tmp_args_element_value_13};
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9480,17 +8550,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_list_arg_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_len_arg_2;
         if (par_k == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9501,8 +8571,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
 
         tmp_list_arg_1 = par_k;
-        tmp_left_name_1 = MAKE_LIST(tmp_list_arg_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = MAKE_LIST(tmp_list_arg_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9512,13 +8582,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = LIST_COPY(mod_consts[78]);
+        tmp_left_value_2 = LIST_COPY(mod_consts[73]);
         CHECK_OBJECT(var_cnt);
-        tmp_left_name_3 = var_cnt;
+        tmp_left_value_3 = var_cnt;
         if (par_k == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_left_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9529,47 +8599,47 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
 
         tmp_len_arg_2 = par_k;
-        tmp_right_name_3 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_3 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 810;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_2 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_left_value_1);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 810;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LIST_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
-        Py_DECREF(tmp_right_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = BINARY_OPERATION_MULT_OBJECT_LIST_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
+        Py_DECREF(tmp_right_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 810;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_8 = BINARY_OPERATION_ADD_OBJECT_LIST_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_assign_source_8 = BINARY_OPERATION_ADD_OBJECT_LIST_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9591,18 +8661,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         PyObject *tmp_assign_source_9;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_xrange_low_1;
-        if (var_cnt == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 811;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_cnt);
         tmp_xrange_low_1 = var_cnt;
         tmp_iter_arg_1 = BUILTIN_XRANGE1(tmp_xrange_low_1);
         if (tmp_iter_arg_1 == NULL) {
@@ -9675,7 +8734,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         PyObject *tmp_len_arg_3;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9706,11 +8765,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9720,10 +8779,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_left_name_4 = par_c;
+        tmp_left_value_4 = par_c;
         if (par_scl == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[65]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[61]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9733,8 +8792,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_right_name_4 = par_scl;
-        tmp_result = BINARY_OPERATION_MULT_OBJECT_OBJECT_INPLACE(&tmp_left_name_4, tmp_right_name_4);
+        tmp_right_value_4 = par_scl;
+        tmp_result = BINARY_OPERATION_MULT_OBJECT_OBJECT_INPLACE(&tmp_left_value_4, tmp_right_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -9745,7 +8804,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_13 = tmp_left_name_4;
+        tmp_assign_source_13 = tmp_left_value_4;
         par_c = tmp_assign_source_13;
 
     }
@@ -9754,28 +8813,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_tmp_and_left_value_1_object_1;
-        int tmp_truth_name_6;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_1;
-        int tmp_truth_name_7;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_1;
+        int tmp_truth_name_1;
         CHECK_OBJECT(var_n);
-        tmp_compexpr_left_7 = var_n;
-        tmp_compexpr_right_7 = mod_consts[3];
-        tmp_tmp_and_left_value_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        assert(!(tmp_tmp_and_left_value_1_object_1 == NULL));
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_tmp_and_left_value_1_object_1);
-        assert(!(tmp_truth_name_6 == -1));
-        tmp_and_left_value_1 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_1_object_1);
+        tmp_cmp_expr_left_7 = var_n;
+        tmp_cmp_expr_right_7 = mod_consts[3];
+        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_LONG_LONG(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        assert(!(tmp_and_left_value_1 == NUITKA_BOOL_EXCEPTION));
         tmp_and_left_truth_1 = tmp_and_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_1 == 1) {
             goto and_right_1;
@@ -9783,13 +8836,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto and_left_1;
         }
         and_right_1:;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        assert(tmp_and_left_value_1 != NUITKA_BOOL_UNASSIGNED);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9799,8 +8853,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[80]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[74]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9811,36 +8865,36 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_c);
-        tmp_expression_name_9 = par_c;
-        tmp_subscript_name_1 = mod_consts[4];
-        tmp_compexpr_left_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_1, 0);
-        if (tmp_compexpr_left_8 == NULL) {
+        tmp_expression_value_9 = par_c;
+        tmp_subscript_value_1 = mod_consts[4];
+        tmp_cmp_expr_left_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_9, tmp_subscript_value_1, 0);
+        if (tmp_cmp_expr_left_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 814;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_8 = mod_consts[4];
-        tmp_args_element_name_14 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
-        Py_DECREF(tmp_compexpr_left_8);
-        if (tmp_args_element_name_14 == NULL) {
+        tmp_cmp_expr_right_8 = mod_consts[4];
+        tmp_args_element_value_14 = RICH_COMPARE_EQ_OBJECT_OBJECT_LONG(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
+        Py_DECREF(tmp_cmp_expr_left_8);
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 814;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 814;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_14);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_14);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_14);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_14);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9851,8 +8905,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_7 = CHECK_IF_TRUE(tmp_call_result_1);
-        if (tmp_truth_name_7 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_call_result_1);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9862,7 +8916,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_and_right_value_1 = tmp_truth_name_7 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_and_right_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_call_result_1);
         tmp_condition_result_8 = tmp_and_right_value_1;
         goto and_end_1;
@@ -9874,6 +8928,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         } else {
             goto branch_no_8;
         }
+        assert(tmp_condition_result_8 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_8:;
     {
@@ -9902,13 +8957,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_10 = tmp_inplace_assign_subscr_1__target;
+        tmp_expression_value_10 = tmp_inplace_assign_subscr_1__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_2 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_16 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_2);
+        tmp_subscript_value_2 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_assign_source_16 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_2);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9928,29 +8983,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_subscript_value_3;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_5 = tmp_inplace_assign_subscr_1__value;
-        if (par_k == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 815;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_3;
-        }
-
-        tmp_expression_name_11 = par_k;
+        tmp_left_value_5 = tmp_inplace_assign_subscr_1__value;
+        CHECK_OBJECT(par_k);
+        tmp_expression_value_11 = par_k;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_3 = var_i;
-        tmp_right_name_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_3);
-        if (tmp_right_name_5 == NULL) {
+        tmp_subscript_value_3 = var_i;
+        tmp_right_value_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_11, tmp_subscript_value_3);
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9960,8 +9004,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_right_name_5);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_right_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -9972,7 +9016,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_assign_source_17 = tmp_left_name_5;
+        tmp_assign_source_17 = tmp_left_value_5;
         tmp_inplace_assign_subscr_1__value = tmp_assign_source_17;
 
     }
@@ -10040,29 +9084,26 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_no_8:;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_name_2;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_left_value_6;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_tuple_element_3;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_15;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_expression_value_15;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10072,8 +9113,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[35]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[32]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10084,91 +9125,77 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_n);
-        tmp_left_name_7 = var_n;
-        tmp_right_name_6 = mod_consts[3];
-        tmp_tuple_element_3 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_7, tmp_right_name_6);
-        assert(!(tmp_tuple_element_3 == NULL));
-        tmp_left_name_6 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_left_name_6, 0, tmp_tuple_element_3);
+        tmp_left_value_7 = var_n;
+        tmp_right_value_6 = mod_consts[3];
+        tmp_tuple_element_2 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_7, tmp_right_value_6);
+        assert(!(tmp_tuple_element_2 == NULL));
+        tmp_left_value_6 = PyTuple_New(1);
+        PyTuple_SET_ITEM(tmp_left_value_6, 0, tmp_tuple_element_2);
         CHECK_OBJECT(par_c);
-        tmp_expression_name_14 = par_c;
-        tmp_expression_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[66]);
-        if (tmp_expression_name_13 == NULL) {
+        tmp_expression_value_14 = par_c;
+        tmp_expression_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[62]);
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_left_name_6);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_left_value_6);
 
             exception_lineno = 817;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_4 = mod_consts[67];
-        tmp_right_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_4);
-        Py_DECREF(tmp_expression_name_13);
-        if (tmp_right_name_7 == NULL) {
+        tmp_subscript_value_4 = mod_consts[63];
+        tmp_right_value_7 = LOOKUP_SUBSCRIPT(tmp_expression_value_13, tmp_subscript_value_4);
+        Py_DECREF(tmp_expression_value_13);
+        if (tmp_right_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_left_name_6);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_left_value_6);
 
             exception_lineno = 817;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_tuple_element_2 = BINARY_OPERATION_ADD_OBJECT_TUPLE_OBJECT(tmp_left_name_6, tmp_right_name_7);
-        Py_DECREF(tmp_left_name_6);
-        Py_DECREF(tmp_right_name_7);
-        if (tmp_tuple_element_2 == NULL) {
+        tmp_kw_call_arg_value_0_1 = BINARY_OPERATION_ADD_OBJECT_TUPLE_OBJECT(tmp_left_value_6, tmp_right_value_7);
+        Py_DECREF(tmp_left_value_6);
+        Py_DECREF(tmp_right_value_7);
+        if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             exception_lineno = 817;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_args_name_2, 0, tmp_tuple_element_2);
-        tmp_dict_key_1 = mod_consts[36];
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 817;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_15 = par_c;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[36]);
-        if (tmp_dict_value_1 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_15 = par_c;
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[33]);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_name_2);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
 
             exception_lineno = 817;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 817;
-        tmp_assign_source_18 = CALL_FUNCTION(tmp_called_name_6, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_18 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_6, args, kw_values, mod_consts[34]);
+        }
+
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_kw_call_arg_value_0_1);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10188,29 +9215,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_2;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_right_name_8;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_right_value_8;
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
         int tmp_ass_subscript_res_1;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 818;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_16 = par_c;
-        tmp_subscript_name_5 = mod_consts[4];
-        tmp_left_name_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_16, tmp_subscript_name_5, 0);
-        if (tmp_left_name_8 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_16 = par_c;
+        tmp_subscript_value_5 = mod_consts[4];
+        tmp_left_value_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_16, tmp_subscript_value_5, 0);
+        if (tmp_left_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10220,9 +9236,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_right_name_8 = mod_consts[4];
-        tmp_ass_subvalue_2 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_name_8, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_8);
+        tmp_right_value_8 = mod_consts[4];
+        tmp_ass_subvalue_2 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_value_8, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_8);
         if (tmp_ass_subvalue_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10251,26 +9267,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_subscript_name_6;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_subscript_value_6;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
         int tmp_ass_subscript_res_2;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 819;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_17 = par_c;
-        tmp_subscript_name_6 = mod_consts[4];
-        tmp_ass_subvalue_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_17, tmp_subscript_name_6, 0);
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_17 = par_c;
+        tmp_subscript_value_6 = mod_consts[4];
+        tmp_ass_subvalue_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_17, tmp_subscript_value_6, 0);
         if (tmp_ass_subvalue_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10281,18 +9286,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        if (var_tmp == NULL) {
-            Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 819;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(var_tmp);
         tmp_ass_subscribed_3 = var_tmp;
         tmp_ass_subscript_3 = mod_consts[3];
         tmp_ass_subscript_res_2 = SET_SUBSCRIPT_CONST(tmp_ass_subscribed_3, tmp_ass_subscript_3, 1, tmp_ass_subvalue_3);
@@ -10310,16 +9304,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_9;
-        PyObject *tmp_compexpr_right_9;
-        PyObject *tmp_tmp_condition_result_9_object_1;
+        PyObject *tmp_cmp_expr_left_9;
+        PyObject *tmp_cmp_expr_right_9;
         CHECK_OBJECT(var_n);
-        tmp_compexpr_left_9 = var_n;
-        tmp_compexpr_right_9 = mod_consts[3];
-        tmp_tmp_condition_result_9_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_9, tmp_compexpr_right_9);
-        assert(!(tmp_tmp_condition_result_9_object_1 == NULL));
-        tmp_condition_result_9 = CHECK_IF_TRUE(tmp_tmp_condition_result_9_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_9_object_1);
+        tmp_cmp_expr_left_9 = var_n;
+        tmp_cmp_expr_right_9 = mod_consts[3];
+        tmp_condition_result_9 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_9, tmp_cmp_expr_right_9);
         if (tmp_condition_result_9 != false) {
             goto branch_yes_9;
         } else {
@@ -10329,29 +9319,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     branch_yes_9:;
     {
         PyObject *tmp_ass_subvalue_4;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_subscript_name_7;
-        PyObject *tmp_right_name_9;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_subscript_value_7;
+        PyObject *tmp_right_value_9;
         PyObject *tmp_ass_subscribed_4;
         PyObject *tmp_ass_subscript_4;
         int tmp_ass_subscript_res_3;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 821;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_18 = par_c;
-        tmp_subscript_name_7 = mod_consts[3];
-        tmp_left_name_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_18, tmp_subscript_name_7, 1);
-        if (tmp_left_name_9 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_18 = par_c;
+        tmp_subscript_value_7 = mod_consts[3];
+        tmp_left_value_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_18, tmp_subscript_value_7, 1);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10361,9 +9340,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_right_name_9 = mod_consts[16];
-        tmp_ass_subvalue_4 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_name_9, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_9);
+        tmp_right_value_9 = mod_consts[15];
+        tmp_ass_subvalue_4 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_value_9, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_9);
         if (tmp_ass_subvalue_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10374,20 +9353,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_2;
         }
-        if (var_tmp == NULL) {
-            Py_DECREF(tmp_ass_subvalue_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 821;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(var_tmp);
         tmp_ass_subscribed_4 = var_tmp;
-        tmp_ass_subscript_4 = mod_consts[20];
+        tmp_ass_subscript_4 = mod_consts[18];
         tmp_ass_subscript_res_3 = SET_SUBSCRIPT_CONST(tmp_ass_subscribed_4, tmp_ass_subscript_4, 2, tmp_ass_subvalue_4);
         Py_DECREF(tmp_ass_subvalue_4);
         if (tmp_ass_subscript_res_3 == false) {
@@ -10407,7 +9375,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         PyObject *tmp_iter_arg_2;
         PyObject *tmp_xrange_low_2;
         PyObject *tmp_xrange_high_1;
-        tmp_xrange_low_2 = mod_consts[20];
+        tmp_xrange_low_2 = mod_consts[18];
         CHECK_OBJECT(var_n);
         tmp_xrange_high_1 = var_n;
         tmp_iter_arg_2 = BUILTIN_XRANGE2(tmp_xrange_low_2, tmp_xrange_high_1);
@@ -10482,31 +9450,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_assign_source_22;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_subscript_name_8;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_right_name_12;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 823;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_expression_name_19 = par_c;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_subscript_value_8;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_right_value_12;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_19 = par_c;
         CHECK_OBJECT(var_j);
-        tmp_subscript_name_8 = var_j;
-        tmp_left_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_19, tmp_subscript_name_8);
-        if (tmp_left_name_10 == NULL) {
+        tmp_subscript_value_8 = var_j;
+        tmp_left_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_19, tmp_subscript_value_8);
+        if (tmp_left_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10516,36 +9473,36 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_12 = mod_consts[20];
+        tmp_left_value_12 = mod_consts[18];
         CHECK_OBJECT(var_j);
-        tmp_right_name_11 = var_j;
-        tmp_left_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_11);
-        if (tmp_left_name_11 == NULL) {
+        tmp_right_value_11 = var_j;
+        tmp_left_value_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_12, tmp_right_value_11);
+        if (tmp_left_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_10);
+            Py_DECREF(tmp_left_value_10);
 
             exception_lineno = 823;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_right_name_12 = mod_consts[3];
-        tmp_right_name_10 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_11, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_11);
-        if (tmp_right_name_10 == NULL) {
+        tmp_right_value_12 = mod_consts[3];
+        tmp_right_value_10 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_11, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_11);
+        if (tmp_right_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_10);
+            Py_DECREF(tmp_left_value_10);
 
             exception_lineno = 823;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_assign_source_22 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_10);
-        Py_DECREF(tmp_left_name_10);
-        Py_DECREF(tmp_right_name_10);
+        tmp_assign_source_22 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_10);
+        Py_DECREF(tmp_left_value_10);
+        Py_DECREF(tmp_right_value_10);
         if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10567,13 +9524,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         PyObject *tmp_ass_subvalue_5;
         PyObject *tmp_ass_subscribed_5;
         PyObject *tmp_ass_subscript_5;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_right_name_13;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_right_value_13;
         CHECK_OBJECT(var_t);
         tmp_ass_subvalue_5 = var_t;
         if (var_tmp == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10584,21 +9541,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         }
 
         tmp_ass_subscribed_5 = var_tmp;
-        if (var_j == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 824;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_left_name_13 = var_j;
-        tmp_right_name_13 = mod_consts[3];
-        tmp_ass_subscript_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_13, tmp_right_name_13);
+        CHECK_OBJECT(var_j);
+        tmp_left_value_13 = var_j;
+        tmp_right_value_13 = mod_consts[3];
+        tmp_ass_subscript_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_13, tmp_right_value_13);
         if (tmp_ass_subscript_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10626,7 +9572,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         PyObject *tmp_assign_source_23;
         if (var_tmp == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10648,23 +9594,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_right_name_14;
-        if (var_j == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 825;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_left_name_14 = var_j;
-        tmp_right_name_14 = mod_consts[3];
-        tmp_assign_source_24 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_14, tmp_right_name_14);
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_right_value_14;
+        CHECK_OBJECT(var_j);
+        tmp_left_value_14 = var_j;
+        tmp_right_value_14 = mod_consts[3];
+        tmp_assign_source_24 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_14, tmp_right_value_14);
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10684,13 +9619,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_assign_source_25;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_subscript_name_9;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_subscript_value_9;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__target);
-        tmp_expression_name_20 = tmp_inplace_assign_subscr_2__target;
+        tmp_expression_value_20 = tmp_inplace_assign_subscr_2__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__subscript);
-        tmp_subscript_name_9 = tmp_inplace_assign_subscr_2__subscript;
-        tmp_assign_source_25 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_9);
+        tmp_subscript_value_9 = tmp_inplace_assign_subscr_2__subscript;
+        tmp_assign_source_25 = LOOKUP_SUBSCRIPT(tmp_expression_value_20, tmp_subscript_value_9);
         if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10710,13 +9645,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_assign_source_26;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_15;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_15;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__value);
-        tmp_left_name_15 = tmp_inplace_assign_subscr_2__value;
+        tmp_left_value_15 = tmp_inplace_assign_subscr_2__value;
         CHECK_OBJECT(var_t);
-        tmp_right_name_15 = var_t;
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_OBJECT_INPLACE(&tmp_left_name_15, tmp_right_name_15);
+        tmp_right_value_15 = var_t;
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_OBJECT_INPLACE(&tmp_left_value_15, tmp_right_value_15);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -10727,7 +9662,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_assign_source_26 = tmp_left_name_15;
+        tmp_assign_source_26 = tmp_left_value_15;
         tmp_inplace_assign_subscr_2__value = tmp_assign_source_26;
 
     }
@@ -10816,7 +9751,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
 
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -10829,13 +9765,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     try_end_3:;
     Py_XDECREF(tmp_for_loop_2__iter_value);
     tmp_for_loop_2__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_2__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_2__for_iterator);
+    Py_DECREF(tmp_for_loop_2__for_iterator);
     tmp_for_loop_2__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_27;
         if (var_tmp == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10868,13 +9805,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_29;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_subscript_name_10;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_subscript_value_10;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__target);
-        tmp_expression_name_21 = tmp_inplace_assign_subscr_3__target;
+        tmp_expression_value_21 = tmp_inplace_assign_subscr_3__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__subscript);
-        tmp_subscript_name_10 = tmp_inplace_assign_subscr_3__subscript;
-        tmp_assign_source_29 = LOOKUP_SUBSCRIPT(tmp_expression_name_21, tmp_subscript_name_10);
+        tmp_subscript_value_10 = tmp_inplace_assign_subscr_3__subscript;
+        tmp_assign_source_29 = LOOKUP_SUBSCRIPT(tmp_expression_value_21, tmp_subscript_value_10);
         if (tmp_assign_source_29 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10894,34 +9831,23 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     }
     {
         PyObject *tmp_assign_source_30;
-        PyObject *tmp_left_name_16;
-        PyObject *tmp_right_name_16;
-        PyObject *tmp_left_name_17;
-        PyObject *tmp_expression_name_22;
-        PyObject *tmp_subscript_name_11;
-        PyObject *tmp_right_name_17;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
+        PyObject *tmp_left_value_16;
+        PyObject *tmp_right_value_16;
+        PyObject *tmp_left_value_17;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_subscript_value_11;
+        PyObject *tmp_right_value_17;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_args_element_value_16;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__value);
-        tmp_left_name_16 = tmp_inplace_assign_subscr_3__value;
-        if (par_k == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 826;
-            type_description_1 = "ooooooooooooo";
-            goto try_except_handler_6;
-        }
-
-        tmp_expression_name_22 = par_k;
+        tmp_left_value_16 = tmp_inplace_assign_subscr_3__value;
+        CHECK_OBJECT(par_k);
+        tmp_expression_value_22 = par_k;
         CHECK_OBJECT(var_i);
-        tmp_subscript_name_11 = var_i;
-        tmp_left_name_17 = LOOKUP_SUBSCRIPT(tmp_expression_name_22, tmp_subscript_name_11);
-        if (tmp_left_name_17 == NULL) {
+        tmp_subscript_value_11 = var_i;
+        tmp_left_value_17 = LOOKUP_SUBSCRIPT(tmp_expression_value_22, tmp_subscript_value_11);
+        if (tmp_left_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10931,25 +9857,25 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_6;
         }
-        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_called_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_called_name_7 == NULL)) {
-            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_7 == NULL)) {
+            tmp_called_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_called_name_7 == NULL) {
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_17);
+            Py_DECREF(tmp_left_value_17);
 
             exception_lineno = 826;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_6;
         }
         if (par_lbnd == NULL) {
-            Py_DECREF(tmp_left_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
+            Py_DECREF(tmp_left_value_17);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10959,10 +9885,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto try_except_handler_6;
         }
 
-        tmp_args_element_name_15 = par_lbnd;
+        tmp_args_element_value_15 = par_lbnd;
         if (var_tmp == NULL) {
-            Py_DECREF(tmp_left_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
+            Py_DECREF(tmp_left_value_17);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -10972,27 +9898,27 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto try_except_handler_6;
         }
 
-        tmp_args_element_name_16 = var_tmp;
+        tmp_args_element_value_16 = var_tmp;
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 826;
         {
-            PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16};
-            tmp_right_name_17 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_15, tmp_args_element_value_16};
+            tmp_right_value_17 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_7, call_args);
         }
 
-        if (tmp_right_name_17 == NULL) {
+        if (tmp_right_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_17);
+            Py_DECREF(tmp_left_value_17);
 
             exception_lineno = 826;
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_6;
         }
-        tmp_right_name_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_17, tmp_right_name_17);
-        Py_DECREF(tmp_left_name_17);
-        Py_DECREF(tmp_right_name_17);
-        if (tmp_right_name_16 == NULL) {
+        tmp_right_value_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_17, tmp_right_value_17);
+        Py_DECREF(tmp_left_value_17);
+        Py_DECREF(tmp_right_value_17);
+        if (tmp_right_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11002,8 +9928,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_6;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_16, tmp_right_name_16);
-        Py_DECREF(tmp_right_name_16);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_16, tmp_right_value_16);
+        Py_DECREF(tmp_right_value_16);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11014,7 +9940,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_6;
         }
-        tmp_assign_source_30 = tmp_left_name_16;
+        tmp_assign_source_30 = tmp_left_value_16;
         tmp_inplace_assign_subscr_3__value = tmp_assign_source_30;
 
     }
@@ -11082,7 +10008,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         PyObject *tmp_assign_source_31;
         if (var_tmp == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[81]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11095,9 +10021,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
         tmp_assign_source_31 = var_tmp;
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_31;
             Py_INCREF(par_c);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -11128,7 +10055,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_5;
@@ -11141,22 +10069,23 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     try_end_5:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_32;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_args_element_name_18;
-        PyObject *tmp_args_element_name_19;
-        tmp_expression_name_23 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_args_element_value_19;
+        tmp_expression_value_23 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_23 == NULL)) {
-            tmp_expression_name_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_23 == NULL)) {
+            tmp_expression_value_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_23 == NULL) {
+        if (tmp_expression_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11166,8 +10095,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[62]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[58]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11178,8 +10107,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
         if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            Py_DECREF(tmp_called_value_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11189,28 +10118,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_17 = par_c;
-        tmp_args_element_name_18 = mod_consts[4];
-        if (var_iaxis == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[69]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 828;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_19 = var_iaxis;
+        tmp_args_element_value_17 = par_c;
+        tmp_args_element_value_18 = mod_consts[4];
+        CHECK_OBJECT(var_iaxis);
+        tmp_args_element_value_19 = var_iaxis;
         frame_4046f12a29503a963cfce2e87de1d922->m_frame.f_lineno = 828;
         {
-            PyObject *call_args[] = {tmp_args_element_name_17, tmp_args_element_name_18, tmp_args_element_name_19};
-            tmp_assign_source_32 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_8, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_17, tmp_args_element_value_18, tmp_args_element_value_19};
+            tmp_assign_source_32 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_8);
+        Py_DECREF(tmp_called_value_8);
         if (tmp_assign_source_32 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11310,16 +10228,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     try_return_handler_1:;
     Py_XDECREF(par_c);
     par_c = NULL;
-    Py_XDECREF(par_m);
-    par_m = NULL;
     Py_XDECREF(par_k);
     par_k = NULL;
-    Py_XDECREF(par_lbnd);
-    par_lbnd = NULL;
-    Py_XDECREF(par_scl);
-    par_scl = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
     Py_XDECREF(var_cnt);
     var_cnt = NULL;
     Py_XDECREF(var_iaxis);
@@ -11348,16 +10258,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
 
     Py_XDECREF(par_c);
     par_c = NULL;
-    Py_XDECREF(par_m);
-    par_m = NULL;
     Py_XDECREF(par_k);
     par_k = NULL;
-    Py_XDECREF(par_lbnd);
-    par_lbnd = NULL;
-    Py_XDECREF(par_scl);
-    par_scl = NULL;
-    Py_XDECREF(par_axis);
-    par_axis = NULL;
     Py_XDECREF(var_cnt);
     var_cnt = NULL;
     Py_XDECREF(var_iaxis);
@@ -11385,14 +10287,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__12_legint(struct Nui
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_m);
+    Py_DECREF(par_m);
+    CHECK_OBJECT(par_lbnd);
+    Py_DECREF(par_lbnd);
+    CHECK_OBJECT(par_scl);
+    Py_DECREF(par_scl);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_m);
+    Py_DECREF(par_m);
+    CHECK_OBJECT(par_lbnd);
+    Py_DECREF(par_lbnd);
+    CHECK_OBJECT(par_scl);
+    Py_DECREF(par_scl);
+    CHECK_OBJECT(par_axis);
+    Py_DECREF(par_axis);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -11468,18 +10384,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11489,8 +10405,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[25]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11502,14 +10418,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         }
         CHECK_OBJECT(par_c);
         tmp_tuple_element_1 = par_c;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[85]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[79]);
         frame_01495beb891c183ed8a5cf03c0c4ab59->m_frame.f_lineno = 891;
-        tmp_assign_source_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11522,21 +10438,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         }
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_1;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(par_c);
-        tmp_expression_name_3 = par_c;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[36]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_c;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[33]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11546,9 +10463,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[52]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[47]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11558,9 +10475,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[53];
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = mod_consts[48];
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11581,25 +10498,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_5;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 893;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_c;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[54]);
-        if (tmp_called_name_2 == NULL) {
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_5;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_4 = par_c;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[49]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11609,37 +10515,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 893;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[55]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[50]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 893;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
         frame_01495beb891c183ed8a5cf03c0c4ab59->m_frame.f_lineno = 893;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11652,8 +10558,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         }
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_2;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -11664,8 +10571,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         PyObject *tmp_isinstance_cls_1;
         CHECK_OBJECT(par_x);
         tmp_isinstance_inst_1 = par_x;
-        tmp_isinstance_cls_1 = mod_consts[86];
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_isinstance_cls_1 = mod_consts[80];
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11687,11 +10594,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_args_element_value_2;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -11705,9 +10612,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_2 = par_x;
+        tmp_args_element_value_2 = par_x;
         frame_01495beb891c183ed8a5cf03c0c4ab59->m_frame.f_lineno = 895;
-        tmp_assign_source_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[87], tmp_args_element_name_2);
+        tmp_assign_source_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[81], tmp_args_element_value_2);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11720,8 +10627,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         }
         {
             PyObject *old = par_x;
+            assert(old != NULL);
             par_x = tmp_assign_source_3;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -11733,17 +10641,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         nuitka_bool tmp_and_right_value_1;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_x);
         tmp_isinstance_inst_2 = par_x;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11753,7 +10661,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[88]);
+        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[82]);
         if (tmp_isinstance_cls_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11764,7 +10672,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         Py_DECREF(tmp_isinstance_cls_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -11821,18 +10729,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_expression_value_9;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11842,9 +10750,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = par_c;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[89]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_7 = par_c;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[83]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11855,8 +10763,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
         if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11866,63 +10774,63 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = par_c;
-        tmp_left_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[66]);
-        if (tmp_left_name_1 == NULL) {
+        tmp_expression_value_8 = par_c;
+        tmp_left_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[62]);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 897;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = mod_consts[90];
+        tmp_left_value_2 = mod_consts[84];
         CHECK_OBJECT(par_x);
-        tmp_expression_name_9 = par_x;
-        tmp_right_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[61]);
-        if (tmp_right_name_2 == NULL) {
+        tmp_expression_value_9 = par_x;
+        tmp_right_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[57]);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 897;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_TUPLE_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = BINARY_OPERATION_MULT_OBJECT_TUPLE_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 897;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 897;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
         frame_01495beb891c183ed8a5cf03c0c4ab59->m_frame.f_lineno = 897;
-        tmp_assign_source_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11943,13 +10851,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_4_object_1;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11960,8 +10867,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         }
 
         tmp_len_arg_1 = par_c;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11971,12 +10878,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[3];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_4_object_1 == NULL));
-        tmp_condition_result_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[3];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -11986,11 +10890,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_1;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12000,9 +10904,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_10 = par_c;
-        tmp_subscript_name_1 = mod_consts[4];
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_1, 0);
+        tmp_expression_value_10 = par_c;
+        tmp_subscript_value_1 = mod_consts[4];
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_10, tmp_subscript_value_1, 0);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12027,13 +10931,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_5_object_1;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12044,8 +10947,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         }
 
         tmp_len_arg_2 = par_c;
-        tmp_compexpr_left_3 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12055,12 +10958,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = mod_consts[20];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        assert(!(tmp_tmp_condition_result_5_object_1 == NULL));
-        tmp_condition_result_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
+        tmp_cmp_expr_right_3 = mod_consts[18];
+        tmp_condition_result_5 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -12070,11 +10970,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_subscript_value_2;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12084,9 +10984,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_11 = par_c;
-        tmp_subscript_name_2 = mod_consts[4];
-        tmp_assign_source_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_2, 0);
+        tmp_expression_value_11 = par_c;
+        tmp_subscript_value_2 = mod_consts[4];
+        tmp_assign_source_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_11, tmp_subscript_value_2, 0);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12102,11 +11002,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_3;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12116,9 +11016,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_12 = par_c;
-        tmp_subscript_name_3 = mod_consts[3];
-        tmp_assign_source_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_12, tmp_subscript_name_3, 1);
+        tmp_expression_value_12 = par_c;
+        tmp_subscript_value_3 = mod_consts[3];
+        tmp_assign_source_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_12, tmp_subscript_value_3, 1);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12139,7 +11039,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         PyObject *tmp_len_arg_3;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12166,11 +11066,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_4;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_4;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12180,9 +11080,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_13 = par_c;
-        tmp_subscript_name_4 = mod_consts[18];
-        tmp_assign_source_10 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_4, -2);
+        tmp_expression_value_13 = par_c;
+        tmp_subscript_value_4 = mod_consts[16];
+        tmp_assign_source_10 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_13, tmp_subscript_value_4, -2);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12198,11 +11098,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_5;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_5;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12212,9 +11112,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_14 = par_c;
-        tmp_subscript_name_5 = mod_consts[5];
-        tmp_assign_source_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_5, -1);
+        tmp_expression_value_14 = par_c;
+        tmp_subscript_value_5 = mod_consts[5];
+        tmp_assign_source_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_14, tmp_subscript_value_5, -1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12233,13 +11133,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_xrange_low_1;
         PyObject *tmp_xrange_high_1;
-        PyObject *tmp_left_name_3;
+        PyObject *tmp_left_value_3;
         PyObject *tmp_len_arg_4;
-        PyObject *tmp_right_name_3;
-        tmp_xrange_low_1 = mod_consts[16];
+        PyObject *tmp_right_value_3;
+        tmp_xrange_low_1 = mod_consts[15];
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12250,8 +11150,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         }
 
         tmp_len_arg_4 = par_c;
-        tmp_left_name_3 = BUILTIN_LEN(tmp_len_arg_4);
-        if (tmp_left_name_3 == NULL) {
+        tmp_left_value_3 = BUILTIN_LEN(tmp_len_arg_4);
+        if (tmp_left_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12261,9 +11161,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = mod_consts[3];
-        tmp_xrange_high_1 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_3);
+        tmp_right_value_3 = mod_consts[3];
+        tmp_xrange_high_1 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_3);
         assert(!(tmp_xrange_high_1 == NULL));
         tmp_iter_arg_1 = BUILTIN_XRANGE2(tmp_xrange_low_1, tmp_xrange_high_1);
         Py_DECREF(tmp_xrange_high_1);
@@ -12336,7 +11236,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
         PyObject *tmp_assign_source_15;
         if (var_c0 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12357,11 +11257,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     }
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
         if (var_nd == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[38]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12371,9 +11271,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_left_name_4 = var_nd;
-        tmp_right_name_4 = mod_consts[3];
-        tmp_assign_source_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_4, tmp_right_name_4);
+        tmp_left_value_4 = var_nd;
+        tmp_right_value_4 = mod_consts[3];
+        tmp_assign_source_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_4, tmp_right_value_4);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12393,20 +11293,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_subscript_name_6;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_right_name_8;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_subscript_value_6;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_right_value_8;
         if (par_c == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[56]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12416,11 +11316,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_15 = par_c;
+        tmp_expression_value_15 = par_c;
         CHECK_OBJECT(var_i);
-        tmp_operand_name_1 = var_i;
-        tmp_subscript_name_6 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
-        if (tmp_subscript_name_6 == NULL) {
+        tmp_operand_value_1 = var_i;
+        tmp_subscript_value_6 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_value_1);
+        if (tmp_subscript_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12430,9 +11330,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_6);
-        Py_DECREF(tmp_subscript_name_6);
-        if (tmp_left_name_5 == NULL) {
+        tmp_left_value_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_15, tmp_subscript_value_6);
+        Py_DECREF(tmp_subscript_value_6);
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12443,8 +11343,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto try_except_handler_2;
         }
         if (var_c1 == NULL) {
-            Py_DECREF(tmp_left_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            Py_DECREF(tmp_left_value_5);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12454,62 +11354,50 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_left_name_7 = var_c1;
+        tmp_left_value_7 = var_c1;
         CHECK_OBJECT(var_nd);
-        tmp_left_name_8 = var_nd;
-        tmp_right_name_7 = mod_consts[3];
-        tmp_right_name_6 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_8, tmp_right_name_7);
-        if (tmp_right_name_6 == NULL) {
+        tmp_left_value_8 = var_nd;
+        tmp_right_value_7 = mod_consts[3];
+        tmp_right_value_6 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_8, tmp_right_value_7);
+        if (tmp_right_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_5);
+            Py_DECREF(tmp_left_value_5);
 
             exception_lineno = 912;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_6);
-        Py_DECREF(tmp_right_name_6);
-        if (tmp_left_name_6 == NULL) {
+        tmp_left_value_6 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_6);
+        Py_DECREF(tmp_right_value_6);
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_5);
+            Py_DECREF(tmp_left_value_5);
 
             exception_lineno = 912;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        if (var_nd == NULL) {
-            Py_DECREF(tmp_left_name_5);
-            Py_DECREF(tmp_left_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 912;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_right_name_8 = var_nd;
-        tmp_right_name_5 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_6, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_6);
-        if (tmp_right_name_5 == NULL) {
+        CHECK_OBJECT(var_nd);
+        tmp_right_value_8 = var_nd;
+        tmp_right_value_5 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_6, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_6);
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_5);
+            Py_DECREF(tmp_left_value_5);
 
             exception_lineno = 912;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_17 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_5);
-        Py_DECREF(tmp_right_name_5);
+        tmp_assign_source_17 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_5);
+        Py_DECREF(tmp_right_value_5);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12529,23 +11417,23 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     }
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_right_name_12;
-        PyObject *tmp_right_name_13;
-        PyObject *tmp_right_name_14;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_right_value_12;
+        PyObject *tmp_right_value_13;
+        PyObject *tmp_right_value_14;
         CHECK_OBJECT(var_tmp);
-        tmp_left_name_9 = var_tmp;
+        tmp_left_value_9 = var_tmp;
         if (var_c1 == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12555,10 +11443,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_left_name_12 = var_c1;
+        tmp_left_value_12 = var_c1;
         if (par_x == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12568,9 +11456,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_right_name_10 = par_x;
-        tmp_left_name_11 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_12, tmp_right_name_10);
-        if (tmp_left_name_11 == NULL) {
+        tmp_right_value_10 = par_x;
+        tmp_left_value_11 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_12, tmp_right_value_10);
+        if (tmp_left_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12580,48 +11468,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_14 = mod_consts[20];
-        if (var_nd == NULL) {
-            Py_DECREF(tmp_left_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 913;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_right_name_12 = var_nd;
-        tmp_left_name_13 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_14, tmp_right_name_12);
-        if (tmp_left_name_13 == NULL) {
+        tmp_left_value_14 = mod_consts[18];
+        CHECK_OBJECT(var_nd);
+        tmp_right_value_12 = var_nd;
+        tmp_left_value_13 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_14, tmp_right_value_12);
+        if (tmp_left_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_11);
+            Py_DECREF(tmp_left_value_11);
 
             exception_lineno = 913;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_right_name_13 = mod_consts[3];
-        tmp_right_name_11 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_13, tmp_right_name_13);
-        Py_DECREF(tmp_left_name_13);
-        if (tmp_right_name_11 == NULL) {
+        tmp_right_value_13 = mod_consts[3];
+        tmp_right_value_11 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_13, tmp_right_value_13);
+        Py_DECREF(tmp_left_value_13);
+        if (tmp_right_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_11);
+            Py_DECREF(tmp_left_value_11);
 
             exception_lineno = 913;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_10 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_11, tmp_right_name_11);
-        Py_DECREF(tmp_left_name_11);
-        Py_DECREF(tmp_right_name_11);
-        if (tmp_left_name_10 == NULL) {
+        tmp_left_value_10 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_11, tmp_right_value_11);
+        Py_DECREF(tmp_left_value_11);
+        Py_DECREF(tmp_right_value_11);
+        if (tmp_left_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12631,22 +11508,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        if (var_nd == NULL) {
-            Py_DECREF(tmp_left_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[44]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 913;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_right_name_14 = var_nd;
-        tmp_right_name_9 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_14);
-        Py_DECREF(tmp_left_name_10);
-        if (tmp_right_name_9 == NULL) {
+        CHECK_OBJECT(var_nd);
+        tmp_right_value_14 = var_nd;
+        tmp_right_value_9 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_14);
+        Py_DECREF(tmp_left_value_10);
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12656,8 +11522,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_18 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_9);
-        Py_DECREF(tmp_right_name_9);
+        tmp_assign_source_18 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_9);
+        Py_DECREF(tmp_right_value_9);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12701,7 +11567,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -12714,16 +11581,30 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_end_5:;
     branch_end_4:;
     {
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_15;
-        PyObject *tmp_left_name_16;
-        PyObject *tmp_right_name_16;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_15;
+        PyObject *tmp_left_value_16;
+        PyObject *tmp_right_value_16;
         if (var_c0 == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 914;
+            type_description_1 = "oooooooo";
+            goto frame_exception_exit_1;
+        }
+
+        tmp_left_value_15 = var_c0;
+        if (var_c1 == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
             exception_tb = NULL;
@@ -12735,23 +11616,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_15 = var_c0;
-        if (var_c1 == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 914;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_16 = var_c1;
+        tmp_left_value_16 = var_c1;
         if (par_x == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12761,9 +11629,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             goto frame_exception_exit_1;
         }
 
-        tmp_right_name_16 = par_x;
-        tmp_right_name_15 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_16, tmp_right_name_16);
-        if (tmp_right_name_15 == NULL) {
+        tmp_right_value_16 = par_x;
+        tmp_right_value_15 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_16, tmp_right_value_16);
+        if (tmp_right_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12773,8 +11641,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_15, tmp_right_name_15);
-        Py_DECREF(tmp_right_name_15);
+        tmp_return_value = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_15, tmp_right_value_15);
+        Py_DECREF(tmp_right_value_15);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12862,9 +11730,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     par_x = NULL;
     Py_XDECREF(par_c);
     par_c = NULL;
-    CHECK_OBJECT(par_tensor);
-    Py_DECREF(par_tensor);
-    par_tensor = NULL;
     Py_XDECREF(var_c0);
     var_c0 = NULL;
     Py_XDECREF(var_c1);
@@ -12891,9 +11756,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     par_x = NULL;
     Py_XDECREF(par_c);
     par_c = NULL;
-    CHECK_OBJECT(par_tensor);
-    Py_DECREF(par_tensor);
-    par_tensor = NULL;
     Py_XDECREF(var_c0);
     var_c0 = NULL;
     Py_XDECREF(var_c1);
@@ -12917,14 +11779,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__13_legval(struct Nui
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_tensor);
+    Py_DECREF(par_tensor);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_tensor);
+    Py_DECREF(par_tensor);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -12952,13 +11816,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__14_legval2d(struct N
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_32004e5804c7f2e402699ef6f2d6a82c = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_32004e5804c7f2e402699ef6f2d6a82c)) {
         Py_XDECREF(cache_frame_32004e5804c7f2e402699ef6f2d6a82c);
 
@@ -12987,19 +11846,19 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__14_legval2d(struct N
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13009,8 +11868,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__14_legval2d(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[93]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[87]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13020,35 +11879,35 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__14_legval2d(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 963;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c);
-        tmp_args_element_name_2 = par_c;
+        tmp_args_element_value_2 = par_c;
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_3 = par_x;
+        tmp_args_element_value_3 = par_x;
         CHECK_OBJECT(par_y);
-        tmp_args_element_name_4 = par_y;
+        tmp_args_element_value_4 = par_y;
         frame_32004e5804c7f2e402699ef6f2d6a82c->m_frame.f_lineno = 963;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13079,7 +11938,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__14_legval2d(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -13120,58 +11979,32 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__14_legval2d(struct N
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -13199,13 +12032,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__15_leggrid2d(struct 
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_0e63366b91b6bfa5ea39536d2c1dca64 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_0e63366b91b6bfa5ea39536d2c1dca64)) {
         Py_XDECREF(cache_frame_0e63366b91b6bfa5ea39536d2c1dca64);
 
@@ -13234,19 +12062,19 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__15_leggrid2d(struct 
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13256,8 +12084,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__15_leggrid2d(struct 
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[95]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[89]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13267,35 +12095,35 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__15_leggrid2d(struct 
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1016;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c);
-        tmp_args_element_name_2 = par_c;
+        tmp_args_element_value_2 = par_c;
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_3 = par_x;
+        tmp_args_element_value_3 = par_x;
         CHECK_OBJECT(par_y);
-        tmp_args_element_name_4 = par_y;
+        tmp_args_element_value_4 = par_y;
         frame_0e63366b91b6bfa5ea39536d2c1dca64->m_frame.f_lineno = 1016;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13326,7 +12154,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__15_leggrid2d(struct 
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -13367,58 +12195,32 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__15_leggrid2d(struct 
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -13447,13 +12249,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__16_legval3d(struct N
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_7f31b05f4766882347fe368ea32a4f96 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_7f31b05f4766882347fe368ea32a4f96)) {
         Py_XDECREF(cache_frame_7f31b05f4766882347fe368ea32a4f96);
 
@@ -13482,20 +12279,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__16_legval3d(struct N
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13505,8 +12302,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__16_legval3d(struct N
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[93]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[87]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13516,37 +12313,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__16_legval3d(struct N
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1067;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c);
-        tmp_args_element_name_2 = par_c;
+        tmp_args_element_value_2 = par_c;
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_3 = par_x;
+        tmp_args_element_value_3 = par_x;
         CHECK_OBJECT(par_y);
-        tmp_args_element_name_4 = par_y;
+        tmp_args_element_value_4 = par_y;
         CHECK_OBJECT(par_z);
-        tmp_args_element_name_5 = par_z;
+        tmp_args_element_value_5 = par_z;
         frame_7f31b05f4766882347fe368ea32a4f96->m_frame.f_lineno = 1067;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13577,7 +12374,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__16_legval3d(struct N
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -13619,62 +12416,36 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__16_legval3d(struct N
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_z);
-    par_z = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_z);
-    par_z = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_z);
+    Py_DECREF(par_z);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_z);
+    Py_DECREF(par_z);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -13703,13 +12474,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__17_leggrid3d(struct 
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_b7e32b7e69d2cbadcadbc5f01daff07d = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_b7e32b7e69d2cbadcadbc5f01daff07d)) {
         Py_XDECREF(cache_frame_b7e32b7e69d2cbadcadbc5f01daff07d);
 
@@ -13738,20 +12504,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__17_leggrid3d(struct 
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13761,8 +12527,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__17_leggrid3d(struct 
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[95]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[89]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13772,37 +12538,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__17_leggrid3d(struct 
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1123;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_c);
-        tmp_args_element_name_2 = par_c;
+        tmp_args_element_value_2 = par_c;
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_3 = par_x;
+        tmp_args_element_value_3 = par_x;
         CHECK_OBJECT(par_y);
-        tmp_args_element_name_4 = par_y;
+        tmp_args_element_value_4 = par_y;
         CHECK_OBJECT(par_z);
-        tmp_args_element_name_5 = par_z;
+        tmp_args_element_value_5 = par_z;
         frame_b7e32b7e69d2cbadcadbc5f01daff07d->m_frame.f_lineno = 1123;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13833,7 +12599,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__17_leggrid3d(struct 
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -13875,62 +12641,36 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__17_leggrid3d(struct 
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_z);
-    par_z = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_z);
-    par_z = NULL;
-    Py_XDECREF(par_c);
-    par_c = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_z);
+    Py_DECREF(par_z);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_z);
+    Py_DECREF(par_z);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -13962,7 +12702,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    int tmp_res;
     bool tmp_result;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -14007,8 +12746,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -14026,14 +12765,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_deg);
-        tmp_args_element_name_1 = par_deg;
-        tmp_args_element_name_2 = mod_consts[99];
+        tmp_args_element_value_1 = par_deg;
+        tmp_args_element_value_2 = mod_consts[93];
         frame_038f886b0b650a18c69868f6191068c5->m_frame.f_lineno = 1161;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[56],
+                mod_consts[51],
                 call_args
             );
         }
@@ -14053,15 +12792,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_ideg);
-        tmp_compexpr_left_1 = var_ideg;
-        tmp_compexpr_right_1 = mod_consts[4];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_ideg;
+        tmp_cmp_expr_right_1 = mod_consts[4];
+        tmp_condition_result_1 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14071,30 +12808,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 1162;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[100];
+        tmp_make_exception_arg_1 = mod_consts[94];
         frame_038f886b0b650a18c69868f6191068c5->m_frame.f_lineno = 1163;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -14107,20 +12832,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_kwargs_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14130,8 +12855,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[25]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14143,15 +12868,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
         }
         CHECK_OBJECT(par_x);
         tmp_tuple_element_1 = par_x;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[101]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[95]);
         frame_038f886b0b650a18c69868f6191068c5->m_frame.f_lineno = 1165;
-        tmp_left_name_1 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14161,9 +12886,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[102];
-        tmp_assign_source_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = mod_consts[96];
+        tmp_assign_source_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14176,23 +12901,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
         }
         {
             PyObject *old = par_x;
+            assert(old != NULL);
             par_x = tmp_assign_source_2;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_left_name_2;
+        PyObject *tmp_left_value_2;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(var_ideg);
-        tmp_left_name_3 = var_ideg;
-        tmp_right_name_2 = mod_consts[3];
-        tmp_tuple_element_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_2);
+        tmp_left_value_3 = var_ideg;
+        tmp_right_value_2 = mod_consts[3];
+        tmp_tuple_element_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_2);
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14203,24 +12929,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_left_name_2, 0, tmp_tuple_element_2);
+        tmp_left_value_2 = PyTuple_New(1);
+        PyTuple_SET_ITEM(tmp_left_value_2, 0, tmp_tuple_element_2);
         CHECK_OBJECT(par_x);
-        tmp_expression_name_2 = par_x;
-        tmp_right_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[66]);
-        if (tmp_right_name_3 == NULL) {
+        tmp_expression_value_2 = par_x;
+        tmp_right_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[62]);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_2);
+            Py_DECREF(tmp_left_value_2);
 
             exception_lineno = 1166;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_3 = BINARY_OPERATION_ADD_OBJECT_TUPLE_OBJECT(tmp_left_name_2, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_2);
-        Py_DECREF(tmp_right_name_3);
+        tmp_assign_source_3 = BINARY_OPERATION_ADD_OBJECT_TUPLE_OBJECT(tmp_left_value_2, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_2);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14236,21 +12962,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_3;
-        if (par_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1167;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_x;
-        tmp_assign_source_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[36]);
+        PyObject *tmp_expression_value_3;
+        CHECK_OBJECT(par_x);
+        tmp_expression_value_3 = par_x;
+        tmp_assign_source_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[33]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14266,20 +12981,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_2;
-        PyObject *tmp_tuple_element_3;
-        PyObject *tmp_kwargs_name_2;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_kw_call_arg_value_0_1;
+        PyObject *tmp_kw_call_dict_value_0_1;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14289,8 +13001,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[35]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[32]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14301,20 +13013,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_dims);
-        tmp_tuple_element_3 = var_dims;
-        tmp_args_name_2 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
-        tmp_dict_key_1 = mod_consts[36];
+        tmp_kw_call_arg_value_0_1 = var_dims;
         CHECK_OBJECT(var_dtyp);
-        tmp_dict_value_1 = var_dtyp;
-        tmp_kwargs_name_2 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_2, tmp_dict_key_1, tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_kw_call_dict_value_0_1 = var_dtyp;
         frame_038f886b0b650a18c69868f6191068c5->m_frame.f_lineno = 1168;
-        tmp_assign_source_5 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_2);
-        Py_DECREF(tmp_kwargs_name_2);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[34]);
+        }
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14330,29 +13039,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     }
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_right_name_5;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_right_value_5;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
         int tmp_ass_subscript_res_1;
-        if (par_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1171;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_5 = par_x;
-        tmp_right_name_4 = mod_consts[4];
-        tmp_left_name_4 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_name_5, tmp_right_name_4);
-        if (tmp_left_name_4 == NULL) {
+        CHECK_OBJECT(par_x);
+        tmp_left_value_5 = par_x;
+        tmp_right_value_4 = mod_consts[4];
+        tmp_left_value_4 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_value_5, tmp_right_value_4);
+        if (tmp_left_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14362,9 +13060,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_5 = mod_consts[3];
-        tmp_ass_subvalue_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_4, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_4);
+        tmp_right_value_5 = mod_consts[3];
+        tmp_ass_subvalue_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_4, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_4);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14393,26 +13091,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
-        if (var_ideg == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[103]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1172;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_2 = var_ideg;
-        tmp_compexpr_right_2 = mod_consts[4];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        CHECK_OBJECT(var_ideg);
+        tmp_cmp_expr_left_2 = var_ideg;
+        tmp_cmp_expr_right_2 = mod_consts[4];
+        tmp_condition_result_2 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14422,24 +13107,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 1172;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -14447,31 +13120,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
         int tmp_ass_subscript_res_2;
-        if (par_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1173;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_x);
         tmp_ass_subvalue_2 = par_x;
-        if (var_v == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[104]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1173;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_v);
         tmp_ass_subscribed_2 = var_v;
         tmp_ass_subscript_2 = mod_consts[3];
         tmp_ass_subscript_res_2 = SET_SUBSCRIPT_CONST(tmp_ass_subscribed_2, tmp_ass_subscript_2, 1, tmp_ass_subvalue_2);
@@ -14491,24 +13142,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_xrange_low_1;
         PyObject *tmp_xrange_high_1;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
-        tmp_xrange_low_1 = mod_consts[20];
-        if (var_ideg == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[103]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1174;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_6 = var_ideg;
-        tmp_right_name_6 = mod_consts[3];
-        tmp_xrange_high_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_6, tmp_right_name_6);
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
+        tmp_xrange_low_1 = mod_consts[18];
+        CHECK_OBJECT(var_ideg);
+        tmp_left_value_6 = var_ideg;
+        tmp_right_value_6 = mod_consts[3];
+        tmp_xrange_high_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_6, tmp_right_value_6);
         if (tmp_xrange_high_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14588,35 +13228,35 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     }
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_right_name_12;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_13;
-        PyObject *tmp_right_name_14;
-        PyObject *tmp_left_name_16;
-        PyObject *tmp_right_name_15;
-        PyObject *tmp_right_name_16;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_right_value_12;
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_13;
+        PyObject *tmp_right_value_14;
+        PyObject *tmp_left_value_16;
+        PyObject *tmp_right_value_15;
+        PyObject *tmp_right_value_16;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
         if (var_v == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[104]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14626,12 +13266,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = var_v;
+        tmp_expression_value_5 = var_v;
         CHECK_OBJECT(var_i);
-        tmp_left_name_11 = var_i;
-        tmp_right_name_7 = mod_consts[3];
-        tmp_subscript_name_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_11, tmp_right_name_7);
-        if (tmp_subscript_name_1 == NULL) {
+        tmp_left_value_11 = var_i;
+        tmp_right_value_7 = mod_consts[3];
+        tmp_subscript_value_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_11, tmp_right_value_7);
+        if (tmp_subscript_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14641,9 +13281,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_1);
-        Py_DECREF(tmp_subscript_name_1);
-        if (tmp_left_name_10 == NULL) {
+        tmp_left_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_1);
+        Py_DECREF(tmp_subscript_value_1);
+        if (tmp_left_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14654,8 +13294,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto try_except_handler_2;
         }
         if (par_x == NULL) {
-            Py_DECREF(tmp_left_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
+            Py_DECREF(tmp_left_value_10);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[85]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14665,10 +13305,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto try_except_handler_2;
         }
 
-        tmp_right_name_8 = par_x;
-        tmp_left_name_9 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_10);
-        if (tmp_left_name_9 == NULL) {
+        tmp_right_value_8 = par_x;
+        tmp_left_value_9 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_10);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14678,48 +13318,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_13 = mod_consts[20];
-        if (var_i == NULL) {
-            Py_DECREF(tmp_left_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1175;
-            type_description_1 = "ooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_right_name_10 = var_i;
-        tmp_left_name_12 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_13, tmp_right_name_10);
-        if (tmp_left_name_12 == NULL) {
+        tmp_left_value_13 = mod_consts[18];
+        CHECK_OBJECT(var_i);
+        tmp_right_value_10 = var_i;
+        tmp_left_value_12 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_13, tmp_right_value_10);
+        if (tmp_left_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 1175;
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_right_name_11 = mod_consts[3];
-        tmp_right_name_9 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_12, tmp_right_name_11);
-        Py_DECREF(tmp_left_name_12);
-        if (tmp_right_name_9 == NULL) {
+        tmp_right_value_11 = mod_consts[3];
+        tmp_right_value_9 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_12, tmp_right_value_11);
+        Py_DECREF(tmp_left_value_12);
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 1175;
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_8 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_9);
-        Py_DECREF(tmp_left_name_9);
-        Py_DECREF(tmp_right_name_9);
-        if (tmp_left_name_8 == NULL) {
+        tmp_left_value_8 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_9);
+        Py_DECREF(tmp_left_value_9);
+        Py_DECREF(tmp_right_value_9);
+        if (tmp_left_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14730,8 +13359,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto try_except_handler_2;
         }
         if (var_v == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[104]);
+            Py_DECREF(tmp_left_value_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14741,88 +13370,65 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_6 = var_v;
-        if (var_i == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1175;
-            type_description_1 = "ooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_left_name_15 = var_i;
-        tmp_right_name_13 = mod_consts[20];
-        tmp_subscript_name_2 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_15, tmp_right_name_13);
-        if (tmp_subscript_name_2 == NULL) {
+        tmp_expression_value_6 = var_v;
+        CHECK_OBJECT(var_i);
+        tmp_left_value_15 = var_i;
+        tmp_right_value_13 = mod_consts[18];
+        tmp_subscript_value_2 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_15, tmp_right_value_13);
+        if (tmp_subscript_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 1175;
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_2);
-        Py_DECREF(tmp_subscript_name_2);
-        if (tmp_left_name_14 == NULL) {
+        tmp_left_value_14 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_2);
+        Py_DECREF(tmp_subscript_value_2);
+        if (tmp_left_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 1175;
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        if (var_i == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1175;
-            type_description_1 = "ooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_left_name_16 = var_i;
-        tmp_right_name_15 = mod_consts[3];
-        tmp_right_name_14 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_16, tmp_right_name_15);
-        if (tmp_right_name_14 == NULL) {
+        CHECK_OBJECT(var_i);
+        tmp_left_value_16 = var_i;
+        tmp_right_value_15 = mod_consts[3];
+        tmp_right_value_14 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_16, tmp_right_value_15);
+        if (tmp_right_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
-            Py_DECREF(tmp_left_name_14);
+            Py_DECREF(tmp_left_value_8);
+            Py_DECREF(tmp_left_value_14);
 
             exception_lineno = 1175;
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_right_name_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_14, tmp_right_name_14);
-        Py_DECREF(tmp_left_name_14);
-        Py_DECREF(tmp_right_name_14);
-        if (tmp_right_name_12 == NULL) {
+        tmp_right_value_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_14, tmp_right_value_14);
+        Py_DECREF(tmp_left_value_14);
+        Py_DECREF(tmp_right_value_14);
+        if (tmp_right_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 1175;
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        tmp_left_name_7 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_8);
-        Py_DECREF(tmp_right_name_12);
-        if (tmp_left_name_7 == NULL) {
+        tmp_left_value_7 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_8);
+        Py_DECREF(tmp_right_value_12);
+        if (tmp_left_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14832,21 +13438,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto try_except_handler_2;
         }
-        if (var_i == NULL) {
-            Py_DECREF(tmp_left_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1175;
-            type_description_1 = "ooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_right_name_16 = var_i;
-        tmp_ass_subvalue_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_16);
-        Py_DECREF(tmp_left_name_7);
+        CHECK_OBJECT(var_i);
+        tmp_right_value_16 = var_i;
+        tmp_ass_subvalue_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_16);
+        Py_DECREF(tmp_left_value_7);
         if (tmp_ass_subvalue_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14859,7 +13454,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
         }
         if (var_v == NULL) {
             Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[104]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14870,18 +13465,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
         }
 
         tmp_ass_subscribed_3 = var_v;
-        if (var_i == NULL) {
-            Py_DECREF(tmp_ass_subvalue_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[22]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1175;
-            type_description_1 = "ooooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(var_i);
         tmp_ass_subscript_3 = var_i;
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_3, tmp_ass_subscript_3, tmp_ass_subvalue_3);
         Py_DECREF(tmp_ass_subvalue_3);
@@ -14922,7 +13506,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
 
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -14935,22 +13520,23 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     try_end_1:;
     Py_XDECREF(tmp_for_loop_1__iter_value);
     tmp_for_loop_1__iter_value = NULL;
-    Py_XDECREF(tmp_for_loop_1__for_iterator);
+    CHECK_OBJECT(tmp_for_loop_1__for_iterator);
+    Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     branch_no_2:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14960,8 +13546,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[62]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[58]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14972,8 +13558,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto frame_exception_exit_1;
         }
         if (var_v == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[104]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14983,16 +13569,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = var_v;
-        tmp_args_element_name_4 = mod_consts[4];
-        tmp_args_element_name_5 = mod_consts[5];
+        tmp_args_element_value_3 = var_v;
+        tmp_args_element_value_4 = mod_consts[4];
+        tmp_args_element_value_5 = mod_consts[5];
         frame_038f886b0b650a18c69868f6191068c5->m_frame.f_lineno = 1176;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15077,13 +13663,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     try_return_handler_1:;
     Py_XDECREF(par_x);
     par_x = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
-    Py_XDECREF(var_ideg);
+    CHECK_OBJECT(var_ideg);
+    Py_DECREF(var_ideg);
     var_ideg = NULL;
-    Py_XDECREF(var_dims);
+    CHECK_OBJECT(var_dims);
+    Py_DECREF(var_dims);
     var_dims = NULL;
-    Py_XDECREF(var_dtyp);
+    CHECK_OBJECT(var_dtyp);
+    Py_DECREF(var_dtyp);
     var_dtyp = NULL;
     Py_XDECREF(var_v);
     var_v = NULL;
@@ -15103,8 +13690,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
 
     Py_XDECREF(par_x);
     par_x = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
     Py_XDECREF(var_ideg);
     var_ideg = NULL;
     Py_XDECREF(var_dims);
@@ -15128,14 +13713,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__18_legvander(struct 
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -15163,13 +13750,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__19_legvander2d(struc
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_d80531f48351e217aabdfe546921ecb0 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_d80531f48351e217aabdfe546921ecb0)) {
         Py_XDECREF(cache_frame_d80531f48351e217aabdfe546921ecb0);
 
@@ -15198,20 +13780,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__19_legvander2d(struc
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15221,8 +13803,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__19_legvander2d(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[106]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[99]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15232,28 +13814,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__19_legvander2d(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[107]);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[100]);
 
         if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
         }
 
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1229;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 0, tmp_tuple_element_1);
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[107]);
+        tmp_args_element_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[100]);
 
         if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
         }
 
         if (tmp_tuple_element_1 == NULL) {
@@ -15266,33 +13848,33 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__19_legvander2d(struc
             type_description_1 = "ooo";
             goto tuple_build_exception_1;
         }
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 1, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         CHECK_OBJECT(par_x);
         tmp_tuple_element_2 = par_x;
-        tmp_args_element_name_2 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_element_name_2, 0, tmp_tuple_element_2);
+        tmp_args_element_value_2 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_2, 0, tmp_tuple_element_2);
         CHECK_OBJECT(par_y);
         tmp_tuple_element_2 = par_y;
-        PyTuple_SET_ITEM0(tmp_args_element_name_2, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_2, 1, tmp_tuple_element_2);
         CHECK_OBJECT(par_deg);
-        tmp_args_element_name_3 = par_deg;
+        tmp_args_element_value_3 = par_deg;
         frame_d80531f48351e217aabdfe546921ecb0->m_frame.f_lineno = 1229;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15323,7 +13905,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__19_legvander2d(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -15364,58 +13946,32 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__19_legvander2d(struc
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -15444,13 +14000,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__20_legvander3d(struc
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_75e281dec0ab1eb77196907195e40afd = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_75e281dec0ab1eb77196907195e40afd)) {
         Py_XDECREF(cache_frame_75e281dec0ab1eb77196907195e40afd);
 
@@ -15479,20 +14030,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__20_legvander3d(struc
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_3;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15502,8 +14053,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__20_legvander3d(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[106]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[99]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15513,45 +14064,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__20_legvander3d(struc
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[107]);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[100]);
 
         if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
         }
 
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1283;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 0, tmp_tuple_element_1);
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[107]);
+        tmp_args_element_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[100]);
 
         if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
-        }
-
-        if (tmp_tuple_element_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1283;
-            type_description_1 = "oooo";
-            goto tuple_build_exception_1;
-        }
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 1, tmp_tuple_element_1);
-        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[107]);
-
-        if (unlikely(tmp_tuple_element_1 == NULL)) {
-            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
         }
 
         if (tmp_tuple_element_1 == NULL) {
@@ -15564,36 +14098,53 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__20_legvander3d(struc
             type_description_1 = "oooo";
             goto tuple_build_exception_1;
         }
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 2, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 1, tmp_tuple_element_1);
+        tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[100]);
+
+        if (unlikely(tmp_tuple_element_1 == NULL)) {
+            tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
+        }
+
+        if (tmp_tuple_element_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1283;
+            type_description_1 = "oooo";
+            goto tuple_build_exception_1;
+        }
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 2, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         CHECK_OBJECT(par_x);
         tmp_tuple_element_2 = par_x;
-        tmp_args_element_name_2 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_element_name_2, 0, tmp_tuple_element_2);
+        tmp_args_element_value_2 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_element_value_2, 0, tmp_tuple_element_2);
         CHECK_OBJECT(par_y);
         tmp_tuple_element_2 = par_y;
-        PyTuple_SET_ITEM0(tmp_args_element_name_2, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_2, 1, tmp_tuple_element_2);
         CHECK_OBJECT(par_z);
         tmp_tuple_element_2 = par_z;
-        PyTuple_SET_ITEM0(tmp_args_element_name_2, 2, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_2, 2, tmp_tuple_element_2);
         CHECK_OBJECT(par_deg);
-        tmp_args_element_name_3 = par_deg;
+        tmp_args_element_value_3 = par_deg;
         frame_75e281dec0ab1eb77196907195e40afd->m_frame.f_lineno = 1283;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15624,7 +14175,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__20_legvander3d(struc
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -15666,62 +14217,36 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__20_legvander3d(struc
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_z);
-    par_z = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_z);
-    par_z = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_z);
+    Py_DECREF(par_z);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_z);
+    Py_DECREF(par_z);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -15752,13 +14277,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__21_legfit(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_16476513b85a0cb8c6181278c8a54db0 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_16476513b85a0cb8c6181278c8a54db0)) {
         Py_XDECREF(cache_frame_16476513b85a0cb8c6181278c8a54db0);
 
@@ -15787,22 +14307,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__21_legfit(struct Nui
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15812,8 +14332,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__21_legfit(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[110]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[103]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15823,41 +14343,41 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__21_legfit(struct Nui
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[107]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[100]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[107]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1411;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_x);
-        tmp_args_element_name_2 = par_x;
+        tmp_args_element_value_2 = par_x;
         CHECK_OBJECT(par_y);
-        tmp_args_element_name_3 = par_y;
+        tmp_args_element_value_3 = par_y;
         CHECK_OBJECT(par_deg);
-        tmp_args_element_name_4 = par_deg;
+        tmp_args_element_value_4 = par_deg;
         CHECK_OBJECT(par_rcond);
-        tmp_args_element_name_5 = par_rcond;
+        tmp_args_element_value_5 = par_rcond;
         CHECK_OBJECT(par_full);
-        tmp_args_element_name_6 = par_full;
+        tmp_args_element_value_6 = par_full;
         CHECK_OBJECT(par_w);
-        tmp_args_element_name_7 = par_w;
+        tmp_args_element_value_7 = par_w;
         frame_16476513b85a0cb8c6181278c8a54db0->m_frame.f_lineno = 1411;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS7(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS7(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15888,7 +14408,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__21_legfit(struct Nui
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -15932,70 +14452,44 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__21_legfit(struct Nui
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
-    Py_XDECREF(par_rcond);
-    par_rcond = NULL;
-    Py_XDECREF(par_full);
-    par_full = NULL;
-    Py_XDECREF(par_w);
-    par_w = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_x);
-    par_x = NULL;
-    Py_XDECREF(par_y);
-    par_y = NULL;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
-    Py_XDECREF(par_rcond);
-    par_rcond = NULL;
-    Py_XDECREF(par_full);
-    par_full = NULL;
-    Py_XDECREF(par_w);
-    par_w = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);
+    CHECK_OBJECT(par_rcond);
+    Py_DECREF(par_rcond);
+    CHECK_OBJECT(par_full);
+    Py_DECREF(par_full);
+    CHECK_OBJECT(par_w);
+    Py_DECREF(par_w);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
+    CHECK_OBJECT(par_y);
+    Py_DECREF(par_y);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);
+    CHECK_OBJECT(par_rcond);
+    Py_DECREF(par_rcond);
+    CHECK_OBJECT(par_full);
+    Py_DECREF(par_full);
+    CHECK_OBJECT(par_w);
+    Py_DECREF(par_w);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -16018,7 +14512,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     PyObject *var_scl = NULL;
     PyObject *var_top = NULL;
     PyObject *var_bot = NULL;
-    PyObject *tmp_inplace_assign_subscr_1__subscript = NULL;
     PyObject *tmp_inplace_assign_subscr_1__target = NULL;
     PyObject *tmp_inplace_assign_subscr_1__value = NULL;
     PyObject *tmp_tuple_unpack_1__element_1 = NULL;
@@ -16039,7 +14532,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
     PyObject *tmp_return_value = NULL;
-    int tmp_res;
     bool tmp_result;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
@@ -16085,7 +14577,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -16105,11 +14597,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
         }
         CHECK_OBJECT(par_c);
         tmp_list_element_1 = par_c;
-        tmp_args_element_name_1 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1441;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16209,7 +14701,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -16243,7 +14736,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_3;
@@ -16251,27 +14745,25 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
         tmp_assign_source_3 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_3;
             Py_INCREF(par_c);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_1);
     tmp_tuple_unpack_1__element_1 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
         CHECK_OBJECT(par_c);
         tmp_len_arg_1 = par_c;
-        tmp_compexpr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16281,12 +14773,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[20];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        assert(!(tmp_tmp_condition_result_1_object_1 == NULL));
-        tmp_condition_result_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
+        tmp_cmp_expr_right_1 = mod_consts[18];
+        tmp_condition_result_1 = RICH_COMPARE_LT_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -16297,7 +14786,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[112];
+        tmp_make_exception_arg_1 = mod_consts[105];
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1443;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -16310,25 +14799,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1444;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c);
         tmp_len_arg_2 = par_c;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16338,12 +14815,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[20];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_2_object_1 == NULL));
-        tmp_condition_result_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[18];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -16352,25 +14826,25 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_list_element_2;
         PyObject *tmp_list_element_3;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16380,8 +14854,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[25]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16391,78 +14865,55 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1445;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_c;
-        tmp_subscript_name_1 = mod_consts[4];
-        tmp_operand_name_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
-        if (tmp_operand_name_1 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_2 = par_c;
+        tmp_subscript_value_1 = mod_consts[4];
+        tmp_operand_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1445;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1445;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1445;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_c;
-        tmp_subscript_name_2 = mod_consts[3];
-        tmp_right_name_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_2, 1);
-        if (tmp_right_name_1 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_3 = par_c;
+        tmp_subscript_value_2 = mod_consts[3];
+        tmp_right_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_3, tmp_subscript_value_2, 1);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 1445;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_list_element_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_list_element_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_list_element_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1445;
             type_description_1 = "oooooo";
@@ -16470,12 +14921,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
         }
         tmp_list_element_2 = PyList_New(1);
         PyList_SET_ITEM(tmp_list_element_2, 0, tmp_list_element_3);
-        tmp_args_element_name_2 = PyList_New(1);
-        PyList_SET_ITEM(tmp_args_element_name_2, 0, tmp_list_element_2);
+        tmp_args_element_value_2 = PyList_New(1);
+        PyList_SET_ITEM(tmp_args_element_value_2, 0, tmp_list_element_2);
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1445;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16491,24 +14942,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     branch_no_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_left_name_2;
+        PyObject *tmp_left_value_2;
         PyObject *tmp_len_arg_3;
-        PyObject *tmp_right_name_2;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1447;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyObject *tmp_right_value_2;
+        CHECK_OBJECT(par_c);
         tmp_len_arg_3 = par_c;
-        tmp_left_name_2 = BUILTIN_LEN(tmp_len_arg_3);
-        if (tmp_left_name_2 == NULL) {
+        tmp_left_value_2 = BUILTIN_LEN(tmp_len_arg_3);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16518,31 +14958,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = mod_consts[3];
-        tmp_assign_source_4 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_2);
+        tmp_right_value_2 = mod_consts[3];
+        tmp_assign_source_4 = BINARY_OPERATION_SUB_OBJECT_LONG_LONG(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_2);
         assert(!(tmp_assign_source_4 == NULL));
         assert(var_n == NULL);
         var_n = tmp_assign_source_4;
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_5;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_kw_call_dict_value_0_1;
+        PyObject *tmp_expression_value_5;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16552,8 +14989,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[113]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[106]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16564,50 +15001,36 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_n);
-        tmp_tuple_element_2 = var_n;
-        tmp_tuple_element_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_tuple_element_1, 0, tmp_tuple_element_2);
+        tmp_tuple_element_1 = var_n;
+        tmp_kw_call_arg_value_0_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_kw_call_arg_value_0_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(var_n);
-        tmp_tuple_element_2 = var_n;
-        PyTuple_SET_ITEM0(tmp_tuple_element_1, 1, tmp_tuple_element_2);
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_dict_key_1 = mod_consts[36];
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1448;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = par_c;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[36]);
-        if (tmp_dict_value_1 == NULL) {
+        tmp_tuple_element_1 = var_n;
+        PyTuple_SET_ITEM0(tmp_kw_call_arg_value_0_1, 1, tmp_tuple_element_1);
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_5 = par_c;
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[33]);
+        if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_kw_call_arg_value_0_1);
 
             exception_lineno = 1448;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1448;
-        tmp_assign_source_5 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *args[] = {tmp_kw_call_arg_value_0_1};
+            PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
+            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[34]);
+        }
+
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_kw_call_arg_value_0_1);
+        Py_DECREF(tmp_kw_call_dict_value_0_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16623,26 +15046,25 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_right_name_5;
-        tmp_left_name_3 = mod_consts[114];
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_right_value_5;
+        tmp_left_value_3 = mod_consts[107];
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16652,8 +15074,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[115]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[108]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16663,91 +15085,67 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_5 = mod_consts[20];
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_left_value_5 = mod_consts[18];
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_called_instance_2 == NULL)) {
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 1449;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[116]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
-
-            exception_lineno = 1449;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_n == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1449;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_4 = var_n;
+        CHECK_OBJECT(var_n);
+        tmp_args_element_value_4 = var_n;
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1449;
-        tmp_right_name_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_4);
-        if (tmp_right_name_4 == NULL) {
+        tmp_right_value_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[109], tmp_args_element_value_4);
+        if (tmp_right_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 1449;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_4 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_5, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
-        if (tmp_left_name_4 == NULL) {
+        tmp_left_value_4 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_5, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
+        if (tmp_left_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 1449;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_5 = mod_consts[3];
-        tmp_args_element_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_4, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_4);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_right_value_5 = mod_consts[3];
+        tmp_args_element_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_4, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_4);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 1449;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1449;
-        tmp_right_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_3);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_3);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16757,8 +15155,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_6 = BINARY_OPERATION_TRUEDIV_OBJECT_FLOAT_OBJECT(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_assign_source_6 = BINARY_OPERATION_TRUEDIV_OBJECT_FLOAT_OBJECT(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16774,24 +15172,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_start_name_1;
-        PyObject *tmp_stop_name_1;
-        PyObject *tmp_step_name_1;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_start_value_1;
+        PyObject *tmp_stop_value_1;
+        PyObject *tmp_step_value_1;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
         CHECK_OBJECT(var_mat);
-        tmp_called_instance_2 = var_mat;
+        tmp_called_instance_3 = var_mat;
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1450;
-        tmp_expression_name_8 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_2,
-            mod_consts[89],
-            &PyTuple_GET_ITEM(mod_consts[117], 0)
+        tmp_expression_value_7 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_3,
+            mod_consts[83],
+            PyTuple_GET_ITEM(mod_consts[110], 0)
         );
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16801,39 +15199,28 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_start_name_1 = mod_consts[3];
-        tmp_stop_name_1 = Py_None;
-        if (var_n == NULL) {
-            Py_DECREF(tmp_expression_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1450;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_6 = var_n;
-        tmp_right_name_6 = mod_consts[3];
-        tmp_step_name_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_6, tmp_right_name_6);
-        if (tmp_step_name_1 == NULL) {
+        tmp_start_value_1 = mod_consts[3];
+        tmp_stop_value_1 = Py_None;
+        CHECK_OBJECT(var_n);
+        tmp_left_value_6 = var_n;
+        tmp_right_value_6 = mod_consts[3];
+        tmp_step_value_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_6, tmp_right_value_6);
+        if (tmp_step_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_expression_name_8);
+            Py_DECREF(tmp_expression_value_7);
 
             exception_lineno = 1450;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_3 = MAKE_SLICEOBJ3(tmp_start_name_1, tmp_stop_name_1, tmp_step_name_1);
-        Py_DECREF(tmp_step_name_1);
-        assert(!(tmp_subscript_name_3 == NULL));
-        tmp_assign_source_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_8);
-        Py_DECREF(tmp_subscript_name_3);
+        tmp_subscript_value_3 = MAKE_SLICEOBJ3(tmp_start_value_1, tmp_stop_value_1, tmp_step_value_1);
+        Py_DECREF(tmp_step_value_1);
+        assert(!(tmp_subscript_value_3 == NULL));
+        tmp_assign_source_7 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_7);
+        Py_DECREF(tmp_subscript_value_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16849,35 +15236,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_start_name_2;
-        PyObject *tmp_stop_name_2;
-        PyObject *tmp_step_name_2;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
-        if (var_mat == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1451;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_3 = var_mat;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_called_instance_4;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_start_value_2;
+        PyObject *tmp_stop_value_2;
+        PyObject *tmp_step_value_2;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
+        CHECK_OBJECT(var_mat);
+        tmp_called_instance_4 = var_mat;
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1451;
-        tmp_expression_name_9 = CALL_METHOD_WITH_ARGS1(
-            tmp_called_instance_3,
-            mod_consts[89],
-            &PyTuple_GET_ITEM(mod_consts[117], 0)
+        tmp_expression_value_8 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_4,
+            mod_consts[83],
+            PyTuple_GET_ITEM(mod_consts[110], 0)
         );
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16887,51 +15263,29 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (var_n == NULL) {
-            Py_DECREF(tmp_expression_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1451;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_start_name_2 = var_n;
-        tmp_stop_name_2 = Py_None;
-        if (var_n == NULL) {
-            Py_DECREF(tmp_expression_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1451;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_7 = var_n;
-        tmp_right_name_7 = mod_consts[3];
-        tmp_step_name_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_7, tmp_right_name_7);
-        if (tmp_step_name_2 == NULL) {
+        CHECK_OBJECT(var_n);
+        tmp_start_value_2 = var_n;
+        tmp_stop_value_2 = Py_None;
+        CHECK_OBJECT(var_n);
+        tmp_left_value_7 = var_n;
+        tmp_right_value_7 = mod_consts[3];
+        tmp_step_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_value_7, tmp_right_value_7);
+        if (tmp_step_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_expression_name_9);
+            Py_DECREF(tmp_expression_value_8);
 
             exception_lineno = 1451;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = MAKE_SLICEOBJ3(tmp_start_name_2, tmp_stop_name_2, tmp_step_name_2);
-        Py_DECREF(tmp_step_name_2);
-        assert(!(tmp_subscript_name_4 == NULL));
-        tmp_assign_source_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_4);
-        Py_DECREF(tmp_expression_name_9);
-        Py_DECREF(tmp_subscript_name_4);
+        tmp_subscript_value_4 = MAKE_SLICEOBJ3(tmp_start_value_2, tmp_stop_value_2, tmp_step_value_2);
+        Py_DECREF(tmp_step_value_2);
+        assert(!(tmp_subscript_value_4 == NULL));
+        tmp_assign_source_8 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_4);
+        Py_DECREF(tmp_expression_value_8);
+        Py_DECREF(tmp_subscript_value_4);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16947,32 +15301,31 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     }
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_right_name_8;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_stop_name_3;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_right_name_10;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_6;
-        PyObject *tmp_start_name_3;
-        PyObject *tmp_stop_name_4;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_called_instance_5;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_right_value_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_stop_value_3;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_right_value_10;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_6;
+        PyObject *tmp_start_value_3;
+        PyObject *tmp_stop_value_4;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_called_instance_5 == NULL)) {
+            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16982,39 +15335,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[116]);
-        if (tmp_called_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1452;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_5 = mod_consts[3];
-        if (var_n == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1452;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_6 = var_n;
+        tmp_args_element_value_5 = mod_consts[3];
+        CHECK_OBJECT(var_n);
+        tmp_args_element_value_6 = var_n;
         frame_ed4d14e49f3a766cd2c2c9a14d02b963->m_frame.f_lineno = 1452;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_left_name_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_left_value_9 = CALL_METHOD_WITH_ARGS2(
+                tmp_called_instance_5,
+                mod_consts[109],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_5);
-        if (tmp_left_name_9 == NULL) {
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17025,51 +15359,40 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_scl);
-        tmp_expression_name_11 = var_scl;
-        if (var_n == NULL) {
-            Py_DECREF(tmp_left_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1452;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_10 = var_n;
-        tmp_right_name_9 = mod_consts[3];
-        tmp_stop_name_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_10, tmp_right_name_9);
-        if (tmp_stop_name_3 == NULL) {
+        tmp_expression_value_9 = var_scl;
+        CHECK_OBJECT(var_n);
+        tmp_left_value_10 = var_n;
+        tmp_right_value_9 = mod_consts[3];
+        tmp_stop_value_3 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_10, tmp_right_value_9);
+        if (tmp_stop_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 1452;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_5 = MAKE_SLICEOBJ1(tmp_stop_name_3);
-        Py_DECREF(tmp_stop_name_3);
-        assert(!(tmp_subscript_name_5 == NULL));
-        tmp_right_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_5);
-        Py_DECREF(tmp_subscript_name_5);
-        if (tmp_right_name_8 == NULL) {
+        tmp_subscript_value_5 = MAKE_SLICEOBJ1(tmp_stop_value_3);
+        Py_DECREF(tmp_stop_value_3);
+        assert(!(tmp_subscript_value_5 == NULL));
+        tmp_right_value_8 = LOOKUP_SUBSCRIPT(tmp_expression_value_9, tmp_subscript_value_5);
+        Py_DECREF(tmp_subscript_value_5);
+        if (tmp_right_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_9);
+            Py_DECREF(tmp_left_value_9);
 
             exception_lineno = 1452;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_8);
-        Py_DECREF(tmp_left_name_9);
-        Py_DECREF(tmp_right_name_8);
-        if (tmp_left_name_8 == NULL) {
+        tmp_left_value_8 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_8);
+        Py_DECREF(tmp_left_value_9);
+        Py_DECREF(tmp_right_value_8);
+        if (tmp_left_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17080,38 +15403,27 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_scl);
-        tmp_expression_name_12 = var_scl;
-        tmp_start_name_3 = mod_consts[3];
-        if (var_n == NULL) {
-            Py_DECREF(tmp_left_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1452;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_stop_name_4 = var_n;
-        tmp_subscript_name_6 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_4);
-        assert(!(tmp_subscript_name_6 == NULL));
-        tmp_right_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_6);
-        Py_DECREF(tmp_subscript_name_6);
-        if (tmp_right_name_10 == NULL) {
+        tmp_expression_value_10 = var_scl;
+        tmp_start_value_3 = mod_consts[3];
+        CHECK_OBJECT(var_n);
+        tmp_stop_value_4 = var_n;
+        tmp_subscript_value_6 = MAKE_SLICEOBJ2(tmp_start_value_3, tmp_stop_value_4);
+        assert(!(tmp_subscript_value_6 == NULL));
+        tmp_right_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_6);
+        Py_DECREF(tmp_subscript_value_6);
+        if (tmp_right_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_8);
+            Py_DECREF(tmp_left_value_8);
 
             exception_lineno = 1452;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_10);
-        Py_DECREF(tmp_left_name_8);
-        Py_DECREF(tmp_right_name_10);
+        tmp_ass_subvalue_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_10);
+        Py_DECREF(tmp_left_value_8);
+        Py_DECREF(tmp_right_value_10);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17142,18 +15454,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
-        if (var_top == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[119]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1453;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_top);
         tmp_ass_subvalue_2 = var_top;
         CHECK_OBJECT(var_bot);
         tmp_ass_subscribed_2 = var_bot;
@@ -17172,41 +15473,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     }
     {
         PyObject *tmp_assign_source_9;
-        if (var_mat == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_mat);
         tmp_assign_source_9 = var_mat;
         assert(tmp_inplace_assign_subscr_1__target == NULL);
         Py_INCREF(tmp_assign_source_9);
         tmp_inplace_assign_subscr_1__target = tmp_assign_source_9;
     }
-    {
-        PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = mod_consts[120];
-        assert(tmp_inplace_assign_subscr_1__subscript == NULL);
-        Py_INCREF(tmp_assign_source_10);
-        tmp_inplace_assign_subscr_1__subscript = tmp_assign_source_10;
-    }
     // Tried code:
     {
-        PyObject *tmp_assign_source_11;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_7;
+        PyObject *tmp_assign_source_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_subscript_value_7;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_13 = tmp_inplace_assign_subscr_1__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_7 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_7);
-        if (tmp_assign_source_11 == NULL) {
+        tmp_expression_value_11 = tmp_inplace_assign_subscr_1__target;
+        tmp_subscript_value_7 = mod_consts[111];
+        tmp_assign_source_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_11, tmp_subscript_value_7);
+        if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17217,50 +15499,39 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             goto try_except_handler_4;
         }
         assert(tmp_inplace_assign_subscr_1__value == NULL);
-        tmp_inplace_assign_subscr_1__value = tmp_assign_source_11;
+        tmp_inplace_assign_subscr_1__value = tmp_assign_source_10;
     }
     {
-        PyObject *tmp_assign_source_12;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_8;
-        PyObject *tmp_right_name_12;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_subscript_name_9;
-        PyObject *tmp_right_name_13;
-        PyObject *tmp_left_name_15;
-        PyObject *tmp_right_name_14;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_subscript_name_10;
-        PyObject *tmp_right_name_15;
-        PyObject *tmp_left_name_16;
-        PyObject *tmp_right_name_16;
-        PyObject *tmp_left_name_17;
-        PyObject *tmp_left_name_18;
-        PyObject *tmp_right_name_17;
-        PyObject *tmp_right_name_18;
+        PyObject *tmp_assign_source_11;
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_8;
+        PyObject *tmp_right_value_12;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_9;
+        PyObject *tmp_right_value_13;
+        PyObject *tmp_left_value_15;
+        PyObject *tmp_right_value_14;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_10;
+        PyObject *tmp_right_value_15;
+        PyObject *tmp_left_value_16;
+        PyObject *tmp_right_value_16;
+        PyObject *tmp_left_value_17;
+        PyObject *tmp_left_value_18;
+        PyObject *tmp_right_value_17;
+        PyObject *tmp_right_value_18;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_11 = tmp_inplace_assign_subscr_1__value;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_expression_name_14 = par_c;
-        tmp_subscript_name_8 = mod_consts[121];
-        tmp_left_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_8);
-        if (tmp_left_name_14 == NULL) {
+        tmp_left_value_11 = tmp_inplace_assign_subscr_1__value;
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_12 = par_c;
+        tmp_subscript_value_8 = mod_consts[112];
+        tmp_left_value_14 = LOOKUP_SUBSCRIPT(tmp_expression_value_12, tmp_subscript_value_8);
+        if (tmp_left_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17270,35 +15541,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        if (par_c == NULL) {
-            Py_DECREF(tmp_left_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_expression_name_15 = par_c;
-        tmp_subscript_name_9 = mod_consts[5];
-        tmp_right_name_12 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_15, tmp_subscript_name_9, -1);
-        if (tmp_right_name_12 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_13 = par_c;
+        tmp_subscript_value_9 = mod_consts[5];
+        tmp_right_value_12 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_13, tmp_subscript_value_9, -1);
+        if (tmp_right_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_14);
+            Py_DECREF(tmp_left_value_14);
 
             exception_lineno = 1454;
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_13 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_14, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_14);
-        Py_DECREF(tmp_right_name_12);
-        if (tmp_left_name_13 == NULL) {
+        tmp_left_value_13 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_14, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_14);
+        Py_DECREF(tmp_right_value_12);
+        if (tmp_left_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17309,113 +15569,37 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_scl);
-        tmp_left_name_15 = var_scl;
+        tmp_left_value_15 = var_scl;
         CHECK_OBJECT(var_scl);
-        tmp_expression_name_16 = var_scl;
-        tmp_subscript_name_10 = mod_consts[5];
-        tmp_right_name_14 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_16, tmp_subscript_name_10, -1);
-        if (tmp_right_name_14 == NULL) {
+        tmp_expression_value_14 = var_scl;
+        tmp_subscript_value_10 = mod_consts[5];
+        tmp_right_value_14 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_14, tmp_subscript_value_10, -1);
+        if (tmp_right_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 1454;
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_right_name_13 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_15, tmp_right_name_14);
-        Py_DECREF(tmp_right_name_14);
-        if (tmp_right_name_13 == NULL) {
+        tmp_right_value_13 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_15, tmp_right_value_14);
+        Py_DECREF(tmp_right_value_14);
+        if (tmp_right_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_13);
+            Py_DECREF(tmp_left_value_13);
 
             exception_lineno = 1454;
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_13, tmp_right_name_13);
-        Py_DECREF(tmp_left_name_13);
-        Py_DECREF(tmp_right_name_13);
-        if (tmp_left_name_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-        if (var_n == NULL) {
-            Py_DECREF(tmp_left_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_left_name_16 = var_n;
-        tmp_left_name_18 = mod_consts[20];
-        if (var_n == NULL) {
-            Py_DECREF(tmp_left_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[64]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-
-        tmp_right_name_17 = var_n;
-        tmp_left_name_17 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_18, tmp_right_name_17);
-        if (tmp_left_name_17 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_12);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-        tmp_right_name_18 = mod_consts[3];
-        tmp_right_name_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_17, tmp_right_name_18);
-        Py_DECREF(tmp_left_name_17);
-        if (tmp_right_name_16 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_12);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-        tmp_right_name_15 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_16, tmp_right_name_16);
-        Py_DECREF(tmp_right_name_16);
-        if (tmp_right_name_15 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_12);
-
-            exception_lineno = 1454;
-            type_description_1 = "oooooo";
-            goto try_except_handler_4;
-        }
-        tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_12, tmp_right_name_15);
-        Py_DECREF(tmp_left_name_12);
-        Py_DECREF(tmp_right_name_15);
-        if (tmp_right_name_11 == NULL) {
+        tmp_left_value_12 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_13, tmp_right_value_13);
+        Py_DECREF(tmp_left_value_13);
+        Py_DECREF(tmp_right_value_13);
+        if (tmp_left_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17425,8 +15609,62 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_OBJECT_INPLACE(&tmp_left_name_11, tmp_right_name_11);
-        Py_DECREF(tmp_right_name_11);
+        CHECK_OBJECT(var_n);
+        tmp_left_value_16 = var_n;
+        tmp_left_value_18 = mod_consts[18];
+        CHECK_OBJECT(var_n);
+        tmp_right_value_17 = var_n;
+        tmp_left_value_17 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_value_18, tmp_right_value_17);
+        if (tmp_left_value_17 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_left_value_12);
+
+            exception_lineno = 1454;
+            type_description_1 = "oooooo";
+            goto try_except_handler_4;
+        }
+        tmp_right_value_18 = mod_consts[3];
+        tmp_right_value_16 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_value_17, tmp_right_value_18);
+        Py_DECREF(tmp_left_value_17);
+        if (tmp_right_value_16 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_left_value_12);
+
+            exception_lineno = 1454;
+            type_description_1 = "oooooo";
+            goto try_except_handler_4;
+        }
+        tmp_right_value_15 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_16, tmp_right_value_16);
+        Py_DECREF(tmp_right_value_16);
+        if (tmp_right_value_15 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_left_value_12);
+
+            exception_lineno = 1454;
+            type_description_1 = "oooooo";
+            goto try_except_handler_4;
+        }
+        tmp_right_value_11 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_12, tmp_right_value_15);
+        Py_DECREF(tmp_left_value_12);
+        Py_DECREF(tmp_right_value_15);
+        if (tmp_right_value_11 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1454;
+            type_description_1 = "oooooo";
+            goto try_except_handler_4;
+        }
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_OBJECT_INPLACE(&tmp_left_value_11, tmp_right_value_11);
+        Py_DECREF(tmp_right_value_11);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -17437,8 +15675,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_assign_source_12 = tmp_left_name_11;
-        tmp_inplace_assign_subscr_1__value = tmp_assign_source_12;
+        tmp_assign_source_11 = tmp_left_value_11;
+        tmp_inplace_assign_subscr_1__value = tmp_assign_source_11;
 
     }
     {
@@ -17449,8 +15687,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
         tmp_ass_subvalue_3 = tmp_inplace_assign_subscr_1__value;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
         tmp_ass_subscribed_3 = tmp_inplace_assign_subscr_1__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_ass_subscript_3 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_ass_subscript_3 = mod_consts[111];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_3, tmp_ass_subscript_3, tmp_ass_subvalue_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -17478,9 +15715,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
     Py_DECREF(tmp_inplace_assign_subscr_1__target);
     tmp_inplace_assign_subscr_1__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_1__subscript);
-    tmp_inplace_assign_subscr_1__subscript = NULL;
     Py_XDECREF(tmp_inplace_assign_subscr_1__value);
     tmp_inplace_assign_subscr_1__value = NULL;
     // Re-raise.
@@ -17492,30 +15726,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     goto frame_exception_exit_1;
     // End of try:
     try_end_3:;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-    Py_DECREF(tmp_inplace_assign_subscr_1__target);
-    tmp_inplace_assign_subscr_1__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_1__subscript);
-    tmp_inplace_assign_subscr_1__subscript = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-    Py_DECREF(tmp_inplace_assign_subscr_1__value);
-    tmp_inplace_assign_subscr_1__value = NULL;
-    if (var_mat == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 1455;
-        type_description_1 = "oooooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_mat;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_ed4d14e49f3a766cd2c2c9a14d02b963);
@@ -17581,11 +15791,22 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__22_legcompanion(stru
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
+    Py_DECREF(tmp_inplace_assign_subscr_1__target);
+    tmp_inplace_assign_subscr_1__target = NULL;
+    CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
+    Py_DECREF(tmp_inplace_assign_subscr_1__value);
+    tmp_inplace_assign_subscr_1__value = NULL;
+    CHECK_OBJECT(var_mat);
+    tmp_return_value = var_mat;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_c);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
     par_c = NULL;
     Py_XDECREF(var_n);
     var_n = NULL;
@@ -17679,7 +15900,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
     PyObject *tmp_return_value = NULL;
-    int tmp_res;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     static struct Nuitka_FrameObject *cache_frame_017a68438f53f1672db0f6b49593bb05 = NULL;
     PyObject *exception_keeper_type_3;
@@ -17721,7 +15941,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_list_element_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -17741,11 +15961,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
         }
         CHECK_OBJECT(par_c);
         tmp_list_element_1 = par_c;
-        tmp_args_element_name_1 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
+        tmp_args_element_value_1 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_args_element_value_1, 0, tmp_list_element_1);
         frame_017a68438f53f1672db0f6b49593bb05->m_frame.f_lineno = 1506;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17845,7 +16065,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -17879,7 +16100,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_3;
@@ -17887,27 +16109,25 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
         tmp_assign_source_3 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_c;
+            assert(old != NULL);
             par_c = tmp_assign_source_3;
             Py_INCREF(par_c);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_1__element_1);
     tmp_tuple_unpack_1__element_1 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
         CHECK_OBJECT(par_c);
         tmp_len_arg_1 = par_c;
-        tmp_compexpr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17917,12 +16137,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[20];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        assert(!(tmp_tmp_condition_result_1_object_1 == NULL));
-        tmp_condition_result_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
+        tmp_cmp_expr_right_1 = mod_consts[18];
+        tmp_condition_result_1 = RICH_COMPARE_LT_CBOOL_LONG_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -17931,20 +16148,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_kwargs_name_1;
-        PyObject *tmp_dict_key_1;
-        PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_kw_call_value_0_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_call_posargs_values_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17954,8 +16169,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[25]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17965,43 +16180,29 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_name_1 = DEEP_COPY(mod_consts[123]);
-        tmp_dict_key_1 = mod_consts[36];
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1508;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_c;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[36]);
-        if (tmp_dict_value_1 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_2 = par_c;
+        tmp_kw_call_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[33]);
+        if (tmp_kw_call_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1508;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_kwargs_name_1 = _PyDict_NewPresized( 1 );
-        tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
-        Py_DECREF(tmp_dict_value_1);
-        assert(!(tmp_res != 0));
+        tmp_call_posargs_values_1 = DEEP_COPY_TUPLE(mod_consts[114]);
         frame_017a68438f53f1672db0f6b49593bb05->m_frame.f_lineno = 1508;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        {
+            PyObject *kw_values[1] = {tmp_kw_call_value_0_1};
+            tmp_return_value = CALL_FUNCTION_WITH_POSARGS1_KWSPLIT(tmp_called_value_1, tmp_call_posargs_values_1, kw_values, mod_consts[34]);
+        }
+
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_call_posargs_values_1);
+        Py_DECREF(tmp_kw_call_value_0_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18017,25 +16218,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1509;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_c);
         tmp_len_arg_2 = par_c;
-        tmp_compexpr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_LEN(tmp_len_arg_2);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18045,12 +16234,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[20];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        assert(!(tmp_tmp_condition_result_2_object_1 == NULL));
-        tmp_condition_result_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
+        tmp_cmp_expr_right_2 = mod_consts[18];
+        tmp_condition_result_2 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -18059,24 +16245,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_list_element_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_2;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_2;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18086,8 +16272,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[25]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[22]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18097,89 +16283,66 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1510;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_c;
-        tmp_subscript_name_1 = mod_consts[4];
-        tmp_operand_name_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_1, 0);
-        if (tmp_operand_name_1 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_4 = par_c;
+        tmp_subscript_value_1 = mod_consts[4];
+        tmp_operand_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_1, 0);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 1510;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 1510;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        if (par_c == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_left_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1510;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = par_c;
-        tmp_subscript_name_2 = mod_consts[3];
-        tmp_right_name_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_2, 1);
-        if (tmp_right_name_1 == NULL) {
+        CHECK_OBJECT(par_c);
+        tmp_expression_value_5 = par_c;
+        tmp_subscript_value_2 = mod_consts[3];
+        tmp_right_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_2, 1);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 1510;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_list_element_2 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_list_element_2 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_list_element_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 1510;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = PyList_New(1);
-        PyList_SET_ITEM(tmp_args_element_name_2, 0, tmp_list_element_2);
+        tmp_args_element_value_2 = PyList_New(1);
+        PyList_SET_ITEM(tmp_args_element_value_2, 0, tmp_list_element_2);
         frame_017a68438f53f1672db0f6b49593bb05->m_frame.f_lineno = 1510;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18195,17 +16358,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     branch_no_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_subscript_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[124]);
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_subscript_value_3;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[115]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[124]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[115]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18215,22 +16378,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        if (par_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1513;
-            type_description_1 = "ooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_3 = par_c;
+        CHECK_OBJECT(par_c);
+        tmp_args_element_value_3 = par_c;
         frame_017a68438f53f1672db0f6b49593bb05->m_frame.f_lineno = 1513;
-        tmp_expression_name_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18240,9 +16392,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_3 = mod_consts[125];
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_6);
+        tmp_subscript_value_3 = mod_consts[116];
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_6);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18259,11 +16411,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[126]);
+        PyObject *tmp_args_element_value_4;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[117]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -18277,9 +16429,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_m);
-        tmp_args_element_name_4 = var_m;
+        tmp_args_element_value_4 = var_m;
         frame_017a68438f53f1672db0f6b49593bb05->m_frame.f_lineno = 1514;
-        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[127], tmp_args_element_name_4);
+        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[118], tmp_args_element_value_4);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18299,7 +16451,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
         CHECK_OBJECT(var_r);
         tmp_called_instance_3 = var_r;
         frame_017a68438f53f1672db0f6b49593bb05->m_frame.f_lineno = 1515;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[128]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[119]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18312,21 +16464,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
         }
         Py_DECREF(tmp_call_result_1);
     }
-    if (var_r == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[129]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 1516;
-        type_description_1 = "ooo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = var_r;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_017a68438f53f1672db0f6b49593bb05);
@@ -18389,11 +16526,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__23_legroots(struct N
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(var_r);
+    tmp_return_value = var_r;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_c);
+    CHECK_OBJECT(par_c);
+    Py_DECREF(par_c);
     par_c = NULL;
     Py_XDECREF(var_m);
     var_m = NULL;
@@ -18509,8 +16651,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
@@ -18528,14 +16670,14 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_deg);
-        tmp_args_element_name_1 = par_deg;
-        tmp_args_element_name_2 = mod_consts[99];
+        tmp_args_element_value_1 = par_deg;
+        tmp_args_element_value_2 = mod_consts[93];
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1555;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[56],
+                mod_consts[51],
                 call_args
             );
         }
@@ -18555,15 +16697,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_ideg);
-        tmp_compexpr_left_1 = var_ideg;
-        tmp_compexpr_right_1 = mod_consts[4];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_ideg;
+        tmp_cmp_expr_right_1 = mod_consts[4];
+        tmp_condition_result_1 = RICH_COMPARE_LE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18573,30 +16713,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 1556;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[131];
+        tmp_make_exception_arg_1 = mod_consts[121];
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1557;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -18609,20 +16737,20 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_right_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_right_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18632,8 +16760,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[25]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[22]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18643,51 +16771,39 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_2 = LIST_COPY(mod_consts[78]);
-        if (par_deg == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_left_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        tmp_left_value_2 = LIST_COPY(mod_consts[73]);
+        CHECK_OBJECT(par_deg);
+        tmp_right_value_1 = par_deg;
+        tmp_left_value_1 = BINARY_OPERATION_MULT_OBJECT_LIST_OBJECT(tmp_left_value_2, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_2);
+        if (tmp_left_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1561;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_right_name_1 = par_deg;
-        tmp_left_name_1 = BINARY_OPERATION_MULT_OBJECT_LIST_OBJECT(tmp_left_name_2, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_2);
-        if (tmp_left_name_1 == NULL) {
+        tmp_right_value_2 = LIST_COPY(mod_consts[122]);
+        tmp_args_element_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LIST(tmp_left_value_1, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_2);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-
-            exception_lineno = 1561;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_right_name_2 = LIST_COPY(mod_consts[132]);
-        tmp_args_element_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LIST(tmp_left_name_1, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_2);
-        if (tmp_args_element_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 1561;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1561;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18703,15 +16819,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[124]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[115]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[124]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[115]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18722,9 +16838,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_c);
-        tmp_args_element_name_4 = var_c;
+        tmp_args_element_value_4 = var_c;
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1562;
-        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_4);
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_4);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18741,11 +16857,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[126]);
+        PyObject *tmp_args_element_value_5;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[117]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -18759,9 +16875,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_m);
-        tmp_args_element_name_5 = var_m;
+        tmp_args_element_value_5 = var_m;
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1563;
-        tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[133], tmp_args_element_name_5);
+        tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[123], tmp_args_element_value_5);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18777,16 +16893,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18797,24 +16913,13 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_x);
-        tmp_args_element_name_6 = var_x;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1566;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_7 = var_c;
+        tmp_args_element_value_6 = var_x;
+        CHECK_OBJECT(var_c);
+        tmp_args_element_value_7 = var_c;
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1566;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7};
+            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
         if (tmp_assign_source_5 == NULL) {
@@ -18832,18 +16937,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_10;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_10;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18853,26 +16958,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_x == NULL) {
+        CHECK_OBJECT(var_x);
+        tmp_args_element_value_8 = var_x;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[124]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1567;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[124]);
         }
 
-        tmp_args_element_name_8 = var_x;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[134]);
-
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[134]);
-        }
-
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18882,22 +16976,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1567;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_10 = var_c;
+        CHECK_OBJECT(var_c);
+        tmp_args_element_value_10 = var_c;
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1567;
-        tmp_args_element_name_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_10);
-        if (tmp_args_element_name_9 == NULL) {
+        tmp_args_element_value_9 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_10);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18909,11 +16992,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
         }
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1567;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_assign_source_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_9);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18929,29 +17012,18 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        if (var_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1568;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_3 = var_x;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        CHECK_OBJECT(var_x);
+        tmp_left_value_3 = var_x;
         CHECK_OBJECT(var_dy);
-        tmp_left_name_4 = var_dy;
+        tmp_left_value_4 = var_dy;
         CHECK_OBJECT(var_df);
-        tmp_right_name_4 = var_df;
-        tmp_right_name_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_4);
-        if (tmp_right_name_3 == NULL) {
+        tmp_right_value_4 = var_df;
+        tmp_right_value_3 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_4);
+        if (tmp_right_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18961,8 +17033,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_OBJECT_INPLACE(&tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_OBJECT_INPLACE(&tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -18973,24 +17045,24 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_7 = tmp_left_name_3;
+        tmp_assign_source_7 = tmp_left_value_3;
         var_x = tmp_assign_source_7;
 
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19001,23 +17073,12 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_x);
-        tmp_args_element_name_11 = var_x;
-        if (var_c == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[17]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1572;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = var_c;
-        tmp_subscript_name_1 = mod_consts[67];
-        tmp_args_element_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        if (tmp_args_element_name_12 == NULL) {
+        tmp_args_element_value_11 = var_x;
+        CHECK_OBJECT(var_c);
+        tmp_expression_value_2 = var_c;
+        tmp_subscript_value_1 = mod_consts[63];
+        tmp_args_element_value_12 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        if (tmp_args_element_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19029,11 +17090,11 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
         }
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1572;
         {
-            PyObject *call_args[] = {tmp_args_element_name_11, tmp_args_element_name_12};
-            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_11, tmp_args_element_value_12};
+            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_12);
+        Py_DECREF(tmp_args_element_value_12);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19049,17 +17110,17 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_args_element_name_13;
+        PyObject *tmp_args_element_value_13;
         CHECK_OBJECT(var_fm);
-        tmp_left_name_5 = var_fm;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_left_value_5 = var_fm;
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_4 == NULL) {
@@ -19073,9 +17134,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_fm);
-        tmp_args_element_name_13 = var_fm;
+        tmp_args_element_value_13 = var_fm;
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1573;
-        tmp_called_instance_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[135], tmp_args_element_name_13);
+        tmp_called_instance_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[125], tmp_args_element_value_13);
         if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19087,9 +17148,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1573;
-        tmp_right_name_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[136]);
+        tmp_right_value_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[126]);
         Py_DECREF(tmp_called_instance_3);
-        if (tmp_right_name_5 == NULL) {
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19099,8 +17160,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_result = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_INPLACE(&tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_right_name_5);
+        tmp_result = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_INPLACE(&tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_right_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -19111,38 +17172,26 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_9 = tmp_left_name_5;
+        tmp_assign_source_9 = tmp_left_value_5;
         var_fm = tmp_assign_source_9;
 
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
         PyObject *tmp_called_instance_5;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_14;
-        if (var_df == NULL) {
+        PyObject *tmp_called_instance_6;
+        PyObject *tmp_args_element_value_14;
+        CHECK_OBJECT(var_df);
+        tmp_left_value_6 = var_df;
+        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[137]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1574;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
+        if (unlikely(tmp_called_instance_6 == NULL)) {
+            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
-        tmp_left_name_6 = var_df;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
-
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
-        }
-
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_instance_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19152,33 +17201,10 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[135]);
-        if (tmp_called_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1574;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        if (var_df == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[137]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1574;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_14 = var_df;
+        CHECK_OBJECT(var_df);
+        tmp_args_element_value_14 = var_df;
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1574;
-        tmp_called_instance_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_14);
-        Py_DECREF(tmp_called_name_7);
+        tmp_called_instance_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[125], tmp_args_element_value_14);
         if (tmp_called_instance_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19190,9 +17216,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             goto frame_exception_exit_1;
         }
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1574;
-        tmp_right_name_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[136]);
+        tmp_right_value_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[126]);
         Py_DECREF(tmp_called_instance_5);
-        if (tmp_right_name_6 == NULL) {
+        if (tmp_right_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19202,8 +17228,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_result = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_INPLACE(&tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_right_name_6);
+        tmp_result = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_INPLACE(&tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_right_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -19214,23 +17240,23 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_10 = tmp_left_name_6;
+        tmp_assign_source_10 = tmp_left_value_6;
         var_df = tmp_assign_source_10;
 
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
-        tmp_left_name_7 = mod_consts[3];
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
+        tmp_left_value_7 = mod_consts[3];
         CHECK_OBJECT(var_fm);
-        tmp_left_name_8 = var_fm;
+        tmp_left_value_8 = var_fm;
         CHECK_OBJECT(var_df);
-        tmp_right_name_8 = var_df;
-        tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_8);
-        if (tmp_right_name_7 == NULL) {
+        tmp_right_value_8 = var_df;
+        tmp_right_value_7 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_8);
+        if (tmp_right_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19240,8 +17266,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_11 = BINARY_OPERATION_TRUEDIV_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_7);
-        Py_DECREF(tmp_right_name_7);
+        tmp_assign_source_11 = BINARY_OPERATION_TRUEDIV_OBJECT_LONG_OBJECT(tmp_left_value_7, tmp_right_value_7);
+        Py_DECREF(tmp_right_value_7);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19257,19 +17283,19 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     }
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_left_name_10;
-        PyObject *tmp_right_name_9;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_right_name_10;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_left_value_10;
+        PyObject *tmp_right_value_9;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_right_value_10;
         CHECK_OBJECT(var_w);
-        tmp_left_name_10 = var_w;
+        tmp_left_value_10 = var_w;
         CHECK_OBJECT(var_w);
-        tmp_expression_name_4 = var_w;
-        tmp_subscript_name_2 = mod_consts[138];
-        tmp_right_name_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_2);
-        if (tmp_right_name_9 == NULL) {
+        tmp_expression_value_3 = var_w;
+        tmp_subscript_value_2 = mod_consts[127];
+        tmp_right_value_9 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_2);
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19279,9 +17305,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_9 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_10, tmp_right_name_9);
-        Py_DECREF(tmp_right_name_9);
-        if (tmp_left_name_9 == NULL) {
+        tmp_left_value_9 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_10, tmp_right_value_9);
+        Py_DECREF(tmp_right_value_9);
+        if (tmp_left_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19291,9 +17317,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_10 = mod_consts[20];
-        tmp_assign_source_12 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_name_9, tmp_right_name_10);
-        Py_DECREF(tmp_left_name_9);
+        tmp_right_value_10 = mod_consts[18];
+        tmp_assign_source_12 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_value_9, tmp_right_value_10);
+        Py_DECREF(tmp_left_value_9);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19306,48 +17332,27 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
         }
         {
             PyObject *old = var_w;
+            assert(old != NULL);
             var_w = tmp_assign_source_12;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_left_name_11;
-        PyObject *tmp_left_name_12;
-        PyObject *tmp_right_name_11;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_right_name_12;
-        if (var_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1579;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_left_name_12 = var_x;
-        if (var_x == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 1579;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_5 = var_x;
-        tmp_subscript_name_3 = mod_consts[138];
-        tmp_right_name_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_3);
-        if (tmp_right_name_11 == NULL) {
+        PyObject *tmp_left_value_11;
+        PyObject *tmp_left_value_12;
+        PyObject *tmp_right_value_11;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_right_value_12;
+        CHECK_OBJECT(var_x);
+        tmp_left_value_12 = var_x;
+        CHECK_OBJECT(var_x);
+        tmp_expression_value_4 = var_x;
+        tmp_subscript_value_3 = mod_consts[127];
+        tmp_right_value_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_3);
+        if (tmp_right_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19357,9 +17362,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_11 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_12, tmp_right_name_11);
-        Py_DECREF(tmp_right_name_11);
-        if (tmp_left_name_11 == NULL) {
+        tmp_left_value_11 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_12, tmp_right_value_11);
+        Py_DECREF(tmp_right_value_11);
+        if (tmp_left_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19369,9 +17374,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_12 = mod_consts[20];
-        tmp_assign_source_13 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_name_11, tmp_right_name_12);
-        Py_DECREF(tmp_left_name_11);
+        tmp_right_value_12 = mod_consts[18];
+        tmp_assign_source_13 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_value_11, tmp_right_value_12);
+        Py_DECREF(tmp_left_value_11);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19384,26 +17389,27 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
         }
         {
             PyObject *old = var_x;
+            assert(old != NULL);
             var_x = tmp_assign_source_13;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_left_name_13;
-        PyObject *tmp_right_name_13;
-        PyObject *tmp_left_name_14;
-        PyObject *tmp_right_name_14;
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_left_value_13;
+        PyObject *tmp_right_value_13;
+        PyObject *tmp_left_value_14;
+        PyObject *tmp_right_value_14;
+        PyObject *tmp_called_instance_7;
         CHECK_OBJECT(var_w);
-        tmp_left_name_13 = var_w;
-        tmp_left_name_14 = mod_consts[139];
+        tmp_left_value_13 = var_w;
+        tmp_left_value_14 = mod_consts[128];
         CHECK_OBJECT(var_w);
-        tmp_called_instance_6 = var_w;
+        tmp_called_instance_7 = var_w;
         frame_36e7dffa3b906910e76467d6083c5214->m_frame.f_lineno = 1582;
-        tmp_right_name_14 = CALL_METHOD_NO_ARGS(tmp_called_instance_6, mod_consts[140]);
-        if (tmp_right_name_14 == NULL) {
+        tmp_right_value_14 = CALL_METHOD_NO_ARGS(tmp_called_instance_7, mod_consts[129]);
+        if (tmp_right_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19413,9 +17419,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_13 = BINARY_OPERATION_TRUEDIV_OBJECT_FLOAT_OBJECT(tmp_left_name_14, tmp_right_name_14);
-        Py_DECREF(tmp_right_name_14);
-        if (tmp_right_name_13 == NULL) {
+        tmp_right_value_13 = BINARY_OPERATION_TRUEDIV_OBJECT_FLOAT_OBJECT(tmp_left_value_14, tmp_right_value_14);
+        Py_DECREF(tmp_right_value_14);
+        if (tmp_right_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19425,8 +17431,8 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_result = BINARY_OPERATION_MULT_OBJECT_OBJECT_INPLACE(&tmp_left_name_13, tmp_right_name_13);
-        Py_DECREF(tmp_right_name_13);
+        tmp_result = BINARY_OPERATION_MULT_OBJECT_OBJECT_INPLACE(&tmp_left_value_13, tmp_right_value_13);
+        Py_DECREF(tmp_right_value_13);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -19437,7 +17443,7 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_14 = tmp_left_name_13;
+        tmp_assign_source_14 = tmp_left_value_13;
         var_w = tmp_assign_source_14;
 
     }
@@ -19514,23 +17520,26 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
     CHECK_OBJECT(var_ideg);
     Py_DECREF(var_ideg);
     var_ideg = NULL;
-    Py_XDECREF(var_c);
+    CHECK_OBJECT(var_c);
+    Py_DECREF(var_c);
     var_c = NULL;
-    Py_XDECREF(var_m);
+    CHECK_OBJECT(var_m);
+    Py_DECREF(var_m);
     var_m = NULL;
     CHECK_OBJECT(var_x);
     Py_DECREF(var_x);
     var_x = NULL;
-    Py_XDECREF(var_dy);
+    CHECK_OBJECT(var_dy);
+    Py_DECREF(var_dy);
     var_dy = NULL;
-    Py_XDECREF(var_df);
+    CHECK_OBJECT(var_df);
+    Py_DECREF(var_df);
     var_df = NULL;
-    Py_XDECREF(var_fm);
+    CHECK_OBJECT(var_fm);
+    Py_DECREF(var_fm);
     var_fm = NULL;
     CHECK_OBJECT(var_w);
     Py_DECREF(var_w);
@@ -19547,8 +17556,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_deg);
-    par_deg = NULL;
     Py_XDECREF(var_ideg);
     var_ideg = NULL;
     Py_XDECREF(var_c);
@@ -19578,14 +17585,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__24_leggauss(struct N
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_deg);
+    Py_DECREF(par_deg);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -19648,15 +17657,15 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__25_legweight(struct 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_right_value_2;
         CHECK_OBJECT(par_x);
-        tmp_left_name_2 = par_x;
-        tmp_right_name_1 = mod_consts[102];
-        tmp_left_name_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_FLOAT(tmp_left_name_2, tmp_right_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_2 = par_x;
+        tmp_right_value_1 = mod_consts[96];
+        tmp_left_value_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_FLOAT(tmp_left_value_2, tmp_right_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19666,9 +17675,9 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__25_legweight(struct 
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_2 = mod_consts[114];
-        tmp_assign_source_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_name_1, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_2 = mod_consts[107];
+        tmp_assign_source_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_FLOAT(tmp_left_value_1, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19741,8 +17750,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__25_legweight(struct 
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_x);
-    par_x = NULL;
     CHECK_OBJECT(var_w);
     Py_DECREF(var_w);
     var_w = NULL;
@@ -19758,8 +17765,6 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__25_legweight(struct 
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_x);
-    par_x = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
     exception_value = exception_keeper_value_1;
@@ -19773,14 +17778,16 @@ static PyObject *impl_numpy$polynomial$legendre$$$function__25_legweight(struct 
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_x);
+    Py_DECREF(par_x);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -19794,7 +17801,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__10_legpow(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__10_legpow,
-        mod_consts[176],
+        mod_consts[165],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19805,7 +17812,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__10_legpow(P
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[50],
+        mod_consts[45],
         NULL,
         0
     );
@@ -19819,7 +17826,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__10_legpow(P
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__11_legder(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__11_legder,
-        mod_consts[134],
+        mod_consts[124],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19830,7 +17837,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__11_legder(P
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[70],
+        mod_consts[65],
         NULL,
         0
     );
@@ -19844,7 +17851,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__11_legder(P
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__12_legint(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__12_legint,
-        mod_consts[178],
+        mod_consts[167],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -19855,7 +17862,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__12_legint(P
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[84],
+        mod_consts[78],
         NULL,
         0
     );
@@ -19869,12 +17876,112 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__12_legint(P
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__13_legval(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__13_legval,
-        mod_consts[82],
+        mod_consts[76],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
         codeobj_01495beb891c183ed8a5cf03c0c4ab59,
         defaults,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$polynomial$legendre,
+        mod_consts[86],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__14_legval2d() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$polynomial$legendre$$$function__14_legval2d,
+        mod_consts[169],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_32004e5804c7f2e402699ef6f2d6a82c,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$polynomial$legendre,
+        mod_consts[88],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__15_leggrid2d() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$polynomial$legendre$$$function__15_leggrid2d,
+        mod_consts[170],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_0e63366b91b6bfa5ea39536d2c1dca64,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$polynomial$legendre,
+        mod_consts[90],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__16_legval3d() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$polynomial$legendre$$$function__16_legval3d,
+        mod_consts[171],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_7f31b05f4766882347fe368ea32a4f96,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$polynomial$legendre,
+        mod_consts[91],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__17_leggrid3d() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$polynomial$legendre$$$function__17_leggrid3d,
+        mod_consts[172],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_b7e32b7e69d2cbadcadbc5f01daff07d,
+        NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
         NULL,
@@ -19891,89 +17998,14 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__13_legval(P
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__14_legval2d() {
+static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__18_legvander() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$polynomial$legendre$$$function__14_legval2d,
-        mod_consts[180],
+        impl_numpy$polynomial$legendre$$$function__18_legvander,
+        mod_consts[100],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_32004e5804c7f2e402699ef6f2d6a82c,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$polynomial$legendre,
-        mod_consts[94],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
-static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__15_leggrid2d() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$polynomial$legendre$$$function__15_leggrid2d,
-        mod_consts[181],
-#if PYTHON_VERSION >= 0x300
-        NULL,
-#endif
-        codeobj_0e63366b91b6bfa5ea39536d2c1dca64,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$polynomial$legendre,
-        mod_consts[96],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
-static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__16_legval3d() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$polynomial$legendre$$$function__16_legval3d,
-        mod_consts[182],
-#if PYTHON_VERSION >= 0x300
-        NULL,
-#endif
-        codeobj_7f31b05f4766882347fe368ea32a4f96,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$polynomial$legendre,
-        mod_consts[97],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
-static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__17_leggrid3d() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$polynomial$legendre$$$function__17_leggrid3d,
-        mod_consts[183],
-#if PYTHON_VERSION >= 0x300
-        NULL,
-#endif
-        codeobj_b7e32b7e69d2cbadcadbc5f01daff07d,
+        codeobj_038f886b0b650a18c69868f6191068c5,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -19991,35 +18023,10 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__17_leggrid3
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__18_legvander() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$polynomial$legendre$$$function__18_legvander,
-        mod_consts[107],
-#if PYTHON_VERSION >= 0x300
-        NULL,
-#endif
-        codeobj_038f886b0b650a18c69868f6191068c5,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$polynomial$legendre,
-        mod_consts[105],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__19_legvander2d() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__19_legvander2d,
-        mod_consts[184],
+        mod_consts[173],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20030,7 +18037,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__19_legvande
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[108],
+        mod_consts[101],
         NULL,
         0
     );
@@ -20044,7 +18051,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__19_legvande
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__1_poly2leg() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__1_poly2leg,
-        mod_consts[165],
+        mod_consts[154],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20055,7 +18062,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__1_poly2leg(
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[10],
+        mod_consts[9],
         NULL,
         0
     );
@@ -20069,7 +18076,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__1_poly2leg(
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__20_legvander3d() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__20_legvander3d,
-        mod_consts[185],
+        mod_consts[174],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20080,7 +18087,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__20_legvande
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[109],
+        mod_consts[102],
         NULL,
         0
     );
@@ -20094,7 +18101,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__20_legvande
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__21_legfit(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__21_legfit,
-        mod_consts[187],
+        mod_consts[176],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20105,7 +18112,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__21_legfit(P
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[111],
+        mod_consts[104],
         NULL,
         0
     );
@@ -20119,7 +18126,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__21_legfit(P
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__22_legcompanion() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__22_legcompanion,
-        mod_consts[124],
+        mod_consts[115],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20130,7 +18137,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__22_legcompa
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[122],
+        mod_consts[113],
         NULL,
         0
     );
@@ -20144,11 +18151,36 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__22_legcompa
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__23_legroots() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__23_legroots,
-        mod_consts[188],
+        mod_consts[177],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
         codeobj_017a68438f53f1672db0f6b49593bb05,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$polynomial$legendre,
+        mod_consts[120],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__24_leggauss() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$polynomial$legendre$$$function__24_leggauss,
+        mod_consts[178],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_36e7dffa3b906910e76467d6083c5214,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -20166,35 +18198,10 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__23_legroots
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__24_leggauss() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$polynomial$legendre$$$function__24_leggauss,
-        mod_consts[189],
-#if PYTHON_VERSION >= 0x300
-        NULL,
-#endif
-        codeobj_36e7dffa3b906910e76467d6083c5214,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$polynomial$legendre,
-        mod_consts[141],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__25_legweight() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__25_legweight,
-        mod_consts[190],
+        mod_consts[179],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20205,7 +18212,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__25_legweigh
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[142],
+        mod_consts[131],
         NULL,
         0
     );
@@ -20219,11 +18226,36 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__25_legweigh
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__2_leg2poly() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__2_leg2poly,
-        mod_consts[166],
+        mod_consts[155],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
         codeobj_c6db6b3acf7dac3ad4c8feba0a866fc0,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_numpy$polynomial$legendre,
+        mod_consts[20],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__3_legline() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_numpy$polynomial$legendre$$$function__3_legline,
+        mod_consts[25],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_9bcd40aab1fb33c5e4f140e6d04912c8,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -20241,35 +18273,10 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__2_leg2poly(
 
 
 
-static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__3_legline() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_numpy$polynomial$legendre$$$function__3_legline,
-        mod_consts[28],
-#if PYTHON_VERSION >= 0x300
-        NULL,
-#endif
-        codeobj_9bcd40aab1fb33c5e4f140e6d04912c8,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_numpy$polynomial$legendre,
-        mod_consts[26],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__4_legfromroots() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__4_legfromroots,
-        mod_consts[173],
+        mod_consts[162],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20280,7 +18287,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__4_legfromro
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[30],
+        mod_consts[27],
         NULL,
         0
     );
@@ -20305,7 +18312,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__5_legadd() 
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[32],
+        mod_consts[29],
         NULL,
         0
     );
@@ -20319,7 +18326,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__5_legadd() 
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__6_legsub() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__6_legsub,
-        mod_consts[45],
+        mod_consts[39],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20330,7 +18337,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__6_legsub() 
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[34],
+        mod_consts[31],
         NULL,
         0
     );
@@ -20355,7 +18362,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__7_legmulx()
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[40],
+        mod_consts[36],
         NULL,
         0
     );
@@ -20369,7 +18376,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__7_legmulx()
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__8_legmul() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__8_legmul,
-        mod_consts[29],
+        mod_consts[26],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20380,7 +18387,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__8_legmul() 
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[46],
+        mod_consts[41],
         NULL,
         0
     );
@@ -20394,7 +18401,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__8_legmul() 
 static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__9_legdiv() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_numpy$polynomial$legendre$$$function__9_legdiv,
-        mod_consts[174],
+        mod_consts[163],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -20405,7 +18412,7 @@ static PyObject *MAKE_FUNCTION_numpy$polynomial$legendre$$$function__9_legdiv() 
         NULL,
 #endif
         module_numpy$polynomial$legendre,
-        mod_consts[48],
+        mod_consts[43],
         NULL,
         0
     );
@@ -20606,71 +18613,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("numpy.polynomial.legendre");
+
+    // Store the module for future use.
     module_numpy$polynomial$legendre = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.polynomial.legendre: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("numpy.polynomial.legendre: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.polynomial.legendre: Calling createModuleConstants().\n");
+        PRINT_STRING("numpy.polynomial.legendre: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("numpy.polynomial.legendre: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("numpy.polynomial.legendre: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initnumpy$polynomial$legendre\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_numpy$polynomial$legendre = MODULE_DICT(module_numpy$polynomial$legendre);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -20686,7 +18695,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         UPDATE_STRING_DICT0(
             moduledict_numpy$polynomial$legendre,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[144]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)const_str_plain___name__);
@@ -20736,7 +18745,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -20819,13 +18828,13 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[143];
-        UPDATE_STRING_DICT0(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[144], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[132];
+        UPDATE_STRING_DICT0(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[145], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[134], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_7a5a746d4be64906789f164f3b15351b = MAKE_MODULE_FRAME(codeobj_7a5a746d4be64906789f164f3b15351b, module_numpy$polynomial$legendre);
@@ -20837,17 +18846,17 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[146]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[135]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[146]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[147], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[136], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -20860,17 +18869,17 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[146]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[135]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[146]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[148], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[137], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -20885,22 +18894,22 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[149], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[138], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[150];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_numpy$polynomial$legendre;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[4];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[139];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_numpy$polynomial$legendre;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[4];
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 82;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20911,23 +18920,23 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[151];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_numpy$polynomial$legendre;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[4];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[140];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_numpy$polynomial$legendre;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[4];
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 83;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20942,11 +18951,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_numpy$polynomial$legendre,
-                mod_consts[152],
+                mod_consts[141],
                 mod_consts[4]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[152]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[141]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -20960,23 +18969,23 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[117], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[153];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_numpy$polynomial$legendre;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[154];
-        tmp_level_name_3 = mod_consts[4];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[142];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_numpy$polynomial$legendre;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[143];
+        tmp_level_value_3 = mod_consts[4];
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 84;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20991,11 +19000,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_numpy$polynomial$legendre,
-                mod_consts[60],
+                mod_consts[55],
                 mod_consts[4]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[60]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[55]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -21009,23 +19018,23 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[155];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_numpy$polynomial$legendre;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[156];
-        tmp_level_name_4 = mod_consts[3];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[144];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_numpy$polynomial$legendre;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[145];
+        tmp_level_value_4 = mod_consts[3];
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 86;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21040,11 +19049,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_numpy$polynomial$legendre,
-                mod_consts[157],
+                mod_consts[146],
                 mod_consts[4]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[157]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[146]);
         }
 
         Py_DECREF(tmp_import_name_from_3);
@@ -21063,18 +19072,18 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[158];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_numpy$polynomial$legendre;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[159];
-        tmp_level_name_5 = mod_consts[3];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[147];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_numpy$polynomial$legendre;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[148];
+        tmp_level_value_5 = mod_consts[3];
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 87;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21089,11 +19098,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_numpy$polynomial$legendre,
-                mod_consts[160],
+                mod_consts[149],
                 mod_consts[4]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[160]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[149]);
         }
 
         Py_DECREF(tmp_import_name_from_4);
@@ -21107,23 +19116,23 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[160], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[149], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
-        tmp_assign_source_9 = LIST_COPY(mod_consts[161]);
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[162], tmp_assign_source_9);
+        tmp_assign_source_9 = LIST_COPY(mod_consts[150]);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[151], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21133,7 +19142,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[163]);
+        tmp_assign_source_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[152]);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21144,7 +19153,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[164], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[153], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
@@ -21152,7 +19161,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_11 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__1_poly2leg();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[165], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[154], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
@@ -21160,16 +19169,16 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_12 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__2_leg2poly();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[166], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[155], tmp_assign_source_12);
     }
     {
         PyObject *tmp_assign_source_13;
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_arg_element_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -21182,9 +19191,9 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_call_arg_element_1 = LIST_COPY(mod_consts[167]);
+        tmp_call_arg_element_1 = LIST_COPY(mod_consts[156]);
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 215;
-        tmp_assign_source_13 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[25], tmp_call_arg_element_1);
+        tmp_assign_source_13 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[22], tmp_call_arg_element_1);
         Py_DECREF(tmp_call_arg_element_1);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21196,16 +19205,16 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[168], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[157], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_arg_element_2;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -21218,9 +19227,9 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_call_arg_element_2 = LIST_COPY(mod_consts[78]);
+        tmp_call_arg_element_2 = LIST_COPY(mod_consts[73]);
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 218;
-        tmp_assign_source_14 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[25], tmp_call_arg_element_2);
+        tmp_assign_source_14 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[22], tmp_call_arg_element_2);
         Py_DECREF(tmp_call_arg_element_2);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21232,16 +19241,16 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[169], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[158], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_arg_element_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_3 == NULL) {
@@ -21254,9 +19263,9 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_call_arg_element_3 = LIST_COPY(mod_consts[132]);
+        tmp_call_arg_element_3 = LIST_COPY(mod_consts[122]);
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 221;
-        tmp_assign_source_15 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[25], tmp_call_arg_element_3);
+        tmp_assign_source_15 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[22], tmp_call_arg_element_3);
         Py_DECREF(tmp_call_arg_element_3);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21268,16 +19277,16 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[170], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[159], tmp_assign_source_15);
     }
     {
         PyObject *tmp_assign_source_16;
         PyObject *tmp_called_instance_4;
         PyObject *tmp_call_arg_element_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
         if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
         }
 
         if (tmp_called_instance_4 == NULL) {
@@ -21290,9 +19299,9 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_call_arg_element_4 = LIST_COPY(mod_consts[171]);
+        tmp_call_arg_element_4 = LIST_COPY(mod_consts[160]);
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 224;
-        tmp_assign_source_16 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[25], tmp_call_arg_element_4);
+        tmp_assign_source_16 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[22], tmp_call_arg_element_4);
         Py_DECREF(tmp_call_arg_element_4);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21304,7 +19313,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[172], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[161], tmp_assign_source_16);
     }
     {
         PyObject *tmp_assign_source_17;
@@ -21312,7 +19321,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_17 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__3_legline();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_17);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[25], tmp_assign_source_17);
     }
     {
         PyObject *tmp_assign_source_18;
@@ -21320,7 +19329,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_18 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__4_legfromroots();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[173], tmp_assign_source_18);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[162], tmp_assign_source_18);
     }
     {
         PyObject *tmp_assign_source_19;
@@ -21336,7 +19345,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_20 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__6_legsub();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[45], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[39], tmp_assign_source_20);
     }
     {
         PyObject *tmp_assign_source_21;
@@ -21352,7 +19361,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_22 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__8_legmul();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_22);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[26], tmp_assign_source_22);
     }
     {
         PyObject *tmp_assign_source_23;
@@ -21360,29 +19369,29 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_23 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__9_legdiv();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[174], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[163], tmp_assign_source_23);
     }
     {
         PyObject *tmp_assign_source_24;
         PyObject *tmp_defaults_1;
-        tmp_defaults_1 = mod_consts[175];
+        tmp_defaults_1 = mod_consts[164];
         Py_INCREF(tmp_defaults_1);
 
 
         tmp_assign_source_24 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__10_legpow(tmp_defaults_1);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[176], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[165], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
         PyObject *tmp_defaults_2;
-        tmp_defaults_2 = mod_consts[177];
+        tmp_defaults_2 = mod_consts[166];
         Py_INCREF(tmp_defaults_2);
 
 
         tmp_assign_source_25 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__11_legder(tmp_defaults_2);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[134], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[124], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
@@ -21403,18 +19412,18 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_26 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__12_legint(tmp_defaults_3);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[178], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[167], tmp_assign_source_26);
     }
     {
         PyObject *tmp_assign_source_27;
         PyObject *tmp_defaults_4;
-        tmp_defaults_4 = mod_consts[179];
+        tmp_defaults_4 = mod_consts[168];
         Py_INCREF(tmp_defaults_4);
 
 
         tmp_assign_source_27 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__13_legval(tmp_defaults_4);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_27);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76], tmp_assign_source_27);
     }
     {
         PyObject *tmp_assign_source_28;
@@ -21422,7 +19431,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_28 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__14_legval2d();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[180], tmp_assign_source_28);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[169], tmp_assign_source_28);
     }
     {
         PyObject *tmp_assign_source_29;
@@ -21430,7 +19439,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_29 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__15_leggrid2d();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[181], tmp_assign_source_29);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[170], tmp_assign_source_29);
     }
     {
         PyObject *tmp_assign_source_30;
@@ -21438,7 +19447,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_30 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__16_legval3d();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[182], tmp_assign_source_30);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[171], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
@@ -21446,7 +19455,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_31 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__17_leggrid3d();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[183], tmp_assign_source_31);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[172], tmp_assign_source_31);
     }
     {
         PyObject *tmp_assign_source_32;
@@ -21454,7 +19463,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_32 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__18_legvander();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[107], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[100], tmp_assign_source_32);
     }
     {
         PyObject *tmp_assign_source_33;
@@ -21462,7 +19471,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_33 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__19_legvander2d();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[184], tmp_assign_source_33);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[173], tmp_assign_source_33);
     }
     {
         PyObject *tmp_assign_source_34;
@@ -21470,18 +19479,18 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_34 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__20_legvander3d();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[185], tmp_assign_source_34);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[174], tmp_assign_source_34);
     }
     {
         PyObject *tmp_assign_source_35;
         PyObject *tmp_defaults_5;
-        tmp_defaults_5 = mod_consts[186];
+        tmp_defaults_5 = mod_consts[175];
         Py_INCREF(tmp_defaults_5);
 
 
         tmp_assign_source_35 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__21_legfit(tmp_defaults_5);
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[187], tmp_assign_source_35);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[176], tmp_assign_source_35);
     }
     {
         PyObject *tmp_assign_source_36;
@@ -21489,7 +19498,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_36 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__22_legcompanion();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[124], tmp_assign_source_36);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[115], tmp_assign_source_36);
     }
     {
         PyObject *tmp_assign_source_37;
@@ -21497,7 +19506,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_37 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__23_legroots();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[188], tmp_assign_source_37);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[177], tmp_assign_source_37);
     }
     {
         PyObject *tmp_assign_source_38;
@@ -21505,7 +19514,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_38 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__24_leggauss();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[189], tmp_assign_source_38);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[178], tmp_assign_source_38);
     }
     {
         PyObject *tmp_assign_source_39;
@@ -21513,16 +19522,16 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
         tmp_assign_source_39 = MAKE_FUNCTION_numpy$polynomial$legendre$$$function__25_legweight();
 
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[190], tmp_assign_source_39);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[179], tmp_assign_source_39);
     }
     // Tried code:
     {
         PyObject *tmp_assign_source_40;
         PyObject *tmp_tuple_element_2;
-        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[160]);
+        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[149]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
-            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[160]);
+            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[149]);
         }
 
         if (tmp_tuple_element_2 == NULL) {
@@ -21572,44 +19581,39 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     }
     {
         PyObject *tmp_assign_source_43;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[191];
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[180];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[191];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1618;
-
-            goto try_except_handler_1;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[180];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -21632,9 +19636,9 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_2 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[4];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
+        tmp_expression_value_2 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[4];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21645,9 +19649,9 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_1;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21659,14 +19663,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_43 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_43 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_43 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21681,16 +19685,16 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         tmp_class_creation_1__metaclass = tmp_assign_source_43;
     }
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[191];
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[180];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_3 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -21699,7 +19703,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[191];
+    tmp_dictdel_key = mod_consts[180];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -21714,10 +19718,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[192]);
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[181]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -21728,15 +19732,15 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_44;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_3;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_4 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[192]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_4 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[181]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21746,18 +19750,18 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_1;
         }
-        tmp_tuple_element_3 = mod_consts[193];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_3);
+        tmp_tuple_element_3 = mod_consts[182];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_3);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_3 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_3);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 1618;
-        tmp_assign_source_44 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_44 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_44 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21772,14 +19776,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         tmp_class_creation_1__prepared = tmp_assign_source_44;
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_5;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_5 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[194]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_5 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[183]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -21790,8 +19794,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_1;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -21801,18 +19805,18 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_4;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[195];
+        tmp_left_value_1 = mod_consts[184];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[196];
-        tmp_getattr_default_1 = mod_consts[197];
+        tmp_getattr_attr_1 = mod_consts[185];
+        tmp_getattr_default_1 = mod_consts[186];
         tmp_tuple_element_4 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21824,17 +19828,17 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_1;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_6;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_4);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_6 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_6 == NULL));
-            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[196]);
-            Py_DECREF(tmp_expression_name_6);
+            tmp_expression_value_6 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_6 == NULL));
+            tmp_tuple_element_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[185]);
+            Py_DECREF(tmp_expression_value_6);
             if (tmp_tuple_element_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21845,17 +19849,17 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_4);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_4);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21895,8 +19899,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[198];
-        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[199], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[187];
+        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[188], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21907,8 +19911,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_3;
         }
-        tmp_dictset_value = mod_consts[200];
-        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[144], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[189];
+        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[133], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21919,8 +19923,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_3;
         }
-        tmp_dictset_value = mod_consts[193];
-        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[201], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[182];
+        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[190], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21960,10 +19964,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         // Framed code:
         {
             nuitka_bool tmp_condition_result_6;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_element_name_1;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_element_value_1;
             PyObject *tmp_staticmethod_arg_1;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -21982,11 +19986,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_3;
             }
             condexpr_true_3:;
-            tmp_called_name_2 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_2 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_2 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_2 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21995,7 +19999,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_2 == NULL) {
+            if (tmp_called_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22005,34 +20009,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_1 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[6]);
+            tmp_args_element_value_1 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[6]);
 
-            if (tmp_args_element_name_1 == NULL) {
+            if (tmp_args_element_value_1 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
+                    tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[6]);
 
-                    if (unlikely(tmp_args_element_name_1 == NULL)) {
-                        tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
+                    if (unlikely(tmp_args_element_value_1 == NULL)) {
+                        tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[6]);
                     }
 
-                    if (tmp_args_element_name_1 == NULL) {
+                    if (tmp_args_element_value_1 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_2);
+                        Py_DECREF(tmp_called_value_2);
 
                         exception_lineno = 1641;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_1);
+                    Py_INCREF(tmp_args_element_value_1);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1641;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_1);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_1);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22066,6 +20072,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_1);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -22082,7 +20090,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_3:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[31], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[28], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -22097,10 +20105,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_7;
-            PyObject *tmp_called_name_3;
-            PyObject *tmp_args_element_name_2;
+            PyObject *tmp_called_value_3;
+            PyObject *tmp_args_element_value_2;
             PyObject *tmp_staticmethod_arg_2;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -22119,11 +20127,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_4;
             }
             condexpr_true_4:;
-            tmp_called_name_3 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_3 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_3 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_3 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -22132,7 +20140,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_3 == NULL) {
+            if (tmp_called_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22142,34 +20150,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_2 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[45]);
+            tmp_args_element_value_2 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[39]);
 
-            if (tmp_args_element_name_2 == NULL) {
+            if (tmp_args_element_value_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[45]);
+                    tmp_args_element_value_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[39]);
 
-                    if (unlikely(tmp_args_element_name_2 == NULL)) {
-                        tmp_args_element_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
+                    if (unlikely(tmp_args_element_value_2 == NULL)) {
+                        tmp_args_element_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
                     }
 
-                    if (tmp_args_element_name_2 == NULL) {
+                    if (tmp_args_element_value_2 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_3);
+                        Py_DECREF(tmp_called_value_3);
 
                         exception_lineno = 1642;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_2);
+                    Py_INCREF(tmp_args_element_value_2);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1642;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_2);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_2);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_2);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_2);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22182,14 +20192,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_4;
             condexpr_false_4:;
-            tmp_staticmethod_arg_2 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[45]);
+            tmp_staticmethod_arg_2 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[39]);
 
             if (tmp_staticmethod_arg_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[45]);
+                    tmp_staticmethod_arg_2 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[39]);
 
                     if (unlikely(tmp_staticmethod_arg_2 == NULL)) {
-                        tmp_staticmethod_arg_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
+                        tmp_staticmethod_arg_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
                     }
 
                     if (tmp_staticmethod_arg_2 == NULL) {
@@ -22203,6 +20213,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_2);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -22219,7 +20231,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_4:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[33], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[30], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -22234,10 +20246,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_8;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_element_name_3;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_element_value_3;
             PyObject *tmp_staticmethod_arg_3;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -22256,11 +20268,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_5;
             }
             condexpr_true_5:;
-            tmp_called_name_4 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_4 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_4 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_4 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -22269,7 +20281,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_4 == NULL) {
+            if (tmp_called_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22279,34 +20291,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_3 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[29]);
+            tmp_args_element_value_3 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[26]);
 
-            if (tmp_args_element_name_3 == NULL) {
+            if (tmp_args_element_value_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[29]);
+                    tmp_args_element_value_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[26]);
 
-                    if (unlikely(tmp_args_element_name_3 == NULL)) {
-                        tmp_args_element_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+                    if (unlikely(tmp_args_element_value_3 == NULL)) {
+                        tmp_args_element_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
                     }
 
-                    if (tmp_args_element_name_3 == NULL) {
+                    if (tmp_args_element_value_3 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_4);
+                        Py_DECREF(tmp_called_value_4);
 
                         exception_lineno = 1643;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_3);
+                    Py_INCREF(tmp_args_element_value_3);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1643;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_3);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_3);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_3);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_3);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22319,14 +20333,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_5;
             condexpr_false_5:;
-            tmp_staticmethod_arg_3 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[29]);
+            tmp_staticmethod_arg_3 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[26]);
 
             if (tmp_staticmethod_arg_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[29]);
+                    tmp_staticmethod_arg_3 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[26]);
 
                     if (unlikely(tmp_staticmethod_arg_3 == NULL)) {
-                        tmp_staticmethod_arg_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
+                        tmp_staticmethod_arg_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[26]);
                     }
 
                     if (tmp_staticmethod_arg_3 == NULL) {
@@ -22340,6 +20354,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_3);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -22356,7 +20372,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_5:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[203], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[192], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -22371,10 +20387,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_9;
-            PyObject *tmp_called_name_5;
-            PyObject *tmp_args_element_name_4;
+            PyObject *tmp_called_value_5;
+            PyObject *tmp_args_element_value_4;
             PyObject *tmp_staticmethod_arg_4;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -22393,11 +20409,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_6;
             }
             condexpr_true_6:;
-            tmp_called_name_5 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_5 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_5 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_5 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -22406,7 +20422,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_5 == NULL) {
+            if (tmp_called_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22416,34 +20432,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_4 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[174]);
+            tmp_args_element_value_4 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[163]);
 
-            if (tmp_args_element_name_4 == NULL) {
+            if (tmp_args_element_value_4 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[174]);
+                    tmp_args_element_value_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[163]);
 
-                    if (unlikely(tmp_args_element_name_4 == NULL)) {
-                        tmp_args_element_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[174]);
+                    if (unlikely(tmp_args_element_value_4 == NULL)) {
+                        tmp_args_element_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[163]);
                     }
 
-                    if (tmp_args_element_name_4 == NULL) {
+                    if (tmp_args_element_value_4 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_5);
+                        Py_DECREF(tmp_called_value_5);
 
                         exception_lineno = 1644;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_4);
+                    Py_INCREF(tmp_args_element_value_4);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1644;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_4);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_4);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_4);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_4);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22456,14 +20474,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_6;
             condexpr_false_6:;
-            tmp_staticmethod_arg_4 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[174]);
+            tmp_staticmethod_arg_4 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[163]);
 
             if (tmp_staticmethod_arg_4 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[174]);
+                    tmp_staticmethod_arg_4 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[163]);
 
                     if (unlikely(tmp_staticmethod_arg_4 == NULL)) {
-                        tmp_staticmethod_arg_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[174]);
+                        tmp_staticmethod_arg_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[163]);
                     }
 
                     if (tmp_staticmethod_arg_4 == NULL) {
@@ -22477,6 +20495,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_4);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -22493,7 +20513,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_6:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[47], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[42], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -22508,10 +20528,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_10;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_element_name_5;
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_element_value_5;
             PyObject *tmp_staticmethod_arg_5;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -22530,11 +20550,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_7;
             }
             condexpr_true_7:;
-            tmp_called_name_6 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_6 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -22543,7 +20563,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_6 == NULL) {
+            if (tmp_called_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22553,34 +20573,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_5 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[176]);
+            tmp_args_element_value_5 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[165]);
 
-            if (tmp_args_element_name_5 == NULL) {
+            if (tmp_args_element_value_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[176]);
+                    tmp_args_element_value_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[165]);
 
-                    if (unlikely(tmp_args_element_name_5 == NULL)) {
-                        tmp_args_element_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+                    if (unlikely(tmp_args_element_value_5 == NULL)) {
+                        tmp_args_element_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[165]);
                     }
 
-                    if (tmp_args_element_name_5 == NULL) {
+                    if (tmp_args_element_value_5 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_6);
+                        Py_DECREF(tmp_called_value_6);
 
                         exception_lineno = 1645;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_5);
+                    Py_INCREF(tmp_args_element_value_5);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1645;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_5);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_5);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_5);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_args_element_value_5);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22593,14 +20615,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_7;
             condexpr_false_7:;
-            tmp_staticmethod_arg_5 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[176]);
+            tmp_staticmethod_arg_5 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[165]);
 
             if (tmp_staticmethod_arg_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[176]);
+                    tmp_staticmethod_arg_5 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[165]);
 
                     if (unlikely(tmp_staticmethod_arg_5 == NULL)) {
-                        tmp_staticmethod_arg_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
+                        tmp_staticmethod_arg_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[165]);
                     }
 
                     if (tmp_staticmethod_arg_5 == NULL) {
@@ -22614,6 +20636,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_5);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -22630,7 +20654,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_7:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[49], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[44], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -22645,10 +20669,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_11;
-            PyObject *tmp_called_name_7;
-            PyObject *tmp_args_element_name_6;
+            PyObject *tmp_called_value_7;
+            PyObject *tmp_args_element_value_6;
             PyObject *tmp_staticmethod_arg_6;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -22667,11 +20691,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_8;
             }
             condexpr_true_8:;
-            tmp_called_name_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -22680,7 +20704,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_7 == NULL) {
+            if (tmp_called_value_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22690,34 +20714,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_6 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[82]);
+            tmp_args_element_value_6 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[76]);
 
-            if (tmp_args_element_name_6 == NULL) {
+            if (tmp_args_element_value_6 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+                    tmp_args_element_value_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
-                    if (unlikely(tmp_args_element_name_6 == NULL)) {
-                        tmp_args_element_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+                    if (unlikely(tmp_args_element_value_6 == NULL)) {
+                        tmp_args_element_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
                     }
 
-                    if (tmp_args_element_name_6 == NULL) {
+                    if (tmp_args_element_value_6 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_7);
+                        Py_DECREF(tmp_called_value_7);
 
                         exception_lineno = 1646;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_6);
+                    Py_INCREF(tmp_args_element_value_6);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1646;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_6);
-            Py_DECREF(tmp_called_name_7);
-            Py_DECREF(tmp_args_element_name_6);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_6);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_6);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22730,14 +20756,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_8;
             condexpr_false_8:;
-            tmp_staticmethod_arg_6 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[82]);
+            tmp_staticmethod_arg_6 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[76]);
 
             if (tmp_staticmethod_arg_6 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[82]);
+                    tmp_staticmethod_arg_6 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[76]);
 
                     if (unlikely(tmp_staticmethod_arg_6 == NULL)) {
-                        tmp_staticmethod_arg_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+                        tmp_staticmethod_arg_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
                     }
 
                     if (tmp_staticmethod_arg_6 == NULL) {
@@ -22751,6 +20777,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_6);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -22767,7 +20795,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_8:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[204], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[193], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -22782,10 +20810,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_12;
-            PyObject *tmp_called_name_8;
-            PyObject *tmp_args_element_name_7;
+            PyObject *tmp_called_value_8;
+            PyObject *tmp_args_element_value_7;
             PyObject *tmp_staticmethod_arg_7;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -22804,11 +20832,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_9;
             }
             condexpr_true_9:;
-            tmp_called_name_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -22817,7 +20845,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_8 == NULL) {
+            if (tmp_called_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22827,34 +20855,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[178]);
+            tmp_args_element_value_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[167]);
 
-            if (tmp_args_element_name_7 == NULL) {
+            if (tmp_args_element_value_7 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[178]);
+                    tmp_args_element_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[167]);
 
-                    if (unlikely(tmp_args_element_name_7 == NULL)) {
-                        tmp_args_element_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[178]);
+                    if (unlikely(tmp_args_element_value_7 == NULL)) {
+                        tmp_args_element_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[167]);
                     }
 
-                    if (tmp_args_element_name_7 == NULL) {
+                    if (tmp_args_element_value_7 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_8);
+                        Py_DECREF(tmp_called_value_8);
 
                         exception_lineno = 1647;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_7);
+                    Py_INCREF(tmp_args_element_value_7);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1647;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_7);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_7);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_7);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_7);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22867,14 +20897,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_9;
             condexpr_false_9:;
-            tmp_staticmethod_arg_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[178]);
+            tmp_staticmethod_arg_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[167]);
 
             if (tmp_staticmethod_arg_7 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[178]);
+                    tmp_staticmethod_arg_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[167]);
 
                     if (unlikely(tmp_staticmethod_arg_7 == NULL)) {
-                        tmp_staticmethod_arg_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[178]);
+                        tmp_staticmethod_arg_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[167]);
                     }
 
                     if (tmp_staticmethod_arg_7 == NULL) {
@@ -22888,6 +20918,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_7);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -22904,7 +20936,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_9:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[205], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[194], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -22919,10 +20951,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_13;
-            PyObject *tmp_called_name_9;
-            PyObject *tmp_args_element_name_8;
+            PyObject *tmp_called_value_9;
+            PyObject *tmp_args_element_value_8;
             PyObject *tmp_staticmethod_arg_8;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -22941,11 +20973,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_10;
             }
             condexpr_true_10:;
-            tmp_called_name_9 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_9 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_9 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_9 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -22954,7 +20986,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_9 == NULL) {
+            if (tmp_called_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22964,34 +20996,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[134]);
+            tmp_args_element_value_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[124]);
 
-            if (tmp_args_element_name_8 == NULL) {
+            if (tmp_args_element_value_8 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[134]);
+                    tmp_args_element_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[124]);
 
-                    if (unlikely(tmp_args_element_name_8 == NULL)) {
-                        tmp_args_element_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[134]);
+                    if (unlikely(tmp_args_element_value_8 == NULL)) {
+                        tmp_args_element_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[124]);
                     }
 
-                    if (tmp_args_element_name_8 == NULL) {
+                    if (tmp_args_element_value_8 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_9);
+                        Py_DECREF(tmp_called_value_9);
 
                         exception_lineno = 1648;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_8);
+                    Py_INCREF(tmp_args_element_value_8);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1648;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_8);
-            Py_DECREF(tmp_called_name_9);
-            Py_DECREF(tmp_args_element_name_8);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_8);
+            Py_DECREF(tmp_called_value_9);
+            Py_DECREF(tmp_args_element_value_8);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23004,14 +21038,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_10;
             condexpr_false_10:;
-            tmp_staticmethod_arg_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[134]);
+            tmp_staticmethod_arg_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[124]);
 
             if (tmp_staticmethod_arg_8 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[134]);
+                    tmp_staticmethod_arg_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[124]);
 
                     if (unlikely(tmp_staticmethod_arg_8 == NULL)) {
-                        tmp_staticmethod_arg_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[134]);
+                        tmp_staticmethod_arg_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[124]);
                     }
 
                     if (tmp_staticmethod_arg_8 == NULL) {
@@ -23025,6 +21059,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_8);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -23041,7 +21077,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_10:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[206], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[195], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -23056,10 +21092,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_14;
-            PyObject *tmp_called_name_10;
-            PyObject *tmp_args_element_name_9;
+            PyObject *tmp_called_value_10;
+            PyObject *tmp_args_element_value_9;
             PyObject *tmp_staticmethod_arg_9;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -23078,11 +21114,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_11;
             }
             condexpr_true_11:;
-            tmp_called_name_10 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_10 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -23091,7 +21127,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_10 == NULL) {
+            if (tmp_called_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23101,34 +21137,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_9 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[187]);
+            tmp_args_element_value_9 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[176]);
 
-            if (tmp_args_element_name_9 == NULL) {
+            if (tmp_args_element_value_9 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_9 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[187]);
+                    tmp_args_element_value_9 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[176]);
 
-                    if (unlikely(tmp_args_element_name_9 == NULL)) {
-                        tmp_args_element_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[187]);
+                    if (unlikely(tmp_args_element_value_9 == NULL)) {
+                        tmp_args_element_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
                     }
 
-                    if (tmp_args_element_name_9 == NULL) {
+                    if (tmp_args_element_value_9 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_10);
+                        Py_DECREF(tmp_called_value_10);
 
                         exception_lineno = 1649;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_9);
+                    Py_INCREF(tmp_args_element_value_9);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1649;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_9);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_args_element_name_9);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_9);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_args_element_value_9);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23141,14 +21179,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_11;
             condexpr_false_11:;
-            tmp_staticmethod_arg_9 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[187]);
+            tmp_staticmethod_arg_9 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[176]);
 
             if (tmp_staticmethod_arg_9 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_9 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[187]);
+                    tmp_staticmethod_arg_9 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[176]);
 
                     if (unlikely(tmp_staticmethod_arg_9 == NULL)) {
-                        tmp_staticmethod_arg_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[187]);
+                        tmp_staticmethod_arg_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[176]);
                     }
 
                     if (tmp_staticmethod_arg_9 == NULL) {
@@ -23162,6 +21200,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_9);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -23178,7 +21218,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_11:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[110], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[103], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -23193,10 +21233,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_15;
-            PyObject *tmp_called_name_11;
-            PyObject *tmp_args_element_name_10;
+            PyObject *tmp_called_value_11;
+            PyObject *tmp_args_element_value_10;
             PyObject *tmp_staticmethod_arg_10;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -23215,11 +21255,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_12;
             }
             condexpr_true_12:;
-            tmp_called_name_11 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_11 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_11 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_11 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -23228,7 +21268,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_11 == NULL) {
+            if (tmp_called_value_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23238,34 +21278,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_10 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[28]);
+            tmp_args_element_value_10 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[25]);
 
-            if (tmp_args_element_name_10 == NULL) {
+            if (tmp_args_element_value_10 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_10 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[28]);
+                    tmp_args_element_value_10 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[25]);
 
-                    if (unlikely(tmp_args_element_name_10 == NULL)) {
-                        tmp_args_element_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+                    if (unlikely(tmp_args_element_value_10 == NULL)) {
+                        tmp_args_element_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
                     }
 
-                    if (tmp_args_element_name_10 == NULL) {
+                    if (tmp_args_element_value_10 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_11);
+                        Py_DECREF(tmp_called_value_11);
 
                         exception_lineno = 1650;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_10);
+                    Py_INCREF(tmp_args_element_value_10);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1650;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_10);
-            Py_DECREF(tmp_called_name_11);
-            Py_DECREF(tmp_args_element_name_10);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_11, tmp_args_element_value_10);
+            Py_DECREF(tmp_called_value_11);
+            Py_DECREF(tmp_args_element_value_10);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23278,14 +21320,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_12;
             condexpr_false_12:;
-            tmp_staticmethod_arg_10 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[28]);
+            tmp_staticmethod_arg_10 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[25]);
 
             if (tmp_staticmethod_arg_10 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_10 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[28]);
+                    tmp_staticmethod_arg_10 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[25]);
 
                     if (unlikely(tmp_staticmethod_arg_10 == NULL)) {
-                        tmp_staticmethod_arg_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[28]);
+                        tmp_staticmethod_arg_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
                     }
 
                     if (tmp_staticmethod_arg_10 == NULL) {
@@ -23299,6 +21341,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_10);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -23315,7 +21359,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_12:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[207], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[196], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -23330,10 +21374,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_16;
-            PyObject *tmp_called_name_12;
-            PyObject *tmp_args_element_name_11;
+            PyObject *tmp_called_value_12;
+            PyObject *tmp_args_element_value_11;
             PyObject *tmp_staticmethod_arg_11;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -23352,11 +21396,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_13;
             }
             condexpr_true_13:;
-            tmp_called_name_12 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_12 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -23365,7 +21409,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_12 == NULL) {
+            if (tmp_called_value_12 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23375,34 +21419,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_11 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[188]);
+            tmp_args_element_value_11 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[177]);
 
-            if (tmp_args_element_name_11 == NULL) {
+            if (tmp_args_element_value_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_11 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[188]);
+                    tmp_args_element_value_11 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[177]);
 
-                    if (unlikely(tmp_args_element_name_11 == NULL)) {
-                        tmp_args_element_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[188]);
+                    if (unlikely(tmp_args_element_value_11 == NULL)) {
+                        tmp_args_element_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[177]);
                     }
 
-                    if (tmp_args_element_name_11 == NULL) {
+                    if (tmp_args_element_value_11 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_12);
+                        Py_DECREF(tmp_called_value_12);
 
                         exception_lineno = 1651;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_11);
+                    Py_INCREF(tmp_args_element_value_11);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1651;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_11);
-            Py_DECREF(tmp_called_name_12);
-            Py_DECREF(tmp_args_element_name_11);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_11);
+            Py_DECREF(tmp_called_value_12);
+            Py_DECREF(tmp_args_element_value_11);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23415,14 +21461,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_13;
             condexpr_false_13:;
-            tmp_staticmethod_arg_11 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[188]);
+            tmp_staticmethod_arg_11 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[177]);
 
             if (tmp_staticmethod_arg_11 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_11 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[188]);
+                    tmp_staticmethod_arg_11 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[177]);
 
                     if (unlikely(tmp_staticmethod_arg_11 == NULL)) {
-                        tmp_staticmethod_arg_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[188]);
+                        tmp_staticmethod_arg_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[177]);
                     }
 
                     if (tmp_staticmethod_arg_11 == NULL) {
@@ -23436,6 +21482,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_11);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -23452,7 +21500,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_13:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[208], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[197], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -23467,10 +21515,10 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_17;
-            PyObject *tmp_called_name_13;
-            PyObject *tmp_args_element_name_12;
+            PyObject *tmp_called_value_13;
+            PyObject *tmp_args_element_value_12;
             PyObject *tmp_staticmethod_arg_12;
-            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_res = MAPPING_HAS_ITEM(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -23489,11 +21537,11 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto condexpr_false_14;
             }
             condexpr_true_14:;
-            tmp_called_name_13 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202]);
+            tmp_called_value_13 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[191]);
 
-            if (unlikely(tmp_called_name_13 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_13 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[202]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[191]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -23502,7 +21550,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
 
-            if (tmp_called_name_13 == NULL) {
+            if (tmp_called_value_13 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23512,34 +21560,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_12 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[173]);
+            tmp_args_element_value_12 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[162]);
 
-            if (tmp_args_element_name_12 == NULL) {
+            if (tmp_args_element_value_12 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_12 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[173]);
+                    tmp_args_element_value_12 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[162]);
 
-                    if (unlikely(tmp_args_element_name_12 == NULL)) {
-                        tmp_args_element_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[173]);
+                    if (unlikely(tmp_args_element_value_12 == NULL)) {
+                        tmp_args_element_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[162]);
                     }
 
-                    if (tmp_args_element_name_12 == NULL) {
+                    if (tmp_args_element_value_12 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_13);
+                        Py_DECREF(tmp_called_value_13);
 
                         exception_lineno = 1652;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_12);
+                    Py_INCREF(tmp_args_element_value_12);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1652;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, tmp_args_element_name_12);
-            Py_DECREF(tmp_called_name_13);
-            Py_DECREF(tmp_args_element_name_12);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_12);
+            Py_DECREF(tmp_called_value_13);
+            Py_DECREF(tmp_args_element_value_12);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23552,14 +21602,14 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_14;
             condexpr_false_14:;
-            tmp_staticmethod_arg_12 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[173]);
+            tmp_staticmethod_arg_12 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[162]);
 
             if (tmp_staticmethod_arg_12 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_staticmethod_arg_12 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[173]);
+                    tmp_staticmethod_arg_12 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[162]);
 
                     if (unlikely(tmp_staticmethod_arg_12 == NULL)) {
-                        tmp_staticmethod_arg_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[173]);
+                        tmp_staticmethod_arg_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[162]);
                     }
 
                     if (tmp_staticmethod_arg_12 == NULL) {
@@ -23573,6 +21623,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         goto frame_exception_exit_2;
                     }
                     Py_INCREF(tmp_staticmethod_arg_12);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
@@ -23589,7 +21641,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
             condexpr_end_14:;
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[27], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[24], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -23603,20 +21655,20 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
         }
         {
-            PyObject *tmp_called_name_14;
-            PyObject *tmp_expression_name_7;
-            PyObject *tmp_args_element_name_13;
-            tmp_expression_name_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[24]);
+            PyObject *tmp_called_value_14;
+            PyObject *tmp_expression_value_7;
+            PyObject *tmp_args_element_value_13;
+            tmp_expression_value_7 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[21]);
 
-            if (tmp_expression_name_7 == NULL) {
+            if (tmp_expression_value_7 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+                    tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-                    if (unlikely(tmp_expression_name_7 == NULL)) {
-                        tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+                    if (unlikely(tmp_expression_value_7 == NULL)) {
+                        tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
                     }
 
-                    if (tmp_expression_name_7 == NULL) {
+                    if (tmp_expression_value_7 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23626,13 +21678,15 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_7);
+                    Py_INCREF(tmp_expression_value_7);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
-            tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[25]);
-            Py_DECREF(tmp_expression_name_7);
-            if (tmp_called_name_14 == NULL) {
+            tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[22]);
+            Py_DECREF(tmp_expression_value_7);
+            if (tmp_called_value_14 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23642,34 +21696,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_13 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[168]);
+            tmp_args_element_value_13 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[157]);
 
-            if (tmp_args_element_name_13 == NULL) {
+            if (tmp_args_element_value_13 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_13 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[168]);
+                    tmp_args_element_value_13 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[157]);
 
-                    if (unlikely(tmp_args_element_name_13 == NULL)) {
-                        tmp_args_element_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[168]);
+                    if (unlikely(tmp_args_element_value_13 == NULL)) {
+                        tmp_args_element_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[157]);
                     }
 
-                    if (tmp_args_element_name_13 == NULL) {
+                    if (tmp_args_element_value_13 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_14);
+                        Py_DECREF(tmp_called_value_14);
 
                         exception_lineno = 1655;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_13);
+                    Py_INCREF(tmp_args_element_value_13);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1655;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_14, tmp_args_element_name_13);
-            Py_DECREF(tmp_called_name_14);
-            Py_DECREF(tmp_args_element_name_13);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_14, tmp_args_element_value_13);
+            Py_DECREF(tmp_called_value_14);
+            Py_DECREF(tmp_args_element_value_13);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23680,7 +21736,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[209], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[198], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -23694,20 +21750,20 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
             }
         }
         {
-            PyObject *tmp_called_name_15;
-            PyObject *tmp_expression_name_8;
-            PyObject *tmp_args_element_name_14;
-            tmp_expression_name_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[24]);
+            PyObject *tmp_called_value_15;
+            PyObject *tmp_expression_value_8;
+            PyObject *tmp_args_element_value_14;
+            tmp_expression_value_8 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[21]);
 
-            if (tmp_expression_name_8 == NULL) {
+            if (tmp_expression_value_8 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[24]);
+                    tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[21]);
 
-                    if (unlikely(tmp_expression_name_8 == NULL)) {
-                        tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
+                    if (unlikely(tmp_expression_value_8 == NULL)) {
+                        tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[21]);
                     }
 
-                    if (tmp_expression_name_8 == NULL) {
+                    if (tmp_expression_value_8 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23717,13 +21773,15 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_8);
+                    Py_INCREF(tmp_expression_value_8);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
-            tmp_called_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[25]);
-            Py_DECREF(tmp_expression_name_8);
-            if (tmp_called_name_15 == NULL) {
+            tmp_called_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[22]);
+            Py_DECREF(tmp_expression_value_8);
+            if (tmp_called_value_15 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23733,34 +21791,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_args_element_name_14 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[168]);
+            tmp_args_element_value_14 = PyObject_GetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[157]);
 
-            if (tmp_args_element_name_14 == NULL) {
+            if (tmp_args_element_value_14 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_14 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[168]);
+                    tmp_args_element_value_14 = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[157]);
 
-                    if (unlikely(tmp_args_element_name_14 == NULL)) {
-                        tmp_args_element_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[168]);
+                    if (unlikely(tmp_args_element_value_14 == NULL)) {
+                        tmp_args_element_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[157]);
                     }
 
-                    if (tmp_args_element_name_14 == NULL) {
+                    if (tmp_args_element_value_14 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_15);
+                        Py_DECREF(tmp_called_value_15);
 
                         exception_lineno = 1656;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_args_element_name_14);
+                    Py_INCREF(tmp_args_element_value_14);
+                } else {
+                    goto frame_exception_exit_2;
                 }
             }
 
             frame_d5e26e44e3eae65be7b6095e5988387c_2->m_frame.f_lineno = 1656;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, tmp_args_element_name_14);
-            Py_DECREF(tmp_called_name_15);
-            Py_DECREF(tmp_args_element_name_14);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_15, tmp_args_element_value_14);
+            Py_DECREF(tmp_called_value_15);
+            Py_DECREF(tmp_args_element_value_14);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23771,7 +21831,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[210], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[199], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -23784,8 +21844,8 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_2;
             }
         }
-        tmp_dictset_value = mod_consts[211];
-        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[212], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[200];
+        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[201], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -23853,13 +21913,13 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_18;
-            PyObject *tmp_compexpr_left_1;
-            PyObject *tmp_compexpr_right_1;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_1 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
             CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-            tmp_compexpr_right_1 = tmp_class_creation_1__bases_orig;
-            tmp_condition_result_18 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+            tmp_cmp_expr_right_1 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_18 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_18 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -23880,7 +21940,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         branch_yes_4:;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[213], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_numpy$polynomial$legendre$$$class__1_Legendre_1618, mod_consts[202], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -23894,25 +21954,25 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         branch_no_4:;
         {
             PyObject *tmp_assign_source_47;
-            PyObject *tmp_called_name_16;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_16;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_5;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_16 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_5 = mod_consts[193];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_5);
+            tmp_called_value_16 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_5 = mod_consts[182];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_5 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_5);
             tmp_tuple_element_5 = locals_numpy$polynomial$legendre$$$class__1_Legendre_1618;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_7a5a746d4be64906789f164f3b15351b->m_frame.f_lineno = 1618;
-            tmp_assign_source_47 = CALL_FUNCTION(tmp_called_name_16, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_47 = CALL_FUNCTION(tmp_called_value_16, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_47 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23991,7 +22051,7 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
         exception_lineno = 1618;
         goto try_except_handler_1;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[193], tmp_assign_source_46);
+        UPDATE_STRING_DICT1(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)mod_consts[182], tmp_assign_source_46);
     }
     goto try_end_1;
     // Exception handler code:
@@ -24056,19 +22116,36 @@ PyObject *modulecode_numpy$polynomial$legendre(PyObject *module, struct Nuitka_M
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);
     tmp_class_creation_1__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("numpy.polynomial.legendre", false);
+
     return module_numpy$polynomial$legendre;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_numpy$polynomial$legendre, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("numpy$polynomial$legendre", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'wx.lib.colourutils'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_wx$lib$colourutils;
 PyDictObject *moduledict_wx$lib$colourutils;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[69];
+static PyObject *mod_consts[66];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[66];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("wx.lib.colourutils"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 66; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_wx$lib$colourutils(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "wx.lib.colourutils");
+    for (int i = 0; i < 66; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -76,15 +88,15 @@ static PyCodeObject *codeobj_49fdea9d8eaf0729094a9f1f8990e470;
 static PyCodeObject *codeobj_ef3c37fcae0630fb1f8a3ff57cc74f32;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[60]); CHECK_OBJECT(module_filename_obj);
-    codeobj_2f5b5d8c4d53d8a213e1a786bb21d9c7 = MAKE_CODEOBJECT(module_filename_obj, 64, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[61], mod_consts[62], NULL, 1, 0, 0);
-    codeobj_8359d125f934f4ec916018da4f82d084 = MAKE_CODEOBJECT(module_filename_obj, 66, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[61], mod_consts[62], NULL, 1, 0, 0);
-    codeobj_a697831bbe0f9764fc487410eb3d252c = MAKE_CODEOBJECT(module_filename_obj, 60, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[61], mod_consts[63], NULL, 1, 0, 0);
-    codeobj_9d9e9343c743e4e0cffe38f26f27aba2 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[64], NULL, NULL, 0, 0, 0);
-    codeobj_3e701ff8adeb8ec6fafada80ac96dff7 = MAKE_CODEOBJECT(module_filename_obj, 32, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[55], mod_consts[65], NULL, 2, 0, 0);
-    codeobj_d79503425ef42efca47e8338407a824a = MAKE_CODEOBJECT(module_filename_obj, 46, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[22], mod_consts[66], NULL, 3, 0, 0);
-    codeobj_49fdea9d8eaf0729094a9f1f8990e470 = MAKE_CODEOBJECT(module_filename_obj, 74, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[58], mod_consts[67], NULL, 2, 0, 0);
-    codeobj_ef3c37fcae0630fb1f8a3ff57cc74f32 = MAKE_CODEOBJECT(module_filename_obj, 99, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[59], mod_consts[68], NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[56]); CHECK_OBJECT(module_filename_obj);
+    codeobj_2f5b5d8c4d53d8a213e1a786bb21d9c7 = MAKE_CODEOBJECT(module_filename_obj, 64, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[57], mod_consts[58], NULL, 1, 0, 0);
+    codeobj_8359d125f934f4ec916018da4f82d084 = MAKE_CODEOBJECT(module_filename_obj, 66, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[57], mod_consts[58], NULL, 1, 0, 0);
+    codeobj_a697831bbe0f9764fc487410eb3d252c = MAKE_CODEOBJECT(module_filename_obj, 60, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[57], mod_consts[59], NULL, 1, 0, 0);
+    codeobj_9d9e9343c743e4e0cffe38f26f27aba2 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[60], NULL, NULL, 0, 0, 0);
+    codeobj_3e701ff8adeb8ec6fafada80ac96dff7 = MAKE_CODEOBJECT(module_filename_obj, 32, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[52], mod_consts[61], NULL, 2, 0, 0);
+    codeobj_d79503425ef42efca47e8338407a824a = MAKE_CODEOBJECT(module_filename_obj, 46, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[20], mod_consts[62], NULL, 3, 0, 0);
+    codeobj_49fdea9d8eaf0729094a9f1f8990e470 = MAKE_CODEOBJECT(module_filename_obj, 74, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[54], mod_consts[63], NULL, 2, 0, 0);
+    codeobj_ef3c37fcae0630fb1f8a3ff57cc74f32 = MAKE_CODEOBJECT(module_filename_obj, 99, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[55], mod_consts[64], NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -118,13 +130,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__1_AdjustAlpha(struct Nuitka
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     static struct Nuitka_FrameObject *cache_frame_3e701ff8adeb8ec6fafada80ac96dff7 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_3e701ff8adeb8ec6fafada80ac96dff7)) {
         Py_XDECREF(cache_frame_3e701ff8adeb8ec6fafada80ac96dff7);
 
@@ -153,22 +160,22 @@ static PyObject *impl_wx$lib$colourutils$$$function__1_AdjustAlpha(struct Nuitka
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_args_element_value_4;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -178,8 +185,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__1_AdjustAlpha(struct Nuitka
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -192,85 +199,60 @@ static PyObject *impl_wx$lib$colourutils$$$function__1_AdjustAlpha(struct Nuitka
         CHECK_OBJECT(par_colour);
         tmp_called_instance_1 = par_colour;
         frame_3e701ff8adeb8ec6fafada80ac96dff7->m_frame.f_lineno = 43;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[2]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[2]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 43;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_colour == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[3]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 43;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_colour);
         tmp_called_instance_2 = par_colour;
         frame_3e701ff8adeb8ec6fafada80ac96dff7->m_frame.f_lineno = 43;
-        tmp_args_element_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[4]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[3]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
 
             exception_lineno = 43;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        if (par_colour == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
-            Py_DECREF(tmp_args_element_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[3]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 43;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_colour);
         tmp_called_instance_3 = par_colour;
         frame_3e701ff8adeb8ec6fafada80ac96dff7->m_frame.f_lineno = 43;
-        tmp_args_element_name_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[5]);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[4]);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 43;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_alpha);
-        tmp_args_element_name_4 = par_alpha;
+        tmp_args_element_value_4 = par_alpha;
         frame_3e701ff8adeb8ec6fafada80ac96dff7->m_frame.f_lineno = 43;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_3);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -301,7 +283,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__1_AdjustAlpha(struct Nuitka
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -341,54 +323,28 @@ static PyObject *impl_wx$lib$colourutils$$$function__1_AdjustAlpha(struct Nuitka
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(par_colour);
-    par_colour = NULL;
-    Py_XDECREF(par_alpha);
-    par_alpha = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_1 = exception_type;
-    exception_keeper_value_1 = exception_value;
-    exception_keeper_tb_1 = exception_tb;
-    exception_keeper_lineno_1 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(par_colour);
-    par_colour = NULL;
-    Py_XDECREF(par_alpha);
-    par_alpha = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_1;
-    exception_value = exception_keeper_value_1;
-    exception_tb = exception_keeper_tb_1;
-    exception_lineno = exception_keeper_lineno_1;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_colour);
+    Py_DECREF(par_colour);
+    CHECK_OBJECT(par_alpha);
+    Py_DECREF(par_alpha);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_colour);
+    Py_DECREF(par_colour);
+    CHECK_OBJECT(par_alpha);
+    Py_DECREF(par_alpha);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -547,13 +503,12 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         {
             PyObject *tmp_assign_source_2;
             PyObject *tmp_iter_arg_2;
-            PyObject *tmp_called_name_1;
-            PyObject *tmp_expression_name_1;
-            PyObject *tmp_kwargs_name_1;
+            PyObject *tmp_called_value_1;
+            PyObject *tmp_expression_value_1;
             CHECK_OBJECT(par_color);
-            tmp_expression_name_1 = par_color;
-            tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
-            if (tmp_called_name_1 == NULL) {
+            tmp_expression_value_1 = par_color;
+            tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
+            if (tmp_called_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -563,11 +518,9 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
                 type_description_1 = "ooooooooo";
                 goto try_except_handler_3;
             }
-            tmp_kwargs_name_1 = PyDict_Copy(mod_consts[8]);
             frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 61;
-            tmp_iter_arg_2 = CALL_FUNCTION_WITH_KEYARGS(tmp_called_name_1, tmp_kwargs_name_1);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_kwargs_name_1);
+            tmp_iter_arg_2 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_value_1, &PyTuple_GET_ITEM(mod_consts[7], 0), mod_consts[8]);
+            Py_DECREF(tmp_called_value_1);
             if (tmp_iter_arg_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -670,30 +623,19 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             PyObject *tmp_append_list_1;
             PyObject *tmp_append_value_1;
             PyObject *tmp_int_arg_1;
-            PyObject *tmp_left_name_1;
-            PyObject *tmp_right_name_1;
-            PyObject *tmp_left_name_2;
+            PyObject *tmp_left_value_1;
+            PyObject *tmp_right_value_1;
+            PyObject *tmp_left_value_2;
             PyObject *tmp_abs_arg_1;
-            PyObject *tmp_right_name_2;
+            PyObject *tmp_right_value_2;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
             CHECK_OBJECT(outline_0_var_val);
-            tmp_left_name_1 = outline_0_var_val;
-            if (par_percent == NULL) {
-
-                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[9]);
-                exception_tb = NULL;
-                NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-                CHAIN_EXCEPTION(exception_value);
-
-                exception_lineno = 60;
-                type_description_2 = "oo";
-                goto try_except_handler_4;
-            }
-
+            tmp_left_value_1 = outline_0_var_val;
+            CHECK_OBJECT(par_percent);
             tmp_abs_arg_1 = par_percent;
-            tmp_left_name_2 = BUILTIN_ABS(tmp_abs_arg_1);
-            if (tmp_left_name_2 == NULL) {
+            tmp_left_value_2 = BUILTIN_ABS(tmp_abs_arg_1);
+            if (tmp_left_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -703,10 +645,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
                 type_description_2 = "oo";
                 goto try_except_handler_4;
             }
-            tmp_right_name_2 = mod_consts[10];
-            tmp_right_name_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_FLOAT(tmp_left_name_2, tmp_right_name_2);
-            Py_DECREF(tmp_left_name_2);
-            if (tmp_right_name_1 == NULL) {
+            tmp_right_value_2 = mod_consts[9];
+            tmp_right_value_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_FLOAT(tmp_left_value_2, tmp_right_value_2);
+            Py_DECREF(tmp_left_value_2);
+            if (tmp_right_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -716,8 +658,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
                 type_description_2 = "oo";
                 goto try_except_handler_4;
             }
-            tmp_int_arg_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-            Py_DECREF(tmp_right_name_1);
+            tmp_int_arg_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+            Py_DECREF(tmp_right_value_1);
             if (tmp_int_arg_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -773,7 +715,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         return NULL;
         // Return handler code:
         try_return_handler_4:;
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -792,7 +735,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         exception_tb = NULL;
         exception_lineno = 0;
 
-        Py_XDECREF(tmp_listcomp_1__$0);
+        CHECK_OBJECT(tmp_listcomp_1__$0);
+        Py_DECREF(tmp_listcomp_1__$0);
         tmp_listcomp_1__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_1__contraction);
         Py_DECREF(tmp_listcomp_1__contraction);
@@ -1023,7 +967,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[11];
+            exception_value = mod_consts[10];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -1044,7 +988,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_3;
@@ -1082,7 +1027,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_2:;
-    Py_XDECREF(tmp_tuple_unpack_1__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_1__source_iter);
+    Py_DECREF(tmp_tuple_unpack_1__source_iter);
     tmp_tuple_unpack_1__source_iter = NULL;
     {
         PyObject *tmp_assign_source_9;
@@ -1117,34 +1063,15 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     Py_XDECREF(tmp_tuple_unpack_1__element_3);
     tmp_tuple_unpack_1__element_3 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_1__element_1);
-    tmp_tuple_unpack_1__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_2);
-    tmp_tuple_unpack_1__element_2 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_1__element_3);
-    tmp_tuple_unpack_1__element_3 = NULL;
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
-        if (par_percent == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[9]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 63;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_1 = par_percent;
-        tmp_compexpr_right_1 = mod_consts[12];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        CHECK_OBJECT(par_percent);
+        tmp_cmp_expr_left_1 = par_percent;
+        tmp_cmp_expr_right_1 = mod_consts[11];
+        tmp_condition_result_1 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1154,24 +1081,12 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 63;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     // Tried code:
@@ -1275,14 +1190,14 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         {
             PyObject *tmp_append_list_2;
             PyObject *tmp_append_value_2;
-            PyObject *tmp_left_name_3;
-            PyObject *tmp_right_name_3;
+            PyObject *tmp_left_value_3;
+            PyObject *tmp_right_value_3;
             CHECK_OBJECT(tmp_listcomp_2__contraction);
             tmp_append_list_2 = tmp_listcomp_2__contraction;
             CHECK_OBJECT(outline_1_var_val);
-            tmp_left_name_3 = outline_1_var_val;
-            tmp_right_name_3 = mod_consts[13];
-            tmp_append_value_2 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_name_3, tmp_right_name_3);
+            tmp_left_value_3 = outline_1_var_val;
+            tmp_right_value_3 = mod_consts[12];
+            tmp_append_value_2 = BINARY_OPERATION_MULT_OBJECT_OBJECT_LONG(tmp_left_value_3, tmp_right_value_3);
             if (tmp_append_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -1326,7 +1241,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         return NULL;
         // Return handler code:
         try_return_handler_8:;
-        Py_XDECREF(tmp_listcomp_2__$0);
+        CHECK_OBJECT(tmp_listcomp_2__$0);
+        Py_DECREF(tmp_listcomp_2__$0);
         tmp_listcomp_2__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_2__contraction);
         Py_DECREF(tmp_listcomp_2__contraction);
@@ -1345,7 +1261,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         exception_tb = NULL;
         exception_lineno = 0;
 
-        Py_XDECREF(tmp_listcomp_2__$0);
+        CHECK_OBJECT(tmp_listcomp_2__$0);
+        Py_DECREF(tmp_listcomp_2__$0);
         tmp_listcomp_2__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_2__contraction);
         Py_DECREF(tmp_listcomp_2__contraction);
@@ -1575,7 +1492,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[11];
+            exception_value = mod_consts[10];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -1596,7 +1513,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_7;
@@ -1634,7 +1552,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_4:;
-    Py_XDECREF(tmp_tuple_unpack_2__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_2__source_iter);
+    Py_DECREF(tmp_tuple_unpack_2__source_iter);
     tmp_tuple_unpack_2__source_iter = NULL;
     {
         PyObject *tmp_assign_source_20;
@@ -1642,9 +1561,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         tmp_assign_source_20 = tmp_tuple_unpack_2__element_1;
         {
             PyObject *old = var_radj;
+            assert(old != NULL);
             var_radj = tmp_assign_source_20;
             Py_INCREF(var_radj);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -1657,9 +1577,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         tmp_assign_source_21 = tmp_tuple_unpack_2__element_2;
         {
             PyObject *old = var_gadj;
+            assert(old != NULL);
             var_gadj = tmp_assign_source_21;
             Py_INCREF(var_gadj);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -1672,21 +1593,16 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         tmp_assign_source_22 = tmp_tuple_unpack_2__element_3;
         {
             PyObject *old = var_badj;
+            assert(old != NULL);
             var_badj = tmp_assign_source_22;
             Py_INCREF(var_badj);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_2__element_3);
     tmp_tuple_unpack_2__element_3 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_2__element_1);
-    tmp_tuple_unpack_2__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_2);
-    tmp_tuple_unpack_2__element_2 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_2__element_3);
-    tmp_tuple_unpack_2__element_3 = NULL;
     goto branch_end_1;
     branch_no_1:;
     // Tried code:
@@ -1814,7 +1730,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
                 goto or_right_1;
             }
             or_right_1:;
-            tmp_or_right_value_1 = mod_consts[14];
+            tmp_or_right_value_1 = mod_consts[13];
             tmp_append_value_3 = tmp_or_right_value_1;
             goto or_end_1;
             or_left_1:;
@@ -1853,7 +1769,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         return NULL;
         // Return handler code:
         try_return_handler_12:;
-        Py_XDECREF(tmp_listcomp_3__$0);
+        CHECK_OBJECT(tmp_listcomp_3__$0);
+        Py_DECREF(tmp_listcomp_3__$0);
         tmp_listcomp_3__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_3__contraction);
         Py_DECREF(tmp_listcomp_3__contraction);
@@ -1872,7 +1789,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         exception_tb = NULL;
         exception_lineno = 0;
 
-        Py_XDECREF(tmp_listcomp_3__$0);
+        CHECK_OBJECT(tmp_listcomp_3__$0);
+        Py_DECREF(tmp_listcomp_3__$0);
         tmp_listcomp_3__$0 = NULL;
         CHECK_OBJECT(tmp_listcomp_3__contraction);
         Py_DECREF(tmp_listcomp_3__contraction);
@@ -2102,7 +2020,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[11];
+            exception_value = mod_consts[10];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -2123,7 +2041,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_11;
@@ -2161,7 +2080,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     goto frame_exception_exit_1;
     // End of try:
     try_end_6:;
-    Py_XDECREF(tmp_tuple_unpack_3__source_iter);
+    CHECK_OBJECT(tmp_tuple_unpack_3__source_iter);
+    Py_DECREF(tmp_tuple_unpack_3__source_iter);
     tmp_tuple_unpack_3__source_iter = NULL;
     {
         PyObject *tmp_assign_source_31;
@@ -2169,9 +2089,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         tmp_assign_source_31 = tmp_tuple_unpack_3__element_1;
         {
             PyObject *old = var_radj;
+            assert(old != NULL);
             var_radj = tmp_assign_source_31;
             Py_INCREF(var_radj);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -2184,9 +2105,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         tmp_assign_source_32 = tmp_tuple_unpack_3__element_2;
         {
             PyObject *old = var_gadj;
+            assert(old != NULL);
             var_gadj = tmp_assign_source_32;
             Py_INCREF(var_gadj);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -2199,48 +2121,32 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
         tmp_assign_source_33 = tmp_tuple_unpack_3__element_3;
         {
             PyObject *old = var_badj;
+            assert(old != NULL);
             var_badj = tmp_assign_source_33;
             Py_INCREF(var_badj);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
     Py_XDECREF(tmp_tuple_unpack_3__element_3);
     tmp_tuple_unpack_3__element_3 = NULL;
 
-    Py_XDECREF(tmp_tuple_unpack_3__element_1);
-    tmp_tuple_unpack_3__element_1 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_3__element_2);
-    tmp_tuple_unpack_3__element_2 = NULL;
-    Py_XDECREF(tmp_tuple_unpack_3__element_3);
-    tmp_tuple_unpack_3__element_3 = NULL;
     branch_end_1:;
     {
         PyObject *tmp_assign_source_34;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_left_name_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_left_value_4;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_right_name_4;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[15]);
-        assert(tmp_called_name_2 != NULL);
-        if (par_color == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 68;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyObject *tmp_right_value_4;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_2 = LOOKUP_BUILTIN(mod_consts[14]);
+        assert(tmp_called_value_2 != NULL);
+        CHECK_OBJECT(par_color);
         tmp_called_instance_1 = par_color;
         frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 68;
-        tmp_left_name_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[2]);
-        if (tmp_left_name_4 == NULL) {
+        tmp_left_value_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[2]);
+        if (tmp_left_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2251,10 +2157,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_radj);
-        tmp_right_name_4 = var_radj;
-        tmp_args_element_name_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_left_name_4);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_right_value_4 = var_radj;
+        tmp_args_element_value_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_left_value_4);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2264,14 +2170,14 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = mod_consts[14];
+        tmp_args_element_value_2 = mod_consts[13];
         frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 68;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_34 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_34 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_34 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2287,30 +2193,19 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_35;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_left_name_5;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_left_value_5;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_right_name_5;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_3 = LOOKUP_BUILTIN(mod_consts[15]);
-        assert(tmp_called_name_3 != NULL);
-        if (par_color == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 69;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyObject *tmp_right_value_5;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_3 = LOOKUP_BUILTIN(mod_consts[14]);
+        assert(tmp_called_value_3 != NULL);
+        CHECK_OBJECT(par_color);
         tmp_called_instance_2 = par_color;
         frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 69;
-        tmp_left_name_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[4]);
-        if (tmp_left_name_5 == NULL) {
+        tmp_left_value_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[3]);
+        if (tmp_left_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2321,10 +2216,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_gadj);
-        tmp_right_name_5 = var_gadj;
-        tmp_args_element_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_5, tmp_right_name_5);
-        Py_DECREF(tmp_left_name_5);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_right_value_5 = var_gadj;
+        tmp_args_element_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_5, tmp_right_value_5);
+        Py_DECREF(tmp_left_value_5);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2334,14 +2229,14 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = mod_consts[14];
+        tmp_args_element_value_4 = mod_consts[13];
         frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 69;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_assign_source_35 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_assign_source_35 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assign_source_35 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2357,30 +2252,19 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_36;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_left_name_6;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_left_value_6;
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_4 = LOOKUP_BUILTIN(mod_consts[15]);
-        assert(tmp_called_name_4 != NULL);
-        if (par_color == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 70;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_4 = LOOKUP_BUILTIN(mod_consts[14]);
+        assert(tmp_called_value_4 != NULL);
+        CHECK_OBJECT(par_color);
         tmp_called_instance_3 = par_color;
         frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 70;
-        tmp_left_name_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[5]);
-        if (tmp_left_name_6 == NULL) {
+        tmp_left_value_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[4]);
+        if (tmp_left_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2391,10 +2275,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_badj);
-        tmp_right_name_6 = var_badj;
-        tmp_args_element_name_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_left_name_6);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_right_value_6 = var_badj;
+        tmp_args_element_value_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_left_value_6);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2404,14 +2288,14 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_6 = mod_consts[14];
+        tmp_args_element_value_6 = mod_consts[13];
         frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 70;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_assign_source_36 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_assign_source_36 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_assign_source_36 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2427,10 +2311,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     }
     {
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_args_element_name_10;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
         tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
         if (unlikely(tmp_called_instance_4 == NULL)) {
@@ -2448,16 +2332,16 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_red);
-        tmp_args_element_name_7 = var_red;
+        tmp_args_element_value_7 = var_red;
         CHECK_OBJECT(var_green);
-        tmp_args_element_name_8 = var_green;
+        tmp_args_element_value_8 = var_green;
         CHECK_OBJECT(var_blue);
-        tmp_args_element_name_9 = var_blue;
+        tmp_args_element_value_9 = var_blue;
         CHECK_OBJECT(par_alpha);
-        tmp_args_element_name_10 = par_alpha;
+        tmp_args_element_value_10 = par_alpha;
         frame_d79503425ef42efca47e8338407a824a->m_frame.f_lineno = 71;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8, tmp_args_element_name_9, tmp_args_element_name_10};
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8, tmp_args_element_value_9, tmp_args_element_value_10};
             tmp_return_value = CALL_METHOD_WITH_ARGS4(
                 tmp_called_instance_4,
                 mod_consts[1],
@@ -2549,23 +2433,23 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_color);
-    par_color = NULL;
-    Py_XDECREF(par_percent);
-    par_percent = NULL;
-    Py_XDECREF(par_alpha);
-    par_alpha = NULL;
-    Py_XDECREF(var_radj);
+    CHECK_OBJECT(var_radj);
+    Py_DECREF(var_radj);
     var_radj = NULL;
-    Py_XDECREF(var_gadj);
+    CHECK_OBJECT(var_gadj);
+    Py_DECREF(var_gadj);
     var_gadj = NULL;
-    Py_XDECREF(var_badj);
+    CHECK_OBJECT(var_badj);
+    Py_DECREF(var_badj);
     var_badj = NULL;
-    Py_XDECREF(var_red);
+    CHECK_OBJECT(var_red);
+    Py_DECREF(var_red);
     var_red = NULL;
-    Py_XDECREF(var_green);
+    CHECK_OBJECT(var_green);
+    Py_DECREF(var_green);
     var_green = NULL;
-    Py_XDECREF(var_blue);
+    CHECK_OBJECT(var_blue);
+    Py_DECREF(var_blue);
     var_blue = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -2579,12 +2463,6 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_color);
-    par_color = NULL;
-    Py_XDECREF(par_percent);
-    par_percent = NULL;
-    Py_XDECREF(par_alpha);
-    par_alpha = NULL;
     Py_XDECREF(var_radj);
     var_radj = NULL;
     Py_XDECREF(var_gadj);
@@ -2610,14 +2488,24 @@ static PyObject *impl_wx$lib$colourutils$$$function__2_AdjustColour(struct Nuitk
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_color);
+    Py_DECREF(par_color);
+    CHECK_OBJECT(par_percent);
+    Py_DECREF(par_percent);
+    CHECK_OBJECT(par_alpha);
+    Py_DECREF(par_alpha);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_color);
+    Py_DECREF(par_color);
+    CHECK_OBJECT(par_percent);
+    Py_DECREF(par_percent);
+    CHECK_OBJECT(par_alpha);
+    Py_DECREF(par_alpha);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -2682,14 +2570,14 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_sum_sequence_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(par_color);
         tmp_called_instance_1 = par_color;
         frame_49fdea9d8eaf0729094a9f1f8990e470->m_frame.f_lineno = 85;
-        tmp_sum_sequence_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[7]);
+        tmp_sum_sequence_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[6]);
         if (tmp_sum_sequence_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2700,9 +2588,9 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_1 = BUILTIN_SUM1(tmp_sum_sequence_1);
+        tmp_left_value_1 = BUILTIN_SUM1(tmp_sum_sequence_1);
         Py_DECREF(tmp_sum_sequence_1);
-        if (tmp_left_name_1 == NULL) {
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2712,9 +2600,9 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[18];
-        tmp_assign_source_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = mod_consts[16];
+        tmp_assign_source_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2730,15 +2618,13 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var_avg);
-        tmp_compexpr_left_1 = var_avg;
-        tmp_compexpr_right_1 = mod_consts[19];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = var_avg;
+        tmp_cmp_expr_right_1 = mod_consts[17];
+        tmp_condition_result_1 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2748,36 +2634,24 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 86;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2787,7 +2661,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[20]);
+        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[18]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2805,15 +2679,13 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(var_avg);
-        tmp_compexpr_left_2 = var_avg;
-        tmp_compexpr_right_2 = mod_consts[21];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_avg;
+        tmp_cmp_expr_right_2 = mod_consts[19];
+        tmp_condition_result_2 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2823,32 +2695,20 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 88;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        int tmp_truth_name_3;
+        int tmp_truth_name_1;
         CHECK_OBJECT(par_bw);
-        tmp_truth_name_3 = CHECK_IF_TRUE(par_bw);
-        if (tmp_truth_name_3 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(par_bw);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2858,7 +2718,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_3 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
@@ -2868,14 +2728,14 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2885,7 +2745,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[20]);
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[18]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2903,16 +2763,16 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_no_3:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[22]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[20]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2922,24 +2782,13 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        if (par_color == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 90;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_1 = par_color;
-        tmp_args_element_name_2 = mod_consts[23];
+        CHECK_OBJECT(par_color);
+        tmp_args_element_value_1 = par_color;
+        tmp_args_element_value_2 = mod_consts[21];
         frame_49fdea9d8eaf0729094a9f1f8990e470->m_frame.f_lineno = 90;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_assign_source_4 == NULL) {
@@ -2960,15 +2809,13 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_4;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_avg);
-        tmp_compexpr_left_3 = var_avg;
-        tmp_compexpr_right_3 = mod_consts[24];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_avg;
+        tmp_cmp_expr_right_3 = mod_consts[22];
+        tmp_condition_result_4 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2978,36 +2825,24 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_4 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 91;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_3;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_3;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3017,7 +2852,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[25]);
+        tmp_assign_source_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[23]);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3035,10 +2870,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_5;
-        int tmp_truth_name_5;
+        int tmp_truth_name_2;
         CHECK_OBJECT(par_bw);
-        tmp_truth_name_5 = CHECK_IF_TRUE(par_bw);
-        if (tmp_truth_name_5 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(par_bw);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3048,7 +2883,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_5 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_5 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
         } else {
@@ -3058,14 +2893,14 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_4;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_4;
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3075,7 +2910,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[25]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[23]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3093,16 +2928,16 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_no_5:;
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[22]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[20]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3112,24 +2947,13 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        if (par_color == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[16]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 95;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_3 = par_color;
-        tmp_args_element_name_4 = mod_consts[26];
+        CHECK_OBJECT(par_color);
+        tmp_args_element_value_3 = par_color;
+        tmp_args_element_value_4 = mod_consts[24];
         frame_49fdea9d8eaf0729094a9f1f8990e470->m_frame.f_lineno = 95;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
         if (tmp_assign_source_7 == NULL) {
@@ -3151,7 +2975,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     branch_end_1:;
     if (var_txt_color == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[27]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -3231,11 +3055,6 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(par_color);
-    par_color = NULL;
-    CHECK_OBJECT(par_bw);
-    Py_DECREF(par_bw);
-    par_bw = NULL;
     CHECK_OBJECT(var_avg);
     Py_DECREF(var_avg);
     var_avg = NULL;
@@ -3253,11 +3072,6 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(par_color);
-    par_color = NULL;
-    CHECK_OBJECT(par_bw);
-    Py_DECREF(par_bw);
-    par_bw = NULL;
     Py_XDECREF(var_avg);
     var_avg = NULL;
     Py_XDECREF(var_txt_color);
@@ -3275,14 +3089,20 @@ static PyObject *impl_wx$lib$colourutils$$$function__3_BestLabelColour(struct Nu
     return NULL;
 
 function_exception_exit:
-    assert(exception_type);
+    CHECK_OBJECT(par_color);
+    Py_DECREF(par_color);
+    CHECK_OBJECT(par_bw);
+    Py_DECREF(par_bw);    assert(exception_type);
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
 
     return NULL;
 
 function_return_exit:
    // Function cleanup code if any.
-
+    CHECK_OBJECT(par_color);
+    Py_DECREF(par_color);
+    CHECK_OBJECT(par_bw);
+    Py_DECREF(par_bw);
 
    // Actual function exit with return value, making sure we did not make
    // the error status worse despite non-NULL return.
@@ -3346,18 +3166,16 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3367,8 +3185,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[29]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[27]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3378,10 +3196,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[30];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[28];
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3391,34 +3209,22 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 106;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         nuitka_bool tmp_condition_result_2;
         PyObject *tmp_mvar_value_1;
-        int tmp_truth_name_2;
-        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[31]);
+        int tmp_truth_name_1;
+        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[29]);
 
         if (unlikely(tmp_mvar_value_1 == NULL)) {
-            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[31]);
+            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
         }
 
         if (tmp_mvar_value_1 == NULL) {
@@ -3431,8 +3237,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_mvar_value_1);
-        if (tmp_truth_name_2 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_mvar_value_1);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3442,7 +3248,7 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
@@ -3452,16 +3258,16 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
     branch_yes_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3471,8 +3277,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[32]);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[30]);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3482,9 +3288,9 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[33];
-        tmp_condition_result_3 = RICH_COMPARE_LT_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
+        tmp_cmp_expr_right_2 = mod_consts[31];
+        tmp_condition_result_3 = RICH_COMPARE_LT_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3505,17 +3311,17 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_4;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_4;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3525,8 +3331,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[34]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[32]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3536,37 +3342,37 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 110;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[20]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[18]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 110;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_ef3c37fcae0630fb1f8a3ff57cc74f32->m_frame.f_lineno = 110;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3581,16 +3387,16 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
         var_brush = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(var_brush);
-        tmp_expression_name_5 = var_brush;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[35]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_5 = var_brush;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[33]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3600,49 +3406,49 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[36]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[34]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[36]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 111;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[37]);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[35]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 111;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[38]);
-        Py_DECREF(tmp_expression_name_6);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[36]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 111;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_ef3c37fcae0630fb1f8a3ff57cc74f32->m_frame.f_lineno = 111;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3657,21 +3463,10 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
     }
     {
         PyObject *tmp_called_instance_1;
-        if (var_brush == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[39]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 112;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(var_brush);
         tmp_called_instance_1 = var_brush;
         frame_ef3c37fcae0630fb1f8a3ff57cc74f32->m_frame.f_lineno = 112;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[40]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[37]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3688,18 +3483,18 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
     branch_no_3:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3709,8 +3504,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[41]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[38]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3720,49 +3515,49 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[36]);
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[34]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[36]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 114;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[37]);
-        if (tmp_expression_name_9 == NULL) {
+        tmp_expression_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[35]);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 114;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[38]);
-        Py_DECREF(tmp_expression_name_9);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[36]);
+        Py_DECREF(tmp_expression_value_9);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 114;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_ef3c37fcae0630fb1f8a3ff57cc74f32->m_frame.f_lineno = 114;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3784,18 +3579,18 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
     branch_no_2:;
     branch_no_1:;
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_13;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_13;
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3805,8 +3600,8 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[42]);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[39]);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3816,9 +3611,9 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[40]);
-        Py_DECREF(tmp_expression_name_11);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[37]);
+        Py_DECREF(tmp_expression_value_11);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3828,37 +3623,37 @@ static PyObject *impl_wx$lib$colourutils$$$function__4_GetHighlightColour(struct
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 118;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[43]);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[40]);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 118;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_ef3c37fcae0630fb1f8a3ff57cc74f32->m_frame.f_lineno = 118;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_4);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3988,7 +3783,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__1_AdjustAlpha() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$colourutils$$$function__1_AdjustAlpha,
-        mod_consts[55],
+        mod_consts[52],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -3999,7 +3794,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__1_AdjustAlpha() {
         NULL,
 #endif
         module_wx$lib$colourutils,
-        mod_consts[6],
+        mod_consts[5],
         NULL,
         0
     );
@@ -4013,7 +3808,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__1_AdjustAlpha() {
 static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__2_AdjustColour(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$colourutils$$$function__2_AdjustColour,
-        mod_consts[22],
+        mod_consts[20],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -4024,7 +3819,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__2_AdjustColour(PyO
         NULL,
 #endif
         module_wx$lib$colourutils,
-        mod_consts[17],
+        mod_consts[15],
         NULL,
         0
     );
@@ -4038,7 +3833,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__2_AdjustColour(PyO
 static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__3_BestLabelColour(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$colourutils$$$function__3_BestLabelColour,
-        mod_consts[58],
+        mod_consts[54],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -4049,7 +3844,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__3_BestLabelColour(
         NULL,
 #endif
         module_wx$lib$colourutils,
-        mod_consts[28],
+        mod_consts[26],
         NULL,
         0
     );
@@ -4063,7 +3858,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__3_BestLabelColour(
 static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__4_GetHighlightColour() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_wx$lib$colourutils$$$function__4_GetHighlightColour,
-        mod_consts[59],
+        mod_consts[55],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -4074,7 +3869,7 @@ static PyObject *MAKE_FUNCTION_wx$lib$colourutils$$$function__4_GetHighlightColo
         NULL,
 #endif
         module_wx$lib$colourutils,
-        mod_consts[44],
+        mod_consts[41],
         NULL,
         0
     );
@@ -4254,71 +4049,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("wx.lib.colourutils");
+
+    // Store the module for future use.
     module_wx$lib$colourutils = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.colourutils: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("wx.lib.colourutils: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.colourutils: Calling createModuleConstants().\n");
+        PRINT_STRING("wx.lib.colourutils: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("wx.lib.colourutils: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("wx.lib.colourutils: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initwx$lib$colourutils\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_wx$lib$colourutils = MODULE_DICT(module_wx$lib$colourutils);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -4334,7 +4131,7 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
         UPDATE_STRING_DICT0(
             moduledict_wx$lib$colourutils,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[65]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)const_str_plain___name__);
@@ -4384,7 +4181,7 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -4454,13 +4251,13 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[45];
-        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[46], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[42];
+        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[43], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[47], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[44], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_9d9e9343c743e4e0cffe38f26f27aba2 = MAKE_MODULE_FRAME(codeobj_9d9e9343c743e4e0cffe38f26f27aba2, module_wx$lib$colourutils);
@@ -4472,17 +4269,17 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
     // Framed code:
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[48]);
+        tmp_assattr_value_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[45]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[49], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[46], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4495,17 +4292,17 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[48]);
+        tmp_assattr_value_2 = Py_True;
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[45]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[50], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[47], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4520,27 +4317,27 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = mod_consts[52];
-        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[53], tmp_assign_source_4);
+        tmp_assign_source_4 = mod_consts[49];
+        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[50], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[0];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_wx$lib$colourutils;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[12];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[0];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_wx$lib$colourutils;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[11];
         frame_9d9e9343c743e4e0cffe38f26f27aba2->m_frame.f_lineno = 19;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4555,20 +4352,18 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        assert(!(tmp_expression_name_1 == NULL));
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[29]);
-        if (tmp_compexpr_left_1 == NULL) {
+        assert(!(tmp_expression_value_1 == NULL));
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[27]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4578,10 +4373,10 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[30];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[28];
+        tmp_condition_result_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4591,24 +4386,12 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 22;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
@@ -4619,18 +4402,18 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     // Tried code:
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[54];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_wx$lib$colourutils;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[12];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[51];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_wx$lib$colourutils;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[11];
         frame_9d9e9343c743e4e0cffe38f26f27aba2->m_frame.f_lineno = 24;
-        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4641,7 +4424,7 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[36], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[34], tmp_assign_source_7);
     }
     goto try_end_1;
     // Exception handler code:
@@ -4675,11 +4458,11 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_2 = PyExc_ImportError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_2 = PyExc_ImportError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
         assert(!(tmp_res == -1));
         tmp_condition_result_2 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_2 != false) {
@@ -4692,7 +4475,7 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_9;
         tmp_assign_source_9 = Py_False;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[31], tmp_assign_source_9);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_9);
     }
     goto branch_end_2;
     branch_no_2:;
@@ -4739,12 +4522,12 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     try_end_1:;
     {
         bool tmp_condition_result_3;
-        nuitka_bool tmp_compexpr_left_3;
-        nuitka_bool tmp_compexpr_right_3;
+        nuitka_bool tmp_cmp_expr_left_3;
+        nuitka_bool tmp_cmp_expr_right_3;
         assert(tmp_try_except_1__unhandled_indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_3 = tmp_try_except_1__unhandled_indicator;
-        tmp_compexpr_right_3 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_3 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = tmp_try_except_1__unhandled_indicator;
+        tmp_cmp_expr_right_3 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_3 == tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -4755,7 +4538,7 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_10;
         tmp_assign_source_10 = Py_True;
-        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[31], tmp_assign_source_10);
+        UPDATE_STRING_DICT0(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_10);
     }
     branch_no_3:;
     branch_no_1:;
@@ -4765,20 +4548,20 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
         tmp_assign_source_11 = MAKE_FUNCTION_wx$lib$colourutils$$$function__1_AdjustAlpha();
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
         PyObject *tmp_defaults_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4788,7 +4571,7 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[56]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[53]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4805,7 +4588,7 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
         tmp_assign_source_12 = MAKE_FUNCTION_wx$lib$colourutils$$$function__2_AdjustColour(tmp_defaults_1);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_12);
     }
 
     // Restore frame exception if necessary.
@@ -4839,13 +4622,13 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_13;
         PyObject *tmp_defaults_2;
-        tmp_defaults_2 = mod_consts[57];
+        tmp_defaults_2 = mod_consts[7];
         Py_INCREF(tmp_defaults_2);
 
 
         tmp_assign_source_13 = MAKE_FUNCTION_wx$lib$colourutils$$$function__3_BestLabelColour(tmp_defaults_2);
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[58], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
@@ -4853,12 +4636,26 @@ PyObject *modulecode_wx$lib$colourutils(PyObject *module, struct Nuitka_MetaPath
 
         tmp_assign_source_14 = MAKE_FUNCTION_wx$lib$colourutils$$$function__4_GetHighlightColour();
 
-        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_14);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("wx.lib.colourutils", false);
 
     return module_wx$lib$colourutils;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_wx$lib$colourutils, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("wx$lib$colourutils", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-

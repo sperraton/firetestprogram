@@ -1,5 +1,5 @@
 /* Generated code for Python module 'Phidget22.Devices'
- * created by Nuitka version 0.6.16.4
+ * created by Nuitka version 0.8.4
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,7 +33,10 @@ PyObject *module_Phidget22$Devices;
 PyDictObject *moduledict_Phidget22$Devices;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[19];
+static PyObject *mod_consts[20];
+#ifndef __NUITKA_NO_ASSERT__
+static Py_hash_t mod_consts_hash[20];
+#endif
 
 static PyObject *module_filename_obj = NULL;
 
@@ -45,11 +48,17 @@ static void createModuleConstants(void) {
     if (constants_created == false) {
         loadConstantsBlob(&mod_consts[0], UNTRANSLATE("Phidget22.Devices"));
         constants_created = true;
+
+#ifndef __NUITKA_NO_ASSERT__
+        for (int i = 0; i < 20; i++) {
+            mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
+        }
+#endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -61,7 +70,10 @@ void checkModuleConstants_Phidget22$Devices(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    checkConstantsBlob(&mod_consts[0], "Phidget22.Devices");
+    for (int i = 0; i < 20; i++) {
+        assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
+        CHECK_OBJECT_DEEP(mod_consts[i]);
+    }
 }
 #endif
 
@@ -246,71 +258,73 @@ static PyMethodDef _method_def_create_compiled_function = {
 #endif
 
 // Internal entry point for module code.
-PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *module_entry) {
+PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("Phidget22.Devices");
+
+    // Store the module for future use.
     module_Phidget22$Devices = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-#if PYTHON_VERSION < 0x300
-    _initSlotCompare();
-#endif
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Phidget22.Devices: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("Phidget22.Devices: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Phidget22.Devices: Calling createModuleConstants().\n");
+        PRINT_STRING("Phidget22.Devices: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("Phidget22.Devices: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("Phidget22.Devices: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initPhidget22$Devices\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_Phidget22$Devices = MODULE_DICT(module_Phidget22$Devices);
 
 #ifdef _NUITKA_PLUGIN_DILL_ENABLED
-    registerDillPluginTables(module_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
+    registerDillPluginTables(loader_entry->name, &_method_def_reduce_compiled_function, &_method_def_create_compiled_function);
 #endif
 
     // Set "__compiled__" to what version information we have.
@@ -326,7 +340,7 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         UPDATE_STRING_DICT0(
             moduledict_Phidget22$Devices,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[19]
         );
 #elif 1
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)const_str_plain___name__);
@@ -376,7 +390,7 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -457,16 +471,31 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_list_element_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
         {
             PyObject *hard_module = IMPORT_HARD_OS();
-            tmp_expression_name_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[2]);
+            if (likely(hard_module != NULL)) {
+                tmp_expression_value_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[2]);
+            } else {
+                tmp_expression_value_1 = NULL;
+            }
         }
+        if (tmp_expression_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
-        if (tmp_expression_name_1 == NULL) {
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_expression_value_1);
+
+            exception_lineno = 1;
+
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[3]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -476,21 +505,10 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
 
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[3]);
-        if (tmp_called_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 1;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_1 = module_filename_obj;
+        tmp_args_element_value_1 = module_filename_obj;
         frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
-        tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_list_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -503,31 +521,37 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         }
         tmp_assign_source_3 = PyList_New(3);
         {
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_expression_name_2;
-            PyObject *tmp_args_element_name_2;
-            PyObject *tmp_called_instance_1;
-            PyObject *tmp_args_element_name_3;
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_expression_value_2;
+            PyObject *tmp_args_element_value_2;
+            PyObject *tmp_called_value_3;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_args_element_value_3;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_expression_value_4;
             PyList_SET_ITEM(tmp_assign_source_3, 0, tmp_list_element_1);
             frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_expression_name_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[2]);
+                if (likely(hard_module != NULL)) {
+                    tmp_expression_value_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[2]);
+                } else {
+                    tmp_expression_value_2 = NULL;
+                }
             }
-
-            if (tmp_expression_name_2 == NULL) {
+            if (tmp_expression_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
+                Py_DECREF(tmp_expression_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
-            tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[4]);
-            if (tmp_called_name_2 == NULL) {
+            tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[4]);
+            Py_DECREF(tmp_expression_value_2);
+            if (tmp_called_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -540,45 +564,58 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
             frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_called_instance_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[5]);
+                if (likely(hard_module != NULL)) {
+                    tmp_expression_value_3 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[5]);
+                } else {
+                    tmp_expression_value_3 = NULL;
+                }
             }
-
-            if (tmp_called_instance_1 == NULL) {
+            if (tmp_expression_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_2);
+                Py_DECREF(tmp_called_value_2);
+                Py_DECREF(tmp_expression_value_3);
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[6]);
+            Py_DECREF(tmp_expression_value_3);
+            if (tmp_called_value_3 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_called_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
             frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
-            tmp_args_element_name_2 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_1,
-                mod_consts[6],
-                &PyTuple_GET_ITEM(mod_consts[7], 0)
-            );
+            tmp_args_element_value_2 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_3, mod_consts[7]);
 
-            if (tmp_args_element_name_2 == NULL) {
+            Py_DECREF(tmp_called_value_3);
+            if (tmp_args_element_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_2);
+                Py_DECREF(tmp_called_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
-            tmp_args_element_name_3 = mod_consts[8];
+            tmp_args_element_value_3 = mod_consts[8];
             frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
             {
-                PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
             }
 
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -593,10 +630,25 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
             frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_called_instance_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[5]);
+                if (likely(hard_module != NULL)) {
+                    tmp_expression_value_4 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[5]);
+                } else {
+                    tmp_expression_value_4 = NULL;
+                }
             }
+            if (tmp_expression_value_4 == NULL) {
+                assert(ERROR_OCCURRED());
 
-            if (tmp_called_instance_2 == NULL) {
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_expression_value_4);
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[6]);
+            Py_DECREF(tmp_expression_value_4);
+            if (tmp_called_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -607,12 +659,9 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
                 goto list_build_exception_1;
             }
             frame_f1894fe9c230025952613e0bfaf28b78->m_frame.f_lineno = 1;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[6],
-                &PyTuple_GET_ITEM(mod_consts[9], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_4, mod_consts[9]);
 
+            Py_DECREF(tmp_called_value_4);
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -635,10 +684,10 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         UPDATE_STRING_DICT1(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_3);
     }
     {
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        tmp_dictset_value = Nuitka_Loader_New(module_entry);
-        tmp_dictset_dict = PySys_GetObject((char *)"path_importer_cache");
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_1;
+        tmp_dictset_value = Nuitka_Loader_New(loader_entry);
+        tmp_dictset_dict = Nuitka_SysGetObject("path_importer_cache");
         if (tmp_dictset_dict == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -649,15 +698,15 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[10]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[10]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
         }
 
-        assert(!(tmp_expression_name_3 == NULL));
-        tmp_subscript_name_1 = mod_consts[11];
-        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_1, 0);
+        assert(!(tmp_expression_value_5 == NULL));
+        tmp_subscript_value_1 = mod_consts[11];
+        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_1, 0);
         if (tmp_dictset_key == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -668,7 +717,9 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
 
             goto frame_exception_exit_1;
         }
+        assert(PyDict_CheckExact(tmp_dictset_dict));
         tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
+
         Py_DECREF(tmp_dictset_key);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -682,9 +733,9 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         }
     }
     {
-        PyObject *tmp_assattr_name_1;
+        PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_value_1 = module_filename_obj;
         tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[12]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
@@ -692,7 +743,7 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[13], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[13], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -705,9 +756,9 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         }
     }
     {
-        PyObject *tmp_assattr_name_2;
+        PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        tmp_assattr_name_2 = Py_True;
+        tmp_assattr_value_2 = Py_True;
         tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[12]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
@@ -715,7 +766,7 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[14], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[14], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -728,15 +779,15 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         }
     }
     {
-        PyObject *tmp_assattr_name_3;
+        PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_name_3 = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[10]);
+        tmp_assattr_value_3 = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[10]);
 
-        if (unlikely(tmp_assattr_name_3 == NULL)) {
-            tmp_assattr_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
+        if (unlikely(tmp_assattr_value_3 == NULL)) {
+            tmp_assattr_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
         }
 
-        if (tmp_assattr_name_3 == NULL) {
+        if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -753,7 +804,7 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         }
 
         assert(!(tmp_assattr_target_3 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[15], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[15], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -800,9 +851,23 @@ PyObject *modulecode_Phidget22$Devices(PyObject *module, struct Nuitka_MetaPathB
         UPDATE_STRING_DICT0(moduledict_Phidget22$Devices, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_4);
     }
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("Phidget22.Devices", false);
+
     return module_Phidget22$Devices;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Phidget22$Devices, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("Phidget22$Devices", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
-
