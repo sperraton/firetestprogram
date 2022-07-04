@@ -25,15 +25,11 @@ class Controller():
         self.machineSettings = None
         self.isTestRunning = False
         self.isCorrectionCalculated = False
-
         self.correctionMinutes = 0
-
         self.tableHeader = []
         self.startTime = 0
         self.elapsedTime = 0
         self.currentRow = []
-
-        self.saveTick = 0
         self.logger = None
 
         # TODO make these sets instead of lists to improve speed.
@@ -136,7 +132,6 @@ class Controller():
         self.startTime = 0
         self.elapsedTime = 0
         self.updateRate = 1  # Seconds between each data gather
-        #self.saveTick = 0
 
         self.testData = TestData(self.testSettings, self.machineSettings)  # Holds the data that is recorded and calculated thoughout the test
 
@@ -165,6 +160,7 @@ class Controller():
 
         # NOTE Check the return code. wrap in try as well
         self.updateData()  # NOTE Perhaps put this before the isTestRunning is set and then test in the grabLatestData to do a first point init
+
         pub.sendMessage("dataGrid.addRow", row=self.currentRow)
         self.logger.writeDataRow(self.currentRow)  # Log the first data point
 
@@ -176,9 +172,8 @@ class Controller():
             pub.sendMessage("unexposedGraph.threshold",
                             thresh=self.unexposedThresh)
 
-        #self.saveTick = 0
         self.lastWritten = self.elapsedTime
-        self.timer.StartOnce(1000)
+        self.timer.StartOnce(self.updateRate)
 
 
     def stopTest(self):
@@ -241,14 +236,9 @@ class Controller():
         # Get the latest data from the DAQ and put it in the grid and graphs
         self.updateData()
 
-
-
-
-
+        # TODO get the dispatching of data to the UI or Logger in a single function, was supposed to be in updateData()
         # Is it time to save yet?
-        #self.saveTick += 1
-        # This is a flag to make sure we write the final entry into the log.
-        isRowWritten = False
+        isRowWritten = False # This is a flag to make sure we write the final entry into the log.
         if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0 or \
            round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate_sec:
             # TODO Save the accumulated rows to file
@@ -256,7 +246,7 @@ class Controller():
             pub.sendMessage("dataGrid.addRow", row=self.currentRow)
             self.logger.writeDataRow(self.currentRow)
             isRowWritten = True
-            #self.saveTick = 0
+
             # Keep track of if we've missed a save.
             self.lastWritten = self.elapsedTime
 
@@ -317,8 +307,9 @@ class Controller():
         """
 
         self.grabLatestData()
-        # TODO slow this to the minimum of 5 second update
-        pub.sendMessage("graphData.update", testData=self.testData)
+
+        if round(self.elapsedTime) % 2 == 0: # Slow down the UI graph update
+            pub.sendMessage("graphData.update", testData=self.testData)
 
     def grabLatestData(self):
         """

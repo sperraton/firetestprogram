@@ -1,4 +1,5 @@
 from select import select
+from matplotlib import offsetbox
 import wx
 from wx.lib import plot as wxplot
 from pubsub import pub
@@ -81,6 +82,7 @@ class GraphCanvas(PlotCanvas):
         
         self.parent = parent
         self.panelID = panelID
+        self.numCols = 1 # number of columns in legend.
 
         PlotCanvas.__init__(self, self.parent)
 
@@ -140,8 +142,8 @@ class GraphCanvas(PlotCanvas):
                                     xLabel=self.graphAxesSettings.xlabel,
                                     yLabel=self.graphAxesSettings.ylabel)
         
-        # numSelected = len(self.frame.controller.selectedFurnaceChannels)
-        # self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
+        #numSelected = len(self.frame.controller.selectedFurnaceChannels)
+        #self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
         # self.createLegend(numCols=self.numCols)
 
         self.drawGraph()
@@ -199,7 +201,11 @@ class GraphCanvas(PlotCanvas):
     def addToGraphPlotSettings(self, settings):
         self.graphPlotSettings += settings
 
-        
+        # For now just cap out the rows before another col is made. # TODO later make this dynamic based on client height and or width
+        #self.numCols = int(len(settings)/numRows)+1
+        self.numCols = int(ceil((len(settings)+2)/LEGEND_NUM_ROWS))
+
+
     def replaceGraphPlotSettings(self, settings):
         self.graphPlotSettings.clear()
         self.addToGraphPlotSettings(settings)
@@ -335,7 +341,91 @@ class GraphCanvas(PlotCanvas):
         bitmap.SaveFile(filename, wx.BITMAP_TYPE_PNG)
         
 
+    def _legendWH(self, dc, graphics):
+        """Returns the size in screen units for legend box"""
+        if self._legendEnabled is not True:
+            legendBoxWH = symExt = txtExt = (0, 0)
+        else:
+            # find max symbol size
+            symExt = graphics.getSymExtent(self.printerScale)
+            # find max legend text extent
+            dc.SetFont(self._getFont(self._fontSizeLegend))
 
+            txtList = graphics.getLegendNames()
+
+            # Loop through the labels and find the largest one
+            txtExt = dc.GetTextExtent(txtList[0])
+            for txt in graphics.getLegendNames()[1:]:
+                txtExt = np.maximum(txtExt, dc.GetTextExtent(txt))
+
+            maxW = symExt[0] + txtExt[0]
+            maxH = max(symExt[1], txtExt[1])
+
+            # padding .1 for lhs of legend box and space between lines
+            padding = 1.1
+            maxW = maxW * padding
+            maxH = maxH * padding * len(txtList)
+
+            dc.SetFont(self._getFont(self._fontSizeAxis))
+            legendBoxWH = (maxW*self.numCols, maxH)
+
+        return (legendBoxWH, symExt, txtExt)
+
+    # Shadow this to draw a multi-column legend box
+    def _drawLegend(self, dc, graphics, rhsW, topH, legendBoxWH,
+                    legendSymExt, legendTextExt):
+        """Draws legend symbols and text"""
+
+        # top right hand corner of graph box is ref corner
+        trhc = (self.plotbox_origin +
+                (self.plotbox_size - [rhsW, topH]) * [1, -1])
+        # border space between legend sym and graph box
+        legendLHS = .091 * legendBoxWH[0]
+        
+        # 1.1 used as space between lines
+        lineHeight = max(legendSymExt[1], legendTextExt[1]) * 1.1
+        dc.SetFont(self._getFont(self._fontSizeLegend))
+        
+        from wx.lib.plot.polyobjects import PolyLine
+        from wx.lib.plot.polyobjects import PolyMarker
+        from wx.lib.plot.polyobjects import PolyBoxPlot
+
+        # Cycle through all the graphic objects (polylines)
+        col = 0
+        numObj = len(graphics)
+        #numRows = round(numObj / self.numCols)
+
+        for i in range(numObj):
+            o = graphics[i]
+            s = (i % LEGEND_NUM_ROWS) * lineHeight
+            offset = col*legendBoxWH[0]/(self.numCols-0.25)
+
+            # What type of object?
+            if isinstance(o, PolyMarker) or isinstance(o, PolyBoxPlot):
+                # draw marker with legend
+                pnt = (trhc[0] + legendLHS + legendSymExt[0] / 2.,
+                       trhc[1] + s + lineHeight / 2.)
+                o.draw(dc, self.printerScale, coord=np.array([pnt]))
+
+            elif isinstance(o, PolyLine):
+                # draw line with legend
+                pnt1 = (trhc[0] + legendLHS + offset,                   trhc[1] + s + lineHeight / 2.)
+                pnt2 = (trhc[0] + legendLHS + legendSymExt[0] + offset, trhc[1] + s + lineHeight / 2.)
+                o.draw(dc, self.printerScale, coord=np.array([pnt1, pnt2]))
+
+            else:
+                raise TypeError(
+                    "object is neither PolyMarker or PolyLine instance")
+
+            # draw legend txt
+            #Check if we've reached the end of the allowed lines in this column and switch columns if needed
+            pnt = ((trhc[0] + legendLHS + legendSymExt[0] + 5 * self._pointSize[0]) + offset,
+                   (trhc[1] + s + lineHeight / 2. - legendTextExt[1] / 2))
+
+            if i % LEGEND_NUM_ROWS+1 == LEGEND_NUM_ROWS: col+=1
+            dc.DrawText(o.getLegend(), pnt[0], pnt[1])
+
+        dc.SetFont(self._getFont(self._fontSizeAxis))  # reset
 
 ###############################################################################
 #
