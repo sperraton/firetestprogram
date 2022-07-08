@@ -1,5 +1,5 @@
 from select import select
-from matplotlib import offsetbox
+#from matplotlib import offsetbox
 import wx
 from wx.lib import plot as wxplot
 from pubsub import pub
