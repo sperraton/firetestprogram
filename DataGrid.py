@@ -84,7 +84,7 @@ class DataGrid(wx.Panel):
         for index, dataPoint in enumerate(row):
             self.gridView.SetCellValue(rowIdx, index, str(dataPoint))
             #self.gridView.GetTable().SetValue(rowIdx, index, str(dataPoint))
-        self.gridView.AutoSizeColumns()
+        #self.gridView.AutoSizeColumns()
 
         # Make last added point visible in window
         # Ok for testing I'm going to comment out the next two lines.

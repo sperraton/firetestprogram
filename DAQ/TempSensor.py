@@ -1,6 +1,6 @@
 from Phidget22.ThermocoupleType import ThermocoupleType
 from HelperFunctions import applyGainOffset, celsiusToFahrenheit
-from Enumerations import DEFAULT_ATTACH_WAIT, INVALID_VALUE
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_ATTACH_WAIT, INVALID_VALUE
 from DAQ.BaseSensor import BaseSensor
 
 class ThermocoupleSensor(BaseSensor):
@@ -38,8 +38,8 @@ class ThermocoupleSensor(BaseSensor):
     def formatData(self, value, units="C", gain=1, offset=0):
         if value == INVALID_VALUE:
             return "SAT.", 0.0 
-        if value == -9999:
-            return "-9999", -9999
+        if value == BAD_VALUE_NUM:
+            return BAD_VALUE_STR, BAD_VALUE_NUM
 
         numeric = applyGainOffset(value, gain, offset)
 

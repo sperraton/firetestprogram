@@ -6,12 +6,14 @@ from numpy import mean, median, percentile
 from Phidget22.PhidgetException import *
 from Phidget22.Phidget import *
 
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR
+
 
 def averageTemperatures(values):
     # From the given TC values get only the ones we want to average
     data = cleanValues(values)
     if not data:
-        return -9999
+        return BAD_VALUE_NUM
     return mean(data)
 
 
@@ -24,7 +26,7 @@ def cleanValues(values):
         if dataPoint[1] == "SAT.": # Don't include bad TC's
             continue
 
-        if dataPoint[1] == "-9999":
+        if dataPoint[1] == BAD_VALUE_STR:
             continue
 
         if float(dataPoint[1]) < 0: # In the fire test, no TC should be reading in the negative. If they are then they are installed backwards.

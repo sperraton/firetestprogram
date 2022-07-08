@@ -239,7 +239,9 @@ class GraphCanvas(PlotCanvas):
         """
         Redraw all the graph objects
         """
-        
+        # CODE SPENDS MOST TIME HERE
+        # TODO Make a seperate draw with BLIT function
+
         # Now redraw, or do the draw at a predetermined time, not just when the data for one object is done.# maybe trigger once all the lines get updated data
         if False: #self.enableZoom: !!! DEBUGGING !!!
             #self.Redraw()
@@ -517,7 +519,8 @@ class BaseGraph(wx.Panel):
             self.graphCanvas.graphAxesSettings.ymax += SMALL
             self.toggle = True
 
-        self.graphCanvas.drawGraph() # Update the drawn plot
+        #self.graphCanvas.drawGraph() # Update the drawn plot
+        wx.CallAfter(self.graphCanvas.drawGraph)
 
 
 

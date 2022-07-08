@@ -7,7 +7,7 @@ from Phidget22.Phidget import *
 
 from pubsub import pub
 from HelperFunctions import printPhidgetInfo
-from Enumerations import CHANGE_TRIGGER, DEFAULT_ATTACH_WAIT, INVALID_VALUE
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, CHANGE_TRIGGER, DEFAULT_ATTACH_WAIT, INVALID_VALUE
 import logging
 
 class BaseSensor():
@@ -38,9 +38,9 @@ class BaseSensor():
         self.channelIndex = channelIndex
         self.attached = False
         self.isReady = False
-        self.valueRaw = -9999
-        self.valueNumeric = -9999
-        self.valueFormatted = "-9999"
+        self.valueRaw = BAD_VALUE_NUM
+        self.valueNumeric = BAD_VALUE_NUM
+        self.valueFormatted = BAD_VALUE_STR
 
         self.serialNumber = serialNumber
         self.hubPort = hubPort

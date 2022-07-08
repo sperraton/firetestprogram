@@ -2,18 +2,18 @@ import wx
 import wx.grid
 from pubsub import pub
 import wx.lib.mixins.listctrl  as  listmix
-from Enumerations import UIcolours, thermocouplePlacements, pressurePlacements, thermocouplePlacementLabels, pressurePlacementLabels
+from Enumerations import BAD_VALUE_STR, UIcolours, thermocouplePlacements, pressurePlacements, thermocouplePlacementLabels, pressurePlacementLabels
 
 
 ################################################################################
 # Base class of monitor lists
 ################################################################################
 
-class MonitorList(wx.ListCtrl):#, listmix.CheckListCtrlMixin):
+class MonitorList(wx.ListCtrl):
+
     def __init__(self, parent, frame, placement, sensorType, hasCheck=False):
         wx.ListCtrl.__init__(self, parent, style=wx.LC_REPORT)
-        #if hasCheck:
-            #listmix.CheckListCtrlMixin.__init__(self)
+
         self.sensorType = sensorType
         self.hasCheck = hasCheck
         self.EnableCheckBoxes(hasCheck)
@@ -31,15 +31,16 @@ class MonitorList(wx.ListCtrl):#, listmix.CheckListCtrlMixin):
             self.Bind(wx.EVT_LIST_ITEM_UNCHECKED, self.onUncheckItem)
             pub.subscribe(self.setChannelExcludedState, "monitor.exclude")
 
-    # def Destroy(self):
 
-    #     pub.unsubscribe(self.onValueChange, "channel.valueChange")
-    #     pub.unsubscribe(self.setChannelWarnState, "monitor.warn")
+    def onDestroy(self, event):
 
-    #     if self.hasCheck:
-    #         pub.unsubscribe(self.setChannelExcludedState, "monitor.exclude")
+        pub.unsubscribe(self.onValueChange, "channel.valueChange")
+        pub.unsubscribe(self.setChannelWarnState, "monitor.warn")
 
-    #     wx.ListCtrl.Destroy(self)
+        if self.hasCheck:
+            pub.unsubscribe(self.setChannelExcludedState, "monitor.exclude")
+
+        event.Skip()
 
 
     def onValueChange(self, sensorType, channel, valueRaw, valueNumeric, valueFormatted):
@@ -367,9 +368,11 @@ class Monitor(wx.Panel):
 
         self.furnaceAutoexcludeChk = wx.CheckBox(self.furnaceMonitorPanel, wx.ID_ANY, "Autoexclude outliers from avg.")
         self.furnaceAutoexcludeChk.SetValue = False
+        self.furnaceAverageTxt = wx.StaticText(self.furnaceMonitorPanel, wx.ID_ANY, "AVG: " + BAD_VALUE_STR)
 
         self.unexposedAutoexcludeChk = wx.CheckBox(self.unexposedMonitorPanel, wx.ID_ANY, "Autoexclude outliers from avg.")
         self.unexposedAutoexcludeChk.SetValue = False
+        self.unexposedAverageTxt = wx.StaticText(self.unexposedMonitorPanel, wx.ID_ANY, "AVG: " + BAD_VALUE_STR)
 
         self.afterburnerList = AfterburnerList(self.afterburnerMonitorPanel, self.frame)
         self.furnaceList = ThermocoupleList(self.furnaceMonitorPanel, self.frame, thermocouplePlacements.FURNACE)
@@ -380,6 +383,7 @@ class Monitor(wx.Panel):
         self.furnaceAutoexcludeChk.Bind(wx.EVT_CHECKBOX,self.onFurnaceAutoexclude)
         self.unexposedAutoexcludeChk.Bind(wx.EVT_CHECKBOX,self.onUnexposedAutoexclude)
 
+        pub.subscribe(self.updateAvg, "graphData.update")
         self.doInitLayout()
 
 
@@ -404,8 +408,9 @@ class Monitor(wx.Panel):
         self.Layout()
         self.Show()
 
-    def onDestroy(self):
-        pass
+    def onDestroy(self, event):
+        pub.unsubscribe(self.updateAvg, "graphData.update")
+        event.Skip()
 
 
     def doInitLayout(self):
@@ -433,10 +438,12 @@ class Monitor(wx.Panel):
         self.afterburnerMonitorSizer.Add(self.afterburnerList, 1, wx.ALL | wx.EXPAND, 5)
         self.afterburnerMonitorPanel.SetSizer(self.afterburnerMonitorSizer)
 
+        self.furnaceMonitorSizer.Add(self.furnaceAverageTxt, 0, wx.ALL, 5)
         self.furnaceMonitorSizer.Add(self.furnaceAutoexcludeChk, 0, wx.ALL, 5)
         self.furnaceMonitorSizer.Add(self.furnaceList, 1, wx.ALL | wx.EXPAND, 5)
         self.furnaceMonitorPanel.SetSizer(self.furnaceMonitorSizer)
 
+        self.unexposedMonitorSizer.Add(self.unexposedAverageTxt, 0, wx.ALL, 5)
         self.unexposedMonitorSizer.Add(self.unexposedAutoexcludeChk, 0, wx.ALL, 5)
         self.unexposedMonitorSizer.Add(self.unexposedList, 1, wx.ALL | wx.EXPAND, 5)
         self.unexposedMonitorPanel.SetSizer(self.unexposedMonitorSizer)
@@ -497,3 +504,12 @@ class Monitor(wx.Panel):
             # Clear the flag.
             self.frame.controller.clearAutoexclude(thermocouplePlacements.UNEXPOSED)
 
+    
+    def updateAvg(self, testData):
+
+        try:
+            self.furnaceAverageTxt.SetLabelText("AVG: {0:.1f}".format(testData.furnaceAvgData[-1]))#"AVG: " + str(testData.furnaceAvgData[-1]))
+            self.unexposedAverageTxt.SetLabelText("AVG: {0:.1f}".format(testData.unexposedAvgData[-1]))
+        except Exception:
+            self.furnaceAverageTxt.SetLabelText("AVG: ")
+            self.unexposedAverageTxt.SetLabelText("AVG: ")

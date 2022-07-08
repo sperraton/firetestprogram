@@ -402,13 +402,15 @@ class Controller():
                         lblValue="% AUC: {0:3.1f}".format(self.testData.getPercentAUC()))
 
         # Show the current cabinet temperature
-        cabinetTemp = self.daq.getInternalTemperature()
+        cabinetTemp = self.daq.getInternalTemperature() # Returns valueFormatted
         value = "Cab. Temp.: " + cabinetTemp + " deg. C"
-        if float(cabinetTemp) >= WARN_THRES2:
-            shouldWarn = 2
-        elif float(cabinetTemp) >= WARN_THRES1:
-            shouldWarn = 1
-        else:
+
+        try:
+            if float(cabinetTemp) >= WARN_THRES2:
+                shouldWarn = 2
+            elif float(cabinetTemp) >= WARN_THRES1:
+                shouldWarn = 1
+        except:
             shouldWarn = None
 
         # TODO on next revision make space for the Ambient in the indicator panel.
@@ -840,7 +842,7 @@ class Controller():
         Tare the pressure sensor
         """
         valueRaw, valueFormatted = self.daq.getPressure(channelIndex)
-        if valueRaw == -9999:
+        if valueRaw == BAD_VALUE_NUM:
             return
 
         # Having to work on raw data because the numeric and formatted data

@@ -1,6 +1,6 @@
 # The data structure to hold the test data
 from HelperFunctions import getOutlierLimits, averageTemperatures, cleanValues
-from Enumerations import thermocouplePlacements, pressurePlacements
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, thermocouplePlacements, pressurePlacements
 from pubsub import pub
 
 
@@ -27,20 +27,20 @@ class TestData():
             placement = self.machineSettings.getThermocouplePlacement(channelNum)
 
             if placement == thermocouplePlacements.FURNACE:
-                self.furnaceValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
+                self.furnaceValues[channelNum] = {"formatted" : BAD_VALUE_STR, "numeric" : BAD_VALUE_NUM}
             elif placement == thermocouplePlacements.UNEXPOSED:
-                self.unexposedValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
+                self.unexposedValues[channelNum] = {"formatted" : BAD_VALUE_STR, "numeric" : BAD_VALUE_NUM}
             elif placement == thermocouplePlacements.AFTERBURNER:
-                self.afterburnerValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
+                self.afterburnerValues[channelNum] = {"formatted" : BAD_VALUE_STR, "numeric" : BAD_VALUE_NUM}
             elif placement == thermocouplePlacements.AMBIENT:
-                self.ambientValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
+                self.ambientValues[channelNum] = {"formatted" : BAD_VALUE_STR, "numeric" : BAD_VALUE_NUM}
 
         # Load the pressure channels
         for channelNum in range(self.machineSettings.numPres):
             placement = self.machineSettings.getPressurePlacement(channelNum)
 
             if placement != "DISABLED":
-                self.pressureValues[channelNum] = {"formatted" : "-9999", "numeric" : -9999}
+                self.pressureValues[channelNum] = {"formatted" : BAD_VALUE_STR, "numeric" : BAD_VALUE_NUM}
 
         self.correctionMinutes = 0
 

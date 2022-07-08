@@ -1,5 +1,5 @@
 from HelperFunctions import applyGainOffset, inH20ToPascal
-from Enumerations import DEFAULT_ATTACH_WAIT, INVALID_VALUE
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_ATTACH_WAIT, INVALID_VALUE
 from DAQ.BaseSensor import BaseSensor
 
 class PressureSensor(BaseSensor):
@@ -40,8 +40,8 @@ class PressureSensor(BaseSensor):
             return "SAT.", 0.0
         if value < 0.001: # Nothing attached. Avoid low level noise on unattached channels
             return "ERR.", 0.0
-        if value == -9999:
-            return "-9999", -9999
+        if value == BAD_VALUE_NUM:
+            return BAD_VALUE_STR, BAD_VALUE_NUM
 
         numeric = applyGainOffset(value, gain, offset)
 
