@@ -306,19 +306,19 @@ class MainGraphPanel(wx.Panel):
         parentPath, ext = os.path.splitext(path)
 
         self.furnaceTempGraph.graphCanvas.homeGraph()
-        oldState = self.furnaceTempGraph.graphCanvas.GetEnableLegend()
+        oldState = self.furnaceTempGraph.graphCanvas.enableLegend
         self.furnaceTempGraph.graphCanvas.enableLegend = True
         self.furnaceTempGraph.graphCanvas.saveImage(parentPath+"_furnace"+ext)
         self.furnaceTempGraph.graphCanvas.enableLegend = oldState
 
         self.unexposedTempGraph.graphCanvas.homeGraph()
-        oldState = self.unexposedTempGraph.graphCanvas.GetEnableLegend()
+        oldState = self.unexposedTempGraph.graphCanvas.enableLegend
         self.unexposedTempGraph.graphCanvas.enableLegend = True
         self.unexposedTempGraph.graphCanvas.saveImage(parentPath+"_unexposed"+ext)
         self.unexposedTempGraph.graphCanvas.enableLegend = oldState
 
         self.pressureGraph.graphCanvas.homeGraph()
-        oldState = self.pressureGraph.graphCanvas.GetEnableLegend()
+        oldState = self.pressureGraph.graphCanvas.enableLegend
         self.pressureGraph.graphCanvas.enableLegend = True
         self.pressureGraph.graphCanvas.saveImage(parentPath+"_pressure"+ext)
         self.pressureGraph.graphCanvas.enableLegend = oldState
