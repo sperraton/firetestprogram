@@ -10,7 +10,7 @@ class IndicatorPanel(wx.Panel):
 
         self.indicatorSizer = wx.BoxSizer(wx.HORIZONTAL)
         font = self.GetFont()
-        font.SetPointSize(18) # TODO May change to pixel size
+        font.SetPointSize(16) # TODO May change to pixel size
         #------------------------------------------------------------
         subPanel1 = wx.Panel(self)
         subPanel1.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)

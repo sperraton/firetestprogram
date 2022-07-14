@@ -3,7 +3,7 @@ from urllib.parse import MAX_CACHE_SIZE
 import wx
 import wx.grid
 from pubsub import pub
-from Enumerations import UIcolours
+from Enumerations import GRID_DEFAULT_COL_WIDTH, UIcolours
 class DataGrid(wx.Panel):
     def __init__(self, parent):
         wx.Panel.__init__(self, parent)
@@ -30,8 +30,10 @@ class DataGrid(wx.Panel):
         self.gridViewSizer.Layout()
 
 
-    # Change the colums based on the selected channels
     def makeColumnLabels(self, header):
+        """
+        Change the column labels based on the selected channels
+        """
 
         # Maybe make this into a dict. to keep colours consistent
         self.Colours = [UIcolours.GRID_TIMESTAMP,
@@ -43,6 +45,8 @@ class DataGrid(wx.Panel):
 
         self.gridView.SetColLabelTextOrientation(wx.VERTICAL)
         #self.gridView.AutoSizeColumns()
+        self.gridView.SetDefaultColSize(GRID_DEFAULT_COL_WIDTH)
+
         maxHeight = 0
         for col, label in enumerate(header):
             # Check for labels to truncate
@@ -58,7 +62,7 @@ class DataGrid(wx.Panel):
             attr.SetReadOnly()
             if col < len(self.Colours):
                 attr.SetBackgroundColour(self.Colours[col]) # Colour the columns by groupings
-                
+            
             self.gridView.SetColAttr(col, attr)
             
 

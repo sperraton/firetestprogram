@@ -8,6 +8,7 @@ from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph, Axes
 from DataGrid import DataGrid
 from Controller import Controller
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
+from TestData import TestData
       
 
 class GraphNotebook(wx.Notebook):
@@ -133,8 +134,16 @@ class MainGraphPanel(wx.Panel):
         pub.subscribe(self.updateGraphData, "graphData.update")
         pub.subscribe(self.panelDblClick, "graphs.dblClick")
 
-    def layoutPanels(self, a, b, c):
 
+################################################################################
+# Layout functions
+################################################################################
+
+    def layoutPanels(self, a, b, c):
+        """
+        Places panels in the splitters according to the order given.
+        A, B in the subSplitter and C in the topSplitter.
+        """
         self.subSplitter.SplitVertically(a, b)
         self.subSplitter.SetSashGravity(0.5)
         self.topSplitter.SplitHorizontally(c, self.subSplitter)
@@ -142,9 +151,13 @@ class MainGraphPanel(wx.Panel):
 
 
     def layoutReplace(self, a, b, c):
+        """
+        Reparents the panels when doing a switch.
+        """
         # Set a and b to have subSplitter as parent
         a.Reparent(self.subSplitter)
         b.Reparent(self.subSplitter)
+        
         # Set c to have topSplitter as parent
         c.Reparent(self.topSplitter)
 
@@ -156,9 +169,10 @@ class MainGraphPanel(wx.Panel):
         self.topSplitter.ReplaceWindow(c_old, c)
 
 
-
     def panelDblClick(self, panelID):
-
+        """
+        Swaps the graphs between two panels
+        """
         for panel in self.panelList:
             if panel.GetId() == panelID:
                 panelClicked = panel
@@ -183,11 +197,20 @@ class MainGraphPanel(wx.Panel):
         self.swap(self.panelList, panel, self.panelList[2])
         self.layoutReplace(self.panelList[0], self.panelList[1], self.panelList[2])
 
+        # Draw the complete data set for the graph
+        self.loadAllGraphData()
+        self.furnaceTempGraph.reDrawGraph()
+        self.unexposedTempGraph.reDrawGraph()
+        self.pressureGraph.reDrawGraph()
+
         self.Layout()
         self.Refresh()
 
 
     def OnDestroy(self):
+        """"
+        Unsubscribe so we get no dead listeners.
+        """
         pub.unsubscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
         pub.unsubscribe(self.updateGraphData, "graphData.update")
         pub.subscribe(self.panelDblClick, "graphs.dblClick")
@@ -198,17 +221,43 @@ class MainGraphPanel(wx.Panel):
 ################################################################################
 
     def updateGraphData(self, testData):
-        self.updateFurnaceTempGraph(timeData=testData.timeData,
+        self.furnaceTempGraph.updateFurnaceData(timeData=testData.timeData,
                         avgData=testData.furnaceAvgData,
-                        rawData=testData.furnaceRawData)
-        self.updatePressureGraph(timeData=testData.timeData,
-                        ch3=testData.ch3PressureData,
-                        ch2=testData.ch2PressureData,
-                        ch1=testData.ch1PressureData)
-        self.updateUnexposedTempGraph(timeData=testData.timeData,
+                        rawData=testData.furnaceRawData,
+                        blit=True)
+        self.pressureGraph.updatePressureData(timeData=testData.timeData,
+                        ch3Data=testData.ch3PressureData,
+                        ch2Data=testData.ch2PressureData,
+                        ch1Data=testData.ch1PressureData,
+                        blit=True)
+        self.unexposedTempGraph.updateUnexposedData(timeData=testData.timeData,
                         avgData=testData.unexposedAvgData,
-                        rawData=testData.unexposedRawData)
-        self.redrawAllGraphs()
+                        rawData=testData.unexposedRawData,
+                        blit=True)
+        self.blitAllGraphs()
+
+# TODO clean this all up. Since blitting requires that we only draw a line
+# between the last two points, and we don't erase the background, try to get
+# everything organised and labeled correctly.
+
+    def loadAllGraphData(self):
+        try:
+            self.furnaceTempGraph.updateFurnaceData(timeData=self.controller.testData.timeData,
+                            avgData=self.controller.testData.furnaceAvgData,
+                            rawData=self.controller.testData.furnaceRawData,
+                            blit=False)
+            self.pressureGraph.updatePressureData(timeData=self.controller.testData.timeData,
+                            ch3Data=self.controller.testData.ch3PressureData,
+                            ch2Data=self.controller.testData.ch2PressureData,
+                            ch1Data=self.controller.testData.ch1PressureData,
+                            blit=False)
+            self.unexposedTempGraph.updateUnexposedData(timeData=self.controller.testData.timeData,
+                            avgData=self.controller.testData.unexposedAvgData,
+                            rawData=self.controller.testData.unexposedRawData,
+                            blit=False)
+
+        except Exception:
+            print("!!! Couldn't load all graph data.")
 
     def updateFurnaceTempGraph(self, timeData, avgData, rawData):
         """
@@ -240,28 +289,13 @@ class MainGraphPanel(wx.Panel):
         self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
         
 
-    def redrawAllGraphs(self):
-        self.furnaceTempGraph.refreshGraph()
-        self.unexposedTempGraph.refreshGraph()
-        self.pressureGraph.refreshGraph()
+    def blitAllGraphs(self):
+        self.furnaceTempGraph.blitGraph()
+        self.unexposedTempGraph.blitGraph()
+        self.pressureGraph.blitGraph()
 
-        wx.PostEvent(self.topSplitter.GetEventHandler(), wx.PyCommandEvent(wx.EVT_SPLITTER_SASH_POS_CHANGED.typeId, self.topSplitter.GetId()))
-#        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()+1)
-#        self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition()-1)
-
-        #self.topSplitter.SetSashPosition(self.topSplitter.GetSashPosition(), redraw=True)
-        
-        #self.Layout() #This didn't work
-        #self.Refresh() #Neither this
-        #self.Update()
-
-        # Steps into OnSize in wx.plotcanvas
-        # Where it gets a too small rectangle from self.canvas.GetClientSize()
-        # the canvas is a subwindow set in init
-        # self.canvas = wx.Window(self, -1)
-        # plotcanvas is a panel
-        # Eventually calls this: self. _Draw(graphics, xSpec, ySpec)
-        # Which draws to the mis-sized self._Buffer
+        #wx.PostEvent(self.topSplitter.GetEventHandler(), wx.PyCommandEvent(wx.EVT_SPLITTER_SASH_POS_CHANGED.typeId, self.topSplitter.GetId()))
+        self.Refresh() # Repaint self and children
 
 
     def initGraphForTest(self, testTime):
@@ -300,30 +334,24 @@ class MainGraphPanel(wx.Panel):
         self.Layout()
         self.Refresh()
 
+
     def savePlots(self, path):
+        """
+        Save all the graphs with the test filename.
+        """
 
         # Also this saves it the size it is on screen. can we just set a default?
         parentPath, ext = os.path.splitext(path)
 
-        self.furnaceTempGraph.graphCanvas.homeGraph()
-        oldState = self.furnaceTempGraph.graphCanvas.enableLegend
-        self.furnaceTempGraph.graphCanvas.enableLegend = True
-        self.furnaceTempGraph.graphCanvas.saveImage(parentPath+"_furnace"+ext)
-        self.furnaceTempGraph.graphCanvas.enableLegend = oldState
+        # Make sure they get full data (not blitting)
+        self.loadAllGraphData()
 
-        self.unexposedTempGraph.graphCanvas.homeGraph()
-        oldState = self.unexposedTempGraph.graphCanvas.enableLegend
-        self.unexposedTempGraph.graphCanvas.enableLegend = True
-        self.unexposedTempGraph.graphCanvas.saveImage(parentPath+"_unexposed"+ext)
-        self.unexposedTempGraph.graphCanvas.enableLegend = oldState
+        self.furnaceTempGraph.saveGraph(parentPath+"_furnace"+ext)
+        self.unexposedTempGraph.saveGraph(parentPath+"_unexposed"+ext)
+        self.pressureGraph.saveGraph(parentPath+"_pressure"+ext)
 
-        self.pressureGraph.graphCanvas.homeGraph()
-        oldState = self.pressureGraph.graphCanvas.enableLegend
-        self.pressureGraph.graphCanvas.enableLegend = True
-        self.pressureGraph.graphCanvas.saveImage(parentPath+"_pressure"+ext)
-        self.pressureGraph.graphCanvas.enableLegend = oldState
-        
         #self.flashStatusMessage("Saved to %s" % path)
+
 
     def setTimeAxis(self, amtMinutes):
         """

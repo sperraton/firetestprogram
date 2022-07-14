@@ -367,11 +367,11 @@ class Monitor(wx.Panel):
         self.pressureMonitorPanel = wx.Panel(self, wx.ID_ANY)
 
         self.furnaceAutoexcludeChk = wx.CheckBox(self.furnaceMonitorPanel, wx.ID_ANY, "Autoexclude outliers from avg.")
-        self.furnaceAutoexcludeChk.SetValue = False
+        self.furnaceAutoexcludeChk.SetValue(self.frame.controller.getAutoexclude(thermocouplePlacements.FURNACE))
         self.furnaceAverageTxt = wx.StaticText(self.furnaceMonitorPanel, wx.ID_ANY, "AVG: " + BAD_VALUE_STR)
 
         self.unexposedAutoexcludeChk = wx.CheckBox(self.unexposedMonitorPanel, wx.ID_ANY, "Autoexclude outliers from avg.")
-        self.unexposedAutoexcludeChk.SetValue = False
+        self.unexposedAutoexcludeChk.SetValue(self.frame.controller.getAutoexclude(thermocouplePlacements.UNEXPOSED))
         self.unexposedAverageTxt = wx.StaticText(self.unexposedMonitorPanel, wx.ID_ANY, "AVG: " + BAD_VALUE_STR)
 
         self.afterburnerList = AfterburnerList(self.afterburnerMonitorPanel, self.frame)
@@ -403,6 +403,10 @@ class Monitor(wx.Panel):
         self.furnaceStaticBox.SetLabel("Furnace TC Monitor (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
         self.afterburnerStaticBox.SetLabel("Afterburner TC Monitor (Deg. "+self.frame.controller.testSettings.temperatureUnits+")")
 
+        # Get the values that are set in the controller
+        self.furnaceAutoexcludeChk.SetValue(self.frame.controller.getAutoexclude(thermocouplePlacements.FURNACE))
+        self.unexposedAutoexcludeChk.SetValue(self.frame.controller.getAutoexclude(thermocouplePlacements.UNEXPOSED))
+       
         # Make the monitor visible
         self.topSizer.Fit(self)
         self.Layout()

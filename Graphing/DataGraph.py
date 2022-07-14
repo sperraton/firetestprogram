@@ -1,6 +1,7 @@
+from types import SimpleNamespace
 import wx
 from math import ceil
-from Enumerations import UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
+from Enumerations import GRAPH_AVG_LINE_WIDTH, GRAPH_DEFAULT_LINE_WIDTH, GRAPH_LIMITS_LINE_WIDTH, GRAPH_TARGET_LINE_WIDTH, UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
 from Graphing.BaseGraph import BaseGraph, PlotSettings, AxesSettings
 
 
@@ -13,17 +14,23 @@ class UnexposedGraph(BaseGraph):
         """
         Prepare the graph plots for the unexposed data
         """
-
-        BaseGraph.__init__(self, parent, panelID, axesSettings)
         self.controller = controller
+        BaseGraph.__init__(self, parent, panelID, axesSettings)
         self.initUnexposedTemperaturePlot()
 
 
     def initUnexposedTemperaturePlot(self):
+
+        # Put together a special data object to pack together the different
+        # plotlines that this graph object needs TODO move this upwards
+        if self.controller.testData:
+            dataBlocks = [self.controller.testData.unexposedAvgData, self.controller.testData.unexposedRawData]
+            self.testData = SimpleNamespace(timeData=self.controller.testData.timeData, data=dataBlocks)
+
         # The averaged temperature
         self.unexpAvgSettings = PlotSettings(
             [],
-            #linewidth=3,
+            linewidth=GRAPH_AVG_LINE_WIDTH,
             linestyle=wx.PENSTYLE_SOLID,
             label="Average",
             colour=UIcolours.GRAPH_AVERAGE_SERIES,
@@ -32,7 +39,7 @@ class UnexposedGraph(BaseGraph):
         # The TC failure line (Starting temp + 180degC)
         self.failureThreshSettings = PlotSettings(
             [],
-            #linewidth=1.5,
+            linewidth=GRAPH_TARGET_LINE_WIDTH,
             linestyle=wx.PENSTYLE_SHORT_DASH,
             label="Failure Threshold",
             colour=UIcolours.GRAPH_THRESH_SERIES,
@@ -52,7 +59,7 @@ class UnexposedGraph(BaseGraph):
 
             self.unexpRawSettings.append(PlotSettings(
                 columnVector,
-                #linewidth=1,
+                linewidth=GRAPH_DEFAULT_LINE_WIDTH,
                 label=chnlLabel,
                 colour=colours[i],
                 zorder=2))
@@ -61,19 +68,19 @@ class UnexposedGraph(BaseGraph):
         self.initPlotLines([self.unexpAvgSettings, self.failureThreshSettings]+self.unexpRawSettings)
 
 
-    def updateUnexposedData(self, timeData, avgData, rawData):
+    def updateUnexposedData(self, timeData, avgData, rawData, blit=False):
         """
         Draws the latest unexposed data.
         This should be called at the test update rate, which should be 1 second.
         """
         # Do the Unexposed average data
-        self.graphCanvas.updateData(timeData, avgData, plotIndex=0)
+        self.graphCanvas.updateData(timeData, avgData, plotIndex=0, blit=blit)
         
         # Trying out just the avg for now until I get the update sorted.
         for i in range(len(self.controller.selectedUnexposedChannels)):
             #columnVector = rawData[:][i] #[row[i] for row in rawData] #rawData[:, i]
             try:
-                self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2) # Give the plot the updated data
+                self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2, blit=blit) # Give the plot the updated data
             except IndexError: # Swallowing errors. Naughty, naughty.
                 continue
         
@@ -91,7 +98,7 @@ class UnexposedGraph(BaseGraph):
             timeData.append(seconds/60) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
             thresholdData.append(threshold)
 
-        self.graphCanvas.updateData(timeData, thresholdData, plotIndex=1) # Give the plot the updated data
+        self.graphCanvas.updateData(timeData, thresholdData, plotIndex=1, blit=False) # Give the plot the updated data
 
 
     # Override this to extend our predrawn lines
@@ -130,19 +137,24 @@ class FurnaceGraph(BaseGraph):
         """
         Prepare the graph plots for the furnace data
         """
-        BaseGraph.__init__(self, parent, panelID, axesSettings)
         self.controller = controller
+        BaseGraph.__init__(self, parent, panelID, axesSettings)
         self.initFurnaceTemperaturePlot()
 
     def initFurnaceTemperaturePlot(self):
         """
         Creates all the graph line settings and calls the graph plot init function
         """
+        # Put together a special data object to pack together the different
+        # plotlines that this graph object needs
+        if self.controller.testData:
+            dataBlocks = [self.controller.testData.furnaceAvgData, self.controller.testData.furnaceRawData]
+            self.testData = SimpleNamespace(timeData=self.controller.testData.timeData, data=dataBlocks)
 
         # The target temperature
         self.targetSettings = PlotSettings(
                     [],
-                    linewidth=3,
+                    linewidth=GRAPH_TARGET_LINE_WIDTH,
                     linestyle=wx.PENSTYLE_LONG_DASH,
                     label="Required",
                     colour=UIcolours.GRAPH_TARGET_TEMP_SERIES,
@@ -151,7 +163,7 @@ class FurnaceGraph(BaseGraph):
         # The averaged temperature
         self.furnAvgSettings = PlotSettings(
                     [],
-                    linewidth=3,
+                    linewidth=GRAPH_AVG_LINE_WIDTH,
                     label="Average",
                     colour=UIcolours.GRAPH_AVERAGE_SERIES,
                     zorder=3)
@@ -168,20 +180,28 @@ class FurnaceGraph(BaseGraph):
 
             self.furnRawSettings.append(PlotSettings(
                 columnVector,
-                linewidth=1,
+                linewidth=GRAPH_DEFAULT_LINE_WIDTH,
                 label=chnlLabel,
                 colour=colours[i],
                 zorder=2))
 
-        self.initPlotLines([self.targetSettings, self.furnAvgSettings]+self.furnRawSettings)
+        # The upper outlier limit
+        # self.furnUprLimitSettings = PlotSettings(
+        #             [],
+        #             linewidth=GRAPH_LIMITS_LINE_WIDTH,
+        #             label="Upper limit",
+        #             colour=UIcolours.GRAPH_UPR_LIMIT,
+        #             zorder=3)
+
+        self.initPlotLines([self.targetSettings, self.furnAvgSettings]+self.furnRawSettings) #+[self.furnUprLimitSettings])
 
 
-    def updateFurnaceData(self, timeData, avgData, rawData):
+    def updateFurnaceData(self, timeData, avgData, rawData, blit=False):
         """
         Draws the latest average and raw data.
         """
         # Do the furnace average
-        self.graphCanvas.updateData(timeData, avgData, plotIndex=1)
+        self.graphCanvas.updateData(timeData, avgData, plotIndex=1, blit=blit)
 
         # Do the raw TC's
         # Do all the raw thermocouple readings
@@ -190,8 +210,10 @@ class FurnaceGraph(BaseGraph):
         for i in range(len(self.controller.selectedFurnaceChannels)):
 
             columnVector = [row[i] for row in rawData] #rawData[:, i] # BUG TODO Sometimes get error "IndexError: too many indices for array" I think sometimes not enough. Seems to happen when restarting after a crash because of no communication with phidget
-            self.graphCanvas.updateData(timeData, columnVector, plotIndex=i+2) # Give the plot the updated data
-        
+            self.graphCanvas.updateData(timeData, columnVector, plotIndex=i+1, blit=blit) # Give the plot the updated data
+
+        # TODO just trying out graphing the outlier limits
+        #self.graphCanvas.updateData(timeData, self.controller.testData.furnaceUprLimitData, plotIndex=len(self.controller.selectedFurnaceChannels)+2, blit=blit) # Give the plot the updated data)
 
     def createTargetCurveArray(self, testLengthMinutes):
         """
@@ -205,7 +227,7 @@ class FurnaceGraph(BaseGraph):
             self.targetTempCurve.append(self.controller.testSettings.calculateTargetCurve(seconds))
         
         # Give the data to the graph for drawing
-        self.graphCanvas.updateData(timeData, self.targetTempCurve, plotIndex=0) # Give the plot the updated data
+        self.graphCanvas.updateData(timeData, self.targetTempCurve, plotIndex=0, blit=False) # Give the plot the updated data
 
 
     # Override this to extend our predrawn lines
@@ -233,30 +255,39 @@ class FurnaceGraph(BaseGraph):
 class PressureGraph(BaseGraph):
     def __init__(self, parent, panelID, controller, axesSettings=None):
 
-        BaseGraph.__init__(self, parent, panelID, axesSettings)
         self.controller = controller
+        BaseGraph.__init__(self, parent, panelID, axesSettings)
         self.initPressurePlot()
 
 
     def initPressurePlot(self):
+        """
+        Initialise the pressure plot for the test.
+        """
+        # Put together a special data object to pack together the different
+        # plotlines that this graph object needs TODO move this upwards
+
+        if self.controller.testData:
+            dataBlocks = [self.controller.testData.ch1PressureData, self.controller.testData.ch2PressureData, self.controller.testData.ch3PressureData]
+            self.testData = SimpleNamespace(timeData=self.controller.testData.timeData, data=dataBlocks)
 
         self.presCh1Settings = PlotSettings(
             [],
-            linewidth=1,
+            linewidth=GRAPH_DEFAULT_LINE_WIDTH,
             label=pressurePlacementLabels[1],
             colour=UIcolours.GRAPH_PRESS_UP_SERIES
             )
 
         self.presCh2Settings = PlotSettings(
             [],
-            linewidth=1,
+            linewidth=GRAPH_DEFAULT_LINE_WIDTH,
             label=pressurePlacementLabels[2],
             colour=UIcolours.GRAPH_PRESS_MID_SERIES
             )
 
         self.presCh3Settings = PlotSettings(
             [],
-            linewidth=1,
+            linewidth=GRAPH_DEFAULT_LINE_WIDTH,
             label=pressurePlacementLabels[3],
             colour=UIcolours.GRAPH_PRESS_LOW_SERIES
             )
@@ -264,7 +295,7 @@ class PressureGraph(BaseGraph):
         self.initPlotLines([self.presCh1Settings, self.presCh2Settings, self.presCh3Settings])
 
 
-    def updatePressureData(self, timeData, ch3Data, ch2Data, ch1Data):
+    def updatePressureData(self, timeData, ch3Data, ch2Data, ch1Data, blit=False):
         """
         Draws the lates pressure sensor data
         """
@@ -272,9 +303,9 @@ class PressureGraph(BaseGraph):
         if not ch3Data and not ch2Data and not ch1Data:
            return
 
-        if ch1Data: self.graphCanvas.updateData(timeData, ch1Data, plotIndex=0)
-        if ch2Data: self.graphCanvas.updateData(timeData, ch2Data, plotIndex=1)
-        if ch3Data: self.graphCanvas.updateData(timeData, ch3Data, plotIndex=2)
+        if ch1Data: self.graphCanvas.updateData(timeData, ch1Data, plotIndex=0, blit=blit)
+        if ch2Data: self.graphCanvas.updateData(timeData, ch2Data, plotIndex=1, blit=blit)
+        if ch3Data: self.graphCanvas.updateData(timeData, ch3Data, plotIndex=2, blit=blit)
 
 
 

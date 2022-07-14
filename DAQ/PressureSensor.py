@@ -1,5 +1,5 @@
 from HelperFunctions import applyGainOffset, inH20ToPascal
-from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_ATTACH_WAIT, INVALID_VALUE
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_ATTACH_WAIT, DEFAULT_PRESSURE_DEC_PLACES, INVALID_VALUE
 from DAQ.BaseSensor import BaseSensor
 
 class PressureSensor(BaseSensor):
@@ -47,6 +47,6 @@ class PressureSensor(BaseSensor):
 
         if units == "Pascal": # Default to inH2O because that is what it will have been calibrated in.
             numeric = inH20ToPascal(numeric)
-            return "{0:2.1f}".format(numeric), numeric
+            return "{0:2.1f}".format(numeric), round(numeric, DEFAULT_PRESSURE_DEC_PLACES)
         else:
-            return "{0:2.3f}".format(numeric), numeric
+            return "{0:2.3f}".format(numeric), round(numeric, DEFAULT_PRESSURE_DEC_PLACES)

@@ -33,9 +33,9 @@ PyObject *module_DAQ$TempSensor;
 PyDictObject *moduledict_DAQ$TempSensor;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[56];
+static PyObject *mod_consts[58];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[56];
+static Py_hash_t mod_consts_hash[58];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for (int i = 0; i < 56; i++) {
+        for (int i = 0; i < 58; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants_DAQ$TempSensor(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for (int i = 0; i < 56; i++) {
+    for (int i = 0; i < 58; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -84,11 +84,11 @@ static PyCodeObject *codeobj_edbf8499d39a78de176edf8a2b877d2f;
 static PyCodeObject *codeobj_3ecd91bfe3c23aeb29d8dcb948942b96;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[50]); CHECK_OBJECT(module_filename_obj);
-    codeobj_72b5fc5effc06bccbfd193ded318aec4 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[51], NULL, NULL, 0, 0, 0);
-    codeobj_5a74ce5833ce77a82cca8305e339edb9 = MAKE_CODEOBJECT(module_filename_obj, 6, CO_NOFREE, mod_consts[33], mod_consts[52], NULL, 0, 0, 0);
-    codeobj_edbf8499d39a78de176edf8a2b877d2f = MAKE_CODEOBJECT(module_filename_obj, 11, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[1], mod_consts[53], NULL, 11, 0, 0);
-    codeobj_3ecd91bfe3c23aeb29d8dcb948942b96 = MAKE_CODEOBJECT(module_filename_obj, 38, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[47], mod_consts[54], NULL, 5, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[52]); CHECK_OBJECT(module_filename_obj);
+    codeobj_72b5fc5effc06bccbfd193ded318aec4 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[53], NULL, NULL, 0, 0, 0);
+    codeobj_5a74ce5833ce77a82cca8305e339edb9 = MAKE_CODEOBJECT(module_filename_obj, 6, CO_NOFREE, mod_consts[35], mod_consts[54], NULL, 0, 0, 0);
+    codeobj_edbf8499d39a78de176edf8a2b877d2f = MAKE_CODEOBJECT(module_filename_obj, 11, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[1], mod_consts[55], NULL, 11, 0, 0);
+    codeobj_3ecd91bfe3c23aeb29d8dcb948942b96 = MAKE_CODEOBJECT(module_filename_obj, 38, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[49], mod_consts[56], NULL, 5, 0, 0);
 }
 
 // The module function declarations.
@@ -726,10 +726,56 @@ static PyObject *impl_DAQ$TempSensor$$$function__2_formatData(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         tmp_return_value = PyTuple_New(2);
-        PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_2);
-        CHECK_OBJECT(var_numeric);
-        tmp_tuple_element_2 = var_numeric;
-        PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_2);
+        {
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_element_value_6;
+            PyObject *tmp_args_element_value_7;
+            PyTuple_SET_ITEM(tmp_return_value, 0, tmp_tuple_element_2);
+            tmp_called_value_4 = LOOKUP_BUILTIN(mod_consts[15]);
+            assert(tmp_called_value_4 != NULL);
+            CHECK_OBJECT(var_numeric);
+            tmp_args_element_value_6 = var_numeric;
+            tmp_args_element_value_7 = GET_STRING_DICT_VALUE(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[16]);
+
+            if (unlikely(tmp_args_element_value_7 == NULL)) {
+                tmp_args_element_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[16]);
+            }
+
+            if (tmp_args_element_value_7 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 50;
+                type_description_1 = "oooooo";
+                goto tuple_build_exception_2;
+            }
+            frame_3ecd91bfe3c23aeb29d8dcb948942b96->m_frame.f_lineno = 50;
+            {
+                PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7};
+                tmp_tuple_element_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
+            }
+
+            if (tmp_tuple_element_2 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 50;
+                type_description_1 = "oooooo";
+                goto tuple_build_exception_2;
+            }
+            PyTuple_SET_ITEM(tmp_return_value, 1, tmp_tuple_element_2);
+        }
+        goto tuple_build_noexception_2;
+        // Exception handling pass through code for tuple_build:
+        tuple_build_exception_2:;
+        Py_DECREF(tmp_return_value);
+        goto frame_exception_exit_1;
+        // Finished with no exception for tuple_build:
+        tuple_build_noexception_2:;
         goto frame_return_exit_1;
     }
 
@@ -871,7 +917,7 @@ static PyObject *MAKE_FUNCTION_DAQ$TempSensor$$$function__1___init__(PyObject *d
         impl_DAQ$TempSensor$$$function__1___init__,
         mod_consts[1],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[45],
+        mod_consts[47],
 #endif
         codeobj_edbf8499d39a78de176edf8a2b877d2f,
         defaults,
@@ -894,9 +940,9 @@ static PyObject *MAKE_FUNCTION_DAQ$TempSensor$$$function__1___init__(PyObject *d
 static PyObject *MAKE_FUNCTION_DAQ$TempSensor$$$function__2_formatData(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_DAQ$TempSensor$$$function__2_formatData,
-        mod_consts[47],
+        mod_consts[49],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[48],
+        mod_consts[50],
 #endif
         codeobj_3ecd91bfe3c23aeb29d8dcb948942b96,
         defaults,
@@ -1165,7 +1211,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT0(
             moduledict_DAQ$TempSensor,
             (Nuitka_StringObject *)const_str_plain___package__,
-            mod_consts[55]
+            mod_consts[57]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)const_str_plain___name__);
@@ -1309,12 +1355,12 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_72b5fc5effc06bccbfd193ded318aec4 = MAKE_MODULE_FRAME(codeobj_72b5fc5effc06bccbfd193ded318aec4, module_DAQ$TempSensor);
@@ -1329,14 +1375,14 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[17]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[19]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[18], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[20], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1352,14 +1398,14 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[17]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[19]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[19], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[21], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1374,7 +1420,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
@@ -1384,11 +1430,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_locals_arg_value_1;
         PyObject *tmp_fromlist_value_1;
         PyObject *tmp_level_value_1;
-        tmp_name_value_1 = mod_consts[21];
+        tmp_name_value_1 = mod_consts[23];
         tmp_globals_arg_value_1 = (PyObject *)moduledict_DAQ$TempSensor;
         tmp_locals_arg_value_1 = Py_None;
-        tmp_fromlist_value_1 = mod_consts[22];
-        tmp_level_value_1 = mod_consts[23];
+        tmp_fromlist_value_1 = mod_consts[24];
+        tmp_level_value_1 = mod_consts[25];
         frame_72b5fc5effc06bccbfd193ded318aec4->m_frame.f_lineno = 1;
         tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
@@ -1406,7 +1452,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_DAQ$TempSensor,
                 mod_consts[3],
-                mod_consts[23]
+                mod_consts[25]
             );
         } else {
             tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[3]);
@@ -1432,11 +1478,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_locals_arg_value_2;
         PyObject *tmp_fromlist_value_2;
         PyObject *tmp_level_value_2;
-        tmp_name_value_2 = mod_consts[24];
+        tmp_name_value_2 = mod_consts[26];
         tmp_globals_arg_value_2 = (PyObject *)moduledict_DAQ$TempSensor;
         tmp_locals_arg_value_2 = Py_None;
-        tmp_fromlist_value_2 = mod_consts[25];
-        tmp_level_value_2 = mod_consts[23];
+        tmp_fromlist_value_2 = mod_consts[27];
+        tmp_level_value_2 = mod_consts[25];
         frame_72b5fc5effc06bccbfd193ded318aec4->m_frame.f_lineno = 2;
         tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_5 == NULL) {
@@ -1463,7 +1509,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_DAQ$TempSensor,
                 mod_consts[10],
-                mod_consts[23]
+                mod_consts[25]
             );
         } else {
             tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[10]);
@@ -1491,7 +1537,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_DAQ$TempSensor,
                 mod_consts[12],
-                mod_consts[23]
+                mod_consts[25]
             );
         } else {
             tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[12]);
@@ -1543,11 +1589,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_locals_arg_value_3;
         PyObject *tmp_fromlist_value_3;
         PyObject *tmp_level_value_3;
-        tmp_name_value_3 = mod_consts[26];
+        tmp_name_value_3 = mod_consts[28];
         tmp_globals_arg_value_3 = (PyObject *)moduledict_DAQ$TempSensor;
         tmp_locals_arg_value_3 = Py_None;
-        tmp_fromlist_value_3 = mod_consts[27];
-        tmp_level_value_3 = mod_consts[23];
+        tmp_fromlist_value_3 = mod_consts[29];
+        tmp_level_value_3 = mod_consts[25];
         frame_72b5fc5effc06bccbfd193ded318aec4->m_frame.f_lineno = 3;
         tmp_assign_source_8 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_8 == NULL) {
@@ -1574,7 +1620,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_DAQ$TempSensor,
                 mod_consts[8],
-                mod_consts[23]
+                mod_consts[25]
             );
         } else {
             tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[8]);
@@ -1602,7 +1648,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_DAQ$TempSensor,
                 mod_consts[9],
-                mod_consts[23]
+                mod_consts[25]
             );
         } else {
             tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[9]);
@@ -1629,11 +1675,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_DAQ$TempSensor,
-                mod_consts[28],
-                mod_consts[23]
+                mod_consts[30],
+                mod_consts[25]
             );
         } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[28]);
+            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[30]);
         }
 
         if (tmp_assign_source_11 == NULL) {
@@ -1646,7 +1692,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[30], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
@@ -1657,11 +1703,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_DAQ$TempSensor,
-                mod_consts[6],
-                mod_consts[23]
+                mod_consts[16],
+                mod_consts[25]
             );
         } else {
-            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[6]);
+            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[16]);
         }
 
         if (tmp_assign_source_12 == NULL) {
@@ -1674,7 +1720,35 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_12);
+    }
+    {
+        PyObject *tmp_assign_source_13;
+        PyObject *tmp_import_name_from_8;
+        CHECK_OBJECT(tmp_import_from_2__module);
+        tmp_import_name_from_8 = tmp_import_from_2__module;
+        if (PyModule_Check(tmp_import_name_from_8)) {
+            tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_8,
+                (PyObject *)moduledict_DAQ$TempSensor,
+                mod_consts[6],
+                mod_consts[25]
+            );
+        } else {
+            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[6]);
+        }
+
+        if (tmp_assign_source_13 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 3;
+
+            goto try_except_handler_2;
+        }
+        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_13);
     }
     goto try_end_2;
     // Exception handler code:
@@ -1704,21 +1778,21 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
     Py_DECREF(tmp_import_from_2__module);
     tmp_import_from_2__module = NULL;
     {
-        PyObject *tmp_assign_source_13;
-        PyObject *tmp_import_name_from_8;
+        PyObject *tmp_assign_source_14;
+        PyObject *tmp_import_name_from_9;
         PyObject *tmp_name_value_4;
         PyObject *tmp_globals_arg_value_4;
         PyObject *tmp_locals_arg_value_4;
         PyObject *tmp_fromlist_value_4;
         PyObject *tmp_level_value_4;
-        tmp_name_value_4 = mod_consts[29];
+        tmp_name_value_4 = mod_consts[31];
         tmp_globals_arg_value_4 = (PyObject *)moduledict_DAQ$TempSensor;
         tmp_locals_arg_value_4 = Py_None;
-        tmp_fromlist_value_4 = mod_consts[30];
-        tmp_level_value_4 = mod_consts[23];
+        tmp_fromlist_value_4 = mod_consts[32];
+        tmp_level_value_4 = mod_consts[25];
         frame_72b5fc5effc06bccbfd193ded318aec4->m_frame.f_lineno = 4;
-        tmp_import_name_from_8 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
-        if (tmp_import_name_from_8 == NULL) {
+        tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
+        if (tmp_import_name_from_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1728,19 +1802,19 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_8)) {
-            tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_8,
+        if (PyModule_Check(tmp_import_name_from_9)) {
+            tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_9,
                 (PyObject *)moduledict_DAQ$TempSensor,
                 mod_consts[0],
-                mod_consts[23]
+                mod_consts[25]
             );
         } else {
-            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[0]);
+            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[0]);
         }
 
-        Py_DECREF(tmp_import_name_from_8);
-        if (tmp_assign_source_13 == NULL) {
+        Py_DECREF(tmp_import_name_from_9);
+        if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1750,10 +1824,10 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[0], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[0], tmp_assign_source_14);
     }
     {
-        PyObject *tmp_assign_source_14;
+        PyObject *tmp_assign_source_15;
         PyObject *tmp_tuple_element_1;
         tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[0]);
 
@@ -1762,14 +1836,14 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         }
 
         assert(!(tmp_tuple_element_1 == NULL));
-        tmp_assign_source_14 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_assign_source_14, 0, tmp_tuple_element_1);
+        tmp_assign_source_15 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_assign_source_15, 0, tmp_tuple_element_1);
         assert(tmp_class_creation_1__bases_orig == NULL);
-        tmp_class_creation_1__bases_orig = tmp_assign_source_14;
+        tmp_class_creation_1__bases_orig = tmp_assign_source_15;
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_15;
+        PyObject *tmp_assign_source_16;
         PyObject *tmp_dircall_arg1_1;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dircall_arg1_1 = tmp_class_creation_1__bases_orig;
@@ -1777,9 +1851,9 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_15 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_16 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
-        if (tmp_assign_source_15 == NULL) {
+        if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1790,16 +1864,16 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_3;
         }
         assert(tmp_class_creation_1__bases == NULL);
-        tmp_class_creation_1__bases = tmp_assign_source_15;
-    }
-    {
-        PyObject *tmp_assign_source_16;
-        tmp_assign_source_16 = PyDict_New();
-        assert(tmp_class_creation_1__class_decl_dict == NULL);
-        tmp_class_creation_1__class_decl_dict = tmp_assign_source_16;
+        tmp_class_creation_1__bases = tmp_assign_source_16;
     }
     {
         PyObject *tmp_assign_source_17;
+        tmp_assign_source_17 = PyDict_New();
+        assert(tmp_class_creation_1__class_decl_dict == NULL);
+        tmp_class_creation_1__class_decl_dict = tmp_assign_source_17;
+    }
+    {
+        PyObject *tmp_assign_source_18;
         PyObject *tmp_metaclass_value_1;
         bool tmp_condition_result_1;
         PyObject *tmp_key_value_1;
@@ -1812,7 +1886,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_expression_value_1;
         PyObject *tmp_subscript_value_1;
         PyObject *tmp_bases_value_1;
-        tmp_key_value_1 = mod_consts[31];
+        tmp_key_value_1 = mod_consts[33];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
@@ -1826,7 +1900,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_value_2 = mod_consts[31];
+        tmp_key_value_2 = mod_consts[33];
         tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
         if (tmp_metaclass_value_1 == NULL) {
             tmp_metaclass_value_1 = Py_None;
@@ -1856,7 +1930,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_expression_value_1 = tmp_class_creation_1__bases;
-        tmp_subscript_value_1 = mod_consts[23];
+        tmp_subscript_value_1 = mod_consts[25];
         tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1888,9 +1962,9 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_bases_value_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_17 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        tmp_assign_source_18 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
         Py_DECREF(tmp_metaclass_value_1);
-        if (tmp_assign_source_17 == NULL) {
+        if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1901,13 +1975,13 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_3;
         }
         assert(tmp_class_creation_1__metaclass == NULL);
-        tmp_class_creation_1__metaclass = tmp_assign_source_17;
+        tmp_class_creation_1__metaclass = tmp_assign_source_18;
     }
     {
         bool tmp_condition_result_3;
         PyObject *tmp_key_value_3;
         PyObject *tmp_dict_arg_value_3;
-        tmp_key_value_3 = mod_consts[31];
+        tmp_key_value_3 = mod_consts[33];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
@@ -1922,7 +1996,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[31];
+    tmp_dictdel_key = mod_consts[33];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -1940,7 +2014,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[32]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[34]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -1950,7 +2024,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
     }
     branch_yes_2:;
     {
-        PyObject *tmp_assign_source_18;
+        PyObject *tmp_assign_source_19;
         PyObject *tmp_called_value_1;
         PyObject *tmp_expression_value_3;
         PyObject *tmp_args_value_1;
@@ -1958,7 +2032,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_3 = tmp_class_creation_1__metaclass;
-        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[32]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[34]);
         if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1969,7 +2043,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_3;
         }
-        tmp_tuple_element_2 = mod_consts[33];
+        tmp_tuple_element_2 = mod_consts[35];
         tmp_args_value_1 = PyTuple_New(2);
         PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -1978,10 +2052,10 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_72b5fc5effc06bccbfd193ded318aec4->m_frame.f_lineno = 6;
-        tmp_assign_source_18 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        tmp_assign_source_19 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
         Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_args_value_1);
-        if (tmp_assign_source_18 == NULL) {
+        if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1992,7 +2066,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_3;
         }
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_18;
+        tmp_class_creation_1__prepared = tmp_assign_source_19;
     }
     {
         bool tmp_condition_result_5;
@@ -2000,7 +2074,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
         tmp_expression_value_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[34]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[36]);
         tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
@@ -2031,11 +2105,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_value_1 = mod_consts[35];
+        tmp_left_value_1 = mod_consts[37];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[36];
-        tmp_getattr_default_1 = mod_consts[37];
+        tmp_getattr_attr_1 = mod_consts[38];
+        tmp_getattr_default_1 = mod_consts[39];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2056,7 +2130,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
             tmp_expression_value_5 = BUILTIN_TYPE1(tmp_type_arg_2);
             assert(!(tmp_expression_value_5 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[36]);
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[38]);
             Py_DECREF(tmp_expression_value_5);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -2101,14 +2175,14 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
     goto branch_end_2;
     branch_no_2:;
     {
-        PyObject *tmp_assign_source_19;
-        tmp_assign_source_19 = PyDict_New();
+        PyObject *tmp_assign_source_20;
+        tmp_assign_source_20 = PyDict_New();
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_19;
+        tmp_class_creation_1__prepared = tmp_assign_source_20;
     }
     branch_end_2:;
     {
-        PyObject *tmp_assign_source_20;
+        PyObject *tmp_assign_source_21;
         {
             PyObject *tmp_set_locals_1;
             CHECK_OBJECT(tmp_class_creation_1__prepared);
@@ -2118,20 +2192,8 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[38];
-        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[39], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 6;
-
-            goto try_except_handler_5;
-        }
         tmp_dictset_value = mod_consts[40];
-        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[15], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[41], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -2142,8 +2204,20 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_5;
         }
-        tmp_dictset_value = mod_consts[33];
-        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[41], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[42];
+        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[17], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 6;
+
+            goto try_except_handler_5;
+        }
+        tmp_dictset_value = mod_consts[35];
+        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[43], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -2189,11 +2263,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             {
                 PyObject *tmp_expression_value_6;
                 PyTuple_SET_ITEM0(tmp_defaults_1, 0, tmp_tuple_element_4);
-                tmp_tuple_element_4 = mod_consts[42];
-                PyTuple_SET_ITEM0(tmp_defaults_1, 1, tmp_tuple_element_4);
-                tmp_tuple_element_4 = mod_consts[43];
-                PyTuple_SET_ITEM0(tmp_defaults_1, 2, tmp_tuple_element_4);
                 tmp_tuple_element_4 = mod_consts[44];
+                PyTuple_SET_ITEM0(tmp_defaults_1, 1, tmp_tuple_element_4);
+                tmp_tuple_element_4 = mod_consts[45];
+                PyTuple_SET_ITEM0(tmp_defaults_1, 2, tmp_tuple_element_4);
+                tmp_tuple_element_4 = mod_consts[46];
                 PyTuple_SET_ITEM0(tmp_defaults_1, 3, tmp_tuple_element_4);
                 tmp_expression_value_6 = PyObject_GetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[3]);
 
@@ -2261,13 +2335,13 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         }
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[46];
+            tmp_defaults_2 = mod_consts[48];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_DAQ$TempSensor$$$function__2_formatData(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[47], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[49], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -2364,7 +2438,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         branch_yes_4:;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[49], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_DAQ$TempSensor$$$class__1_ThermocoupleSensor_6, mod_consts[51], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -2377,14 +2451,14 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         }
         branch_no_4:;
         {
-            PyObject *tmp_assign_source_21;
+            PyObject *tmp_assign_source_22;
             PyObject *tmp_called_value_2;
             PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_5;
             PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
             tmp_called_value_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_5 = mod_consts[33];
+            tmp_tuple_element_5 = mod_consts[35];
             tmp_args_value_2 = PyTuple_New(3);
             PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -2395,9 +2469,9 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
             tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_72b5fc5effc06bccbfd193ded318aec4->m_frame.f_lineno = 6;
-            tmp_assign_source_21 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            tmp_assign_source_22 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
             Py_DECREF(tmp_args_value_2);
-            if (tmp_assign_source_21 == NULL) {
+            if (tmp_assign_source_22 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2408,11 +2482,11 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
                 goto try_except_handler_5;
             }
             assert(outline_0_var___class__ == NULL);
-            outline_0_var___class__ = tmp_assign_source_21;
+            outline_0_var___class__ = tmp_assign_source_22;
         }
         CHECK_OBJECT(outline_0_var___class__);
-        tmp_assign_source_20 = outline_0_var___class__;
-        Py_INCREF(tmp_assign_source_20);
+        tmp_assign_source_21 = outline_0_var___class__;
+        Py_INCREF(tmp_assign_source_21);
         goto try_return_handler_5;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -2475,7 +2549,7 @@ PyObject *modulecode_DAQ$TempSensor(PyObject *module, struct Nuitka_MetaPathBase
         exception_lineno = 6;
         goto try_except_handler_3;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[33], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_DAQ$TempSensor, (Nuitka_StringObject *)mod_consts[35], tmp_assign_source_21);
     }
     goto try_end_3;
     // Exception handler code:

@@ -1,27 +1,20 @@
-from select import select
+#from select import select
 #from matplotlib import offsetbox
 import wx
 from wx.lib import plot as wxplot
+from wx.lib.plot.plotcanvas import PlotCanvas
 from pubsub import pub
 
 from math import ceil
+import numpy as np
+import colorsys
 
-from wx.lib.plot.plotcanvas import PlotCanvas
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_SAVE_W, GRAPH_SAVE_H, DEFAULT_TEST_TIME, LEGEND_NUM_ROWS
 from Graphing.GraphNavToolbar import CustomNavToolbar
 
-# import matplotlib       # Provides the graph figures
-# matplotlib.use('WXAgg') # matplotlib needs a GUI (layout), we use wxPython
-# #matplotlib.interactive(True)
-# from matplotlib.figure import Figure
-# from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigCanvas
-# from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLocator
-#from matplotlib.backends.backend_wxagg import NavigationToolbar2WxAgg as NavigationToolbar
-
-import numpy as np
 SMALL = np.finfo(float).eps * 560
-import colorsys
 
+#import time as _time
 class PlotSettings():
 
     def __init__(self, initialPoint, linewidth=1, linestyle=wx.PENSTYLE_SOLID, label="", colour="#FFFFFF", zorder=1):
@@ -83,6 +76,7 @@ class GraphCanvas(PlotCanvas):
         self.parent = parent
         self.panelID = panelID
         self.numCols = 1 # number of columns in legend.
+        self.drawFullDataFlag = True # TODO To be used when I put in the ability of the graph to access all it's historical data in the TestData object
 
         PlotCanvas.__init__(self, self.parent)
 
@@ -101,16 +95,15 @@ class GraphCanvas(PlotCanvas):
         else:
             self.graphAxesSettings = graphAxesSettings
         
-        #minSize = (440, 300) #self.parent.GetClientSize()
-        #self.SetMinSize(minSize)
-        
         
     ###########################################################################
     # Handlers
     ###########################################################################
     def OnMouseDoubleClick(self, event):
-        
-        self.parent.callDblClick(event) # Ugly. use pubsub for thisor have the event bubble up to the notebook graph panel
+        """
+        The canvas needs to have the double click handled by the parent that switches them
+        """
+        self.parent.callDblClick(event) # Ugly. use pubsub for this or have the event bubble up to the notebook graph panel
         super().OnMouseDoubleClick(event)
 
     def initPlot(self, isAutoscale):
@@ -160,11 +153,11 @@ class GraphCanvas(PlotCanvas):
         self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
         self.enableLegend = True
         self.fontSizeTitle = 12
-        self.fontSizeLegend = 6
+        self.fontSizeLegend = 7
         self.fontSizeAxis = 8
         self.xSpec = "auto" #"none"
         self.ySpec = "auto" #10 #"none" # TODO adjust this to be sensible based on the ymax for the graph
-        #self.enableAntiAliasing = True
+        #self.enableAntiAliasing = True # Gonna forgoe this for speed reasons
         #self.enableZoom = True
         #self.enableDrag = True # Only zoom or drag enabled
 
@@ -199,19 +192,24 @@ class GraphCanvas(PlotCanvas):
     ###########################################################################
 
     def addToGraphPlotSettings(self, settings):
+        """
+        Take this line setting and add it to the list of line settings for this graph.
+        """
         self.graphPlotSettings += settings
 
         # For now just cap out the rows before another col is made. # TODO later make this dynamic based on client height and or width
-        #self.numCols = int(len(settings)/numRows)+1
         self.numCols = int(ceil((len(settings)+2)/LEGEND_NUM_ROWS))
 
 
     def replaceGraphPlotSettings(self, settings):
+        """
+        Clears out all the old settings and replaces them with the new settings passed in.
+        """
         self.graphPlotSettings.clear()
         self.addToGraphPlotSettings(settings)
         
 
-    def updateData(self, timeData, yData, plotIndex): # TODO Later this may be a dict where you pass the label as key
+    def updateData(self, timeData, yData, plotIndex, blit=False): # TODO Later this may be a dict where you pass the label as key
         """
         Updates the given plot with the given data for graphing
         """
@@ -221,10 +219,18 @@ class GraphCanvas(PlotCanvas):
             # Autoscale the vertical
             #maxYvalue = max(yData)
             maxYvalue = yData[-1] # Since we are keeping a running track of the max, let's use the last incoming.
+            
+            # BUG BUG BUG We adjusted the range but haven't redrawn the whole plot.
             if maxYvalue > self.graphAxesSettings.ymax:
                 self.graphAxesSettings.ymax = maxYvalue + (GRAPH_VERT_PADDING*maxYvalue)
+                # TODO trigger a graph redraw here
+                self.parent.reDrawGraph()
 
-            temp = list(zip(timeData, yData))
+            if blit and (len(timeData) > 1):
+                temp = list(zip(timeData[-2:], yData[-2:])) # Taking only the last two points
+            else:
+                temp = list(zip(timeData, yData)) # Taking all the points
+
             self.graphPlots[plotIndex].points = temp #np.append(plot.points, [(timeData[-1], yData[-1])])
 
 
@@ -243,19 +249,273 @@ class GraphCanvas(PlotCanvas):
         # TODO Make a seperate draw with BLIT function
 
         # Now redraw, or do the draw at a predetermined time, not just when the data for one object is done.# maybe trigger once all the lines get updated data
-        if False: #self.enableZoom: !!! DEBUGGING !!!
+        if self.enableZoom: #!!! DEBUGGING !!!
+            #self.Redraw()
+            minY, maxY = self.yCurrentRange
+
+            # Ugly hack just to make the thing draw while zoomed. TODO
+            if self.parent.toggle:
+                maxY -= SMALL #Ok just trying this out to trick a proper redraw
+                self.parent.toggle = False
+            else:
+                maxY += SMALL
+                self.parent.toggle = True
+
+        else:
+            self.Draw(self.gc, 
+                 xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
+                 yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax),
+                 blit=False) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+
+
+    def blitGraph(self):
+        """
+        Redraw all the graph objects
+        """
+        # CODE SPENDS MOST TIME HERE
+        # TODO Make a seperate draw with BLIT function
+
+        # We entered a new view and need to draw all the data we can
+        # !!!!!! Pull this up a level and make sure to reinstate all the data in the line objects
+        # if self.drawFullDataFlag:
+        #     blit = True
+        # else:
+        #     blit = False
+
+        # Now redraw, or do the draw at a predetermined time, not just when the data for one object is done.# maybe trigger once all the lines get updated data
+        if self.enableZoom: #!!! DEBUGGING !!!
             #self.Redraw()
             minY, maxY = self.yCurrentRange
             minX, maxX = self.xCurrentRange
 
+            # Ugly hack just to make the thing draw while zoomed. TODO
+            if self.parent.toggle:
+                maxY -= SMALL #Ok just trying this out to trick a proper redraw
+                self.parent.toggle = False
+            else:
+                maxY += SMALL
+                self.parent.toggle = True
+
             if self.last_draw is not None:
-                self._Draw(self.gc,
+                self.Draw(self.gc,
                             xAxis=(minX, maxX),
-                            yAxis=(minY, maxY))
+                            yAxis=(minY, maxY),
+                            dc=None,
+                            blit=True)
         else:
             self.Draw(self.gc, 
                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
-                 yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+                 yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax),
+                 dc=None,
+                 blit=True) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+
+
+
+    def Draw(self, graphics, xAxis=None, yAxis=None, dc=None, blit=False):
+        """
+        Wrapper around _Draw, which has optional blitting switch
+        """
+
+        graphics.logScale = self.logScale
+
+        # check case for axis = (a,b) where a==b caused by improper zooms
+        if xAxis is not None:
+            if xAxis[0] == xAxis[1]:
+                return
+        if yAxis is not None:
+            if yAxis[0] == yAxis[1]:
+                return
+
+        self._Draw(graphics, xAxis, yAxis, dc=dc, blit=blit)
+
+
+
+    def _Draw(self, graphics, xAxis=None, yAxis=None, dc=None, blit=False):
+        """\
+        Draw objects in graphics with specified x and y axis.
+        graphics- instance of PlotGraphics with list of PolyXXX objects
+        xAxis - tuple with (min, max) axis range to view
+        yAxis - same as xAxis
+        dc - drawing context - doesn't have to be specified.
+        If it's not, the offscreen buffer is used
+        """
+
+        if dc is None:
+            # sets new dc and clears it
+            dc = wx.BufferedDC(wx.ClientDC(self.canvas), self._Buffer)
+            bbr = wx.Brush(self.GetBackgroundColour(), wx.BRUSHSTYLE_SOLID)
+            dc.SetBackground(bbr)
+            dc.SetBackgroundMode(wx.SOLID)
+            if not blit: dc.Clear() # Don't erase the buffer background if we are blitting
+        
+        #======================================================================
+        if self._pointSize != (1.0, 1.0):
+            self._pointSize = (1.0, 1.0)
+            self._setSize()
+
+        self._fontScale = sum(self._pointSize) / 2.0
+
+        graphics._pointSize = self._pointSize
+        #======================================================================
+        dc.SetTextForeground(self.GetForegroundColour())
+        dc.SetTextBackground(self.GetBackgroundColour())
+
+        # set font size for every thing but title and legend
+        dc.SetFont(self._getFont(self._fontSizeAxis))
+
+        # sizes axis to axis type, create lower left and upper right
+        # corners of plot
+        #======================================================================
+        if xAxis is None or yAxis is None:
+            # One or both axis not specified in Draw
+            p1, p2 = graphics.boundingBox()     # min, max points of graphics
+            if xAxis is None:
+                xAxis = self._axisInterval(
+                    self._xSpec, p1[0], p2[0])  # in user units
+            if yAxis is None:
+                yAxis = self._axisInterval(self._ySpec, p1[1], p2[1])
+            # Adjust bounding box for axis spec
+            # lower left corner user scale (xmin,ymin)
+            p1[0], p1[1] = xAxis[0], yAxis[0]
+            # upper right corner user scale (xmax,ymax)
+            p2[0], p2[1] = xAxis[1], yAxis[1]
+        else:
+            # Both axis specified in Draw
+            # lower left corner user scale (xmin,ymin)
+            p1 = np.array([xAxis[0], yAxis[0]])
+            # upper right corner user scale (xmax,ymax)
+            p2 = np.array([xAxis[1], yAxis[1]])
+
+        # saves most recent values
+        #======================================================================
+        self.last_draw = (graphics, np.array(xAxis), np.array(yAxis))
+
+        # Get ticks and textExtents for axis if required
+        #======================================================================
+        xticks = yticks = None
+        xTextExtent = yTextExtent = (0, 0)  # No text for ticks
+        if self._xSpec != 'none':
+            xticks = self._xticks(xAxis[0], xAxis[1])
+            # w h of x axis text last number on axis
+            xTextExtent = dc.GetTextExtent(xticks[-1][1])
+
+        if self._ySpec != 'none':
+            yticks = self._yticks(yAxis[0], yAxis[1])
+            if self.logScale[1]:
+                # make sure we have enough room to display SI notation.
+                yTextExtent = dc.GetTextExtent('-2e-2')
+            else:
+                yTextExtentBottom = dc.GetTextExtent(yticks[0][1])
+                yTextExtentTop = dc.GetTextExtent(yticks[-1][1])
+                yTextExtent = (max(yTextExtentBottom[0], yTextExtentTop[0]),
+                               max(yTextExtentBottom[1], yTextExtentTop[1]))
+
+        # TextExtents for Title and Axis Labels
+        titleWH, xLabelWH, yLabelWH = self._titleLablesWH(dc, graphics)
+
+        # TextExtents for Legend
+        #======================================================================
+        legendBoxWH, legendSymExt, legendTextExt = self._legendWH(
+            dc,
+            graphics
+        )
+
+        # room around graph area
+        # use larger of number width or legend width
+        rhsW = max(xTextExtent[0], legendBoxWH[0]) + 5 * self._pointSize[0]
+        lhsW = yTextExtent[0] + yLabelWH[1] + 3 * self._pointSize[0]
+        bottomH = (max(xTextExtent[1], yTextExtent[1] / 2.)
+                   + xLabelWH[1] + 2 * self._pointSize[1])
+        topH = yTextExtent[1] / 2. + titleWH[1]
+        # make plot area smaller by text size
+        textSize_scale = np.array([rhsW + lhsW, bottomH + topH])
+        # shift plot area by this amount
+        textSize_shift = np.array([lhsW, bottomH])
+
+        # Draw the labels (title, axes labels)
+        self._drawPlotAreaLabels(dc, graphics, lhsW, rhsW, titleWH,
+                                 bottomH, topH, xLabelWH, yLabelWH)
+
+        # drawing legend makers and text
+        if self._legendEnabled:
+            self._drawLegend(dc,
+                             graphics,
+                             rhsW,
+                             topH,
+                             legendBoxWH,
+                             legendSymExt,
+                             legendTextExt)
+
+        # allow for scaling and shifting plotted points
+        #======================================================================
+        scale = ((self.plotbox_size - textSize_scale) / (p2 - p1)
+                 * np.array((1, -1)))
+        shift = (-p1 * scale + self.plotbox_origin
+                 + textSize_shift * np.array((1, -1)))
+        
+        # make available for mouse events
+        #======================================================================
+        self._pointScale = scale / self._pointSize
+        self._pointShift = shift / self._pointSize
+        self._drawPlotAreaItems(dc, p1, p2, scale, shift, xticks, yticks)
+
+        graphics.scaleAndShift(scale, shift)
+        # thicken up lines and markers if printing
+        graphics.printerScale = self.printerScale
+
+        # set clipping area so drawing does not occur outside axis box
+        #======================================================================
+        ptx, pty, rectWidth, rectHeight = self._point2ClientCoord(p1, p2)
+
+        # allow graph to overlap axis lines by adding units to w and h
+        #======================================================================
+        dc.SetClippingRegion(ptx * self._pointSize[0],
+                             pty * self._pointSize[1],
+                             rectWidth * self._pointSize[0] + 2,
+                             rectHeight * self._pointSize[1] + 1)
+        
+        # Draw the lines and markers
+        #======================================================================
+        #start = _time.perf_counter()
+        graphics.draw(dc)
+        #time_str = "entire graphics drawing took: {} seconds"
+        #print(time_str.format(_time.perf_counter() - start))
+
+        # remove the clipping region
+        dc.DestroyClippingRegion()
+
+        self._adjustScrollbars()
+
+
+    def OnMouseLeftUp(self, event):
+        if self._zoomEnabled:
+            if self._hasDragged is True:
+                self._drawRubberBand(
+                    self._zoomCorner1, self._zoomCorner2)  # remove old
+                self._zoomCorner2[0], self._zoomCorner2[1] = self._getXY(event)
+                self._hasDragged = False  # reset flag
+                minX, minY = np.minimum(self._zoomCorner1, self._zoomCorner2)
+                maxX, maxY = np.maximum(self._zoomCorner1, self._zoomCorner2)
+
+                self.last_PointLabel = None  # reset pointLabel
+                
+                self.parent.reloadData() #.parent.Parent.loadAllGraphData() # Again this is an ugly hack to be taken out
+
+                if self.last_draw is not None:
+                    self._Draw(self.last_draw[0],
+                               xAxis=(minX, maxX),
+                               yAxis=(minY, maxY),
+                               dc=None)
+
+            # else: # A box has not been drawn, zoom in on a point
+            # this interfered with the double click, so I've disables it.
+            #    X,Y = self._getXY(event)
+            #    self.Zoom( (X,Y), (self._zoomInFactor,self._zoomInFactor) )
+        if self._dragEnabled:
+            self.SetCursor(self.HandCursor)
+            if self.canvas.HasCapture():
+                self.canvas.ReleaseMouse()
+
 
 
     def clearGraph(self):
@@ -294,6 +554,7 @@ class GraphCanvas(PlotCanvas):
         Toggles the Zoom state
         """
         self.enableZoom = state
+        #self.drawFullDataFlag = True # TODO may need to set this on the exiting of zoom enabled state
 
 
     def setDragState(self, state):
@@ -331,9 +592,11 @@ class GraphCanvas(PlotCanvas):
                     pass
         #p1, p2 = self.gc.boundingBox() # min, max points of graphics
         self._setSize(GRAPH_SAVE_W, GRAPH_SAVE_H)
+
         self.Draw(self.gc, 
                   xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
-                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax),
+                  blit=False) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
         self._printDraw(dc)
         self._setSize() #Return to normal
         del dc
@@ -344,7 +607,9 @@ class GraphCanvas(PlotCanvas):
         
 
     def _legendWH(self, dc, graphics):
-        """Returns the size in screen units for legend box"""
+        """
+        Returns the size in screen units for legend box
+        """
         if self._legendEnabled is not True:
             legendBoxWH = symExt = txtExt = (0, 0)
         else:
@@ -376,7 +641,9 @@ class GraphCanvas(PlotCanvas):
     # Shadow this to draw a multi-column legend box
     def _drawLegend(self, dc, graphics, rhsW, topH, legendBoxWH,
                     legendSymExt, legendTextExt):
-        """Draws legend symbols and text"""
+        """
+        Draws legend symbols and text
+        """
 
         # top right hand corner of graph box is ref corner
         trhc = (self.plotbox_origin +
@@ -440,15 +707,17 @@ class BaseGraph(wx.Panel):
     """
     A wxWidget Panel that displays the graph
     """
-    def __init__(self, parent, panelID, axesSettings=None):
+    def __init__(self, parent, panelID, axesSettings=None, testData=None):
         wx.Panel.__init__(self, parent, id=panelID)
         self.parent = parent
+        #self.points = np.array([]]).astype(np.float64) # list of points added to the graph so when not blitting we can draw the full graph.
         self.panelID = panelID
+        self.testData = testData
 
         self.toggle = True
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.isExpanded = False # Adding this attribute to keep track of state
-        self.Bind(wx.EVT_LEFT_DCLICK, self.callDblClick) # Ugly. use pubsub for this
+        self.Bind(wx.EVT_LEFT_DCLICK, self.callDblClick) 
 
         self.testTimeMinutes = DEFAULT_TEST_TIME # Default on startup. This gets set again when test is started.
  
@@ -480,6 +749,29 @@ class BaseGraph(wx.Panel):
 # General Methods
 ################################################################################
 
+    def reloadData(self):
+        """
+        Reloads the line objects with all the saved test data
+        """
+        if self.graphCanvas.graphPlots:
+            # For all the line objects, reset the data
+            # God this is a mess. Relies too much on things being in order.
+            i = 0
+            #for plotline in self.graphCanvas.graphPlots:
+            for block in self.testData.data:
+                if isinstance(block[0], list):
+                    for j in range(len(block[0])):
+                        columnVector = [row[j] for row in block]
+                    #for row in block:
+                        self.graphCanvas.updateData(self.testData.timeData, columnVector, plotIndex=i)
+                        i+=1
+                else:
+                    self.graphCanvas.updateData(self.testData.timeData, block, plotIndex=i)
+                    i+=1
+                #yData = [row[i] if isinstance(row, list) else row for row in block]
+                
+
+
     def createToolbar(self):
         """
         Add a toolbar UI to the graph.
@@ -498,18 +790,24 @@ class BaseGraph(wx.Panel):
         
 
     def createColourList(self, numColours):
+        """
+        Creates a list of colours of the given ammount passed in numColours
+        """
         #colours = [GRAPH_COLOURMAP(x/(numSelected-1)) for x in range(numSelected)]
         if numColours <= 1: return
         colourList = []
 
         for i in range(numColours):
-            temp = colorsys.hls_to_rgb(i/(numColours-1), 0.5, 1.0)
+            temp = colorsys.hls_to_rgb(i/(numColours-1), 0.45, 1.0)
             colour = tuple(col * 255 for col in temp)
             colourList.append(wx.Colour(colour))
 
         return  colourList
 
-    def refreshGraph(self):
+    def blitGraph(self):
+        """
+        Does a graph blit call (draws only one line segment, does not erase background).
+        """
         
         # All the plots got their new data. Time to draw to screen.
         if self.toggle:
@@ -520,9 +818,38 @@ class BaseGraph(wx.Panel):
             self.toggle = True
 
         #self.graphCanvas.drawGraph() # Update the drawn plot
+        wx.CallAfter(self.graphCanvas.blitGraph)
+
+    def reDrawGraph(self):
+        """
+        Does a graph draw call.
+        """
+
+        # BUG TODO need to take into account zooming
+        # All the plots got their new data. Time to draw to screen.
+        if self.toggle:
+            self.graphCanvas.graphAxesSettings.ymax -= SMALL #Ok just trying this out to trick a proper redraw
+            self.toggle = False
+        else:
+            self.graphCanvas.graphAxesSettings.ymax += SMALL
+            self.toggle = True
+
         wx.CallAfter(self.graphCanvas.drawGraph)
 
-
-
     def callDblClick(self, event):
+        """
+        Send message to parent control that we got dblClicked. Sswap this pannel out.
+        """
         pub.sendMessage("graphs.dblClick", panelID=self.panelID)
+
+
+    def saveGraph(self, fullFilename):
+        """
+        Sets up the graph to be saved to the given filename
+        """
+
+        self.graphCanvas.homeGraph() # View everything
+        oldState = self.graphCanvas.enableLegend
+        self.graphCanvas.enableLegend = True # Legend visible
+        self.graphCanvas.saveImage(fullFilename)
+        self.graphCanvas.enableLegend = oldState

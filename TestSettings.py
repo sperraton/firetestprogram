@@ -1,4 +1,5 @@
 import os
+from Enumerations import SAVE_RATE_DEFAULT, SAVE_RATE_LWR
 from TestStandards import Standards
 
 
@@ -36,7 +37,7 @@ class TestSettings:
         self.threeQuarterMarkSeconds = self.testTimeMinutes*45 # 45/60
 
         if saveRate_sec is None:
-            self.saveRate_sec = 5
+            self.saveRate_sec = SAVE_RATE_LWR
         else:
             self.saveRate_sec = saveRate_sec
 

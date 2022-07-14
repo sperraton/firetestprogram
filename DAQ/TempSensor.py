@@ -1,6 +1,6 @@
 from Phidget22.ThermocoupleType import ThermocoupleType
 from HelperFunctions import applyGainOffset, celsiusToFahrenheit
-from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_ATTACH_WAIT, INVALID_VALUE
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_ATTACH_WAIT, DEFAULT_THERMOCOUPLE_DEC_PLACES, INVALID_VALUE
 from DAQ.BaseSensor import BaseSensor
 
 class ThermocoupleSensor(BaseSensor):
@@ -47,4 +47,4 @@ class ThermocoupleSensor(BaseSensor):
             numeric = celsiusToFahrenheit(numeric)
 
         #return "{0:4.1f}".format(numeric), numeric
-        return "{0:.0f}".format(numeric), numeric # No need for tenths of a degree
+        return "{0:.0f}".format(numeric), round(numeric, DEFAULT_THERMOCOUPLE_DEC_PLACES) # No need for tenths of a degree

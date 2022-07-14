@@ -60,6 +60,8 @@ class StartTestDialog(wx.Dialog):
 
         self.btnBackupFilePath = wx.Button(self, wx.ID_ANY, "Choose backup path ...")
         self.lblBackupFilePath = wx.StaticText(self, wx.ID_ANY, self.backupPath)
+
+        self.cbStartWithAutoExclude = wx.CheckBox(self, wx.ID_ANY, "Start the test with AUTOEXCLUDE enabled?")
         
         self.cbIsCalibrated = wx.CheckBox(self, wx.ID_ANY, "I confirm that the sensors have been calibrated.")
         self.btnStart = wx.Button(self, wx.ID_ANY, "Finalize Parameters")
@@ -91,6 +93,7 @@ class StartTestDialog(wx.Dialog):
 
         self.scSaveRate.SetValue(SAVE_RATE_DEFAULT) #TODO make the saverate the last used one. i.e. save it to the settings file when changed
 
+        self.cbStartWithAutoExclude.SetValue = False
         self.btnStart.Disable()
         self.cmbTargetCurve.SetSelection(0)
         self.onTestChoice(None) # Make up for the fact that SetSelection() doesn't fire an event
@@ -119,17 +122,20 @@ class StartTestDialog(wx.Dialog):
         gridSizer.Add(self.txtTestInfo, (7, 1), (1, 1), wx.ALL | wx.EXPAND, 5)
         gridSizer.Add(self.lblSaveRate, (8, 0), (1, 1), wx.ALIGN_CENTER_VERTICAL | wx.ALIGN_RIGHT | wx.ALL, 5)
         gridSizer.Add(self.scSaveRate, (8, 1), (1, 1), wx.ALL, 5)
-        
-        gridSizer.Add(self.btnFilePath, (9, 0), (1, 1), wx.ALL, 5)
-        gridSizer.Add(self.lblFilePath, (9, 1), (1, 1), wx.ALL, 5)
 
-        gridSizer.Add(self.btnBackupFilePath, (10, 0), (1, 1), wx.ALL, 5)
-        gridSizer.Add(self.lblBackupFilePath, (10, 1), (1, 1), wx.ALL, 5)
+        gridSizer.Add(self.cbStartWithAutoExclude, (9, 1), (1, 1), wx.ALL, 5)
+        
+        gridSizer.Add(self.btnFilePath, (10, 0), (1, 1), wx.ALL, 5)
+        gridSizer.Add(self.lblFilePath, (10, 1), (1, 1), wx.ALL, 5)
+
+        gridSizer.Add(self.btnBackupFilePath, (11, 0), (1, 1), wx.ALL, 5)
+        gridSizer.Add(self.lblBackupFilePath, (11, 1), (1, 1), wx.ALL, 5)
+
 
         buttonSizer.Add(self.cbIsCalibrated, 0, wx.ALL, 5)
         buttonSizer.Add(self.btnStart, 0, wx.ALL | wx.FIXED_MINSIZE, 5)
         buttonSizer.Add(self.btnCancel, 0, wx.ALL | wx.FIXED_MINSIZE, 5)
-        gridSizer.Add(buttonSizer, (11, 0), (1, 2), wx.ALL | wx.EXPAND, 0)
+        gridSizer.Add(buttonSizer, (12, 0), (1, 2), wx.ALL | wx.EXPAND, 0)
 
         self.SetSizer(gridSizer)
         gridSizer.Fit(self)
@@ -250,6 +256,7 @@ class StartTestDialog(wx.Dialog):
         self.resultSaveRate = self.scSaveRate.GetValue()
         self.resultTargetCurve = self.cmbTargetCurve.GetStringSelection()
         self.resultSavePath = self.savePath
+        self.resultAutoExclude = self.cbStartWithAutoExclude.IsChecked()
         self.Destroy()
 
 

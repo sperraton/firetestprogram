@@ -22,6 +22,7 @@ class Controller():
 
         # init the variables used in the test
         self.testSettings = None  # Just starting up. No test has been defined yet
+        self.testData = None # Just starting up. No test has been defined yet
         self.machineSettings = None
         self.isTestRunning = False
         self.isCorrectionCalculated = False
@@ -31,6 +32,8 @@ class Controller():
         self.elapsedTime = 0
         self.currentRow = []
         self.logger = None
+        self.isFurnaceAutoExclude = False
+        self.isUnexposedAutoExclude = False
 
         # TODO make these sets instead of lists to improve speed.
         self.selectedFurnaceChannels = []
@@ -131,27 +134,34 @@ class Controller():
 
         self.startTime = 0
         self.elapsedTime = 0
-        self.updateRate = 1  # Seconds between each data gather
+        self.updateRate = DATA_UPDATE_RATE  # Seconds between each data gather
 
         self.testData = TestData(self.testSettings, self.machineSettings)  # Holds the data that is recorded and calculated thoughout the test
 
         self.ignoredChannels = []
-        self.isFurnaceAutoExclude = False
-        self.isUnexposedAutoExclude = False
+
         # TODO Perhaps just move this to Main.py where initTestSettings is called.
         pub.sendMessage("indicator.update", indicator="CURVE",
                         lblValue="Required Curve: "+self.testSettings.targetCurve)
 
+
+    def writeTestHeader(self):
+        """
+        Try writing the front material to the test log .csv file
+        """
+
+        if self.logger.writeHeaders(self.testSettings.fileHeader, self.tableHeader):  # Create the test log and write the header data in.
+            self.stopTest()  # Failed to create log file.
+            warnDialog(self.parent, "There was an error creating the log file.\nIs the disk full?\nDo you have correct permissions?\nTest will be aborted now.")
+            return False
+
+        return True # Successfully wrote to disk
 
 
     def startTest(self):
         """
         Set up the test and begin timer.
         """
-        if self.logger.writeHeaders(self.testSettings.fileHeader, self.tableHeader):  # Create the test log and write the header data in.
-            self.stopTest()  # Failed to create log file.
-            warnDialog(self.parent, "There was an error creating the log file.\nIs the disk full?\nDo you have correct permissions?\nTest will be aborted now.")
-            return
 
         pub.sendMessage("status.flash", msg="Starting test.")
         self.isTestRunning = True
@@ -161,8 +171,9 @@ class Controller():
         # NOTE Check the return code. wrap in try as well
         self.updateData()  # NOTE Perhaps put this before the isTestRunning is set and then test in the grabLatestData to do a first point init
 
-        pub.sendMessage("dataGrid.addRow", row=self.currentRow)
-        self.logger.writeDataRow(self.currentRow)  # Log the first data point
+        # BUG TODO looks like we are recording init point twice. Figure that out.
+        #pub.sendMessage("dataGrid.addRow", row=self.currentRow)
+        #self.logger.writeDataRow(self.currentRow)  # Log the first data point
 
         # Set the unexposed TC max limit based on the current average.
         # If the unexposed failure threshold has not been calculated, do it now.
@@ -191,7 +202,7 @@ class Controller():
         Used for testing purposes
         """
         for channelIdx in self.selectedUnexposedChannels:
-            num = random.uniform(10,90)
+            num = random.uniform(1,9)*channelIdx
             pub.sendMessage("channel.valueChange",
                                 sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
@@ -239,6 +250,8 @@ class Controller():
         # TODO get the dispatching of data to the UI or Logger in a single function, was supposed to be in updateData()
         # Is it time to save yet?
         isRowWritten = False # This is a flag to make sure we write the final entry into the log.
+
+        #BUG BUG BUG I think the round is possibly responsible for the double points in the data.
         if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0 or \
            round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate_sec:
             # TODO Save the accumulated rows to file
@@ -262,8 +275,7 @@ class Controller():
         # Set the timer up for the next firing
         # This adjusts the next firing so we get closer to a true 1 second interval and there is no cumulative drift.
         delta = time.time()-self.startTime
-        self.timer.StartOnce(
-            int((self.updateRate*1000)-((delta % self.updateRate)*1000)))
+        self.timer.StartOnce(int((self.updateRate*1000)-((delta % self.updateRate)*1000)))
 
 
         # Is the test to be over?
@@ -308,7 +320,7 @@ class Controller():
 
         self.grabLatestData()
 
-        if round(self.elapsedTime) % 2 == 0: # Slow down the UI graph update
+        if round(self.elapsedTime) % GRAPH_UPDATE_RATE == 0: # Slow down the UI graph update to 
             pub.sendMessage("graphData.update", testData=self.testData)
 
     def grabLatestData(self):
@@ -367,6 +379,14 @@ class Controller():
         self.testData.setAvgFurnace(furnaceValuesForAvg, self.elapsedTime)
         self.testData.setAvgUnexposed(unexposedValuesForAvg)
 
+        # Calc the AUC at the save rate
+        if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0:
+            self.testData.calcAverageAUC()#self.avgFurnace) # Can't start calculating the AUC unless there is at least one point
+            self.testData.calcTargetAUC()
+            pub.sendMessage("indicator.update",
+                        indicator="AUC",
+                        lblValue="% AUC: {0:3.1f}".format(self.testData.getPercentAUC()))
+                        
         # Build the currentRow that gets passed to the grid and the logger
         # ============================================================
         self.buildCurrentRow()
@@ -397,20 +417,20 @@ class Controller():
         pub.sendMessage("indicator.update",
                         indicator="DELTA",
                         lblValue="Delta Temp.: {0:4.1f} deg. ".format(self.testData.targetDelta) + self.testSettings.temperatureUnits)
-        pub.sendMessage("indicator.update",
-                        indicator="AUC",
-                        lblValue="% AUC: {0:3.1f}".format(self.testData.getPercentAUC()))
+        # pub.sendMessage("indicator.update",
+        #                 indicator="AUC",
+        #                 lblValue="% AUC: {0:3.1f}".format(self.testData.getPercentAUC()))
 
         # Show the current cabinet temperature
         cabinetTemp = self.daq.getInternalTemperature() # Returns valueFormatted
         value = "Cab. Temp.: " + cabinetTemp + " deg. C"
-
+        shouldWarn = None
         try:
             if float(cabinetTemp) >= WARN_THRES2:
                 shouldWarn = 2
             elif float(cabinetTemp) >= WARN_THRES1:
                 shouldWarn = 1
-        except:
+        except Exception:
             shouldWarn = None
 
         # TODO on next revision make space for the Ambient in the indicator panel.
@@ -503,12 +523,14 @@ class Controller():
         Construct the table header.
         """
 
+        self.tableHeader.clear()
+
         # Start with the standard columns
         # ============================================================
         if self.testSettings.temperatureUnits == "F":
-            self.tableHeader = standardTableLabelsUnitsF
+            self.tableHeader += standardTableLabelsUnitsF
         else:
-            self.tableHeader = standardTableLabelsUnitsC
+            self.tableHeader += standardTableLabelsUnitsC
 
         # Do the furnace
         # ============================================================
@@ -747,6 +769,7 @@ class Controller():
         elif placement == thermocouplePlacements.UNEXPOSED:
             self.isUnexposedAutoExclude = True
 
+
     def clearAutoexclude(self, placement):
         """
         Clears the flag that checks for outliers to  exclude from measurement
@@ -755,6 +778,17 @@ class Controller():
             self.isFurnaceAutoExclude = False
         elif placement == thermocouplePlacements.UNEXPOSED:
             self.isUnexposedAutoExclude = False
+
+
+    def getAutoexclude(self, placement):
+        """
+        Returns the current value of the autoexclude attribute
+        """
+        if placement == thermocouplePlacements.FURNACE:
+            return self.isFurnaceAutoExclude
+        elif placement == thermocouplePlacements.UNEXPOSED:
+            return self.isUnexposedAutoExclude
+
 
     def channelIgnore(self, channelIndex, state):
         """

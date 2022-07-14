@@ -96,4 +96,11 @@ class CustomNavToolbar(wx.ToolBar):
 
 
     def onHome(self, event):
+        self.ToggleTool(self.DRAG_ID, False)
+        self.ToggleTool(self.ZOOM_ID, False)
+        
         self.graphCanvas.homeGraph()
+
+        self.graph.parent.Parent.loadAllGraphData() # Ugly hack/code smell here. This has to be on the actual zoom
+        self.graph.reDrawGraph()
+        self.graph.parent.Refresh()

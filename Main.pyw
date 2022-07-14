@@ -5,7 +5,6 @@
 
 # AUTHOR: Stephen Perraton
 # EMAIL: perraton@gmail.com
-# LAST MODIFIED: 2022-MAY-03
 
 # Use the following for compiling with Nuitka
 # python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file="C:\Users\E119 PILOT SCALE\AppData\Local\TesPro\FireTestProgram\src\splash.jpg"=images Main.pyw
@@ -52,16 +51,14 @@ import wx.lib.mixins.inspection
 
 from pubsub import pub
 import os
-import time
 
-from math import ceil
 
 ################################################################################
 # Main Window
 ################################################################################
 class MainFrame(wx.Frame):
 
-    SAVEPATH_ID=201 #wx.ANYID
+    SAVEPATH_ID=201
     BACKUPPATH_ID=202
 
     def __init__(self, *args, **kw):
@@ -70,7 +67,7 @@ class MainFrame(wx.Frame):
         self.testTimeMinutes = 60 # Default
 
         # self.warnToggle = True
-        self.detachedWarn = False # Stop additional triggers of the warn dialog
+        self.detachedWarn = True # Stop additional triggers of the warn dialog
         self.channelErrorWarn = False # Stop additional triggers of the warn dialog
         self.acknowledgedChannelError = [] # Keep track of which channels we have shown a warning dialog
 
@@ -335,6 +332,9 @@ class MainFrame(wx.Frame):
                                     dlg.resultTargetCurve,
                                     dlg.resultSavePath,
                                     self.controller.machineSettings.defaultBackupPath) # TODO have the backup path visible in the start dialog
+        if dlg.resultAutoExclude:
+            self.controller.setAutoexclude(thermocouplePlacements.FURNACE) # Start with autoexclude or not
+            self.controller.setAutoexclude(thermocouplePlacements.UNEXPOSED)
 
         dlg.Destroy()
    
@@ -344,6 +344,11 @@ class MainFrame(wx.Frame):
         # Ensure that all the proper calibrations are loaded.
         self.controller.reloadCurrentProfile()   
         self.controller.initTestSettings(testSettings)
+
+        # Set the test controller to try to write to file so that they operator doesn't get a nasty surprise when starting tests
+        if not self.controller.writeTestHeader():
+            return # Bailing out because we couldn't write to file
+
 
         self.graphNotebook.initGrid() # Must be called after the initTestSettings because we use controller. TODO rather than reinit everything maybe make a new function to resize and relabel columns.
         self.graphNotebook.graphTab.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
@@ -400,8 +405,6 @@ class MainFrame(wx.Frame):
 
         if self.testExtendDialog:
             self.testExtendDialog.Destroy()
-
-        # TODO Dump the datagrid to a backup file
 
 
     def testThreeQuarterMark(self, factor):

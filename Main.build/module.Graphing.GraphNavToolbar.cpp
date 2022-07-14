@@ -33,9 +33,9 @@ PyObject *module_Graphing$GraphNavToolbar;
 PyDictObject *moduledict_Graphing$GraphNavToolbar;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[88];
+static PyObject *mod_consts[93];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[88];
+static Py_hash_t mod_consts_hash[93];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for (int i = 0; i < 88; i++) {
+        for (int i = 0; i < 93; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants_Graphing$GraphNavToolbar(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for (int i = 0; i < 88; i++) {
+    for (int i = 0; i < 93; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -89,16 +89,16 @@ static PyCodeObject *codeobj_70806446fbd30e0cf68a346c11eba1ae;
 static PyCodeObject *codeobj_ca87b156a49ca6268ff87774820a4c8f;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[81]); CHECK_OBJECT(module_filename_obj);
-    codeobj_b82a5d51d2d59ec21a3669ef5f6658d3 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[82], NULL, NULL, 0, 0, 0);
-    codeobj_37712df1050564e6c108fc00928e99ab = MAKE_CODEOBJECT(module_filename_obj, 4, CO_NOFREE, mod_consts[59], mod_consts[83], NULL, 0, 0, 0);
-    codeobj_f1d36846694fe31e285717ba08924499 = MAKE_CODEOBJECT(module_filename_obj, 13, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[4], mod_consts[84], NULL, 2, 0, 0);
-    codeobj_1f8180ce7114526ad996c80e086184f2 = MAKE_CODEOBJECT(module_filename_obj, 98, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[37], mod_consts[85], NULL, 2, 0, 0);
-    codeobj_15b150d17ff60c07759334e44323c578 = MAKE_CODEOBJECT(module_filename_obj, 69, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[85], NULL, 2, 0, 0);
-    codeobj_529bcf04532cfb0f72e2efeb898ab527 = MAKE_CODEOBJECT(module_filename_obj, 90, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[39], mod_consts[86], NULL, 2, 0, 0);
-    codeobj_8b2c5ea67c37cc0237de14ad3a27a5e7 = MAKE_CODEOBJECT(module_filename_obj, 77, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[33], mod_consts[86], NULL, 2, 0, 0);
-    codeobj_70806446fbd30e0cf68a346c11eba1ae = MAKE_CODEOBJECT(module_filename_obj, 73, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[74], mod_consts[85], NULL, 2, 0, 0);
-    codeobj_ca87b156a49ca6268ff87774820a4c8f = MAKE_CODEOBJECT(module_filename_obj, 82, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[38], mod_consts[86], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[86]); CHECK_OBJECT(module_filename_obj);
+    codeobj_b82a5d51d2d59ec21a3669ef5f6658d3 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[87], NULL, NULL, 0, 0, 0);
+    codeobj_37712df1050564e6c108fc00928e99ab = MAKE_CODEOBJECT(module_filename_obj, 4, CO_NOFREE, mod_consts[64], mod_consts[88], NULL, 0, 0, 0);
+    codeobj_f1d36846694fe31e285717ba08924499 = MAKE_CODEOBJECT(module_filename_obj, 13, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[4], mod_consts[89], NULL, 2, 0, 0);
+    codeobj_1f8180ce7114526ad996c80e086184f2 = MAKE_CODEOBJECT(module_filename_obj, 98, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[37], mod_consts[90], NULL, 2, 0, 0);
+    codeobj_15b150d17ff60c07759334e44323c578 = MAKE_CODEOBJECT(module_filename_obj, 69, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[77], mod_consts[90], NULL, 2, 0, 0);
+    codeobj_529bcf04532cfb0f72e2efeb898ab527 = MAKE_CODEOBJECT(module_filename_obj, 90, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[39], mod_consts[91], NULL, 2, 0, 0);
+    codeobj_8b2c5ea67c37cc0237de14ad3a27a5e7 = MAKE_CODEOBJECT(module_filename_obj, 77, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[33], mod_consts[91], NULL, 2, 0, 0);
+    codeobj_70806446fbd30e0cf68a346c11eba1ae = MAKE_CODEOBJECT(module_filename_obj, 73, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[79], mod_consts[90], NULL, 2, 0, 0);
+    codeobj_ca87b156a49ca6268ff87774820a4c8f = MAKE_CODEOBJECT(module_filename_obj, 82, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[38], mod_consts[91], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -3042,13 +3042,16 @@ static PyObject *impl_Graphing$GraphNavToolbar$$$function__7_onHome(struct Nuitk
 
     // Framed code:
     {
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
         tmp_expression_value_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[47]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3058,9 +3061,28 @@ static PyObject *impl_Graphing$GraphNavToolbar$$$function__7_onHome(struct Nuitk
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_2 = par_self;
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[27]);
+        if (tmp_args_element_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_1);
+
+            exception_lineno = 99;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_2 = Py_False;
         frame_1f8180ce7114526ad996c80e086184f2->m_frame.f_lineno = 99;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[49]);
-        Py_DECREF(tmp_called_instance_1);
+        {
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
+        }
+
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3072,6 +3094,227 @@ static PyObject *impl_Graphing$GraphNavToolbar$$$function__7_onHome(struct Nuitk
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_1);
+    }
+    {
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_call_result_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_4;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_3 = par_self;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[47]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 100;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_4 = par_self;
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[23]);
+        if (tmp_args_element_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_2);
+
+            exception_lineno = 100;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_value_4 = Py_False;
+        frame_1f8180ce7114526ad996c80e086184f2->m_frame.f_lineno = 100;
+        {
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
+        }
+
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_3);
+        if (tmp_call_result_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 100;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_2);
+    }
+    {
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_call_result_3;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_5 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[1]);
+        if (tmp_called_instance_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 102;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_1f8180ce7114526ad996c80e086184f2->m_frame.f_lineno = 102;
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[49]);
+        Py_DECREF(tmp_called_instance_1);
+        if (tmp_call_result_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 102;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_3);
+    }
+    {
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_call_result_4;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_8 = par_self;
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[0]);
+        if (tmp_expression_value_7 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 104;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[50]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_expression_value_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 104;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[51]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_called_instance_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 104;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_1f8180ce7114526ad996c80e086184f2->m_frame.f_lineno = 104;
+        tmp_call_result_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[52]);
+        Py_DECREF(tmp_called_instance_2);
+        if (tmp_call_result_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 104;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_4);
+    }
+    {
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_call_result_5;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_9 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[0]);
+        if (tmp_called_instance_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 105;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_1f8180ce7114526ad996c80e086184f2->m_frame.f_lineno = 105;
+        tmp_call_result_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[53]);
+        Py_DECREF(tmp_called_instance_3);
+        if (tmp_call_result_5 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 105;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_5);
+    }
+    {
+        PyObject *tmp_called_instance_4;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_call_result_6;
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_11 = par_self;
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[0]);
+        if (tmp_expression_value_10 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 106;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[50]);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_called_instance_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 106;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_1f8180ce7114526ad996c80e086184f2->m_frame.f_lineno = 106;
+        tmp_call_result_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[54]);
+        Py_DECREF(tmp_called_instance_4);
+        if (tmp_call_result_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 106;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        Py_DECREF(tmp_call_result_6);
     }
 
 #if 0
@@ -3161,7 +3404,7 @@ static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__1___init__()
         impl_Graphing$GraphNavToolbar$$$function__1___init__,
         mod_consts[4],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[71],
+        mod_consts[76],
 #endif
         codeobj_f1d36846694fe31e285717ba08924499,
         NULL,
@@ -3184,9 +3427,9 @@ static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__1___init__()
 static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__2_onToggleAvg() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Graphing$GraphNavToolbar$$$function__2_onToggleAvg,
-        mod_consts[72],
+        mod_consts[77],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[73],
+        mod_consts[78],
 #endif
         codeobj_15b150d17ff60c07759334e44323c578,
         NULL,
@@ -3209,9 +3452,9 @@ static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__2_onToggleAv
 static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__3_onToggleRaw() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_Graphing$GraphNavToolbar$$$function__3_onToggleRaw,
-        mod_consts[74],
+        mod_consts[79],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[75],
+        mod_consts[80],
 #endif
         codeobj_70806446fbd30e0cf68a346c11eba1ae,
         NULL,
@@ -3236,7 +3479,7 @@ static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__4_onToggleLe
         impl_Graphing$GraphNavToolbar$$$function__4_onToggleLegend,
         mod_consts[33],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[76],
+        mod_consts[81],
 #endif
         codeobj_8b2c5ea67c37cc0237de14ad3a27a5e7,
         NULL,
@@ -3261,7 +3504,7 @@ static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__5_onToggleZo
         impl_Graphing$GraphNavToolbar$$$function__5_onToggleZoom,
         mod_consts[38],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[77],
+        mod_consts[82],
 #endif
         codeobj_ca87b156a49ca6268ff87774820a4c8f,
         NULL,
@@ -3286,7 +3529,7 @@ static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__6_onToggleDr
         impl_Graphing$GraphNavToolbar$$$function__6_onToggleDrag,
         mod_consts[39],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[78],
+        mod_consts[83],
 #endif
         codeobj_529bcf04532cfb0f72e2efeb898ab527,
         NULL,
@@ -3311,7 +3554,7 @@ static PyObject *MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__7_onHome() {
         impl_Graphing$GraphNavToolbar$$$function__7_onHome,
         mod_consts[37],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[79],
+        mod_consts[84],
 #endif
         codeobj_1f8180ce7114526ad996c80e086184f2,
         NULL,
@@ -3585,7 +3828,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         UPDATE_STRING_DICT0(
             moduledict_Graphing$GraphNavToolbar,
             (Nuitka_StringObject *)const_str_plain___package__,
-            mod_consts[87]
+            mod_consts[92]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)const_str_plain___name__);
@@ -3719,12 +3962,12 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[50], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[56], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_b82a5d51d2d59ec21a3669ef5f6658d3 = MAKE_MODULE_FRAME(codeobj_b82a5d51d2d59ec21a3669ef5f6658d3, module_Graphing$GraphNavToolbar);
@@ -3739,14 +3982,14 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[52]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[57]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[53], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[58], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3762,14 +4005,14 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[52]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[57]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[54], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[59], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3784,7 +4027,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
@@ -3797,7 +4040,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         tmp_globals_arg_value_1 = (PyObject *)moduledict_Graphing$GraphNavToolbar;
         tmp_locals_arg_value_1 = Py_None;
         tmp_fromlist_value_1 = Py_None;
-        tmp_level_value_1 = mod_consts[56];
+        tmp_level_value_1 = mod_consts[61];
         frame_b82a5d51d2d59ec21a3669ef5f6658d3->m_frame.f_lineno = 1;
         tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
@@ -3884,7 +4127,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         PyObject *tmp_expression_value_2;
         PyObject *tmp_subscript_value_1;
         PyObject *tmp_bases_value_1;
-        tmp_key_value_1 = mod_consts[57];
+        tmp_key_value_1 = mod_consts[62];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
@@ -3898,7 +4141,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_value_2 = mod_consts[57];
+        tmp_key_value_2 = mod_consts[62];
         tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
         if (tmp_metaclass_value_1 == NULL) {
             tmp_metaclass_value_1 = Py_None;
@@ -3928,7 +4171,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_expression_value_2 = tmp_class_creation_1__bases;
-        tmp_subscript_value_1 = mod_consts[56];
+        tmp_subscript_value_1 = mod_consts[61];
         tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3979,7 +4222,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         bool tmp_condition_result_3;
         PyObject *tmp_key_value_3;
         PyObject *tmp_dict_arg_value_3;
-        tmp_key_value_3 = mod_consts[57];
+        tmp_key_value_3 = mod_consts[62];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
@@ -3994,7 +4237,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[57];
+    tmp_dictdel_key = mod_consts[62];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -4012,7 +4255,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_3 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[58]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[63]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -4030,7 +4273,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_value_4 = tmp_class_creation_1__metaclass;
-        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[58]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[63]);
         if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4041,7 +4284,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
 
             goto try_except_handler_1;
         }
-        tmp_tuple_element_2 = mod_consts[59];
+        tmp_tuple_element_2 = mod_consts[64];
         tmp_args_value_1 = PyTuple_New(2);
         PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -4072,7 +4315,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
         tmp_expression_value_5 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[60]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[65]);
         tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
@@ -4103,11 +4346,11 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_value_1 = mod_consts[61];
+        tmp_left_value_1 = mod_consts[66];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[62];
-        tmp_getattr_default_1 = mod_consts[63];
+        tmp_getattr_attr_1 = mod_consts[67];
+        tmp_getattr_default_1 = mod_consts[68];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4128,7 +4371,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
             tmp_expression_value_6 = BUILTIN_TYPE1(tmp_type_arg_2);
             assert(!(tmp_expression_value_6 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[62]);
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[67]);
             Py_DECREF(tmp_expression_value_6);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -4190,32 +4433,32 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         }
         // Tried code:
         // Tried code:
+        tmp_dictset_value = mod_consts[69];
+        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[70], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 4;
+
+            goto try_except_handler_3;
+        }
+        tmp_dictset_value = mod_consts[71];
+        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[55], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 4;
+
+            goto try_except_handler_3;
+        }
         tmp_dictset_value = mod_consts[64];
-        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[65], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 4;
-
-            goto try_except_handler_3;
-        }
-        tmp_dictset_value = mod_consts[66];
-        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[50], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 4;
-
-            goto try_except_handler_3;
-        }
-        tmp_dictset_value = mod_consts[59];
-        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[67], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[72], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -4253,7 +4496,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         assert(Py_REFCNT(frame_37712df1050564e6c108fc00928e99ab_2) == 2); // Frame stack
 
         // Framed code:
-        tmp_dictset_value = mod_consts[68];
+        tmp_dictset_value = mod_consts[73];
         tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[12], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -4265,7 +4508,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
-        tmp_dictset_value = mod_consts[69];
+        tmp_dictset_value = mod_consts[74];
         tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[23], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -4277,7 +4520,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
-        tmp_dictset_value = mod_consts[70];
+        tmp_dictset_value = mod_consts[75];
         tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[27], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -4309,7 +4552,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
 
         tmp_dictset_value = MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__2_onToggleAvg();
 
-        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[72], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[77], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -4325,7 +4568,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
 
         tmp_dictset_value = MAKE_FUNCTION_Graphing$GraphNavToolbar$$$function__3_onToggleRaw();
 
-        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[74], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[79], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -4485,7 +4728,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         branch_yes_4:;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[80], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_Graphing$GraphNavToolbar$$$class__1_CustomNavToolbar_4, mod_consts[85], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -4505,7 +4748,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
             PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
             tmp_called_value_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_4 = mod_consts[59];
+            tmp_tuple_element_4 = mod_consts[64];
             tmp_args_value_2 = PyTuple_New(3);
             PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -4596,7 +4839,7 @@ PyObject *modulecode_Graphing$GraphNavToolbar(PyObject *module, struct Nuitka_Me
         exception_lineno = 4;
         goto try_except_handler_1;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_Graphing$GraphNavToolbar, (Nuitka_StringObject *)mod_consts[64], tmp_assign_source_11);
     }
     goto try_end_1;
     // Exception handler code:

@@ -1,6 +1,6 @@
 # The data structure to hold the test data
 from HelperFunctions import getOutlierLimits, averageTemperatures, cleanValues
-from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, thermocouplePlacements, pressurePlacements
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_OUTLIER_FACTOR, thermocouplePlacements, pressurePlacements
 from pubsub import pub
 
 
@@ -65,11 +65,13 @@ class TestData():
         # Hold the numeric values sorted into specific arrays based on role
         # To be used by the DataGraph object for plotting purposes
         # NOTE: These will be appended to and so hold the entirety of the recorded data
-        self.timeData = None # Elapsed time (x-axis)
-        self.furnaceRawData = None # Values for TC's in furnace
-        self.unexposedRawData = None # Values for TC's in unexposed
-        self.furnaceAvgData = None # The historical list of averages. To be used in AUC and for passing to the graph
-        self.unexposedAvgData = None # The historical list of averages. 
+        self.timeData = [] # Elapsed time (x-axis)
+        self.furnaceRawData = [] # Values for TC's in furnace
+        self.unexposedRawData = [] # Values for TC's in unexposed
+        self.furnaceAvgData = [] # The historical list of averages. To be used in AUC and for passing to the graph
+        self.unexposedAvgData = [] # The historical list of averages. 
+        self.furnaceUprLimitData = []
+        self.furnaceLwrLimitData = []
 
         # TODO these can be rolled up into one list.
         self.ch1PressureData = []
@@ -126,11 +128,11 @@ class TestData():
     #============================================================
     def setTimeData(self, time):
         # time should be in minutes, decimal format
-        if self.timeData is None:
-            self.timeData = [time]
-        else:
-            self.timeData.append(time)
-
+        # if not self.timeData:
+        #     self.timeData.append(time)
+        # else:
+        #     self.timeData.append(time)
+        self.timeData.append(time)
 
 
 
@@ -146,11 +148,12 @@ class TestData():
         # Get the limits for the furnace to be used next time around
         # These should not include ignored channels
         self.calcFurnaceLimits(furnaceValuesForAvg)
-        if self.furnaceAvgData is None:
-            self.furnaceAvgData = [self.avgFurnace]
+
+        if not self.furnaceAvgData:
+            self.furnaceAvgData.append(self.avgFurnace)
         else:
             self.furnaceAvgData.append(self.avgFurnace)  # Save the datum to the list.
-            self.calcAverageAUC(self.avgFurnace) # Can't start calculating the AUC unless there is at least one point
+            #self.calcAverageAUC(self.avgFurnace) # Can't start calculating the AUC unless there is at least one point
 
         self.setTargetTempCurve(self.testSettings.calculateTargetCurve(elapsedTime))
         self.targetDelta = self.avgFurnace - self.getTargetTempCurve()
@@ -168,10 +171,11 @@ class TestData():
             rawFurnaceNumeric.append(value["numeric"])
 
         # Check if this hadn't been initialised yet.
-        if self.furnaceRawData is None:
-            self.furnaceRawData = [rawFurnaceNumeric]
-        else:
-            self.furnaceRawData.append(rawFurnaceNumeric) # Pass the individual TC's
+        # if self.furnaceRawData:
+        #     self.furnaceRawData.append(rawFurnaceNumeric) # Pass the individual TC's
+        # else:
+        #     self.furnaceRawData.append(rawFurnaceNumeric)
+        self.furnaceRawData.append(rawFurnaceNumeric)
 
 
     def setTargetTempCurve(self, value):
@@ -179,7 +183,7 @@ class TestData():
         Appends the latest target temperature to the curve
         """
         self.targetTempCurveData.append(value) # keep the running data for AUC calc.
-        self.calcTargetAUC() # Calc the AUC
+        #self.calcTargetAUC() # Calc the AUC Taking this out because it may be throwing an error now that I've expanded the delta T to match the save rate
 
 
     def getTargetTempCurve(self):
@@ -189,30 +193,25 @@ class TestData():
         return self.targetTempCurveData[-1]
 
 
-    def calcAverageAUC(self, avgFurnace):
+    def calcAverageAUC(self):
         """
         Calculates the average AUC
         """
-        # BUGBUGBUG This assumes that the time delta is constant. Need to not do that.
+        if len(self.furnaceAvgData) < self.testSettings.saveRate_sec: return
+
+        # BUG BUG BUG This assumes that the time delta is a constant one second between captures. Need to not do that.
         self.avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.furnaceAvgData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) / 60.0) + self.avgAUC
-        # print("<<<",self.avgAUC)
-        # avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
-        #                         (self.furnaceAvgData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (1/ 60.0)) + self.avgAUC
-        # print(">>>",avgAUC)
-        #avgFurnaceArr = np.array(self.furnaceAvgData)
-        #avgFurnaceAUC = np.trapz(avgFurnaceArr, dx=1/60)
+                                (self.furnaceAvgData[-self.testSettings.saveRate_sec] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.avgAUC
 
 
     def calcTargetAUC(self):
         """
         Calculate the target Area Under Curve
         """
+        if len(self.targetTempCurveData) < self.testSettings.saveRate_sec: return
+
         self.targetAUC = ((((self.targetTempCurveData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.targetTempCurveData[-2] - self.testSettings.getTargetTempOffset()) ) / 2.0) / 60.0) + self.targetAUC # the 60 is the culprit.
-        
-        #targetTempCurveArr = np.array(self.targetTempCurveData)
-        #targetTempCurveAUC2 = np.trapz(targetTempCurveArr, dx=1/60) # TODO save this for outside the function
+                                (self.targetTempCurveData[-self.testSettings.saveRate_sec] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.targetAUC
 
 
     def captureThreeQuarter(self):
@@ -227,6 +226,7 @@ class TestData():
         """
         Calculate the AUC percentage (avg-req)/req
         """
+        if self.targetAUC == 0.0: return 0.0
         return ((self.avgAUC - self.targetAUC) / self.targetAUC) * 100.0
 
 
@@ -246,11 +246,11 @@ class TestData():
         # These should not include ignored channels
         self.calcUnexposedLimits(unexposedValuesForAvg)
 
-        if self.unexposedAvgData is None:
-            self.unexposedAvgData = [self.avgUnexposed]
-        else:
-            self.unexposedAvgData.append(self.avgUnexposed)  # Save the datum to the list.
-
+        # if not self.unexposedAvgData:
+        #     self.unexposedAvgData.append(self.avgUnexposed)
+        # else:
+        #     self.unexposedAvgData.append(self.avgUnexposed)  # Save the datum to the list.
+        self.unexposedAvgData.append(self.avgUnexposed)
 
     def setRawUnexposed(self):
         """
@@ -271,8 +271,7 @@ class TestData():
         #     self.unexposedRawData.append(rawUnexposedNumeric) # Pass the individual TC's
 
         # Each row corresponds to a channel and all the data it has recorded.
-        if self.unexposedRawData is None:
-            self.unexposedRawData = []
+        if not self.unexposedRawData:
             for value in self.unexposedValues.values():
                 self.unexposedRawData.append([value["numeric"]])
         else:
@@ -334,15 +333,22 @@ class TestData():
         Given a list of values, calculate the upper and lower limits 
         beyond which a datapoint is considered an outlier.
         """
-        self.furnaceLwr, self.furnaceUpr = getOutlierLimits(cleanValues(values), 3)
+        self.furnaceLwr, self.furnaceUpr = getOutlierLimits(cleanValues(values), DEFAULT_OUTLIER_FACTOR )
         #print("FURNACE - LWR={0:3.2f}    UPR={1:3.2f}".format(self.furnaceLwr,self.furnaceUpr))
+        # if not self.furnaceUprLimitData:
+        #     self.furnaceUprLimitData.append(self.furnaceUpr)
+        # else:
+        #     self.furnaceUprLimitData.append(self.furnaceUpr)
+        self.furnaceUprLimitData.append(self.furnaceUpr)
+        self.furnaceLwrLimitData.append(self.furnaceLwr)
+
 
     def calcUnexposedLimits(self, values):
         """
         Given a list of values, calculate the upper and lower limits 
         beyond which a datapoint is considered an outlier.
         """
-        self.unexpLwr, self.unexpUpr = getOutlierLimits(cleanValues(values), 3)
+        self.unexpLwr, self.unexpUpr = getOutlierLimits(cleanValues(values), DEFAULT_OUTLIER_FACTOR )
         #print("UNEXP - LWR={0:3.2f}    UPR={1:3.2f}".format(self.unexpLwr,self.unexpUpr))
 
     def isOutsideFurnaceLimits(self, value):
