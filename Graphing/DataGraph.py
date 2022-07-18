@@ -1,7 +1,7 @@
 from types import SimpleNamespace
 import wx
 from math import ceil
-from Enumerations import GRAPH_AVG_LINE_WIDTH, GRAPH_DEFAULT_LINE_WIDTH, GRAPH_LIMITS_LINE_WIDTH, GRAPH_TARGET_LINE_WIDTH, UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
+from Enumerations import DEFAULT_UNEXPOSED_WARN_THRESH, GRAPH_AVG_LINE_WIDTH, GRAPH_DEFAULT_LINE_WIDTH, GRAPH_LIMITS_LINE_WIDTH, GRAPH_TARGET_LINE_WIDTH, UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
 from Graphing.BaseGraph import BaseGraph, PlotSettings, AxesSettings
 
 
@@ -65,7 +65,7 @@ class UnexposedGraph(BaseGraph):
                 zorder=2))
 
         
-        self.initPlotLines([self.unexpAvgSettings, self.failureThreshSettings]+self.unexpRawSettings)
+        self.initPlotLines([self.failureThreshSettings, self.unexpAvgSettings] + self.unexpRawSettings)
 
 
     def updateUnexposedData(self, timeData, avgData, rawData, blit=False):
@@ -74,7 +74,7 @@ class UnexposedGraph(BaseGraph):
         This should be called at the test update rate, which should be 1 second.
         """
         # Do the Unexposed average data
-        self.graphCanvas.updateData(timeData, avgData, plotIndex=0, blit=blit)
+        self.graphCanvas.updateData(timeData, avgData, plotIndex=1, blit=blit)
         
         # Trying out just the avg for now until I get the update sorted.
         for i in range(len(self.controller.selectedUnexposedChannels)):
@@ -106,16 +106,16 @@ class UnexposedGraph(BaseGraph):
         """
         Set the test length.
         """
-        super().setTestTimeMinutes(minutes)
 
-        if self.graphCanvas.graphPlots[1].points:
-            threshold = self.graphCanvas.graphPlots[1].points[0][1]
+        if len(self.graphCanvas.graphPlots[1].points) == 0:
+            threshold = DEFAULT_UNEXPOSED_WARN_THRESH
         else:
-            threshold = 20
+            threshold = self.graphCanvas.graphPlots[1].points[0][1]
 
         if threshold > 0:
             self.updateUnexposedThreshold(threshold) # Continue on the threshold line
 
+        super().setTestTimeMinutes(minutes)
 
 
 
@@ -148,7 +148,7 @@ class FurnaceGraph(BaseGraph):
         # Put together a special data object to pack together the different
         # plotlines that this graph object needs
         if self.controller.testData:
-            dataBlocks = [self.controller.testData.furnaceAvgData, self.controller.testData.furnaceRawData]
+            dataBlocks = [None, self.controller.testData.furnaceAvgData, self.controller.testData.furnaceRawData] # TODO The target right now is left out since that array isn't held in the test data
             self.testData = SimpleNamespace(timeData=self.controller.testData.timeData, data=dataBlocks)
 
         # The target temperature
@@ -208,12 +208,12 @@ class FurnaceGraph(BaseGraph):
         # TODO This likely doesn't need to be a for loop or at least look at the number of columns rather than referencing the controller.
 
         for i in range(len(self.controller.selectedFurnaceChannels)):
-
-            columnVector = [row[i] for row in rawData] #rawData[:, i] # BUG TODO Sometimes get error "IndexError: too many indices for array" I think sometimes not enough. Seems to happen when restarting after a crash because of no communication with phidget
+            columnVector = [row[i] for row in rawData]
             self.graphCanvas.updateData(timeData, columnVector, plotIndex=i+1, blit=blit) # Give the plot the updated data
 
         # TODO just trying out graphing the outlier limits
         #self.graphCanvas.updateData(timeData, self.controller.testData.furnaceUprLimitData, plotIndex=len(self.controller.selectedFurnaceChannels)+2, blit=blit) # Give the plot the updated data)
+
 
     def createTargetCurveArray(self, testLengthMinutes):
         """
@@ -235,10 +235,10 @@ class FurnaceGraph(BaseGraph):
         """
         Set the test length.
         """
-        super().setTestTimeMinutes(minutes)
 
         self.createTargetCurveArray(minutes)
-        self.graphCanvas.drawGraph() # Update the drawn plot
+        
+        super().setTestTimeMinutes(minutes)
 
 
 

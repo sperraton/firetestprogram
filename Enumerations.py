@@ -2,7 +2,7 @@ from email.policy import default
 from enum import Enum
 #from matplotlib import cm
 
-VERSION_NUM_STRING = "1.43"
+VERSION_NUM_STRING = "1.44"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
@@ -142,6 +142,7 @@ DEFAULT_THERMOCOUPLE_DEC_PLACES = 0
 MAX_AFTERBURNER_WARN_THRESH = 5000.0
 MIN_AFTERBURNER_WARN_THRESH = 0.0
 MAX_UNEXPOSED_WARN_THRESH = 5000.0
+DEFAULT_UNEXPOSED_WARN_THRESH = 20
 MIN_UNEXPOSED_WARN_THRESH = 0.0
 
 DEFAULT_OUTLIER_FACTOR = 3

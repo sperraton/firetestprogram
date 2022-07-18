@@ -202,7 +202,8 @@ class Controller():
         Used for testing purposes
         """
         for channelIdx in self.selectedUnexposedChannels:
-            num = random.uniform(1,9)*channelIdx
+            #num = random.uniform(10,90)*((channelIdx/2)+1)
+            num = (channelIdx+10)*self.elapsedTime
             pub.sendMessage("channel.valueChange",
                                 sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
@@ -210,7 +211,8 @@ class Controller():
                                 valueNumeric=num,
                                 valueFormatted="{0:.0f}".format(num))
         for channelIdx in self.selectedFurnaceChannels:
-            num = random.uniform(10,90)
+            #num = random.uniform(10,90)*((channelIdx/2)+1)
+            num = channelIdx*self.elapsedTime*0.1
             pub.sendMessage("channel.valueChange",
                                 sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
@@ -218,7 +220,8 @@ class Controller():
                                 valueNumeric=num,
                                 valueFormatted="{0:.0f}".format(num))
         for channelIdx in self.selectedPressureChannels:
-            num = random.uniform(10,90)
+            #num = random.uniform(10,90)*((channelIdx/2)+1)
+            num = channelIdx*self.elapsedTime*0.1
             pub.sendMessage("channel.valueChange",
                                 sensorType="PRESS",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
@@ -386,7 +389,7 @@ class Controller():
             pub.sendMessage("indicator.update",
                         indicator="AUC",
                         lblValue="% AUC: {0:3.1f}".format(self.testData.getPercentAUC()))
-                        
+
         # Build the currentRow that gets passed to the grid and the logger
         # ============================================================
         self.buildCurrentRow()

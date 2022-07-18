@@ -89,15 +89,6 @@ class TestSettings:
         """
         Build the preamble info to write into the output .csv
         """
-        # self.fileHeader = "CLIENT:," + self.client + "\n"
-        # self.fileHeader += "PROJECT #:," + self.projectNum + "\n"
-        # self.fileHeader += "TEST #:," + self.testNum + "\n"
-        # self.fileHeader += "DATE:," + self.date + "\n"
-        # self.fileHeader += "TEST DURATION:," + str(self.testTimeMinutes) + " minutes\n"
-        # self.fileHeader += "REQUIRED CURVE:," + self.targetCurve + "\n"
-        # self.fileHeader += "TEMPERATURE UNITS:, " + self.temperatureUnits + "\n"
-        # self.fileHeader += "PRESSURE UNITS:, " + self.pressureUnits + "\n"
-        # self.fileHeader += "SENSOR CALIBRATION CONFIRMED:," + self.isCalibrated + "\n"
         self.fileHeader = []
         self.fileHeader.append(["CLIENT:", self.client])
         self.fileHeader.append(["PROJECT #:", self.projectNum])

@@ -63,9 +63,9 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
-        self.noConnect = False # Used to set the DAQ to not connect. Random data generated. For debugging purposes
-        self.testTimeMinutes = 60 # Default
-
+        self.noConnect = True # Used to set the DAQ to not connect. Random data generated. For debugging purposes
+        self.testTimeMinutes = DEFAULT_TEST_TIME
+        
         # self.warnToggle = True
         self.detachedWarn = True # Stop additional triggers of the warn dialog
         self.channelErrorWarn = False # Stop additional triggers of the warn dialog

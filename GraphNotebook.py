@@ -77,7 +77,7 @@ class GraphNotebook(wx.Notebook):
 class MainGraphPanel(wx.Panel):
 
     def __init__(self, parent, frame):
-        wx.Panel.__init__(self, parent)
+        wx.Panel.__init__(self, parent, name="MainGraphPanel")
         
         self.parent = parent
         self.frame = frame
@@ -221,6 +221,7 @@ class MainGraphPanel(wx.Panel):
 ################################################################################
 
     def updateGraphData(self, testData):
+
         self.furnaceTempGraph.updateFurnaceData(timeData=testData.timeData,
                         avgData=testData.furnaceAvgData,
                         rawData=testData.furnaceRawData,

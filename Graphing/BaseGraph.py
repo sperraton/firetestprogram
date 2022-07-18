@@ -208,6 +208,14 @@ class GraphCanvas(PlotCanvas):
         self.graphPlotSettings.clear()
         self.addToGraphPlotSettings(settings)
         
+    def updateDataAndDraw(self, timeData, yData, plotIndex, blit=False):
+        """"
+        Convenience function.
+        """
+
+        self.updateData(timeData, yData, plotIndex, blit=blit)
+        self.drawGraph()
+
 
     def updateData(self, timeData, yData, plotIndex, blit=False): # TODO Later this may be a dict where you pass the label as key
         """
@@ -225,7 +233,7 @@ class GraphCanvas(PlotCanvas):
                 self.graphAxesSettings.ymax = maxYvalue + (GRAPH_VERT_PADDING*maxYvalue)
                 # TODO trigger a graph redraw here
                 self.parent.reDrawGraph()
-
+            # Check if we are to update the graph with all the data given or just the last 2 points
             if blit and (len(timeData) > 1):
                 temp = list(zip(timeData[-2:], yData[-2:])) # Taking only the last two points
             else:
@@ -236,7 +244,7 @@ class GraphCanvas(PlotCanvas):
 
         except Exception as e:
 
-            print(f"{self.GetLabel()} channel {plotIndex} updateData failed.")
+            print(f"{self.graphAxesSettings.title} channel {plotIndex} updateData failed.")
             print(e)
             # we need to get back on track. Check the sizes of all the arrays. 
 
@@ -252,6 +260,7 @@ class GraphCanvas(PlotCanvas):
         if self.enableZoom: #!!! DEBUGGING !!!
             #self.Redraw()
             minY, maxY = self.yCurrentRange
+            minX, maxX = self.xCurrentRange
 
             # Ugly hack just to make the thing draw while zoomed. TODO
             if self.parent.toggle:
@@ -261,6 +270,12 @@ class GraphCanvas(PlotCanvas):
                 maxY += SMALL
                 self.parent.toggle = True
 
+            if self.last_draw is not None:
+                self.Draw(self.gc,
+                            xAxis=(minX, maxX),
+                            yAxis=(minY, maxY),
+                            dc=None,
+                            blit=True)
         else:
             self.Draw(self.gc, 
                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
@@ -499,7 +514,7 @@ class GraphCanvas(PlotCanvas):
 
                 self.last_PointLabel = None  # reset pointLabel
                 
-                self.parent.reloadData() #.parent.Parent.loadAllGraphData() # Again this is an ugly hack to be taken out
+                self.parent.reloadData()  # Again this is an ugly hack to be taken out
 
                 if self.last_draw is not None:
                     self._Draw(self.last_draw[0],
@@ -515,7 +530,6 @@ class GraphCanvas(PlotCanvas):
             self.SetCursor(self.HandCursor)
             if self.canvas.HasCapture():
                 self.canvas.ReleaseMouse()
-
 
 
     def clearGraph(self):
@@ -545,8 +559,11 @@ class GraphCanvas(PlotCanvas):
         """
         Toggles the legend visibility
         """
+        #if any(self.parent.testData.data):
+        if (self.parent.testData is not None) and (any(self.parent.testData.data)):
+            self.parent.reloadData()
+            #self.drawGraph()
         self.enableLegend = state
-        self.drawGraph()
 
 
     def setZoomState(self, state):
@@ -554,6 +571,7 @@ class GraphCanvas(PlotCanvas):
         Toggles the Zoom state
         """
         self.enableZoom = state
+        self.showScrollbars = state
         #self.drawFullDataFlag = True # TODO may need to set this on the exiting of zoom enabled state
 
 
@@ -562,6 +580,7 @@ class GraphCanvas(PlotCanvas):
         Sets the drag state
         """
         self.enableDrag = state
+
 
     def homeGraph(self):
         """
@@ -668,6 +687,7 @@ class GraphCanvas(PlotCanvas):
             o = graphics[i]
             s = (i % LEGEND_NUM_ROWS) * lineHeight
             offset = col*legendBoxWH[0]/(self.numCols-0.25)
+            offset += 2
 
             # What type of object?
             if isinstance(o, PolyMarker) or isinstance(o, PolyBoxPlot):
@@ -695,6 +715,15 @@ class GraphCanvas(PlotCanvas):
             dc.DrawText(o.getLegend(), pnt[0], pnt[1])
 
         dc.SetFont(self._getFont(self._fontSizeAxis))  # reset
+
+
+
+
+
+
+
+
+
 
 ###############################################################################
 #
@@ -753,23 +782,27 @@ class BaseGraph(wx.Panel):
         """
         Reloads the line objects with all the saved test data
         """
-        if self.graphCanvas.graphPlots:
-            # For all the line objects, reset the data
-            # God this is a mess. Relies too much on things being in order.
-            i = 0
-            #for plotline in self.graphCanvas.graphPlots:
-            for block in self.testData.data:
-                if isinstance(block[0], list):
-                    for j in range(len(block[0])):
-                        columnVector = [row[j] for row in block]
-                    #for row in block:
-                        self.graphCanvas.updateData(self.testData.timeData, columnVector, plotIndex=i)
-                        i+=1
-                else:
-                    self.graphCanvas.updateData(self.testData.timeData, block, plotIndex=i)
-                    i+=1
-                #yData = [row[i] if isinstance(row, list) else row for row in block]
-                
+        # if self.graphCanvas.graphPlots:
+        #     # For all the line objects, reset the data
+        #     # God this is a mess. Relies too much on things being in order.
+        #     i = 0
+        #     for block in self.testData.data:
+        #         if block is None:
+        #             i += 1
+        #             continue
+        #         if any(block) and isinstance(block[0], list):
+        #             for j in range(len(block[0])):
+        #                 columnVector = [row[j] for row in block]
+        #                 self.graphCanvas.updateData(self.testData.timeData, columnVector, plotIndex=i)
+        #                 i+=1
+        #         else:
+        #             self.graphCanvas.updateData(self.testData.timeData, block, plotIndex=i)
+        #             i+=1
+
+        # self.reDrawGraph()
+        
+        parent = self.parent
+        while parent.name is not "MainGraphPanel": parent=parent.parent
 
 
     def createToolbar(self):
@@ -785,8 +818,11 @@ class BaseGraph(wx.Panel):
         Set the test length.
         """
         self.testTimeMinutes = minutes
+        # Since drawGraph is called in the next func, then make sure we have all the data
+        if (self.testData is not None) and any(self.testData.data):
+            self.reloadData()
         self.graphCanvas.scaleGraphXaxis(minutes)
-        
+        #self.graphCanvas.drawGraph() # Update the drawn plot
         
 
     def createColourList(self, numColours):
@@ -798,7 +834,7 @@ class BaseGraph(wx.Panel):
         colourList = []
 
         for i in range(numColours):
-            temp = colorsys.hls_to_rgb(i/(numColours-1), 0.45, 1.0)
+            temp = colorsys.hls_to_rgb(i/(numColours-1), 0.35, 0.7)
             colour = tuple(col * 255 for col in temp)
             colourList.append(wx.Colour(colour))
 
