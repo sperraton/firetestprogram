@@ -201,9 +201,10 @@ class Controller():
         """
         Used for testing purposes
         """
+        scale = 0.1
         for channelIdx in self.selectedUnexposedChannels:
             #num = random.uniform(10,90)*((channelIdx/2)+1)
-            num = (channelIdx+10)*self.elapsedTime
+            num = (channelIdx+1)*round(self.elapsedTime)*scale
             pub.sendMessage("channel.valueChange",
                                 sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
@@ -212,7 +213,7 @@ class Controller():
                                 valueFormatted="{0:.0f}".format(num))
         for channelIdx in self.selectedFurnaceChannels:
             #num = random.uniform(10,90)*((channelIdx/2)+1)
-            num = channelIdx*self.elapsedTime*0.1
+            num = (channelIdx+1)*round(self.elapsedTime)*scale
             pub.sendMessage("channel.valueChange",
                                 sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
@@ -221,7 +222,7 @@ class Controller():
                                 valueFormatted="{0:.0f}".format(num))
         for channelIdx in self.selectedPressureChannels:
             #num = random.uniform(10,90)*((channelIdx/2)+1)
-            num = channelIdx*self.elapsedTime*0.1
+            num = (channelIdx+1)*round(self.elapsedTime)*scale
             pub.sendMessage("channel.valueChange",
                                 sensorType="PRESS",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
@@ -382,13 +383,18 @@ class Controller():
         self.testData.setAvgFurnace(furnaceValuesForAvg, self.elapsedTime)
         self.testData.setAvgUnexposed(unexposedValuesForAvg)
 
-        # Calc the AUC at the save rate
+        # Calc the AUC at the save rate and update rate
+        # ============================================================
+        self.testData.calcAverageAUCdataUpdateRate()
+        self.testData.calcTargetAUCdataUpdateRate()
+
         if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0:
-            self.testData.calcAverageAUC()#self.avgFurnace) # Can't start calculating the AUC unless there is at least one point
+            self.testData.calcAverageAUC() # Can't start calculating the AUC unless there is at least one point
             self.testData.calcTargetAUC()
-            pub.sendMessage("indicator.update",
-                        indicator="AUC",
-                        lblValue="% AUC: {0:3.1f}".format(self.testData.getPercentAUC()))
+
+        pub.sendMessage("indicator.update",
+                    indicator="AUC",
+                    lblValue="%AUC: {0:3.1f}".format(self.testData.getPercentAUC()) + " \ %AUC (sec.): {0:3.1f}".format(self.testData.getPercentAUCdataUpdateRate()))
 
         # Build the currentRow that gets passed to the grid and the logger
         # ============================================================

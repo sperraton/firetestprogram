@@ -2,7 +2,7 @@ from email.policy import default
 from enum import Enum
 #from matplotlib import cm
 
-VERSION_NUM_STRING = "1.44"
+VERSION_NUM_STRING = "1.45"
 
 def enum(**named_values):
     return type("Enum", (), named_values)

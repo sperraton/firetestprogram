@@ -1,6 +1,6 @@
 # The data structure to hold the test data
 from HelperFunctions import getOutlierLimits, averageTemperatures, cleanValues
-from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DEFAULT_OUTLIER_FACTOR, thermocouplePlacements, pressurePlacements
+from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DATA_UPDATE_RATE, DEFAULT_OUTLIER_FACTOR, thermocouplePlacements, pressurePlacements
 from pubsub import pub
 
 
@@ -47,8 +47,10 @@ class TestData():
         self.avgFurnace = 0.0 # The current average of all included furnace TC's
         self.avgUnexposed = 0.0 # The current average of all included unexposed TC's
         self.avgAUC = 0.0 # The most recently calculated Area Under Curve of the furnace average
+        self.avgAUCdataUpdateRate = 0.0
         self.targetAUC = 0.0 # The most recently calculate AUC for the test target curve
-        
+        self.targetAUCdataUpdateRate = 0.0
+
         self.targetTempCurveData = [0] # The target temperature curve
         self.targetDelta = 0.0 # The difference between the furnace average and the target
 
@@ -128,10 +130,6 @@ class TestData():
     #============================================================
     def setTimeData(self, time):
         # time should be in minutes, decimal format
-        # if not self.timeData:
-        #     self.timeData.append(time)
-        # else:
-        #     self.timeData.append(time)
         self.timeData.append(time)
 
 
@@ -167,15 +165,24 @@ class TestData():
 
         # NOTE: When this was created it was populated in channel order
         # so the values should be appended in channel order.
-        for value in self.furnaceValues.values():
-            rawFurnaceNumeric.append(value["numeric"])
+        
+        # for value in self.furnaceValues.values():
+        #     rawFurnaceNumeric.append(value["numeric"])
 
-        # Check if this hadn't been initialised yet.
-        # if self.furnaceRawData:
-        #     self.furnaceRawData.append(rawFurnaceNumeric) # Pass the individual TC's
-        # else:
-        #     self.furnaceRawData.append(rawFurnaceNumeric)
-        self.furnaceRawData.append(rawFurnaceNumeric)
+        # # Each appended row is a list channel values for that timestamp
+        # self.furnaceRawData.append(rawFurnaceNumeric)
+
+
+        # Bring in line with the unexposed so we don't have to take a column vector in the graphing and to make it easier to provide a zip list with the time data
+        if not self.furnaceRawData:
+
+            for value in self.furnaceValues.values():
+                self.furnaceRawData.append([value["numeric"]])
+
+        else:
+            
+            for i, value in enumerate(self.furnaceValues.values()):
+                self.furnaceRawData[i].append(value["numeric"]) # Add to channel's list of historical captures
 
 
     def setTargetTempCurve(self, value):
@@ -195,7 +202,7 @@ class TestData():
 
     def calcAverageAUC(self):
         """
-        Calculates the average AUC
+        Calculates the average AUC (Trapezoidal Method)
         """
         if len(self.furnaceAvgData) < self.testSettings.saveRate_sec: return
 
@@ -203,15 +210,35 @@ class TestData():
         self.avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
                                 (self.furnaceAvgData[-self.testSettings.saveRate_sec] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.avgAUC
 
+    def calcAverageAUCdataUpdateRate(self):
+        """
+        Calculates the average AUC with the delta pinned to the update rate of the data. (Trapezoidal Method)
+        """
+        if len(self.furnaceAvgData) <= DATA_UPDATE_RATE: return # Not ready to calculate yet
+
+        # BUG BUG BUG This assumes that the time delta is a constant one second between captures. Need to not do that.
+        self.avgAUCdataUpdateRate = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
+                                (self.furnaceAvgData[-DATA_UPDATE_RATE] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.avgAUCdataUpdateRate
+
 
     def calcTargetAUC(self):
         """
-        Calculate the target Area Under Curve
+        Calculate the target AUC (Trapezoidal Method)
         """
         if len(self.targetTempCurveData) < self.testSettings.saveRate_sec: return
 
         self.targetAUC = ((((self.targetTempCurveData[-1] - self.testSettings.getTargetTempOffset()) +
                                 (self.targetTempCurveData[-self.testSettings.saveRate_sec] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.targetAUC
+
+
+    def calcTargetAUCdataUpdateRate(self):
+        """
+        Calculate the target AUC with the delta pinned to the update rate of the data. (Trapezoidal Method)
+        """
+        if len(self.targetTempCurveData) < DATA_UPDATE_RATE: return
+
+        self.targetAUCdataUpdateRate = ((((self.targetTempCurveData[-1] - self.testSettings.getTargetTempOffset()) +
+                                (self.targetTempCurveData[-DATA_UPDATE_RATE] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.targetAUCdataUpdateRate
 
 
     def captureThreeQuarter(self):
@@ -230,6 +257,12 @@ class TestData():
         return ((self.avgAUC - self.targetAUC) / self.targetAUC) * 100.0
 
 
+    def getPercentAUCdataUpdateRate(self):
+        """
+        Calculate the AUC percentage (avg-req)/req
+        """
+        if self.targetAUCdataUpdateRate == 0.0: return 0.0
+        return ((self.avgAUCdataUpdateRate - self.targetAUCdataUpdateRate) / self.targetAUCdataUpdateRate) * 100.0
 
 
     # Functions concerning unexposed averages and raw
@@ -272,9 +305,12 @@ class TestData():
 
         # Each row corresponds to a channel and all the data it has recorded.
         if not self.unexposedRawData:
+
             for value in self.unexposedValues.values():
                 self.unexposedRawData.append([value["numeric"]])
+
         else:
+            
             for i, value in enumerate(self.unexposedValues.values()):
                 self.unexposedRawData[i].append(value["numeric"]) # Add to channel's list of historical captures
 

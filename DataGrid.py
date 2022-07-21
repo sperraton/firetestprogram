@@ -9,7 +9,6 @@ class DataGrid(wx.Panel):
         wx.Panel.__init__(self, parent)
         self.parent = parent
         
-        #self.isExpanded = False # Adding this attribute to keep track of state
         pub.subscribe(self.addDataRow, "dataGrid.addRow")
 
 

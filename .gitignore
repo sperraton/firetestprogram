@@ -2,3 +2,7 @@ Old Code/
 __pycache__/
 *.json
 *.pyc
+Main.build/
+Main.dist/
+Main.onefile-build/
+.vscode/

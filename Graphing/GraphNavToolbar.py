@@ -49,12 +49,12 @@ class CustomNavToolbar(wx.ToolBar):
                     "Zoom", 
                     "Zoom into select area of graph")
 
-        self.AddCheckTool(self.DRAG_ID, 
-                    "Drag", 
-                    wx.Image('./images/drag.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 
-                    wx.NullBitmap, 
-                    "Drag", 
-                    "Drag the graph view")
+        # self.AddCheckTool(self.DRAG_ID, 
+        #             "Drag", 
+        #             wx.Image('./images/drag.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 
+        #             wx.NullBitmap, 
+        #             "Drag", 
+        #             "Drag the graph view")
 
         #chkRawVisibility.SetValue = self.graph.rawDataVisible # Set to whatever the default is in the graph
         # self.Bind(wx.EVT_CHECKBOX, self.onToggleAvg, id=chkAvgVisibility.GetId())
@@ -63,7 +63,7 @@ class CustomNavToolbar(wx.ToolBar):
 
         self.Bind(wx.EVT_TOOL, self.onHome, id=self.HOME_ID)
         self.Bind(wx.EVT_TOOL, self.onToggleZoom, id=self.ZOOM_ID)
-        self.Bind(wx.EVT_TOOL, self.onToggleDrag, id=self.DRAG_ID)
+        #self.Bind(wx.EVT_TOOL, self.onToggleDrag, id=self.DRAG_ID)
 
 
     def onToggleAvg(self, event):
@@ -83,8 +83,8 @@ class CustomNavToolbar(wx.ToolBar):
         state = self.GetToolState(toolId=self.ZOOM_ID)# .GetValue()
         self.graphCanvas.setZoomState(state)
 
-        if state and self.GetToolState(toolId=self.DRAG_ID): #chkDrag.GetValue():#isChecked():
-            self.ToggleTool(self.DRAG_ID, False) #chkDrag.SetValue(False) #Can't have both on
+        # if state and self.GetToolState(toolId=self.DRAG_ID): #chkDrag.GetValue():#isChecked():
+        #     self.ToggleTool(self.DRAG_ID, False) #chkDrag.SetValue(False) #Can't have both on
             
 
     def onToggleDrag(self, event):
@@ -96,11 +96,11 @@ class CustomNavToolbar(wx.ToolBar):
 
 
     def onHome(self, event):
-        self.ToggleTool(self.DRAG_ID, False)
+        # self.ToggleTool(self.DRAG_ID, False)
         self.ToggleTool(self.ZOOM_ID, False)
         
         self.graphCanvas.homeGraph()
-
-        self.graph.parent.Parent.loadAllGraphData() # Ugly hack/code smell here. This has to be on the actual zoom
-        self.graph.reDrawGraph()
+        self.ToggleTool(self.ZOOM_ID, False)
+        self.graph.reloadData() # Ugly hack/code smell here.
+        self.graph.drawGraph()
         self.graph.parent.Refresh()

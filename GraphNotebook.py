@@ -1,10 +1,12 @@
 from re import T
 from smtplib import OLDSTYLE_AUTH
+from unicodedata import name
 import wx
 from pubsub import pub
 import os
 
-from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph, AxesSettings
+from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph
+from Graphing.AxesSettings import AxesSettings
 from DataGrid import DataGrid
 from Controller import Controller
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
@@ -84,13 +86,11 @@ class MainGraphPanel(wx.Panel):
         self.controller = self.frame.controller # Just to trick the DataGraph at the moment
 
         # Create splitter widgets
-        self.topSplitter = wx.SplitterWindow(self)
+        self.topSplitter = wx.SplitterWindow(self, name="topSplitter")
         self.topSplitter.SetInitialSize(self.GetClientSize())
-        self.subSplitter = wx.SplitterWindow(self.topSplitter) # Child of topSplitter
-
+        self.subSplitter = wx.SplitterWindow(self.topSplitter, name="subSplitter") # Child of topSplitter
         # Create the graph panels
         self.panelList = []
-
         # Make the axis title, labels, and legend
         graphAxesSettings = AxesSettings("Unexposed Temperature", 
                                         "Time (Min.)", 
@@ -199,9 +199,9 @@ class MainGraphPanel(wx.Panel):
 
         # Draw the complete data set for the graph
         self.loadAllGraphData()
-        self.furnaceTempGraph.reDrawGraph()
-        self.unexposedTempGraph.reDrawGraph()
-        self.pressureGraph.reDrawGraph()
+        self.furnaceTempGraph.drawGraph()
+        self.unexposedTempGraph.drawGraph()
+        self.pressureGraph.drawGraph()
 
         self.Layout()
         self.Refresh()
@@ -213,7 +213,7 @@ class MainGraphPanel(wx.Panel):
         """
         pub.unsubscribe(self.updateUnexposedThreshold, "unexposedGraph.threshold")
         pub.unsubscribe(self.updateGraphData, "graphData.update")
-        pub.subscribe(self.panelDblClick, "graphs.dblClick")
+        pub.unsubscribe(self.panelDblClick, "graphs.dblClick")
 
 
 ################################################################################
@@ -221,6 +221,9 @@ class MainGraphPanel(wx.Panel):
 ################################################################################
 
     def updateGraphData(self, testData):
+        """
+        This function subscribes to the published update from the controller.
+        """
 
         self.furnaceTempGraph.updateFurnaceData(timeData=testData.timeData,
                         avgData=testData.furnaceAvgData,
@@ -259,41 +262,19 @@ class MainGraphPanel(wx.Panel):
 
         except Exception:
             print("!!! Couldn't load all graph data.")
-
-    def updateFurnaceTempGraph(self, timeData, avgData, rawData):
-        """
-        Draws on the graph the new data for the Avg and the Raw furnace TC's
-        """
-        # Give the data to the graph
-        self.furnaceTempGraph.updateFurnaceData(timeData, avgData, rawData)
-        
-
-    def updateUnexposedTempGraph(self, timeData, avgData, rawData):
-        """
-        Draws on the graph the new data for the Avg and the Raw unexposed TC's
-        """
-        # Give the data to the graph
-        self.unexposedTempGraph.updateUnexposedData(timeData, avgData, rawData)
-        
+   
 
     def updateUnexposedThreshold(self, thresh):
         """
         Draws the old line on the Unexposed graph
         """
         self.unexposedTempGraph.updateUnexposedThreshold(thresh)
-        
 
-    def updatePressureGraph(self, timeData, ch3, ch2, ch1):
-        """
-        Draws on the graph the new data for the pressure sensors
-        """
-        self.pressureGraph.updatePressureData(timeData, ch3, ch2, ch1)
-        
 
     def blitAllGraphs(self):
-        self.furnaceTempGraph.blitGraph()
-        self.unexposedTempGraph.blitGraph()
-        self.pressureGraph.blitGraph()
+        self.furnaceTempGraph.drawGraph(blit=True)
+        self.unexposedTempGraph.drawGraph(blit=True)
+        self.pressureGraph.drawGraph(blit=True)
 
         #wx.PostEvent(self.topSplitter.GetEventHandler(), wx.PyCommandEvent(wx.EVT_SPLITTER_SASH_POS_CHANGED.typeId, self.topSplitter.GetId()))
         self.Refresh() # Repaint self and children
@@ -305,13 +286,8 @@ class MainGraphPanel(wx.Panel):
         # Inits the plot settings for each of the lines 
         # #and creates the line objects in the graph canvas
 
-        self.furnaceTempGraph.graphCanvas.clearGraph()
         self.furnaceTempGraph.initFurnaceTemperaturePlot() 
-
-        self.unexposedTempGraph.graphCanvas.clearGraph()
         self.unexposedTempGraph.initUnexposedTemperaturePlot()
-
-        self.pressureGraph.graphCanvas.clearGraph()
         self.pressureGraph.initPressurePlot()
 
 
@@ -326,11 +302,9 @@ class MainGraphPanel(wx.Panel):
         # self.furnaceTempGraph.createTargetCurveArray(testTime) # Recalc the target to fill up new time
 
         # Set the y-axis labels to the correct units
-        self.furnaceTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.controller.testSettings.temperatureUnits+")")
-        self.unexposedTempGraph.graphCanvas.setYlabel("Temp. (Deg. "+self.controller.testSettings.temperatureUnits+")")
-        self.pressureGraph.graphCanvas.setYlabel("Press. ("+self.controller.testSettings.pressureUnits+")")
-
-        self.pressureGraph.hideUnusedPressureSensors()
+        self.furnaceTempGraph.setYLabel(f"Temp. (Deg. {self.controller.testSettings.temperatureUnits})")
+        self.unexposedTempGraph.setYLabel(f"Temp. (Deg. {self.controller.testSettings.temperatureUnits})")
+        self.pressureGraph.setYLabel(f"Press. ({self.controller.testSettings.pressureUnits})")
 
         self.Layout()
         self.Refresh()

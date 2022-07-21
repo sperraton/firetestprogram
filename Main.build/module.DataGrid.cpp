@@ -80,23 +80,23 @@ void checkModuleConstants_DataGrid(void) {
 // The module code objects.
 static PyCodeObject *codeobj_6d720b1b5d9fa869bf8a2c55bee240f8;
 static PyCodeObject *codeobj_43a1ede14c7d11c7ef17cb135d57bc81;
-static PyCodeObject *codeobj_036232f7b3e3bd795a8f4d3ab4c22e6b;
+static PyCodeObject *codeobj_ef3658a5baff0093d92baad512a3e415;
 static PyCodeObject *codeobj_1b00d2b345aeda008698f59de1f40152;
-static PyCodeObject *codeobj_437382b03a629b4e83e55ccba2046cc9;
-static PyCodeObject *codeobj_a935a5c4c5b4d09fc2f58d9be89d39f7;
-static PyCodeObject *codeobj_04e387ee1dd89ac6d2b56410ceca175d;
-static PyCodeObject *codeobj_294ae38d5b45f116b9462d9ad32858a5;
+static PyCodeObject *codeobj_976e6769967c7a7518ece2dd91df8967;
+static PyCodeObject *codeobj_699bed766c721e92eacad4ff7af60386;
+static PyCodeObject *codeobj_b93e671c2059a4d9d732baa0a306e483;
+static PyCodeObject *codeobj_8530d7c65a40e3aa80b12d3954ae103d;
 
 static void createModuleCodeObjects(void) {
     module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[100]); CHECK_OBJECT(module_filename_obj);
     codeobj_6d720b1b5d9fa869bf8a2c55bee240f8 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[101], NULL, NULL, 0, 0, 0);
     codeobj_43a1ede14c7d11c7ef17cb135d57bc81 = MAKE_CODEOBJECT(module_filename_obj, 7, CO_NOFREE, mod_consts[82], mod_consts[102], NULL, 0, 0, 0);
-    codeobj_036232f7b3e3bd795a8f4d3ab4c22e6b = MAKE_CODEOBJECT(module_filename_obj, 107, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[97], mod_consts[103], NULL, 1, 0, 0);
+    codeobj_ef3658a5baff0093d92baad512a3e415 = MAKE_CODEOBJECT(module_filename_obj, 106, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[97], mod_consts[103], NULL, 1, 0, 0);
     codeobj_1b00d2b345aeda008698f59de1f40152 = MAKE_CODEOBJECT(module_filename_obj, 8, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[104], NULL, 2, 0, 0);
-    codeobj_437382b03a629b4e83e55ccba2046cc9 = MAKE_CODEOBJECT(module_filename_obj, 79, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[6], mod_consts[105], NULL, 2, 0, 0);
-    codeobj_a935a5c4c5b4d09fc2f58d9be89d39f7 = MAKE_CODEOBJECT(module_filename_obj, 103, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[95], mod_consts[103], NULL, 1, 0, 0);
-    codeobj_04e387ee1dd89ac6d2b56410ceca175d = MAKE_CODEOBJECT(module_filename_obj, 33, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[15], mod_consts[106], NULL, 2, 0, 0);
-    codeobj_294ae38d5b45f116b9462d9ad32858a5 = MAKE_CODEOBJECT(module_filename_obj, 16, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[90], mod_consts[107], NULL, 2, 0, 0);
+    codeobj_976e6769967c7a7518ece2dd91df8967 = MAKE_CODEOBJECT(module_filename_obj, 78, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[6], mod_consts[105], NULL, 2, 0, 0);
+    codeobj_699bed766c721e92eacad4ff7af60386 = MAKE_CODEOBJECT(module_filename_obj, 102, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[95], mod_consts[103], NULL, 1, 0, 0);
+    codeobj_b93e671c2059a4d9d732baa0a306e483 = MAKE_CODEOBJECT(module_filename_obj, 32, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[15], mod_consts[106], NULL, 2, 0, 0);
+    codeobj_8530d7c65a40e3aa80b12d3954ae103d = MAKE_CODEOBJECT(module_filename_obj, 15, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[90], mod_consts[107], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -268,7 +268,7 @@ static PyObject *impl_DataGrid$$$function__1___init__(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 13;
+            exception_lineno = 12;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -279,7 +279,7 @@ static PyObject *impl_DataGrid$$$function__1___init__(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 13;
+            exception_lineno = 12;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -292,12 +292,12 @@ static PyObject *impl_DataGrid$$$function__1___init__(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 13;
+            exception_lineno = 12;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         tmp_args_element_value_4 = mod_consts[7];
-        frame_1b00d2b345aeda008698f59de1f40152->m_frame.f_lineno = 13;
+        frame_1b00d2b345aeda008698f59de1f40152->m_frame.f_lineno = 12;
         {
             PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
             tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
@@ -311,7 +311,7 @@ static PyObject *impl_DataGrid$$$function__1___init__(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 13;
+            exception_lineno = 12;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -408,7 +408,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_header = python_pars[1];
-    struct Nuitka_FrameObject *frame_294ae38d5b45f116b9462d9ad32858a5;
+    struct Nuitka_FrameObject *frame_8530d7c65a40e3aa80b12d3954ae103d;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -416,35 +416,35 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_294ae38d5b45f116b9462d9ad32858a5 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_8530d7c65a40e3aa80b12d3954ae103d = NULL;
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_294ae38d5b45f116b9462d9ad32858a5)) {
-        Py_XDECREF(cache_frame_294ae38d5b45f116b9462d9ad32858a5);
+    if (isFrameUnusable(cache_frame_8530d7c65a40e3aa80b12d3954ae103d)) {
+        Py_XDECREF(cache_frame_8530d7c65a40e3aa80b12d3954ae103d);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_294ae38d5b45f116b9462d9ad32858a5 == NULL) {
+        if (cache_frame_8530d7c65a40e3aa80b12d3954ae103d == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_294ae38d5b45f116b9462d9ad32858a5 = MAKE_FUNCTION_FRAME(codeobj_294ae38d5b45f116b9462d9ad32858a5, module_DataGrid, sizeof(void *)+sizeof(void *));
+        cache_frame_8530d7c65a40e3aa80b12d3954ae103d = MAKE_FUNCTION_FRAME(codeobj_8530d7c65a40e3aa80b12d3954ae103d, module_DataGrid, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_294ae38d5b45f116b9462d9ad32858a5->m_type_description == NULL);
-    frame_294ae38d5b45f116b9462d9ad32858a5 = cache_frame_294ae38d5b45f116b9462d9ad32858a5;
+    assert(cache_frame_8530d7c65a40e3aa80b12d3954ae103d->m_type_description == NULL);
+    frame_8530d7c65a40e3aa80b12d3954ae103d = cache_frame_8530d7c65a40e3aa80b12d3954ae103d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_294ae38d5b45f116b9462d9ad32858a5);
+    pushFrameStack(frame_8530d7c65a40e3aa80b12d3954ae103d);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_294ae38d5b45f116b9462d9ad32858a5) == 2); // Frame stack
+    assert(Py_REFCNT(frame_8530d7c65a40e3aa80b12d3954ae103d) == 2); // Frame stack
 
     // Framed code:
     {
@@ -466,7 +466,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 19;
+            exception_lineno = 18;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -477,14 +477,14 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 19;
+            exception_lineno = 18;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
         tmp_args_element_value_1 = par_self;
         tmp_args_element_value_2 = mod_consts[10];
-        frame_294ae38d5b45f116b9462d9ad32858a5->m_frame.f_lineno = 19;
+        frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame.f_lineno = 18;
         {
             PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assattr_value_1 = CALL_METHOD_WITH_ARGS2(
@@ -501,7 +501,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 19;
+            exception_lineno = 18;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -515,7 +515,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 19;
+            exception_lineno = 18;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -537,7 +537,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 20;
+            exception_lineno = 19;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -549,7 +549,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 20;
+            exception_lineno = 19;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -563,11 +563,11 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 20;
+            exception_lineno = 19;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_294ae38d5b45f116b9462d9ad32858a5->m_frame.f_lineno = 20;
+        frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame.f_lineno = 19;
         {
             PyObject *kw_values[2] = {tmp_kw_call_value_0_1, tmp_kw_call_value_1_1};
 
@@ -582,7 +582,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 20;
+            exception_lineno = 19;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -596,7 +596,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_header);
         tmp_args_element_value_3 = par_header;
-        frame_294ae38d5b45f116b9462d9ad32858a5->m_frame.f_lineno = 24;
+        frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame.f_lineno = 23;
         tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[15], tmp_args_element_value_3);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -604,7 +604,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 24;
+            exception_lineno = 23;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -629,7 +629,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 27;
+            exception_lineno = 26;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -640,7 +640,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 27;
+            exception_lineno = 26;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -656,7 +656,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_2);
 
-            exception_lineno = 27;
+            exception_lineno = 26;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -667,11 +667,11 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_2);
 
-            exception_lineno = 27;
+            exception_lineno = 26;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_294ae38d5b45f116b9462d9ad32858a5->m_frame.f_lineno = 27;
+        frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame.f_lineno = 26;
         tmp_assattr_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_4);
         Py_DECREF(tmp_called_value_2);
         Py_DECREF(tmp_args_element_value_4);
@@ -681,7 +681,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 27;
+            exception_lineno = 26;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -695,7 +695,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 27;
+            exception_lineno = 26;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -719,7 +719,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 28;
+            exception_lineno = 27;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -731,7 +731,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 28;
+            exception_lineno = 27;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -744,7 +744,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_3);
 
-            exception_lineno = 28;
+            exception_lineno = 27;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -762,7 +762,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             Py_DECREF(tmp_called_value_3);
             Py_DECREF(tmp_args_element_value_5);
 
-            exception_lineno = 28;
+            exception_lineno = 27;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -774,11 +774,11 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             Py_DECREF(tmp_called_value_3);
             Py_DECREF(tmp_args_element_value_5);
 
-            exception_lineno = 28;
+            exception_lineno = 27;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_294ae38d5b45f116b9462d9ad32858a5->m_frame.f_lineno = 28;
+        frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame.f_lineno = 27;
         {
             PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7};
             tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
@@ -793,7 +793,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 28;
+            exception_lineno = 27;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -814,7 +814,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 29;
+            exception_lineno = 28;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -827,11 +827,11 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_4);
 
-            exception_lineno = 29;
+            exception_lineno = 28;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_294ae38d5b45f116b9462d9ad32858a5->m_frame.f_lineno = 29;
+        frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame.f_lineno = 28;
         tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_8);
         Py_DECREF(tmp_called_value_4);
         Py_DECREF(tmp_args_element_value_8);
@@ -841,7 +841,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 29;
+            exception_lineno = 28;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -860,11 +860,11 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 30;
+            exception_lineno = 29;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_294ae38d5b45f116b9462d9ad32858a5->m_frame.f_lineno = 30;
+        frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame.f_lineno = 29;
         tmp_call_result_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[23]);
         Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_5 == NULL) {
@@ -873,7 +873,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 30;
+            exception_lineno = 29;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -881,7 +881,7 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_294ae38d5b45f116b9462d9ad32858a5);
+    RESTORE_FRAME_EXCEPTION(frame_8530d7c65a40e3aa80b12d3954ae103d);
 #endif
 
     // Put the previous frame back on top.
@@ -892,18 +892,18 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_294ae38d5b45f116b9462d9ad32858a5);
+    RESTORE_FRAME_EXCEPTION(frame_8530d7c65a40e3aa80b12d3954ae103d);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_294ae38d5b45f116b9462d9ad32858a5, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_294ae38d5b45f116b9462d9ad32858a5->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_294ae38d5b45f116b9462d9ad32858a5, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_8530d7c65a40e3aa80b12d3954ae103d, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_8530d7c65a40e3aa80b12d3954ae103d->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_8530d7c65a40e3aa80b12d3954ae103d, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_294ae38d5b45f116b9462d9ad32858a5,
+        frame_8530d7c65a40e3aa80b12d3954ae103d,
         type_description_1,
         par_self,
         par_header
@@ -911,17 +911,17 @@ static PyObject *impl_DataGrid$$$function__2_makeGrid(struct Nuitka_FunctionObje
 
 
     // Release cached frame if used for exception.
-    if (frame_294ae38d5b45f116b9462d9ad32858a5 == cache_frame_294ae38d5b45f116b9462d9ad32858a5) {
+    if (frame_8530d7c65a40e3aa80b12d3954ae103d == cache_frame_8530d7c65a40e3aa80b12d3954ae103d) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_294ae38d5b45f116b9462d9ad32858a5);
-        cache_frame_294ae38d5b45f116b9462d9ad32858a5 = NULL;
+        Py_DECREF(cache_frame_8530d7c65a40e3aa80b12d3954ae103d);
+        cache_frame_8530d7c65a40e3aa80b12d3954ae103d = NULL;
     }
 
-    assertFrameObject(frame_294ae38d5b45f116b9462d9ad32858a5);
+    assertFrameObject(frame_8530d7c65a40e3aa80b12d3954ae103d);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -984,7 +984,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
     PyObject *tmp_tuple_unpack_2__element_1 = NULL;
     PyObject *tmp_tuple_unpack_2__element_2 = NULL;
     PyObject *tmp_tuple_unpack_2__source_iter = NULL;
-    struct Nuitka_FrameObject *frame_04e387ee1dd89ac6d2b56410ceca175d;
+    struct Nuitka_FrameObject *frame_b93e671c2059a4d9d732baa0a306e483;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -1014,7 +1014,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
     PyObject *exception_keeper_value_5;
     PyTracebackObject *exception_keeper_tb_5;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_5;
-    static struct Nuitka_FrameObject *cache_frame_04e387ee1dd89ac6d2b56410ceca175d = NULL;
+    static struct Nuitka_FrameObject *cache_frame_b93e671c2059a4d9d732baa0a306e483 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_6;
     PyObject *exception_keeper_value_6;
@@ -1023,31 +1023,31 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_04e387ee1dd89ac6d2b56410ceca175d)) {
-        Py_XDECREF(cache_frame_04e387ee1dd89ac6d2b56410ceca175d);
+    if (isFrameUnusable(cache_frame_b93e671c2059a4d9d732baa0a306e483)) {
+        Py_XDECREF(cache_frame_b93e671c2059a4d9d732baa0a306e483);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_04e387ee1dd89ac6d2b56410ceca175d == NULL) {
+        if (cache_frame_b93e671c2059a4d9d732baa0a306e483 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_04e387ee1dd89ac6d2b56410ceca175d = MAKE_FUNCTION_FRAME(codeobj_04e387ee1dd89ac6d2b56410ceca175d, module_DataGrid, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_b93e671c2059a4d9d732baa0a306e483 = MAKE_FUNCTION_FRAME(codeobj_b93e671c2059a4d9d732baa0a306e483, module_DataGrid, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_04e387ee1dd89ac6d2b56410ceca175d->m_type_description == NULL);
-    frame_04e387ee1dd89ac6d2b56410ceca175d = cache_frame_04e387ee1dd89ac6d2b56410ceca175d;
+    assert(cache_frame_b93e671c2059a4d9d732baa0a306e483->m_type_description == NULL);
+    frame_b93e671c2059a4d9d732baa0a306e483 = cache_frame_b93e671c2059a4d9d732baa0a306e483;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_04e387ee1dd89ac6d2b56410ceca175d);
+    pushFrameStack(frame_b93e671c2059a4d9d732baa0a306e483);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_04e387ee1dd89ac6d2b56410ceca175d) == 2); // Frame stack
+    assert(Py_REFCNT(frame_b93e671c2059a4d9d732baa0a306e483) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1067,7 +1067,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 39;
+            exception_lineno = 38;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1078,7 +1078,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 39;
+            exception_lineno = 38;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1102,7 +1102,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 40;
+                exception_lineno = 39;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1113,7 +1113,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 40;
+                exception_lineno = 39;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1130,7 +1130,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 41;
+                exception_lineno = 40;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1141,7 +1141,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 41;
+                exception_lineno = 40;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1158,7 +1158,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 42;
+                exception_lineno = 41;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1169,7 +1169,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 42;
+                exception_lineno = 41;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1186,7 +1186,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 43;
+                exception_lineno = 42;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1197,7 +1197,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 43;
+                exception_lineno = 42;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1214,7 +1214,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 44;
+                exception_lineno = 43;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1225,7 +1225,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 44;
+                exception_lineno = 43;
                 type_description_1 = "oooooooo";
                 goto list_build_exception_1;
             }
@@ -1248,7 +1248,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 39;
+            exception_lineno = 38;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1269,7 +1269,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 46;
+            exception_lineno = 45;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1281,7 +1281,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 46;
+            exception_lineno = 45;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1297,7 +1297,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 46;
+            exception_lineno = 45;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1308,11 +1308,11 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 46;
+            exception_lineno = 45;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 46;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 45;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_args_element_value_1);
@@ -1322,7 +1322,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 46;
+            exception_lineno = 45;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1343,7 +1343,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 48;
+            exception_lineno = 47;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1355,7 +1355,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 48;
+            exception_lineno = 47;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1371,11 +1371,11 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_2);
 
-            exception_lineno = 48;
+            exception_lineno = 47;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 48;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 47;
         tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
         Py_DECREF(tmp_called_value_2);
         if (tmp_call_result_2 == NULL) {
@@ -1384,7 +1384,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 48;
+            exception_lineno = 47;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1405,7 +1405,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         tmp_called_value_3 = (PyObject *)&PyEnum_Type;
         CHECK_OBJECT(par_header);
         tmp_args_element_value_3 = par_header;
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 51;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 50;
         tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1413,7 +1413,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 51;
+            exception_lineno = 50;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1425,7 +1425,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 51;
+            exception_lineno = 50;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
@@ -1448,7 +1448,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 type_description_1 = "oooooooo";
-                exception_lineno = 51;
+                exception_lineno = 50;
                 goto try_except_handler_2;
             }
         }
@@ -1473,7 +1473,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 51;
+            exception_lineno = 50;
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
@@ -1503,7 +1503,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
 
 
             type_description_1 = "oooooooo";
-            exception_lineno = 51;
+            exception_lineno = 50;
             goto try_except_handler_4;
         }
         {
@@ -1531,7 +1531,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
 
 
             type_description_1 = "oooooooo";
-            exception_lineno = 51;
+            exception_lineno = 50;
             goto try_except_handler_4;
         }
         {
@@ -1560,7 +1560,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                     FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
                     type_description_1 = "oooooooo";
-                    exception_lineno = 51;
+                    exception_lineno = 50;
                     goto try_except_handler_4;
                 }
             }
@@ -1574,7 +1574,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             exception_tb = NULL;
 
             type_description_1 = "oooooooo";
-            exception_lineno = 51;
+            exception_lineno = 50;
             goto try_except_handler_4;
         }
     }
@@ -1674,7 +1674,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 53;
+            exception_lineno = 52;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -1712,7 +1712,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 55;
+            exception_lineno = 54;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -1725,7 +1725,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 55;
+            exception_lineno = 54;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -1733,7 +1733,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         tmp_args_element_value_4 = var_col;
         CHECK_OBJECT(var_label);
         tmp_args_element_value_5 = var_label;
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 55;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 54;
         {
             PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
             tmp_call_result_3 = CALL_METHOD_WITH_ARGS2(
@@ -1750,7 +1750,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 55;
+            exception_lineno = 54;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -1770,7 +1770,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 56;
+            exception_lineno = 55;
             type_description_1 = "oooooooo";
             goto try_except_handler_5;
         }
@@ -1783,13 +1783,13 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 56;
+            exception_lineno = 55;
             type_description_1 = "oooooooo";
             goto try_except_handler_5;
         }
         CHECK_OBJECT(var_label);
         tmp_args_element_value_6 = var_label;
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 56;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 55;
         tmp_iter_arg_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[40], tmp_args_element_value_6);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_iter_arg_3 == NULL) {
@@ -1798,7 +1798,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 56;
+            exception_lineno = 55;
             type_description_1 = "oooooooo";
             goto try_except_handler_5;
         }
@@ -1810,7 +1810,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 56;
+            exception_lineno = 55;
             type_description_1 = "oooooooo";
             goto try_except_handler_5;
         }
@@ -1840,7 +1840,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
 
 
             type_description_1 = "oooooooo";
-            exception_lineno = 56;
+            exception_lineno = 55;
             goto try_except_handler_6;
         }
         {
@@ -1868,7 +1868,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
 
 
             type_description_1 = "oooooooo";
-            exception_lineno = 56;
+            exception_lineno = 55;
             goto try_except_handler_6;
         }
         {
@@ -1897,7 +1897,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
                     FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
                     type_description_1 = "oooooooo";
-                    exception_lineno = 56;
+                    exception_lineno = 55;
                     goto try_except_handler_6;
                 }
             }
@@ -1911,7 +1911,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             exception_tb = NULL;
 
             type_description_1 = "oooooooo";
-            exception_lineno = 56;
+            exception_lineno = 55;
             goto try_except_handler_6;
         }
     }
@@ -2016,7 +2016,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 57;
+            exception_lineno = 56;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2029,7 +2029,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 57;
+            exception_lineno = 56;
             type_description_1 = "oooooooo";
             goto list_build_exception_2;
         }
@@ -2043,7 +2043,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         goto try_except_handler_2;
         // Finished with no exception for list_build:
         list_build_noexception_2:;
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 57;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 56;
         tmp_assign_source_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_7);
         Py_DECREF(tmp_args_element_value_7);
         if (tmp_assign_source_15 == NULL) {
@@ -2052,7 +2052,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 57;
+            exception_lineno = 56;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2075,7 +2075,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 58;
+            exception_lineno = 57;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2088,13 +2088,13 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 58;
+            exception_lineno = 57;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(var_maxHeight);
         tmp_args_element_value_8 = var_maxHeight;
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 58;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 57;
         tmp_call_result_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[44], tmp_args_element_value_8);
         Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_4 == NULL) {
@@ -2103,7 +2103,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 58;
+            exception_lineno = 57;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2125,7 +2125,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 61;
+            exception_lineno = 60;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2136,11 +2136,11 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 61;
+            exception_lineno = 60;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 61;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 60;
         tmp_assign_source_16 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[45]);
         Py_DECREF(tmp_called_instance_4);
         if (tmp_assign_source_16 == NULL) {
@@ -2149,7 +2149,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 61;
+            exception_lineno = 60;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2165,7 +2165,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         PyObject *tmp_call_result_5;
         CHECK_OBJECT(var_attr);
         tmp_called_instance_5 = var_attr;
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 62;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 61;
         tmp_call_result_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[46]);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2173,7 +2173,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 62;
+            exception_lineno = 61;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2194,7 +2194,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 63;
+            exception_lineno = 62;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2207,7 +2207,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 63;
+            exception_lineno = 62;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2219,7 +2219,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 63;
+            exception_lineno = 62;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2231,7 +2231,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 63;
+            exception_lineno = 62;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2260,7 +2260,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 64;
+            exception_lineno = 63;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2271,7 +2271,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 64;
+            exception_lineno = 63;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2284,7 +2284,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 64;
+            exception_lineno = 63;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2298,11 +2298,11 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_5);
 
-            exception_lineno = 64;
+            exception_lineno = 63;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 64;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 63;
         tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_9);
         Py_DECREF(tmp_called_value_5);
         Py_DECREF(tmp_args_element_value_9);
@@ -2312,7 +2312,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 64;
+            exception_lineno = 63;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2332,7 +2332,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 66;
+            exception_lineno = 65;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2345,7 +2345,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 66;
+            exception_lineno = 65;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2353,7 +2353,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         tmp_args_element_value_10 = var_col;
         CHECK_OBJECT(var_attr);
         tmp_args_element_value_11 = var_attr;
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 66;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 65;
         {
             PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11};
             tmp_call_result_7 = CALL_METHOD_WITH_ARGS2(
@@ -2370,7 +2370,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 66;
+            exception_lineno = 65;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2390,7 +2390,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 71;
+            exception_lineno = 70;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2416,7 +2416,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 72;
+            exception_lineno = 71;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2429,7 +2429,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 72;
+            exception_lineno = 71;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2437,7 +2437,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         tmp_args_element_value_12 = var_col;
         tmp_args_element_value_13 = mod_consts[50];
         tmp_args_element_value_14 = mod_consts[20];
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 72;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 71;
         {
             PyObject *call_args[] = {tmp_args_element_value_12, tmp_args_element_value_13, tmp_args_element_value_14};
             tmp_call_result_8 = CALL_METHOD_WITH_ARGS3(
@@ -2454,7 +2454,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 72;
+            exception_lineno = 71;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2480,7 +2480,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 73;
+            exception_lineno = 72;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2491,7 +2491,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_or_left_value_1);
 
-            exception_lineno = 73;
+            exception_lineno = 72;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2512,7 +2512,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 73;
+            exception_lineno = 72;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2543,7 +2543,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 74;
+            exception_lineno = 73;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2556,7 +2556,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 74;
+            exception_lineno = 73;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2564,7 +2564,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         tmp_args_element_value_15 = var_col;
         tmp_args_element_value_16 = mod_consts[42];
         tmp_args_element_value_17 = mod_consts[53];
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 74;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 73;
         {
             PyObject *call_args[] = {tmp_args_element_value_15, tmp_args_element_value_16, tmp_args_element_value_17};
             tmp_call_result_9 = CALL_METHOD_WITH_ARGS3(
@@ -2581,7 +2581,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 74;
+            exception_lineno = 73;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2602,7 +2602,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 75;
+            exception_lineno = 74;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2628,7 +2628,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 76;
+            exception_lineno = 75;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2641,7 +2641,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 76;
+            exception_lineno = 75;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2649,7 +2649,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         tmp_args_element_value_18 = var_col;
         tmp_args_element_value_19 = mod_consts[53];
         tmp_args_element_value_20 = mod_consts[52];
-        frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame.f_lineno = 76;
+        frame_b93e671c2059a4d9d732baa0a306e483->m_frame.f_lineno = 75;
         {
             PyObject *call_args[] = {tmp_args_element_value_18, tmp_args_element_value_19, tmp_args_element_value_20};
             tmp_call_result_10 = CALL_METHOD_WITH_ARGS3(
@@ -2666,7 +2666,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 76;
+            exception_lineno = 75;
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
@@ -2679,7 +2679,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 51;
+        exception_lineno = 50;
         type_description_1 = "oooooooo";
         goto try_except_handler_2;
     }
@@ -2713,7 +2713,7 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
     try_end_5:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_04e387ee1dd89ac6d2b56410ceca175d);
+    RESTORE_FRAME_EXCEPTION(frame_b93e671c2059a4d9d732baa0a306e483);
 #endif
 
     // Put the previous frame back on top.
@@ -2724,18 +2724,18 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_04e387ee1dd89ac6d2b56410ceca175d);
+    RESTORE_FRAME_EXCEPTION(frame_b93e671c2059a4d9d732baa0a306e483);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_04e387ee1dd89ac6d2b56410ceca175d, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_04e387ee1dd89ac6d2b56410ceca175d->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_04e387ee1dd89ac6d2b56410ceca175d, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_b93e671c2059a4d9d732baa0a306e483, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_b93e671c2059a4d9d732baa0a306e483->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_b93e671c2059a4d9d732baa0a306e483, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_04e387ee1dd89ac6d2b56410ceca175d,
+        frame_b93e671c2059a4d9d732baa0a306e483,
         type_description_1,
         par_self,
         par_header,
@@ -2749,17 +2749,17 @@ static PyObject *impl_DataGrid$$$function__3_makeColumnLabels(struct Nuitka_Func
 
 
     // Release cached frame if used for exception.
-    if (frame_04e387ee1dd89ac6d2b56410ceca175d == cache_frame_04e387ee1dd89ac6d2b56410ceca175d) {
+    if (frame_b93e671c2059a4d9d732baa0a306e483 == cache_frame_b93e671c2059a4d9d732baa0a306e483) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_04e387ee1dd89ac6d2b56410ceca175d);
-        cache_frame_04e387ee1dd89ac6d2b56410ceca175d = NULL;
+        Py_DECREF(cache_frame_b93e671c2059a4d9d732baa0a306e483);
+        cache_frame_b93e671c2059a4d9d732baa0a306e483 = NULL;
     }
 
-    assertFrameObject(frame_04e387ee1dd89ac6d2b56410ceca175d);
+    assertFrameObject(frame_b93e671c2059a4d9d732baa0a306e483);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2869,7 +2869,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
     PyObject *tmp_tuple_unpack_1__element_1 = NULL;
     PyObject *tmp_tuple_unpack_1__element_2 = NULL;
     PyObject *tmp_tuple_unpack_1__source_iter = NULL;
-    struct Nuitka_FrameObject *frame_437382b03a629b4e83e55ccba2046cc9;
+    struct Nuitka_FrameObject *frame_976e6769967c7a7518ece2dd91df8967;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
@@ -2889,7 +2889,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
-    static struct Nuitka_FrameObject *cache_frame_437382b03a629b4e83e55ccba2046cc9 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_976e6769967c7a7518ece2dd91df8967 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
@@ -2898,31 +2898,31 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_437382b03a629b4e83e55ccba2046cc9)) {
-        Py_XDECREF(cache_frame_437382b03a629b4e83e55ccba2046cc9);
+    if (isFrameUnusable(cache_frame_976e6769967c7a7518ece2dd91df8967)) {
+        Py_XDECREF(cache_frame_976e6769967c7a7518ece2dd91df8967);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_437382b03a629b4e83e55ccba2046cc9 == NULL) {
+        if (cache_frame_976e6769967c7a7518ece2dd91df8967 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_437382b03a629b4e83e55ccba2046cc9 = MAKE_FUNCTION_FRAME(codeobj_437382b03a629b4e83e55ccba2046cc9, module_DataGrid, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_976e6769967c7a7518ece2dd91df8967 = MAKE_FUNCTION_FRAME(codeobj_976e6769967c7a7518ece2dd91df8967, module_DataGrid, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_437382b03a629b4e83e55ccba2046cc9->m_type_description == NULL);
-    frame_437382b03a629b4e83e55ccba2046cc9 = cache_frame_437382b03a629b4e83e55ccba2046cc9;
+    assert(cache_frame_976e6769967c7a7518ece2dd91df8967->m_type_description == NULL);
+    frame_976e6769967c7a7518ece2dd91df8967 = cache_frame_976e6769967c7a7518ece2dd91df8967;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_437382b03a629b4e83e55ccba2046cc9);
+    pushFrameStack(frame_976e6769967c7a7518ece2dd91df8967);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_437382b03a629b4e83e55ccba2046cc9) == 2); // Frame stack
+    assert(Py_REFCNT(frame_976e6769967c7a7518ece2dd91df8967) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2938,11 +2938,11 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 84;
+            exception_lineno = 83;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        frame_437382b03a629b4e83e55ccba2046cc9->m_frame.f_lineno = 84;
+        frame_976e6769967c7a7518ece2dd91df8967->m_frame.f_lineno = 83;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[56]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -2951,7 +2951,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 84;
+            exception_lineno = 83;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -2972,11 +2972,11 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 85;
+            exception_lineno = 84;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        frame_437382b03a629b4e83e55ccba2046cc9->m_frame.f_lineno = 85;
+        frame_976e6769967c7a7518ece2dd91df8967->m_frame.f_lineno = 84;
         tmp_left_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[57]);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_left_value_1 == NULL) {
@@ -2985,7 +2985,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 85;
+            exception_lineno = 84;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -2998,7 +2998,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 85;
+            exception_lineno = 84;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -3013,7 +3013,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
         tmp_called_value_1 = (PyObject *)&PyEnum_Type;
         CHECK_OBJECT(par_row);
         tmp_args_element_value_1 = par_row;
-        frame_437382b03a629b4e83e55ccba2046cc9->m_frame.f_lineno = 88;
+        frame_976e6769967c7a7518ece2dd91df8967->m_frame.f_lineno = 87;
         tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3021,7 +3021,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 88;
+            exception_lineno = 87;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -3033,7 +3033,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 88;
+            exception_lineno = 87;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -3056,7 +3056,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 type_description_1 = "ooooo";
-                exception_lineno = 88;
+                exception_lineno = 87;
                 goto try_except_handler_2;
             }
         }
@@ -3081,7 +3081,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 88;
+            exception_lineno = 87;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
@@ -3111,7 +3111,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
 
 
             type_description_1 = "ooooo";
-            exception_lineno = 88;
+            exception_lineno = 87;
             goto try_except_handler_4;
         }
         {
@@ -3139,7 +3139,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
 
 
             type_description_1 = "ooooo";
-            exception_lineno = 88;
+            exception_lineno = 87;
             goto try_except_handler_4;
         }
         {
@@ -3168,7 +3168,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
                     FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
                     type_description_1 = "ooooo";
-                    exception_lineno = 88;
+                    exception_lineno = 87;
                     goto try_except_handler_4;
                 }
             }
@@ -3182,7 +3182,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             exception_tb = NULL;
 
             type_description_1 = "ooooo";
-            exception_lineno = 88;
+            exception_lineno = 87;
             goto try_except_handler_4;
         }
     }
@@ -3284,7 +3284,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 89;
+            exception_lineno = 88;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
@@ -3297,7 +3297,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 89;
+            exception_lineno = 88;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
@@ -3309,7 +3309,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 89;
+            exception_lineno = 88;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
@@ -3320,7 +3320,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 89;
+            exception_lineno = 88;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
@@ -3337,11 +3337,11 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_2);
 
-            exception_lineno = 89;
+            exception_lineno = 88;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        frame_437382b03a629b4e83e55ccba2046cc9->m_frame.f_lineno = 89;
+        frame_976e6769967c7a7518ece2dd91df8967->m_frame.f_lineno = 88;
         {
             PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
             tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_2, call_args);
@@ -3355,7 +3355,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 89;
+            exception_lineno = 88;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
@@ -3367,7 +3367,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-        exception_lineno = 88;
+        exception_lineno = 87;
         type_description_1 = "ooooo";
         goto try_except_handler_2;
     }
@@ -3415,7 +3415,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
-            exception_lineno = 99;
+            exception_lineno = 98;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -3428,11 +3428,11 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 99;
+            exception_lineno = 98;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        frame_437382b03a629b4e83e55ccba2046cc9->m_frame.f_lineno = 99;
+        frame_976e6769967c7a7518ece2dd91df8967->m_frame.f_lineno = 98;
         tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[23]);
         Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_3 == NULL) {
@@ -3441,7 +3441,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 99;
+            exception_lineno = 98;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
@@ -3449,7 +3449,7 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_437382b03a629b4e83e55ccba2046cc9);
+    RESTORE_FRAME_EXCEPTION(frame_976e6769967c7a7518ece2dd91df8967);
 #endif
 
     // Put the previous frame back on top.
@@ -3460,18 +3460,18 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_437382b03a629b4e83e55ccba2046cc9);
+    RESTORE_FRAME_EXCEPTION(frame_976e6769967c7a7518ece2dd91df8967);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_437382b03a629b4e83e55ccba2046cc9, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_437382b03a629b4e83e55ccba2046cc9->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_437382b03a629b4e83e55ccba2046cc9, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_976e6769967c7a7518ece2dd91df8967, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_976e6769967c7a7518ece2dd91df8967->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_976e6769967c7a7518ece2dd91df8967, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_437382b03a629b4e83e55ccba2046cc9,
+        frame_976e6769967c7a7518ece2dd91df8967,
         type_description_1,
         par_self,
         par_row,
@@ -3482,17 +3482,17 @@ static PyObject *impl_DataGrid$$$function__4_addDataRow(struct Nuitka_FunctionOb
 
 
     // Release cached frame if used for exception.
-    if (frame_437382b03a629b4e83e55ccba2046cc9 == cache_frame_437382b03a629b4e83e55ccba2046cc9) {
+    if (frame_976e6769967c7a7518ece2dd91df8967 == cache_frame_976e6769967c7a7518ece2dd91df8967) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_437382b03a629b4e83e55ccba2046cc9);
-        cache_frame_437382b03a629b4e83e55ccba2046cc9 = NULL;
+        Py_DECREF(cache_frame_976e6769967c7a7518ece2dd91df8967);
+        cache_frame_976e6769967c7a7518ece2dd91df8967 = NULL;
     }
 
-    assertFrameObject(frame_437382b03a629b4e83e55ccba2046cc9);
+    assertFrameObject(frame_976e6769967c7a7518ece2dd91df8967);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3576,42 +3576,42 @@ static PyObject *impl_DataGrid$$$function__5_clearGrid(struct Nuitka_FunctionObj
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_a935a5c4c5b4d09fc2f58d9be89d39f7;
+    struct Nuitka_FrameObject *frame_699bed766c721e92eacad4ff7af60386;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_699bed766c721e92eacad4ff7af60386 = NULL;
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7)) {
-        Py_XDECREF(cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7);
+    if (isFrameUnusable(cache_frame_699bed766c721e92eacad4ff7af60386)) {
+        Py_XDECREF(cache_frame_699bed766c721e92eacad4ff7af60386);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7 == NULL) {
+        if (cache_frame_699bed766c721e92eacad4ff7af60386 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7 = MAKE_FUNCTION_FRAME(codeobj_a935a5c4c5b4d09fc2f58d9be89d39f7, module_DataGrid, sizeof(void *));
+        cache_frame_699bed766c721e92eacad4ff7af60386 = MAKE_FUNCTION_FRAME(codeobj_699bed766c721e92eacad4ff7af60386, module_DataGrid, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7->m_type_description == NULL);
-    frame_a935a5c4c5b4d09fc2f58d9be89d39f7 = cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7;
+    assert(cache_frame_699bed766c721e92eacad4ff7af60386->m_type_description == NULL);
+    frame_699bed766c721e92eacad4ff7af60386 = cache_frame_699bed766c721e92eacad4ff7af60386;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_a935a5c4c5b4d09fc2f58d9be89d39f7);
+    pushFrameStack(frame_699bed766c721e92eacad4ff7af60386);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_a935a5c4c5b4d09fc2f58d9be89d39f7) == 2); // Frame stack
+    assert(Py_REFCNT(frame_699bed766c721e92eacad4ff7af60386) == 2); // Frame stack
 
     // Framed code:
     {
@@ -3627,11 +3627,11 @@ static PyObject *impl_DataGrid$$$function__5_clearGrid(struct Nuitka_FunctionObj
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 104;
+            exception_lineno = 103;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_a935a5c4c5b4d09fc2f58d9be89d39f7->m_frame.f_lineno = 104;
+        frame_699bed766c721e92eacad4ff7af60386->m_frame.f_lineno = 103;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[61]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -3640,7 +3640,7 @@ static PyObject *impl_DataGrid$$$function__5_clearGrid(struct Nuitka_FunctionObj
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 104;
+            exception_lineno = 103;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
@@ -3648,7 +3648,7 @@ static PyObject *impl_DataGrid$$$function__5_clearGrid(struct Nuitka_FunctionObj
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a935a5c4c5b4d09fc2f58d9be89d39f7);
+    RESTORE_FRAME_EXCEPTION(frame_699bed766c721e92eacad4ff7af60386);
 #endif
 
     // Put the previous frame back on top.
@@ -3659,35 +3659,35 @@ static PyObject *impl_DataGrid$$$function__5_clearGrid(struct Nuitka_FunctionObj
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a935a5c4c5b4d09fc2f58d9be89d39f7);
+    RESTORE_FRAME_EXCEPTION(frame_699bed766c721e92eacad4ff7af60386);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_a935a5c4c5b4d09fc2f58d9be89d39f7, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_a935a5c4c5b4d09fc2f58d9be89d39f7->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_a935a5c4c5b4d09fc2f58d9be89d39f7, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_699bed766c721e92eacad4ff7af60386, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_699bed766c721e92eacad4ff7af60386->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_699bed766c721e92eacad4ff7af60386, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_a935a5c4c5b4d09fc2f58d9be89d39f7,
+        frame_699bed766c721e92eacad4ff7af60386,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_a935a5c4c5b4d09fc2f58d9be89d39f7 == cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7) {
+    if (frame_699bed766c721e92eacad4ff7af60386 == cache_frame_699bed766c721e92eacad4ff7af60386) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7);
-        cache_frame_a935a5c4c5b4d09fc2f58d9be89d39f7 = NULL;
+        Py_DECREF(cache_frame_699bed766c721e92eacad4ff7af60386);
+        cache_frame_699bed766c721e92eacad4ff7af60386 = NULL;
     }
 
-    assertFrameObject(frame_a935a5c4c5b4d09fc2f58d9be89d39f7);
+    assertFrameObject(frame_699bed766c721e92eacad4ff7af60386);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3731,42 +3731,42 @@ static PyObject *impl_DataGrid$$$function__6_OnDestroy(struct Nuitka_FunctionObj
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_036232f7b3e3bd795a8f4d3ab4c22e6b;
+    struct Nuitka_FrameObject *frame_ef3658a5baff0093d92baad512a3e415;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b = NULL;
+    static struct Nuitka_FrameObject *cache_frame_ef3658a5baff0093d92baad512a3e415 = NULL;
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b)) {
-        Py_XDECREF(cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b);
+    if (isFrameUnusable(cache_frame_ef3658a5baff0093d92baad512a3e415)) {
+        Py_XDECREF(cache_frame_ef3658a5baff0093d92baad512a3e415);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b == NULL) {
+        if (cache_frame_ef3658a5baff0093d92baad512a3e415 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b = MAKE_FUNCTION_FRAME(codeobj_036232f7b3e3bd795a8f4d3ab4c22e6b, module_DataGrid, sizeof(void *));
+        cache_frame_ef3658a5baff0093d92baad512a3e415 = MAKE_FUNCTION_FRAME(codeobj_ef3658a5baff0093d92baad512a3e415, module_DataGrid, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b->m_type_description == NULL);
-    frame_036232f7b3e3bd795a8f4d3ab4c22e6b = cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b;
+    assert(cache_frame_ef3658a5baff0093d92baad512a3e415->m_type_description == NULL);
+    frame_ef3658a5baff0093d92baad512a3e415 = cache_frame_ef3658a5baff0093d92baad512a3e415;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_036232f7b3e3bd795a8f4d3ab4c22e6b);
+    pushFrameStack(frame_ef3658a5baff0093d92baad512a3e415);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_036232f7b3e3bd795a8f4d3ab4c22e6b) == 2); // Frame stack
+    assert(Py_REFCNT(frame_ef3658a5baff0093d92baad512a3e415) == 2); // Frame stack
 
     // Framed code:
     {
@@ -3788,7 +3788,7 @@ static PyObject *impl_DataGrid$$$function__6_OnDestroy(struct Nuitka_FunctionObj
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 108;
+            exception_lineno = 107;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
@@ -3799,7 +3799,7 @@ static PyObject *impl_DataGrid$$$function__6_OnDestroy(struct Nuitka_FunctionObj
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 108;
+            exception_lineno = 107;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
@@ -3812,12 +3812,12 @@ static PyObject *impl_DataGrid$$$function__6_OnDestroy(struct Nuitka_FunctionObj
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
             Py_DECREF(tmp_called_value_1);
 
-            exception_lineno = 108;
+            exception_lineno = 107;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
         tmp_args_element_value_2 = mod_consts[7];
-        frame_036232f7b3e3bd795a8f4d3ab4c22e6b->m_frame.f_lineno = 108;
+        frame_ef3658a5baff0093d92baad512a3e415->m_frame.f_lineno = 107;
         {
             PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
@@ -3831,7 +3831,7 @@ static PyObject *impl_DataGrid$$$function__6_OnDestroy(struct Nuitka_FunctionObj
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 108;
+            exception_lineno = 107;
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
@@ -3839,7 +3839,7 @@ static PyObject *impl_DataGrid$$$function__6_OnDestroy(struct Nuitka_FunctionObj
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_036232f7b3e3bd795a8f4d3ab4c22e6b);
+    RESTORE_FRAME_EXCEPTION(frame_ef3658a5baff0093d92baad512a3e415);
 #endif
 
     // Put the previous frame back on top.
@@ -3850,35 +3850,35 @@ static PyObject *impl_DataGrid$$$function__6_OnDestroy(struct Nuitka_FunctionObj
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_036232f7b3e3bd795a8f4d3ab4c22e6b);
+    RESTORE_FRAME_EXCEPTION(frame_ef3658a5baff0093d92baad512a3e415);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_036232f7b3e3bd795a8f4d3ab4c22e6b, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_036232f7b3e3bd795a8f4d3ab4c22e6b->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_036232f7b3e3bd795a8f4d3ab4c22e6b, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_ef3658a5baff0093d92baad512a3e415, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_ef3658a5baff0093d92baad512a3e415->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_ef3658a5baff0093d92baad512a3e415, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_036232f7b3e3bd795a8f4d3ab4c22e6b,
+        frame_ef3658a5baff0093d92baad512a3e415,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_036232f7b3e3bd795a8f4d3ab4c22e6b == cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b) {
+    if (frame_ef3658a5baff0093d92baad512a3e415 == cache_frame_ef3658a5baff0093d92baad512a3e415) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b);
-        cache_frame_036232f7b3e3bd795a8f4d3ab4c22e6b = NULL;
+        Py_DECREF(cache_frame_ef3658a5baff0093d92baad512a3e415);
+        cache_frame_ef3658a5baff0093d92baad512a3e415 = NULL;
     }
 
-    assertFrameObject(frame_036232f7b3e3bd795a8f4d3ab4c22e6b);
+    assertFrameObject(frame_ef3658a5baff0093d92baad512a3e415);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3947,7 +3947,7 @@ static PyObject *MAKE_FUNCTION_DataGrid$$$function__2_makeGrid() {
 #if PYTHON_VERSION >= 0x300
         mod_consts[91],
 #endif
-        codeobj_294ae38d5b45f116b9462d9ad32858a5,
+        codeobj_8530d7c65a40e3aa80b12d3954ae103d,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -3972,7 +3972,7 @@ static PyObject *MAKE_FUNCTION_DataGrid$$$function__3_makeColumnLabels() {
 #if PYTHON_VERSION >= 0x300
         mod_consts[92],
 #endif
-        codeobj_04e387ee1dd89ac6d2b56410ceca175d,
+        codeobj_b93e671c2059a4d9d732baa0a306e483,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -3997,7 +3997,7 @@ static PyObject *MAKE_FUNCTION_DataGrid$$$function__4_addDataRow(PyObject *defau
 #if PYTHON_VERSION >= 0x300
         mod_consts[94],
 #endif
-        codeobj_437382b03a629b4e83e55ccba2046cc9,
+        codeobj_976e6769967c7a7518ece2dd91df8967,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -4022,7 +4022,7 @@ static PyObject *MAKE_FUNCTION_DataGrid$$$function__5_clearGrid() {
 #if PYTHON_VERSION >= 0x300
         mod_consts[96],
 #endif
-        codeobj_a935a5c4c5b4d09fc2f58d9be89d39f7,
+        codeobj_699bed766c721e92eacad4ff7af60386,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -4047,7 +4047,7 @@ static PyObject *MAKE_FUNCTION_DataGrid$$$function__6_OnDestroy() {
 #if PYTHON_VERSION >= 0x300
         mod_consts[98],
 #endif
-        codeobj_036232f7b3e3bd795a8f4d3ab4c22e6b,
+        codeobj_ef3658a5baff0093d92baad512a3e415,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -5300,7 +5300,7 @@ PyObject *modulecode_DataGrid(PyObject *module, struct Nuitka_MetaPathBasedLoade
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 16;
+            exception_lineno = 15;
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
@@ -5316,7 +5316,7 @@ PyObject *modulecode_DataGrid(PyObject *module, struct Nuitka_MetaPathBasedLoade
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 33;
+            exception_lineno = 32;
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
@@ -5336,7 +5336,7 @@ PyObject *modulecode_DataGrid(PyObject *module, struct Nuitka_MetaPathBasedLoade
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 79;
+                exception_lineno = 78;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
@@ -5353,7 +5353,7 @@ PyObject *modulecode_DataGrid(PyObject *module, struct Nuitka_MetaPathBasedLoade
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 103;
+            exception_lineno = 102;
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
@@ -5369,7 +5369,7 @@ PyObject *modulecode_DataGrid(PyObject *module, struct Nuitka_MetaPathBasedLoade
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 107;
+            exception_lineno = 106;
             type_description_2 = "o";
             goto frame_exception_exit_2;
         }
