@@ -208,7 +208,7 @@ class GraphCanvas(PlotCanvas):
             minX, maxX = self.xCurrentRange if self.xCurrentRange is not None else (0,1)
             #blit = True if (minY, maxY) != (self.graphAxesSettings.ymin, self.graphAxesSettings.ymax):
 
-            blit = False
+            blit = blit #False
         else:
             minY, maxY = (self.graphAxesSettings.ymin, self.graphAxesSettings.ymax)
             minX, maxX = (self.graphAxesSettings.xmin, self.graphAxesSettings.xmax)

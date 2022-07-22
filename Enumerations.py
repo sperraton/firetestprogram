@@ -2,7 +2,7 @@ from email.policy import default
 from enum import Enum
 #from matplotlib import cm
 
-VERSION_NUM_STRING = "1.45"
+VERSION_NUM_STRING = "1.46"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
@@ -177,3 +177,5 @@ GRID_DEFAULT_COL_WIDTH = 48
 HOME_ID=101
 ZOOM_ID=102
 DRAG_ID=103
+SAVEPATH_ID=201
+BACKUPPATH_ID=202

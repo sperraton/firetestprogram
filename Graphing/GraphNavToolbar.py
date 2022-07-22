@@ -1,6 +1,6 @@
 import wx
 
-from Enumerations import DEFAULT_LEGEND_VISIBILITY, HOME_ID, ZOOM_ID
+from Enumerations import DEFAULT_LEGEND_VISIBILITY, DRAG_ID, HOME_ID, ZOOM_ID
 
 
 class CustomNavToolbar(wx.ToolBar):

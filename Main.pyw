@@ -47,8 +47,6 @@ from IndicatorPanel import IndicatorPanel
 import wx
 import wx.adv
 import wx.lib.mixins.inspection
-
-
 from pubsub import pub
 import os
 
@@ -58,13 +56,10 @@ import os
 ################################################################################
 class MainFrame(wx.Frame):
 
-    SAVEPATH_ID=201
-    BACKUPPATH_ID=202
-
     def __init__(self, *args, **kw):
 
-        self.noConnect = True # Used to set the DAQ to not connect. Random data generated. For debugging purposes
-        self.testTimeMinutes = DEFAULT_TEST_TIME
+        self.noConnect = False # Used to set the DAQ to not connect. Random data generated. For debugging purposes
+        #self.testTimeMinutes = DEFAULT_TEST_TIME
         
         # self.warnToggle = True
         self.detachedWarn = True # Stop additional triggers of the warn dialog
@@ -185,8 +180,8 @@ class MainFrame(wx.Frame):
         # Settings
         #------------------------------------------------------------
         self.settingsMenu = wx.Menu()
-        self.savePathItem = self.settingsMenu.Append(self.SAVEPATH_ID, f"Default Save Path ({self.controller.machineSettings.defaultSavePath})", "Choose the default folder to save data")
-        self.backupPathItem = self.settingsMenu.Append(self.BACKUPPATH_ID, f"Backup Save Path ({self.controller.machineSettings.defaultBackupPath})", "Choose the default folder to save data")
+        self.savePathItem = self.settingsMenu.Append(SAVEPATH_ID, f"Default Save Path ({self.controller.machineSettings.defaultSavePath})", "Choose the default folder to save data")
+        self.backupPathItem = self.settingsMenu.Append(BACKUPPATH_ID, f"Backup Save Path ({self.controller.machineSettings.defaultBackupPath})", "Choose the default folder to save data")
 
         self.settingsMenu.AppendSeparator()
 
@@ -295,10 +290,10 @@ class MainFrame(wx.Frame):
                        )
         if dlg.ShowModal() == wx.ID_OK:
             evtID = event.GetId()
-            if evtID == self.SAVEPATH_ID:# GetEventObject() is self.savePathItem:
+            if evtID == SAVEPATH_ID:# GetEventObject() is self.savePathItem:
                 self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=False)
                 self.savePathItem.SetItemLabel(f"Default Save Path ({self.controller.machineSettings.defaultSavePath})")
-            elif evtID == self.BACKUPPATH_ID:#GetEventObject() is self.backupPathItem:
+            elif evtID == BACKUPPATH_ID:#GetEventObject() is self.backupPathItem:
                 self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=True)
                 self.backupPathItem.SetItemLabel(f"Default Save Path ({self.controller.machineSettings.defaultBackupPath})")
         dlg.Destroy()
