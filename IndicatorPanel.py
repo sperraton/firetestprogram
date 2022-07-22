@@ -1,6 +1,6 @@
 import wx
 from pubsub import pub
-from Enumerations import UIcolours
+from Enumerations import DEFAULT_INDICATOR_FONT_SIZE, UIcolours
 
 class IndicatorPanel(wx.Panel):
     def __init__(self, parent, panelID):
@@ -10,7 +10,7 @@ class IndicatorPanel(wx.Panel):
 
         self.indicatorSizer = wx.BoxSizer(wx.HORIZONTAL)
         font = self.GetFont()
-        font.SetPointSize(16) # TODO May change to pixel size
+        font.SetPointSize(DEFAULT_INDICATOR_FONT_SIZE) # TODO May change to pixel size
         #------------------------------------------------------------
         subPanel1 = wx.Panel(self)
         subPanel1.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
@@ -57,7 +57,9 @@ class IndicatorPanel(wx.Panel):
         self.lblAUC = wx.StaticText(subPanel4,
                                          label="% AUC: ",
                                          style=wx.ST_ELLIPSIZE_MIDDLE)
-        self.lblAUC.SetFont(font)
+        aucFont = self.GetFont()
+        aucFont.SetPointSize(DEFAULT_INDICATOR_FONT_SIZE-2) # TODO May change to pixel size
+        self.lblAUC.SetFont(aucFont)
         subPanel4Sizer = wx.BoxSizer(wx.HORIZONTAL)
         subPanel4Sizer.Add(self.lblAUC, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
         subPanel4.SetSizer(subPanel4Sizer)

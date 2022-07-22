@@ -1,10 +1,6 @@
-#from select import select
-#from matplotlib import offsetbox
 import wx
 from pubsub import pub
-
 from math import ceil
-
 import colorsys
 
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_SAVE_W, GRAPH_SAVE_H, DEFAULT_TEST_TIME, LEGEND_NUM_ROWS
@@ -19,7 +15,6 @@ from Graphing.GraphNavToolbar import CustomNavToolbar
 #
 ###############################################################################
 
-        
 class BaseGraph(wx.Panel):
     """
     A wxWidget Panel that displays the graph

@@ -1,14 +1,13 @@
 import wx
 
+from Enumerations import DEFAULT_LEGEND_VISIBILITY, HOME_ID, ZOOM_ID
+
 
 class CustomNavToolbar(wx.ToolBar):
     """
     Special toolbar with a few other options
     """
 
-    HOME_ID=101
-    ZOOM_ID=102
-    DRAG_ID=103
 
     def __init__(self, graph):
 
@@ -25,7 +24,7 @@ class CustomNavToolbar(wx.ToolBar):
         # chkAvgVisibility = wx.CheckBox(self, label="Hide average")
         # chkRawVisibility = wx.CheckBox(self, label="Hide raw data")
         self.chkLegendVisibiliy = wx.CheckBox(self, label="Show legend")
-        self.chkLegendVisibiliy.SetValue(True) # Is defaulting to visible, co-ordinate with the base graph
+        self.chkLegendVisibiliy.SetValue(DEFAULT_LEGEND_VISIBILITY) # Co-ordinate with the base graph
         #self.chkZoom = wx.CheckBox(self, label="Zoom")
         #self.chkDrag = wx.CheckBox(self, label="Drag")
 
@@ -34,7 +33,7 @@ class CustomNavToolbar(wx.ToolBar):
         # self.AddControl(chkAvgVisibility)
         # self.AddControl(chkRawVisibility)
         self.AddControl(self.chkLegendVisibiliy)
-        self.AddTool(self.HOME_ID, 
+        self.AddTool(HOME_ID, 
                     "Home", 
                     wx.Image('./images/home.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 
                     wx.NullBitmap, 
@@ -42,14 +41,14 @@ class CustomNavToolbar(wx.ToolBar):
                     "Reset", 
                     "Reset view of graph")
         
-        self.AddCheckTool(self.ZOOM_ID, 
+        self.AddCheckTool(ZOOM_ID, 
                     "Zoom", 
                     wx.Image('./images/zoom-in.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 
                     wx.NullBitmap,
                     "Zoom", 
                     "Zoom into select area of graph")
 
-        # self.AddCheckTool(self.DRAG_ID, 
+        # self.AddCheckTool(DRAG_ID, 
         #             "Drag", 
         #             wx.Image('./images/drag.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 
         #             wx.NullBitmap, 
@@ -61,9 +60,9 @@ class CustomNavToolbar(wx.ToolBar):
         # self.Bind(wx.EVT_CHECKBOX, self.onToggleRaw, id=chkRawVisibility.GetId())
         self.Bind(wx.EVT_CHECKBOX, self.onToggleLegend, id=self.chkLegendVisibiliy.GetId())
 
-        self.Bind(wx.EVT_TOOL, self.onHome, id=self.HOME_ID)
-        self.Bind(wx.EVT_TOOL, self.onToggleZoom, id=self.ZOOM_ID)
-        #self.Bind(wx.EVT_TOOL, self.onToggleDrag, id=self.DRAG_ID)
+        self.Bind(wx.EVT_TOOL, self.onHome, id=HOME_ID)
+        self.Bind(wx.EVT_TOOL, self.onToggleZoom, id=ZOOM_ID)
+        #self.Bind(wx.EVT_TOOL, self.onToggleDrag, id=DRAG_ID)
 
 
     def onToggleAvg(self, event):
@@ -80,27 +79,27 @@ class CustomNavToolbar(wx.ToolBar):
 
 
     def onToggleZoom(self, event):
-        state = self.GetToolState(toolId=self.ZOOM_ID)# .GetValue()
+        state = self.GetToolState(toolId=ZOOM_ID)# .GetValue()
         self.graphCanvas.setZoomState(state)
 
-        # if state and self.GetToolState(toolId=self.DRAG_ID): #chkDrag.GetValue():#isChecked():
-        #     self.ToggleTool(self.DRAG_ID, False) #chkDrag.SetValue(False) #Can't have both on
+        # if state and self.GetToolState(toolId=DRAG_ID): #chkDrag.GetValue():#isChecked():
+        #     self.ToggleTool(DRAG_ID, False) #chkDrag.SetValue(False) #Can't have both on
             
 
     def onToggleDrag(self, event):
-        state = self.GetToolState(toolId=self.DRAG_ID) #.chkDrag.GetValue()
+        state = self.GetToolState(toolId=DRAG_ID) #.chkDrag.GetValue()
         self.graphCanvas.setDragState(state)
 
-        if state and self.GetToolState(toolId=self.ZOOM_ID): #chkZoom.GetValue():#isChecked():
-            self.ToggleTool(self.ZOOM_ID, False) #chkZoom.SetValue(False) #Can't have both on
+        if state and self.GetToolState(toolId=ZOOM_ID): #chkZoom.GetValue():#isChecked():
+            self.ToggleTool(ZOOM_ID, False) #chkZoom.SetValue(False) #Can't have both on
 
 
     def onHome(self, event):
-        # self.ToggleTool(self.DRAG_ID, False)
-        self.ToggleTool(self.ZOOM_ID, False)
+        # self.ToggleTool(DRAG_ID, False)
+        self.ToggleTool(ZOOM_ID, False)
         
         self.graphCanvas.homeGraph()
-        self.ToggleTool(self.ZOOM_ID, False)
+        self.ToggleTool(ZOOM_ID, False)
         self.graph.reloadData() # Ugly hack/code smell here.
         self.graph.drawGraph()
         self.graph.parent.Refresh()

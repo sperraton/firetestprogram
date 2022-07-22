@@ -4,7 +4,7 @@ import wx
 from wx.lib import plot as wxplot
 from wx.lib.plot.plotcanvas import PlotCanvas
 
-from Enumerations import GRAPH_SAVE_H, GRAPH_SAVE_W, GRAPH_VERT_PADDING, LEGEND_NUM_ROWS, UIcolours
+from Enumerations import DEFAULT_LEGEND_VISIBILITY, GRAPH_SAVE_H, GRAPH_SAVE_W, GRAPH_VERT_PADDING, LEGEND_NUM_ROWS, UIcolours
 from Graphing.AxesSettings import AxesSettings
 
 import numpy as np
@@ -27,7 +27,7 @@ class GraphCanvas(PlotCanvas):
         self.parent = parent
         self.panelID = panelID
         self.numCols = 1 # number of columns in legend.
-        self.drawFullDataFlag = True # TODO To be used when I put in the ability of the graph to access all it's historical data in the TestData object
+        #self.drawFullDataFlag = True # TODO To be used when I put in the ability of the graph to access all it's historical data in the TestData object
         self.toggle = True
 
         PlotCanvas.__init__(self, self.parent)
@@ -87,10 +87,6 @@ class GraphCanvas(PlotCanvas):
                                     title=self.graphAxesSettings.title,
                                     xLabel=self.graphAxesSettings.xlabel,
                                     yLabel=self.graphAxesSettings.ylabel)
-        
-        #numSelected = len(self.frame.controller.selectedFurnaceChannels)
-        #self.numCols = int(ceil((numSelected+2)/LEGEND_NUM_ROWS))
-        # self.createLegend(numCols=self.numCols)
 
         self.drawGraph()
         
@@ -100,11 +96,11 @@ class GraphCanvas(PlotCanvas):
         Sets the look of the graph.
         """
         self.SetDoubleBuffered(True)
-        # TODO comb through the wxplot settings I can add here
+        # TODO comb through the wxplot settings I can add here and also move the magic numbers to the Enumerations file
         
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.enableLegend = True
+        self.enableLegend = DEFAULT_LEGEND_VISIBILITY
         self.fontSizeTitle = 12
         self.fontSizeLegend = 7
         self.fontSizeAxis = 8
@@ -489,8 +485,11 @@ class GraphCanvas(PlotCanvas):
             self.drawGraph()
         self.enableZoom = state
         self.showScrollbars = state
-        if not state:
-            self.Reset
+        if not state: #We're toggling out of the Zoom tool, do all the things the home tool does
+            self.Reset()
+            self.parent.reloadData() # Ugly hack/code smell here.
+            self.parent.drawGraph()
+            self.parent.parent.Refresh()
         
 
     def setDragState(self, state):
@@ -620,7 +619,7 @@ class GraphCanvas(PlotCanvas):
                 # draw line with legend
                 pnt1 = (trhc[0] + legendLHS + offset,                   trhc[1] + s + lineHeight / 2.)
                 pnt2 = (trhc[0] + legendLHS + legendSymExt[0] + offset, trhc[1] + s + lineHeight / 2.)
-                o.draw(dc, self.printerScale, coord=np.array([pnt1, pnt2]))
+                o.draw(dc, printerScale=2.0, coord=np.array([pnt1, pnt2])) # Using the printerScale to thicken up the lines a bit # self.printerScale, coord=np.array([pnt1, pnt2]))
 
             else:
                 raise TypeError(
