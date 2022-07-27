@@ -90,8 +90,10 @@ class FurnaceGraph(BaseGraph):
 
         for i in range(len(self.controller.selectedFurnaceChannels)):
             #columnVector = [row[i] for row in rawData]
-            self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2, blit=blit) # Give the plot the updated data +1 debug
-
+            try:
+                self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2, blit=blit) # Give the plot the updated data +1 debug
+            except IndexError: # TODO handle the error here
+                continue
         # TODO just trying out graphing the outlier limits
         #self.graphCanvas.updateData(timeData, self.controller.testData.furnaceUprLimitData, plotIndex=len(self.controller.selectedFurnaceChannels)+2, blit=blit) # Give the plot the updated data)
 
@@ -262,7 +264,7 @@ class PressureGraph(BaseGraph):
     def __init__(self, parent, panelID, controller, axesSettings=None):
 
         self.controller = controller
-        BaseGraph.__init__(self, parent, panelID, axesSettings)
+        BaseGraph.__init__(self, parent, panelID, axesSettings, name="Pressure Graph")
         self.initPressurePlot()
 
 

@@ -2,7 +2,7 @@ from email.policy import default
 from enum import Enum
 #from matplotlib import cm
 
-VERSION_NUM_STRING = "1.46"
+VERSION_NUM_STRING = "1.47"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
@@ -155,6 +155,8 @@ BAD_VALUE_STR = "----"
 BAD_VALUE_NUM = -9999
 
 DEFAULT_LEGEND_VISIBILITY = False
+DEFAULT_RAW_DATA_VISIBILITY = True
+
 LEGEND_NUM_ROWS = 14
 DEFAULT_TEST_TIME = 60
 SAVE_RATE_LWR = 5

@@ -33,9 +33,9 @@ PyObject *module_Enumerations;
 PyDictObject *moduledict_Enumerations;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[141];
+static PyObject *mod_consts[155];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[141];
+static Py_hash_t mod_consts_hash[155];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for (int i = 0; i < 141; i++) {
+        for (int i = 0; i < 155; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants_Enumerations(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for (int i = 0; i < 141; i++) {
+    for (int i = 0; i < 155; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -88,15 +88,15 @@ static PyCodeObject *codeobj_10597f3aeadcc805578ecaabf4a574da;
 static PyCodeObject *codeobj_47306dd299ad275ca5bf6265b9ceb10e;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[134]); CHECK_OBJECT(module_filename_obj);
-    codeobj_0b59f85ea4c2963f52c116b6b8ae5242 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[135], NULL, NULL, 0, 0, 0);
-    codeobj_a582c6c20fa89b377657705ca0621f1f = MAKE_CODEOBJECT(module_filename_obj, 63, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[136], NULL, 1, 0, 0);
-    codeobj_3215b5e4d4ecb6f3e8798abbeaee8c00 = MAKE_CODEOBJECT(module_filename_obj, 77, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[136], NULL, 1, 0, 0);
-    codeobj_2e550c7256ba067f0bae3c9c5abbbac0 = MAKE_CODEOBJECT(module_filename_obj, 58, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[137], NULL, 2, 0, 0);
-    codeobj_71739e03ac182db40938aa268b696d97 = MAKE_CODEOBJECT(module_filename_obj, 72, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[137], NULL, 2, 0, 0);
-    codeobj_a3690251d1c94ebc4650fd342d651101 = MAKE_CODEOBJECT(module_filename_obj, 7, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[16], mod_consts[138], NULL, 0, 0, 0);
-    codeobj_10597f3aeadcc805578ecaabf4a574da = MAKE_CODEOBJECT(module_filename_obj, 66, CO_NOFREE, mod_consts[49], mod_consts[139], NULL, 0, 0, 0);
-    codeobj_47306dd299ad275ca5bf6265b9ceb10e = MAKE_CODEOBJECT(module_filename_obj, 51, CO_NOFREE, mod_consts[29], mod_consts[139], NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[148]); CHECK_OBJECT(module_filename_obj);
+    codeobj_0b59f85ea4c2963f52c116b6b8ae5242 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[149], NULL, NULL, 0, 0, 0);
+    codeobj_a582c6c20fa89b377657705ca0621f1f = MAKE_CODEOBJECT(module_filename_obj, 63, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[150], NULL, 1, 0, 0);
+    codeobj_3215b5e4d4ecb6f3e8798abbeaee8c00 = MAKE_CODEOBJECT(module_filename_obj, 77, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[150], NULL, 1, 0, 0);
+    codeobj_2e550c7256ba067f0bae3c9c5abbbac0 = MAKE_CODEOBJECT(module_filename_obj, 58, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[151], NULL, 2, 0, 0);
+    codeobj_71739e03ac182db40938aa268b696d97 = MAKE_CODEOBJECT(module_filename_obj, 72, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[151], NULL, 2, 0, 0);
+    codeobj_a3690251d1c94ebc4650fd342d651101 = MAKE_CODEOBJECT(module_filename_obj, 7, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[16], mod_consts[152], NULL, 0, 0, 0);
+    codeobj_10597f3aeadcc805578ecaabf4a574da = MAKE_CODEOBJECT(module_filename_obj, 66, CO_NOFREE, mod_consts[49], mod_consts[153], NULL, 0, 0, 0);
+    codeobj_47306dd299ad275ca5bf6265b9ceb10e = MAKE_CODEOBJECT(module_filename_obj, 51, CO_NOFREE, mod_consts[29], mod_consts[153], NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -1353,7 +1353,7 @@ PyObject *modulecode_Enumerations(PyObject *module, struct Nuitka_MetaPathBasedL
         UPDATE_STRING_DICT0(
             moduledict_Enumerations,
             (Nuitka_StringObject *)const_str_plain___package__,
-            mod_consts[140]
+            mod_consts[154]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_Enumerations, (Nuitka_StringObject *)const_str_plain___name__);
@@ -3693,73 +3693,113 @@ PyObject *modulecode_Enumerations(PyObject *module, struct Nuitka_MetaPathBasedL
     }
     {
         PyObject *tmp_assign_source_57;
-        tmp_assign_source_57 = mod_consts[111];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[112], tmp_assign_source_57);
+        tmp_assign_source_57 = Py_False;
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[111], tmp_assign_source_57);
     }
     {
         PyObject *tmp_assign_source_58;
-        tmp_assign_source_58 = mod_consts[113];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[114], tmp_assign_source_58);
+        tmp_assign_source_58 = Py_True;
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[112], tmp_assign_source_58);
     }
     {
         PyObject *tmp_assign_source_59;
-        tmp_assign_source_59 = mod_consts[115];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[116], tmp_assign_source_59);
+        tmp_assign_source_59 = mod_consts[113];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[114], tmp_assign_source_59);
     }
     {
         PyObject *tmp_assign_source_60;
-        tmp_assign_source_60 = mod_consts[113];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[117], tmp_assign_source_60);
+        tmp_assign_source_60 = mod_consts[115];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[116], tmp_assign_source_60);
     }
     {
         PyObject *tmp_assign_source_61;
-        tmp_assign_source_61 = mod_consts[118];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[119], tmp_assign_source_61);
+        tmp_assign_source_61 = mod_consts[117];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[118], tmp_assign_source_61);
     }
     {
         PyObject *tmp_assign_source_62;
-        tmp_assign_source_62 = mod_consts[120];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[121], tmp_assign_source_62);
+        tmp_assign_source_62 = mod_consts[115];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[119], tmp_assign_source_62);
     }
     {
         PyObject *tmp_assign_source_63;
-        tmp_assign_source_63 = mod_consts[122];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[123], tmp_assign_source_63);
+        tmp_assign_source_63 = mod_consts[120];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[121], tmp_assign_source_63);
     }
     {
         PyObject *tmp_assign_source_64;
-        tmp_assign_source_64 = mod_consts[124];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[125], tmp_assign_source_64);
+        tmp_assign_source_64 = mod_consts[122];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[123], tmp_assign_source_64);
     }
     {
         PyObject *tmp_assign_source_65;
-        tmp_assign_source_65 = mod_consts[37];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_65);
+        tmp_assign_source_65 = mod_consts[124];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[125], tmp_assign_source_65);
     }
     {
         PyObject *tmp_assign_source_66;
-        tmp_assign_source_66 = mod_consts[37];
+        tmp_assign_source_66 = mod_consts[126];
         UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[127], tmp_assign_source_66);
     }
     {
         PyObject *tmp_assign_source_67;
-        tmp_assign_source_67 = mod_consts[43];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[128], tmp_assign_source_67);
+        tmp_assign_source_67 = mod_consts[128];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_67);
     }
     {
         PyObject *tmp_assign_source_68;
-        tmp_assign_source_68 = mod_consts[41];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_68);
+        tmp_assign_source_68 = mod_consts[37];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[130], tmp_assign_source_68);
     }
     {
         PyObject *tmp_assign_source_69;
-        tmp_assign_source_69 = mod_consts[130];
+        tmp_assign_source_69 = mod_consts[37];
         UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[131], tmp_assign_source_69);
     }
     {
         PyObject *tmp_assign_source_70;
-        tmp_assign_source_70 = mod_consts[132];
-        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_70);
+        tmp_assign_source_70 = mod_consts[43];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[132], tmp_assign_source_70);
+    }
+    {
+        PyObject *tmp_assign_source_71;
+        tmp_assign_source_71 = mod_consts[41];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_71);
+    }
+    {
+        PyObject *tmp_assign_source_72;
+        tmp_assign_source_72 = mod_consts[134];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[135], tmp_assign_source_72);
+    }
+    {
+        PyObject *tmp_assign_source_73;
+        tmp_assign_source_73 = mod_consts[136];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[137], tmp_assign_source_73);
+    }
+    {
+        PyObject *tmp_assign_source_74;
+        tmp_assign_source_74 = mod_consts[138];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[139], tmp_assign_source_74);
+    }
+    {
+        PyObject *tmp_assign_source_75;
+        tmp_assign_source_75 = mod_consts[140];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[141], tmp_assign_source_75);
+    }
+    {
+        PyObject *tmp_assign_source_76;
+        tmp_assign_source_76 = mod_consts[142];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[143], tmp_assign_source_76);
+    }
+    {
+        PyObject *tmp_assign_source_77;
+        tmp_assign_source_77 = mod_consts[144];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[145], tmp_assign_source_77);
+    }
+    {
+        PyObject *tmp_assign_source_78;
+        tmp_assign_source_78 = mod_consts[146];
+        UPDATE_STRING_DICT0(moduledict_Enumerations, (Nuitka_StringObject *)mod_consts[147], tmp_assign_source_78);
     }
 
     // Report to PGO about leaving the module without error.

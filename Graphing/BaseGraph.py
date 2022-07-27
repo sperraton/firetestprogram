@@ -1,3 +1,5 @@
+from pydoc import visiblename
+from tkinter import Label
 import wx
 from pubsub import pub
 from math import ceil
@@ -19,8 +21,8 @@ class BaseGraph(wx.Panel):
     """
     A wxWidget Panel that displays the graph
     """
-    def __init__(self, parent, panelID, axesSettings=None, testData=None):
-        wx.Panel.__init__(self, parent, id=panelID)
+    def __init__(self, parent, panelID, axesSettings=None, testData=None, name=""):
+        wx.Panel.__init__(self, parent, id=panelID, name=name)
         self.parent = parent
         #self.points = np.array([]]).astype(np.float64) # list of points added to the graph so when not blitting we can draw the full graph.
         self.panelID = panelID
@@ -53,6 +55,13 @@ class BaseGraph(wx.Panel):
         """
         self.graphCanvas.replaceGraphPlotSettings(plotSettings)
         self.graphCanvas.initPlot(isAutoscale=True)
+
+
+    def togglePlotLineVisibility(self, plotIndex, visible=True):
+        """
+        Hide/Show the plot line indicated by a the  plotIndex
+        """
+        self.graphCanvas.togglePlotLineVisibility(plotIndex, visible=visible)
 
 
     def reloadData(self):
@@ -131,7 +140,8 @@ class BaseGraph(wx.Panel):
         """
         Add a toolbar UI to the graph.
         """
-        self.graphToolbar = CustomNavToolbar(self) # Pressure graph doesn't have a toggle
+        temp = False if self.GetName() == "Pressure Graph" else True
+        self.graphToolbar = CustomNavToolbar(self, isToggleRaw=temp) # Pressure graph doesn't have a toggle
         self.graphToolbar.Realize()
 
 

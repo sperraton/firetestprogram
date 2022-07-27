@@ -1,6 +1,7 @@
 import wx
 
-from Enumerations import DEFAULT_LEGEND_VISIBILITY, DRAG_ID, HOME_ID, ZOOM_ID
+from Enumerations import DEFAULT_LEGEND_VISIBILITY, DEFAULT_RAW_DATA_VISIBILITY, DRAG_ID, HOME_ID, ZOOM_ID
+from Graphing.PlotSettings import PlotSettings
 
 
 class CustomNavToolbar(wx.ToolBar):
@@ -9,7 +10,7 @@ class CustomNavToolbar(wx.ToolBar):
     """
 
 
-    def __init__(self, graph):
+    def __init__(self, graph, isToggleRaw=True):
 
         # Hold reference to the graph so we can call its functions.
         # Might as well have the instantiating object pass a function.
@@ -22,17 +23,19 @@ class CustomNavToolbar(wx.ToolBar):
 
             # Create the toggle
         # chkAvgVisibility = wx.CheckBox(self, label="Hide average")
-        # chkRawVisibility = wx.CheckBox(self, label="Hide raw data")
         self.chkLegendVisibiliy = wx.CheckBox(self, label="Show legend")
         self.chkLegendVisibiliy.SetValue(DEFAULT_LEGEND_VISIBILITY) # Co-ordinate with the base graph
+        if (isToggleRaw): 
+            self.chkRawVisibility = wx.CheckBox(self, label="Show raw data")
+            self.chkRawVisibility.SetValue(DEFAULT_RAW_DATA_VISIBILITY) # Co-ordinate with the# Set to whatever the default is in the graph
         #self.chkZoom = wx.CheckBox(self, label="Zoom")
         #self.chkDrag = wx.CheckBox(self, label="Drag")
 
         #self.AddStretchableSpace()
         
         # self.AddControl(chkAvgVisibility)
-        # self.AddControl(chkRawVisibility)
         self.AddControl(self.chkLegendVisibiliy)
+        if (isToggleRaw): self.AddControl(self.chkRawVisibility)
         self.AddTool(HOME_ID, 
                     "Home", 
                     wx.Image('./images/home.png', wx.BITMAP_TYPE_PNG).ConvertToBitmap(), 
@@ -55,9 +58,8 @@ class CustomNavToolbar(wx.ToolBar):
         #             "Drag", 
         #             "Drag the graph view")
 
-        #chkRawVisibility.SetValue = self.graph.rawDataVisible # Set to whatever the default is in the graph
         # self.Bind(wx.EVT_CHECKBOX, self.onToggleAvg, id=chkAvgVisibility.GetId())
-        # self.Bind(wx.EVT_CHECKBOX, self.onToggleRaw, id=chkRawVisibility.GetId())
+        if (isToggleRaw): self.Bind(wx.EVT_CHECKBOX, self.onToggleRaw, id=self.chkRawVisibility.GetId())
         self.Bind(wx.EVT_CHECKBOX, self.onToggleLegend, id=self.chkLegendVisibiliy.GetId())
 
         self.Bind(wx.EVT_TOOL, self.onHome, id=HOME_ID)
@@ -70,7 +72,10 @@ class CustomNavToolbar(wx.ToolBar):
 
 
     def onToggleRaw(self, event):
-        self.graphCanvas.toggleRawVisibility()
+        state = self.chkRawVisibility.GetValue()
+        # Toggle the visibility on each line in the Raw group
+        for i in range(2, len(self.graphCanvas.graphPlotSettings)) : # Skip the Avg and the threshold lines
+            self.graphCanvas.togglePlotLineVisibility(plotIndex=i, visible=state)
 
 
     def onToggleLegend(self, event):

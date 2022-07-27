@@ -1,3 +1,4 @@
+
 from math import ceil
 from unittest import skip
 import wx
@@ -47,18 +48,10 @@ class GraphCanvas(PlotCanvas):
         else:
             self.graphAxesSettings = graphAxesSettings
         
-        
-    ###########################################################################
-    # Handlers
-    ###########################################################################
-    def OnMouseDoubleClick(self, event):
-        """
-        The canvas needs to have the double click handled by the parent that switches them
-        """
-        self.parent.callDblClick(event) # Ugly. use pubsub for this or have the event bubble up to the notebook graph panel
-        #super().OnMouseDoubleClick(event) don't call as we don't want to reset the graph
-        
 
+    ###########################################################################
+    # Methods
+    ###########################################################################
     def initPlot(self, isAutoscale):
         """
         Prepare the graph lines and legends with appropriate styles for 
@@ -89,51 +82,7 @@ class GraphCanvas(PlotCanvas):
                                     yLabel=self.graphAxesSettings.ylabel)
 
         self.drawGraph()
-        
-
-    def initGraphAxes(self):#, title, xlabel, ylabel, xmin, xmax, ymin, ymax):
-        """
-        Sets the look of the graph.
-        """
-        self.SetDoubleBuffered(True)
-        # TODO comb through the wxplot settings I can add here and also move the magic numbers to the Enumerations file
-        
-        self.SetBackgroundColour(UIcolours.GRAPH_FACE)
-        self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.enableLegend = DEFAULT_LEGEND_VISIBILITY
-        self.fontSizeTitle = 12
-        self.fontSizeLegend = 7
-        self.fontSizeAxis = 8
-        self.xSpec = "auto" #"none"
-        self.ySpec = "auto" #10 #"none" # TODO adjust this to be sensible based on the ymax for the graph
-        #self.enableAntiAliasing = True # Gonna forgoe this for speed reasons
-        #self.enableZoom = True
-        #self.enableDrag = True # Only zoom or drag enabled
-
-
-    def scaleTickMarks(self, xmax):
-        """
-        Adjusts the tick marks based on the test length.
-        Assumes that xmax is test time minutes.
-        """
-
-        # Given the test time choose an appropriate tick number
-        minX, maxX = self.xCurrentRange
-
-        # Given the scale, choose the tick resolution
-        minY, maxY = self.yCurrentRange
-
-        # TODO Maybe make it more dynamic to draw a good fit of
-        # ticks for the amount of x-axis shown
-        if xmax >= 240:
-            self.xSpec = int(maxX // 20) # Every 20 minutes
-        elif xmax <= 10:
-            self.xSpec = int(maxX // 1) 
-        elif xmax <= 90:
-            self.xSpec = int(maxX // 5)
-        else:
-            self.xSpec = int(maxX // 10)
-
+    
 
     def addToGraphPlotSettings(self, settings):
         """
@@ -153,6 +102,77 @@ class GraphCanvas(PlotCanvas):
         self.addToGraphPlotSettings(settings)
 
 
+    def setZoomState(self, state):
+        """
+        Toggles the Zoom state
+        """
+        if (self.parent.testData is not None) and (any(self.parent.testData.data)):
+            self.parent.reloadData()
+            self.drawGraph()
+        self.enableZoom = state
+        self.showScrollbars = state
+        if not state: #We're toggling out of the Zoom tool, do all the things the home tool does
+            self.Reset()
+            self.parent.reloadData() # Ugly hack/code smell here.
+            self.parent.drawGraph()
+            self.parent.parent.Refresh()
+        
+
+    def setDragState(self, state):
+        """
+        Sets the drag state
+        """
+        self.enableDrag = state
+
+
+    def homeGraph(self):
+        """
+        Resets the graph view.
+        """
+        self.enableZoom = False
+        self.Reset()
+        self.showScrollbars = False
+
+
+    def saveImage(self, filename):
+        """
+        Saves a picture of the graph.
+        """ 
+
+        # Make a new bitmap of the size that we want to output and draw to it
+        bitmap = wx.Bitmap(GRAPH_SAVE_W, GRAPH_SAVE_H)
+        dc = wx.MemoryDC(bitmap)
+
+        bbr = wx.Brush(self.GetBackgroundColour(), wx.BRUSHSTYLE_SOLID)
+        dc.SetBackground(bbr)
+        dc.SetBackgroundMode(wx.SOLID)
+        dc.Clear()
+
+        if self._antiAliasingEnabled:
+            if not isinstance(dc, wx.GCDC):
+                try:
+                    dc = wx.GCDC(dc)
+                except Exception:               # XXX: Yucky.
+                    pass
+        #p1, p2 = self.gc.boundingBox() # min, max points of graphics
+        self._setSize(GRAPH_SAVE_W, GRAPH_SAVE_H)
+
+        self.Draw(self.gc, 
+                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
+                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax),
+                  blit=False) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+        self._printDraw(dc)
+        self._setSize() #Return to normal
+        del dc
+
+        # May need to redraw this. Check out the print functions too. They have some good parts about drawing to different sizes.
+        #self.SaveFile(filename) # Save the graph image
+        bitmap.SaveFile(filename, wx.BITMAP_TYPE_PNG)
+
+
+    ###########################################################################
+    # Draw Specific Methods
+    ###########################################################################
     def updateDataAndDraw(self, timeData, yData, plotIndex, blit=False):
         """"
         Convenience function.
@@ -194,7 +214,6 @@ class GraphCanvas(PlotCanvas):
             print(f"{self.graphAxesSettings.title} channel {plotIndex} updateData failed.")
             print(e)
             # we need to get back on track. Check the sizes of all the arrays. 
-
 
     def drawGraph(self, blit=False):
         """
@@ -410,36 +429,7 @@ class GraphCanvas(PlotCanvas):
         dc.DestroyClippingRegion()
 
         self._adjustScrollbars()
-
-
-    def OnMouseLeftUp(self, event):
-        if self._zoomEnabled:
-            if self._hasDragged is True:
-                self._drawRubberBand(
-                    self._zoomCorner1, self._zoomCorner2)  # remove old
-                self._zoomCorner2[0], self._zoomCorner2[1] = self._getXY(event)
-                self._hasDragged = False  # reset flag
-                minX, minY = np.minimum(self._zoomCorner1, self._zoomCorner2)
-                maxX, maxY = np.maximum(self._zoomCorner1, self._zoomCorner2)
-
-                self.last_PointLabel = None  # reset pointLabel
-                
-                self.parent.reloadData()  # Again this is an ugly hack to be taken out
-
-                if self.last_draw is not None:
-                    self._Draw(self.last_draw[0],
-                               xAxis=(minX, maxX),
-                               yAxis=(minY, maxY),
-                               dc=None)
-
-            # else: # A box has not been drawn, zoom in on a point
-            # this interfered with the double click, so I've disables it.
-            #    X,Y = self._getXY(event)
-            #    self.Zoom( (X,Y), (self._zoomInFactor,self._zoomInFactor) )
-        if self._dragEnabled:
-            self.SetCursor(self.HandCursor)
-            if self.canvas.HasCapture():
-                self.canvas.ReleaseMouse()
+   
 
 
     def clearGraph(self):
@@ -449,11 +439,69 @@ class GraphCanvas(PlotCanvas):
         self.Clear()
 
 
-    def setYLabel(self, label):
+    def togglePlotLineVisibility(self, plotIndex, visible=True):
         """
-        Set the text for the Y-axis label.
+        Hide/Show the plot line indicated by a the plotIndex
         """
-        self.gc._yLabel = label
+        if plotIndex >= len(self.graphPlots): return  # Out of bounds
+        if  "style" not in self.graphPlots[plotIndex].attributes: return
+
+        penStyle = wx.PENSTYLE_TRANSPARENT
+        if visible is True:
+            penStyle = wx.PENSTYLE_SOLID
+        #else:
+    
+        #self.graphPlots[plotIndex].attributes["style"] = penStyle
+        self.graphPlots[plotIndex].attributes.update({"style":penStyle})
+        self.parent.reloadData()  # Again this is an ugly hack to be taken out
+        self.drawGraph(blit=False)
+
+    ###########################################################################
+    # Axes Specific Methods
+    ###########################################################################
+    
+    def initGraphAxes(self):#, title, xlabel, ylabel, xmin, xmax, ymin, ymax):
+        """
+        Sets the look of the graph.
+        """
+        self.SetDoubleBuffered(True)
+        # TODO comb through the wxplot settings I can add here and also move the magic numbers to the Enumerations file
+        
+        self.SetBackgroundColour(UIcolours.GRAPH_FACE)
+        self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
+        self.enableLegend = DEFAULT_LEGEND_VISIBILITY
+        self.fontSizeTitle = 12
+        self.fontSizeLegend = 7
+        self.fontSizeAxis = 8
+        self.xSpec = "auto" #"none"
+        self.ySpec = "auto" #10 #"none" # TODO adjust this to be sensible based on the ymax for the graph
+        #self.enableAntiAliasing = True # Gonna forgoe this for speed reasons
+        #self.enableZoom = True
+        #self.enableDrag = True # Only zoom or drag enabled
+
+
+    def scaleTickMarks(self, xmax):
+        """
+        Adjusts the tick marks based on the test length.
+        Assumes that xmax is test time minutes.
+        """
+
+        # Given the test time choose an appropriate tick number
+        minX, maxX = self.xCurrentRange
+
+        # Given the scale, choose the tick resolution
+        minY, maxY = self.yCurrentRange
+
+        # TODO Maybe make it more dynamic to draw a good fit of
+        # ticks for the amount of x-axis shown
+        if xmax >= 240:
+            self.xSpec = int(maxX // 20) # Every 20 minutes
+        elif xmax <= 10:
+            self.xSpec = int(maxX // 1) 
+        elif xmax <= 90:
+            self.xSpec = int(maxX // 5)
+        else:
+            self.xSpec = int(maxX // 10)
 
 
     def scaleGraphXaxis(self, xmax):
@@ -462,87 +510,19 @@ class GraphCanvas(PlotCanvas):
         """
         self.graphAxesSettings.xmax = xmax
         #self.scaleTickMarks(xmax) This is not working right now, so set the spec to auto for now
-        self.drawGraph()
+        self.drawGraph() 
+
+
+    def setYLabel(self, label):
+        """
+        Set the text for the Y-axis label.
+        """
+        self.gc._yLabel = label
+
     
-
-    def setLegendVisibility(self, state):
-        """
-        Toggles the legend visibility
-        """
-        #if any(self.parent.testData.data):
-        if (self.parent.testData is not None) and (any(self.parent.testData.data)):
-            self.parent.reloadData()
-            #self.drawGraph()
-        self.enableLegend = state
-
-
-    def setZoomState(self, state):
-        """
-        Toggles the Zoom state
-        """
-        if (self.parent.testData is not None) and (any(self.parent.testData.data)):
-            self.parent.reloadData()
-            self.drawGraph()
-        self.enableZoom = state
-        self.showScrollbars = state
-        if not state: #We're toggling out of the Zoom tool, do all the things the home tool does
-            self.Reset()
-            self.parent.reloadData() # Ugly hack/code smell here.
-            self.parent.drawGraph()
-            self.parent.parent.Refresh()
-        
-
-    def setDragState(self, state):
-        """
-        Sets the drag state
-        """
-        self.enableDrag = state
-
-
-    def homeGraph(self):
-        """
-        Resets the graph view.
-        """
-        self.enableZoom = False
-        self.Reset()
-        self.showScrollbars = False
-
-
-    def saveImage(self, filename):
-        """
-        Saves a picture of the graph.
-        """ 
-
-        # Make a new bitmap of the size that we want to output and draw to it
-        bitmap = wx.Bitmap(GRAPH_SAVE_W, GRAPH_SAVE_H)
-        dc = wx.MemoryDC(bitmap)
-
-        bbr = wx.Brush(self.GetBackgroundColour(), wx.BRUSHSTYLE_SOLID)
-        dc.SetBackground(bbr)
-        dc.SetBackgroundMode(wx.SOLID)
-        dc.Clear()
-
-        if self._antiAliasingEnabled:
-            if not isinstance(dc, wx.GCDC):
-                try:
-                    dc = wx.GCDC(dc)
-                except Exception:               # XXX: Yucky.
-                    pass
-        #p1, p2 = self.gc.boundingBox() # min, max points of graphics
-        self._setSize(GRAPH_SAVE_W, GRAPH_SAVE_H)
-
-        self.Draw(self.gc, 
-                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
-                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax),
-                  blit=False) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
-        self._printDraw(dc)
-        self._setSize() #Return to normal
-        del dc
-
-        # May need to redraw this. Check out the print functions too. They have some good parts about drawing to different sizes.
-        #self.SaveFile(filename) # Save the graph image
-        bitmap.SaveFile(filename, wx.BITMAP_TYPE_PNG)
-        
+    ###########################################################################
+    # Legend Specific Methods
+    ###########################################################################
 
     def _legendWH(self, dc, graphics):
         """
@@ -575,6 +555,17 @@ class GraphCanvas(PlotCanvas):
             legendBoxWH = (maxW*self.numCols, maxH)
 
         return (legendBoxWH, symExt, txtExt)
+
+
+    def setLegendVisibility(self, state):
+        """
+        Toggles the legend visibility
+        """
+        #if any(self.parent.testData.data):
+        if (self.parent.testData is not None) and (any(self.parent.testData.data)):
+            self.parent.reloadData()
+            #self.drawGraph()
+        self.enableLegend = state
 
     # Shadow this to draw a multi-column legend box
     def _drawLegend(self, dc, graphics, rhsW, topH, legendBoxWH,
@@ -634,7 +625,43 @@ class GraphCanvas(PlotCanvas):
             dc.DrawText(o.getLegend(), pnt[0], pnt[1])
 
         dc.SetFont(self._getFont(self._fontSizeAxis))  # reset
+        
 
+    ###########################################################################
+    # Handlers
+    ###########################################################################
+    def OnMouseDoubleClick(self, event):
+        """
+        The canvas needs to have the double click handled by the parent that switches them
+        """
+        self.parent.callDblClick(event) # Ugly. use pubsub for this or have the event bubble up to the notebook graph panel
+        #super().OnMouseDoubleClick(event) don't call as we don't want to reset the graph
+        
 
+    def OnMouseLeftUp(self, event):
+        if self._zoomEnabled:
+            if self._hasDragged is True:
+                self._drawRubberBand(self._zoomCorner1, self._zoomCorner2)  # remove old
+                self._zoomCorner2[0], self._zoomCorner2[1] = self._getXY(event)
+                self._hasDragged = False  # reset flag
+                minX, minY = np.minimum(self._zoomCorner1, self._zoomCorner2)
+                maxX, maxY = np.maximum(self._zoomCorner1, self._zoomCorner2)
 
+                self.last_PointLabel = None  # reset pointLabel
+                
+                self.parent.reloadData()  # Again this is an ugly hack to be taken out
 
+                if self.last_draw is not None:
+                    self._Draw(self.last_draw[0],
+                               xAxis=(minX, maxX),
+                               yAxis=(minY, maxY),
+                               dc=None)
+
+            # else: # A box has not been drawn, zoom in on a point
+            # this interfered with the double click, so I've disables it.
+            #    X,Y = self._getXY(event)
+            #    self.Zoom( (X,Y), (self._zoomInFactor,self._zoomInFactor) )
+        if self._dragEnabled:
+            self.SetCursor(self.HandCursor)
+            if self.canvas.HasCapture():
+                self.canvas.ReleaseMouse()
