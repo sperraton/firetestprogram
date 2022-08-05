@@ -306,6 +306,10 @@ class MainGraphPanel(wx.Panel):
         self.unexposedTempGraph.setYLabel(f"Temp. (Deg. {self.controller.testSettings.temperatureUnits})")
         self.pressureGraph.setYLabel(f"Press. ({self.controller.testSettings.pressureUnits})")
 
+        # Set the Y-Axis limits
+        if self.controller.testSettings.pressureUnits == "Pascal":
+            self.pressureGraph.setYLimits(-62,62) # The limits for pressure when in Pascal
+
         self.Layout()
         self.Refresh()
 

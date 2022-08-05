@@ -90,7 +90,7 @@ static PyCodeObject *codeobj_43400e9a1b2a22ef62774c5287b31a00;
 static PyCodeObject *codeobj_ff3de98772294ce1b7c002c5babef0a4;
 static PyCodeObject *codeobj_83115dd71f6d9cd0b445a9640a6d12de;
 static PyCodeObject *codeobj_c0e606feff692aacc4e8db3e419ed9b6;
-static PyCodeObject *codeobj_1b58e69bf942eb11b3fa330bc8056080;
+static PyCodeObject *codeobj_1064ada21dd8594b84c2d7ef799e3a11;
 static PyCodeObject *codeobj_5d3cfaa4fdd8940e2613743613a2516f;
 
 static void createModuleCodeObjects(void) {
@@ -107,7 +107,7 @@ static void createModuleCodeObjects(void) {
     codeobj_ff3de98772294ce1b7c002c5babef0a4 = MAKE_CODEOBJECT(module_filename_obj, 67, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[77], mod_consts[149], NULL, 1, 0, 0);
     codeobj_83115dd71f6d9cd0b445a9640a6d12de = MAKE_CODEOBJECT(module_filename_obj, 111, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[129], mod_consts[150], NULL, 2, 0, 0);
     codeobj_c0e606feff692aacc4e8db3e419ed9b6 = MAKE_CODEOBJECT(module_filename_obj, 148, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[151], NULL, 2, 0, 0);
-    codeobj_1b58e69bf942eb11b3fa330bc8056080 = MAKE_CODEOBJECT(module_filename_obj, 159, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[80], mod_consts[152], NULL, 2, 0, 0);
+    codeobj_1064ada21dd8594b84c2d7ef799e3a11 = MAKE_CODEOBJECT(module_filename_obj, 160, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[80], mod_consts[152], NULL, 2, 0, 0);
     codeobj_5d3cfaa4fdd8940e2613743613a2516f = MAKE_CODEOBJECT(module_filename_obj, 60, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[38], mod_consts[153], NULL, 3, 0, 0);
 }
 
@@ -4143,42 +4143,42 @@ static PyObject *impl_Graphing$BaseGraph$$$function__11_setYLabel(struct Nuitka_
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_yLabel = python_pars[1];
-    struct Nuitka_FrameObject *frame_1b58e69bf942eb11b3fa330bc8056080;
+    struct Nuitka_FrameObject *frame_1064ada21dd8594b84c2d7ef799e3a11;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_1b58e69bf942eb11b3fa330bc8056080 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_1064ada21dd8594b84c2d7ef799e3a11 = NULL;
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    if (isFrameUnusable(cache_frame_1b58e69bf942eb11b3fa330bc8056080)) {
-        Py_XDECREF(cache_frame_1b58e69bf942eb11b3fa330bc8056080);
+    if (isFrameUnusable(cache_frame_1064ada21dd8594b84c2d7ef799e3a11)) {
+        Py_XDECREF(cache_frame_1064ada21dd8594b84c2d7ef799e3a11);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_1b58e69bf942eb11b3fa330bc8056080 == NULL) {
+        if (cache_frame_1064ada21dd8594b84c2d7ef799e3a11 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_1b58e69bf942eb11b3fa330bc8056080 = MAKE_FUNCTION_FRAME(codeobj_1b58e69bf942eb11b3fa330bc8056080, module_Graphing$BaseGraph, sizeof(void *)+sizeof(void *));
+        cache_frame_1064ada21dd8594b84c2d7ef799e3a11 = MAKE_FUNCTION_FRAME(codeobj_1064ada21dd8594b84c2d7ef799e3a11, module_Graphing$BaseGraph, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_1b58e69bf942eb11b3fa330bc8056080->m_type_description == NULL);
-    frame_1b58e69bf942eb11b3fa330bc8056080 = cache_frame_1b58e69bf942eb11b3fa330bc8056080;
+    assert(cache_frame_1064ada21dd8594b84c2d7ef799e3a11->m_type_description == NULL);
+    frame_1064ada21dd8594b84c2d7ef799e3a11 = cache_frame_1064ada21dd8594b84c2d7ef799e3a11;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_1b58e69bf942eb11b3fa330bc8056080);
+    pushFrameStack(frame_1064ada21dd8594b84c2d7ef799e3a11);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_1b58e69bf942eb11b3fa330bc8056080) == 2); // Frame stack
+    assert(Py_REFCNT(frame_1064ada21dd8594b84c2d7ef799e3a11) == 2); // Frame stack
 
     // Framed code:
     {
@@ -4195,13 +4195,13 @@ static PyObject *impl_Graphing$BaseGraph$$$function__11_setYLabel(struct Nuitka_
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 163;
+            exception_lineno = 164;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_yLabel);
         tmp_args_element_value_1 = par_yLabel;
-        frame_1b58e69bf942eb11b3fa330bc8056080->m_frame.f_lineno = 163;
+        frame_1064ada21dd8594b84c2d7ef799e3a11->m_frame.f_lineno = 164;
         tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[80], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -4210,7 +4210,7 @@ static PyObject *impl_Graphing$BaseGraph$$$function__11_setYLabel(struct Nuitka_
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 163;
+            exception_lineno = 164;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
@@ -4218,7 +4218,7 @@ static PyObject *impl_Graphing$BaseGraph$$$function__11_setYLabel(struct Nuitka_
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_1b58e69bf942eb11b3fa330bc8056080);
+    RESTORE_FRAME_EXCEPTION(frame_1064ada21dd8594b84c2d7ef799e3a11);
 #endif
 
     // Put the previous frame back on top.
@@ -4229,18 +4229,18 @@ static PyObject *impl_Graphing$BaseGraph$$$function__11_setYLabel(struct Nuitka_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_1b58e69bf942eb11b3fa330bc8056080);
+    RESTORE_FRAME_EXCEPTION(frame_1064ada21dd8594b84c2d7ef799e3a11);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_1b58e69bf942eb11b3fa330bc8056080, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_1b58e69bf942eb11b3fa330bc8056080->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_1b58e69bf942eb11b3fa330bc8056080, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_1064ada21dd8594b84c2d7ef799e3a11, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_1064ada21dd8594b84c2d7ef799e3a11->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_1064ada21dd8594b84c2d7ef799e3a11, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_1b58e69bf942eb11b3fa330bc8056080,
+        frame_1064ada21dd8594b84c2d7ef799e3a11,
         type_description_1,
         par_self,
         par_yLabel
@@ -4248,17 +4248,17 @@ static PyObject *impl_Graphing$BaseGraph$$$function__11_setYLabel(struct Nuitka_
 
 
     // Release cached frame if used for exception.
-    if (frame_1b58e69bf942eb11b3fa330bc8056080 == cache_frame_1b58e69bf942eb11b3fa330bc8056080) {
+    if (frame_1064ada21dd8594b84c2d7ef799e3a11 == cache_frame_1064ada21dd8594b84c2d7ef799e3a11) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_1b58e69bf942eb11b3fa330bc8056080);
-        cache_frame_1b58e69bf942eb11b3fa330bc8056080 = NULL;
+        Py_DECREF(cache_frame_1064ada21dd8594b84c2d7ef799e3a11);
+        cache_frame_1064ada21dd8594b84c2d7ef799e3a11 = NULL;
     }
 
-    assertFrameObject(frame_1b58e69bf942eb11b3fa330bc8056080);
+    assertFrameObject(frame_1064ada21dd8594b84c2d7ef799e3a11);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4331,7 +4331,7 @@ static PyObject *MAKE_FUNCTION_Graphing$BaseGraph$$$function__11_setYLabel(PyObj
 #if PYTHON_VERSION >= 0x300
         mod_consts[137],
 #endif
-        codeobj_1b58e69bf942eb11b3fa330bc8056080,
+        codeobj_1064ada21dd8594b84c2d7ef799e3a11,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -6230,7 +6230,7 @@ PyObject *modulecode_Graphing$BaseGraph(PyObject *module, struct Nuitka_MetaPath
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-                exception_lineno = 159;
+                exception_lineno = 160;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }

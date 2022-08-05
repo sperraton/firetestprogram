@@ -33,7 +33,7 @@ class StartTestDialog(wx.Dialog):
         self.lblTestTime = wx.StaticText(self, wx.ID_ANY, "Test Duration")
         self.cmbTestTime = wx.ComboBox(self, wx.ID_ANY, choices=testTimeStrings, style=wx.CB_DROPDOWN | wx.CB_READONLY)
         
-        targetCurveStrings = list(Standards.keys()) #["CAN/ULC S101", "E119", "IMO", "AS 1530.4"]
+        targetCurveStrings = list(Standards.keys())
         self.lblTargetCurve = wx.StaticText(self, wx.ID_ANY, "Required Temperature Curve")
         self.cmbTargetCurve = wx.ComboBox(self, wx.ID_ANY, choices=targetCurveStrings, style=wx.CB_DROPDOWN | wx.CB_READONLY)
         

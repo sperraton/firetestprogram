@@ -17,7 +17,7 @@ Standards = {
     "temperatureUnits" : "C",
     "pressureUnits" : "Pascal",
     "temperatureOffset" : 20,
-    "lagCorrection" : 1800,
+    "lagCorrection" : 0,
     "curveFunction" : lambda timeSeconds: 345*math.log10((8*(timeSeconds/60.0))+1.0)+20.0
   },
   "CAN/ULC S101" : {

@@ -21,6 +21,7 @@
 # Gracefully deal with non-responsive/connecting channels or phidgets.
 # All the functions with options should use the = None pattern
 # Change remaining channel to channelIndex symbols.
+from http.client import NotConnected
 from Phidget22.Phidget import *
 from Phidget22.Devices.Log import *
 from Phidget22.LogLevel import *
@@ -49,7 +50,8 @@ import wx.adv
 import wx.lib.mixins.inspection
 from pubsub import pub
 import os
-
+import sys
+import getopt
 
 ################################################################################
 # Main Window
@@ -58,7 +60,7 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
-        self.noConnect = False # Used to set the DAQ to not connect. Random data generated. For debugging purposes
+        self.noConnect = False #self.parent.noConnect # Used to set the DAQ to not connect. Generated data. For debugging purposes
         
         # self.warnToggle = True
         self.detachedWarn = True # Stop additional triggers of the warn dialog
@@ -75,7 +77,6 @@ class MainFrame(wx.Frame):
                         wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT, 
                         5000, self)
             splash.Show()
-
         
         self.controller = Controller(self) # Manage the DAQ and test control business
         self.connectToDAQ()
@@ -123,9 +124,6 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_CLOSE, self.onExit)
 
         self.addAllListeners() # Add the listeners to pub messages
-        self.Centre()
-        self.Show(True)
-        self.Maximize(True)
 
 
     def connectToDAQ(self):
@@ -263,21 +261,6 @@ class MainFrame(wx.Frame):
         self.Destroy() # Use this so as not to get an infinite loop when closing from frame
 
 
-    # def onChannelMap(self, event):
-    #     """
-    #     Show the dialog box that allows the user to map TC channels to specific roles
-    #     """
-    #     dlg = SensorSelectionDialog(parent=self)
-    #     dlg.ShowModal()
-
-    #     if dlg.resultThermocoupleMap:
-    #     # Pass the selected channels on to the controller
-    #         self.controller.updateThermocoupleMap(dlg.resultThermocoupleMap)
-    #         self.controller.updatePressureMap(dlg.resultPressureMap)
-
-    #     dlg.Destroy()
-
-
     def onChoosePath(self, event):
         """
         Choose the default directory that the logs are saved in.
@@ -305,7 +288,7 @@ class MainFrame(wx.Frame):
 
         # Check that we are not already doing a test
         if self.controller.isTestRunning:
-            warnDialog(self, "A test is already running.\nPlease stop test from file menu before trying to create a new one.", caption="Cannot create new test.")
+            warnDialog(self, "A test is already running.\nPlease stop test from the file menu before trying to create a new one.", caption="Cannot create new test.")
             return
 
         # Show the dialog to get pretest settings
@@ -625,15 +608,23 @@ class MainFrame(wx.Frame):
 
 class MainApp(wx.App, wx.lib.mixins.inspection.InspectionMixin):
 
+    def __init__(self, redirect=False, noConnect=False):
+        self.noConnect = noConnect
+        super().__init__(redirect=redirect)
+    
+
     def OnInit(self):
         locale = wx.Locale.GetSystemLanguage()
         self.locale = wx.Locale(locale)
+        # self.noConnect = noConnect
+
         #self.Init() #Init the inspection tool. CTRL-ALT-I to summon inspector
 
         # TODO Init controller and do the spashscreen here
-
         frame = MainFrame(None, wx.ID_ANY, "Fire Test Data Aquisition", size=(1100, 700)) # A Frame is a top-level window.
-
+        frame.Centre()
+        frame.Show(True)
+        frame.Maximize(True)
         return True
 
 
@@ -649,9 +640,24 @@ if __name__ == '__main__':
     #Log.enable(LogLevel.PHIDGET_LOG_INFO, "file.log")
     #logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
+    argv = sys.argv[1:]
+    print(argv)
+    try:
+        opts, args = getopt.getopt(argv, ":", ["noconnect"])
+    except getopt.GetoptError:
+        print("Unrecognised Argument")
+        #sys.exit(2)
+
+    for opt, arg in opts:
+        if opt == '--noconnect':
+            print("Not connecting to DAQ. Generating fake data.")
+#       elif opt in ("-i", "--ifile"):
+#          inputfile = arg
+#       elif opt in ("-o", "--ofile"):
+#          outputfile = arg
+
     # TODO Should I pass the app object to dialogs that need to talk to the controller
     # rather than having it them use the parent view. I should structure this better.
-    app = MainApp(redirect=False) #wx.App(redirect=False)  # Create a new app, don't redirect stdout/stderr to a window.
+    app = MainApp(redirect=False)#, noConnect=False) #wx.App(redirect=False)  # Create a new app, don't redirect stdout/stderr to a window.
     app.MainLoop()
-
     #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.

@@ -5,7 +5,7 @@ import wx
 from wx.lib import plot as wxplot
 from wx.lib.plot.plotcanvas import PlotCanvas
 
-from Enumerations import DEFAULT_LEGEND_VISIBILITY, GRAPH_SAVE_H, GRAPH_SAVE_W, GRAPH_VERT_PADDING, LEGEND_NUM_ROWS, UIcolours
+from Enumerations import BAD_VALUE_NUM, DEFAULT_LEGEND_VISIBILITY, GRAPH_SAVE_H, GRAPH_SAVE_W, GRAPH_VERT_PADDING, LEGEND_NUM_ROWS, UIcolours
 from Graphing.AxesSettings import AxesSettings
 
 import numpy as np
@@ -191,15 +191,19 @@ class GraphCanvas(PlotCanvas):
             if yData is None: return
             # Autoscale the vertical
             #maxYvalue = max(yData)
-            maxYvalue = yData[-1] # Since we are keeping a running track of the max, let's use the last incoming.
+            lastYvalue = yData[-1] # Since we are keeping a running track of the max, let's use the last incoming.
             
-            # BUG BUG BUG We adjusted the range but haven't redrawn the whole plot.
-            if maxYvalue > self.graphAxesSettings.ymax:
-                self.graphAxesSettings.ymax = maxYvalue + (GRAPH_VERT_PADDING*maxYvalue)
-                # TODO trigger a graph redraw here
+            if lastYvalue > self.graphAxesSettings.ymax:
+                self.graphAxesSettings.ymax = lastYvalue + (GRAPH_VERT_PADDING*lastYvalue)
                 self.graphPlots[plotIndex].points = list(zip(timeData, yData))
                 self.drawGraph()
-                
+
+            if lastYvalue<self.graphAxesSettings.ymin and lastYvalue != BAD_VALUE_NUM:
+                self.graphAxesSettings.ymin = lastYvalue - (GRAPH_VERT_PADDING*lastYvalue)
+                self.graphPlots[plotIndex].points = list(zip(timeData, yData))
+                self.drawGraph()
+
+
             # Check if we are to update the graph with all the data given or just the last 2 points
             if blit and (len(timeData) > 1):
                 temp = list(zip(timeData[-2:], yData[-2:])) # Taking only the last two points
@@ -439,7 +443,7 @@ class GraphCanvas(PlotCanvas):
         self.Clear()
 
 
-    def togglePlotLineVisibility(self, plotIndex, visible=True):
+    def setPlotLineVisibility(self, plotIndex, visible=True):
         """
         Hide/Show the plot line indicated by a the plotIndex
         """
@@ -453,6 +457,7 @@ class GraphCanvas(PlotCanvas):
     
         #self.graphPlots[plotIndex].attributes["style"] = penStyle
         self.graphPlots[plotIndex].attributes.update({"style":penStyle})
+
         self.parent.reloadData()  # Again this is an ugly hack to be taken out
         self.drawGraph(blit=False)
 
@@ -519,6 +524,14 @@ class GraphCanvas(PlotCanvas):
         """
         self.gc._yLabel = label
 
+    def setYLimits(self, ymin, ymax):
+        """
+        Sets the graph y-axis limits
+        """
+        # TODO clean passed values
+        self.graphAxesSettings.ymin = ymin
+        self.graphAxesSettings.ymax = ymax
+        self.drawGraph()
     
     ###########################################################################
     # Legend Specific Methods
@@ -528,31 +541,46 @@ class GraphCanvas(PlotCanvas):
         """
         Returns the size in screen units for legend box
         """
+        # Gaurd Clause
         if self._legendEnabled is not True:
             legendBoxWH = symExt = txtExt = (0, 0)
-        else:
-            # find max symbol size
-            symExt = graphics.getSymExtent(self.printerScale)
-            # find max legend text extent
-            dc.SetFont(self._getFont(self._fontSizeLegend))
+            return (legendBoxWH, symExt, txtExt)
+        
+        # find max symbol size
+        symExt = graphics.getSymExtent(self.printerScale)
+        # find max legend text extent
+        dc.SetFont(self._getFont(self._fontSizeLegend))
 
-            txtList = graphics.getLegendNames()
+        txtList = graphics.getLegendNames()
+        # Pare out legend names whose lines are penstyle = transparent
 
-            # Loop through the labels and find the largest one
-            txtExt = dc.GetTextExtent(txtList[0])
-            for txt in graphics.getLegendNames()[1:]:
-                txtExt = np.maximum(txtExt, dc.GetTextExtent(txt))
+        # Loop through the labels and find the largest one
+        txtExt = dc.GetTextExtent(txtList[0])
+        for txt in graphics.getLegendNames()[1:]:
+            txtExt = np.maximum(txtExt, dc.GetTextExtent(txt))
 
-            maxW = symExt[0] + txtExt[0]
-            maxH = max(symExt[1], txtExt[1])
+        maxW = symExt[0] + txtExt[0]
+        maxH = max(symExt[1], txtExt[1])
 
-            # padding .1 for lhs of legend box and space between lines
-            padding = 1.1
-            maxW = maxW * padding
-            maxH = maxH * padding * len(txtList)
+        # padding .1 for lhs of legend box and space between lines
+        padding = 1.1
+        maxW = maxW * padding
+        #maxH = maxH * padding * len(txtList)
+    
+        # 1.1 used as space between lines
+        lineHeight = maxH * 1.1
 
-            dc.SetFont(self._getFont(self._fontSizeAxis))
-            legendBoxWH = (maxW*self.numCols, maxH)
+        # Find the number of columns in the legend
+        # Not the most elegant but whatever. it works.
+        self.numCols = 1
+        #if there are transparent lines (or maybe just have a toggled flag) then numCols = 1
+        for i in range(len(txtList)):
+            if (i/self.numCols)*lineHeight > self.plotbox_size[1]*0.9:
+                self.numCols += 1
+                break
+
+        dc.SetFont(self._getFont(self._fontSizeAxis))
+        legendBoxWH = (maxW*self.numCols, self.plotbox_size[1])#, maxH*)
 
         return (legendBoxWH, symExt, txtExt)
 
@@ -568,15 +596,14 @@ class GraphCanvas(PlotCanvas):
         self.enableLegend = state
 
     # Shadow this to draw a multi-column legend box
-    def _drawLegend(self, dc, graphics, rhsW, topH, legendBoxWH,
-                    legendSymExt, legendTextExt):
+    def _drawLegend(self, dc, graphics, rhsW, topH, legendBoxWH, legendSymExt, legendTextExt):
         """
         Draws legend symbols and text
         """
 
         # top right hand corner of graph box is ref corner
         trhc = (self.plotbox_origin +
-                (self.plotbox_size - [rhsW, topH]) * [1, -1])
+                  (self.plotbox_size - [rhsW, topH]) * [1, -1])
         # border space between legend sym and graph box
         legendLHS = .091 * legendBoxWH[0]
         
@@ -591,26 +618,26 @@ class GraphCanvas(PlotCanvas):
         # Cycle through all the graphic objects (polylines)
         col = 0
         numObj = len(graphics)
-        #numRows = round(numObj / self.numCols)
+        numRows = round(numObj / self.numCols)
 
         for i in range(numObj):
-            o = graphics[i]
-            s = (i % LEGEND_NUM_ROWS) * lineHeight
+            obj = graphics[i]
+            s = (i % numRows) * lineHeight
             offset = col*legendBoxWH[0]/(self.numCols-0.25)
             offset += 2
 
             # What type of object?
-            if isinstance(o, PolyMarker) or isinstance(o, PolyBoxPlot):
+            if isinstance(obj, PolyMarker) or isinstance(obj, PolyBoxPlot):
                 # draw marker with legend
                 pnt = (trhc[0] + legendLHS + legendSymExt[0] / 2.,
                        trhc[1] + s + lineHeight / 2.)
-                o.draw(dc, self.printerScale, coord=np.array([pnt]))
+                obj.draw(dc, self.printerScale, coord=np.array([pnt]))
 
-            elif isinstance(o, PolyLine):
+            elif isinstance(obj, PolyLine):
                 # draw line with legend
-                pnt1 = (trhc[0] + legendLHS + offset,                   trhc[1] + s + lineHeight / 2.)
+                pnt1 = (trhc[0] + legendLHS + offset,                                 trhc[1] + s + lineHeight / 2.)
                 pnt2 = (trhc[0] + legendLHS + legendSymExt[0] + offset, trhc[1] + s + lineHeight / 2.)
-                o.draw(dc, printerScale=2.0, coord=np.array([pnt1, pnt2])) # Using the printerScale to thicken up the lines a bit # self.printerScale, coord=np.array([pnt1, pnt2]))
+                obj.draw(dc, printerScale=2.0, coord=np.array([pnt1, pnt2])) # Using the printerScale to thicken up the lines a bit # self.printerScale, coord=np.array([pnt1, pnt2]))
 
             else:
                 raise TypeError(
@@ -619,10 +646,14 @@ class GraphCanvas(PlotCanvas):
             # draw legend txt
             #Check if we've reached the end of the allowed lines in this column and switch columns if needed
             pnt = ((trhc[0] + legendLHS + legendSymExt[0] + 5 * self._pointSize[0]) + offset,
-                   (trhc[1] + s + lineHeight / 2. - legendTextExt[1] / 2))
+                       (trhc[1] + s + lineHeight / 2. - legendTextExt[1] / 2))
 
-            if i % LEGEND_NUM_ROWS+1 == LEGEND_NUM_ROWS: col+=1
-            dc.DrawText(o.getLegend(), pnt[0], pnt[1])
+            #if i*lineHeight > self.plotbox_size[1]*0.9: col += 1
+            if i % numRows+1 == numRows: col+=1
+
+
+            if  "style" in obj.attributes and obj.attributes["style"] == wx.PENSTYLE_SOLID:
+                dc.DrawText(obj.getLegend(), pnt[0], pnt[1])
 
         dc.SetFont(self._getFont(self._fontSizeAxis))  # reset
         

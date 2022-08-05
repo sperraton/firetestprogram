@@ -1,8 +1,8 @@
-from pydoc import visiblename
-from tkinter import Label
+#from pydoc import visiblename
+#from tkinter import Label
 import wx
 from pubsub import pub
-from math import ceil
+#from math import ceil
 import colorsys
 
 from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_SAVE_W, GRAPH_SAVE_H, DEFAULT_TEST_TIME, LEGEND_NUM_ROWS
@@ -57,11 +57,11 @@ class BaseGraph(wx.Panel):
         self.graphCanvas.initPlot(isAutoscale=True)
 
 
-    def togglePlotLineVisibility(self, plotIndex, visible=True):
+    def setPlotLineVisibility(self, plotIndex, visible=True):
         """
         Hide/Show the plot line indicated by a the  plotIndex
         """
-        self.graphCanvas.togglePlotLineVisibility(plotIndex, visible=visible)
+        self.graphCanvas.setPlotLineVisibility(plotIndex, visible=visible)
 
 
     def reloadData(self):
@@ -156,8 +156,16 @@ class BaseGraph(wx.Panel):
         self.graphCanvas.scaleGraphXaxis(minutes)
         #self.graphCanvas.drawGraph() # Update the drawn plot
 
+
     def setYLabel(self, yLabel="No Label Passed"):
         """
         Sets the graph yLabel to the specified string
         """
         self.graphCanvas.setYLabel(yLabel)
+    
+
+    def setYLimits(self, ymin, ymax):
+        """
+        Sets the graph y-axis limits
+        """
+        self.graphCanvas.setYLimits(ymin, ymax)

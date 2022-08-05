@@ -2,13 +2,13 @@ from email.policy import default
 from enum import Enum
 #from matplotlib import cm
 
-VERSION_NUM_STRING = "1.47"
+VERSION_NUM_STRING = "1.51"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
 
-testTimeStrings = ["3 min", "20 min.", "30 min.", "45 min.", "60 min.", "90 min.", "2 hrs.", "3 hrs.", "4 hrs."]
-testTimeValues = [3, 20, 30, 45, 60, 90, 120, 180, 240]
+testTimeStrings = ["5 min", "20 min.", "30 min.", "45 min.", "60 min.", "90 min.", "2 hrs.", "3 hrs.", "4 hrs."]
+testTimeValues = [5, 20, 30, 45, 60, 90, 120, 180, 240]
 
 UIcolours = enum(GRAPH_TARGET_TEMP_SERIES="#A40000",
                  GRAPH_AVERAGE_SERIES="#204A87",
