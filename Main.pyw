@@ -21,7 +21,10 @@
 # Gracefully deal with non-responsive/connecting channels or phidgets.
 # All the functions with options should use the = None pattern
 # Change remaining channel to channelIndex symbols.
+from csv import Dialect
+from ctypes import BigEndianStructure
 from http.client import NotConnected
+from multiprocessing import connection
 from Phidget22.Phidget import *
 from Phidget22.Devices.Log import *
 from Phidget22.LogLevel import *
@@ -29,6 +32,7 @@ from Phidget22.LogLevel import *
 import logging
 
 from Controller import Controller
+from Dialogs.DialogInstructions import InstructionsDialog
 from HelperFunctions import *
 from Enumerations import *
 from TestSettings import TestSettings
@@ -60,7 +64,7 @@ class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
 
-        self.noConnect = False #self.parent.noConnect # Used to set the DAQ to not connect. Generated data. For debugging purposes
+        self.noConnect = wx.GetApp().noConnect # Used to set the DAQ to not connect. Generated data. For debugging purposes
         
         # self.warnToggle = True
         self.detachedWarn = True # Stop additional triggers of the warn dialog
@@ -193,6 +197,8 @@ class MainFrame(wx.Frame):
         #------------------------------------------------------------
         self.helpMenu = wx.Menu()
         aboutItem = self.helpMenu.Append(wx.ID_ABOUT)
+        instructionsItem = self.helpMenu.Append(-1, "Manual")
+
 
         self.menuBar = wx.MenuBar()
         self.menuBar.Append(self.fileMenu, "&File")
@@ -216,6 +222,7 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_MENU, self.onProfileManager, self.profileManagerItem)
         self.Bind(wx.EVT_MENU, self.onThresholdSettings, self.thresholdSettingsItem)
         self.Bind(wx.EVT_MENU, self.onAbout, aboutItem)
+        self.Bind(wx.EVT_MENU, self.onInstructions, instructionsItem)
 
 
 ###############################################################################
@@ -457,6 +464,14 @@ class MainFrame(wx.Frame):
                       "About Fire Testing Program",
                       wx.OK|wx.ICON_INFORMATION)
 
+    def onInstructions(self, event):
+        """
+        Display the instruction manual.
+        """
+        # TODO provide more information here
+        dlg = InstructionsDialog(self)
+        dlg.ShowModal()
+        dlg.Destroy()
 
 ################################################################################
 # Functions
@@ -606,7 +621,7 @@ class MainFrame(wx.Frame):
         self.channelErrorWarn = False
 
 
-class MainApp(wx.App, wx.lib.mixins.inspection.InspectionMixin):
+class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
 
     def __init__(self, redirect=False, noConnect=False):
         self.noConnect = noConnect
@@ -647,10 +662,12 @@ if __name__ == '__main__':
     except getopt.GetoptError:
         print("Unrecognised Argument")
         #sys.exit(2)
-
+    connectionOption = False    #Default to trying to connect to the DAQ
+    
     for opt, arg in opts:
         if opt == '--noconnect':
             print("Not connecting to DAQ. Generating fake data.")
+            connectionOption = True
 #       elif opt in ("-i", "--ifile"):
 #          inputfile = arg
 #       elif opt in ("-o", "--ofile"):
@@ -658,6 +675,6 @@ if __name__ == '__main__':
 
     # TODO Should I pass the app object to dialogs that need to talk to the controller
     # rather than having it them use the parent view. I should structure this better.
-    app = MainApp(redirect=False)#, noConnect=False) #wx.App(redirect=False)  # Create a new app, don't redirect stdout/stderr to a window.
+    app = MainApp(redirect=False, noConnect=connectionOption)#, noConnect=False) #wx.App(redirect=False)  # Create a new app, don't redirect stdout/stderr to a window.
     app.MainLoop()
     #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.

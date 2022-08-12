@@ -136,7 +136,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_pubsub$core$listener$$$function__10_setCurriedArgs();
@@ -4396,7 +4396,7 @@ static PyObject *impl_pubsub$core$listener$$$function__18___call__(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_call_result_3 = impl___main__$$$function__4_complex_call_helper_star_dict(dir_call_args);
+            tmp_call_result_3 = impl___main__$$$function__6_complex_call_helper_star_dict(dir_call_args);
         }
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());

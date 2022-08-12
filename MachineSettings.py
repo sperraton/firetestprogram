@@ -43,7 +43,7 @@ class MachineSettings():
         Load the serial numbers from the config
         """
         try:
-            print("Loading settings ,,,")
+            print("Loading settings ...")
 
             with open("settings.json") as f:
                 self.settingsData = json.load(f, object_hook=as_enum)
@@ -69,7 +69,7 @@ class MachineSettings():
 
         if "serialNums" in self.settingsData["machineSetup"]:
 
-            print("    Loading serials ...")
+            print("|___Loading serials ...")
             self.thermocoupleSerialNums = self.settingsData["machineSetup"]["serialNums"]["thermocouple"] #thermocoupleSerialNums
             print(f"        Thermocouple Serials: {self.thermocoupleSerialNums}")
             self.pressureSerialNums = self.settingsData["machineSetup"]["serialNums"]["pressure"] #pressureSerialNums        
@@ -86,12 +86,12 @@ class MachineSettings():
         print(f"        Pres. Sens. isVoltage: {self.pressureSenseIsVoltage}")
 
         # TODO make a default profile
-        print("    Loading sensor configuration ...")
+        print("|___Loading sensor configuration ...")
         self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
         self.pressureConfig = self.settingsData["defaultProfile"]["pressureConfig"]
 
         #Load up the map of how the Phidgets are wired up
-        print("    Loading addresses ...")
+        print("|___Loading addresses ...")
         self.thermocoupleAddresses = []
 
         chNum = 0
@@ -110,7 +110,7 @@ class MachineSettings():
             self.initThermocoupleAddresses()
 
 
-        print("    Loading profile ...")
+        print("|___Loading profile ...")
         self.currentProfile = self.settingsData["machineSetup"].get("currentProfile", 0) # Default to 0
         self.defaultSavePath = self.settingsData["machineSetup"].get("defaultSavePath", os.getcwd())
         self.defaultBackupPath = self.settingsData["machineSetup"].get("defaultBackupPath", os.getcwd())

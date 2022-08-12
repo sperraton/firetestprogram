@@ -55,6 +55,7 @@ class BaseGraph(wx.Panel):
         """
         self.graphCanvas.replaceGraphPlotSettings(plotSettings)
         self.graphCanvas.initPlot(isAutoscale=True)
+        # TODO reset the show legend and raw data lines to the defaults
 
 
     def setPlotLineVisibility(self, plotIndex, visible=True):

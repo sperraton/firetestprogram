@@ -147,7 +147,7 @@ static PyObject *MAKE_GENERATOR_numpy$lib$twodim_base$$$function__20_tril_indice
 static PyObject *MAKE_GENERATOR_numpy$lib$twodim_base$$$function__23_triu_indices$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_keywords_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_keywords_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$lib$twodim_base$$$function__10__tri_dispatcher(PyObject *defaults, PyObject *kw_defaults);
@@ -4506,7 +4506,7 @@ static PyObject *impl_numpy$lib$twodim_base$$$function__13_tril(struct Nuitka_Fu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_2 = impl___main__$$$function__6_complex_call_helper_keywords_star_list(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__7_complex_call_helper_keywords_star_list(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4912,7 +4912,7 @@ static PyObject *impl_numpy$lib$twodim_base$$$function__14_triu(struct Nuitka_Fu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_2 = impl___main__$$$function__6_complex_call_helper_keywords_star_list(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__7_complex_call_helper_keywords_star_list(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());

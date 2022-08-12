@@ -154,7 +154,7 @@ static PyObject *MAKE_GENERATOR_numpy$lib$utils$$$function__15_lookfor$$$genexpr
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_pos_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__13_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$lib$utils$$$function__10__split_line();
@@ -19776,7 +19776,7 @@ static PyObject *impl_numpy$lib$utils$$$function__15_lookfor$$$function__2_relev
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__11_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__13_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());

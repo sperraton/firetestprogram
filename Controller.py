@@ -178,10 +178,8 @@ class Controller():
         # Set the unexposed TC max limit based on the current average.
         # If the unexposed failure threshold has not been calculated, do it now.
         if self.unexposedThresh == 0.0:
-            self.unexposedThresh = self.testData.avgUnexposed + \
-                self.getUnexposedThresh(self.testSettings.temperatureUnits)
-            pub.sendMessage("unexposedGraph.threshold",
-                            thresh=self.unexposedThresh)
+            self.unexposedThresh = self.testData.avgUnexposed +  self.getUnexposedThresh(self.testSettings.temperatureUnits)
+            pub.sendMessage("unexposedGraph.threshold", threshold=self.unexposedThresh)
 
         self.lastWritten = self.elapsedTime
         self.timer.StartOnce(self.updateRate)
@@ -195,6 +193,8 @@ class Controller():
         self.timer.Stop()
         self.isTestRunning = False
         self.testData.stopListening()
+        self.testData.dumpAllData() # Since the test report is saed at at least a 5sec interval, we should save all the intermeadiary data
+
         pub.sendMessage("test.stopped")
 
     def makeFakeData(self):
@@ -484,7 +484,7 @@ class Controller():
             h += 1
 
         timeString = "%d:%02d:%02d" % (h, m, s)
-
+        #print(f"Elapsed Time: {self.elapsedTime}  timeString: {timeString}")
         # Build the standard front material
         self.currentRow.append(timeString) # Timestamp
         self.currentRow.append("{0:.0f}".format(self.elapsedTime)) # Timestamp in decimal seconds

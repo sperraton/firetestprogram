@@ -1770,7 +1770,7 @@ PyObject *modulecode_TestStandards(PyObject *module, struct Nuitka_MetaPathBased
             tmp_res = PyDict_SetItem(tmp_dict_value_1, tmp_dict_key_3, tmp_dict_value_3);
             assert(!(tmp_res != 0));
             tmp_dict_key_3 = mod_consts[29];
-            tmp_dict_value_3 = mod_consts[37];
+            tmp_dict_value_3 = mod_consts[18];
             tmp_res = PyDict_SetItem(tmp_dict_value_1, tmp_dict_key_3, tmp_dict_value_3);
             assert(!(tmp_res != 0));
             tmp_dict_key_3 = mod_consts[31];
@@ -1784,7 +1784,7 @@ PyObject *modulecode_TestStandards(PyObject *module, struct Nuitka_MetaPathBased
             tmp_res = PyDict_SetItem(tmp_assign_source_6, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[38];
+            tmp_dict_key_1 = mod_consts[37];
             tmp_dict_key_4 = mod_consts[23];
             tmp_dict_value_4 = mod_consts[34];
             tmp_dict_value_1 = _PyDict_NewPresized( 5 );
@@ -1799,7 +1799,7 @@ PyObject *modulecode_TestStandards(PyObject *module, struct Nuitka_MetaPathBased
             tmp_res = PyDict_SetItem(tmp_dict_value_1, tmp_dict_key_4, tmp_dict_value_4);
             assert(!(tmp_res != 0));
             tmp_dict_key_4 = mod_consts[29];
-            tmp_dict_value_4 = mod_consts[37];
+            tmp_dict_value_4 = mod_consts[38];
             tmp_res = PyDict_SetItem(tmp_dict_value_1, tmp_dict_key_4, tmp_dict_value_4);
             assert(!(tmp_res != 0));
             tmp_dict_key_4 = mod_consts[31];

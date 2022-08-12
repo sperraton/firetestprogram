@@ -264,11 +264,11 @@ class MainGraphPanel(wx.Panel):
             print("!!! Couldn't load all graph data.")
    
 
-    def updateUnexposedThreshold(self, thresh):
+    def updateUnexposedThreshold(self, threshold):
         """
         Draws the old line on the Unexposed graph
         """
-        self.unexposedTempGraph.updateUnexposedThreshold(thresh)
+        self.unexposedTempGraph.updateUnexposedThreshold(threshold)
 
 
     def blitAllGraphs(self):

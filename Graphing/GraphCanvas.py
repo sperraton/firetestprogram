@@ -574,10 +574,13 @@ class GraphCanvas(PlotCanvas):
         # Not the most elegant but whatever. it works.
         self.numCols = 1
         #if there are transparent lines (or maybe just have a toggled flag) then numCols = 1
+        rowCount = 0
         for i in range(len(txtList)):
+            rowCount +=1
             if (i/self.numCols)*lineHeight > self.plotbox_size[1]*0.9:
-                self.numCols += 1
+                #self.numCols += 1
                 break
+        self.numCols = ceil(len(txtList)/rowCount)
 
         dc.SetFont(self._getFont(self._fontSizeAxis))
         legendBoxWH = (maxW*self.numCols, self.plotbox_size[1])#, maxH*)
@@ -624,7 +627,7 @@ class GraphCanvas(PlotCanvas):
             obj = graphics[i]
             s = (i % numRows) * lineHeight
             offset = col*legendBoxWH[0]/(self.numCols-0.25)
-            offset += 2
+            #offset += 2
 
             # What type of object?
             if isinstance(obj, PolyMarker) or isinstance(obj, PolyBoxPlot):

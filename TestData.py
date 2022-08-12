@@ -16,6 +16,7 @@ class TestData():
         # All the currently captured values are posted here in a dict, so that each 
         # current value can be accessed by passing the channel # (i.e. self.furnaceValues[1]
         # returns a dict of the formatted and numeric values)
+        # TODO make sure the access to this is thread safe
         self.furnaceValues = {}
         self.unexposedValues = {}
         self.afterburnerValues = {}
@@ -123,7 +124,10 @@ class TestData():
             # Do nothin
             return
 
-
+    def dumpAllData(self):
+        print("Dumping all data...")
+        print("================================")
+        print(self.timeData)
 
 
     # Functions concerning the time stamping of data (x-axis)
