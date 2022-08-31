@@ -36,6 +36,7 @@ class Profile():
 
 
     def dictToProfile(self, dict):
+        # TODO Can't we just use one large dictionary to hold all the profile infor rather than handing it out piecemeal to various variables?
         self.thermocoupleConfig = dict["thermocoupleConfig"]
         self.pressureConfig = dict["pressureConfig"]
         self.currentPressuresSerial = dict["currentPressuresSerial"]

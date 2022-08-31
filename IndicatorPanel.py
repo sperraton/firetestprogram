@@ -1,3 +1,4 @@
+from sre_parse import SubPattern
 import wx
 from pubsub import pub
 from Enumerations import DEFAULT_INDICATOR_FONT_SIZE, UIcolours
@@ -12,81 +13,44 @@ class IndicatorPanel(wx.Panel):
         font = self.GetFont()
         font.SetPointSize(DEFAULT_INDICATOR_FONT_SIZE) # TODO May change to pixel size
         #------------------------------------------------------------
-        subPanel1 = wx.Panel(self)
-        subPanel1.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
-        subPanel1.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.lblIndCurve = wx.StaticText(subPanel1,
-                                         label="Required Curve: ",
-                                         style=wx.ST_ELLIPSIZE_MIDDLE)
-        self.lblIndCurve.SetFont(font)
-        subPanel1Sizer = wx.BoxSizer(wx.HORIZONTAL)
-        subPanel1Sizer.Add(self.lblIndCurve, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        subPanel1.SetSizer(subPanel1Sizer)
-        subPanel1Sizer.Layout()
 
+        self.indicators = {
+            "DELTA": {"label": "Delta Temp.: ", "labelObject": None, "subPanel": wx.Panel(self)},
+            "AUC": {"label": "% AUC: ", "labelObject": None, "subPanel": wx.Panel(self)},
+            "ELAPSED": {"label": "Elapsed Time: ", "labelObject": None, "subPanel": wx.Panel(self)},
+            "CURVE": {"label": "Required Curve: ", "labelObject": None, "subPanel": wx.Panel(self)},
+            "CAB": {"label": "Cab. Temp.: ", "labelObject": None, "subPanel": wx.Panel(self)}
+        }
+
+        #self.subPanel = [wx.Panel(self) for _ in range(len(labels))]
+
+        for obj in self.indicators.values():
+            #panel = wx.Panel(self)
+            obj["subPanel"].SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
+            obj["subPanel"].SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
+            obj["labelObject"] = wx.StaticText(obj["subPanel"],
+                                            label=obj["label"],
+                                            style=wx.ST_ELLIPSIZE_MIDDLE)
+
+            # Treat this as special. In the future if we need to generalise it we can roll the font size definition into the dict.
+            if obj["label"]  == "% AUC: ":
+                aucFont = self.GetFont()
+                aucFont.SetPointSize(DEFAULT_INDICATOR_FONT_SIZE-2) # TODO May change to pixel size
+                obj["labelObject"] .SetFont(aucFont)
+
+            else:
+                obj["labelObject"] .SetFont(font)
+
+            panelSizer = wx.BoxSizer(wx.HORIZONTAL)
+            panelSizer.Add(obj["labelObject"], 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
+            obj["subPanel"].SetSizer(panelSizer)
+            obj["subPanel"].Sizer.Layout()
+
+            self.indicatorSizer.Add(obj["subPanel"], 1, wx.EXPAND|wx.ALL, 5)
+            
         #------------------------------------------------------------
-        subPanel2 = wx.Panel(self)
-        subPanel2.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
-        subPanel2.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.lblElapsedTime = wx.StaticText(subPanel2,
-                                         label="Elapsed Time: ",
-                                         style=wx.ST_ELLIPSIZE_MIDDLE)
-        self.lblElapsedTime.SetFont(font)
-        subPanel2Sizer = wx.BoxSizer(wx.HORIZONTAL)
-        subPanel2Sizer.Add(self.lblElapsedTime, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        subPanel2.SetSizer(subPanel2Sizer)
-        subPanel2Sizer.Layout()
-
-        #------------------------------------------------------------
-        subPanel3 = wx.Panel(self)
-        subPanel3.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
-        subPanel3.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.lblDelta = wx.StaticText(subPanel3,
-                                         label="Delta Temp.: ",
-                                         style=wx.ST_ELLIPSIZE_MIDDLE)
-        self.lblDelta.SetFont(font)
-        subPanel3Sizer = wx.BoxSizer(wx.HORIZONTAL)
-        subPanel3Sizer.Add(self.lblDelta, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        subPanel3.SetSizer(subPanel3Sizer)
-        subPanel3Sizer.Layout()
-
-        #------------------------------------------------------------
-        subPanel4 = wx.Panel(self)
-        subPanel4.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
-        subPanel4.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.lblAUC = wx.StaticText(subPanel4,
-                                         label="% AUC: ",
-                                         style=wx.ST_ELLIPSIZE_MIDDLE)
-        aucFont = self.GetFont()
-        aucFont.SetPointSize(DEFAULT_INDICATOR_FONT_SIZE-2) # TODO May change to pixel size
-        self.lblAUC.SetFont(aucFont)
-        subPanel4Sizer = wx.BoxSizer(wx.HORIZONTAL)
-        subPanel4Sizer.Add(self.lblAUC, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        subPanel4.SetSizer(subPanel4Sizer)
-        subPanel4Sizer.Layout()
-
-        #------------------------------------------------------------
-        self.subPanel5 = wx.Panel(self)
-        self.subPanel5.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
-        self.subPanel5.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
-        self.lblCabTemp = wx.StaticText(self.subPanel5,
-                                        label="Cab. Temp.: ",
-                                        style=wx.ST_ELLIPSIZE_MIDDLE)
-        self.lblCabTemp.SetFont(font)
-        subPanel5Sizer = wx.BoxSizer(wx.HORIZONTAL)
-        subPanel5Sizer.Add(self.lblCabTemp, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
-        self.subPanel5.SetSizer(subPanel5Sizer)
-        subPanel5Sizer.Layout()
-
-
-        self.indicatorSizer.Add(subPanel3, 1, wx.EXPAND|wx.ALL, 5) # The Delta should be on the left so it doesn't get cut off in window resizing.
-        self.indicatorSizer.Add(subPanel4, 1, wx.EXPAND|wx.ALL, 5)
-        self.indicatorSizer.Add(subPanel2, 1, wx.EXPAND|wx.ALL, 5)
-        self.indicatorSizer.Add(subPanel1, 1, wx.EXPAND|wx.ALL, 5)
-        self.indicatorSizer.Add(self.subPanel5, 1, wx.EXPAND|wx.ALL, 5)
         self.SetSizer(self.indicatorSizer)
         self.indicatorSizer.Layout()
-
         self.indicatorSizer.Fit(self)
         self.Show()
         self.Layout()
@@ -97,38 +61,31 @@ class IndicatorPanel(wx.Panel):
         pub.subscribe(self.updateIndicators, "indicator.update")
 
     def updateIndicators(self, indicator, lblValue, warn=None):
-        # TODO We could just pass the label ID and set the string that way.
-        # but this will do for now.
-        if indicator == "CURVE":
-            self.lblIndCurve.SetLabel(lblValue)
-        elif indicator == "ELAPSED":
-            self.lblElapsedTime.SetLabel(lblValue)
-        elif indicator == "DELTA":
-            self.lblDelta.SetLabel(lblValue)
-        elif indicator == "AUC":
-            self.lblAUC.SetLabel(lblValue)
-        elif indicator == "CAB":
-            self.lblCabTemp.SetLabel(lblValue)
+
+
+        self.indicators[indicator]["labelObject"].SetLabel(lblValue)
+
+        if indicator == "CAB":
             if warn == 2:
                 if not self.timerWarning.IsRunning():
                     self.timerWarning.Start(750, oneShot=False)
             elif warn == 1:
                 self.timerWarning.Stop()
-                self.subPanel5.SetBackgroundColour(UIcolours.CTRL_WARN_BG)
+                self.indicators["CAB"]["subPanel"].SetBackgroundColour(UIcolours.CTRL_WARN_BG)
             else:
                 self.timerWarning.Stop()
-                self.subPanel5.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
+                self.indicators["CAB"]["subPanel"].SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
 
 
     def onWarningToggle(self, event):
         # TODO make this more general purpose
         if self.warnToggle:
-            self.subPanel5.SetBackgroundColour(UIcolours.CTRL_ERROR_BG)
-            self.subPanel5.Refresh()
+            self.indicators["CAB"]["subPanel"].SetBackgroundColour(UIcolours.CTRL_ERROR_BG)
+            self.indicators["CAB"]["subPanel"].Refresh()
             self.warnToggle = False
         else:
-            self.subPanel5.SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
-            self.subPanel5.Refresh()
+            self.indicators["CAB"]["subPanel"].SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)
+            self.indicators["CAB"]["subPanel"].Refresh()
             self.warnToggle = True
 
 

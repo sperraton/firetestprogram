@@ -17,6 +17,7 @@ class FurnaceGraph(BaseGraph):
         """
         self.controller = controller
         BaseGraph.__init__(self, parent, panelID, axesSettings)
+               
         self.initFurnaceTemperaturePlot()
 
     def initFurnaceTemperaturePlot(self):
@@ -75,6 +76,12 @@ class FurnaceGraph(BaseGraph):
         #             zorder=3)
 
         self.initPlotLines([self.targetSettings, self.furnAvgSettings]+self.furnRawSettings) #+[self.furnUprLimitSettings])
+
+        #wx.PostEvent(self.graphToolbar.GetEventHandler(), wx.PyCommandEvent(wx.EVT_CHECKBOX.typeId, self.graphToolbar.GetId()))
+        self.graphToolbar.chkRawVisibility.SetValue(False) # Don't show the visibility of the raw data on the Furnace graph
+                # Toggle the visibility on each line in the Raw group
+        for i in range(2, len(self.graphCanvas.graphPlotSettings)) : # Skip the Avg and the threshold lines
+            self.graphCanvas.setPlotLineVisibility(plotIndex=i, visible=False)
 
 
     def updateFurnaceData(self, timeData, avgData, rawData, blit=False):
@@ -245,7 +252,7 @@ class UnexposedGraph(BaseGraph):
             threshold = self.graphCanvas.graphPlots[1].points[0][1]
 
         if threshold > 0:
-            self.updateUnexposedThreshold(threshold) # Continue on the threshold line
+            self.updateUnexposedThreshold(threshold) # Continue on the threshold line but not if this is the graph setup at the start of the test.
 
         super().setTestTimeMinutes(minutes)
 

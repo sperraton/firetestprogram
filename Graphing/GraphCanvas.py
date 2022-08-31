@@ -574,14 +574,18 @@ class GraphCanvas(PlotCanvas):
         # Not the most elegant but whatever. it works.
         self.numCols = 1
         #if there are transparent lines (or maybe just have a toggled flag) then numCols = 1
-        rowCount = 0
-        for i in range(len(txtList)):
-            rowCount +=1
-            if (i/self.numCols)*lineHeight > self.plotbox_size[1]*0.9:
-                #self.numCols += 1
-                break
-        self.numCols = ceil(len(txtList)/rowCount)
-
+        try:
+            if self.parent.graphToolbar.chkRawVisibility.GetValue():
+                rowCount = 0
+                for i in range(len(txtList)):
+                    rowCount +=1
+                    if (i/self.numCols)*lineHeight > self.plotbox_size[1]*0.9:
+                        #self.numCols += 1
+                        break
+                self.numCols = ceil(len(txtList)/rowCount)
+        except:
+            self.numCols = 1
+        
         dc.SetFont(self._getFont(self._fontSizeAxis))
         legendBoxWH = (maxW*self.numCols, self.plotbox_size[1])#, maxH*)
 

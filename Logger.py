@@ -22,7 +22,6 @@ class Logger():
         if self.fullBackupFileName is None:
 
             with open(self.fullFileName, mode, newline="") as f1:
-                #f1.writelines(os.linesep.join(lines))
                 csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 csvWriter.writerow(line)
         else:
@@ -30,13 +29,28 @@ class Logger():
             with open(self.fullFileName, mode, newline="") as f1, \
                 open(self.fullBackupFileName, mode, newline="") as f2:
 
-                # f1.writelines(os.linesep.join(lines)+os.linesep)
-                # f2.writelines(os.linesep.join(lines)+os.linesep)
                 csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 csvWriter.writerow(line)
                 csvWriter = csv.writer(f2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 csvWriter.writerow(line)
 
+
+    def writeRawDataToFile(self, rawData):
+        """
+        Takes the formated raw data passed by the TestData object and writes it to file
+        """
+        if self.fullBackupFileName is None:
+            with open(self.fullFileName[:-4]+"_FULL_DATA.csv", "w+", newline="") as f1:
+                csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                csvWriter.writerows(rawData)
+        else:
+            with open(self.fullFileName[:-4]+"_FULL_DATA.csv", "w+", newline="") as f1, \
+                open(self.fullBackupFileName[:-4]+"_FULL_DATA.csv", "w+", newline="") as f2:
+
+                csvWriter = csv.writer(f1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                csvWriter.writerows(rawData)
+                csvWriter = csv.writer(f2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                csvWriter.writerows(rawData)
 
     def writeHeaders(self, fileHeader, tableHeader):
         """
@@ -45,7 +59,6 @@ class Logger():
 
         try:
             # Create the data table header
-            #headerString = ",".join([item for item in tableHeader])
             self.writeLineToFile(["Saved Data"], "w+") # Make the file
             for line in fileHeader:
                 self.writeLineToFile(line, "a")
@@ -54,10 +67,6 @@ class Logger():
 
         except IOError as e:
             print(f"Log header write operation failed: {e.strerror}")
-            # Warn the user we couldn't write to the log file. #BUGBUGBUG the dialog needs a wx object as parent
-            #warnDialog(self, "There was an error creating the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
-            # Abort the test
-            #self.stopTest()
             return True
 
 
@@ -66,23 +75,9 @@ class Logger():
         Record the numerical data in the table.
         """
         try:
-
-            # Make list into string
-            # rowString = ""
-            # for cell in dataRow[:-1]:
-            #     rowString += str(cell) + ","
-            # rowString += str(dataRow[-1])# + "\n" # Do the final data point
-
-            self.writeLineToFile(dataRow, "a") #([rowString], "a")
-
-
+            self.writeLineToFile(dataRow, "a")
         except IOError as e:
             print(f"Log data write operation failed: {e.strerror}")
-            # See above bug
-            # Warn the user we couldn't write to the log file.
-            #warnDialog(self, "There was an error writing data to the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
-            # Abort the test
-            #self.stopTest() Actually don't. The data is still captured onscreen.
             return True
 
 
@@ -112,7 +107,4 @@ class Logger():
 
         except IOError as e:
             print(f"Log correction write operation failed: {e.strerror}")
-            # See above bug
-            # Warn the user we couldn't write to the log file.
-            #warnDialog(self, "There was an error writing data to the log file.\nIs the disk full?\nDo you have correct permissions?")#\nTest will be aborted now.")
             return True

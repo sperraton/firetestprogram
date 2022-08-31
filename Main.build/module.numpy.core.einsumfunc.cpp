@@ -164,13 +164,13 @@ static PyObject *MAKE_GENERATOR_numpy$core$einsumfunc$$$function__13_einsum$$$ge
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_keywords_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_keywords_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$core$einsumfunc$$$function__10__einsum_path_dispatcher(PyObject *kw_defaults);
@@ -29026,7 +29026,7 @@ static PyObject *impl_numpy$core$einsumfunc$$$function__13_einsum(struct Nuitka_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_iter_arg_3 = impl___main__$$$function__7_complex_call_helper_keywords_star_list(dir_call_args);
+            tmp_iter_arg_3 = impl___main__$$$function__6_complex_call_helper_keywords_star_list(dir_call_args);
         }
         if (tmp_iter_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31616,7 +31616,7 @@ static PyObject *impl_numpy$core$einsumfunc$$$function__13_einsum(struct Nuitka_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_3, tmp_dircall_arg3_3};
-            tmp_assign_source_68 = impl___main__$$$function__7_complex_call_helper_keywords_star_list(dir_call_args);
+            tmp_assign_source_68 = impl___main__$$$function__6_complex_call_helper_keywords_star_list(dir_call_args);
         }
         if (tmp_assign_source_68 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31857,7 +31857,7 @@ static PyObject *impl_numpy$core$einsumfunc$$$function__13_einsum(struct Nuitka_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4, tmp_dircall_arg2_4, tmp_dircall_arg3_4};
-            tmp_assign_source_69 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_assign_source_69 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_assign_source_69 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31984,7 +31984,7 @@ static PyObject *impl_numpy$core$einsumfunc$$$function__13_einsum(struct Nuitka_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5, tmp_dircall_arg2_5, tmp_dircall_arg3_5, tmp_dircall_arg4_1};
-            tmp_assign_source_70 = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_assign_source_70 = impl___main__$$$function__7_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_assign_source_70 == NULL) {
             assert(ERROR_OCCURRED());

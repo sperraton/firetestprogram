@@ -65,7 +65,7 @@ class MainFrame(wx.Frame):
     def __init__(self, *args, **kw):
 
         self.noConnect = wx.GetApp().noConnect # Used to set the DAQ to not connect. Generated data. For debugging purposes
-        
+
         # self.warnToggle = True
         self.detachedWarn = True # Stop additional triggers of the warn dialog
         self.channelErrorWarn = False # Stop additional triggers of the warn dialog
@@ -77,11 +77,11 @@ class MainFrame(wx.Frame):
         if not self.noConnect:
             bitmap = wx.Bitmap('./images/splash.jpg')
             splash = wx.adv.SplashScreen(
-                        bitmap, 
-                        wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT, 
+                        bitmap,
+                        wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT,
                         5000, self)
             splash.Show()
-        
+
         self.controller = Controller(self) # Manage the DAQ and test control business
         self.connectToDAQ()
 
@@ -315,18 +315,18 @@ class MainFrame(wx.Frame):
                                     dlg.resultSaveRate,
                                     dlg.resultTargetCurve,
                                     dlg.resultSavePath,
-                                    self.controller.machineSettings.defaultBackupPath) # TODO have the backup path visible in the start dialog
+                                    self.controller.machineSettings.defaultBackupPath)
         if dlg.resultAutoExclude:
             self.controller.setAutoexclude(thermocouplePlacements.FURNACE) # Start with autoexclude or not
             self.controller.setAutoexclude(thermocouplePlacements.UNEXPOSED)
 
         dlg.Destroy()
-   
+
         self.SetTitle("Fire Test Data Aquisition - Test Log: "+testSettings.fileName) # Set the file header information in the window title
 
         # We are going forward. Get the test vars preped and ready
         # Ensure that all the proper calibrations are loaded.
-        self.controller.reloadCurrentProfile()   
+        self.controller.reloadCurrentProfile()
         self.controller.initTestSettings(testSettings)
 
         # Set the test controller to try to write to file so that they operator doesn't get a nasty surprise when starting tests
@@ -468,7 +468,6 @@ class MainFrame(wx.Frame):
         """
         Display the instruction manual.
         """
-        # TODO provide more information here
         dlg = InstructionsDialog(self)
         dlg.ShowModal()
         dlg.Destroy()
@@ -626,7 +625,7 @@ class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
     def __init__(self, redirect=False, noConnect=False):
         self.noConnect = noConnect
         super().__init__(redirect=redirect)
-    
+
 
     def OnInit(self):
         locale = wx.Locale.GetSystemLanguage()
@@ -663,7 +662,7 @@ if __name__ == '__main__':
         print("Unrecognised Argument")
         #sys.exit(2)
     connectionOption = False    #Default to trying to connect to the DAQ
-    
+
     for opt, arg in opts:
         if opt == '--noconnect':
             print("Not connecting to DAQ. Generating fake data.")

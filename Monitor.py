@@ -353,7 +353,7 @@ class PressureList(MonitorList):
 ################################################################################
 # The Main Monitor Panel
 ################################################################################
-
+# TODO Add the running outlier limits to the monitor panel
 class Monitor(wx.Panel):
     def __init__(self, parent, frame, panelID, name="Monitor Panel"):
         wx.Panel.__init__(self, parent, id=panelID)

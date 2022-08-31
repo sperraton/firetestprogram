@@ -124,10 +124,38 @@ class TestData():
             # Do nothin
             return
 
-    def dumpAllData(self):
-        print("Dumping all data...")
-        print("================================")
-        print(self.timeData)
+    def dumpRawData(self):
+        """
+        Format the raw data to be dumped to a file via the logger.
+        """
+        # Make and iterable that has each line as an element
+        timeDataInSeconds =[foo*60.0 for foo in self.timeData]
+        foo = []
+        for i in range(len(timeDataInSeconds)):
+            foo.append(
+                [
+                    timeDataInSeconds[i],
+                    self.furnaceRawData[i],
+                    self.unexposedRawData[i],
+                    self.furnaceAvgData[i],
+                    self.unexposedAvgData[i],
+                    self.ch1PressureData[i],
+                    self.ch2PressureData[i],
+                    self.ch3PressureData[i]
+                ]
+            )
+        return foo
+
+        # print("Dumping all data...")
+        # print("================================")
+        # print([foo*60 for foo in self.timeData])
+        # print(self.furnaceRawData)
+        # print(self.unexposedRawData)
+        # print(self.furnaceAvgData)
+        # print(self.unexposedAvgData)
+        # print(self.ch1PressureData)
+        # print(self.ch2PressureData)
+        # print(self.ch3PressureData)
 
 
     # Functions concerning the time stamping of data (x-axis)

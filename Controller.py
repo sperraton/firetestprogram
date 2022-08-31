@@ -179,6 +179,7 @@ class Controller():
         # If the unexposed failure threshold has not been calculated, do it now.
         if self.unexposedThresh == 0.0:
             self.unexposedThresh = self.testData.avgUnexposed +  self.getUnexposedThresh(self.testSettings.temperatureUnits)
+            #print(f"********* UnExp Thresh = {self.unexposedThresh}**************")
             pub.sendMessage("unexposedGraph.threshold", threshold=self.unexposedThresh)
 
         self.lastWritten = self.elapsedTime
@@ -193,7 +194,7 @@ class Controller():
         self.timer.Stop()
         self.isTestRunning = False
         self.testData.stopListening()
-        self.testData.dumpAllData() # Since the test report is saed at at least a 5sec interval, we should save all the intermeadiary data
+        self.logger.writeRawDataToFile(self.testData.dumpRawData()) # Since the test report is saved at at least a 5sec interval, we should save all the intermeadiary data
 
         pub.sendMessage("test.stopped")
 

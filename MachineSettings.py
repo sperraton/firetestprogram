@@ -76,9 +76,7 @@ class MachineSettings():
             print(f"        Pressure Serials: {self.pressureSerialNums}")
 
         # Determine the number of TC channels based on number of hubs
-        # BUG BUG BUG This relies on the number of TC channels per hub is constant per machine.
-        #             The machine may break this assumption in the future.
-        self.numTC = self.settingsData["machineSetup"].get("numTC",)# (NUM_TC_PER_HUB * len(self.machineSettings.thermocoupleSerialNums)))
+        self.numTC = self.settingsData["machineSetup"].get("numTC",)
         self.numPres = self.settingsData["machineSetup"].get("numPres", 3)
         self.pressureSenseIsVoltage = self.settingsData["machineSetup"].get("pressureIsVoltage", []) # Is this channel wired for current or voltage input
         
