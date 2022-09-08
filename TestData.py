@@ -52,7 +52,7 @@ class TestData():
         self.targetAUC = 0.0 # The most recently calculate AUC for the test target curve
         self.targetAUCdataUpdateRate = 0.0
 
-        self.targetTempCurveData = [0] # The target temperature curve
+        self.targetTempCurveData = [] # The target temperature curve
         self.targetDelta = 0.0 # The difference between the furnace average and the target
 
         self.threeQuarterAvgAUC = 0 # The data points used in the time correction calculation
@@ -129,21 +129,21 @@ class TestData():
         Format the raw data to be dumped to a file via the logger.
         """
         # Make and iterable that has each line as an element
-        timeDataInSeconds =[foo*60.0 for foo in self.timeData]
+        timeDataInSeconds = [foo*60.0 for foo in self.timeData]
         foo = []
-        for i in range(len(timeDataInSeconds)):
-            foo.append(
-                [
-                    timeDataInSeconds[i],
-                    self.furnaceRawData[i],
-                    self.unexposedRawData[i],
-                    self.furnaceAvgData[i],
-                    self.unexposedAvgData[i],
-                    self.ch1PressureData[i],
-                    self.ch2PressureData[i],
-                    self.ch3PressureData[i]
-                ]
-            )
+        # for i in range(len(timeDataInSeconds)):
+            # foo.append(
+                # [
+                    # timeDataInSeconds[i],
+                    # 0 if len(self.furnaceRawData) > len(timeDataInSeconds) or len(self.furnaceRawData) == 0 else self.furnaceRawData[i],
+                    # 0 if len(self.unexposedRawData) > len(timeDataInSeconds) or len(self.unexposedRawData) == 0 else self.unexposedRawData[i],
+                    # 0 if len(self.furnaceAvgData) > len(timeDataInSeconds) or len(self.furnaceAvgData) == 0 else self.furnaceAvgData[i],
+                    # 0 if len(self.unexposedAvgData) > len(timeDataInSeconds) or len(self.unexposedAvgData) == 0 else self.unexposedAvgData[i],
+                    # 0 if len(self.ch1PressureData) > len(timeDataInSeconds) or len(self.ch1PressureData) == 0 else self.ch1PressureData[i],
+                    # 0 if len(self.ch2PressureData) > len(timeDataInSeconds) or len(self.ch2PressureData) == 0 else self.ch2PressureData[i],
+                    # 0 if len(self.ch3PressureData) > len(timeDataInSeconds) or len(self.ch3PressureData) == 0 else self.ch3PressureData[i]
+                # ]
+            # )
         return foo
 
         # print("Dumping all data...")
@@ -229,6 +229,8 @@ class TestData():
         """
         Returns the latest point on the target temperature curve.
         """
+        if len(self.targetTempCurveData) == 0: return 0
+        
         return self.targetTempCurveData[-1]
 
 
@@ -236,11 +238,11 @@ class TestData():
         """
         Calculates the average AUC (Trapezoidal Method)
         """
-        if len(self.furnaceAvgData) < self.testSettings.saveRate_sec: return
+        if len(self.furnaceAvgData) <= self.testSettings.saveRate_sec: return
 
         # BUG BUG BUG This assumes that the time delta is a constant one second between captures. Need to not do that.
         self.avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.furnaceAvgData[-self.testSettings.saveRate_sec] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.avgAUC
+                                (self.furnaceAvgData[-(self.testSettings.saveRate_sec+1)] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.avgAUC
 
     def calcAverageAUCdataUpdateRate(self):
         """
@@ -250,27 +252,27 @@ class TestData():
 
         # BUG BUG BUG This assumes that the time delta is a constant one second between captures. Need to not do that.
         self.avgAUCdataUpdateRate = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.furnaceAvgData[-DATA_UPDATE_RATE] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.avgAUCdataUpdateRate
+                                (self.furnaceAvgData[-(DATA_UPDATE_RATE+1)] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.avgAUCdataUpdateRate
 
 
     def calcTargetAUC(self):
         """
         Calculate the target AUC (Trapezoidal Method)
         """
-        if len(self.targetTempCurveData) < self.testSettings.saveRate_sec: return
+        if len(self.targetTempCurveData) <= self.testSettings.saveRate_sec: return
 
         self.targetAUC = ((((self.targetTempCurveData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.targetTempCurveData[-self.testSettings.saveRate_sec] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.targetAUC
+                                (self.targetTempCurveData[-(self.testSettings.saveRate_sec+1)] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.targetAUC
 
 
     def calcTargetAUCdataUpdateRate(self):
         """
         Calculate the target AUC with the delta pinned to the update rate of the data. (Trapezoidal Method)
         """
-        if len(self.targetTempCurveData) < DATA_UPDATE_RATE: return
+        if len(self.targetTempCurveData) <= DATA_UPDATE_RATE: return
 
         self.targetAUCdataUpdateRate = ((((self.targetTempCurveData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.targetTempCurveData[-DATA_UPDATE_RATE] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.targetAUCdataUpdateRate
+                                (self.targetTempCurveData[-(DATA_UPDATE_RATE+1)] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.targetAUCdataUpdateRate
 
 
     def captureThreeQuarter(self):

@@ -140,6 +140,8 @@ class Controller():
 
         self.ignoredChannels = []
 
+        self.isRowWritten = False # Haven't written a data row yet.
+
         # TODO Perhaps just move this to Main.py where initTestSettings is called.
         pub.sendMessage("indicator.update", indicator="CURVE",
                         lblValue="Required Curve: "+self.testSettings.targetCurve)
@@ -165,15 +167,22 @@ class Controller():
 
         pub.sendMessage("status.flash", msg="Starting test.")
         self.isTestRunning = True
+        self.initialPoints()
+        self.writeData()
+        #self.lastWritten = self.elapsedTime # To keep track in case we mised a write
+        self.timer.StartOnce(self.updateRate*1000)
 
-        self.startTime = time.time()  # Capture the time
+    def initialPoints(self): 
+        """
+        Special handling of initial data points.
+        """
+        if self.parent.noConnect: self.makeFakeData()
+
+        # Capture the time
+        self.startTime = time.time()
 
         # NOTE Check the return code. wrap in try as well
         self.updateData()  # NOTE Perhaps put this before the isTestRunning is set and then test in the grabLatestData to do a first point init
-
-        # BUG TODO looks like we are recording init point twice. Figure that out.
-        #pub.sendMessage("dataGrid.addRow", row=self.currentRow)
-        #self.logger.writeDataRow(self.currentRow)  # Log the first data point
 
         # Set the unexposed TC max limit based on the current average.
         # If the unexposed failure threshold has not been calculated, do it now.
@@ -182,8 +191,13 @@ class Controller():
             #print(f"********* UnExp Thresh = {self.unexposedThresh}**************")
             pub.sendMessage("unexposedGraph.threshold", threshold=self.unexposedThresh)
 
-        self.lastWritten = self.elapsedTime
-        self.timer.StartOnce(self.updateRate)
+    def getPoints(self):
+
+        # Capture the time
+        self.elapsedTime = round(time.time() - self.startTime) # May seperate rounded and unrounded elapsed.
+
+        # Get the latest data from the DAQ and put it in the grid and graphs
+        self.updateData()
 
 
     def stopTest(self):
@@ -194,7 +208,9 @@ class Controller():
         self.timer.Stop()
         self.isTestRunning = False
         self.testData.stopListening()
-        self.logger.writeRawDataToFile(self.testData.dumpRawData()) # Since the test report is saved at at least a 5sec interval, we should save all the intermeadiary data
+        # TODO make the testData building bombproof and then re-enable
+
+        #self.logger.writeRawDataToFile(self.testData.dumpRawData()) # Since the test report is saved at at least a 5sec interval, we should save all the intermeadiary data
 
         pub.sendMessage("test.stopped")
 
@@ -231,6 +247,46 @@ class Controller():
                                 valueNumeric=num,
                                 valueFormatted="{0:2.3f}".format(num))
 
+    def writeData(self):
+        """
+        Write the current data to sockets (graphs, log, grid)
+        """
+        # TODO get the dispatching of data to the UI or Logger in a single function, was supposed to be in updateData()
+        # Is it time to save yet?
+
+        #BUG BUG BUG I think the round is possibly responsible for the double points in the data.
+        if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0 or \
+           round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate_sec:
+            # TODO Save the accumulated rows to file
+            # Log the currentRow into the test .csv file
+            pub.sendMessage("dataGrid.addRow", row=self.currentRow)
+            self.logger.writeDataRow(self.currentRow)
+            self.isRowWritten = True
+
+            # Keep track of if we've missed a save.
+            self.lastWritten = self.elapsedTime
+
+            # TODO, need to dynamically reduce the update rate if it is taking more than a second to fire.
+            # change it to some even division of the save rate so the save rate can be preserved.
+        
+    def writeLastData(self):
+        """
+        Write the current data to sockets (graphs, log, grid), 
+        along with any final information.
+        """        
+        pub.sendMessage("dataGrid.addRow", row=self.currentRow)
+        # Get the last datapoint
+        if self.isRowWritten != True:
+            self.logger.writeDataRow(self.currentRow)
+
+        if self.testSettings.canExtend:
+            self.logger.writeCorrectionInfo(True if self.testSettings.testTimeMinutes != self.testSettings.indicatedPeriod else False,
+                                            self.testSettings.indicatedPeriod,
+                                            self.testData.threeQuarterAvgAUC,
+                                            self.testData.threeQuarterTargetAUC,
+                                            self.testSettings.getLagCorrection(),
+                                            self.correctionMinutes)
+
 
     def onTimer(self, event):
         """
@@ -243,64 +299,28 @@ class Controller():
         - Checks if the test time has run out
         """
 
-        # # DEBUGGING Making fake data
         if self.parent.noConnect: self.makeFakeData()
-
-        # Capture the time
-        self.elapsedTime = time.time() - self.startTime
-
-        # Get the latest data from the DAQ and put it in the grid and graphs
-        self.updateData()
-
-        # TODO get the dispatching of data to the UI or Logger in a single function, was supposed to be in updateData()
-        # Is it time to save yet?
-        isRowWritten = False # This is a flag to make sure we write the final entry into the log.
-
-        #BUG BUG BUG I think the round is possibly responsible for the double points in the data.
-        if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0 or \
-           round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate_sec:
-            # TODO Save the accumulated rows to file
-            # Log the currentRow into the test .csv file
-            pub.sendMessage("dataGrid.addRow", row=self.currentRow)
-            self.logger.writeDataRow(self.currentRow)
-            isRowWritten = True
-
-            # Keep track of if we've missed a save.
-            self.lastWritten = self.elapsedTime
-
-            # TODO, need to dynamically reduce the update rate if it is taking more than a second to fire.
-            # change it to some even division of the save rate so the save rate can be preserved.
-
+        self.getPoints()
+        self.writeData()
 
         # Does this test include time correction?
         if self.testSettings.canExtend:
             self.calcTimeCorrection()
 
-
-        # Set the timer up for the next firing
-        # This adjusts the next firing so we get closer to a true 1 second interval and there is no cumulative drift.
-        delta = time.time()-self.startTime
-        self.timer.StartOnce(int((self.updateRate*1000)-((delta % self.updateRate)*1000)))
-
-
         # Is the test to be over?
         if self.elapsedTime/60.0 >= self.testSettings.testTimeMinutes:
-            if not isRowWritten:
-                pub.sendMessage("dataGrid.addRow", row=self.currentRow)
-                # Get the last datapoint
-                self.logger.writeDataRow(self.currentRow)
-
-            if self.testSettings.canExtend:
-                self.logger.writeCorrectionInfo(True if self.testSettings.testTimeMinutes != self.testSettings.indicatedPeriod else False,
-                                                self.testSettings.indicatedPeriod,
-                                                self.testData.threeQuarterAvgAUC,
-                                                self.testData.threeQuarterTargetAUC,
-                                                self.testSettings.getLagCorrection(),
-                                                self.correctionMinutes)
+            self.writeLastData()
             self.stopTest()
-
             # Let the view know we're done here.
             pub.sendMessage("test.finished")
+        else:
+            # Set the timer up for the next firing
+            # This adjusts the next firing so we get closer to a true 1 second interval and there is no cumulative drift.
+            delta = time.time()-self.startTime
+            self.timer.StartOnce(int((self.updateRate*1000)-((delta % self.updateRate)*1000)))
+
+
+
 
 
     def calcTimeCorrection(self):
@@ -389,7 +409,7 @@ class Controller():
         self.testData.calcAverageAUCdataUpdateRate()
         self.testData.calcTargetAUCdataUpdateRate()
 
-        if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0:
+        if (round(self.elapsedTime) > 0) and (round(self.elapsedTime) % self.testSettings.saveRate_sec == 0):
             self.testData.calcAverageAUC() # Can't start calculating the AUC unless there is at least one point
             self.testData.calcTargetAUC()
 

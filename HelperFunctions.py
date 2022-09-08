@@ -1,6 +1,5 @@
 from tracemalloc import start
 import wx
-#import numpy as np
 from numpy import mean, median, percentile
 
 from Phidget22.PhidgetException import *

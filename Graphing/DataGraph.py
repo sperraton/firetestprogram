@@ -234,7 +234,7 @@ class UnexposedGraph(BaseGraph):
         timeData = []
 
         for seconds in range(0, int(ceil(self.testTimeMinutes))*60):
-            timeData.append(seconds/60) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
+            timeData.append(seconds/60.0) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
             thresholdData.append(threshold)
 
         self.graphCanvas.updateData(timeData, thresholdData, plotIndex=1, blit=False) # Give the plot the updated data
