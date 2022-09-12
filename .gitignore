@@ -1,8 +1,13 @@
 Old Code/
 __pycache__/
-*.json
 *.pyc
 Main.build/
 Main.dist/
 Main.onefile-build/
 .vscode/
+~profiles.json
+~settings.json
+profiles.json
+settings.json
+settings/Home Setup/profiles (copy).json
+settings/Home Setup/settings (copy).json
