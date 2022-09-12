@@ -1,0 +1,55 @@
+{
+	"machineSetup" : {
+		"furnaceName" : "Home Setup",
+		"pressureIsVoltage" : [true, true, true],
+		"serialNums": {
+            "thermocouple": [
+                529173,
+                529166
+            ],
+            "pressure": [
+                529172
+            ]
+		},
+		"currentProfile" : 0,
+		"defaultSavePath" : "/home/glados/Projects/Business/TesPro/Vulcan/logs",
+        "defaultBackupPath" : "/home/glados/Projects/Business/TesPro/Vulcan/logs/backup",
+        "numTC" : 40,
+        "numPres" : 3
+	},
+	"defaultProfile" : {
+	    "pressureConfig" : [
+	        {
+	            "DISABLED" : {"gain" : 1.0, "offset" : 0.0}
+	        },
+	        {
+	            "DISABLED" : {"gain" : 1.0, "offset" : 0.0}
+	        },
+	        {
+	            "DISABLED" : {"gain" : 1.0, "offset" : 0.0}
+	        }
+	    ],
+	    "thermocoupleConfig" : [
+	        {"channel" : 1, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "UPR_L"},
+	        {"channel" : 2, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "UPR_M"},
+	        {"channel" : 3, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "UPR_R"},
+	        {"channel" : 4, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "MID_L"},
+	        {"channel" : 5, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "MID_M"},
+	        {"channel" : 6, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "MID_R"},
+	        {"channel" : 7, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "BTM_L"},
+	        {"channel" : 8, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "BTM_M"},
+	        {"channel" : 9, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "BTM_R"},
+	        {"channel" : 10, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 10"},
+	        {"channel" : 11, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 11"},
+	        {"channel" : 12, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 12"},
+	        {"channel" : 13, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 13"},
+	        {"channel" : 14, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 14"},
+	        {"channel" : 15, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 15"},
+	        {"channel" : 16, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 16"},
+	        {"channel" : 17, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 17"},
+	        {"channel" : 18, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 18"},
+	        {"channel" : 19, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 19"},
+	        {"channel" : 20, "placement" : {"__enum__" : "thermocouplePlacements.UNEXPOSED"}, "gain" : 1.0, "offset" : 0.0, "label" : "Channel 20"}
+	    ]
+	}
+}
