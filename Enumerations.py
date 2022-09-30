@@ -146,8 +146,8 @@ DEFAULT_UNEXPOSED_WARN_THRESH = 20
 MIN_UNEXPOSED_WARN_THRESH = 0.0
 
 DEFAULT_OUTLIER_FACTOR = 3
-MAX_TEST_TIME_MINUTES = 480
-DATA_INTERVAL_MS = 256 # Delay between readings of data. Make multiple of 8
+MAX_TEST_TIME_MINUTES = 480 # Not used anywhere except to check that it was violated. On the chopping block. Check that unlimited extension isn't a bad thing before you remove it though.
+DATA_INTERVAL_MS = 255 # Delay between readings of data. Make multiple of 8
 CHANGE_TRIGGER = 0.0
 DATA_UPDATE_RATE = 1 # (Seconds) How often the DAQ gathers data
 INVALID_VALUE = 1e304

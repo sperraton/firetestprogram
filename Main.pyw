@@ -567,11 +567,16 @@ class MainFrame(wx.Frame):
 
         # Check if we have it the max possible time
         if self.controller.testSettings.testTimeMinutes+amtMinutes > MAX_TEST_TIME_MINUTES:
-            return
+            # Confirm the choice to extend past the absolute max time
+            exitMsg = "The chosen amount of time to extend will exceed the maximum allowed time of 480 minutes.\nDo you wish to proceed?"
+            dlg = wx.MessageDialog(self, exitMsg, "Confirm teat extend beyond max time?", wx.OK|wx.CANCEL|wx.ICON_QUESTION)
+            result = dlg.ShowModal()
+            dlg.Destroy()
+            if result == wx.ID_CANCEL:
+                return # No go. 
 
         self.controller.testSettings.testTimeMinutes += amtMinutes
         self.graphNotebook.graphTab.setTimeAxis(self.controller.testSettings.testTimeMinutes)
-        #self.createTargetCurveArray(self.controller.testSettings.testTimeMinutes)
 
 
     def lostChannelWarning(self, sensorType, channel):
