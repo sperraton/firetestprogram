@@ -1,0 +1,1 @@
+C:\Users\tkitc\AppData\Local\Programs\Python\Python37-32\pythonw.exe C:\Users\tkitc\AppData\Local\Programs\TesPro-FireTestSoftware\Program\Main.pyw
