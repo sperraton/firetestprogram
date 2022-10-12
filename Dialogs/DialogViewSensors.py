@@ -156,7 +156,7 @@ class ViewSensorsDialog(wx.Dialog):
             serialList = self.parent.controller.getPressureChannelSerials(index)#[1:] # Slice off the DISABLED entry as it isn't needed in this context.
             self.cmbPressureChannels.append(wx.ComboBox(self,
                                                         id=wx.ID_ANY,
-                                                        choices=serialList, #pressurePlacementLabels,
+                                                        choices=serialList,
                                                         value=pressurePlacementLabels[0], # Default to DISABLED
                                                         style=wx.CB_READONLY))
 

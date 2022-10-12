@@ -11,9 +11,11 @@ class StartTestDialog(wx.Dialog):
         # begin wxGlade: CustomDialog.__init__
         wx.Dialog.__init__(self, parent, wx.ID_ANY)
         self.parent = parent
+        app = wx.GetApp()
+        assert app is not None, 'No wx.App created yet'
         self.savePath = self.parent.controller.defaultSavePath # Show what the save path is
         self.backupPath = self.parent.controller.defaultBackupPath # Show what the backup path is
-
+        
 
         self.lblInstructions = wx.StaticText(self, wx.ID_ANY, "Fill out all fields to enable 'Finalize Parameters' button.")
         

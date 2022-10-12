@@ -35,6 +35,7 @@ from Controller import Controller
 from Dialogs.DialogInstructions import InstructionsDialog
 from HelperFunctions import *
 from Enumerations import *
+from MachineSettings import MachineSettings
 from TestSettings import TestSettings
 
 from Dialogs.DialogStartTest import StartTestDialog
@@ -63,8 +64,11 @@ import getopt
 class MainFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
+        self.app = wx.GetApp()
+        assert self.app is not None, "wx.App has not been created yet"
+        #self.app.machineSettings
 
-        self.noConnect = wx.GetApp().noConnect # Used to set the DAQ to not connect. Generated data. For debugging purposes
+        self.noConnect = self.app.noConnect # Used to set the DAQ to not connect. Generated data. For debugging purposes
 
         # self.warnToggle = True
         self.detachedWarn = True # Stop additional triggers of the warn dialog
@@ -94,7 +98,7 @@ class MainFrame(wx.Frame):
         self.statusBar.SetStatusWidths([-2, -1])
         self.statusBar.SetStatusStyles([wx.SB_NORMAL, wx.SB_SUNKEN])
         self.SetStatusText("")
-        currentProfileName = self.controller.machineSettings.getCurrentProfileName()
+        currentProfileName = self.app.machineSettings.getCurrentProfileName()
         self.SetStatusText("PROFILE: "+currentProfileName, 1)
 
         # Create the main view of the notebook and the channel monitor.
@@ -181,8 +185,8 @@ class MainFrame(wx.Frame):
         # Settings
         #------------------------------------------------------------
         self.settingsMenu = wx.Menu()
-        self.savePathItem = self.settingsMenu.Append(SAVEPATH_ID, f"Default Save Path ({self.controller.machineSettings.defaultSavePath})", "Choose the default folder to save data")
-        self.backupPathItem = self.settingsMenu.Append(BACKUPPATH_ID, f"Backup Save Path ({self.controller.machineSettings.defaultBackupPath})", "Choose the default folder to save data")
+        self.savePathItem = self.settingsMenu.Append(SAVEPATH_ID, f"Default Save Path ({self.app.machineSettings.defaultSavePath})", "Choose the default folder to save data")
+        self.backupPathItem = self.settingsMenu.Append(BACKUPPATH_ID, f"Backup Save Path ({self.app.machineSettings.defaultBackupPath})", "Choose the default folder to save data")
 
         self.settingsMenu.AppendSeparator()
 
@@ -281,10 +285,10 @@ class MainFrame(wx.Frame):
             evtID = event.GetId()
             if evtID == SAVEPATH_ID:# GetEventObject() is self.savePathItem:
                 self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=False)
-                self.savePathItem.SetItemLabel(f"Default Save Path ({self.controller.machineSettings.defaultSavePath})")
+                self.savePathItem.SetItemLabel(f"Default Save Path ({self.app.machineSettings.defaultSavePath})")
             elif evtID == BACKUPPATH_ID:#GetEventObject() is self.backupPathItem:
                 self.controller.setDefaultSavePath(dlg.GetPath(), isBackup=True)
-                self.backupPathItem.SetItemLabel(f"Default Save Path ({self.controller.machineSettings.defaultBackupPath})")
+                self.backupPathItem.SetItemLabel(f"Default Save Path ({self.app.machineSettings.defaultBackupPath})")
         dlg.Destroy()
 
 
@@ -315,7 +319,7 @@ class MainFrame(wx.Frame):
                                     dlg.resultSaveRate,
                                     dlg.resultTargetCurve,
                                     dlg.resultSavePath,
-                                    self.controller.machineSettings.defaultBackupPath)
+                                    self.app.machineSettings.defaultBackupPath)
         if dlg.resultAutoExclude:
             self.controller.setAutoexclude(thermocouplePlacements.FURNACE) # Start with autoexclude or not
             self.controller.setAutoexclude(thermocouplePlacements.UNEXPOSED)
@@ -409,7 +413,7 @@ class MainFrame(wx.Frame):
         dlg = wx.FileDialog(
             self,
             message="Save plot as...",
-            defaultDir=self.controller.machineSettings.defaultSavePath,
+            defaultDir=self.app.machineSettings.defaultSavePath,
             defaultFile="Test_plots.png",
             wildcard=fileChoices,
             style=wx.FD_SAVE)
@@ -638,7 +642,7 @@ class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
         # self.noConnect = noConnect
 
         #self.Init() #Init the inspection tool. CTRL-ALT-I to summon inspector
-
+        self.machineSettings = MachineSettings()
         # TODO Init controller and do the spashscreen here
         frame = MainFrame(None, wx.ID_ANY, "Fire Test Data Aquisition", size=(1100, 700)) # A Frame is a top-level window.
         frame.Centre()

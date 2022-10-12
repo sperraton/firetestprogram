@@ -1,4 +1,4 @@
-from Enumerations import *
+from Enumerations import pressurePlacementLabels, thermocouplePlacements
 from Profile import Profile
 from HelperFunctions import infoDialog, warnDialog # TODO Right now we let the error bubble up because I don't want to pass a reference to the frame to the dialog boxes. Should rethink how submodules are going to desplay these dialogs. Perhaps pubsub
 import json
@@ -83,6 +83,12 @@ class MachineSettings():
         print(f"        Num TCs: {self.numTC}")
         print(f"        Pres. Sens. isVoltage: {self.pressureSenseIsVoltage}")
 
+        # Check for non-default pressure labels TODO should make this match the TC labels, but right now this is the simplest path to make that change.
+        if "pressurePlacementLabels" in self.settingsData["machineSetup"]: # Are these defined?
+            self.pressurePlacementLabels = self.settingsData["machineSetup"]["pressurePlacementLabels"]
+        else:
+            self.pressurePlacementLabels = pressurePlacementLabels
+
         # TODO make a default profile
         print("|___Loading sensor configuration ...")
         self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
@@ -104,9 +110,8 @@ class MachineSettings():
                 chNum += 1
 
         except:
-            print("No addresses in settings. Attempting to build addresses ...")
+            print("        No addresses in settings. Attempting to build addresses ...")
             self.initThermocoupleAddresses()
-
 
         print("|___Loading profile ...")
         self.currentProfile = self.settingsData["machineSetup"].get("currentProfile", 0) # Default to 0

@@ -69,7 +69,11 @@ class Controller():
         # TODO Test this out with missing or corrupted files, might need to put an else: in there
         # to catch corrupted files.
 
-        self.machineSettings = MachineSettings()
+        #self.machineSettings = wx.GetApp.machineSettings  #MachineSettings()
+
+        app = wx.GetApp()
+        assert app is not None, 'No wx.App created yet'
+        self.machineSettings = app.machineSettings
 
         # Pull the selected channels from the saved placementMap.
         self.extractSelectedThermocouples()

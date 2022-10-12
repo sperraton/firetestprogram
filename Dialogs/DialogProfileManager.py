@@ -11,6 +11,9 @@ class ProfileManagerDialog(wx.Dialog):
         wx.Dialog.__init__(self, parent, wx.ID_ANY, "Manage Machine Profiles")
 
         self.parent = parent
+        self.app = wx.GetApp()
+        assert self.app is not None, "wx.App has not been created yet"
+        #self.app.machineSettings
 
         # Create the controls
         #======================================================================
@@ -26,7 +29,7 @@ class ProfileManagerDialog(wx.Dialog):
         self.btnRename = wx.Button(self, wx.ID_ANY, "Rename")
         self.btnDelete = wx.Button(self, wx.ID_ANY, "Delete")
         self.btnSelect = wx.Button(self, wx.ID_ANY, "Select")
-        self.currentProfileName = self.parent.controller.machineSettings.getCurrentProfileName()
+        self.currentProfileName = self.app.machineSettings.getCurrentProfileName()
         self.lblCurrentProfile = wx.StaticText(self, wx.ID_ANY, "Currently Selected: " + self.currentProfileName)
 
         self.btnDone = wx.Button(self, wx.ID_ANY, "Done")
@@ -139,7 +142,7 @@ class ProfileManagerDialog(wx.Dialog):
             self.lstProfiles.Delete(selectedItem) # Only if we were succesful
             self.lstProfiles.SetSelection(0)
 
-        self.currentProfileName = self.parent.controller.machineSettings.getCurrentProfileName()
+        self.currentProfileName = self.app.machineSettings.getCurrentProfileName()
         self.lblCurrentProfile.SetLabel("Currently Selected: " + self.currentProfileName) # This may have changed. Refresh.
 
     def onSelect(self, event):

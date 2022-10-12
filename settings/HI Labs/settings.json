@@ -9,7 +9,8 @@
 		"currentProfile" : 0,
 		"defaultSavePath" : "C:\\",
 		"numTC" : 64,
-		"numPres" : 3
+		"numPres" : 3,
+		"pressurePlacementLabels" : ["DISABLED", "CH1", "CH2", "CH3"]
 	},
 	"defaultProfile" : {
 	    "pressureConfig" : [

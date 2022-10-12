@@ -28,7 +28,7 @@ class ZeroPressureDialog(wx.Dialog):
 
         # Make the pressure sensor lists
         #======================================================================
-        for index, label in enumerate(pressurePlacementLabels[1:]): # Slice out the disables label
+        for index, label in enumerate(pressurePlacementLabels[1:]): # Slice out the disabled label
             # Make the controls
             lblPressureLabels.append(wx.StaticText(self, wx.ID_ANY, label, style=wx.ALIGN_CENTRE))
             self.btnPressureZero.append(wx.Button(self, wx.ID_ANY, "Zero"))

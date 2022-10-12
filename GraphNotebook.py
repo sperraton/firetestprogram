@@ -1,6 +1,3 @@
-from re import T
-from smtplib import OLDSTYLE_AUTH
-from unicodedata import name
 import wx
 from pubsub import pub
 import os
@@ -8,9 +5,7 @@ import os
 from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph
 from Graphing.AxesSettings import AxesSettings
 from DataGrid import DataGrid
-from Controller import Controller
-from Enumerations import UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
-from TestData import TestData
+from Enumerations import GRAPH_VERT_PADDING, DEFAULT_TEST_TIME
       
 
 class GraphNotebook(wx.Notebook):
