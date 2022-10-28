@@ -1,23 +1,73 @@
+import wx
+from pubsub import pub
+
 from HelperFunctions import *
 from DAQ.DataAcquisition import DataAcquisition
 from Enumerations import *
 #from TestSettings import TestSettings
-from MachineSettings import MachineSettings
+#from MachineSettings import MachineSettings
 from Logger import Logger
 from TestData import TestData
 
+import logging
+logger = logging.getLogger(__name__)
+
 import time
 import os
-from pubsub import pub
-import wx
 import random
 
 # TODO create a test class that actually runs the test. That's what the controller originally was, but has grown beyond that scope.
+##Execute code at timed intervals  
+##Imports and Displays  
+from threading import Thread, Event, Timer
+
+def display(msg):  
+    print(msg + ' ' + time.strftime('%H:%M:%S'))  
+  
+# Helper class to keep interval
+class RepeatTimer(Timer):  
+    def run(self):  
+        while not self.finished.wait(self.interval):  
+            self.function(*self.args,**self.kwargs)  
+
+
+class _TimerReset(Thread):
+    def __init__(self, interval, function, args=[], kwargs={}):
+        Thread.__init__(self)
+        self.interval = interval
+        self.function = function
+        self.args = args
+        self.kwargs = kwargs
+        self.finished = Event()
+        self.resetted = True
+
+        """Stop the timer if it hasn't finished yet"""
+        self.finished.set()
+    def run(self):
+
+        while self.resetted:
+            self.finished.wait(self.interval)
+
+        if not self.finished.isSet():
+            self.function(*self.args, **self.kwargs)
+        self.finished.set()
+
+    def reset(self, interval=None):
+        """ Reset the timer """
+
+        if interval:
+            self.interval = interval
+
+        self.resetted = True
+        self.finished.set()
+        self.finished.clear()
 
 
 class Controller():
 
     def __init__(self, parent):
+        #logging.basicConfig(level=logging.INFO, format='%(asctime)s :: %(funcName)s :: %(thread)d :: %(levelname)s :: %(message)s')
+        logger.info("Controller.__init__")
         self.parent = parent
 
         # init the variables used in the test
@@ -31,7 +81,7 @@ class Controller():
         self.startTime = 0
         self.elapsedTime = 0
         self.currentRow = []
-        self.logger = None
+        self.daqLogger = None
         self.isFurnaceAutoExclude = False
         self.isUnexposedAutoExclude = False
 
@@ -55,8 +105,11 @@ class Controller():
         self.daq = DataAcquisition(self, self.machineSettings)
 
         # Make a timer to add data
-        self.timer = wx.Timer(self.parent, -1)
-        self.parent.Bind(wx.EVT_TIMER, self.onTimer, self.timer)
+        # self.timer = wx.Timer(self.parent, -1)
+        # self.parent.Bind(wx.EVT_TIMER, self.onTimer, self.timer)
+
+        #self.timer = threading.Timer(1.0, self.onTimer)
+        #self.timer = RepeatTimer(1.0, self.onTimer)  
 
 
 ################################################################################
@@ -72,7 +125,7 @@ class Controller():
         #self.machineSettings = wx.GetApp.machineSettings  #MachineSettings()
 
         app = wx.GetApp()
-        assert app is not None, 'No wx.App created yet'
+        assert app is not None, "In Controller.loadSavedMachineSettings. wx.App not created yet"
         self.machineSettings = app.machineSettings
 
         # Pull the selected channels from the saved placementMap.
@@ -88,7 +141,7 @@ class Controller():
         try:
             self.machineSettings.saveSettings()
             self.machineSettings.saveProfiles()
-            pub.sendMessage("status.flash", msg="Settings saved.")
+            wx.CallAfter(pub.sendMessage, "status.flash", msg="Settings saved.")
 
         except:
             warnDialog(self.parent, "Unable to save settings.")
@@ -124,7 +177,7 @@ class Controller():
     def initTestSettings(self, testSettings):
         self.testSettings = testSettings
         # Make the object to write the data
-        self.logger = Logger(self.testSettings.fullFileName, fullBackupFileName=self.testSettings.fullBackupFileName)
+        self.daqLogger = Logger(self.testSettings.fullFileName, fullBackupFileName=self.testSettings.fullBackupFileName)
         self.setTemperatureUnits(self.testSettings.temperatureUnits)
         self.setPressureUnits(self.testSettings.pressureUnits)
 
@@ -147,7 +200,7 @@ class Controller():
         self.isRowWritten = False # Haven't written a data row yet.
 
         # TODO Perhaps just move this to Main.py where initTestSettings is called.
-        pub.sendMessage("indicator.update", indicator="CURVE",
+        wx.CallAfter(pub.sendMessage, "indicator.update", indicator="CURVE",
                         lblValue="Required Curve: "+self.testSettings.targetCurve)
 
 
@@ -156,7 +209,7 @@ class Controller():
         Try writing the front material to the test log .csv file
         """
 
-        if self.logger.writeHeaders(self.testSettings.fileHeader, self.tableHeader):  # Create the test log and write the header data in.
+        if self.daqLogger.writeHeaders(self.testSettings.fileHeader, self.tableHeader):  # Create the test log and write the header data in.
             self.stopTest()  # Failed to create log file.
             warnDialog(self.parent, "There was an error creating the log file.\nIs the disk full?\nDo you have correct permissions?\nTest will be aborted now.")
             return False
@@ -168,13 +221,15 @@ class Controller():
         """
         Set up the test and begin timer.
         """
+        self.timer = RepeatTimer(self.updateRate, self.onTimer)
 
-        pub.sendMessage("status.flash", msg="Starting test.")
         self.isTestRunning = True
         self.initialPoints()
         self.writeData()
-        #self.lastWritten = self.elapsedTime # To keep track in case we mised a write
-        self.timer.StartOnce(self.updateRate*1000)
+        #self.lastWritten = self.elapsedTime # To keep track in case we missed a write
+        #self.timer.StartOnce(self.updateRate*1000)
+        self.timer.start()
+        wx.CallAfter(pub.sendMessage, "status.flash", msg="Starting test.")
 
     def initialPoints(self): 
         """
@@ -191,9 +246,9 @@ class Controller():
         # Set the unexposed TC max limit based on the current average.
         # If the unexposed failure threshold has not been calculated, do it now.
         if self.unexposedThresh == 0.0:
-            self.unexposedThresh = self.testData.avgUnexposed +  self.getUnexposedThresh(self.testSettings.temperatureUnits)
+            self.unexposedThresh = self.testData.avgUnexposed + self.getUnexposedThresh(self.testSettings.temperatureUnits)
             #print(f"********* UnExp Thresh = {self.unexposedThresh}**************")
-            pub.sendMessage("unexposedGraph.threshold", threshold=self.unexposedThresh)
+            wx.CallAfter(pub.sendMessage, "unexposedGraph.threshold", threshold=self.unexposedThresh)
 
     def getPoints(self):
 
@@ -208,15 +263,17 @@ class Controller():
         """
         Let the UI know that the test has stopped. Do some cleanup.
         """
-        pub.sendMessage("status.update", msg="Test stopped.")
-        self.timer.Stop()
+        wx.CallAfter(pub.sendMessage, "status.update", msg="Test stopped.")
+        #self.timer.Stop()
+        self.timer.cancel()
+
         self.isTestRunning = False
         self.testData.stopListening()
         # TODO make the testData building bombproof and then re-enable
 
         #self.logger.writeRawDataToFile(self.testData.dumpRawData()) # Since the test report is saved at at least a 5sec interval, we should save all the intermeadiary data
 
-        pub.sendMessage("test.stopped")
+        wx.CallAfter(pub.sendMessage, "test.stopped")
 
     def makeFakeData(self):
         """
@@ -226,7 +283,7 @@ class Controller():
         for channelIdx in self.selectedUnexposedChannels:
             #num = random.uniform(10,90)*((channelIdx/2)+1)
             num = (channelIdx+1)*round(self.elapsedTime)*scale
-            pub.sendMessage("channel.valueChange",
+            wx.CallAfter(pub.sendMessage, "channel.valueChange",
                                 sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
                                 valueRaw=num,
@@ -235,7 +292,7 @@ class Controller():
         for channelIdx in self.selectedFurnaceChannels:
             #num = random.uniform(10,90)*((channelIdx/2)+1)
             num = (channelIdx+1)*round(self.elapsedTime)*scale
-            pub.sendMessage("channel.valueChange",
+            wx.CallAfter(pub.sendMessage, "channel.valueChange",
                                 sensorType="TC",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
                                 valueRaw=num,
@@ -244,7 +301,7 @@ class Controller():
         for channelIdx in self.selectedPressureChannels:
             #num = random.uniform(10,90)*((channelIdx/2)+1)
             num = (channelIdx+1)*round(self.elapsedTime)*scale
-            pub.sendMessage("channel.valueChange",
+            wx.CallAfter(pub.sendMessage, "channel.valueChange",
                                 sensorType="PRESS",    # For God's sake just use an enumeration like you do everywhere else.
                                 channel=channelIdx,
                                 valueRaw=num,
@@ -263,8 +320,8 @@ class Controller():
            round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate_sec:
             # TODO Save the accumulated rows to file
             # Log the currentRow into the test .csv file
-            pub.sendMessage("dataGrid.addRow", row=self.currentRow)
-            self.logger.writeDataRow(self.currentRow)
+            wx.CallAfter(pub.sendMessage, "dataGrid.addRow", row=self.currentRow)
+            self.daqLogger.writeDataRow(self.currentRow)
             self.isRowWritten = True
 
             # Keep track of if we've missed a save.
@@ -278,13 +335,13 @@ class Controller():
         Write the current data to sockets (graphs, log, grid), 
         along with any final information.
         """        
-        pub.sendMessage("dataGrid.addRow", row=self.currentRow)
+        wx.CallAfter(pub.sendMessage, "dataGrid.addRow", row=self.currentRow)
         # Get the last datapoint
         if self.isRowWritten != True:
-            self.logger.writeDataRow(self.currentRow)
+            self.daqLogger.writeDataRow(self.currentRow)
 
         if self.testSettings.canExtend:
-            self.logger.writeCorrectionInfo(True if self.testSettings.testTimeMinutes != self.testSettings.indicatedPeriod else False,
+            self.daqLogger.writeCorrectionInfo(True if self.testSettings.testTimeMinutes != self.testSettings.indicatedPeriod else False,
                                             self.testSettings.indicatedPeriod,
                                             self.testData.threeQuarterAvgAUC,
                                             self.testData.threeQuarterTargetAUC,
@@ -292,7 +349,7 @@ class Controller():
                                             self.correctionMinutes)
 
 
-    def onTimer(self, event):
+    def onTimer(self):#, event):
         """
         These are the things to do on each timer tick which is set
         to a resolution of one second. Currently it:
@@ -302,7 +359,7 @@ class Controller():
         - Checks for whether to do the time correction
         - Checks if the test time has run out
         """
-
+        logger.debug("Entered Controller.onTimer")
         if self.parent.noConnect: self.makeFakeData()
         self.getPoints()
         self.writeData()
@@ -316,13 +373,16 @@ class Controller():
             self.writeLastData()
             self.stopTest()
             # Let the view know we're done here.
-            pub.sendMessage("test.finished")
+            wx.CallAfter(pub.sendMessage, "test.finished")
         else:
             # Set the timer up for the next firing
             # This adjusts the next firing so we get closer to a true 1 second interval and there is no cumulative drift.
             delta = time.time()-self.startTime
-            self.timer.StartOnce(int((self.updateRate*1000)-((delta % self.updateRate)*1000)))
+            nextFiring = int((self.updateRate*1000)-((delta % self.updateRate)*1000))
+            #self.timer.StartOnce(nextFiring)
+            self.timer.interval = nextFiring/1000.0 # TODO check this
 
+        logger.debug(f"Exiting Controller.onTimer")# delta={delta} nextFiring={nextFiring}")
 
 
 
@@ -339,7 +399,7 @@ class Controller():
                 self.testData.threeQuarterAvgAUC, self.testData.threeQuarterTargetAUC)
             self.isCorrectionCalculated = True
 
-            pub.sendMessage("test.correction", factor=self.correctionMinutes)
+            wx.CallAfter(pub.sendMessage, "test.correction", factor=self.correctionMinutes)
 
 
     def updateData(self):
@@ -349,8 +409,8 @@ class Controller():
 
         self.grabLatestData()
 
-        if round(self.elapsedTime) % GRAPH_UPDATE_RATE == 0: # Slow down the UI graph update to 
-            pub.sendMessage("graphData.update", testData=self.testData)
+        if round(self.elapsedTime) % self.machineSettings.graphUpdateRate == 0: # Slow down the UI graph update to 
+            wx.CallAfter(pub.sendMessage, "graphData.update", testData=self.testData)
 
     def grabLatestData(self):
         """
@@ -369,7 +429,7 @@ class Controller():
             if self.isFurnaceAutoExclude:
                 if self.testData.isOutsideFurnaceLimits(value["numeric"]):
                     self.channelIgnore(key, True)
-                    pub.sendMessage("monitor.exclude",
+                    wx.CallAfter(pub.sendMessage, "monitor.exclude",
                                     channelIndex=key, isExcluded=True)
 
             if key not in self.ignoredChannels:
@@ -379,16 +439,16 @@ class Controller():
             if self.isUnexposedAutoExclude:
                 if self.testData.isOutsideUnexposedLimits(value["numeric"]):
                     self.channelIgnore(key, True)
-                    pub.sendMessage("monitor.exclude",
+                    wx.CallAfter(pub.sendMessage, "monitor.exclude",
                                     channelIndex=key, isExcluded=True)
 
             # Check if any unxposed TC's past the threshold set at the beginning of the test.
             if self.unexposedThresh != 0.0:
                 if value["numeric"] >= self.unexposedThresh:
-                    pub.sendMessage(
+                    wx.CallAfter(pub.sendMessage, 
                         "monitor.warn", channelIndex=key, isWarn=True)
                 else:
-                    pub.sendMessage(
+                    wx.CallAfter(pub.sendMessage, 
                         "monitor.warn", channelIndex=key, isWarn=False)
 
             if key not in self.ignoredChannels:
@@ -399,10 +459,13 @@ class Controller():
             # set. The valueFormatted from the sensor is in the units set for the test, and getAfterburnerThresh
             # returns a value in current test units.
             if value["numeric"] >= self.getAfterburnerThresh(0):
-                pub.sendMessage("monitor.warn", channelIndex=key, isWarn=True)
+                wx.CallAfter(pub.sendMessage, "monitor.warn", channelIndex=key, isWarn=True)
             else:  # TODO make this check with the previous value so we are not calling it all the time.
-                pub.sendMessage("monitor.warn", channelIndex=key, isWarn=False)
+                wx.CallAfter(pub.sendMessage, "monitor.warn", channelIndex=key, isWarn=False)
 
+
+        self.testData.setTimeData(float(self.elapsedTime)/60.0) # Converts to minutes
+        
         # Calculate the averages and target
         # ============================================================
         self.testData.setAvgFurnace(furnaceValuesForAvg, self.elapsedTime)
@@ -417,7 +480,7 @@ class Controller():
             self.testData.calcAverageAUC() # Can't start calculating the AUC unless there is at least one point
             self.testData.calcTargetAUC()
 
-        pub.sendMessage("indicator.update",
+        wx.CallAfter(pub.sendMessage, "indicator.update",
                     indicator="AUC",
                     lblValue="%AUC: {0:3.1f}".format(self.testData.getPercentAUC()) + " \ %AUC (sec.): {0:3.1f}".format(self.testData.getPercentAUCdataUpdateRate()))
 
@@ -428,7 +491,6 @@ class Controller():
         # Fill out the data arrays for the graph views.
         # ============================================================
         # Converted to minutes for the graph axis
-        self.testData.setTimeData(float(self.elapsedTime)/60.0) # Converts to minutes
         self.testData.setRawFurnace()
         self.testData.setRawUnexposed()
         self.testData.setPressure()
@@ -443,15 +505,15 @@ class Controller():
 
         # Show the elapsed time in the statusbar
         h, m, s = parseTime(self.elapsedTime)
-        pub.sendMessage("indicator.update",
+        wx.CallAfter(pub.sendMessage, "indicator.update",
                         indicator="ELAPSED",
                         lblValue="Time Elapsed: %d:%02d:%02d" % (h, m, s))
 
         # Show the user how far off they are
-        pub.sendMessage("indicator.update",
+        wx.CallAfter(pub.sendMessage, "indicator.update",
                         indicator="DELTA",
                         lblValue="Delta Temp.: {0:4.1f} deg. ".format(self.testData.targetDelta) + self.testSettings.temperatureUnits)
-        # pub.sendMessage("indicator.update",
+        # wx.CallAfter(pub.sendMessage, "indicator.update",
         #                 indicator="AUC",
         #                 lblValue="% AUC: {0:3.1f}".format(self.testData.getPercentAUC()))
 
@@ -479,7 +541,7 @@ class Controller():
             value = "Amb. Temp.: " + ambTemp + " deg." + self.testSettings.temperatureUnits
             shouldWarn = None
 
-        pub.sendMessage("indicator.update",
+        wx.CallAfter(pub.sendMessage, "indicator.update",
                         indicator="CAB",
                         lblValue=value,
                         warn=shouldWarn)
@@ -634,7 +696,7 @@ class Controller():
 
         # Keep the user updated as to what profile is selected.
         profileMsg = "PROFILE: " + profileName
-        pub.sendMessage("status.update2", msg=profileMsg)
+        wx.CallAfter(pub.sendMessage, "status.update2", msg=profileMsg)
 
     def getProfileNames(self):
         """
@@ -744,10 +806,10 @@ class Controller():
         # Cycle through and send of the pub messages
         for i in range(self.machineSettings.numTC):
             if self.daq.isThermocoupleAttached(i):
-                pub.sendMessage("channel.attached", sensorType="TC", channel=i)
+                wx.CallAfter(pub.sendMessage, "channel.attached", sensorType="TC", channel=i)
         for i in range(self.machineSettings.numPres):
             if self.daq.isPressureSensorAttached(i):
-                pub.sendMessage("channel.attached",
+                wx.CallAfter(pub.sendMessage, "channel.attached",
                                 sensorType="PRESS", channel=i)
 
     def closeThermocoupleChannels(self):
@@ -847,13 +909,13 @@ class Controller():
     def getNumPressure(self):
         return self.machineSettings.numPres
 
-    def getThermocouplePlacement(self, channel):
-        # Return the placement enum for the given channel
-        return self.machineSettings.getThermocouplePlacement(channel)
+    # def getThermocouplePlacement(self, channel):
+    #     # Return the placement enum for the given channel
+    #     return self.machineSettings.getThermocouplePlacement(channel)
 
-    def getPressurePlacement(self, channel):
-        # Return the placement enum for the given channel
-        return self.machineSettings.getPressurePlacement(channel)
+    # def getPressurePlacement(self, channel):
+    #     # Return the placement enum for the given channel
+    #     return self.machineSettings.getPressurePlacement(channel)
 
     def getThermocoupleLabel(self, channel):
         """
@@ -868,11 +930,11 @@ class Controller():
         self.machineSettings.setThermocoupleLabel(label, channelIndex)
         self.saveSettings()
 
-    def getPressureLabel(self, channel):
-        """
-        Return the label string for the given channel
-        """
-        return self.machineSettings.getPressureLabel(channel)
+    # def getPressureLabel(self, channel):
+    #     """
+    #     Return the label string for the given channel
+    #     """
+    #     return self.machineSettings.getPressureLabel(channel)
 
     def getThermocoupleCalibration(self, channel):
         gain, offset = self.machineSettings.getThermocoupleCalibration(channel)
@@ -933,7 +995,7 @@ class Controller():
 
     def isLabelInSelectedPressure(self, label):
         # turn the label into enum
-        labelIndex = pressurePlacementLabels.index(label)
+        labelIndex = self.machineSettings.pressurePlacementLabels.index(label)
         # Compare with all selected
         for channelIndex in self.selectedPressureChannels:
             if labelIndex == int(self.machineSettings.getPressurePlacement(channelIndex)):
@@ -957,27 +1019,27 @@ class Controller():
         # check if all the selected channels have been connected
         for channelIndex in (self.selectedFurnaceChannels + self.selectedUnexposedChannels):
             if self.daq.isThermocoupleAttached(channelIndex):
-                pub.sendMessage("channel.attached",
+                wx.CallAfter(pub.sendMessage, "channel.attached",
                                 sensorType="TC", channel=channelIndex)
             # if not self.daq.isThermocoupleAttached(channelIndex):
              #   return False
         for channelIndex in self.selectedPressureChannels:
             if self.daq.isPressureSensorAttached(channelIndex):
-                pub.sendMessage("channel.attached",
+                wx.CallAfter(pub.sendMessage, "channel.attached",
                                 sensorType="PRESS", channel=channelIndex)
             # if not self.daq.isPressureSensorAttached(channelIndex):
             #    return False
 
         # return True
 
-    def getPressureChannelSerials(self, channel):
-        return self.machineSettings.getPressureChannelSerials(channel)
+    # def getPressureChannelSerials(self, channel):
+    #     return self.machineSettings.getPressureChannelSerials(channel)
 
-    def getCurrentPressureChannelSerial(self, channelIndex):
-        return self.machineSettings.getCurrentPressureChannelSerial(channelIndex)
+    # def getCurrentPressureChannelSerial(self, channelIndex):
+    #     return self.machineSettings.getCurrentPressureChannelSerial(channelIndex)
 
-    def getPressureSensorIsVoltage(self, channelIndex):
-        """
-        Returns whether the pressure sensor on the given channel is a voltage type
-        """
-        self.machineSettings.getPressureSensorIsVoltage(channelIndex)
+    # def getPressureSensorIsVoltage(self, channelIndex):
+    #     """
+    #     Returns whether the pressure sensor on the given channel is a voltage type
+    #     """
+    #     self.machineSettings.getPressureSensorIsVoltage(channelIndex)

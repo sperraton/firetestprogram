@@ -1,15 +1,17 @@
 
-from math import ceil
-from unittest import skip
 import wx
 from wx.lib import plot as wxplot
 from wx.lib.plot.plotcanvas import PlotCanvas
+import logging
+from math import ceil
+from unittest import skip
 
 from Enumerations import BAD_VALUE_NUM, DEFAULT_LEGEND_VISIBILITY, GRAPH_SAVE_H, GRAPH_SAVE_W, GRAPH_VERT_PADDING, LEGEND_NUM_ROWS, UIcolours
 from Graphing.AxesSettings import AxesSettings
 
 import numpy as np
 SMALL = np.finfo(float).eps * 560
+import time as _time
 
 """
 The base graph should only be concerned with handling the graph.
@@ -18,7 +20,7 @@ A seperate class should handle passing the test data to the graph.
 Also, make a smart legend object.
 """
 
-
+logger = logging.getLogger(__name__)
 class GraphCanvas(PlotCanvas):
     """
     The graphing object
@@ -30,6 +32,9 @@ class GraphCanvas(PlotCanvas):
         self.numCols = 1 # number of columns in legend.
         #self.drawFullDataFlag = True # TODO To be used when I put in the ability of the graph to access all it's historical data in the TestData object
         self.toggle = True
+        app = wx.GetApp()
+        assert app is not None, "In GraphCanvas __init__ No wx.App created yet"
+        self.machineSettings = app.machineSettings
 
         PlotCanvas.__init__(self, self.parent)
 
@@ -191,24 +196,33 @@ class GraphCanvas(PlotCanvas):
             if yData is None: return
             # Autoscale the vertical
             #maxYvalue = max(yData)
-            lastYvalue = yData[-1] # Since we are keeping a running track of the max, let's use the last incoming.
+            lastYvalue = yData[-1][1] # Since we are keeping a running track of the max, let's use the last incoming.
             
             if lastYvalue > self.graphAxesSettings.ymax:
                 self.graphAxesSettings.ymax = lastYvalue + (GRAPH_VERT_PADDING*lastYvalue)
-                self.graphPlots[plotIndex].points = list(zip(timeData, yData))
+                self.graphPlots[plotIndex].points = yData #list(zip(timeData, yData))
                 self.drawGraph()
 
             if lastYvalue<self.graphAxesSettings.ymin and lastYvalue != BAD_VALUE_NUM:
                 self.graphAxesSettings.ymin = lastYvalue - (GRAPH_VERT_PADDING*lastYvalue)
-                self.graphPlots[plotIndex].points = list(zip(timeData, yData))
+                self.graphPlots[plotIndex].points = yData #list(zip(timeData, yData))
                 self.drawGraph()
 
 
             # Check if we are to update the graph with all the data given or just the last 2 points
-            if blit and (len(timeData) > 1):
-                temp = list(zip(timeData[-2:], yData[-2:])) # Taking only the last two points
+            rate = self.machineSettings.graphUpdateRate+1
+            if blit and (len(timeData) > rate):
+                temp = yData[-rate:] #list(zip(timeData[-rate:], yData[-rate:])) # Taking only the last two points
+                # Dummy set scale call to get the scaled points updated
+                tempScale = self.graphPlots[plotIndex].currentScale
+                tempShift = self.graphPlots[plotIndex].currentShift
+                self.graphPlots[plotIndex].currentScale = (0.9, 0.9)
+                self.graphPlots[plotIndex].scaleAndShift(tempScale, tempShift)
+                self.graphPlots[plotIndex].currentScale = tempScale
+
+                # TODO check if we need to clear the scaled points list here too
             else:
-                temp = list(zip(timeData, yData)) # Taking all the points # NOTE: This bundling of the test data may better be done on the fly in the test data object, because when the test is long we will waste a bunch of time rezipping data 
+                temp = yData #list(zip(timeData, yData)) # Taking all the points # NOTE: This bundling of the test data may better be done on the fly in the test data object, because when the test is long we will waste a bunch of time rezipping data 
 
             self.graphPlots[plotIndex].points = temp #np.append(plot.points, [(timeData[-1], yData[-1])])
 
@@ -424,10 +438,11 @@ class GraphCanvas(PlotCanvas):
         
         # Draw the lines and markers
         #======================================================================
-        #start = _time.perf_counter()
+        start = _time.perf_counter()
         graphics.draw(dc)
-        #time_str = "entire graphics drawing took: {} seconds"
-        #print(time_str.format(_time.perf_counter() - start))
+        diff = _time.perf_counter() - start
+        time_str = f"{self.parent.__class__} entire graphics drawing took: {diff} seconds"
+        logger.debug(time_str)
 
         # remove the clipping region
         dc.DestroyClippingRegion()
@@ -453,9 +468,7 @@ class GraphCanvas(PlotCanvas):
         penStyle = wx.PENSTYLE_TRANSPARENT
         if visible is True:
             penStyle = wx.PENSTYLE_SOLID
-        #else:
-    
-        #self.graphPlots[plotIndex].attributes["style"] = penStyle
+
         self.graphPlots[plotIndex].attributes.update({"style":penStyle})
 
         self.parent.reloadData()  # Again this is an ugly hack to be taken out

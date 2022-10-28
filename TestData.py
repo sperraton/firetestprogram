@@ -1,4 +1,5 @@
 # The data structure to hold the test data
+import wx
 from HelperFunctions import getOutlierLimits, averageTemperatures, cleanValues
 from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DATA_UPDATE_RATE, DEFAULT_OUTLIER_FACTOR, thermocouplePlacements, pressurePlacements
 from pubsub import pub
@@ -10,7 +11,10 @@ class TestData():
                  machineSettings):
 
         self.testSettings = testSettings
-        self.machineSettings = machineSettings
+        #self.machineSettings = machineSettings
+        app = wx.GetApp()
+        assert app is not None, "In ViewSensorsDialog.__init__. wx.App not created yet"
+        self.machineSettings = app.machineSettings
 
         # The values captured from the value change listener
         # All the currently captured values are posted here in a dict, so that each 
@@ -161,6 +165,7 @@ class TestData():
     # Functions concerning the time stamping of data (x-axis)
     #============================================================
     def setTimeData(self, time):
+        
         # time should be in minutes, decimal format
         self.timeData.append(time)
 
@@ -180,9 +185,10 @@ class TestData():
         self.calcFurnaceLimits(furnaceValuesForAvg)
 
         if not self.furnaceAvgData:
-            self.furnaceAvgData.append(self.avgFurnace)
+            # TODO check that the timedata is in sync
+            self.furnaceAvgData.append((self.timeData[-1], self.avgFurnace)) # This is the way to add it so the graphs don't have to zip them
         else:
-            self.furnaceAvgData.append(self.avgFurnace)  # Save the datum to the list.
+            self.furnaceAvgData.append((self.timeData[-1], self.avgFurnace)) # Save the datum to the list.
             #self.calcAverageAUC(self.avgFurnace) # Can't start calculating the AUC unless there is at least one point
 
         self.setTargetTempCurve(self.testSettings.calculateTargetCurve(elapsedTime))
@@ -209,12 +215,12 @@ class TestData():
         if not self.furnaceRawData:
 
             for value in self.furnaceValues.values():
-                self.furnaceRawData.append([value["numeric"]])
+                self.furnaceRawData.append([(self.timeData[-1], value["numeric"])])
 
         else:
             
             for i, value in enumerate(self.furnaceValues.values()):
-                self.furnaceRawData[i].append(value["numeric"]) # Add to channel's list of historical captures
+                self.furnaceRawData[i].append((self.timeData[-1], value["numeric"])) # Add to channel's list of historical captures
 
 
     def setTargetTempCurve(self, value):
@@ -241,8 +247,8 @@ class TestData():
         if len(self.furnaceAvgData) <= self.testSettings.saveRate_sec: return
 
         # BUG BUG BUG This assumes that the time delta is a constant one second between captures. Need to not do that.
-        self.avgAUC = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.furnaceAvgData[-(self.testSettings.saveRate_sec+1)] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.avgAUC
+        self.avgAUC = ((((self.furnaceAvgData[-1][1] - self.testSettings.getTargetTempOffset()) +
+                                (self.furnaceAvgData[-(self.testSettings.saveRate_sec+1)][1] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (self.testSettings.saveRate_sec / 60.0)) + self.avgAUC
 
     def calcAverageAUCdataUpdateRate(self):
         """
@@ -251,8 +257,8 @@ class TestData():
         if len(self.furnaceAvgData) <= DATA_UPDATE_RATE: return # Not ready to calculate yet
 
         # BUG BUG BUG This assumes that the time delta is a constant one second between captures. Need to not do that.
-        self.avgAUCdataUpdateRate = ((((self.furnaceAvgData[-1] - self.testSettings.getTargetTempOffset()) +
-                                (self.furnaceAvgData[-(DATA_UPDATE_RATE+1)] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.avgAUCdataUpdateRate
+        self.avgAUCdataUpdateRate = ((((self.furnaceAvgData[-1][1] - self.testSettings.getTargetTempOffset()) +
+                                (self.furnaceAvgData[-(DATA_UPDATE_RATE+1)][1] - self.testSettings.getTargetTempOffset()) ) / 2.0) * (DATA_UPDATE_RATE / 60.0)) + self.avgAUCdataUpdateRate
 
 
     def calcTargetAUC(self):
@@ -317,7 +323,7 @@ class TestData():
         #     self.unexposedAvgData.append(self.avgUnexposed)
         # else:
         #     self.unexposedAvgData.append(self.avgUnexposed)  # Save the datum to the list.
-        self.unexposedAvgData.append(self.avgUnexposed)
+        self.unexposedAvgData.append((self.timeData[-1], self.avgUnexposed))
 
     def setRawUnexposed(self):
         """
@@ -341,12 +347,12 @@ class TestData():
         if not self.unexposedRawData:
 
             for value in self.unexposedValues.values():
-                self.unexposedRawData.append([value["numeric"]])
+                self.unexposedRawData.append([(self.timeData[-1], value["numeric"])])
 
         else:
             
             for i, value in enumerate(self.unexposedValues.values()):
-                self.unexposedRawData[i].append(value["numeric"]) # Add to channel's list of historical captures
+                self.unexposedRawData[i].append((self.timeData[-1], value["numeric"])) # Add to channel's list of historical captures
 
 
     # TODO If this works out we will go from here
@@ -386,11 +392,11 @@ class TestData():
 
                 # Match this up to the label
                 if placement == pressurePlacements.CH_1:
-                    self.ch1PressureData.append(value["numeric"])
+                    self.ch1PressureData.append((self.timeData[-1], value["numeric"]))
                 elif placement == pressurePlacements.CH_2:
-                    self.ch2PressureData.append(value["numeric"])
+                    self.ch2PressureData.append((self.timeData[-1], value["numeric"]))
                 elif placement == pressurePlacements.CH_3:
-                    self.ch3PressureData.append(value["numeric"])
+                    self.ch3PressureData.append((self.timeData[-1], value["numeric"]))
 
 
 

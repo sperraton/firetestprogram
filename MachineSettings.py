@@ -89,6 +89,9 @@ class MachineSettings():
         else:
             self.pressurePlacementLabels = pressurePlacementLabels
 
+        # Set the graph update rate seconds(Try increasing rate if stability problems encountered)
+        self.graphUpdateRate = self.settingsData["machineSetup"].get("graphUpdateRate",1)
+
         # TODO make a default profile
         print("|___Loading sensor configuration ...")
         self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration

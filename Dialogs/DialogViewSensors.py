@@ -14,7 +14,9 @@ class ViewSensorsDialog(wx.Dialog):
         
         self.nb = wx.Notebook(self)
         self.parent = parent
-
+        app = wx.GetApp()
+        assert app is not None, "In ViewSensorsDialog.__init__. wx.App not created yet"
+        self.machineSettings = app.machineSettings
 
         self.resultThermocoupleMap = [] # The list to hold the selected results to pass back to the main UI
         self.resultPressureMap = [] # The list to hold the selected results to pass back to the main UI
@@ -153,18 +155,17 @@ class ViewSensorsDialog(wx.Dialog):
 
             # Make the dropdown list of serials for this channel
             # Get the list of serial numbers associated with this channel
-            serialList = self.parent.controller.getPressureChannelSerials(index)#[1:] # Slice off the DISABLED entry as it isn't needed in this context.
             self.cmbPressureChannels.append(wx.ComboBox(self,
                                                         id=wx.ID_ANY,
-                                                        choices=serialList,
-                                                        value=pressurePlacementLabels[0], # Default to DISABLED
+                                                        choices=self.machineSettings.getPressureChannelSerials(index),
+                                                        value=self.machineSettings.pressurePlacementLabels[0], # Default to DISABLED
                                                         style=wx.CB_READONLY))
 
             #self.cmbPressureChannels[index].Bind(wx.EVT_COMBOBOX, self.onPressureSelect)
             height = self.cmbPressureChannels[index].Size[1]
             width, h = self.cmbPressureChannels[index].GetTextExtent("XXXXXXXX") # TODO This should be as long as the serial numbers
             self.cmbPressureChannels[index].SetMinSize((width+height+30, height)) # Size the combobox to be just right
-            self.cmbPressureChannels[index].SetStringSelection(self.parent.controller.getCurrentPressureChannelSerial(index))
+            self.cmbPressureChannels[index].SetStringSelection(self.machineSettings.getCurrentPressureChannelSerial(index))
             self.cmbPressureChannels[index].Bind(wx.EVT_COMBOBOX, self.onSerialSelect)
             self.cmbPressureChannels[index].channel = index
 
@@ -174,7 +175,7 @@ class ViewSensorsDialog(wx.Dialog):
                                                       style=wx.TE_READONLY|wx.TE_CENTER))
 
             # The label string and connection status
-            labelString = "CH. " + str(index+1) + " (" + pressurePlacementLabels[index+1] + ") CLOSED"
+            labelString = "CH. " + str(index+1) + " (" + self.machineSettings.pressurePlacementLabels[index+1] + ") CLOSED"
             self.txtPressureStatuses.append(wx.TextCtrl(self,
                                                         wx.ID_ANY,
                                                         labelString,
@@ -246,7 +247,7 @@ class ViewSensorsDialog(wx.Dialog):
         # Get the saved selection map from the controller and load it here
         # Load the thermocouple channels
         for index, cmb in enumerate(self.cmbThermocoupleChannels):
-            placement = int(self.parent.controller.getThermocouplePlacement(index)) # Get the int value of the enum to use as an index
+            placement = int(self.machineSettings.getThermocouplePlacement(index)) # Get the int value of the enum to use as an index
             cmb.SetSelection(placement) #using the enumeration in the map to load the proper selection in the dropbox
             changeComboboxBgColour(cmb, thermocoupleSelectionClrs[placement])
             if placement > 0: # we are not disabled
@@ -259,9 +260,9 @@ class ViewSensorsDialog(wx.Dialog):
 
         # Load the pressure channel serials that were saved for each of the channels
         for index, cmb in enumerate(self.cmbPressureChannels):
-            serialNumber = self.parent.controller.getCurrentPressureChannelSerial(index)
+            serialNumber = self.machineSettings.getCurrentPressureChannelSerial(index)
             cmb.SetValue(serialNumber)
-            cmb.SetSelection(self.parent.controller.getPressureChannelSerials(index).index(serialNumber))
+            cmb.SetSelection(self.machineSettings.getPressureChannelSerials(index).index(serialNumber))
             changeComboboxBgColour(cmb, UIcolours.CTRL_DISABLED_BG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_BG)
             changeComboboxFgColour(cmb, UIcolours.CTRL_DISABLED_FG if cmb.GetSelection() == 0 else UIcolours.CTRL_NORMAL_FG)
 
@@ -331,7 +332,7 @@ class ViewSensorsDialog(wx.Dialog):
         elif sensorType == "PRESS":
             if channel >= self.parent.controller.getNumPressure():
                 return
-            labelString = "CH. " + str(channel+1) + " (" + pressurePlacementLabels[channel+1] + ") OPENED"
+            labelString = "CH. " + str(channel+1) + " (" + self.machineSettings.pressurePlacementLabels[channel+1] + ") OPENED"
             wx.CallAfter(self.txtPressureStatuses[channel].SetValue, labelString)
             self.txtPressureStatuses[channel].SetForegroundColour(UIcolours.CTRL_OK_FG)
             self.txtPressureStatuses[channel].SetBackgroundColour(UIcolours.CTRL_OK_BG)

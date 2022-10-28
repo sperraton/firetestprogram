@@ -8,6 +8,9 @@ class ZeroPressureDialog(wx.Dialog):
         wx.Dialog.__init__(self, parent, wx.ID_ANY, "Zero the active pressure sensor")
    
         self.parent = parent
+        app = wx.GetApp()
+        assert app is not None, "In Controller.loadSavedMachineSettings. wx.App not created yet"
+        self.machineSettings = app.machineSettings
 
         # Arrays to hold the channel widgets
         lblPressureLabels = []
@@ -28,13 +31,13 @@ class ZeroPressureDialog(wx.Dialog):
 
         # Make the pressure sensor lists
         #======================================================================
-        for index, label in enumerate(pressurePlacementLabels[1:]): # Slice out the disabled label
+        for index, label in enumerate(self.machineSettings.pressurePlacementLabels[1:]): # Slice out the disabled label
             # Make the controls
             lblPressureLabels.append(wx.StaticText(self, wx.ID_ANY, label, style=wx.ALIGN_CENTRE))
             self.btnPressureZero.append(wx.Button(self, wx.ID_ANY, "Zero"))
 
             if self.parent.controller.isLabelInSelectedPressure(label):
-                serialLabel = self.parent.controller.getCurrentPressureChannelSerial(index)
+                serialLabel = self.machineSettings.getCurrentPressureChannelSerial(index)
                 self.txtPressureStatuses.append(wx.TextCtrl(self, wx.ID_ANY, serialLabel, style=wx.TE_READONLY|wx.TE_CENTER))
                 self.txtPressureStatuses[index].SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
                 self.txtPressureStatuses[index].SetBackgroundColour(UIcolours.CTRL_NORMAL_BG)

@@ -42,7 +42,7 @@ class StartTestDialog(wx.Dialog):
         self.lblTestInfo = wx.StaticText(self, wx.ID_ANY, "Selected Test Information")
         self.txtTestInfo = wx.TextCtrl(self, wx.ID_ANY, "\n\n\n", style=wx.TE_MULTILINE | wx.TE_NO_VSCROLL | wx.TE_READONLY)
         
-        self.lblSaveRate = wx.StaticText(self, wx.ID_ANY, "Rate to save data to log file (sec.)")
+        self.lblSaveRate = wx.StaticText(self, wx.ID_ANY, "Rate to save data to log file (5-60 sec.)")
         self.scSaveRate = wx.SpinCtrl(self, wx.ID_ANY, "", min=SAVE_RATE_LWR, max=SAVE_RATE_UPR)
         
         self.cbStartWithAutoExclude = wx.CheckBox(self, wx.ID_ANY, "Start the test with AUTOEXCLUDE enabled?", style=wx.ALIGN_RIGHT)

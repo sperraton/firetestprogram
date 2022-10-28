@@ -17,6 +17,10 @@ class CalibrateDialog(wx.Dialog):
         wx.Dialog.__init__(self, parent, wx.ID_ANY, title)
    
         self.parent = parent
+        app = wx.GetApp()
+        assert app is not None, "In CalibrateDialog.__init__. wx.App not created yet"
+        self.machineSettings = app.machineSettings
+
         self.channelIndex = channelIndex
         self.sensorType = sensorType
         self.serialNumber = serialNumber
@@ -49,7 +53,7 @@ class CalibrateDialog(wx.Dialog):
         if self.sensorType == "TC":
             self.lblReading = wx.StaticText(self, wx.ID_ANY, "Current Raw Reading (deg. C):")
         elif self.sensorType == "PRESS":
-            units = ("V" if self.parent.parent.controller.getPressureSensorIsVoltage(self.channelIndex) else "A")
+            units = ("V" if self.machineSettings.getPressureSensorIsVoltage(self.channelIndex) else "A")
             self.lblReading = wx.StaticText(self, wx.ID_ANY, "Current Raw Reading ("+units+"):")
         self.txtRawValue = wx.TextCtrl(self, wx.ID_ANY, "------", style=wx.TE_READONLY|wx.TE_CENTER)
 

@@ -114,7 +114,7 @@ class FurnaceGraph(BaseGraph):
 
         for seconds in range(0, int(ceil(testLengthMinutes))*60):
             timeData.append(seconds/60) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
-            self.targetTempCurve.append(self.controller.testSettings.calculateTargetCurve(seconds))
+            self.targetTempCurve.append((seconds/60, self.controller.testSettings.calculateTargetCurve(seconds)))
         
         # Give the data to the graph for drawing
         self.graphCanvas.updateData(timeData, self.targetTempCurve, plotIndex=0, blit=False) # Give the plot the updated data
@@ -235,7 +235,7 @@ class UnexposedGraph(BaseGraph):
 
         for seconds in range(0, int(ceil(self.testTimeMinutes))*60):
             timeData.append(seconds/60.0) # The graph uses minutes as the x-axis unit so make the point in a fraction of minutes
-            thresholdData.append(threshold)
+            thresholdData.append((seconds/60.0, threshold))
 
         self.graphCanvas.updateData(timeData, thresholdData, plotIndex=1, blit=False) # Give the plot the updated data
 
@@ -279,7 +279,7 @@ class PressureGraph(BaseGraph):
         """
         Initialise the pressure plot for the test.
         """
-
+        pressurePlacementLabels = wx.GetApp().machineSettings.pressurePlacementLabels
         self.graphCanvas.clearGraph()
 
         # Put together a special data object to pack together the different

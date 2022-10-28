@@ -2,7 +2,7 @@ import wx
 import wx.grid
 from pubsub import pub
 import wx.lib.mixins.listctrl  as  listmix
-from Enumerations import BAD_VALUE_STR, UIcolours, thermocouplePlacements, pressurePlacements, thermocouplePlacementLabels, pressurePlacementLabels
+from Enumerations import BAD_VALUE_STR, UIcolours, thermocouplePlacements, pressurePlacements, thermocouplePlacementLabels
 
 
 ################################################################################
@@ -13,6 +13,10 @@ class MonitorList(wx.ListCtrl):
 
     def __init__(self, parent, frame, placement, sensorType, hasCheck=False):
         wx.ListCtrl.__init__(self, parent, style=wx.LC_REPORT)
+
+        app = wx.GetApp()
+        assert app is not None, "In MonitorList.__init__. wx.App not created yet"
+        self.machineSettings = app.machineSettings
 
         self.sensorType = sensorType
         self.hasCheck = hasCheck
@@ -64,7 +68,7 @@ class MonitorList(wx.ListCtrl):
                 return # These are the internal TC, or a mistake. Do not regard them
 
             # Is this an afterburner, furnace or unexposed tc?
-            placement = self.frame.controller.getThermocouplePlacement(channel)
+            placement = self.machineSettings.getThermocouplePlacement(channel)
             if placement != self.placement:
                 return
 
@@ -78,7 +82,7 @@ class MonitorList(wx.ListCtrl):
                 return
 
             # Has the pressure sensor been disabled?
-            placement = self.frame.controller.getPressurePlacement(channel)
+            placement = self.machineSettings.getPressurePlacement(channel)
             if placement == pressurePlacements.DISABLED:
                 return
 
@@ -334,12 +338,14 @@ class PressureList(MonitorList):
         """
         Build up the items in the list.
         """
+        pressurePlacementLabels = wx.GetApp().machineSettings.pressurePlacementLabels
+        
         self.indexForRow.clear()
 
         for row, channelIndex in enumerate(selected):
 
             # Get the row label
-            placementEnum = self.frame.controller.getPressurePlacement(channelIndex)
+            placementEnum = self.machineSettings.getPressurePlacement(channelIndex)
             label = pressurePlacementLabels[int(placementEnum)]
 
             self.InsertItem(row, label) # Add the label to the grid

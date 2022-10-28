@@ -21,6 +21,15 @@
 # Gracefully deal with non-responsive/connecting channels or phidgets.
 # All the functions with options should use the = None pattern
 # Change remaining channel to channelIndex symbols.
+import wx
+import wx.adv
+import wx.lib.mixins.inspection
+from pubsub import pub
+import os
+import sys
+import getopt
+import threading
+
 from csv import Dialect
 from ctypes import BigEndianStructure
 from http.client import NotConnected
@@ -50,13 +59,6 @@ from Monitor import Monitor
 from GraphNotebook import GraphNotebook
 from IndicatorPanel import IndicatorPanel
 
-import wx
-import wx.adv
-import wx.lib.mixins.inspection
-from pubsub import pub
-import os
-import sys
-import getopt
 
 ################################################################################
 # Main Window
@@ -374,7 +376,10 @@ class MainFrame(wx.Frame):
         self.profileManagerItem.Enable(False)
 
         # Start'er up
-        self.controller.startTest()
+        #self.controller.startTest()
+                # Start the controller thread
+        self.thread = threading.Thread(target=self.controller.startTest)
+        self.thread.start()
 
     def onStopTestRecording(self, event):
         """
@@ -639,7 +644,6 @@ class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
     def OnInit(self):
         locale = wx.Locale.GetSystemLanguage()
         self.locale = wx.Locale(locale)
-        # self.noConnect = noConnect
 
         #self.Init() #Init the inspection tool. CTRL-ALT-I to summon inspector
         self.machineSettings = MachineSettings()
@@ -657,32 +661,34 @@ class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
 #  Program Entry
 ###############################################################################
 if __name__ == '__main__':
-    print("##########################################")
-    print("Starting Main ...")
-    print("##########################################")
+
     #Log.enable(LogLevel.PHIDGET_LOG_INFO, "file.log")
-    #logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s :: %(funcName)s :: %(thread)d :: %(levelname)s :: %(message)s')#(level=logging.INFO, format='%(asctime)s %(message)s')
+    logger = logging.getLogger(__name__)
+
+    logger.info("###")
+    logger.info(f"Starting TesPro Firetest DAQ program (Ver. {VERSION_NUM_STRING}) ...")
+    logger.info("###")
 
     argv = sys.argv[1:]
-    print(argv)
+    logger.info(argv)
     try:
         opts, args = getopt.getopt(argv, ":", ["noconnect"])
     except getopt.GetoptError:
-        print("Unrecognised Argument")
+        logger.info("Unrecognised Argument")
         #sys.exit(2)
     connectionOption = False    #Default to trying to connect to the DAQ
 
     for opt, arg in opts:
         if opt == '--noconnect':
-            print("Not connecting to DAQ. Generating fake data.")
+            logger.info("Not connecting to DAQ. Generating fake data.")
             connectionOption = True
 #       elif opt in ("-i", "--ifile"):
 #          inputfile = arg
 #       elif opt in ("-o", "--ofile"):
 #          outputfile = arg
 
-    # TODO Should I pass the app object to dialogs that need to talk to the controller
-    # rather than having it them use the parent view. I should structure this better.
-    app = MainApp(redirect=False, noConnect=connectionOption)#, noConnect=False) #wx.App(redirect=False)  # Create a new app, don't redirect stdout/stderr to a window.
+    app = MainApp(redirect=False, noConnect=connectionOption)  # Create a new app, don't redirect stdout/stderr to a window.
+    logger.info("App created. Starting main loop ...")
     app.MainLoop()
     #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.

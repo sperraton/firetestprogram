@@ -261,7 +261,7 @@ class MainGraphPanel(wx.Panel):
 
     def updateUnexposedThreshold(self, threshold):
         """
-        Draws the old line on the Unexposed graph
+        Draws theshold line on the Unexposed graph
         """
         self.unexposedTempGraph.updateUnexposedThreshold(threshold)
 
