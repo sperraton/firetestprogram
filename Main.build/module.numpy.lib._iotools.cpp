@@ -185,7 +185,7 @@ static PyObject *MAKE_GENERATOR_numpy$lib$_iotools$$$function__29_easy_dtype$$$g
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__9_complex_call_helper_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$lib$_iotools$$$function__10__variablewidth_splitter();
@@ -20415,7 +20415,7 @@ static PyObject *impl_numpy$lib$_iotools$$$function__29_easy_dtype(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_4 = impl___main__$$$function__4_complex_call_helper_star_dict(dir_call_args);
+            tmp_assign_source_4 = impl___main__$$$function__9_complex_call_helper_star_dict(dir_call_args);
         }
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20778,7 +20778,7 @@ static PyObject *impl_numpy$lib$_iotools$$$function__29_easy_dtype(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_10 = impl___main__$$$function__4_complex_call_helper_star_dict(dir_call_args);
+            tmp_assign_source_10 = impl___main__$$$function__9_complex_call_helper_star_dict(dir_call_args);
         }
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21335,7 +21335,7 @@ static PyObject *impl_numpy$lib$_iotools$$$function__29_easy_dtype(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_3};
-            tmp_assign_source_15 = impl___main__$$$function__4_complex_call_helper_star_dict(dir_call_args);
+            tmp_assign_source_15 = impl___main__$$$function__9_complex_call_helper_star_dict(dir_call_args);
         }
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());

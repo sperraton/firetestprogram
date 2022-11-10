@@ -10,7 +10,7 @@
 # python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file="C:\Users\E119 PILOT SCALE\AppData\Local\TesPro\FireTestProgram\src\splash.jpg"=images Main.pyw
 # python -m nuitka --onefile --plugin-enable=numpy --windows-icon-from-ico=flame-32.ico --include-data-file="C:\Users\freya\Documents\TesPro\src\firetestprogram\splash.jpg"=images Main.pyw
 # C:\Users\E119 PILOT SCALE\AppData\Local\TesPro\FireTestProgram\src
-
+# C:\Users\E119 HORIZONTAL\AppData\Local\TesPro\FireTestProgram
 
 # Refactoring TODO's
 # All strings, and choice labels need to be brought into the Enumeration module

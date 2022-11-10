@@ -221,10 +221,10 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_keywords_star_dict(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list_star_dict(PyObject **python_pars);
@@ -13271,7 +13271,7 @@ static PyObject *impl_numpy$core$numeric$$$function__27_roll(struct Nuitka_Funct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_iter_arg_6 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_iter_arg_6 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_iter_arg_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13367,7 +13367,7 @@ static PyObject *impl_numpy$core$numeric$$$function__27_roll(struct Nuitka_Funct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_iter_arg_7 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_iter_arg_7 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_iter_arg_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22592,7 +22592,7 @@ static PyObject *impl_numpy$core$numeric$$$function__38_fromfunction(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_return_value = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__7_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());

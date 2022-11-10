@@ -485,7 +485,7 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_wx$lib$agw$aui$auibar$$$function__100_AddSeparator();
@@ -10923,7 +10923,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__45_SetMinSize(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assattr_value_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16037,7 +16037,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__72_DrawBackground(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16962,7 +16962,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__73_DrawPlainBackground(s
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28714,7 +28714,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__80_DrawSeparator(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_3 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_3 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -51187,7 +51187,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__111_HitTest(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -84408,7 +84408,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__178_OnPaint(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_7 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_7 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -85273,7 +85273,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__178_OnPaint(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_26 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_26 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_26 == NULL) {
             assert(ERROR_OCCURRED());
@@ -87451,7 +87451,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__180_OnLeftDown(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_2 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -87733,7 +87733,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__180_OnLeftDown(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_6 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_6 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -89991,7 +89991,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__180_OnLeftDown(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_3};
-            tmp_assattr_value_3 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_3 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -90066,7 +90066,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__180_OnLeftDown(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4, tmp_dircall_arg2_4};
-            tmp_assattr_value_4 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_4 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -90808,7 +90808,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__180_OnLeftDown(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5, tmp_dircall_arg2_5};
-            tmp_assign_source_36 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_36 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_36 == NULL) {
             assert(ERROR_OCCURRED());
@@ -92014,7 +92014,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__181_OnLeftUp(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -94678,7 +94678,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__182_OnRightDown(struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assattr_value_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -94753,7 +94753,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__182_OnRightDown(struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assattr_value_2 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -95182,7 +95182,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__183_OnRightUp(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -96729,7 +96729,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__184_OnMiddleDown(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assattr_value_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -96804,7 +96804,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__184_OnMiddleDown(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assattr_value_2 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -97233,7 +97233,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__185_OnMiddleUp(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -98570,7 +98570,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__186_OnMotion(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_2 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -98796,7 +98796,7 @@ static PyObject *impl_wx$lib$agw$aui$auibar$$$function__186_OnMotion(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_3 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_3 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());

@@ -137,7 +137,7 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__10_complex_call_helper_keywords_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_keywords_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_wx$py$crustslices$$$function__10_bufferClose();
@@ -551,7 +551,7 @@ static PyObject *impl_wx$py$crustslices$$$function__1___init__(struct Nuitka_Fun
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_assattr_value_1 = impl___main__$$$function__10_complex_call_helper_keywords_star_list_star_dict(dir_call_args);
+            tmp_assattr_value_1 = impl___main__$$$function__11_complex_call_helper_keywords_star_list_star_dict(dir_call_args);
         }
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3061,7 +3061,7 @@ static PyObject *impl_wx$py$crustslices$$$function__2___init__(struct Nuitka_Fun
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_assattr_value_1 = impl___main__$$$function__10_complex_call_helper_keywords_star_list_star_dict(dir_call_args);
+            tmp_assattr_value_1 = impl___main__$$$function__11_complex_call_helper_keywords_star_list_star_dict(dir_call_args);
         }
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());

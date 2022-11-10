@@ -14,15 +14,9 @@
 	},
 	"defaultProfile" : {
 	    "pressureConfig" : [
-	        {
-	            "DISABLED" : {"gain" : 1.0, "offset" : 0.0}
-	        },
-	        {
-	            "DISABLED" : {"gain" : 1.0, "offset" : 0.0}
-	        },
-	        {
-	            "DISABLED" : {"gain" : 1.0, "offset" : 0.0}
-	        }
+	        {"DISABLED" : {"gain" : 1.0, "offset" : 0.0}},
+	        {"DISABLED" : {"gain" : 1.0, "offset" : 0.0}},
+	        {"DISABLED" : {"gain" : 1.0, "offset" : 0.0}}
 	    ],
 	    "thermocoupleConfig" : [
 	        {"channel" : 1, "placement" : {"__enum__" : "thermocouplePlacements.FURNACE"}, "gain" : 1.0, "offset" : 0.0, "label" : "FURNACE TC 1"},
