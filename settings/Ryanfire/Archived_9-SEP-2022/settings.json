@@ -1,0 +1,239 @@
+{
+    "machineSetup": {
+        "furnaceName": "Intermediate Scale Fire Test Furnace #RFIRE-2020",
+        "pressureIsVoltage": [
+            false,
+            false,
+            true
+        ],
+        "serialNums": {
+            "thermocouple": [
+                563106,
+                562954,
+                609352,
+                609336
+            ],
+            "pressure": [
+                563048
+            ]
+        },
+        "currentProfile": 0,
+        "defaultSavePath": "C:\\Users\\Admin\\Desktop\\Test Data"
+    },
+    "defaultProfile": {
+        "pressureConfig": [
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                },
+                "54531188": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                },
+                "5453190": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                },
+                "386721": {
+                    "gain": 0.104,
+                    "offset": -0.224
+                }
+            }
+        ],
+        "thermocoupleConfig": [
+            {
+                "channel": 1,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.AFTERBURNER"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 1"
+            },
+            {
+                "channel": 2,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.AFTERBURNER"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 2"
+            },
+            {
+                "channel": 3,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 3"
+            },
+            {
+                "channel": 4,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 4"
+            },
+            {
+                "channel": 5,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 5"
+            },
+            {
+                "channel": 6,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 6"
+            },
+            {
+                "channel": 7,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 7"
+            },
+            {
+                "channel": 8,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 8"
+            },
+            {
+                "channel": 9,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 9"
+            },
+            {
+                "channel": 10,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 10"
+            },
+            {
+                "channel": 11,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 11"
+            },
+            {
+                "channel": 12,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 12"
+            },
+            {
+                "channel": 13,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 13"
+            },
+            {
+                "channel": 14,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 14"
+            },
+            {
+                "channel": 15,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 15"
+            },
+            {
+                "channel": 16,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 16"
+            },
+            {
+                "channel": 17,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 17"
+            },
+            {
+                "channel": 18,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 18"
+            },
+            {
+                "channel": 19,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 19"
+            },
+            {
+                "channel": 20,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 20"
+            }
+        ]
+    }
+}

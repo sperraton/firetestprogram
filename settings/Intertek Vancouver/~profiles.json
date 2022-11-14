@@ -1,0 +1,1248 @@
+{
+    "Pilot Scale": {
+        "thermocoupleConfig": [
+            {
+                "channel": 1,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_L"
+            },
+            {
+                "channel": 2,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_M"
+            },
+            {
+                "channel": 3,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_R"
+            },
+            {
+                "channel": 4,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_L"
+            },
+            {
+                "channel": 5,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_M"
+            },
+            {
+                "channel": 6,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_R"
+            },
+            {
+                "channel": 7,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_L"
+            },
+            {
+                "channel": 8,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_M"
+            },
+            {
+                "channel": 9,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_R"
+            },
+            {
+                "channel": 10,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 10"
+            },
+            {
+                "channel": 11,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 11"
+            },
+            {
+                "channel": 12,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 12"
+            },
+            {
+                "channel": 13,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 13"
+            },
+            {
+                "channel": 14,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 14"
+            },
+            {
+                "channel": 15,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 15"
+            },
+            {
+                "channel": 16,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 16"
+            },
+            {
+                "channel": 17,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 17"
+            },
+            {
+                "channel": 18,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 18"
+            },
+            {
+                "channel": 19,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 19"
+            },
+            {
+                "channel": 20,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 20"
+            },
+            {
+                "channel": 21,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 21"
+            },
+            {
+                "channel": 22,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 22"
+            },
+            {
+                "channel": 23,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 23"
+            },
+            {
+                "channel": 24,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 24"
+            },
+            {
+                "channel": 25,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 25"
+            },
+            {
+                "channel": 26,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 26"
+            },
+            {
+                "channel": 27,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 27"
+            },
+            {
+                "channel": 28,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 28"
+            },
+            {
+                "channel": 29,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 29"
+            },
+            {
+                "channel": 30,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 30"
+            },
+            {
+                "channel": 31,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 31"
+            },
+            {
+                "channel": 32,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 32"
+            },
+            {
+                "channel": 33,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 33"
+            },
+            {
+                "channel": 34,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 34"
+            },
+            {
+                "channel": 35,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 35"
+            },
+            {
+                "channel": 36,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 36"
+            },
+            {
+                "channel": 37,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 37"
+            },
+            {
+                "channel": 38,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 38"
+            },
+            {
+                "channel": 39,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 39"
+            },
+            {
+                "channel": 40,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 40"
+            }
+        ],
+        "pressureConfig": [
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                },
+                "386719": {
+                    "gain": 0.100034718,
+                    "offset": -0.250101134
+                },
+                "386717": {
+                    "gain": 0.101094865,
+                    "offset": -0.251350718
+                },
+                "1989470": {
+                    "gain": 0.1,
+                    "offset": -0.25
+                },
+                "4462726": {
+                    "gain": 0.1,
+                    "offset": -0.25
+                },
+                "1989468": {
+                    "gain": 0.099973805,
+                    "offset": -0.249962664
+                },
+                "3871828": {
+                    "gain": 0.2,
+                    "offset": -0.5
+                },
+                "3871829": {
+                    "gain": 0.2,
+                    "offset": -0.5
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                },
+                "386719": {
+                    "gain": 0.100034718,
+                    "offset": -0.250101134
+                },
+                "386717": {
+                    "gain": 0.101094865,
+                    "offset": -0.251350718
+                },
+                "1989470": {
+                    "gain": 0.1,
+                    "offset": -0.25
+                },
+                "4462726": {
+                    "gain": 0.1,
+                    "offset": -0.25
+                },
+                "1989468": {
+                    "gain": 0.099973805,
+                    "offset": -0.249962664
+                },
+                "3871828": {
+                    "gain": 0.2,
+                    "offset": -0.5
+                },
+                "3871829": {
+                    "gain": 0.2,
+                    "offset": -0.5
+                }
+            }
+        ],
+        "currentPressuresSerial": [
+            "386719",
+            "DISABLED",
+            "386717"
+        ],
+        "unexposedFailureThreshold": 108.0,
+        "afterburnerThreshold": [
+            2912.0,
+            1600.0
+        ]
+    },
+    "Full Scale": {
+        "thermocoupleConfig": [
+            {
+                "channel": 1,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_L"
+            },
+            {
+                "channel": 2,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_M"
+            },
+            {
+                "channel": 3,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_R"
+            },
+            {
+                "channel": 4,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_L"
+            },
+            {
+                "channel": 5,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_M"
+            },
+            {
+                "channel": 6,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_R"
+            },
+            {
+                "channel": 7,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_L"
+            },
+            {
+                "channel": 8,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_M"
+            },
+            {
+                "channel": 9,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_R"
+            },
+            {
+                "channel": 10,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 10"
+            },
+            {
+                "channel": 11,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 11"
+            },
+            {
+                "channel": 12,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 12"
+            },
+            {
+                "channel": 13,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 13"
+            },
+            {
+                "channel": 14,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 14"
+            },
+            {
+                "channel": 15,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 15"
+            },
+            {
+                "channel": 16,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 16"
+            },
+            {
+                "channel": 17,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 17"
+            },
+            {
+                "channel": 18,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 18"
+            },
+            {
+                "channel": 19,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 19"
+            },
+            {
+                "channel": 20,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 20"
+            },
+            {
+                "channel": 21,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 21"
+            },
+            {
+                "channel": 22,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 22"
+            },
+            {
+                "channel": 23,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 23"
+            },
+            {
+                "channel": 24,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 24"
+            },
+            {
+                "channel": 25,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 25"
+            },
+            {
+                "channel": 26,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 26"
+            },
+            {
+                "channel": 27,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 27"
+            },
+            {
+                "channel": 28,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 28"
+            },
+            {
+                "channel": 29,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 29"
+            },
+            {
+                "channel": 30,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 30"
+            },
+            {
+                "channel": 31,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 31"
+            },
+            {
+                "channel": 32,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 32"
+            },
+            {
+                "channel": 33,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 33"
+            },
+            {
+                "channel": 34,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 34"
+            },
+            {
+                "channel": 35,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 35"
+            },
+            {
+                "channel": 36,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 36"
+            },
+            {
+                "channel": 37,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 37"
+            },
+            {
+                "channel": 38,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 38"
+            },
+            {
+                "channel": 39,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 39"
+            },
+            {
+                "channel": 40,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 40"
+            }
+        ],
+        "pressureConfig": [
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                }
+            }
+        ],
+        "currentPressuresSerial": [
+            "DISABLED",
+            "DISABLED",
+            "DISABLED"
+        ],
+        "unexposedFailureThreshold": 180.0,
+        "afterburnerThreshold": [
+            1600.0,
+            1600.0
+        ]
+    },
+    "Mid-Scale Door": {
+        "thermocoupleConfig": [
+            {
+                "channel": 1,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_L"
+            },
+            {
+                "channel": 2,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_M"
+            },
+            {
+                "channel": 3,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "UPR_R"
+            },
+            {
+                "channel": 4,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_L"
+            },
+            {
+                "channel": 5,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_M"
+            },
+            {
+                "channel": 6,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "MID_R"
+            },
+            {
+                "channel": 7,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_L"
+            },
+            {
+                "channel": 8,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_M"
+            },
+            {
+                "channel": 9,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.FURNACE"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "BTM_R"
+            },
+            {
+                "channel": 10,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 10"
+            },
+            {
+                "channel": 11,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 11"
+            },
+            {
+                "channel": 12,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 12"
+            },
+            {
+                "channel": 13,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 13"
+            },
+            {
+                "channel": 14,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 14"
+            },
+            {
+                "channel": 15,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 15"
+            },
+            {
+                "channel": 16,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 16"
+            },
+            {
+                "channel": 17,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 17"
+            },
+            {
+                "channel": 18,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 18"
+            },
+            {
+                "channel": 19,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 19"
+            },
+            {
+                "channel": 20,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 20"
+            },
+            {
+                "channel": 21,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 21"
+            },
+            {
+                "channel": 22,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 22"
+            },
+            {
+                "channel": 23,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 23"
+            },
+            {
+                "channel": 24,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 24"
+            },
+            {
+                "channel": 25,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 25"
+            },
+            {
+                "channel": 26,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 26"
+            },
+            {
+                "channel": 27,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 27"
+            },
+            {
+                "channel": 28,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 28"
+            },
+            {
+                "channel": 29,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 29"
+            },
+            {
+                "channel": 30,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 30"
+            },
+            {
+                "channel": 31,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 31"
+            },
+            {
+                "channel": 32,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 32"
+            },
+            {
+                "channel": 33,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 33"
+            },
+            {
+                "channel": 34,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 34"
+            },
+            {
+                "channel": 35,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 35"
+            },
+            {
+                "channel": 36,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 36"
+            },
+            {
+                "channel": 37,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 37"
+            },
+            {
+                "channel": 38,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 38"
+            },
+            {
+                "channel": 39,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 39"
+            },
+            {
+                "channel": 40,
+                "placement": {
+                    "__enum__": "thermocouplePlacements.DISABLED"
+                },
+                "gain": 1.0,
+                "offset": 0.0,
+                "label": "Channel 40"
+            }
+        ],
+        "pressureConfig": [
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                },
+                "389719": {
+                    "gain": 0.1,
+                    "offset": -0.25
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                },
+                "1989470": {
+                    "gain": 0.1,
+                    "offset": -0.25
+                }
+            },
+            {
+                "DISABLED": {
+                    "gain": 1.0,
+                    "offset": 0.0
+                }
+            }
+        ],
+        "currentPressuresSerial": [
+            "389719",
+            "1989470",
+            "DISABLED"
+        ],
+        "unexposedFailureThreshold": 180.0,
+        "afterburnerThreshold": [
+            1600.0,
+            1600.0
+        ]
+    }
+}
