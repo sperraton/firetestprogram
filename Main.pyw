@@ -691,4 +691,4 @@ if __name__ == '__main__':
     app = MainApp(redirect=False, noConnect=connectionOption)  # Create a new app, don't redirect stdout/stderr to a window.
     logger.info("App created. Starting main loop ...")
     app.MainLoop()
-    #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
+    var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
