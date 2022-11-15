@@ -216,7 +216,7 @@ static PyObject *MAKE_GENERATOR_numpy$linalg$linalg$$$function__56__multidot_dis
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$linalg$linalg$$$function__10__realType(PyObject *defaults);
@@ -10380,7 +10380,7 @@ static PyObject *impl_numpy$linalg$linalg$$$function__27_tensorinv(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -43316,7 +43316,7 @@ static PyObject *impl_numpy$linalg$linalg$$$function__57_multi_dot(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_call_result_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());

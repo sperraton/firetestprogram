@@ -136,7 +136,7 @@ static PyObject *MAKE_GENERATOR_numpy$lib$histograms$$$function__19__histogramdd
 static PyObject *MAKE_GENERATOR_numpy$lib$histograms$$$function__20_histogramdd$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$lib$histograms$$$function__10__ravel_and_check_weights();
@@ -3544,7 +3544,7 @@ static PyObject *impl_numpy$lib$histograms$$$function__8__hist_bin_fd(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
