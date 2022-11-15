@@ -203,7 +203,7 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list_star_dict(PyObject **python_pars);
@@ -3620,7 +3620,7 @@ static PyObject *impl_wx$lib$mixins$listctrl$$$function__12___ColumnSorter(struc
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_8 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_8 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18162,7 +18162,7 @@ static PyObject *impl_wx$lib$mixins$listctrl$$$function__37___init__(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assattr_value_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assattr_value_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19388,7 +19388,7 @@ static PyObject *impl_wx$lib$mixins$listctrl$$$function__39___CreateBitmap(struc
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());

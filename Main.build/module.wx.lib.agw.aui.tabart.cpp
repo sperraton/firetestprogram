@@ -249,7 +249,7 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_wx$lib$agw$aui$tabart$$$function__10_SetSizingInfo();
@@ -20670,7 +20670,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__16_DrawButton(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_18 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_18 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22680,7 +22680,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__17_DrawFocusRectangle(st
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_3 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_3 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22818,7 +22818,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__17_DrawFocusRectangle(st
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_4 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_4 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -38145,7 +38145,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__32_DrawTab(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_71 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_71 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_71 == NULL) {
             assert(ERROR_OCCURRED());
@@ -38655,7 +38655,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__33_DrawButtons(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -41625,7 +41625,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__36_DrawButton(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_16 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_16 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
@@ -42528,7 +42528,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__36_DrawButton(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_18 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_18 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
@@ -80973,7 +80973,7 @@ static PyObject *impl_wx$lib$agw$aui$tabart$$$function__59_FillVC8GradientColour
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_23 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_23 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());

@@ -2,7 +2,7 @@ CC=<clcache>
 CCCOM=${TEMPFILE("$CC $_MSVC_OUTPUT_FLAG /c $CHANGED_SOURCES $CFLAGS $CCFLAGS $_CCCOMCOM","$CCCOMSTR")}
 CFILESUFFIX=.c
 CLCACHE_DIR=C:\Users\freya\AppData\Local\Nuitka\Nuitka\Cache\clcache
-CLCACHE_STATS=C:\Users\freya\DOCUME~1\TesPro\src\FIRETE~1\Main.onefile-build\clcache-stats.24716.txt
+CLCACHE_STATS=C:\Users\freya\DOCUME~1\TesPro\src\FIRETE~1\Main.onefile-build\clcache-stats.15964.txt
 CPPDEFINES=['__NUITKA_NO_ASSERT__', '_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED=1']
 CPPDEFPREFIX=/D
 CPPDEFSUFFIX=

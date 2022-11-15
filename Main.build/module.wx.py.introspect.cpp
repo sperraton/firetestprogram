@@ -120,7 +120,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_wx$py$introspect$$$function__10_getConstructor();
@@ -7782,7 +7782,7 @@ static PyObject *impl_wx$py$introspect$$$function__5_getCallTip(struct Nuitka_Fu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_27 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_27 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());

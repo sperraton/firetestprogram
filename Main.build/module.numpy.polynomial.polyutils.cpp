@@ -159,7 +159,7 @@ static PyObject *MAKE_GENERATOR_numpy$polynomial$polyutils$$$function__11__valnd
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$polynomial$polyutils$$$function__10__fromroots();
@@ -2444,7 +2444,7 @@ static PyObject *impl_numpy$polynomial$polyutils$$$function__2_as_series(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_22 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_22 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());

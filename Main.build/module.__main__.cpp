@@ -33,9 +33,9 @@ PyObject *module___main__;
 PyDictObject *moduledict___main__;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[465];
+static PyObject *mod_consts[468];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[465];
+static Py_hash_t mod_consts_hash[468];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for (int i = 0; i < 465; i++) {
+        for (int i = 0; i < 468; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants___main__(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for (int i = 0; i < 465; i++) {
+    for (int i = 0; i < 468; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -114,39 +114,39 @@ static PyCodeObject *codeobj_e9f5e175866580c9e6ea52d1834ab6c9;
 PyCodeObject *codeobj_main = NULL;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[443]); CHECK_OBJECT(module_filename_obj);
-    codeobj_492c8cdd1156c27ea0a70fcb58a029a6 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[444], NULL, NULL, 0, 0, 0);
-    codeobj_8d0da3653f71fb690ebecefd483d4b7f = MAKE_CODEOBJECT(module_filename_obj, 637, CO_NOFREE, mod_consts[413], mod_consts[445], NULL, 0, 0, 0);
-    codeobj_dddbec9ce828c69e303761d41a97e3cd = MAKE_CODEOBJECT(module_filename_obj, 66, CO_NOFREE, mod_consts[10], mod_consts[445], NULL, 0, 0, 0);
-    codeobj_3641010ee6dc229e123ea553a344daed = MAKE_CODEOBJECT(module_filename_obj, 644, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[416], mod_consts[446], NULL, 1, 0, 0);
-    codeobj_63f11a54ad2d2f4197e7b1e4346c69d5 = MAKE_CODEOBJECT(module_filename_obj, 68, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[11], mod_consts[447], NULL, 1, 0, 0);
-    codeobj_d4665a4a64b6148d6f74202a0b586548 = MAKE_CODEOBJECT(module_filename_obj, 639, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[11], mod_consts[448], mod_consts[445], 3, 0, 0);
-    codeobj_c3ed43aaa337510e955fa7f989cc3ef6 = MAKE_CODEOBJECT(module_filename_obj, 488, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[449], NULL, 1, 0, 0);
-    codeobj_94c17004c277f0cf6e486067b0496af5 = MAKE_CODEOBJECT(module_filename_obj, 605, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[265], mod_consts[450], NULL, 3, 0, 0);
-    codeobj_9a38edb59eedfce272e1e80d795fab43 = MAKE_CODEOBJECT(module_filename_obj, 139, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[22], mod_consts[449], NULL, 1, 0, 0);
-    codeobj_c70eb802dadb99293f9822eb9765d867 = MAKE_CODEOBJECT(module_filename_obj, 530, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[253], mod_consts[451], NULL, 3, 0, 0);
-    codeobj_790e4b0f6bcb483efd7df2a43e3cbefe = MAKE_CODEOBJECT(module_filename_obj, 155, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[202], mod_consts[449], NULL, 1, 0, 0);
-    codeobj_c87c136c42f5c1c42454b1dfb8dfae39 = MAKE_CODEOBJECT(module_filename_obj, 591, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[263], mod_consts[452], NULL, 3, 0, 0);
-    codeobj_22b781e2a7d3a54e632be043f1e76274 = MAKE_CODEOBJECT(module_filename_obj, 172, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[23], mod_consts[453], NULL, 1, 0, 0);
-    codeobj_dc0e0552bb652be39b8e713ba5f48102 = MAKE_CODEOBJECT(module_filename_obj, 467, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[137], mod_consts[454], NULL, 2, 0, 0);
-    codeobj_4a2a0af48bd4dcb0e7620e1420076801 = MAKE_CODEOBJECT(module_filename_obj, 277, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[133], mod_consts[455], NULL, 2, 0, 0);
-    codeobj_ac6cbb5bf825882767dbf53391f023fa = MAKE_CODEOBJECT(module_filename_obj, 244, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[456], NULL, 2, 0, 0);
-    codeobj_f53aee038d573277e81ac449e62749ab = MAKE_CODEOBJECT(module_filename_obj, 535, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[65], mod_consts[454], NULL, 2, 0, 0);
-    codeobj_47c2331f8e3056642ef036ce9521774c = MAKE_CODEOBJECT(module_filename_obj, 476, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[138], mod_consts[457], NULL, 2, 0, 0);
-    codeobj_b3a8bd440e8e3c1b493a1bdd843c045b = MAKE_CODEOBJECT(module_filename_obj, 447, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[135], mod_consts[457], NULL, 2, 0, 0);
-    codeobj_dd70d9d6a96c78f3527f9e1b3b36b719 = MAKE_CODEOBJECT(module_filename_obj, 411, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[392], mod_consts[458], NULL, 2, 0, 0);
-    codeobj_881136b723c327dc37682a0a6f8ae40c = MAKE_CODEOBJECT(module_filename_obj, 297, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[130], mod_consts[459], NULL, 2, 0, 0);
-    codeobj_7961930fc4b42401374f3bf98ad5cec0 = MAKE_CODEOBJECT(module_filename_obj, 384, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[131], mod_consts[460], NULL, 2, 0, 0);
-    codeobj_0917c7c51a8408670fe91b5891f45377 = MAKE_CODEOBJECT(module_filename_obj, 239, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[132], mod_consts[454], NULL, 2, 0, 0);
-    codeobj_3eeb6bc0f79a13661d70e21a41b60eda = MAKE_CODEOBJECT(module_filename_obj, 457, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[136], mod_consts[457], NULL, 2, 0, 0);
-    codeobj_69724afcee2bd432e01a20d092da4ffa = MAKE_CODEOBJECT(module_filename_obj, 432, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[457], NULL, 2, 0, 0);
-    codeobj_787f79ac4e162a68359ca1c0aed90344 = MAKE_CODEOBJECT(module_filename_obj, 505, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[159], mod_consts[449], NULL, 1, 0, 0);
-    codeobj_3e4b951330558cdb8ec757b792a5b7fb = MAKE_CODEOBJECT(module_filename_obj, 521, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[151], mod_consts[461], NULL, 2, 0, 0);
-    codeobj_32d3defd1085a425cec757dfa38e1c1a = MAKE_CODEOBJECT(module_filename_obj, 525, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[251], mod_consts[461], NULL, 2, 0, 0);
-    codeobj_cd5a7ae151037c76a5c575b9298821c5 = MAKE_CODEOBJECT(module_filename_obj, 572, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[261], mod_consts[462], NULL, 2, 0, 0);
-    codeobj_01aa8b17a3ef9e982d59d3289f869906 = MAKE_CODEOBJECT(module_filename_obj, 539, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[255], mod_consts[449], NULL, 1, 0, 0);
-    codeobj_10c8ab10b61086bb2e6ccb195c988d53 = MAKE_CODEOBJECT(module_filename_obj, 545, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[463], NULL, 1, 0, 0);
-    codeobj_e9f5e175866580c9e6ea52d1834ab6c9 = MAKE_CODEOBJECT(module_filename_obj, 403, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[259], mod_consts[464], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[446]); CHECK_OBJECT(module_filename_obj);
+    codeobj_492c8cdd1156c27ea0a70fcb58a029a6 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[447], NULL, NULL, 0, 0, 0);
+    codeobj_8d0da3653f71fb690ebecefd483d4b7f = MAKE_CODEOBJECT(module_filename_obj, 637, CO_NOFREE, mod_consts[413], mod_consts[448], NULL, 0, 0, 0);
+    codeobj_dddbec9ce828c69e303761d41a97e3cd = MAKE_CODEOBJECT(module_filename_obj, 66, CO_NOFREE, mod_consts[10], mod_consts[448], NULL, 0, 0, 0);
+    codeobj_3641010ee6dc229e123ea553a344daed = MAKE_CODEOBJECT(module_filename_obj, 644, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[416], mod_consts[449], NULL, 1, 0, 0);
+    codeobj_63f11a54ad2d2f4197e7b1e4346c69d5 = MAKE_CODEOBJECT(module_filename_obj, 68, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[11], mod_consts[450], NULL, 1, 0, 0);
+    codeobj_d4665a4a64b6148d6f74202a0b586548 = MAKE_CODEOBJECT(module_filename_obj, 639, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[11], mod_consts[451], mod_consts[448], 3, 0, 0);
+    codeobj_c3ed43aaa337510e955fa7f989cc3ef6 = MAKE_CODEOBJECT(module_filename_obj, 488, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[452], NULL, 1, 0, 0);
+    codeobj_94c17004c277f0cf6e486067b0496af5 = MAKE_CODEOBJECT(module_filename_obj, 605, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[265], mod_consts[453], NULL, 3, 0, 0);
+    codeobj_9a38edb59eedfce272e1e80d795fab43 = MAKE_CODEOBJECT(module_filename_obj, 139, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[22], mod_consts[452], NULL, 1, 0, 0);
+    codeobj_c70eb802dadb99293f9822eb9765d867 = MAKE_CODEOBJECT(module_filename_obj, 530, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[253], mod_consts[454], NULL, 3, 0, 0);
+    codeobj_790e4b0f6bcb483efd7df2a43e3cbefe = MAKE_CODEOBJECT(module_filename_obj, 155, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[202], mod_consts[452], NULL, 1, 0, 0);
+    codeobj_c87c136c42f5c1c42454b1dfb8dfae39 = MAKE_CODEOBJECT(module_filename_obj, 591, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[263], mod_consts[455], NULL, 3, 0, 0);
+    codeobj_22b781e2a7d3a54e632be043f1e76274 = MAKE_CODEOBJECT(module_filename_obj, 172, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[23], mod_consts[456], NULL, 1, 0, 0);
+    codeobj_dc0e0552bb652be39b8e713ba5f48102 = MAKE_CODEOBJECT(module_filename_obj, 467, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[137], mod_consts[457], NULL, 2, 0, 0);
+    codeobj_4a2a0af48bd4dcb0e7620e1420076801 = MAKE_CODEOBJECT(module_filename_obj, 277, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[133], mod_consts[458], NULL, 2, 0, 0);
+    codeobj_ac6cbb5bf825882767dbf53391f023fa = MAKE_CODEOBJECT(module_filename_obj, 244, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[459], NULL, 2, 0, 0);
+    codeobj_f53aee038d573277e81ac449e62749ab = MAKE_CODEOBJECT(module_filename_obj, 535, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[65], mod_consts[457], NULL, 2, 0, 0);
+    codeobj_47c2331f8e3056642ef036ce9521774c = MAKE_CODEOBJECT(module_filename_obj, 476, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[138], mod_consts[460], NULL, 2, 0, 0);
+    codeobj_b3a8bd440e8e3c1b493a1bdd843c045b = MAKE_CODEOBJECT(module_filename_obj, 447, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[135], mod_consts[460], NULL, 2, 0, 0);
+    codeobj_dd70d9d6a96c78f3527f9e1b3b36b719 = MAKE_CODEOBJECT(module_filename_obj, 411, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[392], mod_consts[461], NULL, 2, 0, 0);
+    codeobj_881136b723c327dc37682a0a6f8ae40c = MAKE_CODEOBJECT(module_filename_obj, 297, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[130], mod_consts[462], NULL, 2, 0, 0);
+    codeobj_7961930fc4b42401374f3bf98ad5cec0 = MAKE_CODEOBJECT(module_filename_obj, 384, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[131], mod_consts[463], NULL, 2, 0, 0);
+    codeobj_0917c7c51a8408670fe91b5891f45377 = MAKE_CODEOBJECT(module_filename_obj, 239, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[132], mod_consts[457], NULL, 2, 0, 0);
+    codeobj_3eeb6bc0f79a13661d70e21a41b60eda = MAKE_CODEOBJECT(module_filename_obj, 457, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[136], mod_consts[460], NULL, 2, 0, 0);
+    codeobj_69724afcee2bd432e01a20d092da4ffa = MAKE_CODEOBJECT(module_filename_obj, 432, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[460], NULL, 2, 0, 0);
+    codeobj_787f79ac4e162a68359ca1c0aed90344 = MAKE_CODEOBJECT(module_filename_obj, 505, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[159], mod_consts[452], NULL, 1, 0, 0);
+    codeobj_3e4b951330558cdb8ec757b792a5b7fb = MAKE_CODEOBJECT(module_filename_obj, 521, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[151], mod_consts[464], NULL, 2, 0, 0);
+    codeobj_32d3defd1085a425cec757dfa38e1c1a = MAKE_CODEOBJECT(module_filename_obj, 525, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[251], mod_consts[464], NULL, 2, 0, 0);
+    codeobj_cd5a7ae151037c76a5c575b9298821c5 = MAKE_CODEOBJECT(module_filename_obj, 572, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[261], mod_consts[465], NULL, 2, 0, 0);
+    codeobj_01aa8b17a3ef9e982d59d3289f869906 = MAKE_CODEOBJECT(module_filename_obj, 539, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[255], mod_consts[452], NULL, 1, 0, 0);
+    codeobj_10c8ab10b61086bb2e6ccb195c988d53 = MAKE_CODEOBJECT(module_filename_obj, 545, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[466], NULL, 1, 0, 0);
+    codeobj_e9f5e175866580c9e6ea52d1834ab6c9 = MAKE_CODEOBJECT(module_filename_obj, 403, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[259], mod_consts[467], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -159,13 +159,13 @@ NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_st
 NUITKA_LOCAL_MODULE PyObject *impl___main__$$$function__2_get_callable_name_desc(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_keywords_star_dict(PyObject **python_pars);
@@ -186,13 +186,13 @@ NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_po
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__12_complex_call_helper_keywords_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__15__unpack_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__13__unpack_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__14__unpack_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__15__unpack_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__13__unpack_set(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__14__unpack_set(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__17_complex_call_helper_pos_keywords_star_list_star_dict(PyObject **python_pars);
@@ -20277,7 +20277,7 @@ function_return_exit:
 }
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars) {
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars) {
 #ifndef __NUITKA_NO_ASSERT__
     NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
     assert(!had_error); // Do not enter inlined functions with error set.
@@ -20511,7 +20511,7 @@ function_return_exit:
 }
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars) {
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_dict(PyObject **python_pars) {
 #ifndef __NUITKA_NO_ASSERT__
     NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
     assert(!had_error); // Do not enter inlined functions with error set.
@@ -21093,7 +21093,7 @@ function_return_exit:
 }
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars) {
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars) {
 #ifndef __NUITKA_NO_ASSERT__
     NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
     assert(!had_error); // Do not enter inlined functions with error set.
@@ -25748,7 +25748,7 @@ function_return_exit:
 }
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__15__unpack_list(PyObject **python_pars) {
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__13__unpack_list(PyObject **python_pars) {
 #ifndef __NUITKA_NO_ASSERT__
     NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
     assert(!had_error); // Do not enter inlined functions with error set.
@@ -25923,7 +25923,7 @@ function_return_exit:
 }
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__14__unpack_dict(PyObject **python_pars) {
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__15__unpack_dict(PyObject **python_pars) {
 #ifndef __NUITKA_NO_ASSERT__
     NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
     assert(!had_error); // Do not enter inlined functions with error set.
@@ -26193,7 +26193,7 @@ function_return_exit:
 }
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__13__unpack_set(PyObject **python_pars) {
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__14__unpack_set(PyObject **python_pars) {
 #ifndef __NUITKA_NO_ASSERT__
     NUITKA_MAY_BE_UNUSED bool had_error = ERROR_OCCURRED();
     assert(!had_error); // Do not enter inlined functions with error set.
@@ -33907,6 +33907,40 @@ PyObject *modulecode___main__(PyObject *module, struct Nuitka_MetaPathBasedLoade
             goto frame_exception_exit_1;
         }
         Py_DECREF(tmp_call_result_9);
+    }
+    {
+        PyObject *tmp_assign_source_65;
+        PyObject *tmp_called_value_10;
+        tmp_called_value_10 = GET_STRING_DICT_VALUE(moduledict___main__, (Nuitka_StringObject *)mod_consts[443]);
+
+        if (unlikely(tmp_called_value_10 == NULL)) {
+            tmp_called_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[443]);
+        }
+
+        if (tmp_called_value_10 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 694;
+
+            goto frame_exception_exit_1;
+        }
+        frame_492c8cdd1156c27ea0a70fcb58a029a6->m_frame.f_lineno = 694;
+        tmp_assign_source_65 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_10, mod_consts[444]);
+
+        if (tmp_assign_source_65 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 694;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT1(moduledict___main__, (Nuitka_StringObject *)mod_consts[445], tmp_assign_source_65);
     }
 
     // Restore frame exception if necessary.
