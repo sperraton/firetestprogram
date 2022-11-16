@@ -674,22 +674,26 @@ if __name__ == '__main__':
     argv = sys.argv[1:]
     logger.info(argv)
     try:
-        opts, args = getopt.getopt(argv, ":", ["noconnect"])
+        opts, args = getopt.getopt(argv, ":v", ["noconnect", "version"])
     except getopt.GetoptError:
         logger.info("Unrecognised Argument")
-        #sys.exit(2)
+        sys.exit(2)
     connectionOption = False    #Default to trying to connect to the DAQ
 
     for opt, arg in opts:
         if opt == '--noconnect':
             logger.info("Not connecting to DAQ. Generating fake data.")
             connectionOption = True
-#       elif opt in ("-i", "--ifile"):
-#          inputfile = arg
+        elif opt in ("-v", "--version"):
+            print(VERSION_NUM_STRING)
+            sys.exit(0)
+            
 #       elif opt in ("-o", "--ofile"):
 #          outputfile = arg
 
     app = MainApp(redirect=False, noConnect=connectionOption)  # Create a new app, don't redirect stdout/stderr to a window.
     logger.info("App created. Starting main loop ...")
     app.MainLoop()
+
     var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
+    sys.exit(0)

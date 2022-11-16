@@ -301,8 +301,8 @@ class GraphCanvas(PlotCanvas):
 
         if dc is None:
             # sets new dc and clears it
-            #dc = wx.BufferedDC(wx.ClientDC(self.canvas), self._Buffer) # TODO try making a memory DC.
-            dc = wx.MemoryDC(wx.ClientDC(self.canvas), self._Buffer)
+            dc = wx.BufferedDC(wx.ClientDC(self.canvas), self._Buffer) # TODO try making a memory DC.
+            #dc = wx.MemoryDC(wx.ClientDC(self.canvas), self._Buffer)
             bbr = wx.Brush(self.GetBackgroundColour(), wx.BRUSHSTYLE_SOLID)
             dc.SetBackground(bbr)
             dc.SetBackgroundMode(wx.SOLID)

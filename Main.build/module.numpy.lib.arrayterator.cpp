@@ -131,7 +131,7 @@ static PyObject *MAKE_GENERATOR_numpy$lib$arrayterator$$$function__7___iter__$$$
 static PyObject *MAKE_GENERATOR_numpy$lib$arrayterator$$$function__7___iter__$$$genobj__1___iter__$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$lib$arrayterator$$$function__1___init__(PyObject *defaults);
@@ -4198,7 +4198,7 @@ static PyObject *numpy$lib$arrayterator$$$function__4___array__$$$genexpr__1_gen
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_expression_value_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_value_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8551,7 +8551,7 @@ static PyObject *numpy$lib$arrayterator$$$function__7___iter__$$$genobj__1___ite
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_expression_value_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_value_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());

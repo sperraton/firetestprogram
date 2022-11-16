@@ -143,7 +143,7 @@ static PyObject *MAKE_GENERATOR_numpy$core$_dtype$$$function__10__struct_dict_st
 static PyObject *MAKE_GENERATOR_numpy$core$_dtype$$$function__10__struct_dict_str$$$genexpr__5_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$core$_dtype$$$function__10__struct_dict_str();
@@ -4613,7 +4613,7 @@ static PyObject *impl_numpy$core$_dtype$$$function__10__struct_dict_str(struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_iter_arg_2 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_iter_arg_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7640,7 +7640,7 @@ static PyObject *impl_numpy$core$_dtype$$$function__11__is_packed(struct Nuitka_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_iter_arg_2 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_iter_arg_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8470,7 +8470,7 @@ static PyObject *impl_numpy$core$_dtype$$$function__12__struct_list_str(struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_iter_arg_2 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_iter_arg_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());

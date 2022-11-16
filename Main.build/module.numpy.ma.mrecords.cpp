@@ -195,7 +195,7 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_pos_star_list(PyObject **python_pars);
@@ -6582,7 +6582,7 @@ static PyObject *impl_numpy$ma$mrecords$$$function__8___getattribute__(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_6 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_6 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10828,7 +10828,7 @@ static PyObject *impl_numpy$ma$mrecords$$$function__12___str__(struct Nuitka_Fun
 
             {
                 PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-                tmp_iter_arg_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+                tmp_iter_arg_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
             }
             if (tmp_iter_arg_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19002,7 +19002,7 @@ static PyObject *impl_numpy$ma$mrecords$$$function__23_fromarrays(struct Nuitka_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_list_arg_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_list_arg_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_list_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26539,7 +26539,7 @@ static PyObject *impl_numpy$ma$mrecords$$$function__28_addfield(struct Nuitka_Fu
 
             {
                 PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-                tmp_tuple_element_2 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+                tmp_tuple_element_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
             }
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -27570,7 +27570,7 @@ static PyObject *impl_numpy$ma$mrecords$$$function__28_addfield(struct Nuitka_Fu
 
             {
                 PyObject *dir_call_args[] = {tmp_dircall_arg1_5, tmp_dircall_arg2_5};
-                tmp_tuple_element_5 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+                tmp_tuple_element_5 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
             }
             if (tmp_tuple_element_5 == NULL) {
                 assert(ERROR_OCCURRED());

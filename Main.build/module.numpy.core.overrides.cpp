@@ -104,7 +104,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_numpy$core$overrides$$$function__1_set_array_function_like_doc();
@@ -480,7 +480,7 @@ static PyObject *impl_numpy$core$overrides$$$function__2_verify_matching_signatu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -551,7 +551,7 @@ static PyObject *impl_numpy$core$overrides$$$function__2_verify_matching_signatu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_2 = impl___main__$$$function__6_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__4_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
