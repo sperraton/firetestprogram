@@ -1,21 +1,21 @@
-import datetime
+# import datetime
 import os
 import shutil
 #from subprocess import CREATE_NO_WINDOW
-import sys
-import urllib
-import wget
+# import sys
+# import urllib
+# import wget
 
 import git
 import tempfile
 
     # Get some vars prepared
-#cwd = os.getcwd()
-baseDir = os.path.realpath("/home/glados/Projects/Business/TesPro/Vulcan/Program/Builds/Ver 1.56.2")
+baseDir = os.getcwd()
+#baseDir = os.path.realpath("/home/glados/Projects/Business/TesPro/Vulcan/Program/Builds/Ver 1.56.2")
 archiveDir = os.path.join(baseDir, "archived")
 programFiles = ["images", "instructions", "flame-32.ico", "Main.exe"]
 settingsFiles = ["settings.json", "profiles.json"]
-dl_url = "https://www.python.org/static/img/python-logo@2x.png"
+dl_url = ""
 
 def archiveCurrent():
     # Check if any of the files in the current directory are program files and move them.
@@ -77,6 +77,14 @@ def downloadNew():
         shutil.rmtree(tempDir)
         return True
 
+    except IOError as e:
+        print("!!! Download failed !!!")
+        print(f"Error: {e}")
+        return False
+
+
+def downloadViaRequests():
+    pass
 # import requests
 # r = requests.get('https://github.com/owid/covid-19-data/blob/master/public/data/ecdc/COVID-2019%20-%20ECDC%20(2020).csv')
 
@@ -87,7 +95,8 @@ def downloadNew():
         # os.path.exists(target)
 
 
-
+def downloadViaURLOpen():
+    pass
         # dl_file = open(cwd, 'w')
         # http_stream = urllib.urlopen(dl_url)
         # total_size = None
@@ -117,10 +126,7 @@ def downloadNew():
         # http_stream.close()
         # dl_file.close()
 
-    except IOError as e:
-        print("!!! Download failed !!!")
-        print(f"Error: {e}")
-        return False
+
 
 ###############################################################################
 #  Program Entry

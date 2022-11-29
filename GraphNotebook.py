@@ -1,23 +1,27 @@
 import wx
 from pubsub import pub
 import os
-
-from Graphing.DataGraph import FurnaceGraph, UnexposedGraph, PressureGraph
+import logging
+from Graphing.FurnaceGraph import FurnaceGraph
+from Graphing.UnexposedGraph import UnexposedGraph
+from Graphing.PressureGraph import PressureGraph
 from Graphing.AxesSettings import AxesSettings
+
 from DataGrid import DataGrid
 from Enumerations import GRAPH_VERT_PADDING, DEFAULT_TEST_TIME
-      
 
+
+logger = logging.getLogger(__name__)
 class GraphNotebook(wx.Notebook):
 
     def __init__(self, parent, frame):
         wx.Notebook.__init__(self, parent, id=wx.ID_ANY, style=
-                             #wx.BK_DEFAULT
-                             wx.BK_TOP 
-                             #wx.BK_BOTTOM
-                             #wx.BK_LEFT
-                             #wx.BK_RIGHT
-                             )
+                            #wx.BK_DEFAULT
+                            wx.BK_TOP 
+                            #wx.BK_BOTTOM
+                            #wx.BK_LEFT
+                            #wx.BK_RIGHT
+                            )
         
         self.parent = parent
         self.frame = frame
@@ -79,23 +83,48 @@ class MainGraphPanel(wx.Panel):
         self.parent = parent
         self.frame = frame
         self.controller = self.frame.controller # Just to trick the DataGraph at the moment
+        
+        self.pressureGraphEnabled = True # Testing for now, having graph updates selectively enabled
+        self.unexposedTempGraphEnabled = False
 
         # Create splitter widgets
         self.topSplitter = wx.SplitterWindow(self, name="topSplitter")
         self.topSplitter.SetInitialSize(self.GetClientSize())
         self.subSplitter = wx.SplitterWindow(self.topSplitter, name="subSplitter") # Child of topSplitter
+
         # Create the graph panels
         self.panelList = []
+        self.graphList = [] # List of which graphs are enabled.
+
         # Make the axis title, labels, and legend
-        graphAxesSettings = AxesSettings("Unexposed Temperature", 
-                                        "Time (Min.)", 
-                                        "Temp. (Deg. C)", 
-                                        0, 
-                                        DEFAULT_TEST_TIME, 
-                                        0, 
-                                        GRAPH_VERT_PADDING*1000)
-        self.unexposedTempGraph = UnexposedGraph(self.subSplitter, 1, self.controller, graphAxesSettings) # id=1
-        
+        if self.unexposedTempGraphEnabled:
+            graphAxesSettings = AxesSettings("Unexposed Temperature", 
+                                            "Time (Min.)", 
+                                            "Temp. (Deg. C)", 
+                                            0, 
+                                            DEFAULT_TEST_TIME, 
+                                            0, 
+                                            GRAPH_VERT_PADDING*1000)
+            self.unexposedTempGraph = UnexposedGraph(self.subSplitter, 1, self.controller, graphAxesSettings) # id=1
+            self.graphList.append(self.unexposedTempGraph)
+            self.panelList.append(self.unexposedTempGraph)
+        else:
+            self.panelList.append(wx.Panel(self.subSplitter, 1, name="dummy"))
+
+        if self.pressureGraphEnabled:
+            graphAxesSettings = AxesSettings("Furnace Pressure", 
+                                            "Time (Min.)", 
+                                            "Press. (in H2O)", 
+                                            0, 
+                                            DEFAULT_TEST_TIME, 
+                                            -0.25, 
+                                            0.25)
+            self.pressureGraph = PressureGraph(self.subSplitter, 3, self.controller, graphAxesSettings) # id=3
+            self.graphList.append(self.pressureGraph)
+            self.panelList.append(self.pressureGraph)
+        else:
+            self.panelList.append(wx.Panel(self.subSplitter, 3, name="dummy")) # Make a dummy panel for the splitters
+
         graphAxesSettings = AxesSettings("Furnace Temperature", 
                                         "Time (Min.)", 
                                         "Temp. (Deg. C)", 
@@ -104,18 +133,7 @@ class MainGraphPanel(wx.Panel):
                                         0, 
                                         1200)
         self.furnaceTempGraph = FurnaceGraph(self.topSplitter, 2, self.controller, graphAxesSettings) # id=2
-
-        graphAxesSettings = AxesSettings("Furnace Pressure", 
-                                        "Time (Min.)", 
-                                        "Press. (in H2O)", 
-                                        0, 
-                                        DEFAULT_TEST_TIME, 
-                                        -0.25, 
-                                        0.25)
-        self.pressureGraph = PressureGraph(self.subSplitter, 3, self.controller, graphAxesSettings) # id=3
-
-        self.panelList.append(self.unexposedTempGraph)
-        self.panelList.append(self.pressureGraph)
+        self.graphList.append(self.furnaceTempGraph)
         self.panelList.append(self.furnaceTempGraph)
 
         self.layoutPanels(self.panelList[0], self.panelList[1], self.panelList[2])
@@ -140,9 +158,24 @@ class MainGraphPanel(wx.Panel):
         A, B in the subSplitter and C in the topSplitter.
         """
         self.subSplitter.SplitVertically(a, b)
-        self.subSplitter.SetSashGravity(0.5)
+        
+        # If one of the panels is disabled set sash to 0 or 1
+        # NOTE: It may be better to rather not make the splitters that won't be used,
+        # but the panel switching code is  worked into a lot of places, so the
+        # the safe way to disable at the moment is to just hide the unused panels.
+        if a.GetName() == "dummy":
+            self.subSplitter.SetSashGravity(0.0)
+        elif b.GetName() == "dummy":
+            self.subSplitter.SetSashGravity(1.0)
+        else:
+            self.subSplitter.SetSashGravity(0.5)
+        
+        # If both a and b then expand the big on all the way
         self.topSplitter.SplitHorizontally(c, self.subSplitter)
-        self.topSplitter.SetSashGravity(0.66)
+        if a.GetName() == "dummy" and b.GetName() == "dummy":
+            self.topSplitter.SetSashGravity(1.0)
+        else:
+            self.topSplitter.SetSashGravity(0.66)
 
 
     def layoutReplace(self, a, b, c):
@@ -194,9 +227,7 @@ class MainGraphPanel(wx.Panel):
 
         # Draw the complete data set for the graph
         self.loadAllGraphData()
-        self.furnaceTempGraph.drawGraph()
-        self.unexposedTempGraph.drawGraph()
-        self.pressureGraph.drawGraph()
+        for graph in self.graphList: graph.drawGraph()
 
         self.Layout()
         self.Refresh()
@@ -214,7 +245,7 @@ class MainGraphPanel(wx.Panel):
 ################################################################################
 # Update functions
 ################################################################################
-
+# Here is where you can disable certain graphs. Check for other places too.
     def updateGraphData(self, testData):
         """
         This function subscribes to the published update from the controller.
@@ -224,15 +255,17 @@ class MainGraphPanel(wx.Panel):
                         avgData=testData.furnaceAvgData,
                         rawData=testData.furnaceRawData,
                         blit=True)
-        self.pressureGraph.updatePressureData(timeData=testData.timeData,
-                        ch3Data=testData.ch3PressureData,
-                        ch2Data=testData.ch2PressureData,
-                        ch1Data=testData.ch1PressureData,
-                        blit=True)
-        self.unexposedTempGraph.updateUnexposedData(timeData=testData.timeData,
-                        avgData=testData.unexposedAvgData,
-                        rawData=testData.unexposedRawData,
-                        blit=True)
+        if self.pressureGraphEnabled:
+            self.pressureGraph.updatePressureData(timeData=testData.timeData,
+                            ch3Data=testData.ch3PressureData,
+                            ch2Data=testData.ch2PressureData,
+                            ch1Data=testData.ch1PressureData,
+                            blit=True)
+        if self.unexposedTempGraphEnabled:
+            self.unexposedTempGraph.updateUnexposedData(timeData=testData.timeData,
+                            avgData=testData.unexposedAvgData,
+                            rawData=testData.unexposedRawData,
+                            blit=True)
         self.blitAllGraphs()
 
 # TODO clean this all up. Since blitting requires that we only draw a line
@@ -245,31 +278,35 @@ class MainGraphPanel(wx.Panel):
                             avgData=self.controller.testData.furnaceAvgData,
                             rawData=self.controller.testData.furnaceRawData,
                             blit=False)
-            self.pressureGraph.updatePressureData(timeData=self.controller.testData.timeData,
-                            ch3Data=self.controller.testData.ch3PressureData,
-                            ch2Data=self.controller.testData.ch2PressureData,
-                            ch1Data=self.controller.testData.ch1PressureData,
-                            blit=False)
-            self.unexposedTempGraph.updateUnexposedData(timeData=self.controller.testData.timeData,
-                            avgData=self.controller.testData.unexposedAvgData,
-                            rawData=self.controller.testData.unexposedRawData,
-                            blit=False)
+            if self.pressureGraphEnabled:
+                self.pressureGraph.updatePressureData(timeData=self.controller.testData.timeData,
+                                ch3Data=self.controller.testData.ch3PressureData,
+                                ch2Data=self.controller.testData.ch2PressureData,
+                                ch1Data=self.controller.testData.ch1PressureData,
+                                blit=False)
+            if self.unexposedTempGraphEnabled:
+                self.unexposedTempGraph.updateUnexposedData(timeData=self.controller.testData.timeData,
+                                avgData=self.controller.testData.unexposedAvgData,
+                                rawData=self.controller.testData.unexposedRawData,
+                                blit=False)
 
         except Exception:
-            print("!!! Couldn't load all graph data.")
-   
+            logger.info("Couldn't load all graph data.")
+
 
     def updateUnexposedThreshold(self, threshold):
         """
         Draws theshold line on the Unexposed graph
         """
-        self.unexposedTempGraph.updateUnexposedThreshold(threshold)
+        if self.unexposedTempGraphEnabled:
+            self.unexposedTempGraph.updateUnexposedThreshold(threshold)
 
 
     def blitAllGraphs(self):
-        self.furnaceTempGraph.drawGraph(blit=True)
-        self.unexposedTempGraph.drawGraph(blit=True)
-        self.pressureGraph.drawGraph(blit=True)
+        """
+        Call a blit draw for all the panels
+        """
+        for graph in self.graphList: graph.drawGraph(blit=True)
 
         #wx.PostEvent(self.topSplitter.GetEventHandler(), wx.PyCommandEvent(wx.EVT_SPLITTER_SASH_POS_CHANGED.typeId, self.topSplitter.GetId()))
         self.Refresh() # Repaint self and children
@@ -280,17 +317,11 @@ class MainGraphPanel(wx.Panel):
         # Reset the lines of the raw data on the graphs
         # Inits the plot settings for each of the lines 
         # #and creates the line objects in the graph canvas
-
-        self.furnaceTempGraph.initFurnaceTemperaturePlot() 
-        self.unexposedTempGraph.initUnexposedTemperaturePlot()
-        self.pressureGraph.initPressurePlot()
-
+        for graph in self.graphList: graph.initPlot()
 
         # Scale the x-axis for the test time.
         # TODO: make this a function that also gets called in testExtend()
-        self.furnaceTempGraph.setTestTimeMinutes(testTime)
-        self.unexposedTempGraph.setTestTimeMinutes(testTime)
-        self.pressureGraph.setTestTimeMinutes(testTime)
+        for graph in self.graphList: graph.setTestTimeMinutes(testTime)
 
         # This is now called in setTestTimeMinutes
         # Draw the new target curve
@@ -298,11 +329,11 @@ class MainGraphPanel(wx.Panel):
 
         # Set the y-axis labels to the correct units
         self.furnaceTempGraph.setYLabel(f"Temp. (Deg. {self.controller.testSettings.temperatureUnits})")
-        self.unexposedTempGraph.setYLabel(f"Temp. (Deg. {self.controller.testSettings.temperatureUnits})")
-        self.pressureGraph.setYLabel(f"Press. ({self.controller.testSettings.pressureUnits})")
+        if self.unexposedTempGraphEnabled: self.unexposedTempGraph.setYLabel(f"Temp. (Deg. {self.controller.testSettings.temperatureUnits})")
+        if self.pressureGraphEnabled: self.pressureGraph.setYLabel(f"Press. ({self.controller.testSettings.pressureUnits})")
 
         # Set the Y-Axis limits
-        if self.controller.testSettings.pressureUnits == "Pascal":
+        if self.controller.testSettings.pressureUnits == "Pascal" and self.pressureGraph:
             self.pressureGraph.setYLimits(-62,62) # The limits for pressure when in Pascal
 
         self.Layout()
@@ -320,9 +351,7 @@ class MainGraphPanel(wx.Panel):
         # Make sure they get full data (not blitting)
         self.loadAllGraphData()
 
-        self.furnaceTempGraph.saveGraph(parentPath+"_furnace"+ext)
-        self.unexposedTempGraph.saveGraph(parentPath+"_unexposed"+ext)
-        self.pressureGraph.saveGraph(parentPath+"_pressure"+ext)
+        for graph in self.graphList: graph.saveGraph(parentPath+"_"+graph.getName()+ext)
 
         #self.flashStatusMessage("Saved to %s" % path)
 
@@ -332,7 +361,4 @@ class MainGraphPanel(wx.Panel):
         Set the specified amount of minutes to the graphs.
         """
 
-        self.furnaceTempGraph.setTestTimeMinutes(amtMinutes)
-        self.unexposedTempGraph.setTestTimeMinutes(amtMinutes)
-        self.pressureGraph.setTestTimeMinutes(amtMinutes)
-
+        for graph in self.graphList: graph.setTimeAxis(amtMinutes)

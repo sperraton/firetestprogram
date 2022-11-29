@@ -160,9 +160,9 @@ class MainFrame(wx.Frame):
         """
 
         self.monPanel.makeMonitor(self.controller.selectedAfterburnerChannels,
-                                  self.controller.selectedFurnaceChannels,
-                                  self.controller.selectedUnexposedChannels,
-                                  self.controller.selectedPressureChannels)
+                                self.controller.selectedFurnaceChannels,
+                                self.controller.selectedUnexposedChannels,
+                                self.controller.selectedPressureChannels)
         self.mainSizer.Layout() # Must redo the layout to show the monitor
 
 

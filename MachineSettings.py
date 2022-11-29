@@ -150,8 +150,6 @@ class MachineSettings():
 
         return f"{self.thermocoupleSerialNums}\n{self.pressureSerialNums}\n{self.numTC}\n{self.numPres}\n{self.pressureSenseIsVoltage}\n{self.thermocoupleConfig}\n{self.pressureConfig}\n{self.currentProfile}\n{self.defaultSavePath}\n{self.defaultBackupPath}\n{self.thermocoupleAddresses}"
 
-        #return f"numTC: {self.numTC}/numPres: {self.numPres}/ncurrentProfile: {self.currentProfile}"
-
 
     def saveSettings(self):
         """
