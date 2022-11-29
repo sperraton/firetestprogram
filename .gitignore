@@ -4,6 +4,10 @@ __pycache__/
 Main.build/
 Main.dist/
 Main.onefile-build/
+Update.build/
+Update.dist/
+Update.onefile-build/
+venv/
 .vscode/
 settings/Home Setup/profiles (copy).json
 settings/Home Setup/settings (copy).json
