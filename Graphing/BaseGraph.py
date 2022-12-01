@@ -1,5 +1,3 @@
-#from pydoc import visiblename
-#from tkinter import Label
 import wx
 from pubsub import pub
 #from math import ceil
@@ -9,7 +7,8 @@ from Enumerations import UIcolours, GRAPH_VERT_PADDING, GRAPH_SAVE_W, GRAPH_SAVE
 from Graphing.GraphCanvas import GraphCanvas
 from Graphing.GraphNavToolbar import CustomNavToolbar
 
-
+import logging
+logger = logging.getLogger(__name__)
 
 ###############################################################################
 #
@@ -48,7 +47,8 @@ class BaseGraph(wx.Panel):
         self.graphSizer.Layout()
         self.Layout()
         self.Bind(wx.EVT_LEFT_DCLICK, self.callDblClick) 
-  
+
+
     def initPlotLines(self, plotSettings):
         """
         Given the list of plot settings, initialize the plot lines with the given plot settings
@@ -68,30 +68,9 @@ class BaseGraph(wx.Panel):
     def reloadData(self):
         """
         Reloads the line objects with all the saved test data
+        Intended to be implemented by child object
         """
-        # if self.graphCanvas.graphPlots:
-        #     # For all the line objects, reset the data
-        #     # God this is a mess. Relies too much on things being in order.
-        #     i = 0
-        #     for block in self.testData.data:
-        #         if block is None:
-        #             i += 1
-        #             continue
-        #         if any(block) and isinstance(block[0], list):
-        #             for j in range(len(block[0])):
-        #                 columnVector = [row[j] for row in block]
-        #                 self.graphCanvas.updateData(self.testData.timeData, columnVector, plotIndex=i)
-        #                 i+=1
-        #         else:
-        #             self.graphCanvas.updateData(self.testData.timeData, block, plotIndex=i)
-        #             i+=1
-
-        # self.drawGraph()
-        
-        # This has really got to be this graph specific, otherwise we waste time.
-        topParent = self.GetParent()
-        while "MainGraphPanel" not in topParent.Name: topParent=topParent.GetParent()
-        topParent.loadAllGraphData()
+        logger.debug("Reloading function unimplemented")
 
 
     def drawGraph(self, blit=False):
@@ -141,7 +120,7 @@ class BaseGraph(wx.Panel):
         """
         Add a toolbar UI to the graph.
         """
-        temp = False if self.GetName() == "Pressure Graph" else True
+        temp = False if self.GetName() == "PRESSURE" else True
         self.graphToolbar = CustomNavToolbar(self, isToggleRaw=temp) # Pressure graph doesn't have a toggle
         self.graphToolbar.Realize()
 

@@ -342,7 +342,7 @@ class MainFrame(wx.Frame):
 
 
         self.graphNotebook.initGrid() # Must be called after the initTestSettings because we use controller. TODO rather than reinit everything maybe make a new function to resize and relabel columns.
-        self.graphNotebook.graphTab.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
+        self.graphNotebook.graphManager.initGraphForTest(testSettings.testTimeMinutes) # Scale the graph's x-axis. Also must be called after initTestSettings().
         self.initChannelMon() # Fill out the channel monitor labels
 
         # Ask the user to zero the presure sensors
@@ -561,11 +561,11 @@ class MainFrame(wx.Frame):
 
         # Save the graphs to a png file
         parentPath, ext = os.path.splitext(self.controller.testSettings.fullFileName) # Get the filename only
-        self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save plots automatically
+        self.graphNotebook.graphManager.savePlots(parentPath+".png") # Save plots automatically
 
         if self.controller.testSettings.fullBackupFileName is not None:
             parentPath, ext = os.path.splitext(self.controller.testSettings.fullBackupFileName)
-            self.graphNotebook.graphTab.savePlots(parentPath+".png") # Save Backup plot if the path exists
+            self.graphNotebook.graphManager.savePlots(parentPath+".png") # Save Backup plot if the path exists
 
         self.monPanel.hideMonitor()
 
@@ -586,7 +586,7 @@ class MainFrame(wx.Frame):
                 return # No go. 
 
         self.controller.testSettings.testTimeMinutes += amtMinutes
-        self.graphNotebook.graphTab.setTimeAxis(self.controller.testSettings.testTimeMinutes)
+        self.graphNotebook.graphManager.setTimeAxis(self.controller.testSettings.testTimeMinutes)
 
 
     def lostChannelWarning(self, sensorType, channel):
@@ -687,13 +687,11 @@ if __name__ == '__main__':
         elif opt in ("-v", "--version"):
             print(VERSION_NUM_STRING)
             sys.exit(0)
-            
-#       elif opt in ("-o", "--ofile"):
-#          outputfile = arg
+
 
     app = MainApp(redirect=False, noConnect=connectionOption)  # Create a new app, don't redirect stdout/stderr to a window.
     logger.info("App created. Starting main loop ...")
     app.MainLoop()
 
-    var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
+    #var = input("Press any key to end ...") # Put this in just to stop term windows from closing before I get a chance to read it.
     sys.exit(0)

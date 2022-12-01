@@ -1,3 +1,5 @@
+# WIP
+
 # import datetime
 import os
 import shutil
@@ -86,45 +88,46 @@ def downloadNew():
 def downloadViaRequests():
     pass
 # import requests
-# r = requests.get('https://github.com/owid/covid-19-data/blob/master/public/data/ecdc/COVID-2019%20-%20ECDC%20(2020).csv')
+    # r = requests.get('https://github.com/owid/covid-19-data/blob/master/public/data/ecdc/COVID-2019%20-%20ECDC%20(2020).csv')
 
-        # This did work
-        # target = os.path.join(baseDir, "pythonLogo.png")
-        # wget.download(dl_url, target)
-        # print("\n")
-        # os.path.exists(target)
+def downloadViaWget():
+    # This did work
+    target = os.path.join(baseDir, "pythonLogo.png")
+    wget.download(dl_url, target)
+    print("\n")
+    os.path.exists(target)
 
 
 def downloadViaURLOpen():
     pass
-        # dl_file = open(cwd, 'w')
-        # http_stream = urllib.urlopen(dl_url)
-        # total_size = None
-        # bytes_so_far = 0
-        # chunk_size = 8192
-        # try:
-        #     total_size = int(http_stream.info().getheader('Content-Length').strip())
-        # except:
-        #     # The header is improper or missing Content-Length, just download
-        #     dl_file.write(http_stream.read())
+    # dl_file = open(cwd, 'w')
+    # http_stream = urllib.urlopen(dl_url)
+    # total_size = None
+    # bytes_so_far = 0
+    # chunk_size = 8192
+    # try:
+    #     total_size = int(http_stream.info().getheader('Content-Length').strip())
+    # except:
+    #     # The header is improper or missing Content-Length, just download
+    #     dl_file.write(http_stream.read())
 
-        # while total_size:
-        #     chunk = http_stream.read(chunk_size)
-        #     dl_file.write(chunk)
-        #     bytes_so_far += len(chunk)
+    # while total_size:
+    #     chunk = http_stream.read(chunk_size)
+    #     dl_file.write(chunk)
+    #     bytes_so_far += len(chunk)
 
-        #     if not chunk:
-        #         break
+    #     if not chunk:
+    #         break
 
-        #     percent = float(bytes_so_far) / total_size
-        #     percent = round(percent*100, 2)
-        #     sys.stdout.write("Downloaded %d of %d bytes (%0.2f%%)\r" % (bytes_so_far, total_size, percent))
+    #     percent = float(bytes_so_far) / total_size
+    #     percent = round(percent*100, 2)
+    #     sys.stdout.write("Downloaded %d of %d bytes (%0.2f%%)\r" % (bytes_so_far, total_size, percent))
 
-        #     if bytes_so_far >= total_size:
-        #         sys.stdout.write('\n')
+    #     if bytes_so_far >= total_size:
+    #         sys.stdout.write('\n')
 
-        # http_stream.close()
-        # dl_file.close()
+    # http_stream.close()
+    # dl_file.close()
 
 
 

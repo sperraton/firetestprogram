@@ -2,7 +2,7 @@ from email.policy import default
 from enum import Enum
 #from matplotlib import cm
 
-VERSION_NUM_STRING = "1.56.4"
+VERSION_NUM_STRING = "1.57.0"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
@@ -181,3 +181,6 @@ ZOOM_ID=102
 DRAG_ID=103
 SAVEPATH_ID=201
 BACKUPPATH_ID=202
+
+PASCAL_LWR_LIMIT = -62
+PASCAL_UPR_LIMIT = 62

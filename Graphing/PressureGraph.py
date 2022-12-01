@@ -4,16 +4,18 @@ from math import ceil
 from Enumerations import DEFAULT_UNEXPOSED_WARN_THRESH, GRAPH_AVG_LINE_WIDTH, GRAPH_DEFAULT_LINE_WIDTH, GRAPH_LIMITS_LINE_WIDTH, GRAPH_TARGET_LINE_WIDTH, UIcolours, GRAPH_VERT_PADDING, pressurePlacementLabels, DEFAULT_TEST_TIME
 from Graphing.BaseGraph import BaseGraph
 from Graphing.PlotSettings import PlotSettings
+import logging
+logger = logging.getLogger(__name__)
 
 
 ################################################################################
 # Pressure Specific
 ################################################################################
 class PressureGraph(BaseGraph):
-    def __init__(self, parent, panelID, controller, axesSettings=None):
+    def __init__(self, parent, panelID, controller, axesSettings=None, name="PRESSURE"):
 
         self.controller = controller
-        BaseGraph.__init__(self, parent, panelID, axesSettings, name="Pressure Graph")
+        BaseGraph.__init__(self, parent, panelID, axesSettings, name=name)
         self.initPlot()
 
 
@@ -87,3 +89,20 @@ class PressureGraph(BaseGraph):
         # self.graphCanvas.graphAxes.legend(handles, labels, loc='upper left', fontsize="x-small", labelspacing=0.2, ncol=2)
         # self.graphCanvas.draw()
         # self.graphCanvas.flush_events()
+
+
+    def reloadData(self):
+        try:
+
+        # Get a handle to the test data for which you will be loading all the data
+            app = wx.GetApp()
+            testData = app.frame.controller.testData
+
+            self.pressureGraph.updatePressureData(timeData=testData.timeData,
+                                ch3Data=testData.ch3PressureData,
+                                ch2Data=testData.ch2PressureData,
+                                ch1Data=testData.ch1PressureData,
+                                blit=False)
+
+        except Exception:
+            logger.info("Couldn't load all pressure graph data.")
