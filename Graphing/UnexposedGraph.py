@@ -4,19 +4,20 @@ from math import ceil
 from Enumerations import DEFAULT_UNEXPOSED_WARN_THRESH, GRAPH_AVG_LINE_WIDTH, GRAPH_DEFAULT_LINE_WIDTH, GRAPH_LIMITS_LINE_WIDTH, GRAPH_TARGET_LINE_WIDTH, UIcolours, GRAPH_VERT_PADDING
 from Graphing.BaseGraph import BaseGraph
 from Graphing.PlotSettings import PlotSettings
-
+import logging
+logger = logging.getLogger(__name__)
 
 ################################################################################
 # Unexposed Specific
 ################################################################################
 
 class UnexposedGraph(BaseGraph):
-    def __init__(self, parent, panelID, controller, axesSettings=None):
+    def __init__(self, parent, panelID, controller, axesSettings=None, name="UNEXPOSED"):
         """
         Prepare the graph plots for the unexposed data
         """
         self.controller = controller
-        BaseGraph.__init__(self, parent, panelID, axesSettings)
+        BaseGraph.__init__(self, parent, panelID, axesSettings, name=name)
         self.initPlot()
 
 
@@ -122,3 +123,19 @@ class UnexposedGraph(BaseGraph):
             self.updateUnexposedThreshold(threshold) # Continue on the threshold line but not if this is the graph setup at the start of the test.
 
         super().setTestTimeMinutes(minutes)
+
+
+    def reloadData(self):
+        try:
+
+        # Get a handle to the test data for which you will be loading all the data
+            app = wx.GetApp()
+            testData = app.frame.controller.testData
+
+            self.unexposedTempGraph.updateUnexposedData(timeData=testData.timeData,
+                            avgData=testData.unexposedAvgData,
+                            rawData=testData.unexposedRawData,
+                            blit=False)
+
+        except Exception:
+            logger.info("Couldn't load all unexposed graph data.")
