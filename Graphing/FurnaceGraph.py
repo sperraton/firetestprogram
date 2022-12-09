@@ -32,9 +32,13 @@ class FurnaceGraph(BaseGraph):
 
         # Put together a special data object to pack together the different
         # plotlines that this graph object needs
+        # This is a first step to generalisation of these graphs
         if self.controller.testData:
             dataBlocks = [None, self.controller.testData.furnaceAvgData, self.controller.testData.furnaceRawData] # TODO The target right now is left out since that array isn't held in the test data
-            self.testData = SimpleNamespace(timeData=self.controller.testData.timeData, data=dataBlocks)
+            self.testData = SimpleNamespace(timeData=self.controller.testData.timeData,
+                                            furnaceAvgData = self.controller.testData.furnaceAvgData,
+                                            furnaceRawData = self.controller.testData.furnaceRawData,
+                                            data = dataBlocks)
 
         # The target temperature
         self.targetSettings = PlotSettings(
@@ -86,12 +90,19 @@ class FurnaceGraph(BaseGraph):
         for i in range(2, len(self.graphCanvas.graphPlotSettings)) : # Skip the Avg and the threshold lines
             self.graphCanvas.setPlotLineVisibility(plotIndex=i, visible=False)
 
-
-    def updateFurnaceData(self, timeData, avgData, rawData, blit=False):
+    
+    def updateData(self, blit=False):
         """
         Draws the latest average and raw data.
         """
-        
+        if self.testData is None:
+            logging.debug("Test data object not instantiated yet.")
+            return
+
+        timeData=self.testData.timeData
+        avgData=self.testData.data[1]
+        rawData=self.testData.data[2]
+
         # Do the furnace average
         self.graphCanvas.updateData(timeData, avgData, plotIndex=1, blit=blit)
 
@@ -100,13 +111,12 @@ class FurnaceGraph(BaseGraph):
         # TODO This likely doesn't need to be a for loop or at least look at the number of columns rather than referencing the controller.
 
         for i in range(len(self.controller.selectedFurnaceChannels)):
-            #columnVector = [row[i] for row in rawData]
+            
             try:
                 self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2, blit=blit) # Give the plot the updated data +1 debug
-            except IndexError: # TODO handle the error here
-                continue
-        # TODO just trying out graphing the outlier limits
-        #self.graphCanvas.updateData(timeData, self.controller.testData.furnaceUprLimitData, plotIndex=len(self.controller.selectedFurnaceChannels)+2, blit=blit) # Give the plot the updated data)
+            except IndexError:
+                logger.debug(f"Index error in updateData. Current index:{i}")
+
 
 
     def createTargetCurveArray(self, testLengthMinutes):
@@ -133,19 +143,3 @@ class FurnaceGraph(BaseGraph):
         self.createTargetCurveArray(minutes)
         
         super().setTestTimeMinutes(minutes)
-
-
-    def reloadData(self):
-        try:
-
-        # Get a handle to the test data for which you will be loading all the data
-            app = wx.GetApp()
-            testData = app.frame.controller.testData
-
-            self.furnaceTempGraph.updateFurnaceData(timeData=testData.timeData,
-                            avgData=testData.furnaceAvgData,
-                            rawData=testData.furnaceRawData,
-                            blit=False)
-
-        except Exception:
-            logger.info("Couldn't load all furnace graph data.")

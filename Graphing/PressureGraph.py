@@ -56,53 +56,26 @@ class PressureGraph(BaseGraph):
         self.initPlotLines([self.presCh1Settings, self.presCh2Settings, self.presCh3Settings])
 
 
-    def updatePressureData(self, timeData, ch3Data, ch2Data, ch1Data, blit=False):
+
+    def updateData(self, blit=False):
         """
         Draws the lates pressure sensor data
         """
+
+        if self.testData is None:
+            logging.debug("Test data object not instantiated yet.")
+            return
+        
+        timeData=self.testData.timeData
+        ch3Data=self.testData.data[2]
+        ch2Data=self.testData.data[1]
+        ch1Data=self.testData.data[0]
+        
+
         # Are there no pressure sensors being used?
         if not ch3Data and not ch2Data and not ch1Data:
-           return
+            return
 
         if ch1Data: self.graphCanvas.updateData(timeData, ch1Data, plotIndex=0, blit=blit)
         if ch2Data: self.graphCanvas.updateData(timeData, ch2Data, plotIndex=1, blit=blit)
         if ch3Data: self.graphCanvas.updateData(timeData, ch3Data, plotIndex=2, blit=blit)
-
-
-
-    def hideUnusedPressureSensors(self):
-        pass # DEBUGGING
-        # # Hide the pressure sensors we aren't using.
-        # handles, labels = self.graphCanvas.graphAxes.get_legend_handles_labels()
-
-        # for i in range(3):
-        #     if self.controller.isLabelInSelectedPressure(pressurePlacementLabels[i+1]):
-        #         self.graphCanvas.graphPlots[i].set_visible(True)
-        #         labels[i] = pressurePlacementLabels[i+1]
-        #         handles[i].set_linestyle(wx.PENSTYLE_SOLID)
-        #     else:
-        #         self.graphCanvas.graphPlots[i].set_visible(False)
-        #         labels[i] = "" # None
-        #         # handles[i] = None #.set_linestyle("")
-
-
-        # self.graphCanvas.graphAxes.legend(handles, labels, loc='upper left', fontsize="x-small", labelspacing=0.2, ncol=2)
-        # self.graphCanvas.draw()
-        # self.graphCanvas.flush_events()
-
-
-    def reloadData(self):
-        try:
-
-        # Get a handle to the test data for which you will be loading all the data
-            app = wx.GetApp()
-            testData = app.frame.controller.testData
-
-            self.pressureGraph.updatePressureData(timeData=testData.timeData,
-                                ch3Data=testData.ch3PressureData,
-                                ch2Data=testData.ch2PressureData,
-                                ch1Data=testData.ch1PressureData,
-                                blit=False)
-
-        except Exception:
-            logger.info("Couldn't load all pressure graph data.")

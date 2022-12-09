@@ -5,6 +5,9 @@ import json
 from DAQ.Address import Address
 import os
 
+import logging
+logger = logging.getLogger(__name__)
+
 # TODO A lot of these getter/setters can be @params
 
 PUBLIC_ENUMS = {
@@ -43,7 +46,7 @@ class MachineSettings():
         Load the serial numbers from the config
         """
         try:
-            print("Loading settings ...")
+            logger.info("Loading settings ...")
 
             with open("settings.json") as f:
                 self.settingsData = json.load(f, object_hook=as_enum)
@@ -53,8 +56,8 @@ class MachineSettings():
         except:
             # TODO, Don't swallow errors. Although I think that this is caught in the calling func.
             #infoDialog(self.parent, "No previously saved settings.")
-            print("!!! There was an error loading settings !!!")
-            print("!!! Could not parse the settings.json file !!!")
+            logger.info("!!! There was an error loading settings !!!")
+            logger.info("!!! Could not parse the settings.json file !!!")
             pass
 
 
@@ -64,24 +67,24 @@ class MachineSettings():
         """
 
         if "machineSetup" not in self.settingsData:
-            print("Machine Setup not found in settings. Loading defaults")
+            logger.info("Machine Setup not found in settings. Loading defaults")
             return # TODO Fill out this stub
 
         if "serialNums" in self.settingsData["machineSetup"]:
 
-            print("|___Loading serials ...")
+            logger.info("|___Loading serials ...")
             self.thermocoupleSerialNums = self.settingsData["machineSetup"]["serialNums"]["thermocouple"] #thermocoupleSerialNums
-            print(f"        Thermocouple Serials: {self.thermocoupleSerialNums}")
+            logger.info(f"        Thermocouple Serials: {self.thermocoupleSerialNums}")
             self.pressureSerialNums = self.settingsData["machineSetup"]["serialNums"]["pressure"] #pressureSerialNums        
-            print(f"        Pressure Serials: {self.pressureSerialNums}")
+            logger.info(f"        Pressure Serials: {self.pressureSerialNums}")
 
         # Determine the number of TC channels based on number of hubs
         self.numTC = self.settingsData["machineSetup"].get("numTC",)
         self.numPres = self.settingsData["machineSetup"].get("numPres", 3)
         self.pressureSenseIsVoltage = self.settingsData["machineSetup"].get("pressureIsVoltage", []) # Is this channel wired for current or voltage input
         
-        print(f"        Num TCs: {self.numTC}")
-        print(f"        Pres. Sens. isVoltage: {self.pressureSenseIsVoltage}")
+        logger.info(f"        Num TCs: {self.numTC}")
+        logger.info(f"        Pres. Sens. isVoltage: {self.pressureSenseIsVoltage}")
 
         # Check for non-default pressure labels TODO should make this match the TC labels, but right now this is the simplest path to make that change.
         if "pressurePlacementLabels" in self.settingsData["machineSetup"]: # Are these defined?
@@ -91,21 +94,23 @@ class MachineSettings():
 
         # Set the graph update rate seconds(Try increasing rate if stability problems encountered)
         self.graphUpdateRate = self.settingsData["machineSetup"].get("graphUpdateRate",1)
+        self.unexposedTempGraphEnabled = self.settingsData["machineSetup"].get("unexposedTempGraphEnabled",True)
+        self.pressureGraphEnabled = self.settingsData["machineSetup"].get("pressureGraphEnabled", True)
 
         # TODO make a default profile
-        print("|___Loading sensor configuration ...")
+        logger.info("|___Loading sensor configuration ...")
         self.thermocoupleConfig = self.settingsData["defaultProfile"]["thermocoupleConfig"] #None # The channel role and the gain and offset calibration
         self.pressureConfig = self.settingsData["defaultProfile"]["pressureConfig"]
 
         #Load up the map of how the Phidgets are wired up
-        print("|___Loading addresses ...")
+        logger.info("|___Loading addresses ...")
         self.thermocoupleAddresses = []
 
         chNum = 0
 
         try:
             for row in self.settingsData["thermocoupleAddresses"]:
-                print(f"    Getting address ({chNum}) ... {row}")
+                logger.info(f"    Getting address ({chNum}) ... {row}")
                 self.thermocoupleAddresses.append(Address(row["serial"],
                                                         row["VINTport"],
                                                         row["channel"],
@@ -113,24 +118,24 @@ class MachineSettings():
                 chNum += 1
 
         except:
-            print("        No addresses in settings. Attempting to build addresses ...")
+            logger.info("        No addresses in settings. Attempting to build addresses ...")
             self.initThermocoupleAddresses()
 
-        print("|___Loading profile ...")
+        logger.info("|___Loading profile ...")
         self.currentProfile = self.settingsData["machineSetup"].get("currentProfile", 0) # Default to 0
         self.defaultSavePath = self.settingsData["machineSetup"].get("defaultSavePath", os.getcwd())
         self.defaultBackupPath = self.settingsData["machineSetup"].get("defaultBackupPath", os.getcwd())
 
-        print(f"        Current Profile: {self.currentProfile}")
-        print(f"        Default Save Path: {self.defaultSavePath}")
-        print(f"        Backup Save Path: {self.defaultBackupPath}")
+        logger.info(f"        Current Profile: {self.currentProfile}")
+        logger.info(f"        Default Save Path: {self.defaultSavePath}")
+        logger.info(f"        Backup Save Path: {self.defaultBackupPath}")
 
 
     def initThermocoupleAddresses(self):
         for serialNum in self.thermocoupleSerialNums:
             for hubIndex in range(4, -1, -1): # Hub Port counts down 4, 3, 2, 1, 0
                 for channelIndex in range(4): # Channel counts up  0, 1, 2, 3
-                    #print("TC Address - %d, %d, %d" % (serialNum, hubIndex, channelIndex))
+                    #logger.info("TC Address - %d, %d, %d" % (serialNum, hubIndex, channelIndex))
                     self.thermocoupleAddresses.append(Address(serialNum,
                                                        hubIndex,
                                                        channelIndex,
@@ -141,7 +146,7 @@ class MachineSettings():
         for serialNum in self.thermocoupleSerialNums:
             for hubIndex in range(5): # Hub Port counts up 0, 1, 2, 3, 4
                 for channelIndex in range(3, -1, -1): # Count down 3, 2, 1, 0
-                    #print("%d, %d, %d" % (serialNum, hubIndex, channelIndex))
+                    #logger.info("%d, %d, %d" % (serialNum, hubIndex, channelIndex))
                     self.thermocoupleAddresses.append(Address(serialNum,
                                                        hubIndex,
                                                        channelIndex,
@@ -165,8 +170,8 @@ class MachineSettings():
                 json.dump(self.settingsData, f, cls=EnumEncoder, indent=4)
 
         except:
-             #warnDialog(self, "Unable to save settings.")
-             pass
+            #warnDialog(self, "Unable to save settings.")
+            pass
 
     def loadProfiles(self):
         """

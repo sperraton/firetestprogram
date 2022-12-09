@@ -280,10 +280,10 @@ class MainFrame(wx.Frame):
         Choose the default directory that the logs are saved in.
         """
         dlg = wx.DirDialog(self, "Choose a directory:",
-                       style=wx.DD_DEFAULT_STYLE
-                       #| wx.DD_DIR_MUST_EXIST
-                       #| wx.DD_CHANGE_DIR
-                       )
+                        style=wx.DD_DEFAULT_STYLE
+                        #| wx.DD_DIR_MUST_EXIST
+                        #| wx.DD_CHANGE_DIR
+                        )
         if dlg.ShowModal() == wx.ID_OK:
             evtID = event.GetId()
             if evtID == SAVEPATH_ID:# GetEventObject() is self.savePathItem:

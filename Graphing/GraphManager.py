@@ -44,37 +44,18 @@ class GraphManager():
         This function subscribes to the published update from the controller.
         """
 
-        # TODO this should be treated like the loadAllGraphData function
-        self.furnaceTempGraph.updateFurnaceData(timeData=testData.timeData,
-                        avgData=testData.furnaceAvgData,
-                        rawData=testData.furnaceRawData,
-                        blit=True)
-
-        if self.pressureGraph:
-            self.pressureGraph.updatePressureData(timeData=testData.timeData,
-                            ch3Data=testData.ch3PressureData,
-                            ch2Data=testData.ch2PressureData,
-                            ch1Data=testData.ch1PressureData,
-                            blit=True)
-
-        if self.unexposedTempGraph:
-            self.unexposedTempGraph.updateUnexposedData(timeData=testData.timeData,
-                            avgData=testData.unexposedAvgData,
-                            rawData=testData.unexposedRawData,
-                            blit=True)
+        self.furnaceTempGraph.updateData(blit=True)
+        if self.pressureGraph: self.pressureGraph.updateData(blit=True)
+        if self.unexposedTempGraph: self.unexposedTempGraph.updateData(blit=True)
 
         self.blitAllGraphs()
-
-# TODO clean this all up. Since blitting requires that we only draw a line
-# between the last two points, and we don't erase the background, try to get
-# everything organised and labeled correctly.
 
 
     def updateUnexposedThreshold(self, threshold):
         """
         Draws theshold line on the Unexposed graph
         """
-        if self.unexposedTempGraphEnabled:
+        if self.unexposedTempGraph:
             self.unexposedTempGraph.updateUnexposedThreshold(threshold)
 
 
@@ -124,9 +105,9 @@ class GraphManager():
         # Make sure they get full data (not blitting)
         self.furnaceTempGraph.reloadData()
         if self.unexposedTempGraph: self.unexposedTempGraph.reloadData()
-        if self.pressureGraphEnabled: self.pressureGraph.reloadData()
+        if self.pressureGraph: self.pressureGraph.reloadData()
 
-        for graph in self.graphList: graph.saveGraph(parentPath+"_"+graph.getName()+ext)
+        for graph in self.graphList: graph.saveGraph(parentPath+"_"+graph.GetName()+ext)
 
         #self.flashStatusMessage("Saved to %s" % path)
 

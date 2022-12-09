@@ -25,12 +25,14 @@ class GraphNotebook(wx.Notebook):
         
         self.parent = parent
         self.frame = frame
+
+
+        app = wx.GetApp()
+        assert app is not None, "In MonitorList.__init__. wx.App not created yet"
+        self.machineSettings = app.machineSettings
         
         # Create the tab panels
         self.graphList = []
-
-        self.unexposedTempGraphEnabled = False #Debugging Move these flags to machine settings when done here
-        self.pressureGraphEnabled = True
 
         graphAxesSettings = AxesSettings("Furnace Temperature", 
                                         "Time (Min.)", 
@@ -43,7 +45,7 @@ class GraphNotebook(wx.Notebook):
         self.graphList.append(self.furnaceTempGraph)
         self.AddPage(self.furnaceTempGraph, "Furnace Graph")
 
-        if self.unexposedTempGraphEnabled:
+        if self.machineSettings.unexposedTempGraphEnabled:
             graphAxesSettings = AxesSettings("Unexposed Temperature", 
                                             "Time (Min.)", 
                                             "Temp. (Deg. C)", 
@@ -56,7 +58,7 @@ class GraphNotebook(wx.Notebook):
             self.AddPage(self.unexposedTempGraph, "Unexposed Graph")
 
         
-        if self.pressureGraphEnabled:
+        if  self.machineSettings.pressureGraphEnabled:
             graphAxesSettings = AxesSettings("Furnace Pressure", 
                                             "Time (Min.)", 
                                             "Press. (in H2O)", 

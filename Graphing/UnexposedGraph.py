@@ -74,24 +74,31 @@ class UnexposedGraph(BaseGraph):
         self.initPlotLines([self.failureThreshSettings, self.unexpAvgSettings] + self.unexpRawSettings)
 
 
-    def updateUnexposedData(self, timeData, avgData, rawData, blit=False):
+
+    def updateData(self, blit=False):
         """
         Draws the latest unexposed data.
         This should be called at the test update rate, which should be 1 second.
         """
+        if self.testData is None:
+            logging.debug("Test data object not instantiated yet.")
+            return
+        
+        timeData=self.testData.timeData
+        avgData=self.testData.data[0]
+        rawData=self.testData.data[1]
+        
         # Do the Unexposed average data
         self.graphCanvas.updateData(timeData, avgData, plotIndex=1, blit=blit)
         
         # Trying out just the avg for now until I get the update sorted.
         for i in range(len(self.controller.selectedUnexposedChannels)):
-            #columnVector = rawData[:][i] #[row[i] for row in rawData] #rawData[:, i]
+            
             try:
-                #columnVector = [row[i] for row in rawData]
                 self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2, blit=blit) # Give the plot the updated data
-            except IndexError: # Swallowing errors. Naughty, naughty.
-                continue
+            except IndexError:
+                logger.debug(f"Index error in updateData. Current index:{i}")
         
-
 
     def updateUnexposedThreshold(self, threshold):
         """
@@ -125,17 +132,3 @@ class UnexposedGraph(BaseGraph):
         super().setTestTimeMinutes(minutes)
 
 
-    def reloadData(self):
-        try:
-
-        # Get a handle to the test data for which you will be loading all the data
-            app = wx.GetApp()
-            testData = app.frame.controller.testData
-
-            self.unexposedTempGraph.updateUnexposedData(timeData=testData.timeData,
-                            avgData=testData.unexposedAvgData,
-                            rawData=testData.unexposedRawData,
-                            blit=False)
-
-        except Exception:
-            logger.info("Couldn't load all unexposed graph data.")

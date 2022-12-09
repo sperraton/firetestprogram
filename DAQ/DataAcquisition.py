@@ -10,6 +10,9 @@ from DAQ.PressureSensor import PressureSensor
 from HelperFunctions import *
 from Enumerations import DATA_INTERVAL_MS
 
+import logging
+logger = logging.getLogger(__name__)
+
 class DataAcquisition():
 
     ################################################################################
@@ -22,7 +25,7 @@ class DataAcquisition():
         self.parent = parent
         self.machineSettings = machineSettings
 
-        print("Initializing the DAQ ...")
+        logger.info("Initializing the DAQ ...")
         # TODO We need to check that the serial numbers passed from the machineSettings
         # match with the serial numbers reported by the attached Phidgets and float up an
         # error to the user if they do not.
@@ -46,10 +49,10 @@ class DataAcquisition():
         try:
             
             # Init an array of all the thermocouple  channels
-            print(f"  Initializing {machineSettings.numTC} TC channel sensors ...")
+            logger.info(f"  Initializing {machineSettings.numTC} TC channel sensors ...")
             self.channelThermocouple = []
             for i in range(0, machineSettings.numTC):
-                print(f"    |___Channel {i}")
+                logger.info(f"    |___Channel {i}")
                 self.channelThermocouple.append(ThermocoupleSensor(self.thermocoupleAddresses[i].serialNumber,
                                                                    self.thermocoupleAddresses[i].hubPort,
                                                                    self.thermocoupleAddresses[i].channel,
@@ -72,10 +75,10 @@ class DataAcquisition():
                                                             units="C")
 
             # Init an array of all the pressure channels
-            print("  Initializing Pressure channels ...")
+            logger.info("  Initializing Pressure channels ...")
             self.channelPressure = []
             for i in range(0, machineSettings.numPres):
-                print(f"    |___Channel {i}")
+                logger.info(f"    |___Channel {i}")
                 self.channelPressure.append(PressureSensor(self.pressureAddress[i].serialNumber,
                                                            self.pressureAddress[i].hubPort,
                                                            self.pressureAddress[i].channel,
@@ -108,14 +111,14 @@ class DataAcquisition():
 
     def setSelectedThermocouples(self, selected):
         # A list of indices
-        # print("Selected Thermocouples =================")
-        # print(selected)
+        # logger.info("Selected Thermocouples =================")
+        # logger.info(selected)
         self.selectedTCchannels = selected
 
 
     def setSelectedPressureSensors(self, selected):
-        # print("Selected Pressure =================")
-        # print(selected)
+        # logger.info("Selected Pressure =================")
+        # logger.info(selected)
         self.selectedPressureChannels = selected
 
 
@@ -128,9 +131,9 @@ class DataAcquisition():
     #     except PhidgetException as e:
     #         # NOTE having a single Phidget HUB will cause this to fall into here.
     #         warnDialog(self.parent.parent, "Unable to communicate to DAQ.\nCheck all connections and power to system then restart program")
-    #         print("!!! WARNING WARNING WARNING !!!")
-    #         print("Phidget Exception %i: %s" % (e.code, e.details))
-    #         #print("Press Enter to Exit...\n")
+    #         logger.info("!!! WARNING WARNING WARNING !!!")
+    #         logger.info("Phidget Exception %i: %s" % (e.code, e.details))
+    #         #logger.info("Press Enter to Exit...\n")
     #         #readin = sys.stdin.read(1)
     #         #exit(1) # TODO Do we really need to exit here. Let the user know there is a problem and try to recover
     #         # TODO try closing the phidgets here
@@ -145,8 +148,8 @@ class DataAcquisition():
 
                 except PhidgetException as e:
                     #warnDialog(self.parent.parent, "Unable to communicate to DAQ.\nCheck all connections and power to system then restart program")
-                    print("!!! WARNING WARNING WARNING !!!")
-                    print("Phidget Exception %i: %s" % (e.code, e.details))
+                    logger.info("!!! WARNING WARNING WARNING !!!")
+                    logger.info("Phidget Exception %i: %s" % (e.code, e.details))
         
 
 
@@ -167,8 +170,8 @@ class DataAcquisition():
 
                 except PhidgetException as e:
                     warnDialog(self.parent.parent, "Unable to communicate to DAQ.\nCheck all connections and power to system then restart program")
-                    print("!!! WARNING WARNING WARNING !!!")
-                    print("Phidget Exception %i: %s" % (e.code, e.details))
+                    logger.info("!!! WARNING WARNING WARNING !!!")
+                    logger.info("Phidget Exception %i: %s" % (e.code, e.details))
 
 
     def listAttachedPressureSensors(self):
@@ -252,7 +255,7 @@ class DataAcquisition():
         for VINThubSerialNum in self.thermocoupleSerialNums:
             for VINThubPortIndex in range(4, -1, -1): # Hub Port counts down 4, 3, 2, 1, 0
                 for thermocoupleChannelIndex in range(4): # Channel counts up  0, 1, 2, 3
-                    #print("TC Address - %d, %d, %d" % (VINThubSerialNum, VINThubPortIndex, thermocoupleChannelIndex))
+                    #logger.info("TC Address - %d, %d, %d" % (VINThubSerialNum, VINThubPortIndex, thermocoupleChannelIndex))
                     self.thermocoupleAddresses.append(Address(VINThubSerialNum,
                                                             VINThubPortIndex,
                                                             thermocoupleChannelIndex,
@@ -263,7 +266,7 @@ class DataAcquisition():
         for VINThubSerialNum in self.thermocoupleSerialNums:
             for VINThubPortIndex in range(5): # Hub Port counts up 0, 1, 2, 3, 4
                 for thermocoupleChannelIndex in range(3, -1, -1): # Count down 3, 2, 1, 0
-                    #print("%d, %d, %d" % (VINThubSerialNum, VINThubPortIndex, thermocoupleChannelIndex))
+                    #logger.info("%d, %d, %d" % (VINThubSerialNum, VINThubPortIndex, thermocoupleChannelIndex))
                     self.thermocoupleAddresses.append(Address(VINThubSerialNum,
                                                             VINThubPortIndex,
                                                             thermocoupleChannelIndex,
@@ -276,4 +279,4 @@ class DataAcquisition():
                                                 VINThubPortIndex,
                                                 channel=0,
                                                 isHubPort=False))
-            #print("Pressure Address - %d, %d, %d" % (self.pressureSerialNums[0], VINThubPortIndex, 0))
+            #logger.info("Pressure Address - %d, %d, %d" % (self.pressureSerialNums[0], VINThubPortIndex, 0))

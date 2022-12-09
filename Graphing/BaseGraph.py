@@ -68,10 +68,13 @@ class BaseGraph(wx.Panel):
     def reloadData(self):
         """
         Reloads the line objects with all the saved test data
-        Intended to be implemented by child object
         """
-        logger.debug("Reloading function unimplemented")
+        try:
+            self.updateData(blit=False)
 
+        except Exception:
+            logger.info("Couldn't load all graph data.")
+    
 
     def drawGraph(self, blit=False):
         """
@@ -83,7 +86,7 @@ class BaseGraph(wx.Panel):
 
     def callDblClick(self, event):
         """
-        Send message to parent control that we got dblClicked. Sswap this pannel out.
+        Send message to parent control that we got dblClicked. Swap this pannel out.
         """
         pub.sendMessage("graphs.dblClick", panelID=self.panelID)
 
