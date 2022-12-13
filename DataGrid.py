@@ -36,11 +36,11 @@ class DataGrid(wx.Panel):
 
         # Maybe make this into a dict. to keep colours consistent
         self.Colours = [UIcolours.GRID_TIMESTAMP,
-                       UIcolours.GRID_TIMESTAMP,
-                       UIcolours.GRID_TARGET_TEMP,
-                       UIcolours.GRID_AVG_TEMP,
-                       UIcolours.GRID_TARGET_AUC,
-                       UIcolours.GRID_AVG_AUC]
+                        UIcolours.GRID_TIMESTAMP,
+                        UIcolours.GRID_TARGET_TEMP,
+                        UIcolours.GRID_AVG_TEMP,
+                        UIcolours.GRID_TARGET_AUC,
+                        UIcolours.GRID_AVG_AUC]
 
         self.gridView.SetColLabelTextOrientation(wx.VERTICAL)
         #self.gridView.AutoSizeColumns()

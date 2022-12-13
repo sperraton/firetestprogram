@@ -13,19 +13,13 @@ from Enumerations import GRAPH_VERT_PADDING, DEFAULT_TEST_TIME
 import logging
 logger = logging.getLogger(__name__)
 class GraphNotebook(wx.Notebook):
-
+    """
+    The UI tabbed notebook which contains the graphs and data table
+    """
     def __init__(self, parent, frame):
-        wx.Notebook.__init__(self, parent, id=wx.ID_ANY, style=
-                            #wx.BK_DEFAULT
-                            wx.BK_TOP 
-                            #wx.BK_BOTTOM
-                            #wx.BK_LEFT
-                            #wx.BK_RIGHT
-                            )
-        
-        self.parent = parent
-        self.frame = frame
+        super().__init__(parent, style=wx.BK_TOP)
 
+        self.frame = frame
 
         app = wx.GetApp()
         assert app is not None, "In MonitorList.__init__. wx.App not created yet"
@@ -34,6 +28,7 @@ class GraphNotebook(wx.Notebook):
         # Create the tab panels
         self.graphList = []
 
+        # The furnace tab
         graphAxesSettings = AxesSettings("Furnace Temperature", 
                                         "Time (Min.)", 
                                         "Temp. (Deg. C)", 
@@ -45,6 +40,7 @@ class GraphNotebook(wx.Notebook):
         self.graphList.append(self.furnaceTempGraph)
         self.AddPage(self.furnaceTempGraph, "Furnace Graph")
 
+        # The unexposed tab if enabled
         if self.machineSettings.unexposedTempGraphEnabled:
             graphAxesSettings = AxesSettings("Unexposed Temperature", 
                                             "Time (Min.)", 
@@ -57,7 +53,7 @@ class GraphNotebook(wx.Notebook):
             self.graphList.append(self.unexposedTempGraph)
             self.AddPage(self.unexposedTempGraph, "Unexposed Graph")
 
-        
+        # The pressure tab if enabled
         if  self.machineSettings.pressureGraphEnabled:
             graphAxesSettings = AxesSettings("Furnace Pressure", 
                                             "Time (Min.)", 
@@ -70,6 +66,7 @@ class GraphNotebook(wx.Notebook):
             self.graphList.append(self.pressureGraph)
             self.AddPage(self.pressureGraph, "Pressure Graph")
 
+        # The data grid tab
         self.dataGridTab = DataGrid(self)
         self.AddPage(self.dataGridTab, "Data Table")
 

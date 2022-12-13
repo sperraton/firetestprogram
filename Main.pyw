@@ -108,7 +108,7 @@ class MainFrame(wx.Frame):
         self.mainPanel = wx.Panel(self, name="Main Panel")
         self.monPanel = Monitor(self.mainPanel, self, -1)
 
-        self.graphNotebook = GraphNotebook(self.mainPanel, self)
+        self.graphNotebook = GraphNotebook(parent=self.mainPanel, frame=self)
         self.testExtendDialog = None
 
         # Do the layout
@@ -314,6 +314,7 @@ class MainFrame(wx.Frame):
             dlg.Destroy()
             return  # Cancel was pressed, don't start the test
 
+        # Create a test settings object to pass to the controller for this test
         testSettings = TestSettings(dlg.resultClient,
                                     dlg.resultProjectNum,
                                     dlg.resultTestNum,
@@ -323,8 +324,10 @@ class MainFrame(wx.Frame):
                                     dlg.resultTargetCurve,
                                     dlg.resultSavePath,
                                     self.app.machineSettings.defaultBackupPath)
+
+        # Start with autoexclude or not
         if dlg.resultAutoExclude:
-            self.controller.setAutoexclude(thermocouplePlacements.FURNACE) # Start with autoexclude or not
+            self.controller.setAutoexclude(thermocouplePlacements.FURNACE)
             self.controller.setAutoexclude(thermocouplePlacements.UNEXPOSED)
 
         dlg.Destroy()

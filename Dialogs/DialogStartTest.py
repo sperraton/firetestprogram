@@ -1,4 +1,3 @@
-from matplotlib import style
 import wx
 from datetime import datetime
 from Enumerations import *
@@ -8,7 +7,7 @@ from TestStandards import Standards
 
 class StartTestDialog(wx.Dialog):
     def __init__(self, parent):
-        # begin wxGlade: CustomDialog.__init__
+        
         wx.Dialog.__init__(self, parent, wx.ID_ANY)
         self.parent = parent
         app = wx.GetApp()
@@ -72,10 +71,9 @@ class StartTestDialog(wx.Dialog):
         self.Bind(wx.EVT_BUTTON, self.onStart, self.btnStart)
         self.Bind(wx.EVT_BUTTON, self.onQuit, self.btnCancel)
         self.Bind(wx.EVT_CLOSE, self.onQuit)
-        # end wxGlade
+        
 
     def __set_properties(self):
-        # begin wxGlade: CustomDialog.__set_properties
         self.SetTitle("Test Parameters")
         self.SetFocus()
 
@@ -90,10 +88,9 @@ class StartTestDialog(wx.Dialog):
         self.cmbTargetCurve.SetSelection(0)
         self.onTestChoice(None) # Make up for the fact that SetSelection() doesn't fire an event
 
-        # end wxGlade
 
     def __do_layout(self):
-        # begin wxGlade: CustomDialog.__do_layout
+        
         gridSizer = wx.GridBagSizer(0, 0)
         buttonSizer = wx.BoxSizer(wx.HORIZONTAL)
         # Make this a loop next time
@@ -135,7 +132,7 @@ class StartTestDialog(wx.Dialog):
         gridSizer.AddGrowableCol(1)
         self.Layout()
         self.Centre()
-        # end wxGlade
+        
 
     def onTextChange(self, event):
         # Reset the text control colors
@@ -178,8 +175,8 @@ class StartTestDialog(wx.Dialog):
         obj = event.GetEventObject()
 
         dlg = wx.DirDialog(self, "Choose a directory:",
-                           style=wx.DD_DEFAULT_STYLE,
-                           defaultPath=self.parent.controller.defaultSavePath)
+                            style=wx.DD_DEFAULT_STYLE,
+                            defaultPath=self.parent.controller.defaultSavePath)
         if dlg.ShowModal() == wx.ID_OK:
             if obj is self.btnBackupFilePath:   
                 self.backupPath = dlg.GetPath()
@@ -207,7 +204,7 @@ class StartTestDialog(wx.Dialog):
                 self.btnStart.Enable()
         else:
             self.btnStart.Disable() 
- 
+
 
     def onStart(self, event):
         # Validate the text, cause we're building a filename out of this.

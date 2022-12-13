@@ -19,8 +19,8 @@ class DataAcquisition():
     # Functions
     ################################################################################
     def __init__(self, 
-                 parent,
-                 machineSettings):
+                parent,
+                machineSettings):
 
         self.parent = parent
         self.machineSettings = machineSettings
@@ -35,11 +35,6 @@ class DataAcquisition():
         self.selectedTCchannels = []
         self.selectedPressureChannels = []
 
-        # Was a full list of addresses passed?
-        #if machineSettings.thermocoupleAddresses is None:
-        #    self.thermocoupleAddresses = []
-        #    self.initThermocoupleAddresses()
-        #else:
         self.thermocoupleAddresses = machineSettings.thermocoupleAddresses
 
         # TODO Move this stuff to the Machine Settings.
@@ -100,16 +95,25 @@ class DataAcquisition():
 
 
     def setTemperatureUnits(self, units):
+        """
+        Select the reported temperature units of the channel
+        """
         for channelIndex in range(len(self.channelThermocouple)):
             self.channelThermocouple[channelIndex].units = units
 
 
     def setPressureUnits(self, units):
+        """
+        Select the reported pressure units of the channel
+        """
         for channelIndex in range(len(self.channelPressure)):
             self.channelPressure[channelIndex].units = units
 
 
     def setSelectedThermocouples(self, selected):
+        """
+        Sets a list of the thermocouples to be used
+        """
         # A list of indices
         # logger.info("Selected Thermocouples =================")
         # logger.info(selected)
@@ -117,29 +121,18 @@ class DataAcquisition():
 
 
     def setSelectedPressureSensors(self, selected):
+        """"
+        Sets a list of the pressure sensors to be used
+        """
         # logger.info("Selected Pressure =================")
         # logger.info(selected)
         self.selectedPressureChannels = selected
 
 
-    # def attachSelectedThermocouples(self):
-    #     try:
-    #         for channelIndex in self.selectedTCchannels:
-    #             if not self.channelThermocouple[channelIndex].attached:
-    #                 self.channelThermocouple[channelIndex].attachChannel()
-
-    #     except PhidgetException as e:
-    #         # NOTE having a single Phidget HUB will cause this to fall into here.
-    #         warnDialog(self.parent.parent, "Unable to communicate to DAQ.\nCheck all connections and power to system then restart program")
-    #         logger.info("!!! WARNING WARNING WARNING !!!")
-    #         logger.info("Phidget Exception %i: %s" % (e.code, e.details))
-    #         #logger.info("Press Enter to Exit...\n")
-    #         #readin = sys.stdin.read(1)
-    #         #exit(1) # TODO Do we really need to exit here. Let the user know there is a problem and try to recover
-    #         # TODO try closing the phidgets here
-
-
     def attachSelectedThermocouples(self):
+        """
+        Tries to attach the selected DAQ thermocouple channel
+        """
     
         for channelIndex in self.selectedTCchannels:
             if not self.channelThermocouple[channelIndex].attached:
@@ -147,21 +140,21 @@ class DataAcquisition():
                     self.channelThermocouple[channelIndex].attachChannel()
 
                 except PhidgetException as e:
-                    #warnDialog(self.parent.parent, "Unable to communicate to DAQ.\nCheck all connections and power to system then restart program")
-                    logger.info("!!! WARNING WARNING WARNING !!!")
-                    logger.info("Phidget Exception %i: %s" % (e.code, e.details))
+                    logger.debug("!!! WARNING WARNING WARNING !!!")
+                    logger.debug("Phidget Exception %i: %s" % (e.code, e.details))
         
 
-
-    def listAttachedThermoocouples(self):
-        pass
-
-
     def isThermocoupleAttached(self, channel):
+        """
+        Checks if the specified thermocouple channel is attached
+        """
         return self.channelThermocouple[channel].channel.getAttached() #.attached # TODO go into the channel.getAttached() for this because the detach handlers aren't firing the way they should. Do same for pressure.
 
 
     def attachSelectedPressureSensors(self):
+        """
+        Tries to attach the selected DAQ Pressure sensor channel
+        """
     
         for channelIndex in self.selectedPressureChannels:
             if not self.channelPressure[channelIndex].attached:
@@ -174,29 +167,35 @@ class DataAcquisition():
                     logger.info("Phidget Exception %i: %s" % (e.code, e.details))
 
 
-    def listAttachedPressureSensors(self):
-        pass
-
 
     def isPressureSensorAttached(self, channel):
+        """
+        Checks if the specified pressure sensor channel is attached
+        """
         return self.channelPressure[channel].channel.getAttached()
 
 # TODO For some reason I don't get all the close messages, nor can I reconnect to channels I previously opened.
 # For now I'm just going to open all the channels at the start of the program
 # and close them at exit.
     def closeAllTCChannels(self):
+        """
+        Closes all the opened thermocouple channels
+        """
         for channelIndex in range(len(self.channelThermocouple)):
             self.channelThermocouple[channelIndex].closeChannel()
 
 
     def closeAllPressureChannels(self):
+        """
+        Closes all the open pressure channels
+        """
         for channelIndex in range(len(self.channelPressure)):
             self.channelPressure[channelIndex].closeChannel()
 
-    """
-    * If all the selected channels have fresh data then gather them into a list to push out to the view.
-    """
     def tryToGatherTemperature(self):
+        """
+        If all the selected channels have fresh data then gather them into a list to return
+        """
         data = []
 
         for channelIndex in self.selectedTCchannels:
@@ -210,19 +209,32 @@ class DataAcquisition():
 
 
     def getInternalTemperature(self):
+        """
+        Get the DAQ's internal thermocouple
+        """
         valueRaw, valueFormatted = self.internalThermocouple.getValue()
         return valueFormatted
 
 
     def closeInternalTemperature(self):
+        """
+        Closes the DAQ's internal thermocouple channel
+        """
         self.internalThermocouple.closeChannel()
 
 
     def attachInternalTemperature(self):
+        """
+        Attaches the DAQ's internal thermocouple channel
+        """
         self.internalThermocouple.attachChannel()
 
 
     def tryToGatherPressure(self):
+        """
+        If all the pressure channels have fresh data then gather them in a list to return
+        """
+
         data = []
 
         for channelIndex in self.selectedPressureChannels:
@@ -252,6 +264,9 @@ class DataAcquisition():
     #             previous machines. New ones may be wired with any number
     #             of the 6 ports used. This init func. needs to be more robust.
     def initThermocoupleAddresses(self):
+        """
+        Initialise the DAQ channel addresses if not expressly defined in the settings.json file
+        """
         for VINThubSerialNum in self.thermocoupleSerialNums:
             for VINThubPortIndex in range(4, -1, -1): # Hub Port counts down 4, 3, 2, 1, 0
                 for thermocoupleChannelIndex in range(4): # Channel counts up  0, 1, 2, 3
@@ -263,6 +278,9 @@ class DataAcquisition():
 
 
     def initThermocoupleAddressesReverse(self):
+        """
+        Initialise the DAQ channel addresses in reverse if not expressly defined in the settings.json file
+        """
         for VINThubSerialNum in self.thermocoupleSerialNums:
             for VINThubPortIndex in range(5): # Hub Port counts up 0, 1, 2, 3, 4
                 for thermocoupleChannelIndex in range(3, -1, -1): # Count down 3, 2, 1, 0
@@ -274,6 +292,9 @@ class DataAcquisition():
 
 
     def initPressureAddresses(self):
+        """
+        Initialise the DAQ pressure channel addresses if not expressly defined in the settings.json file
+        """
         for VINThubPortIndex in range(3):
             self.pressureAddress.append(Address(self.pressureSerialNums[0],
                                                 VINThubPortIndex,

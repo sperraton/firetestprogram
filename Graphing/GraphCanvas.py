@@ -111,12 +111,14 @@ class GraphCanvas(PlotCanvas):
         """
         Toggles the Zoom state
         """
+        self.enableZoom = state
+        self.showScrollbars = state
         if (self.parent.testData is not None) and (any(self.parent.testData.data)):
             self.parent.reloadData()
             self.drawGraph()
-        self.enableZoom = state
-        self.showScrollbars = state
-        if not state: #We're toggling out of the Zoom tool, do all the things the home tool does
+
+        #We're toggling out of the Zoom tool, do all the things the home tool does
+        if not state:
             self.Reset()
             self.parent.reloadData() # Ugly hack/code smell here.
             self.parent.drawGraph()
