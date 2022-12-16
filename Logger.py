@@ -2,6 +2,8 @@
 from HelperFunctions import warnDialog
 import os
 import csv
+import logging
+logger = logging.getLogger(__name__)
 
 # Can save up rows into a buffer for burst writing
 # that happens at a slower rate than the data Capture
@@ -66,7 +68,7 @@ class Logger():
             return False
 
         except IOError as e:
-            print(f"Log header write operation failed: {e.strerror}")
+            logger.info(f"Log header write operation failed: {e.strerror}")
             return True
 
 
@@ -77,7 +79,7 @@ class Logger():
         try:
             self.writeLineToFile(dataRow, "a")
         except IOError as e:
-            print(f"Log data write operation failed: {e.strerror}")
+            logger.info(f"Log data write operation failed: {e.strerror}")
             return True
 
 
@@ -106,5 +108,5 @@ class Logger():
                 self.writeLineToFile(line, "a")
 
         except IOError as e:
-            print(f"Log correction write operation failed: {e.strerror}")
+            logger.info(f"Log correction write operation failed: {e.strerror}")
             return True

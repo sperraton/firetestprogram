@@ -105,10 +105,11 @@ class Controller():
         self.daq = DataAcquisition(self, self.machineSettings)
 
         # Make a timer to add data
+        self.timer = None
         # self.timer = wx.Timer(self.parent, -1)
         # self.parent.Bind(wx.EVT_TIMER, self.onTimer, self.timer)
 
-        #self.timer = threading.Timer(1.0, self.onTimer)
+        #self.timer = threading.Timer(1.0, self.onTime
         #self.timer = RepeatTimer(1.0, self.onTimer)  
 
 
@@ -265,7 +266,7 @@ class Controller():
         """
         wx.CallAfter(pub.sendMessage, "status.update", msg="Test stopped.")
         #self.timer.Stop()
-        self.timer.cancel()
+        if self.timer: self.timer.cancel()
 
         self.isTestRunning = False
         self.testData.stopListening()
@@ -380,7 +381,7 @@ class Controller():
             delta = time.time()-self.startTime
             nextFiring = int((self.updateRate*1000)-((delta % self.updateRate)*1000))
             #self.timer.StartOnce(nextFiring)
-            self.timer.interval = nextFiring/1000.0 # TODO check this
+            self.timer.interval = nextFiring/1000.0
 
         logger.debug(f"Exiting Controller.onTimer")# delta={delta} nextFiring={nextFiring}")
 
