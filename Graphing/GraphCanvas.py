@@ -21,6 +21,16 @@ Also, make a smart legend object.
 """
 
 logger = logging.getLogger(__name__)
+
+# Shadowing to get some debug info
+class PlotGraphics(wxplot.PlotGraphics):
+    def draw(self, dc):
+        for o in self.objects:
+            t=_time.perf_counter()          # profile info
+            o._pointSize = self._pointSize
+            o.draw(dc, self._printerScale)
+            print(o, "time=", _time.perf_counter()-t)
+
 class GraphCanvas(PlotCanvas):
     """
     The graphing object
@@ -159,15 +169,16 @@ class GraphCanvas(PlotCanvas):
             if not isinstance(dc, wx.GCDC):
                 try:
                     dc = wx.GCDC(dc)
-                except Exception:               # XXX: Yucky.
-                    pass
+                except Exception:
+                    logger.exception("Could not make Device Context for saving image.")
+
         #p1, p2 = self.gc.boundingBox() # min, max points of graphics
         self._setSize(GRAPH_SAVE_W, GRAPH_SAVE_H)
 
         self.Draw(self.gc, 
-                  xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
-                  yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax),
-                  blit=False) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
+                xAxis=(self.graphAxesSettings.xmin, self.graphAxesSettings.xmax), 
+                yAxis=(self.graphAxesSettings.ymin, self.graphAxesSettings.ymax),
+                blit=False) #TODO have the minutes set as the xMax internally and the BaseGraph can set it.
         self._printDraw(dc)
         self._setSize() #Return to normal
         del dc
@@ -231,8 +242,8 @@ class GraphCanvas(PlotCanvas):
 
         except Exception as e:
 
-            print(f"{self.graphAxesSettings.title} channel {plotIndex} updateData failed.")
-            print(e)
+            logger.exception(f"{self.graphAxesSettings.title} channel {plotIndex} updateData failed.")
+            
             # we need to get back on track. Check the sizes of all the arrays. 
 
     def drawGraph(self, blit=False):
@@ -373,7 +384,7 @@ class GraphCanvas(PlotCanvas):
                 yTextExtentBottom = dc.GetTextExtent(yticks[0][1])
                 yTextExtentTop = dc.GetTextExtent(yticks[-1][1])
                 yTextExtent = (max(yTextExtentBottom[0], yTextExtentTop[0]),
-                               max(yTextExtentBottom[1], yTextExtentTop[1]))
+                                max(yTextExtentBottom[1], yTextExtentTop[1]))
 
         # TextExtents for Title and Axis Labels
         titleWH, xLabelWH, yLabelWH = self._titleLablesWH(dc, graphics)
@@ -399,17 +410,17 @@ class GraphCanvas(PlotCanvas):
 
         # Draw the labels (title, axes labels)
         self._drawPlotAreaLabels(dc, graphics, lhsW, rhsW, titleWH,
-                                 bottomH, topH, xLabelWH, yLabelWH)
+                                bottomH, topH, xLabelWH, yLabelWH)
 
         # drawing legend makers and text
         if self._legendEnabled:
             self._drawLegend(dc,
-                             graphics,
-                             rhsW,
-                             topH,
-                             legendBoxWH,
-                             legendSymExt,
-                             legendTextExt)
+                            graphics,
+                            rhsW,
+                            topH,
+                            legendBoxWH,
+                            legendSymExt,
+                            legendTextExt)
 
         # allow for scaling and shifting plotted points
         #======================================================================
@@ -442,16 +453,16 @@ class GraphCanvas(PlotCanvas):
         # Draw the lines and markers
         #======================================================================
         start = _time.perf_counter()
-        graphics.draw(dc)
+        graphics.draw(dc) # <<<< Here is the function that takes too much time
         diff = _time.perf_counter() - start
-        time_str = f"{self.parent.__class__} entire graphics drawing took: {diff} seconds"
+        time_str = f"{self.parent.__class__} entire graphics drawing took: {diff} seconds drawing {len(graphics.objects)} objects. Blitting={blit}"
         logger.debug(time_str)
 
         # remove the clipping region
         dc.DestroyClippingRegion()
 
         self._adjustScrollbars()
-   
+
 
 
     def clearGraph(self):

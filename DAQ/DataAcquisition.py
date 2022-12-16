@@ -49,14 +49,14 @@ class DataAcquisition():
             for i in range(0, machineSettings.numTC):
                 logger.info(f"    |___Channel {i}")
                 self.channelThermocouple.append(ThermocoupleSensor(self.thermocoupleAddresses[i].serialNumber,
-                                                                   self.thermocoupleAddresses[i].hubPort,
-                                                                   self.thermocoupleAddresses[i].channel,
-                                                                   self.thermocoupleAddresses[i].isHubPort,
-                                                                   DATA_INTERVAL_MS,
-                                                                   channelIndex=i,
-                                                                   gain=self.parent.getThermocoupleCalibration(i)[0],
-                                                                   offset=self.parent.getThermocoupleCalibration(i)[1],
-                                                                   units="C"))
+                                                                    self.thermocoupleAddresses[i].hubPort,
+                                                                    self.thermocoupleAddresses[i].channel,
+                                                                    self.thermocoupleAddresses[i].isHubPort,
+                                                                    DATA_INTERVAL_MS,
+                                                                    channelIndex=i,
+                                                                    gain=self.parent.getThermocoupleCalibration(i)[0],
+                                                                    offset=self.parent.getThermocoupleCalibration(i)[1],
+                                                                    units="C"))
 
             # Init the internal thermocouple channel
             self.internalThermocouple = ThermocoupleSensor(self.thermocoupleAddresses[0].serialNumber,
@@ -75,22 +75,21 @@ class DataAcquisition():
             for i in range(0, machineSettings.numPres):
                 logger.info(f"    |___Channel {i}")
                 self.channelPressure.append(PressureSensor(self.pressureAddress[i].serialNumber,
-                                                           self.pressureAddress[i].hubPort,
-                                                           self.pressureAddress[i].channel,
-                                                           self.pressureAddress[i].isHubPort,
-                                                           DATA_INTERVAL_MS,
-                                                           channelIndex=i,
-                                                           gain=self.parent.getPressureCalibration(i)[0],
-                                                           offset=self.parent.getPressureCalibration(i)[1],
-                                                           units="inH2O",
-                                                           isVoltage=machineSettings.getPressureSensorIsVoltage(i)))
+                                                            self.pressureAddress[i].hubPort,
+                                                            self.pressureAddress[i].channel,
+                                                            self.pressureAddress[i].isHubPort,
+                                                            DATA_INTERVAL_MS,
+                                                            channelIndex=i,
+                                                            gain=self.parent.getPressureCalibration(i)[0],
+                                                            offset=self.parent.getPressureCalibration(i)[1],
+                                                            units="inH2O",
+                                                            isVoltage=machineSettings.getPressureSensorIsVoltage(i)))
 
         except PhidgetException as e:
-            sys.stderr.write("Runtime Error -> Creating Channel Arrays: \n\t")
-            sys.stderr.write("Desc: " + e.details + "\n")
+            logger.exception("Runtime Error -> Creating Channel Arrays: \n\t")
             raise
         except RuntimeError as e:
-            sys.stderr.write("Runtime Error -> Creating Channel Arrays: \n\t" + e)
+            logger.exception("Runtime Error -> Creating Channel Arrays: \n\t" + e)
             raise
 
 
@@ -140,15 +139,14 @@ class DataAcquisition():
                     self.channelThermocouple[channelIndex].attachChannel()
 
                 except PhidgetException as e:
-                    logger.debug("!!! WARNING WARNING WARNING !!!")
-                    logger.debug("Phidget Exception %i: %s" % (e.code, e.details))
+                    logger.exception("Phidget Exception %i: %s" % (e.code, e.details))
         
 
     def isThermocoupleAttached(self, channel):
         """
         Checks if the specified thermocouple channel is attached
         """
-        return self.channelThermocouple[channel].channel.getAttached() #.attached # TODO go into the channel.getAttached() for this because the detach handlers aren't firing the way they should. Do same for pressure.
+        return self.channelThermocouple[channel].channel.getAttached() # TODO go into the channel.getAttached() for this because the detach handlers aren't firing the way they should. Do same for pressure.
 
 
     def attachSelectedPressureSensors(self):
@@ -163,8 +161,7 @@ class DataAcquisition():
 
                 except PhidgetException as e:
                     warnDialog(self.parent.parent, "Unable to communicate to DAQ.\nCheck all connections and power to system then restart program")
-                    logger.info("!!! WARNING WARNING WARNING !!!")
-                    logger.info("Phidget Exception %i: %s" % (e.code, e.details))
+                    logger.exception("Phidget Exception %i: %s" % (e.code, e.details))
 
 
 
@@ -174,9 +171,9 @@ class DataAcquisition():
         """
         return self.channelPressure[channel].channel.getAttached()
 
-# TODO For some reason I don't get all the close messages, nor can I reconnect to channels I previously opened.
-# For now I'm just going to open all the channels at the start of the program
-# and close them at exit.
+    # TODO For some reason I don't get all the close messages, nor can I reconnect to channels I previously opened.
+    # For now I'm just going to open all the channels at the start of the program
+    # and close them at exit.
     def closeAllTCChannels(self):
         """
         Closes all the opened thermocouple channels

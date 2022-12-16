@@ -73,7 +73,7 @@ class BaseGraph(wx.Panel):
             self.updateData(blit=False)
 
         except Exception:
-            logger.info("Couldn't load all graph data.")
+            logger.exception("Couldn't load all graph data.")
     
 
     def drawGraph(self, blit=False):

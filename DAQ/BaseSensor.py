@@ -8,8 +8,9 @@ from Phidget22.Phidget import *
 from pubsub import pub
 from HelperFunctions import printPhidgetInfo
 from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, CHANGE_TRIGGER, DEFAULT_ATTACH_WAIT, INVALID_VALUE
-import logging
 
+import logging
+logger = logging.getLogger(__name__)
 class BaseSensor():
 
     def __init__(self,
@@ -74,7 +75,7 @@ class BaseSensor():
         try:
             self.channel.openWaitForAttachment(DEFAULT_ATTACH_WAIT)
         except:
-            print("!!! FAILURE TO ATTACH !!! Address: ", self.serialNumber, self.hubPort, self.channelNumber)
+            logger.exception("!!! FAILURE TO ATTACH !!! Address: ", self.serialNumber, self.hubPort, self.channelNumber)
 
 
     def setChangeHandler(self):
@@ -130,8 +131,7 @@ class BaseSensor():
                 pub.sendMessage("channel.attached", sensorType=self.sensorType, channel=self.channelIndex) # Publish a message so listeners can tally the channels that attach
 
             except PhidgetException as e:
-                print("\nError in Attach Event:")
-                sys.stderr.write("Desc: " + e.details + "\n")
+                logger.exception("\nError in Attach Event:")
                 return
 
         self.channel.setOnAttachHandler(onAttachHandler)
@@ -144,8 +144,7 @@ class BaseSensor():
                 printPhidgetInfo(channelObject, " >>> DETACHED")
                 pub.sendMessage("channel.detached", sensorType=self.sensorType, channel=self.channelIndex)
             except PhidgetException as e:
-                print("\nError in Detach Event:")
-                sys.stderr.write("Desc: " + e.details + "\n")
+                logger.exception("\nError in Detach Event:")
                 return
 
         self.channel.setOnDetachHandler(onDetachHandler)

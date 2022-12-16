@@ -115,7 +115,7 @@ class FurnaceGraph(BaseGraph):
             try:
                 self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2, blit=blit) # Give the plot the updated data +1 debug
             except IndexError:
-                logger.debug(f"Index error in updateData. Current index:{i}")
+                logger.exception(f"Index error in updateData. Current index:{i}")
 
 
 

@@ -97,7 +97,7 @@ class UnexposedGraph(BaseGraph):
             try:
                 self.graphCanvas.updateData(timeData, rawData[i], plotIndex=i+2, blit=blit) # Give the plot the updated data
             except IndexError:
-                logger.debug(f"Index error in updateData. Current index:{i}")
+                logger.exception(f"Index error in updateData. Current index:{i}")
         
 
     def updateUnexposedThreshold(self, threshold):

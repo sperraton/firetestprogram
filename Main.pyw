@@ -29,6 +29,7 @@ from pubsub import pub
 import os
 import sys
 import getopt
+import argparse
 import threading
 
 from csv import Dialect
@@ -661,38 +662,50 @@ class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
 
 
 
+
 ###############################################################################
 #  Program Entry
 ###############################################################################
 if __name__ == '__main__':
 
+    # Get and parse the command line arguments
+    #------------------------------------------------------------
+    parser = argparse.ArgumentParser()
+    #subparsers = parser.add_subparsers()
+
+    parser.add_argument("-n", "--noconnect", action="store_true", help="Do not connect to DAQ and generate fake data for testing purposes")
+    parser.add_argument("-v", "--version",  action="store_true", help="Get the current version number")
+    parser.add_argument("-l", "--log", help="Choose the logging level", choices=["debug", "info", "warn", "error"], default="info")
+    args = parser.parse_args() #Parse the given arguments
+
+    if args.version:
+        print(VERSION_NUM_STRING)
+        sys.exit(0)
+
+    logLevelNum = getattr(logging, args.log.upper(), None)
+    if not isinstance(logLevelNum, int):
+        raise ValueError(f"Invalid log level: {args.log}")
+        sys.exit(2)
+
+    # Configure the logger
+    #------------------------------------------------------------
     #Log.enable(LogLevel.PHIDGET_LOG_INFO, "file.log")
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s :: %(funcName)s :: %(thread)d :: %(levelname)s :: %(message)s')#(level=logging.INFO, format='%(asctime)s %(message)s')
+    
+    logFormat= "%(asctime)s :: %(funcName)s :: %(thread)d :: %(levelname)s :: %(message)s"
+    handlers = [logging.FileHandler('app.log'), logging.StreamHandler()]
+
+    logging.basicConfig(level=logLevelNum, format=logFormat, handlers=handlers)
     logger = logging.getLogger(__name__)
 
-    logger.info("###")
+    # Log some of the options
+    #------------------------------------------------------------
     logger.info(f"Starting TesPro Firetest DAQ program (Ver. {VERSION_NUM_STRING}) ...")
-    logger.info("###")
+    #logger.info(f"With the following arguments: {argv}")
+    if args.noconnect: logger.info("Not connecting to DAQ. Generating fake data.")
 
-    argv = sys.argv[1:]
-    logger.info(argv)
-    try:
-        opts, args = getopt.getopt(argv, ":v", ["noconnect", "version"])
-    except getopt.GetoptError:
-        logger.info("Unrecognised Argument")
-        sys.exit(2)
-    connectionOption = False    #Default to trying to connect to the DAQ
-
-    for opt, arg in opts:
-        if opt == '--noconnect':
-            logger.info("Not connecting to DAQ. Generating fake data.")
-            connectionOption = True
-        elif opt in ("-v", "--version"):
-            print(VERSION_NUM_STRING)
-            sys.exit(0)
-
-
-    app = MainApp(redirect=False, noConnect=connectionOption)  # Create a new app, don't redirect stdout/stderr to a window.
+    # Create and start the main windowed application
+    #------------------------------------------------------------
+    app = MainApp(redirect=False, noConnect=args.noconnect)
     logger.info("App created. Starting main loop ...")
     app.MainLoop()
 
