@@ -15,3 +15,4 @@ XCOPY .\instructions\* .\Builds\Ver%buildNum%\instructions\* /f /s /e /v
 
 :: If file has whitepace between name - use double quote
 ::COPY "D:\my file.txt" E:\
+:: TODO have it check this into git
