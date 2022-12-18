@@ -11,3 +11,4 @@ venv/
 .vscode/
 settings/Home Setup/profiles (copy).json
 settings/Home Setup/settings (copy).json
+app.log

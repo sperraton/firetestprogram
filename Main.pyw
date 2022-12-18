@@ -28,20 +28,19 @@ import wx.lib.mixins.inspection
 from pubsub import pub
 import os
 import sys
-import getopt
 import argparse
 import threading
 
-from csv import Dialect
-from ctypes import BigEndianStructure
-from http.client import NotConnected
-from multiprocessing import connection
 from Phidget22.Phidget import *
 from Phidget22.Devices.Log import *
 from Phidget22.LogLevel import *
 
 import logging
 
+
+################################################################################
+# Direct Progam Module Imports
+################################################################################
 from Controller import Controller
 from Dialogs.DialogInstructions import InstructionsDialog
 from HelperFunctions import *
@@ -83,7 +82,7 @@ class MainFrame(wx.Frame):
         super(MainFrame, self).__init__(*args, **kw)
 
         if not self.noConnect:
-            bitmap = wx.Bitmap('./images/splash.jpg')
+            bitmap = wx.Bitmap("./images/splash.jpg")
             splash = wx.adv.SplashScreen(
                         bitmap,
                         wx.adv.SPLASH_CENTER_ON_SCREEN|wx.adv.SPLASH_TIMEOUT,
@@ -96,7 +95,6 @@ class MainFrame(wx.Frame):
         # Create the UI components
         #======================================================================
         self.makeMenuBar()
-        #self.makeIndicatorView()
         self.indicatorPanel = IndicatorPanel(self, -1)
         self.statusBar = self.CreateStatusBar(2)
         self.statusBar.SetStatusWidths([-2, -1])
@@ -117,7 +115,6 @@ class MainFrame(wx.Frame):
         self.mainSizer = wx.BoxSizer(wx.HORIZONTAL)
         self.mainSizer.Add(self.monPanel, 0, wx.EXPAND|wx.ALL, 5)
         self.mainSizer.Add(self.graphNotebook, 1, wx.EXPAND|wx.ALL, 5)
-        #self.mainSizer.Add(wx.Panel(self, wx.ID_ANY))
         self.mainPanel.SetSizer(self.mainSizer)
         self.mainSizer.Layout()
 
@@ -239,6 +236,9 @@ class MainFrame(wx.Frame):
 
 
     def onTestTimeExtend(self, event):
+        """
+        Open the test time extend dialog
+        """
         # TODO: Test how it deals with extreme multiple extensions
         self.testExtendDialog = TimeExtensionDialog(self).Show()
 
@@ -381,8 +381,7 @@ class MainFrame(wx.Frame):
         self.profileManagerItem.Enable(False)
 
         # Start'er up
-        #self.controller.startTest()
-                # Start the controller thread
+        # Start the controller thread
         self.thread = threading.Thread(target=self.controller.startTest)
         self.thread.start()
 
@@ -475,8 +474,8 @@ class MainFrame(wx.Frame):
         """
         # TODO provide more information here
         wx.MessageBox("TesPro\nFire Testing Program - ver " + VERSION_NUM_STRING,
-                      "About Fire Testing Program",
-                      wx.OK|wx.ICON_INFORMATION)
+                        "About Fire Testing Program",
+                        wx.OK|wx.ICON_INFORMATION)
 
     def onInstructions(self, event):
         """
@@ -524,26 +523,39 @@ class MainFrame(wx.Frame):
 
 
     def setStatusMessage(self, msg):
+        """
+        Places the given message in the statusbar
+        """
         self.statusBar.SetStatusText(msg)
 
 
     def setStatusMessage2(self, msg):
+        """
+        Places the given message in the statusbar side box
+        """
         self.statusBar.SetStatusText(msg,1)
         self.statusBar.Refresh()
 
 
     def flashStatusMessage(self, msg, displayTime=3000):
+        """"
+        Places temporarily the given message in the statusbar
+        """
         self.statusBar.SetStatusText(msg)
         self.timerStatusFlash.Start(displayTime, oneShot=True)
 
 
     def onFlashStatusOff(self, event):
+        """
+        Blanks out the statusbar after
+        """
         self.statusBar.SetStatusText("")
 
 
     def testFinished(self):
-        # The time has finished on the test.
-        # Notify user
+        """
+        The time has finished on the test. Notify user
+        """
         infoDialog(self, "The test has finished.")
 
 
