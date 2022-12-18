@@ -16,8 +16,8 @@
             ]
         },
         "currentProfile": 0,
-        "defaultSavePath": "/home/glados/Projects/Business/TesPro/Vulcan/logs",
-        "defaultBackupPath": "/home/glados/Projects/Business/TesPro/Vulcan/logs/backup",
+        "defaultSavePath": "C:\\Users\\freya\\Documents\\TesPro\\TesPro_Logs",
+        "defaultBackupPath": "C:\\Users\\freya\\Documents\\TesPro\\TesPro_Logs\\backup",
         "numTC": 40,
         "numPres": 3,
         "pressurePlacementLabels": [

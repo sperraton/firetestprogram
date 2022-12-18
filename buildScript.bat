@@ -8,10 +8,11 @@ ECHO %buildNum%
 XCOPY .\Main.exe .\Builds\Ver%buildNum%\Main.exe /i /f /v
 XCOPY .\images\* .\Builds\Ver%buildNum%\images\* /f /s /e /v
 XCOPY .\instructions\* .\Builds\Ver%buildNum%\instructions\* /f /s /e /v
-XCOPY .\splash.jpg .\Builds\Ver%buildNum%\splash.jpg /i /f /v
-XCOPY .\flame-32.ico .\Builds\Ver%buildNum%\flame-32.ico /i /f /v
-XCOPY .\settings.json .\Builds\Ver%buildNum%\settings.json /i /f /v
-XCOPY .\profiles.json .\Builds\Ver%buildNum%\profiles.json /i /f /v
+@REM XCOPY .\splash.jpg .\Builds\Ver%buildNum%\splash.jpg /i /f /v
+@REM XCOPY .\flame-32.ico .\Builds\Ver%buildNum%\flame-32.ico /i /f /v
+@REM XCOPY .\settings.json .\Builds\Ver%buildNum%\settings.json /i /f /v
+@REM XCOPY .\profiles.json .\Builds\Ver%buildNum%\profiles.json /i /f /v
 
 :: If file has whitepace between name - use double quote
 ::COPY "D:\my file.txt" E:\
+:: TODO have it check this into git
