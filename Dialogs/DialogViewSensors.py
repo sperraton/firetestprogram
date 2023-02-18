@@ -63,7 +63,7 @@ class ViewSensorsDialog(wx.Dialog):
         #colIdx = -1
         tabIdx = -1
 
-        for index in range(self.parent.controller.getNumThermocouples()):
+        for index in range(self.machineSettings.numTC):
 
             if index % numTCRows == 0:
                 tabIdx += 1 # Start adding to the next tab
@@ -150,7 +150,7 @@ class ViewSensorsDialog(wx.Dialog):
 
         # Make the pressure sensor lists
         #======================================================================
-        for index in range(self.parent.controller.getNumPressure()):
+        for index in range(self.machineSettings.numPres):
             # Make the controls
 
             # Make the dropdown list of serials for this channel
@@ -237,7 +237,7 @@ class ViewSensorsDialog(wx.Dialog):
         # Change the units to C and inH2O because that is what the automatic calibration is based on.
         self.parent.controller.setTemperatureUnits("C")
         self.parent.controller.setPressureUnits("inH2O")
-        self.tryToConnect() # Start connecting to the channels
+        self.parent.controller.areAllAttached() # Give the user a message you are waiting for the connection
 
         # We then need to process it to make up our list of selected sensors.
         self.loadSavedSelections()
@@ -273,11 +273,7 @@ class ViewSensorsDialog(wx.Dialog):
     
 
     def onOK(self, event):
-        # Close the channels you opened
-        #pub.sendMessage("status.update", msg="Closing channels.") # Message user in statusbar
-        #self.parent.controller.closeThermocoupleChannels()
-        #self.parent.controller.closePressureChannels()
-        #pub.unsubscribe(self.onAttach, "channel.attached")
+        # Stop listening for these values.
         pub.unsubscribe(self.onValueChange, "channel.valueChange")
 
         # Pull all the info for the selection into the map
@@ -286,7 +282,6 @@ class ViewSensorsDialog(wx.Dialog):
             self.resultThermocoupleMap.append(thermocouplePlacements(cmb.GetSelection())) # This should match up with the enumeration
 
         for cmb in self.cmbPressureChannels:
-#            self.resultPressureMap.append(cmb.GetSelection()) # The index of the pressureChannelXConfigs. It would look something like [3, 0, 6] (ch1, ch2, ch3) These should be used as the currentPresChnlXConfig indices.
             self.resultPressureMap.append(cmb.GetStringSelection())
 
         #self.EndModal(wx.ID_OK)
@@ -299,22 +294,22 @@ class ViewSensorsDialog(wx.Dialog):
         self.Destroy()
 
 
-    def tryToConnect(self):# Remember the furnace enums start at 2
-        # Try to open the selected channels on the DAQ
-        #pub.sendMessage("status.update", msg="Opening sensor channels.")
-        #self.parent.controller.openAllChannels()
-        # Give the user a message you are waiting for the connection
-        self.parent.controller.areAllAttached()
+    # def tryToConnect(self):# Remember the furnace enums start at 2
+    #     # Try to open the selected channels on the DAQ
+    #     #pub.sendMessage("status.update", msg="Opening sensor channels.")
+    #     #self.parent.controller.openAllChannels()
+    #     # Give the user a message you are waiting for the connection
+    #     self.parent.controller.areAllAttached()
 
 
     def onValueChange(self, sensorType, channel, valueRaw, valueNumeric, valueFormatted):
         #TODO should we flag bad values with a red background?
         if sensorType == "TC":
-            if channel >= self.parent.controller.getNumThermocouples():
+            if channel >= self.machineSettings.numTC:
                 return
             wx.CallAfter(self.txtThermocoupleValues[channel].SetValue, valueFormatted)
         elif sensorType == "PRESS":
-            if channel >= self.parent.controller.getNumPressure():
+            if channel >= self.machineSettings.numPres:
                 return
             wx.CallAfter(self.txtPressureValues[channel].SetValue, valueFormatted)
         else:
@@ -323,14 +318,14 @@ class ViewSensorsDialog(wx.Dialog):
 
     def onAttach(self, sensorType, channel):
         if sensorType == "TC":
-            if channel >= self.parent.controller.getNumThermocouples():
+            if channel >= self.machineSettings.numTC:
                 return
             # Ok change the connection status for this channel
             wx.CallAfter(self.txtThermocoupleStatuses[channel].SetValue, "CH. " + str(channel+1) + " OPENED")
             self.txtThermocoupleStatuses[channel].SetForegroundColour(UIcolours.CTRL_OK_FG)
             self.txtThermocoupleStatuses[channel].SetBackgroundColour(UIcolours.CTRL_OK_BG)
         elif sensorType == "PRESS":
-            if channel >= self.parent.controller.getNumPressure():
+            if channel >= self.machineSettings.numPres:
                 return
             labelString = "CH. " + str(channel+1) + " (" + self.machineSettings.pressurePlacementLabels[channel+1] + ") OPENED"
             wx.CallAfter(self.txtPressureStatuses[channel].SetValue, labelString)

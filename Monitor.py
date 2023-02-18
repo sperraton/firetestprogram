@@ -64,7 +64,7 @@ class MonitorList(wx.ListCtrl):
 
         if sensorType == "TC":
 
-            if channel >= self.frame.controller.getNumThermocouples():
+            if channel >= self.machineSettings.numTC:
                 return # These are the internal TC, or a mistake. Do not regard them
 
             # Is this an afterburner, furnace or unexposed tc?
@@ -78,7 +78,7 @@ class MonitorList(wx.ListCtrl):
 
         elif sensorType == "PRESS":
 
-            if channel >= self.frame.controller.getNumPressure():
+            if channel >= self.machineSettings.numPres:
                 return
 
             # Has the pressure sensor been disabled?

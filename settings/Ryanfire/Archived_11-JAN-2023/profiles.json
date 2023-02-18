@@ -26,7 +26,7 @@
                 },
                 "gain": 1.0,
                 "offset": 0.0,
-                "label": "Furnace Left A 904-E"
+                "label": "Furnace Left A Batch 901 \"A\""
             },
             {
                 "channel": 4,
@@ -35,7 +35,7 @@
                 },
                 "gain": 1.0,
                 "offset": 0.0,
-                "label": "Furnace Left C 904-D"
+                "label": "Furnace Left C Batch 901 \"B\""
             },
             {
                 "channel": 5,
@@ -44,7 +44,7 @@
                 },
                 "gain": 1.0,
                 "offset": 0.0,
-                "label": "Furnace Right C 904-F"
+                "label": "Furnace Right C Batch 901 \"F\""
             },
             {
                 "channel": 6,
@@ -53,7 +53,7 @@
                 },
                 "gain": 1.0,
                 "offset": 0.0,
-                "label": "Furnace Right B 904-H"
+                "label": "Furnace Right B Batch 901 \"E\""
             },
             {
                 "channel": 7,
@@ -62,7 +62,7 @@
                 },
                 "gain": 1.0,
                 "offset": 0.0,
-                "label": "Furnace Right A 904-G"
+                "label": "Furnace Right A Batch 901 \"D\""
             },
             {
                 "channel": 8,
@@ -71,7 +71,7 @@
                 },
                 "gain": 1.0,
                 "offset": 0.0,
-                "label": "Furnace Left B 904-C"
+                "label": "Furnace Left B Batch 901 \"C\""
             },
             {
                 "channel": 9,
@@ -418,7 +418,7 @@
             {
                 "channel": 47,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -526,7 +526,7 @@
             {
                 "channel": 59,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                    "__enum__": "thermocouplePlacements.DISABLED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -544,7 +544,7 @@
             {
                 "channel": 61,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -571,7 +571,7 @@
             {
                 "channel": 64,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                    "__enum__": "thermocouplePlacements.DISABLED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -607,7 +607,7 @@
             {
                 "channel": 68,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.UNEXPOSED"
+                    "__enum__": "thermocouplePlacements.DISABLED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -616,7 +616,7 @@
             {
                 "channel": 69,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -625,7 +625,7 @@
             {
                 "channel": 70,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -634,7 +634,7 @@
             {
                 "channel": 71,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -643,7 +643,7 @@
             {
                 "channel": 72,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -652,7 +652,7 @@
             {
                 "channel": 73,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -661,7 +661,7 @@
             {
                 "channel": 74,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -670,7 +670,7 @@
             {
                 "channel": 75,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -679,7 +679,7 @@
             {
                 "channel": 76,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -688,7 +688,7 @@
             {
                 "channel": 77,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -697,7 +697,7 @@
             {
                 "channel": 78,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -706,7 +706,7 @@
             {
                 "channel": 79,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,
@@ -715,7 +715,7 @@
             {
                 "channel": 80,
                 "placement": {
-                    "__enum__": "thermocouplePlacements.DISABLED"
+                    "__enum__": "thermocouplePlacements.UNEXPOSED"
                 },
                 "gain": 1.0,
                 "offset": 0.0,

@@ -72,6 +72,7 @@ class CustomNavToolbar(wx.ToolBar):
 
 
     def onToggleRaw(self, event):
+        # BUGBUGBUG This is triggering 9 draw calls
         state = self.chkRawVisibility.GetValue()
         # Toggle the visibility on each line in the Raw group
         for i in range(2, len(self.graphCanvas.graphPlotSettings)) : # Skip the Avg and the threshold lines

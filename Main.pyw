@@ -264,8 +264,9 @@ class MainFrame(wx.Frame):
             self.setStatusMessage("Exiting test and closing channels")
             self.controller.stopTest()
 
-        self.controller.closeThermocoupleChannels()
-        self.controller.closePressureChannels()
+        self.controller.closeAllChannels()
+        # self.controller.closeThermocoupleChannels()
+        # self.controller.closePressureChannels()
         self.controller.saveSettings()
         self.timerStatusFlash.Stop() # MUST stop all timers before program exits so we don't get zombie timers.
         self.indicatorPanel.timerWarning.Stop()
@@ -333,7 +334,7 @@ class MainFrame(wx.Frame):
 
         dlg.Destroy()
 
-        self.SetTitle("Fire Test Data Aquisition - Test Log: "+testSettings.fileName) # Set the file header information in the window title
+        self.SetTitle(f"Fire Test Data Aquisition - Test Log: {testSettings.fileName}") # Set the file header information in the window title
 
         # We are going forward. Get the test vars preped and ready
         # Ensure that all the proper calibrations are loaded.
@@ -473,7 +474,7 @@ class MainFrame(wx.Frame):
         Display an About Dialog.
         """
         # TODO provide more information here
-        wx.MessageBox("TesPro\nFire Testing Program - ver " + VERSION_NUM_STRING,
+        wx.MessageBox(f"TesPro\nFire Testing Program - ver {VERSION_NUM_STRING}",
                         "About Fire Testing Program",
                         wx.OK|wx.ICON_INFORMATION)
 
@@ -626,14 +627,14 @@ class MainFrame(wx.Frame):
         if self.channelErrorWarn: return # Don't fire a bunch of dialogs in response to several error events
 
         if sensorType == "TC":
-            if channel >= self.controller.getNumThermocouples():
+            if channel >= self.app.machineSettings.numTC:
                 return
             if not self.controller.isChannelInSelectedThermocouples(channel):
                 return
             sensType = "thermocouple"
 
         elif sensorType == "PRESS":
-            if channel >= self.controller.getNumPressure():
+            if channel >= self.app.machineSettings.numPres:
                 return
             if not self.controller.isChannelInSelectedPressure(channel):
                 return
@@ -653,8 +654,9 @@ class MainFrame(wx.Frame):
 
 class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
 
-    def __init__(self, redirect=False, noConnect=False):
-        self.noConnect = noConnect
+    def __init__(self, redirect=False, noconnect=False, preload=False):
+        self.noConnect = noconnect
+        self.preLoad = preload
         super().__init__(redirect=redirect)
 
 
@@ -665,7 +667,9 @@ class MainApp(wx.App):#, wx.lib.mixins.inspection.InspectionMixin):
         #self.Init() #Init the inspection tool. CTRL-ALT-I to summon inspector
         self.machineSettings = MachineSettings()
         # TODO Init controller and do the spashscreen here
-        frame = MainFrame(None, wx.ID_ANY, "Fire Test Data Aquisition", size=(1100, 700)) # A Frame is a top-level window.
+        flagString = ""
+        if self.noConnect: flagString += " --NOCONNECT"
+        frame = MainFrame(None, wx.ID_ANY, f"Fire Test Data Aquisition - ver. {VERSION_NUM_STRING}{flagString}", size=(DEFAULT_MAIN_FRAME_W, DEFAULT_MAIN_FRAME_H)) # A Frame is a top-level window.
         frame.Centre()
         frame.Show(True)
         frame.Maximize(True)
@@ -688,6 +692,7 @@ if __name__ == '__main__':
     parser.add_argument("-n", "--noconnect", action="store_true", help="Do not connect to DAQ and generate fake data for testing purposes")
     parser.add_argument("-v", "--version",  action="store_true", help="Get the current version number")
     parser.add_argument("-l", "--log", help="Choose the logging level", choices=["debug", "info", "warn", "error"], default="info")
+    parser.add_argument("-p", "--preload", action="store_true", help="Preloads the fake test data to the last minute of the test")
     args = parser.parse_args() #Parse the given arguments
 
     if args.version:
@@ -717,7 +722,7 @@ if __name__ == '__main__':
 
     # Create and start the main windowed application
     #------------------------------------------------------------
-    app = MainApp(redirect=False, noConnect=args.noconnect)
+    app = MainApp(redirect=False, noconnect=args.noconnect, preload=args.preload)
     logger.info("App created. Starting main loop ...")
     app.MainLoop()
 

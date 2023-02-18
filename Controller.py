@@ -4,20 +4,17 @@ from pubsub import pub
 from HelperFunctions import *
 from DAQ.DataAcquisition import DataAcquisition
 from Enumerations import *
-#from TestSettings import TestSettings
-#from MachineSettings import MachineSettings
 from Logger import Logger
 from TestData import TestData
-
+import threading
+lock = threading.RLock()
 import logging
 logger = logging.getLogger(__name__)
 
 import time
-import os
-import random
 
 # TODO create a test class that actually runs the test. That's what the controller originally was, but has grown beyond that scope.
-##Execute code at timed intervals  
+##Execute code at timed intervals
 ##Imports and Displays  
 from threading import Thread, Event, Timer
 
@@ -43,8 +40,12 @@ class _TimerReset(Thread):
 
         """Stop the timer if it hasn't finished yet"""
         self.finished.set()
-    def run(self):
 
+
+    def run(self):
+        """
+        Start the timer.
+        """
         while self.resetted:
             self.finished.wait(self.interval)
 
@@ -52,8 +53,11 @@ class _TimerReset(Thread):
             self.function(*self.args, **self.kwargs)
         self.finished.set()
 
+
     def reset(self, interval=None):
-        """ Reset the timer """
+        """
+        Reset the timer
+        """
 
         if interval:
             self.interval = interval
@@ -125,9 +129,9 @@ class Controller():
 
         #self.machineSettings = wx.GetApp.machineSettings  #MachineSettings()
 
-        app = wx.GetApp()
-        assert app is not None, "In Controller.loadSavedMachineSettings. wx.App not created yet"
-        self.machineSettings = app.machineSettings
+        self.app = wx.GetApp()
+        assert self.app is not None, "In Controller.loadSavedMachineSettings. wx.App not created yet"
+        self.machineSettings = self.app.machineSettings
 
         # Pull the selected channels from the saved placementMap.
         self.extractSelectedThermocouples()
@@ -190,13 +194,13 @@ class Controller():
 
         self.unexposedThresh = 0.0
 
-        self.startTime = 0
-        self.elapsedTime = 0
+        self.startTime = 0.0
+        self.elapsedTime = 0.0
         self.updateRate = DATA_UPDATE_RATE  # Seconds between each data gather
 
-        self.testData = TestData(self.testSettings, self.machineSettings)  # Holds the data that is recorded and calculated thoughout the test
+        self.testData = TestData(self.testSettings)  # Holds the data that is recorded and calculated thoughout the test
 
-        self.ignoredChannels = []
+        self.ignoredChannels = []  # Clear any ignored channels
 
         self.isRowWritten = False # Haven't written a data row yet.
 
@@ -222,6 +226,8 @@ class Controller():
         """
         Set up the test and begin timer.
         """
+        if self.app.noConnect and self.app.preLoad: self.preloadPoints()
+        
         self.timer = RepeatTimer(self.updateRate, self.onTimer)
 
         self.isTestRunning = True
@@ -232,14 +238,43 @@ class Controller():
         self.timer.start()
         wx.CallAfter(pub.sendMessage, "status.flash", msg="Starting test.")
 
+    def preloadPoints(self):
+                numSamples = int((self.testSettings.testTimeMinutes-1) * 60/self.updateRate)
+                for i in range(numSamples):
+
+                    # Advance the time tick,
+                    self.testData.setTimeData(float(self.elapsedTime)/60.0) # Converts to minutes
+                    #self.makeFakeData()
+
+                    scale = 0.1
+                    for channelIdx in self.selectedUnexposedChannels:
+                        num = (channelIdx+1)*round(self.elapsedTime)*scale
+
+                        self.testData.onValueChange(sensorType="TC",
+                                            channel=channelIdx,
+                                            valueRaw=num,
+                                            valueNumeric=num,
+                                            valueFormatted="{0:.0f}".format(num))
+
+                    self.testData.setRawFurnace()
+                    self.testData.setRawUnexposed()
+                    self.testData.setPressure()
+                    
+                    self.elapsedTime += float(self.updateRate)
+
+
     def initialPoints(self): 
         """
         Special handling of initial data points.
         """
-        if self.parent.noConnect: self.makeFakeData()
+        if self.app.noConnect: self.makeFakeData()
 
         # Capture the time
         self.startTime = time.time()
+
+        # if self.app.preLoad:
+        #     temp = ((self.testSettings.testTimeMinutes-1)*60.0) # Play only the last minute of the test
+        #     self.startTime += temp
 
         # NOTE Check the return code. wrap in try as well
         self.updateData()  # NOTE Perhaps put this before the isTestRunning is set and then test in the grabLatestData to do a first point init
@@ -254,8 +289,11 @@ class Controller():
     def getPoints(self):
 
         # Capture the time
-        self.elapsedTime = round(time.time() - self.startTime) # May seperate rounded and unrounded elapsed.
-
+        delta = float(time.time() - self.startTime)
+        self.elapsedTime = round(delta) # May seperate rounded and unrounded elapsed.
+        if self.app.preLoad:
+            temp = ((self.testSettings.testTimeMinutes-1)*60.0) # Play only the last minute of the test
+            self.elapsedTime += temp
         # Get the latest data from the DAQ and put it in the grid and graphs
         self.updateData()
 
@@ -280,6 +318,7 @@ class Controller():
         """
         Used for testing purposes
         """
+
         scale = 0.1
         for channelIdx in self.selectedUnexposedChannels:
             #num = random.uniform(10,90)*((channelIdx/2)+1)
@@ -314,8 +353,8 @@ class Controller():
         Write the current data to sockets (graphs, log, grid)
         """
         # TODO get the dispatching of data to the UI or Logger in a single function, was supposed to be in updateData()
-        # Is it time to save yet?
 
+        # Is it time to save yet?
         #BUG BUG BUG I think the round is possibly responsible for the double points in the data.
         if round(self.elapsedTime) % self.testSettings.saveRate_sec == 0 or \
            round(self.elapsedTime-self.lastWritten) >= self.testSettings.saveRate_sec:
@@ -410,7 +449,8 @@ class Controller():
 
         self.grabLatestData()
 
-        if round(self.elapsedTime) % self.machineSettings.graphUpdateRate == 0: # Slow down the UI graph update to 
+        if round(self.elapsedTime) % self.machineSettings.graphUpdateRate == 0: # Slow down the UI graph update
+            logger.debug(f"Controller sendMessage using {id(self.testData)}")
             wx.CallAfter(pub.sendMessage, "graphData.update", testData=self.testData)
 
     def grabLatestData(self):
@@ -421,22 +461,26 @@ class Controller():
 
         # Process the values.
         # ============================================================
+        # For each sensor type go through and filter out values from being averaged.
 
         # TODO: This is janky. Will fix when the data structure is redone
         furnaceValuesForAvg = []
         unexposedValuesForAvg = []
 
         for key, value in self.testData.furnaceValues.items():
+            # If the autoexclude is set then check if the value is out of bounds
             if self.isFurnaceAutoExclude:
                 if self.testData.isOutsideFurnaceLimits(value["numeric"]):
                     self.channelIgnore(key, True)
                     wx.CallAfter(pub.sendMessage, "monitor.exclude",
                                     channelIndex=key, isExcluded=True)
 
+            # If this channel is not to be ignored
             if key not in self.ignoredChannels:
                 furnaceValuesForAvg.append([key, value["formatted"]])
 
         for key, value in self.testData.unexposedValues.items():
+            # If the autoexclude is set then check if the value is out of bounds
             if self.isUnexposedAutoExclude:
                 if self.testData.isOutsideUnexposedLimits(value["numeric"]):
                     self.channelIgnore(key, True)
@@ -452,6 +496,7 @@ class Controller():
                     wx.CallAfter(pub.sendMessage, 
                         "monitor.warn", channelIndex=key, isWarn=False)
 
+            # If this channel is not to be ignored
             if key not in self.ignoredChannels:
                 unexposedValuesForAvg.append([key, value["formatted"]])
 
@@ -477,8 +522,9 @@ class Controller():
         self.testData.calcAverageAUCdataUpdateRate()
         self.testData.calcTargetAUCdataUpdateRate()
 
+        # Can't start calculating the AUC unless there is at least one point
         if (round(self.elapsedTime) > 0) and (round(self.elapsedTime) % self.testSettings.saveRate_sec == 0):
-            self.testData.calcAverageAUC() # Can't start calculating the AUC unless there is at least one point
+            self.testData.calcAverageAUC() 
             self.testData.calcTargetAUC()
 
         wx.CallAfter(pub.sendMessage, "indicator.update",
@@ -492,9 +538,10 @@ class Controller():
         # Fill out the data arrays for the graph views.
         # ============================================================
         # Converted to minutes for the graph axis
-        self.testData.setRawFurnace()
-        self.testData.setRawUnexposed()
-        self.testData.setPressure()
+        with lock:
+            self.testData.setRawFurnace()
+            self.testData.setRawUnexposed()
+            self.testData.setPressure()
 
         self.updateIndicators()
 
@@ -787,14 +834,14 @@ class Controller():
 ################################################################################
 
     # TODO I don't think this is called anywhere
-    def openThermocoupleChannels(self):
-        self.daq.setSelectedThermocouples(
-            self.selectedFurnaceChannels + self.selectedUnexposedChannels)
-        self.daq.attachSelectedThermocouples()
+    # def openThermocoupleChannels(self):
+    #     self.daq.setSelectedThermocouples(
+    #         self.selectedFurnaceChannels + self.selectedUnexposedChannels)
+    #     self.daq.attachSelectedThermocouples()
 
-    def openPressureChannels(self):
-        self.daq.setSelectedPressureSensors(self.selectedPressureChannels)
-        self.daq.attachSelectedPressureSensors()
+    # def openPressureChannels(self):
+    #     self.daq.setSelectedPressureSensors(self.selectedPressureChannels)
+    #     self.daq.attachSelectedPressureSensors()
 
     def openAllChannels(self):
         self.daq.setSelectedThermocouples([i for i in range(self.machineSettings.numTC)])
@@ -813,12 +860,18 @@ class Controller():
                 wx.CallAfter(pub.sendMessage, "channel.attached",
                                 sensorType="PRESS", channel=i)
 
-    def closeThermocoupleChannels(self):
+    # def closeThermocoupleChannels(self):
+    #     self.daq.closeAllTCChannels()
+    #     self.daq.closeInternalTemperature()
+
+    # def closePressureChannels(self):
+    #     self.daq.closeAllPressureChannels()
+
+    def closeAllChannels(self):
         self.daq.closeAllTCChannels()
         self.daq.closeInternalTemperature()
-
-    def closePressureChannels(self):
         self.daq.closeAllPressureChannels()
+
 
     def updateThermocoupleMap(self, placementMap):
         self.machineSettings.updateThermocoupleMap(placementMap)
@@ -904,11 +957,11 @@ class Controller():
             if channelIndex in self.ignoredChannels:
                 self.ignoredChannels.remove(channelIndex)
 
-    def getNumThermocouples(self):
-        return self.machineSettings.numTC
+    # def getNumThermocouples(self):
+    #     return self.machineSettings.numTC
 
-    def getNumPressure(self):
-        return self.machineSettings.numPres
+    # def getNumPressure(self):
+    #     return self.machineSettings.numPres
 
     # def getThermocouplePlacement(self, channel):
     #     # Return the placement enum for the given channel
@@ -1016,22 +1069,17 @@ class Controller():
             return False
 
 
-    def areSelectedAttached(self):
-        # check if all the selected channels have been connected
-        for channelIndex in (self.selectedFurnaceChannels + self.selectedUnexposedChannels):
-            if self.daq.isThermocoupleAttached(channelIndex):
-                wx.CallAfter(pub.sendMessage, "channel.attached",
-                                sensorType="TC", channel=channelIndex)
-            # if not self.daq.isThermocoupleAttached(channelIndex):
-             #   return False
-        for channelIndex in self.selectedPressureChannels:
-            if self.daq.isPressureSensorAttached(channelIndex):
-                wx.CallAfter(pub.sendMessage, "channel.attached",
-                                sensorType="PRESS", channel=channelIndex)
-            # if not self.daq.isPressureSensorAttached(channelIndex):
-            #    return False
+    # def areSelectedAttached(self):
+    #     # check if all the selected channels have been connected
+    #     for channelIndex in (self.selectedFurnaceChannels + self.selectedUnexposedChannels):
+    #         if self.daq.isThermocoupleAttached(channelIndex):
+    #             wx.CallAfter(pub.sendMessage, "channel.attached",
+    #                             sensorType="TC", channel=channelIndex)
+    #     for channelIndex in self.selectedPressureChannels:
+    #         if self.daq.isPressureSensorAttached(channelIndex):
+    #             wx.CallAfter(pub.sendMessage, "channel.attached",
+    #                             sensorType="PRESS", channel=channelIndex)
 
-        # return True
 
     # def getPressureChannelSerials(self, channel):
     #     return self.machineSettings.getPressureChannelSerials(channel)

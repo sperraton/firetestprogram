@@ -1,17 +1,18 @@
 # The data structure to hold the test data
+import queue
 import wx
 from HelperFunctions import getOutlierLimits, averageTemperatures, cleanValues
 from Enumerations import BAD_VALUE_NUM, BAD_VALUE_STR, DATA_UPDATE_RATE, DEFAULT_OUTLIER_FACTOR, thermocouplePlacements, pressurePlacements
 from pubsub import pub
 
-
+import logging
+logger = logging.getLogger(__name__)
 class TestData():
     def __init__(self, 
-                 testSettings, 
-                 machineSettings):
+                 testSettings):
 
         self.testSettings = testSettings
-        #self.machineSettings = machineSettings
+
         app = wx.GetApp()
         assert app is not None, "In ViewSensorsDialog.__init__. wx.App not created yet"
         self.machineSettings = app.machineSettings
@@ -72,6 +73,7 @@ class TestData():
         # Hold the numeric values sorted into specific arrays based on role
         # To be used by the DataGraph object for plotting purposes
         # NOTE: These will be appended to and so hold the entirety of the recorded data
+
         self.timeData = [] # Elapsed time (x-axis)
         self.furnaceRawData = [] # Values for TC's in furnace
         self.unexposedRawData = [] # Values for TC's in unexposed
@@ -199,7 +201,10 @@ class TestData():
         """
         Keeps historical record of raw data to be used by graphs
         """
-        rawFurnaceNumeric = []
+
+        logger.debug("Set data in this thread.")
+
+        # rawFurnaceNumeric = []
 
         # NOTE: When this was created it was populated in channel order
         # so the values should be appended in channel order.

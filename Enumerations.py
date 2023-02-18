@@ -2,7 +2,7 @@ from email.policy import default
 from enum import Enum
 #from matplotlib import cm
 
-VERSION_NUM_STRING = "1.57.2"
+VERSION_NUM_STRING = "1.58.0"
 
 def enum(**named_values):
     return type("Enum", (), named_values)
@@ -103,8 +103,8 @@ standardTableLabelsUnitsF = [
     "AUC AVG."]
 
 standardTableLabelsUnitsC = [
-    "TIMESTAMP",
-    "TIMESTAMP (dec.)",
+    "TIMESTAMP (hh:mm:ss)",
+    "TIMESTAMP (sec.)",
     "RQD. C",
     "AVG. C",
     "AUC RQD.",
@@ -125,7 +125,8 @@ pressureSelectionClrs = [
 
 
 # No magic numbers!
-
+DEFAULT_MAIN_FRAME_W = 1100
+DEFAULT_MAIN_FRAME_H = 700
 DEFAULT_ATTACH_WAIT = 2000
 WARN_THRES2 = 50
 WARN_THRES1 = 40
@@ -151,6 +152,11 @@ DATA_INTERVAL_MS = 255 # Delay between readings of data. Make multiple of 8
 CHANGE_TRIGGER = 0.0
 DATA_UPDATE_RATE = 1 # (Seconds) How often the DAQ gathers data
 INVALID_VALUE = 1e304
+INVALID_VALUE_STR = "SAT."
+INVALID_VALUE_NUM = 0.0
+UNATTACHED_THRESH = 0.001 #
+UNATTACHED_STR = "ERR."
+UNATTACHED_NUM = 0.0
 BAD_VALUE_STR = "----"
 BAD_VALUE_NUM = -9999
 
@@ -173,6 +179,9 @@ GRAPH_DEFAULT_LINE_WIDTH = 1
 GRAPH_AVG_LINE_WIDTH = 4
 GRAPH_TARGET_LINE_WIDTH = 3
 GRAPH_LIMITS_LINE_WIDTH = 1.5
+GRAPH_TITLE_FONT_SIZE = 12
+GRAPH_LEGEND_FONT_SIZE = 7
+GRAPH_AXIS_FONT_SIZE = 8
 
 GRID_DEFAULT_COL_WIDTH = 48
 

@@ -1,5 +1,3 @@
-from ctypes.wintypes import MAX_PATH
-from urllib.parse import MAX_CACHE_SIZE
 import wx
 import wx.grid
 from pubsub import pub

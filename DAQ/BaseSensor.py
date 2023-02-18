@@ -14,18 +14,18 @@ logger = logging.getLogger(__name__)
 class BaseSensor():
 
     def __init__(self,
-                 serialNumber,
-                 hubPort,
-                 channelNumber,
-                 isHubPort,
-                 dataInterval,
-                 channelIndex=None,
-                 gain=1.0,
-                 offset=0.0,
-                 units=None,
-                 sensorType=None,
-                 tcType=ThermocoupleType.THERMOCOUPLE_TYPE_K,
-                 isVoltage=True):
+                serialNumber,
+                hubPort,
+                channelNumber,
+                isHubPort,
+                dataInterval,
+                channelIndex=None,
+                gain=1.0,
+                offset=0.0,
+                units=None,
+                sensorType=None,
+                tcType=ThermocoupleType.THERMOCOUPLE_TYPE_K,
+                isVoltage=True):
 
         # Set channel properties
         self.dataInterval = dataInterval

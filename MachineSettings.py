@@ -296,7 +296,11 @@ class MachineSettings():
         """
         Returns the placement enum for the given channel in the current profile
         """
-        return self.profiles[self.currentProfile].thermocoupleConfig[channelIndex]["placement"]
+        try:
+            return self.profiles[self.currentProfile].thermocoupleConfig[channelIndex]["placement"]
+        except IndexError:
+            logger.exception(f"Index error in getThermocouplePlacement. channelIndex:{channelIndex}")
+
 
 
 # TODO Check where this is used, because now we are nailing the labels down.
@@ -304,13 +308,19 @@ class MachineSettings():
         """
         Returns the placement enum for the given channel in the current profile
         """
-        return self.profiles[self.currentProfile].getPressureConfig()[channelIndex][0]
+        try:
+            return self.profiles[self.currentProfile].getPressureConfig()[channelIndex][0]
+        except IndexError:
+            logger.exception(f"Index error in getPressurePlacement. channelIndex:{channelIndex}")
 
 
     def getThermocoupleCalibration(self, channelIndex):
-        gain = self.profiles[self.currentProfile].thermocoupleConfig[channelIndex]["gain"]
-        offset = self.profiles[self.currentProfile].thermocoupleConfig[channelIndex]["offset"]
-        return gain, offset
+        try:
+            gain = self.profiles[self.currentProfile].thermocoupleConfig[channelIndex]["gain"]
+            offset = self.profiles[self.currentProfile].thermocoupleConfig[channelIndex]["offset"]
+            return gain, offset
+        except IndexError:
+            logger.exception(f"Index error in getThermocoupleCalibration. channelIndex:{channelIndex}")
 
 
     def getPressureCalibration(self, channelIndex, serialNumber=None):
@@ -318,12 +328,15 @@ class MachineSettings():
         No serial number given returns the currently selected configuration's gain and offset.
         Otherwise returns the gain and offset of a specified pressure sensor which is attached to that channel.
         """
-        if serialNumber is None:
-            gain = self.profiles[self.currentProfile].getPressureConfig()[channelIndex][1]
-            offset = self.profiles[self.currentProfile].getPressureConfig()[channelIndex][2]
-        else:
-            gain, offset = self.profiles[self.currentProfile].getPressureCalibration(channelIndex, serialNumber)
-        return gain, offset
+        try:
+            if serialNumber is None:
+                gain = self.profiles[self.currentProfile].getPressureConfig()[channelIndex][1]
+                offset = self.profiles[self.currentProfile].getPressureConfig()[channelIndex][2]
+            else:
+                gain, offset = self.profiles[self.currentProfile].getPressureCalibration(channelIndex, serialNumber)
+            return gain, offset
+        except IndexError:
+            logger.exception(f"Index error in getPressureCalibration. channelIndex:{channelIndex}")
 
 
     def setThermocoupleCalibration(self, gain, offset, channelIndex):

@@ -4,8 +4,12 @@ from math import ceil
 from Enumerations import DEFAULT_UNEXPOSED_WARN_THRESH, GRAPH_AVG_LINE_WIDTH, GRAPH_DEFAULT_LINE_WIDTH, GRAPH_LIMITS_LINE_WIDTH, GRAPH_TARGET_LINE_WIDTH, UIcolours
 from Graphing.BaseGraph import BaseGraph
 from Graphing.PlotSettings import PlotSettings
-import logging
+import copy
+import time as _time
+import threading
+lock = threading.RLock()
 
+import logging
 logger = logging.getLogger(__name__)
 
 
@@ -56,7 +60,7 @@ class FurnaceGraph(BaseGraph):
                     label="Average",
                     colour=UIcolours.GRAPH_AVERAGE_SERIES,
                     zorder=3)
-                    
+                
         # The Raw TC's a list 2Dlines object
         self.furnRawSettings = []
         numSelected = len(self.controller.selectedFurnaceChannels)
@@ -90,7 +94,7 @@ class FurnaceGraph(BaseGraph):
         for i in range(2, len(self.graphCanvas.graphPlotSettings)) : # Skip the Avg and the threshold lines
             self.graphCanvas.setPlotLineVisibility(plotIndex=i, visible=False)
 
-    
+
     def updateData(self, blit=False):
         """
         Draws the latest average and raw data.
@@ -99,10 +103,19 @@ class FurnaceGraph(BaseGraph):
             logging.debug("Test data object not instantiated yet.")
             return
 
-        timeData=self.testData.timeData
-        avgData=self.testData.data[1]
-        rawData=self.testData.data[2]
+        # Aquire the lock
+        with lock:
+            # TEST TEST TEST checking the speed of a copy. Use with mutex
+            start = _time.perf_counter()
 
+            # Taking too long to copy for the amount of data
+            # Perhaps keep a running thread safe copy. Add the uncopied data from last time.
+            timeData=copy.deepcopy(self.testData.timeData)
+            avgData=copy.deepcopy(self.testData.data[1])
+            rawData=copy.deepcopy(self.testData.data[2])
+
+            diff = _time.perf_counter() - start
+            logger.debug(f"Full Furnace data copy took: {diff} Number of samples: {len(timeData)}")
         # Do the furnace average
         self.graphCanvas.updateData(timeData, avgData, plotIndex=1, blit=blit)
 

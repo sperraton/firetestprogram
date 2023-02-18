@@ -6,7 +6,7 @@ import logging
 from math import ceil
 from unittest import skip
 
-from Enumerations import BAD_VALUE_NUM, DEFAULT_LEGEND_VISIBILITY, GRAPH_SAVE_H, GRAPH_SAVE_W, GRAPH_VERT_PADDING, LEGEND_NUM_ROWS, UIcolours
+from Enumerations import BAD_VALUE_NUM, DEFAULT_LEGEND_VISIBILITY, GRAPH_AXIS_FONT_SIZE, GRAPH_LEGEND_FONT_SIZE, GRAPH_SAVE_H, GRAPH_SAVE_W, GRAPH_TITLE_FONT_SIZE, GRAPH_VERT_PADDING, LEGEND_NUM_ROWS, UIcolours
 from Graphing.AxesSettings import AxesSettings
 
 import numpy as np
@@ -78,7 +78,7 @@ class GraphCanvas(PlotCanvas):
 
         # Create all the plot objects for this graph
         # Plot objects hold the data and style for each thing to be plotted
-        # Each plot you want to add should have a plotsettings object to define it and its appearance
+        # Each plot you want to add should have a plotsettings object to define it and it's appearance
         for plotSetting in self.graphPlotSettings:
             self.graphPlots.append(wxplot.PolyLine(
                 plotSetting.initialPoint,
@@ -235,7 +235,7 @@ class GraphCanvas(PlotCanvas):
 
                 # TODO check if we need to clear the scaled points list here too
             else:
-                temp = yData #list(zip(timeData, yData)) # Taking all the points # NOTE: This bundling of the test data may better be done on the fly in the test data object, because when the test is long we will waste a bunch of time rezipping data 
+                temp = yData
 
             self.graphPlots[plotIndex].points = temp #np.append(plot.points, [(timeData[-1], yData[-1])])
 
@@ -251,7 +251,7 @@ class GraphCanvas(PlotCanvas):
         Redraw all the graph objects
         """
         # CODE SPENDS MOST TIME HERE DRAWING THE GRAPHS. TRYING TO BLIT THE DRAWING TO SAVE TIME
-        if not wx.IsMainThread(): return
+        if not wx.IsMainThread(): return # Check that we are not trying to draw on the data capture thread
 
         if self.enableZoom:
             minY, maxY = self.yCurrentRange if self.yCurrentRange is not None else (0,1)
@@ -445,10 +445,10 @@ class GraphCanvas(PlotCanvas):
 
         # allow graph to overlap axis lines by adding units to w and h
         #======================================================================
-        dc.SetClippingRegion(ptx * self._pointSize[0],
-                             pty * self._pointSize[1],
-                             rectWidth * self._pointSize[0] + 2,
-                             rectHeight * self._pointSize[1] + 1)
+        dc.SetClippingRegion(int(ptx * self._pointSize[0]),
+                             int(pty * self._pointSize[1]),
+                             int(rectWidth * self._pointSize[0] + 2),
+                             int(rectHeight * self._pointSize[1] + 1))
         
         # Draw the lines and markers
         #======================================================================
@@ -497,16 +497,15 @@ class GraphCanvas(PlotCanvas):
         Sets the look of the graph.
         """
         self.SetDoubleBuffered(True)
-        # TODO comb through the wxplot settings I can add here and also move the magic numbers to the Enumerations file
-        
+        # TODO comb through the wxplot settings I can add here
         self.SetBackgroundColour(UIcolours.GRAPH_FACE)
         self.SetForegroundColour(UIcolours.CTRL_NORMAL_FG)
         self.enableLegend = DEFAULT_LEGEND_VISIBILITY
-        self.fontSizeTitle = 12
-        self.fontSizeLegend = 7
-        self.fontSizeAxis = 8
-        self.xSpec = "auto" #"none"
-        self.ySpec = "auto" #10 #"none" # TODO adjust this to be sensible based on the ymax for the graph
+        self.fontSizeTitle = GRAPH_TITLE_FONT_SIZE
+        self.fontSizeLegend = GRAPH_LEGEND_FONT_SIZE
+        self.fontSizeAxis = GRAPH_AXIS_FONT_SIZE
+        self.xSpec = "auto"
+        self.ySpec = "auto"
         #self.enableAntiAliasing = True # Gonna forgoe this for speed reasons
         #self.enableZoom = True
         #self.enableDrag = True # Only zoom or drag enabled
@@ -687,7 +686,7 @@ class GraphCanvas(PlotCanvas):
 
 
             if  "style" in obj.attributes and obj.attributes["style"] == wx.PENSTYLE_SOLID:
-                dc.DrawText(obj.getLegend(), pnt[0], pnt[1])
+                dc.DrawText(obj.getLegend(), int(pnt[0]), int(pnt[1]))
 
         dc.SetFont(self._getFont(self._fontSizeAxis))  # reset
         
